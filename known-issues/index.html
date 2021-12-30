@@ -7,153 +7,57 @@
     <script type="ftd" id="ftd-data">
         {
   "@body@0,1": {
-    "value": "- package cargo binary for different os/arch\n- docs:\n  - fpm tutorial\n  - github pages how to\n- static assets\n- [markdown file handling](/fpm/~/23/)\n- [`README.md` handling](/fpm/~/22/)\n- [Include fonts from dependencies](/fpm/~/18/)\n- [fpm client variables](/fpm/~/25/)\n- [Package dependencies full version](/fpm/~/27/)",
+    "value": "If you want to start a new project and create its translations right away, you\nwill have to first publish the original language package, and then add the other \nones, else there is a circular issue (translation can not be built because it will\ntry to download the original, which is not yet published, and original package \nwill try to download the translation package, original needs them so original can\npublish translation-status page).\n\nWe know you love it, you are like:",
     "dependencies": {}
   },
   "@body@0,1,1": {
-    "value": "- package cargo binary for different os/arch\n- docs:\n  - fpm tutorial\n  - github pages how to\n- static assets\n- [markdown file handling](/fpm/~/23/)\n- [`README.md` handling](/fpm/~/22/)\n- [Include fonts from dependencies](/fpm/~/18/)\n- [fpm client variables](/fpm/~/25/)\n- [Package dependencies full version](/fpm/~/27/)",
+    "value": "If you want to start a new project and create its translations right away, you\nwill have to first publish the original language package, and then add the other \nones, else there is a circular issue (translation can not be built because it will\ntry to download the original, which is not yet published, and original package \nwill try to download the translation package, original needs them so original can\npublish translation-status page).\n\nWe know you love it, you are like:",
     "dependencies": {
       "0,0,1,0,0,1,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "@body@0,2": {
-    "value": "- [translation tracking](/fpm/~/3/): UI pending\n- [`$processor$: include-file`](/fpm/~/34/)",
+    "value": "But cool down, let's do it in steps.",
     "dependencies": {}
   },
-  "@body@0,2,1": {
-    "value": "- [translation tracking](/fpm/~/3/): UI pending\n- [`$processor$: include-file`](/fpm/~/34/)",
+  "@body@0,2,2": {
+    "value": "But cool down, let's do it in steps.",
+    "dependencies": {
+      "0,0,1,0,0,1,2,2:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "@body@0,3": {
+    "value": "From time to time you will have to call `fpm sync`. You can do it every time you\nmodify any file that is part of the package in fact. \n\nAt some point we will remove this requirement, maybe we will work off of `git` \ncommit-hashes instead of last modified time stamps as per `.history` folder, but\nfor now we need `.history` folder updated regularly.\n\nCall `fpm sync` often.",
+    "dependencies": {}
+  },
+  "@body@0,3,1": {
+    "value": "From time to time you will have to call `fpm sync`. You can do it every time you\nmodify any file that is part of the package in fact. \n\nAt some point we will remove this requirement, maybe we will work off of `git` \ncommit-hashes instead of last modified time stamps as per `.history` folder, but\nfor now we need `.history` folder updated regularly.\n\nCall `fpm sync` often.",
     "dependencies": {
       "0,0,1,0,0,2,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
-  "@body@0,3": {
-    "value": "- [sqlite support](/fpm/~/26/)\n- [package database](/fpm/~/16/)\n- [dynamic/data-driven documents](/fpm/~/20/)\n- [fpm actions](/fpm/~/24/)\n- search\n- [package interface](/fpm/~/11/)\n- `fpm serve`, figure out how to do http serving\n- [logical linking](/fpm/~/2/)\n- `fpm-repo`, [auth](/fpm/~/8/) & [`fpm sync` for two way sync](/fpm/~/7/)\n- [version tracking](/fpm/~/5/)\n- [cr tracking](/fpm/~/6/)\n- [access control](/fpm/~/10/)\n- [`$processor$`: with ftd json constructor](/fpm/~/14/)\n- [`fpm fmt`: formatter](/fpm/~/31/)\n- [banner support](/fpm/~/32/)\n- [encryption support](/fpm/~/33/)",
-    "dependencies": {}
-  },
-  "@body@0,3,1": {
-    "value": "- [sqlite support](/fpm/~/26/)\n- [package database](/fpm/~/16/)\n- [dynamic/data-driven documents](/fpm/~/20/)\n- [fpm actions](/fpm/~/24/)\n- search\n- [package interface](/fpm/~/11/)\n- `fpm serve`, figure out how to do http serving\n- [logical linking](/fpm/~/2/)\n- `fpm-repo`, [auth](/fpm/~/8/) & [`fpm sync` for two way sync](/fpm/~/7/)\n- [version tracking](/fpm/~/5/)\n- [cr tracking](/fpm/~/6/)\n- [access control](/fpm/~/10/)\n- [`$processor$`: with ftd json constructor](/fpm/~/14/)\n- [`fpm fmt`: formatter](/fpm/~/31/)\n- [banner support](/fpm/~/32/)\n- [encryption support](/fpm/~/33/)",
+  "@src@0,2": {
+    "value": "https://i.imgur.com/fJZOxoN.jpg",
     "dependencies": {
-      "0,0,1,0,0,3,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@body@0,4": {
-    "value": "- mdbook\n- jekyll\n- Hugo\n- wordpress\n- medium",
-    "dependencies": {}
-  },
-  "@body@0,4,1": {
-    "value": "- mdbook\n- jekyll\n- Hugo\n- wordpress\n- medium",
-    "dependencies": {
-      "0,0,1,0,0,4,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@body@0,5": {
-    "value": "- brew\n- apt\n- docker?\n- auto create packages using github action",
-    "dependencies": {}
-  },
-  "@body@0,5,1": {
-    "value": "- brew\n- apt\n- docker?\n- auto create packages using github action",
-    "dependencies": {
-      "0,0,1,0,0,5,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@body@0,6": {
-    "value": "- hello world\n- how to create a new fpm component library\n- translating projects using fpm\n- documentation of versioned software\n- how to use github for collaboration over a `fpm` package\n- how to setup your own `fpm-repo` on heroku",
-    "dependencies": {}
-  },
-  "@body@0,6,1": {
-    "value": "- hello world\n- how to create a new fpm component library\n- translating projects using fpm\n- documentation of versioned software\n- how to use github for collaboration over a `fpm` package\n- how to setup your own `fpm-repo` on heroku",
-    "dependencies": {
-      "0,0,1,0,0,6,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@body@0,7": {
-    "value": "- [live reload for `fpm serve`](/fpm/~/30/)\n- syntax highlighting for editors\n- LSP for ftd/fpm",
-    "dependencies": {}
-  },
-  "@body@0,7,1": {
-    "value": "- [live reload for `fpm serve`](/fpm/~/30/)\n- syntax highlighting for editors\n- LSP for ftd/fpm",
-    "dependencies": {
-      "0,0,1,0,0,7,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@body@0,8": {
-    "value": "- optimisation: [only include font when needed](/fpm/~/19/)\n- [`fpm diff <path>` filtered diff](/fpm/~/21/)\n- ~display programming file etc as code block?~",
-    "dependencies": {}
-  },
-  "@body@0,8,1": {
-    "value": "- optimisation: [only include font when needed](/fpm/~/19/)\n- [`fpm diff <path>` filtered diff](/fpm/~/21/)\n- ~display programming file etc as code block?~",
-    "dependencies": {
-      "0,0,1,0,0,8,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@body@0,9": {
-    "value": "- [ad-hoc tracking](/fpm/~/12/)",
-    "dependencies": {}
-  },
-  "@body@0,9,1": {
-    "value": "- [ad-hoc tracking](/fpm/~/12/)",
-    "dependencies": {
-      "0,0,1,0,0,9,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+      "0,0,1,0,0,1,2,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "@title@0,0": {
-    "value": "Roadmap",
+    "value": "Known Issues",
     "dependencies": {
       "0,0,1,0,0,0,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "@title@0,1": {
-    "value": "FPM as kickass SSG tool",
+    "value": "Translation Can Not Be Added Unless Original Package Has Been Published",
     "dependencies": {
       "0,0,1,0,0,1,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
-  "@title@0,2": {
-    "value": "Rust Book using FPM",
+  "@title@0,3": {
+    "value": "Translation Tracking Doesn't Work If You Do Not `fpm sync`",
     "dependencies": {
       "0,0,1,0,0,2,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,3": {
-    "value": "Core Features",
-    "dependencies": {
-      "0,0,1,0,0,3,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,4": {
-    "value": "Importer & Exporters",
-    "dependencies": {
-      "0,0,1,0,0,4,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,5": {
-    "value": "Packaging & Tooling",
-    "dependencies": {
-      "0,0,1,0,0,5,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,6": {
-    "value": "Tutorials & Documentation",
-    "dependencies": {
-      "0,0,1,0,0,6,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,7": {
-    "value": "Developer / Author Productivity",
-    "dependencies": {
-      "0,0,1,0,0,7,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,8": {
-    "value": "Backlog",
-    "dependencies": {
-      "0,0,1,0,0,8,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
-    }
-  },
-  "@title@0,9": {
-    "value": "Implemented But Not Yet Documented",
-    "dependencies": {
-      "0,0,1,0,0,9,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "fifthtry.github.io/Flash-theme#base_size": {
@@ -839,96 +743,27 @@ window.ftd = (function () {
 <div data-id="0,0,0,6,2:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 2px; padding-left: 10px; padding-top: 2px; white-space: initial" class="ft_md"><a data-id="0,0,0,6,2,0:main" href="sync/" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); cursor: pointer; font-family: Open sans; font-size: 14px; font-weight: 400; line-height: 20px; min-width: fit-content; padding-bottom: 3px; padding-left: 10px; padding-top: 3px; text-align: left; white-space: initial" class="ft_md"><code>fpm sync</code></a></div>
 <div data-id="0,0,0,6,3:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 2px; padding-left: 10px; padding-top: 2px; white-space: initial" class="ft_md"><a data-id="0,0,0,6,3,0:main" href="status/" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); cursor: pointer; font-family: Open sans; font-size: 14px; font-weight: 400; line-height: 20px; min-width: fit-content; padding-bottom: 3px; padding-left: 10px; padding-top: 3px; text-align: left; white-space: initial" class="ft_md"><code>fpm status</code></a></div>
 <div data-id="0,0,0,6,4:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 2px; padding-left: 10px; padding-top: 2px; white-space: initial" class="ft_md"><a data-id="0,0,0,6,4,0:main" href="diff/" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); cursor: pointer; font-family: Open sans; font-size: 14px; font-weight: 400; line-height: 20px; min-width: fit-content; padding-bottom: 3px; padding-left: 10px; padding-top: 3px; text-align: left; white-space: initial" class="ft_md"><code>fpm diff</code></a></div></div></div>
-<div data-id="0,0,1:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; height: 100%; justify-content: flex-start; max-width: 900px; white-space: initial; width: 100%" class="ft_md"><div data-id="main-container:0,0,1,0:main" style="align-items: flex-start; align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; margin-bottom: auto; max-width: 700px; white-space: initial" class="ft_md"><div data-ext-id="main-container-external:0:main" data-id="0,0,1,0,0:main-container-external:0:main" id="roadmap" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,0:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,0,0:main-container-external:0:main" style="align-self: flex-start; border-bottom-width: 1px !important; border-color: rgba(206,210,221,1); border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 30px; font-weight: 600; line-height: 30px; padding-bottom: 20px; padding-top: 30px; text-align: left; white-space: initial; width: 100%" class="ft_md">Roadmap</div>
+<div data-id="0,0,1:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; height: 100%; justify-content: flex-start; max-width: 900px; white-space: initial; width: 100%" class="ft_md"><div data-id="main-container:0,0,1,0:main" style="align-items: flex-start; align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; margin-bottom: auto; max-width: 700px; white-space: initial" class="ft_md"><div data-ext-id="main-container-external:0:main" data-id="0,0,1,0,0:main-container-external:0:main" id="known-issues" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,0:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,0,0:main-container-external:0:main" style="align-self: flex-start; border-bottom-width: 1px !important; border-color: rgba(206,210,221,1); border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 30px; font-weight: 600; line-height: 30px; padding-bottom: 20px; padding-top: 30px; text-align: left; white-space: initial; width: 100%" class="ft_md">Known Issues</div>
 <div data-id="0,0,1,0,0,0,1:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-top: 10px; white-space: initial; width: 100%" class="ft_md"></div></div>
-<div data-id="0,0,1,0,0,1:main-container-external:0:main" id="fpm-as-kickass-ssg-tool" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,1,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">FPM as kickass SSG tool</div>
-<div data-id="0,0,1,0,0,1,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li>package cargo binary for different os/arch</li>
-<li>docs:
-<ul>
-<li>fpm tutorial</li>
-<li>github pages how to</li>
-</ul>
-</li>
-<li>static assets</li>
-<li><a href="/fpm/~/23/">markdown file handling</a></li>
-<li><a href="/fpm/~/22/"><code>README.md</code> handling</a></li>
-<li><a href="/fpm/~/18/">Include fonts from dependencies</a></li>
-<li><a href="/fpm/~/25/">fpm client variables</a></li>
-<li><a href="/fpm/~/27/">Package dependencies full version</a></li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,2:main-container-external:0:main" id="rust-book-using-fpm" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,2,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Rust Book using FPM</div>
-<div data-id="0,0,1,0,0,2,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li><a href="/fpm/~/3/">translation tracking</a>: UI pending</li>
-<li><a href="/fpm/~/34/"><code>$processor$: include-file</code></a></li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,3:main-container-external:0:main" id="core-features" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,3,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Core Features</div>
-<div data-id="0,0,1,0,0,3,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li><a href="/fpm/~/26/">sqlite support</a></li>
-<li><a href="/fpm/~/16/">package database</a></li>
-<li><a href="/fpm/~/20/">dynamic/data-driven documents</a></li>
-<li><a href="/fpm/~/24/">fpm actions</a></li>
-<li>search</li>
-<li><a href="/fpm/~/11/">package interface</a></li>
-<li><code>fpm serve</code>, figure out how to do http serving</li>
-<li><a href="/fpm/~/2/">logical linking</a></li>
-<li><code>fpm-repo</code>, <a href="/fpm/~/8/">auth</a> &amp; <a href="/fpm/~/7/"><code>fpm sync</code> for two way sync</a></li>
-<li><a href="/fpm/~/5/">version tracking</a></li>
-<li><a href="/fpm/~/6/">cr tracking</a></li>
-<li><a href="/fpm/~/10/">access control</a></li>
-<li><a href="/fpm/~/14/"><code>$processor$</code>: with ftd json constructor</a></li>
-<li><a href="/fpm/~/31/"><code>fpm fmt</code>: formatter</a></li>
-<li><a href="/fpm/~/32/">banner support</a></li>
-<li><a href="/fpm/~/33/">encryption support</a></li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,4:main-container-external:0:main" id="importer-exporters" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,4,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Importer &amp; Exporters</div>
-<div data-id="0,0,1,0,0,4,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li>mdbook</li>
-<li>jekyll</li>
-<li>Hugo</li>
-<li>wordpress</li>
-<li>medium</li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,5:main-container-external:0:main" id="packaging-tooling" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,5,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Packaging &amp; Tooling</div>
-<div data-id="0,0,1,0,0,5,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li>brew</li>
-<li>apt</li>
-<li>docker?</li>
-<li>auto create packages using github action</li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,6:main-container-external:0:main" id="tutorials-documentation" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,6,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Tutorials &amp; Documentation</div>
-<div data-id="0,0,1,0,0,6,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li>hello world</li>
-<li>how to create a new fpm component library</li>
-<li>translating projects using fpm</li>
-<li>documentation of versioned software</li>
-<li>how to use github for collaboration over a <code>fpm</code> package</li>
-<li>how to setup your own <code>fpm-repo</code> on heroku</li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,7:main-container-external:0:main" id="developer-author-productivity" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,7,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Developer / Author Productivity</div>
-<div data-id="0,0,1,0,0,7,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li><a href="/fpm/~/30/">live reload for <code>fpm serve</code></a></li>
-<li>syntax highlighting for editors</li>
-<li>LSP for ftd/fpm</li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,8:main-container-external:0:main" id="backlog" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,8,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Backlog</div>
-<div data-id="0,0,1,0,0,8,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li>optimisation: <a href="/fpm/~/19/">only include font when needed</a></li>
-<li><a href="/fpm/~/21/"><code>fpm diff &lt;path&gt;</code> filtered diff</a></li>
-<li><del>display programming file etc as code block?</del></li>
-</ul>
-</div></div>
-<div data-id="0,0,1,0,0,9:main-container-external:0:main" id="implemented-but-not-yet-documented" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,9,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Implemented But Not Yet Documented</div>
-<div data-id="0,0,1,0,0,9,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><ul>
-<li><a href="/fpm/~/12/">ad-hoc tracking</a></li>
-</ul>
+<div data-id="0,0,1,0,0,1:main-container-external:0:main" id="translation-can-not-be-added-unless-original-package-has-been-published" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,1,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Translation Can Not Be Added Unless Original Package Has Been Published</div>
+<div data-id="0,0,1,0,0,1,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p>If you want to start a new project and create its translations right away, you
+will have to first publish the original language package, and then add the other
+ones, else there is a circular issue (translation can not be built because it will
+try to download the original, which is not yet published, and original package
+will try to download the translation package, original needs them so original can
+publish translation-status page).</p>
+<p>We know you love it, you are like:</p>
+</div>
+<div data-id="0,0,1,0,0,1,2:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; height: 100%; justify-content: flex-start; padding-bottom: 20px; white-space: initial; width: 100%" class="ft_md"><img alt="" data-id="0,0,1,0,0,1,2,0:main-container-external:0:main" src="https://i.imgur.com/fJZOxoN.jpg" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; padding-bottom: 15px; white-space: initial; width: 100%">
+<div data-id="0,0,1,0,0,1,2,2:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p>But cool down, let’s do it in steps.</p>
+</div></div></div>
+<div data-id="0,0,1,0,0,2:main-container-external:0:main" id="translation-tracking-doesn-t-work-if-you-do-not-fpm-sync" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,2,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Translation Tracking Doesn’t Work If You Do Not <code>fpm sync</code></div>
+<div data-id="0,0,1,0,0,2,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p>From time to time you will have to call <code>fpm sync</code>. You can do it every time you
+modify any file that is part of the package in fact.</p>
+<p>At some point we will remove this requirement, maybe we will work off of <code>git</code>
+commit-hashes instead of last modified time stamps as per <code>.history</code> folder, but
+for now we need <code>.history</code> folder updated regularly.</p>
+<p>Call <code>fpm sync</code> often.</p>
 </div></div></div></div></div></div></div></div><style>
 @font-face { unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;;
 font-style: light;;

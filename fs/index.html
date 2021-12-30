@@ -16,6 +16,22 @@
       "0,0,1,0,0,1,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
+  "@body@0,10": {
+    "value": "This file keeps track of latest timestamp of all files in `.history` folder. It\nlooks like this:",
+    "dependencies": {}
+  },
+  "@body@0,10,1": {
+    "value": "This file keeps track of latest timestamp of all files in `.history` folder. It\nlooks like this:",
+    "dependencies": {
+      "0,0,1,0,0,3,6,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "@body@0,11": {
+    "value": "-- import: fpm\n\n-- fpm.snapshot: FPM.ftd\ntimestamp: 1638625721072234000\n\n-- fpm.snapshot: foo/index.ftd\ntimestamp: 1638625721072234000",
+    "dependencies": {
+      "0,0,1,0,0,3,6,2,2:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
   "@body@0,2": {
     "value": "Each package has a name. The name of the package can be either just `foo` or \n`foo/bar`. The former is usually the \"account name\", eg the username or the org\nthat owns that package, and the latter is a namespace package.",
     "dependencies": {}
@@ -96,6 +112,10 @@
       "0,0,1,0,0,3,5,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
+  "@lang@0,11": {
+    "value": "ftd",
+    "dependencies": {}
+  },
   "@title@0,0": {
     "value": "File System Organization",
     "dependencies": {
@@ -106,6 +126,12 @@
     "value": "Package",
     "dependencies": {
       "0,0,1,0,0,1,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "@title@0,10": {
+    "value": "`.history/.latest.ftd` file",
+    "dependencies": {
+      "0,0,1,0,0,3,6,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "@title@0,2": {
@@ -890,7 +916,20 @@ modified in <code>.history</code> folder.</p>
 created on <code>fpm-repo</code> server. If other repo like <code>github</code> etc are being used, then
 all files that have changed in package directory that have changed since last
 <code>sync</code> will be stored in the <code>.history</code> folder.</p>
-</div></div></div></div></div></div></div></div></div><style>
+</div></div>
+<div data-id="0,0,1,0,0,3,6:main-container-external:0:main" id="history-latest-ftd-file" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,3,6,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 21px; font-weight: 600; line-height: 21px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md"><code>.history/.latest.ftd</code> file</div>
+<div data-id="0,0,1,0,0,3,6,1:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p>This file keeps track of latest timestamp of all files in <code>.history</code> folder. It
+looks like this:</p>
+</div>
+<div data-id="0,0,1,0,0,3,6,2:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,3,6,2,2:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#c0c5ce;">-- import: fpm
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">-- fpm.snapshot: FPM.ftd
+</span><span style="color:#c0c5ce;">timestamp: 1638625721072234000
+</span><span style="color:#c0c5ce;">
+</span><span style="color:#c0c5ce;">-- fpm.snapshot: foo/index.ftd
+</span><span style="color:#c0c5ce;">timestamp: 1638625721072234000
+</span></pre>
+</div></div></div></div></div></div></div></div></div></div><style>
 @font-face { unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;;
 font-style: light;;
 src: url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');

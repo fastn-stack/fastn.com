@@ -17,18 +17,34 @@
     }
   },
   "@body@0,2": {
-    "value": "fpm sync\nrepo for amitu is github, directly syncing with .history.\na/b.ftd\nindex.ftd\nFPM.ftd",
+    "value": "fpm sync\nRepo for amitu is github, directly syncing with .history.\na/b.ftd\nindex.ftd\nFPM.ftd",
     "dependencies": {
       "0,0,1,0,0,1,2,2:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "@body@0,3": {
+    "value": "fpm sync\nEverything is upto date.",
+    "dependencies": {
+      "0,0,1,0,0,1,3,1:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "@body@0,4": {
     "value": "`fpm sync` first reports the repo of the package name, if its `github` it says\nits `directly syncing with .history`.\n\nThen it lists all the files that have been modified and updated.",
     "dependencies": {
-      "0,0,1,0,0,1,3:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+      "0,0,1,0,0,1,4:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "@caption@0,3": {
+    "value": "when everything is up to date.",
+    "dependencies": {
+      "0,0,1,0,0,1,3,0:main-container-external:0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
     }
   },
   "@lang@0,2": {
+    "value": "sh",
+    "dependencies": {}
+  },
+  "@lang@0,3": {
     "value": "sh",
     "dependencies": {}
   },
@@ -735,13 +751,18 @@ is hosted on <code>github</code> etc, then <code>sync</code> creates a snapshot 
 </div></div></div>
 <div data-id="0,0,1,0,0,1:main-container-external:0:main" id="output" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,1,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: Open sans; font-size: 24px; font-weight: 700; line-height: 24px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md">Output</div>
 <div data-id="0,0,1,0,0,1,2:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,1,2,2:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#8fa1b3;">fpm</span><span style="color:#c0c5ce;"> sync
-</span><span style="color:#8fa1b3;">repo</span><span style="color:#c0c5ce;"> for amitu is github, directly syncing with .history.
+</span><span style="color:#8fa1b3;">Repo</span><span style="color:#c0c5ce;"> for amitu is github, directly syncing with .history.
 </span><span style="color:#8fa1b3;">a/b.ftd
 </span><span style="color:#8fa1b3;">index.ftd
 </span><span style="color:#8fa1b3;">FPM.ftd
 </span></pre>
 </div></div>
-<div data-id="0,0,1,0,0,1,3:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p><code>fpm sync</code> first reports the repo of the package name, if its <code>github</code> it says
+<div data-id="0,0,1,0,0,1,3:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,0,0,1,3,0:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(58,64,78,1); border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(220,220,220,1); font-family: Open sans; font-size: 14px; font-weight: 400; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md">when everything is up to date.</div>
+<div data-id="0,0,1,0,0,1,3,1:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#8fa1b3;">fpm</span><span style="color:#c0c5ce;"> sync
+</span><span style="color:#8fa1b3;">Everything</span><span style="color:#c0c5ce;"> is upto date.
+</span></pre>
+</div></div>
+<div data-id="0,0,1,0,0,1,4:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: Open sans; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p><code>fpm sync</code> first reports the repo of the package name, if its <code>github</code> it says
 its <code>directly syncing with .history</code>.</p>
 <p>Then it lists all the files that have been modified and updated.</p>
 </div></div></div></div></div></div></div></div><style>
