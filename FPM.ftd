@@ -3,6 +3,7 @@
 -- fpm.package: fifthtry.github.io/fpm-dev-en/
 zip: github.com/fifthtry/fpm-dev-en/archive/refs/heads/main.zip
 language: en
+translation: fifthtry.github.io/fpm-dev-hi
 
 -- fpm.dependency: fifthtry.github.io/Flash-theme
 
