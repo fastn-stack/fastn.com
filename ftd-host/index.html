@@ -7,6 +7,22 @@
 
     <script type="ftd" id="ftd-data-message">
         {
+  "@default@0,0,0,0": {
+    "value": "Never Synced",
+    "dependencies": {}
+  },
+  "@key@0,0,0,0": {
+    "value": "Last modified on:",
+    "dependencies": {
+      "0,0,0,0,0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "@show-menu@0,0,1": {
+    "value": "false",
+    "dependencies": {
+      "0,0,1,2,0": "[{\"dependency_type\":\"Visible\",\"condition\":\"true\",\"parameters\":{}}]"
+    }
+  },
   "fpm#document-id": {
     "value": "ftd-host.ftd",
     "dependencies": {}
@@ -17,6 +33,98 @@
   },
   "fpm#title": {
     "value": "fifthtry.github.io/fpm-dev-en/",
+    "dependencies": {}
+  },
+  "fpm#translation-status-url": {
+    "value": "//fifthtry.github.io/fpm-dev-en//FPM/translation-status",
+    "dependencies": {}
+  },
+  "fpm-ui#current-language": {
+    "value": "Current language:",
+    "dependencies": {
+      "0,0,1,1,0": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "fpm-ui#document": {
+    "value": "Document",
+    "dependencies": {}
+  },
+  "fpm-ui#language-detail-page": {
+    "value": "Language Detail Page",
+    "dependencies": {}
+  },
+  "fpm-ui#language-detail-page-body": {
+    "value": "Here is the list of the translation status for all the files.",
+    "dependencies": {}
+  },
+  "fpm-ui#last-modified-on": {
+    "value": "Last modified on:",
+    "dependencies": {}
+  },
+  "fpm-ui#missing": {
+    "value": "Missing",
+    "dependencies": {}
+  },
+  "fpm-ui#never-marked": {
+    "value": "Never Marked",
+    "dependencies": {}
+  },
+  "fpm-ui#never-synced": {
+    "value": "Never Synced",
+    "dependencies": {}
+  },
+  "fpm-ui#other-available-languages": {
+    "value": "Other available languages:",
+    "dependencies": {}
+  },
+  "fpm-ui#out-dated": {
+    "value": "Out-dated",
+    "dependencies": {}
+  },
+  "fpm-ui#out-dated-body": {
+    "value": "The ⁨English⁩ document was last modified on ⁨2021-12-30T10:53:57.238465+00:00⁩. Since then, the ⁨English⁩ version has the following changes.",
+    "dependencies": {}
+  },
+  "fpm-ui#out-dated-heading": {
+    "value": "This document is out dated.",
+    "dependencies": {}
+  },
+  "fpm-ui#show-latest-version": {
+    "value": "Show latest version",
+    "dependencies": {}
+  },
+  "fpm-ui#show-outdated-version": {
+    "value": "Show outdated version",
+    "dependencies": {}
+  },
+  "fpm-ui#show-translation-status": {
+    "value": "Show translation status",
+    "dependencies": {
+      "0,0,0,1": "[{\"dependency_type\":\"Value\",\"condition\":null,\"parameters\":{}}]"
+    }
+  },
+  "fpm-ui#show-unapproved-version": {
+    "value": "Show unapproved version",
+    "dependencies": {}
+  },
+  "fpm-ui#status": {
+    "value": "Status",
+    "dependencies": {}
+  },
+  "fpm-ui#total-number-of-documents": {
+    "value": "Total number of documents:",
+    "dependencies": {}
+  },
+  "fpm-ui#translation-not-available": {
+    "value": "This document is not yet translated to ⁨English⁩. You are seeing ⁨English⁩ version.",
+    "dependencies": {}
+  },
+  "fpm-ui#unapproved-heading": {
+    "value": "The translation of this document is not yet approved.",
+    "dependencies": {}
+  },
+  "fpm-ui#upto-date": {
+    "value": "Upto-date",
     "dependencies": {}
   }
 }
@@ -715,8 +823,12 @@ window.ftd = (function () {
 </head>
 <body>
 
-<div id="message"><div data-id="message:root" style="align-items: flex-start; align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: wrap; height: 100%; justify-content: flex-start; margin-bottom: auto; margin-top: auto; white-space: initial; width: 100%" class="ft_md"><div data-id="0:message" data-spacing="margin-left:10px" style="align-items: flex-start; align-self: flex-end; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; margin-bottom: auto; margin-left: auto; margin-top: auto; white-space: initial" class="ft_md"><div data-id="0,0:message" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; font-weight: 400; text-align: left; white-space: initial" class="ft_md">Other available languages:</div>
-<a data-id="0,1:message" href="https://fifthtry.github.io/fpm-dev-hi/ftd-host/" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; cursor: pointer; font-weight: 400; margin-left: 10px; text-align: left; white-space: initial" class="ft_md">hi</a></div></div><style>
+<div id="message"><div data-id="message:root" style="align-items: flex-start; align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: wrap; height: 100%; justify-content: flex-start; margin-bottom: auto; margin-top: auto; white-space: initial; width: 100%" class="ft_md"><div data-id="0:message" style="align-items: flex-start; align-self: flex-start; background-color: rgba(243,243,243,1); border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0:message" style="align-items: flex-start; align-self: flex-start; background-color: rgba(243,243,243,1); border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; padding: 10px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,0:message" data-spacing="margin-top:5px" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; white-space: initial" class="ft_md"><div data-id="0,0,0,0:message" data-spacing="margin-left:2px" style="align-items: flex-start; align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; margin-bottom: auto; margin-top: auto; white-space: initial" class="ft_md"><div data-id="0,0,0,0,0:message" style="align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; font-weight: 400; margin-bottom: auto; margin-top: auto; text-align: left; white-space: initial" class="ft_md">Last modified on:</div>
+<div data-id="0,0,0,0,1:message" style="align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; font-weight: 400; margin-bottom: auto; margin-left: 2px; margin-top: auto; text-align: left; white-space: initial" class="ft_md">2021-12-30T10:53:57.238465+00:00</div></div>
+<a data-id="0,0,0,1:message" href="//fifthtry.github.io/fpm-dev-en//FPM/translation-status" style="align-self: flex-start; background-color: rgba(210,115,85,1); border-color: rgba(38,100,79,1); border-radius: 13px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(255,255,255,1); cursor: pointer; font-weight: 400; margin-top: 5px; padding: 8px; text-align: left; white-space: initial" class="ft_md">Show translation status</a></div>
+<div data-id="0,0,1:message" style="align-items: flex-start; align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; margin-bottom: auto; margin-top: auto; white-space: initial" class="ft_md"><div data-id="0,0,1,1:message" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,1,0:message" style="align-self: center; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; font-weight: 400; margin-bottom: auto; margin-top: auto; text-align: left; white-space: initial; width: 120px" class="ft_md">Current language:</div>
+<div data-id="0,0,1,1,1:message" onclick="window.ftd.handle_event(event, 'message', '[{&quot;action&quot;:&quot;toggle&quot;,&quot;target&quot;:&quot;@show-menu@0,0,1&quot;,&quot;parameters&quot;:{}}]')" style="align-self: flex-start; background-color: rgba(255,255,255,1); border-color: rgba(173,174,179,1); border-radius: 0px; border-style: solid; border-width: 1px; box-sizing: border-box; cursor: pointer; font-weight: 400; margin-bottom: 5px; margin-left: 5px; margin-right: 5px; margin-top: 5px; padding-left: 5px; padding-right: 50px; text-align: left; white-space: initial" class="ft_md">English</div></div>
+<div data-id="0,0,1,2:message" style="align-items: flex-start; align-self: flex-end; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; margin-bottom: auto; margin-left: auto; margin-top: auto; position: relative; white-space: initial; width: 100%" class="ft_md"><div data-id="0,0,1,2,0:message" onclick="window.ftd.handle_event(event, 'message', '[{&quot;action&quot;:&quot;toggle&quot;,&quot;target&quot;:&quot;@show-menu@0,0,1&quot;,&quot;parameters&quot;:{}}]')" style="align-items: flex-start; background-color: rgba(241,241,241,1); border-radius: 0px; border-style: solid; border-width: 0px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.25); box-sizing: border-box; cursor: pointer; display: none; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; margin-top: 10px; min-width: 160px; position: absolute; right: 0; top: 0; white-space: initial; width: 100%" class="ft_md"><a data-id="0,0,1,2,0,0:message" href="https://fifthtry.github.io/fpm-dev-hi/ftd-host/" style="align-self: flex-start; border-bottom-width: 1px !important; border-color: rgba(227,225,225,1); border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; cursor: pointer; font-weight: 400; padding: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md">Hindi</a></div></div></div></div></div></div><style>
 @font-face { unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;;
 font-style: light;;
 src: url(https://fonts.gstatic.com/s/opensans/v27/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
