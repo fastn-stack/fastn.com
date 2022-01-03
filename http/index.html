@@ -980,30 +980,30 @@ font-family: apple-system }</style></div>
 from HTTP.</p>
 <p>Consider this data type:</p>
 </div>
-<div data-id="0,1,1,0,2:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,1,1,0,2,2:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#c0c5ce;">-- record repo:
-</span><span style="color:#c0c5ce;">string full_name:
-</span><span style="color:#c0c5ce;">string description:
-</span><span style="color:#c0c5ce;">string html_url:
-</span><span style="color:#c0c5ce;">integer stargazers_count:
-</span><span style="color:#c0c5ce;">integer watchers_count:
+<div data-id="0,1,1,0,2:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,1,1,0,2,2:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#65737e;">-- </span><span style="color:#ebcb8b;">record repo</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">string full_name</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">string description</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">string html_url</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">integer stargazers_count</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">integer watchers_count</span><span style="color:#65737e;">:
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">-- record result:
-</span><span style="color:#c0c5ce;">integer total_count: 0
-</span><span style="color:#c0c5ce;">repo list items:
+</span><span style="color:#65737e;">-- </span><span style="color:#ebcb8b;">record result</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">integer total_count</span><span style="color:#65737e;">: </span><span style="color:#d08770;">0
+</span><span style="color:#b48ead;">repo list items</span><span style="color:#65737e;">:
 </span><span style="color:#c0c5ce;">
-</span><span style="color:#c0c5ce;">-- result r:
+</span><span style="color:#65737e;">-- </span><span style="color:#ebcb8b;">result r</span><span style="color:#65737e;">:
 </span></pre>
 </div></div>
 <div data-id="0,1,1,0,3:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(28,28,36,1); font-family: apple-system; font-size: 15px; font-weight: 400; line-height: 24px; padding-bottom: 8px; text-align: left; white-space: initial" class="ft_md"><p>We have two records: <code>repo</code>, and <code>result</code>. We also have a variable of type <code>result</code>.</p>
 <p>Lets initialise this variable with result of fetching the top repositories from
 Github:</p>
 </div>
-<div data-id="0,1,1,0,4:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,1,1,0,4,2:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#c0c5ce;">-- r:
-</span><span style="color:#c0c5ce;">$processor$: http
-</span><span style="color:#c0c5ce;">url: https://api.github.com/search/repositories
-</span><span style="color:#c0c5ce;">sort: stars
-</span><span style="color:#c0c5ce;">order: desc
-</span><span style="color:#c0c5ce;">q: language:python
+<div data-id="0,1,1,0,4:main-container-external:0:main" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; padding-top: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,1,1,0,4,2:main-container-external:0:main" style="align-self: flex-start; background-color: rgba(43,48,59,1); border-bottom-left-radius: 4px !important; border-bottom-right-radius: 4px !important; border-radius: 0px; border-style: solid; border-top-left-radius: 4px !important; border-top-right-radius: 4px !important; border-width: 0px; box-sizing: border-box; color: rgba(77,77,77,1); font-size: 17px; font-weight: 400; line-height: 25px; overflow-x: auto; padding-bottom: 10px; padding-left: 20px; padding-right: 20px; padding-top: 10px; text-align: left; white-space: initial; width: 100%" class="ft_md"><pre style="background-color:#2b303b;"><span style="color:#65737e;">-- </span><span style="color:#ebcb8b;">r</span><span style="color:#65737e;">:
+</span><span style="color:#b48ead;">$processor$</span><span style="color:#65737e;">: </span><span style="color:#d08770;">http
+</span><span style="color:#b48ead;">url</span><span style="color:#65737e;">: </span><span style="color:#d08770;">https://api.github.com/search/repositories
+</span><span style="color:#b48ead;">sort</span><span style="color:#65737e;">: </span><span style="color:#d08770;">stars
+</span><span style="color:#b48ead;">order</span><span style="color:#65737e;">: </span><span style="color:#d08770;">desc
+</span><span style="color:#b48ead;">q</span><span style="color:#65737e;">: </span><span style="color:#d08770;">language:python
 </span></pre>
 </div></div>
 <div data-id="0,1,1,0,5:main-container-external:0:main" id="url-string" style="align-items: flex-start; align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; padding-bottom: 12px; white-space: initial; width: 100%" class="ft_md"><div data-id="0,1,1,0,5,0:main-container-external:0:main" style="align-self: flex-start; border-radius: 0px; border-style: solid; border-width: 0px; box-sizing: border-box; color: rgba(0,0,0,1); font-family: apple-system; font-size: 26px; font-weight: 700; line-height: 32px; padding-bottom: 8px; padding-top: 16px; text-align: left; white-space: initial" class="ft_md"><code>url: string</code></div>
