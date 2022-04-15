@@ -28,6 +28,16 @@ So links never break (and original author can keep updating document URL at whim
 (on how having article.page allows us to get just the content of a page, without
 header/sidebar/footer etc).
 
+-- ft.h1: `fpm::Config::read()`'s `root` should be `String`
+
+15th Apr 2022
+
+Earlier it was `camino::Utf8PathBuf`. Since `read()` is a public method, anyone
+calling `read()` must take a dependency on `camino`. So we changed the type of
+`root` to `Option<String>`.
+
+[Doc PR](). [Code PR]().
+
 -- ft.h1: `fpm::Config::read()` now accepts optional root
 
 14th Apr 2022
