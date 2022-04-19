@@ -158,3 +158,11 @@ things by paths defined in "Package URLs" section.
 If a versioned package is translated, translation packages can not change the
 logical structure. Meaning if a file `v2/foo.ftd` does not exist in English /
 Original package, it can not exist in Hindi / Translation package.
+
+-- ft.h1: Version Status Page
+
+In `/-/version-status/` we will show all versions, and files in each version,
+which files are fallback and which are edited in specific version.
+
+Further we will show all files that are out of date compared to changes in
+previous version of that file.
