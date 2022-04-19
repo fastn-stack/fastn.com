@@ -37,7 +37,7 @@ lang: txt
 
 -- ft.markdown:
 
-Notive that `foo.ftd` does not exist in `v2` folder, since it has not been
+Notice that `foo.ftd` does not exist in `v2` folder, since it has not been
 edited in v2.
 
 
