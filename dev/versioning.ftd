@@ -152,3 +152,9 @@ Assets would not be versioned.
 
 If a versioned package is used as a dependency, other packages can refer to
 things by paths defined in "Package URLs" section.
+
+-- ft.h1: Translation And Versioning
+
+If a versioned package is translated, translation packages can not change the
+logical structure. Meaning if a file `v2/foo.ftd` does not exist in English /
+Original package, it can not exist in Hindi / Translation package.
