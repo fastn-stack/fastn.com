@@ -90,6 +90,7 @@ $processor$: toc
     url: crate/utils/
 - Dependencies
   - `ftd`: crate/deps/ftd/
+  - `fbt-lib`: crate/deps/fbt/
   - `camino`: crate/deps/camino/
 
 
