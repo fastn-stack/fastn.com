@@ -60,8 +60,9 @@ $processor$: toc
 -- fpm.toc-item list dev-toc:
 $processor$: toc
 
-- Roadmap: /roadmap/
-- Journal: /journal/
+- Roadmap: roadmap/
+- Journal: journal/
+- How Versioning Works: dev/versioning/
 
 -- fpm.toc-item list crate-toc:
 $processor$: toc
@@ -139,14 +140,4 @@ $processor$: toc
 - Installation: /about/
 
 
-/-- ft.footer-toc: Learn
-children: $learn
 
-/-- ft.footer-toc: Community
-children: $community
-
-/-- ft.footer-toc: More
-children: $more
-
-/-- ft.footer-toc: Legal
-children: $legal
