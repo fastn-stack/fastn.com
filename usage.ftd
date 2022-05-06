@@ -7,10 +7,10 @@ toc: $ft.toc
 `fpm` CLI uses a few sub-commands to do different things:
 
 - `fpm -h` or `fpm --help` to print help-text and exit.
-- [`fpm build`](/build/)
-- [`fpm sync`](/sync/)
-- [`fpm status`](/status/)
-- [`fpm diff`](/diff/)
+- [`fpm build`](build/)
+- [`fpm sync`](sync/)
+- [`fpm status`](status/)
+- [`fpm diff`](diff/)
 
 Running `fpm` without any argument prints the help-text, which lists all available
 subcommands and general instructions on how to use `fpm`.
