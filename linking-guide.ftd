@@ -2,8 +2,8 @@
 
 -- ft.markdown:
 
-We put all links without slash in front and slash in end.
+We put all links without slash in front. And we always put slash in end.
 
 Example:
 
-In case of `[fpm build](/build/)` or `[fpm build](/build)` use like `[fpm build](build)`
+Instead of using `[fpm build](/build/)` or `[fpm build](/build)`, use like `[fpm build](build/)`
