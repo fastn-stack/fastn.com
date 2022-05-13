@@ -13,6 +13,5 @@ toc: $ft.toc
 
 -- ft.markdown:
 ## TODO
-- PORT should be configurable
 - static directory should be configurable
 - default error page or list the directory in case of file not found
