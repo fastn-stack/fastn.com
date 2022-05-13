@@ -3,7 +3,13 @@ toc: $ft.toc
 
 -- ft.markdown:
 
-`fpm serve` creates an `http` server, which serves static files from `.build` directory.
+`fpm serve [<port>]` creates an `http` server, which serves static files from `.build` directory.
+
+-- ft.markdown:
+# Usage
+
+- `fpm serve`, It will create and run server at default port `8000`
+- `fpm serve 8080`, It will create and run server at port `8080`
 
 -- ft.markdown:
 ## TODO
