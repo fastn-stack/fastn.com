@@ -1,0 +1,12 @@
+-- ft.page-with-toc: `fpm serve`
+toc: $ft.toc
+
+-- ft.markdown:
+
+`fpm serve` creates an `http` server, which serves static files from `.build` directory.
+
+-- ft.markdown:
+## TODO
+- PORT should be configurable
+- static directory should be configurable
+- default error page or list the directory in case of file not found
