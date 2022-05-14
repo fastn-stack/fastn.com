@@ -1,4 +1,6 @@
--- ft.page-with-toc: FPM Sitemap
+-- import: ft as ds
+
+-- ds.page-with-toc: FPM Sitemap
 toc: $config.themes-toc
 
 "FPM Sitemap" is the name of a structure we recommend for sites. It is
@@ -170,7 +172,7 @@ The record looks like this
 -- ds.code: `info` record (fpm.ftd)
 lang: ftd
 
--- record info:
+\-- record info:
 optional string page-title:
 optional string section-title:
 optional string subsection-title:
@@ -255,5 +257,72 @@ lang: ftd
 - foo/
 show-dev-info: true
 
+-- ds.h1: Using `$assets` In Sitemap
 
+In sitemap referring the URL is not too great, as it can lead to 404s if you
+rename a ftd file or folder.
 
+-- ds.h2: `assets` special module
+
+So we auto create `assets` module in every FPM package, which contains
+`$assets.pages.foo.ftd` and `$assets.files.foo.ftd`. The value of two are
+different in case of image file etc, where `$assets.pages.foo.png` is
+`/foo.png/` and it contains an `index.html` containing information about the
+image. `$assets.files.foo.png` on the other hand contains `-/foo.png`,
+which points to the PNG file itself.
+
+-- ds.h2: Using `$assets`
+
+We can use to variable reference when creating sitemap:
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+- Hello: $assets.pages.index.ftd
+
+-- ds.markdown:
+
+`$foo` is evaluated. For this to work `assets` have to be added to `auto-import`
+section.
+
+-- ds.h2: Multiple Entries For A Document When Using `$assets.pages`
+
+When using this, the URL is fixed, `foo.ftd` will always have URL `/foo/`, but
+we also allow `/foo/-/something/` when hardcoding URLs. To do the same, the part
+after `/-/` can be specified as `fragment`.
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+- Hello: $assets.pages.index.ftd
+- Hello For Devs: $assets.pages.index.ftd
+  fragment: /dev/
+  for-dev: true
+
+-- ds.markdown:
+
+Here we have used the same document, `$assets.pages.index.ftd` twice in TOC, but
+we have different URLs for them, `/` and `/-/dev/`. The later would get the key
+value parameters.
+
+-- ds.h1: Including Documents From Other FPM Packages In Sitemap
+
+A package `foo.com` can chose to include a document in `bar.com` by including
+it in sitemap.
+
+-- ds.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+- Hello: $assets.pages.index.ftd
+- Intro: $bar-assets.pages.intro.ftd
+
+-- ds.markdown:
+
+In this case the file would get copied over, and the url of intro would be
+`https://foo.com/-/bar.com/intro/`. We can use `fragment` as well.
