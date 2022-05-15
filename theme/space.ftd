@@ -1,5 +1,5 @@
 -- ft.page-with-toc: FPM Space
-toc: $config.themes-toc
+toc: $config.sitemap.toc
 
 -- ftd.column:
 id: outer

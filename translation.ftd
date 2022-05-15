@@ -1,5 +1,5 @@
 -- ft.page-with-toc: Step by Step guide to setup translation with `fpm`
-toc: $ft.toc
+toc: $config.sitemap.toc
 
 -- ft.markdown: 
 

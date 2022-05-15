@@ -1,5 +1,6 @@
 -- ft.page-with-toc: Roadmap
-toc: $config.dev-toc
+toc: $config.sitemap.toc
+sub-sections: $config.sitemap.subsections
 
 
 -- ft.h1: FPM as kick-ass SSG tool

@@ -1,6 +1,6 @@
 -- ft.page-with-toc: `fpm::utils`
-toc: $config.crate-toc
-sub-sections: $config.dev-section
+toc: $config.sitemap.toc
+sub-sections: $config.sitemap.subsections
 extra: $config.empty
 
 `fpm::utils` is a bunch of private helper functions.

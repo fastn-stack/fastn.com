@@ -1,5 +1,5 @@
 -- ft.page-with-toc: How to use Google Fonts
-toc: $config.themes-toc
+toc: $config.sitemap.toc
 
 We have added below Google Fonts and they are ready to use:
 

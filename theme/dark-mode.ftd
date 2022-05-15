@@ -1,7 +1,7 @@
 -- import: fpm.dev/assets
 
 -- ft.page-with-toc: Dark Mode Support
-toc: $config.themes-toc
+toc: $config.sitemap.toc
 
 -- ft.markdown: 
 

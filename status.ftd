@@ -1,5 +1,5 @@
 -- ft.page-with-toc: `fpm status`
-toc: $ft.toc
+toc: $config.sitemap.toc
 
 
 

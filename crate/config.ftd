@@ -1,6 +1,6 @@
 -- ft.page-with-toc: `fpm::Config`
-toc: $config.crate-toc
-sub-sections: $config.dev-section
+toc: $config.sitemap.toc
+sub-sections: $config.sitemap.subsections
 extra: $config.empty
 
 `fpm::Config` struct keeps track of configuration for a FPM package. In order
