@@ -40,10 +40,11 @@ url: whatever
 
 -- ds.markdown:
 
-Note: The URLs in sitemap start with slash, but we remove the first slash. We do
-this because some projects may deploy FPM package on a base URL eg, `foo.com/bar/`,
-so all reference to /x/ is actually a reference to `foo.com/bar/x/`. We also
-convert `/` to `index.html` for the same reason.
+Note: The URLs in sitemap start with slash, but we remove the first slash if
+`--base` is not equal to `/`. We support `--base` because some projects may
+deploy  FPM package on a base URL eg, `foo.com/bar/`, so all reference to `/x/`
+is  actually a reference to `foo.com/bar/x/`. In this case we also convert `/`
+to `index.html`.
 
 
 -- ft.h1: Sitemap `$processor$`
