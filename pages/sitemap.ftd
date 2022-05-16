@@ -1,0 +1,17 @@
+-- ft.page-with-toc: sitemap Page
+toc: $config.sitemap.toc
+
+Every FPM package contains `sitemap page`, which can be used by site admins
+to organise/understand their site.
+
+-- ft.h1: URL
+
+The page URL is `/-/sitemap/`.
+
+-- ft.h1: Design
+
+
+-- ft.image:
+src: $assets.files.pages.sitemap.png
+
+

@@ -1,0 +1,78 @@
+-- ft.page-with-toc: `sitemap-info` `$processor$`
+toc: $config.sitemap.toc
+
+`get-sitemap-info` processor which shows sitemap meant for site admins to
+understand the structure of their site. There is another processor,
+[`get-sitemap`](processors/get-sitemap/), which should be used by document
+theme to get data to show to end users.
+
+Say we have a site like this:
+
+-- ft.code: Sitemap in `FPM.ftd`
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Section: section/url/
+
+# If Section: Has A Colon In The Name
+url: sectionURL
+key: value
+
+## Sub Section: sub/url/
+
+## If Sub Section: Has A Colon In The Name
+url: whatever
+
+- ToC Item: toc/
+  k2: v2
+
+-- ft.markdown:
+
+We can use the `get-sitemap-info` to get this data:
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap-info info:
+$processor$: get-sitemap-info
+
+-- ft.markdown:
+
+The sitemap get parse into a record `fpm.sitemap-info`. The record looks like
+this:
+
+-- ft.code: record `sitemap-info` (fpm.ftd)
+lang: ftd
+
+\-- record kv:
+string key:
+string value:
+
+\-- record toc-data:
+string name:
+optional string url:
+toc-data list children:
+kv list headers:
+
+\-- record sub-section-data:
+string name:
+string url:
+toc-data list toc:
+kv list headers:
+
+\-- record section-data:
+string name:
+string url:
+sub-section-data list sub-sections:
+kv list headers:
+
+\-- record sitemap-data:
+section-data list sections:
+
+-- ft.markdown:
+
+We have a component, `fifthtry.github.io/sitemap-info` which renders
+`sitemap-data` in a nice UI.
+
+Also this data is exposed on [`sitemap-info Page`](pages/sitemap-info/).

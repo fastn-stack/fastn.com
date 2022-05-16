@@ -1,6 +1,11 @@
--- ft.page-with-toc: `get-sitemap` `$processor$`
+-- ft.page-with-toc: `sitemap-data` `$processor$`
 toc: $config.sitemap.toc
 
+`sitemap-data` processor should be used by document theme to get data to show to
+end users. There is another processor,
+[`get-sitemap-info`](processors/get-sitemap-info/), which shows sitemap data in
+a different format, meant for site admins to understand the structure of their
+site.
 
 -- ft.code: Sitemap in `FPM.ftd`
 lang: ftd
