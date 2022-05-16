@@ -1,0 +1,38 @@
+-- ft.page-with-toc: `fpm init`
+
+
+-- ft.markdown:
+
+Status: Working
+
+-- ft.h1: Description
+
+`fpm init` can be used to set up a new or existing fpm package.
+
+-- ft.h1: Synopsis
+
+-- ft.code:
+lang: sh
+
+fpm init [<project-name>] [<project-directory>] [--force|-f]
+
+-- ft.h1: Description
+
+`fpm init [<project-name>]` will initialize the project, if `project-name` not passed it will use
+current directory as the FPM project directory. If initialized files already present in the directory
+so it will not override existing files, pass flag `[--force|-f]` to recreate files.
+
+- `project-name` - the project name as passed to the command, It use current directory by if not passed
+- `project-directory` - the full path of the newly created project
+
+-- ft.h1: TODO
+
+-- ft.markdown:
+
+- handle directory name
+- I am in favour of giving `fpm startproject` command
+
+
+-- ft.markdown:
+
+[`npm init` Docs](https://docs.npmjs.com/cli/v8/commands/npm-init)

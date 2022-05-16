@@ -1,0 +1,16 @@
+-- ft.page-with-toc: `fpm version`
+
+-- ft.markdown:
+
+Status: In Queue
+
+-- ft.h1: Synopsis
+
+-- ft.code:
+lang: ftd
+
+fpm [version|-v]
+
+-- ft.markdown:
+
+It will print the `fpm` version.

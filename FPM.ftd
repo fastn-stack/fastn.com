@@ -55,8 +55,11 @@ implements: fifthtry.github.io/theme
   - `fpm sync`: sync/
   - `fpm status`: status/
   - `fpm diff`: diff/
-  - `fpm update`: update/
-  - `fpm serve`: serve/
+  - `fpm serve`: /cli-commands/serve/
+  - `fpm init`: /cli-commands/init/
+  - `fpm update`: /cli-commands/update/
+  - `fpm version`: /cli-commands/version/
+
 - Known Issues: known-issues/
 
 

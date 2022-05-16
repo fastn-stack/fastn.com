@@ -1,0 +1,19 @@
+-- ft.page-with-toc: `fpm update`
+
+-- ft.markdown:
+
+Status: In Queue
+
+-- ft.h1: Synopsis
+
+-- ft.code:
+lang: sh
+
+fpm update [self] [<pkg>]
+
+
+-- ft.markdown:
+
+This command will update packages `fpm update <pkg>` and FPM self as well.
+
+- Self Update for now

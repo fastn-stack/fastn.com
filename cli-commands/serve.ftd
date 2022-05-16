@@ -3,6 +3,13 @@
 
 `fpm serve [<port>]` creates an `http` server, which serves static files from `.build` directory.
 
+-- ft.h1: Synopsis
+
+-- ft.code:
+lang: sh
+
+fpm serve [<port>]
+
 -- ft.h1: Usage
 
 - `fpm serve`, It will create and run server at default port `8000`
