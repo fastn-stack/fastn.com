@@ -5,8 +5,6 @@
 
 Status: Working
 
--- ft.h1: Description
-
 `fpm init` can be used to set up a new or existing fpm package.
 
 -- ft.h1: Synopsis

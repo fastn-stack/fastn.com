@@ -51,14 +51,14 @@ implements: fifthtry.github.io/theme
   - Get started with Vercel: how-to/get-started-vercel/
   - Enable Translations: translation/
 - `fpm` Usage: usage/
-  - `fpm build`: build/
-  - `fpm sync`: sync/
-  - `fpm status`: status/
-  - `fpm diff`: diff/
-  - `fpm serve`: /cli-commands/serve/
-  - `fpm init`: /cli-commands/init/
-  - `fpm update`: /cli-commands/update/
-  - `fpm version`: /cli-commands/version/
+  - `fpm build`: cli-commands/build/
+  - `fpm sync`: cli-commands/sync/
+  - `fpm status`: cli-commands/status/
+  - `fpm diff`: cli-commands/diff/
+  - `fpm serve`: cli-commands/serve/
+  - `fpm init`: cli-commands/init/
+  - `fpm update`: cli-commands/update/
+  - `fpm version`: cli-commands/version/
 
 - Known Issues: known-issues/
 
@@ -89,11 +89,15 @@ implements: fifthtry.github.io/theme
   - Get started with Vercel: how-to/get-started-vercel/
   - Enable Translations: translation/
 - `fpm` Usage: usage/
-  - `fpm build`: build/
-  - `fpm sync`: sync/
-  - `fpm status`: status/
-  - `fpm diff`: diff/
-  - `fpm update`: update/
+  - `fpm build`: cli-commands/build/
+  - `fpm sync`: cli-commands/sync/
+  - `fpm status`: cli-commands/status/
+  - `fpm diff`: cli-commands/diff/
+  - `fpm serve`: cli-commands/serve/
+  - `fpm init`: cli-commands/init/
+  - `fpm update`: cli-commands/update/
+  - `fpm version`: cli-commands/version/
+
 - Known Issues: known-issues/
 
 
