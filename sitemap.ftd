@@ -1,3 +1,5 @@
+-- import: fpm.dev/assets
+
 -- ft.page: FPM Sitemap
 
 "FPM Sitemap" is the name of a structure we recommend for sites. It is
@@ -11,6 +13,7 @@ listed in the header of the site.
 
 -- ft.image:
 src: $assets.files.static.images.sitemap.png
+width: fill
 
 Each section should have one or more sub-sections. Sub-section should be listed
 as second level navigation in the header of the site. Each sub-section has one
