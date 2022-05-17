@@ -9,6 +9,9 @@ built in support for FPM Sitemap.
 A site should have "sections" on top level. Each section should ideally be
 listed in the header of the site.
 
+-- ft.image:
+src: $assets.files.static.images.sitemap.png
+
 Each section should have one or more sub-sections. Sub-section should be listed
 as second level navigation in the header of the site. Each sub-section has one
 or more documents organised in a "table of content", and TOC should be shown
@@ -27,16 +30,19 @@ file.
 lang: txt
 
 # Section: /section/url/
+nav-title: Optional Longer Section
 
 # If Section: Has A Colon In The Name
 url: sectionURL
 
 ## Sub Section: /sub/url/
+nav-title: Longer Sub Section
 
 ## If Sub Section: Has A Colon In The Name
 url: whatever
 
 - ToC Item: toc/
+  nav-title: Shorter title
 
 -- ft.markdown:
 
@@ -72,8 +78,8 @@ lang: ftd
 ## Subsection Title: /
 
 - Toc Title: /
-- Toc Title 1: foo/
-  - Bar Title: bar/
+- Toc Title 1: /foo/
+  - Bar Title: /bar/
 
 
 ## Subsection Title 2: subsection2/
