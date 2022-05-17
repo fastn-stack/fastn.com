@@ -1,3 +1,5 @@
+-- import: fpm.dev/assets
+
 -- ft.page: FPM Sitemap
 
 "FPM Sitemap" is the name of a structure we recommend for sites. It is
@@ -8,6 +10,10 @@ built in support for FPM Sitemap.
 
 A site should have "sections" on top level. Each section should ideally be
 listed in the header of the site.
+
+-- ft.image:
+src: $assets.files.static.images.sitemap.png
+width: fill
 
 Each section should have one or more sub-sections. Sub-section should be listed
 as second level navigation in the header of the site. Each sub-section has one
@@ -27,18 +33,21 @@ file.
 lang: txt
 
 # Section: /section/url/
+nav-title: Optional Longer Section
 
 # If Section: Has A Colon In The Name
 url: sectionURL
 
 ## Sub Section: /sub/url/
+nav-title: Longer Sub Section
 
 ## If Sub Section: Has A Colon In The Name
 url: whatever
 
 - ToC Item: toc/
+  nav-title: Shorter title
 
--- ds.markdown:
+-- ft.markdown:
 
 Note: The URLs in sitemap start with slash, but we remove the first slash if
 `--base` is not equal to `/`. We support `--base` because some projects may
@@ -73,8 +82,8 @@ lang: ftd
 ## Subsection Title: /
 
 - Toc Title: /
-- Toc Title 1: foo/
-  - Bar Title: bar/
+- Toc Title 1: /foo/
+  - Bar Title: /bar/
 
 
 ## Subsection Title 2: subsection2/
