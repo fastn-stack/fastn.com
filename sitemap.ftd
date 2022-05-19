@@ -300,11 +300,12 @@ In this case the file would get copied over, and the url of intro would be
 `https://foo.com/-/bar.com/intro/`. For dependent packages, the url should
 start with `-/` and then the package name, following the document id,
 The canonical url for this would be the url of the document on the site of the
-package. i.e. The canonical url in this case would be `bar.com/intro`
+package. i.e. The generated HTML, in this case, contains the canonical url
+as `bar.com/intro`
 
 The document from dependent package can be included more than once. This can be
 achieved in the same manner as the document in the current package included more
-than once which is mentioned earlier.
+than once, which is mentioned earlier.
 
 Consider the example below:
 
