@@ -1,0 +1,124 @@
+-- ft.page: `fpm::Config`
+
+`fpm::Config` struct keeps track of configuration for a FPM package. In order
+to perform any operation on a package, this struct should be first created.
+
+`fpm::Config::read()` can be used to construct `fpm::Config` struct.
+
+
+
+
+-- ft.h1: `fpm::Config::read()`
+
+`fpm::Config::read()` finds the `FPM.ftd` and creates `fpm::Config` struct.
+
+-- ft.code:
+lang: rs
+
+impl fpm::Config {
+    pub async fn read(root: Option<String>) -> fpm::Result<fpm::Config>
+}
+
+-- ft.markdown:
+
+`fpm::Config::read()` returns a [`fpm::Result`](crate/result/) of `fpm::Config`.
+
+
+-- ft.h2: `root`
+
+If `root` is passed as `None`, `fpm::Config::read()` looks for `FPM.ftd` file
+in the current directory, and if not found keeps searching for it in it's
+ancestors till it finds it.
+
+If `root` is passed, it is assumed to be the root of the fpm package, and
+`FPM.ftd` file must be present in this folder.
+
+
+-- ft.h1: `fpm::Config.attach_data_string()`
+
+This function can be used to attach json data to Config. This JSON data is
+available to every ftd file that uses [`get-data`
+processor](processors/get-data/).
+
+-- ft.code:
+lang: rs
+
+impl fpm::Config {
+    pub fn attach_data_string(&mut self, json: &str) -> fpm::Result<()>
+}
+
+-- ft.markdown:
+
+This should be called before [`fpm::render()`](crate/render/).
+
+Implementaiton note: This function internally calls `fpm::Config::attach_data()`.
+
+
+-- ft.h1: `fpm::Config.attach_data()`
+
+This function can be used to attach json data to Config. This JSON data is
+available to every ftd file that uses [`get-data`
+processor](processors/get-data/).
+
+-- ft.code:
+lang: rs
+
+impl fpm::Config {
+    pub fn attach_data(&mut self, data: &serde_json::Value) -> fpm::Result<()>
+}
+
+-- ft.markdown:
+
+This should be called before [`fpm::render()`](crate/render/).
+
+
+-- ft.h1: `fpm::Config.get_file_by_id(&fpm::Package)`
+
+Given the `id` of a document, this function returns the FTD source of the
+document.
+
+
+-- ft.code:
+lang: rs
+
+impl fpm::Config {
+    pub fn get_file_by_id(&self, id: &str) -> fpm::Result<fpm::File>
+}
+
+
+-- ft.markdown:
+
+Note this implements fallback feature in case this is a translated package.
+
+
+
+-- ft.h1: `fpm::Config.get_files()`
+
+`fpm::Config.get_files()` returns all the ["files"](crate/file/) in a package.
+
+-- ft.code:
+lang: rs
+
+pub(crate) async fn get_files(&self, package: &fpm::Package)
+    -> fpm::Result<Vec<fpm::File>>
+
+
+
+-- ft.h1: `fpm::Config.get_assets()`
+
+`fpm::Config.get_assets()` returns the "assets" automagic module for each
+package.
+
+-- ft.code:
+lang: rs
+
+pub(crate) async fn get_assets(
+    &self,
+    base_url: &str,
+) -> fpm::Result<std::collections::HashMap<String, String>>
+
+-- ft.markdown:
+
+Key is the package name, and value is FTD source of generated assets module.
+
+

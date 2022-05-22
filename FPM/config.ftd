@@ -17,7 +17,7 @@ $processor$: get-sitemap
 
 /-- ft.site-name: FPM
 
--- ft.site-logo:
+-- ft.site-logo: $assets.files.static.images.fifthtry-logo.png
 light: $assets.files.static.images.fifthtry-logo.png.light
 dark: $assets.files.static.images.fifthtry-logo.png.dark
 
@@ -196,3 +196,11 @@ $processor$: toc
 - how to use fpm site as a blog
 - Competitor
   - swimm.io
+
+
+
+
+
+
+
+

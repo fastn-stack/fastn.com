@@ -1,0 +1,27 @@
+-- fpm.last-change: 1653134143085207001
+
+
+$ fpm status 1
+M http.ftd
+
+$ fpm diff 1 http.ftd
+Get timestamp from `-/1/-/track/http.ftd`: 1653134143085207000
+Diff `.history/http.1653134143085207000.ftd` and `-/1/-/track/http.ftd`
+
+$ fpm sync
+1. create .history
+2. it will try to merge changes in main in all the CRs
+
+
+$ fpm merge 1
+Successfully merged http.ftd
+
+$ fpm merge 1
+Conflict in http.ftd
+Can Be Deleted index.ft
+Can Be Added foo.ftd
+
+$ fpm merge 1 --ignore-conflicted-files
+Conflict in http.ftd
+Deleted index.ft
+Added foo.ftd

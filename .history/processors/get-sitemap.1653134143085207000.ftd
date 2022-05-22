@@ -1,0 +1,56 @@
+-- ft.page: `$processor$: get-sitemap`
+
+
+-- ft.code: Sitemap in `FPM.ftd`
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Section: section/url/
+
+# If Section: Has A Colon In The Name
+url: sectionURL
+
+## Sub Section: sub/url/
+
+## If Sub Section: Has A Colon In The Name
+url: whatever
+
+- ToC Item: toc/
+
+-- ft.markdown:
+
+The sitemap get parse into a record `sitemap-data`. This record is present in `fpm`
+The record looks like this
+
+-- ft.code: record `sitemap-data` (fpm.ftd)
+lang: ftd
+
+\-- record sitemap-data:
+toc-item list sections:
+toc-item list subsections:
+toc-item list toc:
+optional toc-item current-section:
+optional toc-item current-subsection:
+optional toc-item current-page:
+
+
+\-- record toc-item:
+optional string title:
+optional string url:
+optional string font-icon:
+optional string img-src:
+boolean is-heading:
+boolean is-disabled:
+boolean is-active: false
+toc-item list children:
+
+
+-- ft.markdown:
+
+The record `sitemap-data` contains sections, subsections and toc. For different
+document these values would be different. We can get this values by calling the
+`get-sitemap` processor which returns the value of `sitemap-data` type.
+
+Note: nav-title override for any page can be specified in sitemap, if
+specified, the `current-*` will use the overriden titles.

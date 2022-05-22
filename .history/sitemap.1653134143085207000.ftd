@@ -1,0 +1,331 @@
+-- import: fpm.dev/assets
+
+-- ft.page: FPM Sitemap
+
+"FPM Sitemap" is the name of a structure we recommend for sites. It is
+optional, you can create any sitemap you want for your sites. FPM has
+built in support for FPM Sitemap.
+
+-- ft.h1: The Structure
+
+A site should have "sections" on top level. Each section should ideally be
+listed in the header of the site.
+
+-- ft.image:
+src: $assets.files.static.images.sitemap.png
+width: fill
+
+Each section should have one or more sub-sections. Sub-section should be listed
+as second level navigation in the header of the site. Each sub-section has one
+or more documents organised in a "table of content", and TOC should be shown
+on the left.
+
+In the UI we also have "Section/Sub Section" Nav. It automatically will show the
+section name and sub-section name.
+
+-- ft.h1: Sitemap "Language"
+
+FPM comes with a variable called "sitemap", which contains the sitemap structure
+and later this structure get parses. The sitemap should be included in FPM.ftd
+file.
+
+-- ft.code: Sitemap Example
+lang: txt
+
+# Section: /section/url/
+nav-title: Optional Longer Section
+
+# If Section: Has A Colon In The Name
+url: sectionURL
+
+## Sub Section: /sub/url/
+nav-title: Longer Sub Section
+
+## If Sub Section: Has A Colon In The Name
+url: whatever
+
+- ToC Item: toc/
+  nav-title: Shorter title
+
+-- ft.markdown:
+
+Note: The URLs in sitemap start with slash, but we remove the first slash. We do
+this because some projects may deploy FPM package on a base URL eg, `foo.com/bar/`,
+so all reference to /x/ is actually a reference to `foo.com/bar/x/`. We also
+convert `/` to `index.html` for the same reason.
+
+
+-- ft.h1: Sitemap `$processor$`
+
+We have `$processor$` called [`get-sitemap`](processors/get-sitemap/), which
+can be used to get sitemap data:
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap-data sitemap:
+$processor$: get-sitemap
+
+-- ft.markdown:
+
+Consider a package contains the following sitemap
+
+-- ft.code: In FPM.ftd
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Section Title: /
+
+
+## Subsection Title: /
+
+- Toc Title: /
+- Toc Title 1: /foo/
+  - Bar Title: /bar/
+
+
+## Subsection Title 2: subsection2/
+
+- Other Toc Title: subsection2/foo/
+
+
+
+# Second Section Title: section/
+
+## Second Subsection Title: second-subsection/
+
+- Second Toc Title: second-toc/
+
+
+-- ft.markdown:
+
+Now, for the `get-sitemap` processor in the document with id `bar/`
+would return the value
+
+
+-- ft.code:
+lang: json
+
+{
+  "sitemap": {
+    "sections": [
+      {
+        "title": "Section Title",
+        "url": "/",
+        "is-active": true,
+        "children": []
+      }
+    ],
+    "subsections": [
+      {
+        "title": "Subsection Title",
+        "url": "/",
+        "is-active": true,
+        "children": []
+      },
+      {
+        "title": "Subsection Title 2",
+        "url": "subsection2",
+        "is-active": false,
+        "children": []
+      }
+    ],
+    "toc": [
+      {
+        "title": "Toc Title",
+        "url": "",
+        "is-active": false,
+        "children": []
+      },
+      {
+        "title": "Toc Title 1",
+        "url": "foo/",
+        "is-active": true,
+        "children": [
+          {
+            "title": "Bar Title",
+            "url": "bar/",
+            "is-active": true,
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
+
+
+-- ft.h1: Missing Sub Section
+
+If a TOC comes directly in a section the section would have a single anonymous
+sub-section, and this sub-section would not be shown in UI. In UI people will
+just see the section header and toc on left, no sub-section line.
+
+
+-- ft.code:
+lang: ftd
+
+
+# Section Title: section/
+
+- Toc 1: toc/
+  - Toc 2: toc2/
+
+
+-- ft.h1: FPM Build Behaviour
+
+If a document is not part of sitemap, it will be built as is built right
+now. All documents that are part of sitemap are built in a special way.
+
+FPM build will first parse the sitemap and build all the URLs that are
+not part of it, and then in another pass build all the ones that are in it.
+
+A document can appear in multiple places in sitemap, in that case FPM
+builds one HTML file for each time a ftd document appears in sitemap.
+
+Note: A document can appear only once in a single TOC?
+
+
+-- ft.h1: Canonical URL
+
+If a ftd document appears multiple times in sitemap, one of them would
+be the canonical, the "main" URL.
+
+Consider the following example:
+
+Suppose `foo.ftd` has to be appeared more than once in the sitemap.
+The sitemap can include this document as `foo/`, this is the "main" URL.
+The other way to include it is by passing url something like this.
+`foo/-/<something>/`. The `-/` is the pointer to get the document. Anything
+preceding `-/` would be the document id. The generated html of this document
+will include the canonical url pointing to `foo/`.
+
+
+
+
+
+-- ft.h1: Key Value Data in Sitemap
+
+Document can use `get-data` processor to get value of any key specified in
+the sitemap. Since a document would get rendered once for each occurrence
+of the document in the sitemap, each occurrence can have different data
+and the occurrence specific data would be returned by `get-data`.
+
+The key value pair supports inheritance. This means that the key-value pair data
+presents in section get passed to it's subsection and TOCs. Similarly, subsection
+key value data get passed to TOCs. And also the parent TOC-item's key value data
+get passed to its children TOC.
+
+-- ft.code:
+lang: ftd
+
+# name: section/url/
+key1: value1
+key2: value2
+
+## sub name: subsection/url/
+key3: value3
+
+- toc/url/
+  key4: value4
+  - childtoc/url/
+    key5: value5
+
+-- ft.markdown:
+
+In the above example, the `section/url/` section have two key value data
+`key1: value1` and `key2: value2`
+The `subsection/url/` subsection have three key value data where two are
+inherited from section. i.e. `key1: value1`, `key2: value2` and `key3:
+value3`
+The `toc/url/` toc item have four key value data, where three are inherited
+from section and subsection. i.e. `key1: value1`, `key2: value2`, `key3: value3`
+and `key4: value4`
+The `childtoc/url/` toc item have five key value data, where four are inherited
+from section, subsection and it's parent TOC. i.e. `key1: value1`, `key2: value2`,
+`key3: value3`, `key4: value4` and `key5: value5`
+
+
+
+
+-- ft.h1: Variable can be changed based on key value data
+
+Using the `get-data`, the title can be different:
+
+-- ft.code:
+lang: ftd
+
+\-- boolean show-dev-info:
+$processor$: get-data
+
+\-- string page-title: The Normal Title
+
+\-- page-title: The Dev Title
+if: $show-dev-info
+
+\-- ft.h0: $page-title
+
+-- ft.code: sitemap
+lang: ftd
+
+\-- fpm.sitemap:
+
+# Overview
+
+- foo/
+
+# Development
+
+- foo/-/1
+  show-dev-info: true
+
+
+-- ft.h1: Using `$assets` In Sitemap
+
+In sitemap referring the URL is not too great, as it can lead to 404s if you
+rename a ftd file or folder.
+
+-- ft.h2: `assets` special module
+
+So we auto create `assets` module in every FPM package, which contains
+`$assets.pages.foo.ftd` and `$assets.files.foo.ftd`. The value of two are
+different in case of image file etc, where `$assets.pages.foo.png` is
+`/foo.png/` and it contains an `index.html` containing information about the
+image. `$assets.files.foo.png` on the other hand contains `-/foo.png`,
+which points to the PNG file itself.
+
+-- ft.h2: Using `$assets`
+
+We can use to variable reference when creating sitemap:
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+- Hello: $assets.files.foo.ftd
+
+-- ft.markdown:
+
+`$foo` is evaluated. For this to work `assets` have to be added to `auto-import`
+section.
+
+
+-- ft.h1: Including Documents From Other FPM Packages In Sitemap
+
+A package `foo.com` can chose to include a document in `bar.com` by including
+it in sitemap.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+- Hello: $assets.files.index.ftd
+- Intro: $bar-assets.files.intro.ftd
+
+-- ft.markdown:
+
+In this case the file would get copied over, and the url of intro would be
+`https://foo.com/-/bar.com/intro/`.

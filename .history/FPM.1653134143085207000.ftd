@@ -1,0 +1,174 @@
+-- import: fpm
+
+-- fpm.package: fpm.dev
+zip: github.com/fifthtry/fpm.dev/archive/refs/heads/main.zip
+language: English
+translation: hi.fpm.dev
+
+-- fpm.dependency: fifthtry.github.io/doc-site as ft
+implements: fifthtry.github.io/theme
+
+-- fpm.dependency: fifthtry.github.io/brand-switcher as bs
+
+-- fpm.dependency: fifthtry.github.io/color-doc as cd
+
+
+
+
+-- fpm.auto-import: ft
+-- fpm.auto-import: fpm.dev/FPM/config
+-- fpm.auto-import: fpm
+
+
+
+
+-- fpm.sitemap:
+
+# Home: /
+
+# Docs: about/
+
+- About `fpm`: about/
+  - Why Not `fpm`?: why-not/
+  - Translation philosphy?: translation-philosphy/
+- File System Organization: fs/
+  - `FPM.ftd`: fpm-ftd-file/
+- FTD Host Features: ftd-host/
+  - `$processor$: http`
+    url: http/
+  - `$processor$: toc`
+    url: toc/
+  - `$processor$: package-query`
+    url: package-query/
+  - `$processor$: get-data`
+    url: processors/get-data/
+  - `$processor$: get-sitemap`
+    url: processors/get-sitemap/
+  - `import: fpm`
+    url: fpm-vars/
+- How To:
+  - Install `fpm`: how-to/install/
+  - Update `fpm`: how-to/update/
+  - Get started with Github pages: how-to/get-started-github-pages/
+  - Get started with Vercel: how-to/get-started-vercel/
+  - Enable Translations: translation/
+- `fpm` Usage: usage/
+  - `fpm build`: build/
+  - `fpm sync`: sync/
+  - `fpm status`: status/
+  - `fpm diff`: diff/
+  - `fpm update`: update/
+  - `fpm serve`: serve/
+- Known Issues: known-issues/
+
+
+
+# `fpm` User Manual: usage/
+
+- About `fpm`: about/
+  - Why Not `fpm`?: why-not/
+  - Translation philosphy?: translation-philosphy/
+- File System Organization: fs/
+  - `FPM.ftd`: fpm-ftd-file/
+- FTD Host Features: ftd-host/
+  - `$processor$: http`
+    url: http/
+  - `$processor$: toc`
+    url: toc/
+  - `$processor$: package-query`
+    url: package-query/
+  - `$processor$: get-data`
+    url: processors/get-data/
+  - `$processor$: get-sitemap`
+      url: processors/get-sitemap/
+  - `import: fpm`
+    url: fpm-vars/
+- How To:
+  - Install `fpm`: how-to/install/
+  - Update `fpm`: how-to/update/
+  - Get started with Github pages: how-to/get-started-github-pages/
+  - Get started with Vercel: how-to/get-started-vercel/
+  - Enable Translations: translation/
+- `fpm` Usage: usage/
+  - `fpm build`: build/
+  - `fpm sync`: sync/
+  - `fpm status`: status/
+  - `fpm diff`: diff/
+  - `fpm update`: update/
+- Known Issues: known-issues/
+
+
+
+
+
+
+# Development: journal/
+
+## Overview: journal/
+
+- Roadmap: roadmap/
+- Journal: journal/
+- How Versioning Works: dev/versioning/
+- What is `FPM.manifest.ftd`?: dev/fpm-manifest/
+
+
+## Using `fpm` Crate: crate/
+
+- Overview: crate/
+- `fpm::Config`
+  url: crate/config/
+- `fpm::Document`
+  url: crate/document/
+- `fpm::Error`
+  url: crate/error/
+- `fpm::File`
+  url: crate/file/
+- `fpm::Font`
+  url: crate/font/
+- `fpm::Package`
+  url: crate/package/
+- `fpm::render`
+  url: crate/render/
+- `fpm::Result`
+  url: crate/result/
+- `fpm::StaticFile`
+  url: crate/static-file/
+- Private Stuff:
+  - `fpm::utils`
+    url: crate/utils/
+- Day To Day:
+  - How To Run Tests: day-to-day/how-to-run-tests/
+  - How To Update Failing Snapshot Tests:  day-to-day/how-to-fix-tests/
+- Dependencies:
+  - `ftd`: crate/deps/ftd/
+  - `fbt-lib`: crate/deps/fbt-lib/
+  - `camino`: crate/deps/camino/
+
+
+
+
+
+
+# Themes: themes/
+
+- About Themes: themes/
+- Package Interface: package-interface/
+- Theme Config: theme/config/
+- Responsive Themes: theme/responsive/
+- Dark Mode: theme/dark-mode/
+- Components: theme/header/
+  - Dark Mode: theme/header/
+- FPM Variables: vars/
+- FPM Typography: theme/type/
+- FPM Color: theme/color/
+- FPM Space: theme/space/
+- How to use Google Font: theme/google-font-how-to-use/
+- FPM Sitemap: sitemap/
+
+
+# Author Manual: author/
+
+- Create new fpm project: author/create-project/
+  - Create new fpm project on github: author/create-on-github/
+- How to install fpm on local machine: how-to/install/-/author/
+- Build fpm project locally: author/build-project/

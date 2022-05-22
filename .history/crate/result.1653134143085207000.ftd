@@ -1,0 +1,12 @@
+-- ft.page: `fpm::Result`
+
+Most `fpm` operations return `fpm::Result<T>`.
+
+-- ft.code:
+lang: rs
+
+pub type fpm::Result<T> = std::result::Result<T, fpm::Error>;
+
+-- ft.markdown:
+
+`fpm::Result` is a wrapper over [`fpm::Error`](crate/error/).

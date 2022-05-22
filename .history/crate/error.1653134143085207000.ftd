@@ -1,0 +1,19 @@
+-- ft.page: `fpm::Error`
+
+`fpm::Error` is the main Error enum that is returned by most of our functions.
+
+-- ft.code:
+lang: rs
+
+pub enum Error {
+    HttpError(reqwest::Error),
+    IoError(std::io::Error),
+    ZipError(zip::result::ZipError),
+    FTDError(ftd::p1::Error),
+    PackageError { message: String },
+    UsageError { message: String },
+    IgnoreError(ignore::Error),
+    FromPathBufError(camino::FromPathBufError),
+    SerdeJsonError(serde_json::Error),
+}
+

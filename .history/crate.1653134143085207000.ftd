@@ -1,0 +1,10 @@
+-- ft.page: Using `fpm` Crate
+
+`fpm` is available as a Rust crate.
+
+Important things exposed by this crate are [`fpm::Config`](crate/config/) and
+[`fpm::render()`](crate/render/).
+
+
+
+

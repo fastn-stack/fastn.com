@@ -1,0 +1,10 @@
+-- ft.page: Available `$processor$`s
+
+
+-- ft.markdown: 
+
+FPM comes with following built in `ftd` `$processor$`s.
+
+- [`$processor$: http`](/fpm/http/)
+- [`$processor$: toc`](/fpm/toc/)
+- [`$processor$: package-query`](/fpm/package-query/)
