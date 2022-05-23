@@ -57,14 +57,14 @@ convert `/` to `index.html` for the same reason.
 
 -- ft.h1: Sitemap `$processor$`
 
-We have `$processor$` called [`get-sitemap`](processors/get-sitemap/), which
+We have `$processor$` called [`sitemap`](processors/sitemap/), which
 can be used to get sitemap data:
 
 -- ft.code:
 lang: ftd
 
 \-- fpm.sitemap-data sitemap:
-$processor$: get-sitemap
+$processor$: sitemap
 
 -- ft.markdown:
 
@@ -100,7 +100,7 @@ lang: ftd
 
 -- ft.markdown:
 
-Now, for the `get-sitemap` processor in the document with id `bar/`
+Now, for the `sitemap` processor in the document with id `bar/`
 would return the value
 
 
