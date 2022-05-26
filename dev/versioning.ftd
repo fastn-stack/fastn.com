@@ -39,8 +39,8 @@ lang: txt
 
 There are documents like `foo.ftd` and `index.ftd` lies outside any versioned folder
 (`v1` and `v2`). These documents become the part of all the versions unless any
-versioned folder contains the document with same id. Then that version and all preceding
-version would take that document.
+versioned folder contains the document with same id. This results in overriding of the
+document and that version and all preceding version would take the overriding document.
 
 Notice that `foo.ftd` exists in `v1` folder, this implies that `v1` has other edition
 of `foo.ftd` and all the preceding versions (`v0`) would take this edition of `foo.ftd`.
