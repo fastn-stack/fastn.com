@@ -28,16 +28,109 @@ lang: txt
 
 - package-folder
   - FPM.ftd
+  - v0/
   - v1/
-    - index.ftd
     - foo.ftd
   - v2/
-    - index.ftd
+  - index.ftd
+  - foo.ftd
 
 -- ft.markdown:
 
-Notice that `foo.ftd` does not exist in `v2` folder, since it has not been
-edited in v2.
+There are documents like `foo.ftd` and `index.ftd` lies outside any versioned folder
+(`v1` and `v2`). These documents become the part of all the versions unless any
+versioned folder contains the document with same id. Then that version and all preceding
+version would take that document.
+Notice that `foo.ftd` exists in `v1` folder, this implies that `v1` has other edition
+of `foo.ftd` and all the preceding versions (`v0`) would take this edition of `foo.ftd`.
+
+The file structure would look like this
+
+-- ft.code: File structure
+lang: txt
+
+- package-folder
+ - v0
+   - index.ftd (from package root directory)
+   - foo.ftd (from v1)
+ - v1
+   - index.ftd (from package root directory)
+   - foo.ftd (from v1)
+ - v2
+   - index.ftd (from package root directory)
+   - foo.ftd (from package root directory)
+
+
+-- ft.h2: Not include the document till a particular version
+
+-- ft.code: Not include `foo.ftd` till v1
+lang: txt
+
+- package-folder
+  - FPM.ftd
+  - v0/
+  - v1/
+    - foo.ftd.delete
+  - v2/
+  - index.ftd
+  - foo.ftd
+
+-- ft.markdown:
+
+Notice that `foo.ftd.delete` is added in the `v1`. This result in not including the `foo.ftd`
+for `v1` version and all the preceding versions `v0`.
+
+The file structure would look like this:
+
+-- ft.code: File structure
+lang: txt
+
+- package-folder
+ - v0
+   - index.ftd (from package root directory)
+ - v1
+   - index.ftd (from package root directory)
+ - v2
+   - index.ftd (from package root directory)
+   - foo.ftd (from package root directory)
+
+
+-- ft.h2: Include a document till a particular version
+
+-- ft.code: Include `foo.ftd` till v1
+lang: txt
+
+- package-folder
+  - FPM.ftd
+  - v0/
+  - v1/
+    - foo.ftd
+  - v2/
+  - index.ftd
+
+
+
+-- ft.markdown:
+
+Notice that `foo.ftd` is added in the `v1`. This result in including the `foo.ftd`
+for `v1` version and all the preceding versions `v0`. And since it's not part of
+package root directory, so it's not part of all succeeding versions `v2`
+
+The file structure would look like this:
+
+-- ft.code: File structure
+lang: txt
+
+- package-folder
+ - v0
+   - index.ftd (from package root directory)
+   - foo.ftd (from v1)
+ - v1
+   - index.ftd (from package root directory)
+   - foo.ftd (from v1)
+ - v2
+   - index.ftd (from package root directory)
+
 
 -- ft.h2: `fpm.package`
 
