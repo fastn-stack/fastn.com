@@ -1,0 +1,224 @@
+-- ft.page: FPM New Design
+
+-- ft.h1: FPM Package Digest: `digest.json`
+
+`digest.json` is an in memory data structure which is generated first when any
+`fpm` command is invoked locally. Content of `digest.json` is also stored in
+`packages` table on remote.
+
+For every FTD and markdown file in the package, it will contain the content of
+that file.
+
+For every non FTD/md file it will contain the filename, which will be stored as
+a list in `other-files` key.
+
+It will also contain history and tracking metadata.
+
+-- ft.code: `digest.json`
+lang: json
+
+{
+    "index.ftd": "content of index.ftd",
+    "other-files": [
+        "images/logo.png",
+        "foo.md",
+        "hello.py"
+    ],
+    "history": {
+        "index.ftd": [
+            { "updated": <unix-timestamp-nanoseconds> },
+            { "created": <unix-timestamp-nanoseconds> }
+        ]
+    },
+    "tracks": {
+        "index.ftd": [
+            "foo.ftd": {
+                "last-merged-on": <timestamp of foo.ftd>
+            }
+        ]
+    }
+}
+
+-- ft.markdown:
+
+When we download a package, we will first extract it's content and create
+`.packages/<package-name>.digest.json`.
+
+When `fpm::Config` is initialised all `digest.json` files will be fully loaded.
+
+-- ft.h1: What's In DB?
+
+-- ft.h2: `other-files` table
+
+For every "other-file", we will have a row containing the content of that file.
+
+-- ft.code:
+lang: sql
+
+select * from other_files;
+| amitu.com/foo.png     | <content of foo.png>  |
+| fifthtry.com/logo.png | <content of logo.png> |
+
+-- ft.h2: `packages` table
+
+For every package, we will also have a row containing the package.digest.json
+for all packages.
+
+-- ft.code:
+lang: sql
+
+select * from packages;
+| amitu.com           | <content of package.digest.json for amitu.com>    |
+| amitu.com/x         | <content of package.digest.json for amitu.com>    |
+| amitu.com/x/y       | <content of package.digest.json for amitu.com>    |
+| fifthtry.com        | <content of package.digest.json for fifthtry.com> |
+
+-- ft.h2: `history` table
+
+The history will be stored in history table:
+
+-- ft.code:
+lang: sql
+
+select * from history;
+| amitu.com/index.ftd | <unix-timestamp> | created | <content> |
+| amitu.com/index.ftd | <unix-timestamp> | updated | <content> |
+
+-- ft.h2: `fpm-files` table
+
+Since FPM.ftd file is needed to serve every static file (because FPM.ftd
+contains authentication/access control information), we have read it very
+frequently, so we will keep this in a separate table only to be used when
+serving static file requests.
+
+-- ft.code:
+lang: sql
+
+select * from fpm-files;
+
+| amitu.com | <amitu/FPM.ftd content> |
+
+
+
+-- ft.h1: How To Load .digest.json On Local?
+
+Look for `.fpm-workspace/digest.json`.
+
+-- ft.h1: How To Load .digest.json On Remote?
+
+Say if db looks like this:
+
+-- ft.code:
+lang: sql
+
+select * from packages;
+| package              | content                                           |
++----------------------+---------------------------------------------------+
+| amitu.com/           | <content of package.digest.json for amitu.com>    |
+| amitu.com/x/         | <content of package.digest.json for amitu.com>    |
+| amitu.com/x/y/       | <content of package.digest.json for amitu.com>    |
+| fifthtry.com/        | <content of package.digest.json for fifthtry.com> |
+
+-- ft.markdown:
+
+And a request to `amitu.com/foo` comes, we have to read the content of
+`amitu.com` row. But if `amitu/x/y/z` comes then we have to read of content of
+`amitu.com/x/y`. How do we do know which row to read?
+
+Step 1: find the domain name only, `amitu.com`, and then look for all rows:
+
+-- ft.code:
+lang: sql
+
+select package from packages where package ilike "amitu.com/%"
+
+| amitu.com/     |
+| amitu.com/x/   |
+| amitu.com/x/y/ |
+
+-- ft.markdown:
+
+Step 2: Find the largest `package` from this list, where
+`"amitu.com/foo".starts_with(package)` is true. Here the answer would be
+`amitu.com/`, so this is the package that contains `amitu.com/foo`.
+
+Now `select content from packages where package=amitu.com`.
+
+-- ft.h1: How to serve the file?
+
+A request has come to fpm http server, we want to serve it.
+
+
+-- ft.h2: FTD files: URL with no extension, or URL ending with `index.html`
+
+If URL ends with index.html, we will delete the ending index.html to get the
+`real path`.
+
+
+If the `real path` is present in `digets` json for the package, eg if the
+digest was:
+
+
+-- ft.code:
+lang: json
+
+{
+    "foo/index.ftd": "<content>",
+    "FPM.ftd": "<content>"
+    ... other stuff omitted ...
+}
+
+-- ft.markdown:
+
+NOTE: if the URL contains `-` then the `real path` would be the part till the
+first `-`, eg if path was `amitu.com/foo/-/bar/`, the real path would be `foo`.
+Ask Arpita how to handle such URLs.
+
+If the `real path` is `foo`, then we look for `<real path.ftd>` (`foo.ftd`) or
+`<real path>/index.ftd` (`foo/index.ftd`) has to be present.
+
+We know it is a ftd file and we can serve it. When "process_ftd()` is called,
+on every import (`ftd::Interpreter::StuckOnImport`) corresponding to a foreign
+package we have to read the row for that package from `packages` table (or from
+disc, `.packages/<package-name>.digest.json` if running locally). Here we do
+not have to do step 1, because the list of dependencies for this package already
+known, so we have to do step 1 equivalent from content of FPM.ftd only, we do
+not have to do additional (db/fs) read.
+
+If the file is missing in `digest.json` then we give 404.
+
+-- ft.h2: Any other URL (non ftd url, mostly images)
+
+We assume this is static file, so we only do the step 1, and not step 2 as we
+are not going to need the full digest. We will read FPM.ftd content from
+`fpm-files` for the package name we found from step 1. Using FPM.ftd we will
+check if auth/acl allows you to read the static file. If not we give 403.
+
+If acl works, we then do a query on the `other-files` table, to get the content
+of that file and serve it.
+
+-- ft.h1: How do we handle markdown files?
+
+Markdown files (and their content) would also be present in `digest.json` file.
+When looking for `foo` we will look for `foo.ftd`, `foo/index.ftd`, `foo.md`
+and `foo/README.md`, in this order.
+
+-- ft.h1: On local, how often do we regenerate `digest.json`?
+
+When we lauch `fpm serve`, it first reads the content of current package
+directory, and generates an in-memory `digest.json` and starts a background
+thread which watches for file system changes, and keep updating the in-memory
+`digest.json`.
+
+-- ft.h2: What about local changes in dependencies?
+
+Since people may  modify dependencies as part of development, we have to
+generate `digest.json` when any fpm command starts. The file system watcher of
+FPM serve will also watch the dependencies, and update their `digest.json` as
+well.
+
+-- ft.h1: `digest.json` on remote
+
+Is only updated when someone does `fpm sync` and any of the content on remote
+changes. Since the digest contains history, meta data for all static file, so
+if any file ever changes, `digest.json` will have to be updated.
