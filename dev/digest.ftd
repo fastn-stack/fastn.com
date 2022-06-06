@@ -1,5 +1,39 @@
 -- ft.page: FPM New Design
 
+Currently `fpm` cli only works against local file system. We want to now evolve
+into something that can both use local file system, and work off a database.
+
+-- ft.h1: `fpm serve` is "dynamic"
+
+`fpm serve` runs an HTTP server, and serves the FTD and other files in current
+fpm package dynamically. Contrast it with `fpm build && cd .build && python
+http.server`, when running like this we always get the same content, since
+`fpm build` runs once, and builds all the files in `.build` folder.
+
+Now it's a static file, and `python http.server` always serves the same content
+for same URL. `fpm serve` does this on the fly, when the HTTP request comes.
+Which means if the ftd file is dynamic, say ftd file uses a processor that
+fetches data from database, such a file would refetch the data on every HTTP
+request when served via `fpm serve` but when `fpm build` is used, at the time
+of build the data would be fetched.
+
+-- ft.h1: Hosting `fpm serve` With Files
+
+Since `fpm serve` is dynamic, it offers authors write more powerful documents,
+they can use `ftd/fpm` better. But `spm serve` so far is only running locally,
+on your machine, exposing the server on `http://127.0.0.1:8000`.
+
+You can run `fpm serve` on your own VPS on Digital Ocean or EC2. You will have
+to checkout your FPM package content on the VPS.
+
+For this we do not need anything more, the moment [`fpm serve` dynamically
+PR](https://github.com/FifthTry/fpm/pull/201) is merged we are good to go.
+
+But it has one main disadvantage: managing FTD files would still have to be
+done why `sFTP/FTP/git` etc. When the fpm package content changes, you will have
+to deploy the content to your server somehow.
+
+
 -- ft.h1: FPM Package Digest: `digest.json`
 
 `digest.json` is an in memory data structure which is generated first when any
@@ -26,14 +60,16 @@ lang: json
     ],
     "history": {
         "index.ftd": [
-            { "updated": <unix-timestamp-nanoseconds> },
-            { "created": <unix-timestamp-nanoseconds> }
+            { "updated": "<unix-timestamp-nanoseconds>" },
+            { "created": "<unix-timestamp-nanoseconds>" }
         ]
     },
     "tracks": {
         "index.ftd": [
-            "foo.ftd": {
-                "last-merged-on": <timestamp of foo.ftd>
+            {
+                "foo.ftd": {
+                    "last-merged-on": "<timestamp of foo.ftd>"
+                }
             }
         ]
     }
@@ -41,10 +77,10 @@ lang: json
 
 -- ft.markdown:
 
+NOTE: we are showing timestamps as "string", but it will be actually be integer.
+
 When we download a package, we will first extract it's content and create
 `.packages/<package-name>.digest.json`.
-
-When `fpm::Config` is initialised all `digest.json` files will be fully loaded.
 
 -- ft.h1: What's In DB?
 
@@ -56,6 +92,7 @@ For every "other-file", we will have a row containing the content of that file.
 lang: sql
 
 select * from other_files;
+| filename              | content of file       |
 | amitu.com/foo.png     | <content of foo.png>  |
 | fifthtry.com/logo.png | <content of logo.png> |
 
@@ -68,10 +105,12 @@ for all packages.
 lang: sql
 
 select * from packages;
-| amitu.com           | <content of package.digest.json for amitu.com>    |
-| amitu.com/x         | <content of package.digest.json for amitu.com>    |
-| amitu.com/x/y       | <content of package.digest.json for amitu.com>    |
-| fifthtry.com        | <content of package.digest.json for fifthtry.com> |
+| package name        | content of digest.json                    |
++---------------------+-------------------------------------------|
+| amitu.com           | <content of digest.json for amitu.com>    |
+| amitu.com/x         | <content of digest.json for amitu.com>    |
+| amitu.com/x/y       | <content of digest.json for amitu.com>    |
+| fifthtry.com        | <content of digest.json for fifthtry.com> |
 
 -- ft.h2: `history` table
 
@@ -81,8 +120,17 @@ The history will be stored in history table:
 lang: sql
 
 select * from history;
+| filename            | timestamp        | event   | content   |
 | amitu.com/index.ftd | <unix-timestamp> | created | <content> |
 | amitu.com/index.ftd | <unix-timestamp> | updated | <content> |
+
+-- ft.markdown:
+
+In future we will also store the `diff` column, which will show the difference
+in this document with respect to previous row.
+
+And also `cr` column, which will contain if this change came from a cr, if so
+the cr number, if change happened directly on main, `cr` will be null.
 
 -- ft.h2: `fpm-files` table
 
@@ -96,7 +144,9 @@ lang: sql
 
 select * from fpm-files;
 
-| amitu.com | <amitu/FPM.ftd content> |
+| package name | FPM.ftd content         |
++--------------+-------------------------+
+| amitu.com    | <amitu/FPM.ftd content> |
 
 
 
@@ -112,12 +162,12 @@ Say if db looks like this:
 lang: sql
 
 select * from packages;
-| package              | content                                           |
-+----------------------+---------------------------------------------------+
-| amitu.com/           | <content of package.digest.json for amitu.com>    |
-| amitu.com/x/         | <content of package.digest.json for amitu.com>    |
-| amitu.com/x/y/       | <content of package.digest.json for amitu.com>    |
-| fifthtry.com/        | <content of package.digest.json for fifthtry.com> |
+| package              | content                                   |
++----------------------+-------------------------------------------+
+| amitu.com/           | <content of digest.json for amitu.com>    |
+| amitu.com/x/         | <content of digest.json for amitu.com>    |
+| amitu.com/x/y/       | <content of digest.json for amitu.com>    |
+| fifthtry.com/        | <content of digest.json for fifthtry.com> |
 
 -- ft.markdown:
 
@@ -212,10 +262,19 @@ thread which watches for file system changes, and keep updating the in-memory
 
 -- ft.h2: What about local changes in dependencies?
 
-Since people may  modify dependencies as part of development, we have to
+Since people may modify dependencies as part of development, we have to
 generate `digest.json` when any fpm command starts. The file system watcher of
 FPM serve will also watch the dependencies, and update their `digest.json` as
 well.
+
+Note: local changes in dependencies will make output of subsequent fpm commands
+unreliable. The diff may be wrong if you are tracking things, `fpm status` may
+give wrong info etc etc. In future we will use "fallback to .." technique, so if
+you want to develop a dependency, you do not modify it in `.packages` folder,
+but checkout the dependency in `..` of current package, and our dependency
+checker will look both in `.packages` and `..` when its looking for
+`foo.com/bar` package as a dependency of current package.
+
 
 -- ft.h1: `digest.json` on remote
 
