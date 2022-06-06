@@ -26,4 +26,6 @@ When launching fpm server we can also specify
 `fpm serve --identity="email: amitu, github: amitu"`, if so every request will
 be assumed to have this identity.
 
+-- ft.h2: What to do if both are passed?
 
+If the server started `--identity` and `identity` cookie is found, so we will prefer cli `--identity` cookie and ignore other.
