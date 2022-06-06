@@ -220,6 +220,8 @@ get passed to its children TOC.
 -- ft.code:
 lang: ftd
 
+\-- fpm.sitemap:
+
 # name: section/url/
 key1: value1
 key2: value2
@@ -322,3 +324,125 @@ So the document `intro.ftd` in the package `bar.com` is included in the sitemap
 with the variant `main`.
 The generated HTML includes the canonical url with value as `bar.com/intro`
 
+
+
+-- ft.h1: Access Control Using Sitemap
+
+Different parts of a package may have access control limitation, like who can
+read or edit a package. Read and write are only enforced when `fpm serve` is
+used for serving a fpm package, and do not work when using `fpm build`.
+`fpm build` ignores all documents that are not world readable.
+
+By default if no access control is defined, the document is used to be readable
+by the world, and not writable by any.
+
+Access control is specified in terms of [`user groups`](/dev/user-group/).
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+# name: section/url/
+writers: write-group-id
+
+## sub name: subsection/url/
+
+- toc/url/
+  readers: reader-group-id
+  - childtoc/url/
+    key5: value5
+
+
+-- ft.markdown:
+
+If a `readers` is specified it is assumed that sub section of the site is no
+longer readable by the world. There exists a special group call "everyone",
+which can be used to set a subtree readable by the world.
+
+-- ft.h2: Access Control Inheritance
+
+Both `readers` and `writers` are inherited. And they get merged.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+# name: /section/url/
+readers: foo
+
+## sub name: /subsection/url/
+
+- U: /toc/url/
+  readers: bar
+  - U2: /childtoc/url/
+    key5: value5
+
+-- ft.markdown:
+
+In this example, documents  `readers: foo` is specified on `/section/url/` and
+`/subsection/url/` is a child, so `foo` has read access to `/subsection/url/`
+as well.
+
+`/toc/url/` is grand-child of `/section/url/`, and it has also specified an
+extra reader `bar`, so both `foo` and `bar` have access to `/toc/url/` and it's
+children, which is `/childtoc/url/`.
+
+
+-- ft.h2:  Resetting Access Control Inheritance
+
+If you want to overwrite, you can say "readers: not-inherited" or
+"writers: not-inherited", this is a special group which removes inheritence till
+now, and only other writers or readers defined at this level are used.
+
+Eg
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+
+# name: /section/url/
+readers: foo
+
+## sub name: /subsection/url/
+
+- U: /toc/url/
+  readers: bar
+  readers: not-inherited
+  - U2: /childtoc/url/
+    key5: value5
+
+-- ft.markdown:
+
+Now since `/toc/url/` has specified both `not-intherited` and `bar`, `foo` will
+not have access to `/toc/url/` and only `bar` will have access to it.
+
+
+-- ft.h2: Global ACL
+
+If you do not want to specify groups for each section, you can specify it at
+sitemap level as well:
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+readers: foo
+
+# name: /section/url/
+
+## sub name: /subsection/url/
+
+- U: /toc/url/
+  - U2: /childtoc/url/
+    key5: value5
+
+-- ft.markdown:
+
+Here we have added `readers` key directly on `fpm.sitemap` itself, so entire
+site is only readable by `foo`.
+
+You can still specify access control at any node, and regular inheritance rules
+specified above will apply.

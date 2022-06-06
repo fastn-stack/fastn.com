@@ -102,6 +102,9 @@ implements: fifthtry.github.io/theme
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
+- What Is `user-identity`?: /dev/user-identity/
+- What Is `user-group`?: /dev/user-group/
+- Local Identity for Testing: /dev/local-identity/
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
