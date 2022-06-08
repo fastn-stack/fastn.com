@@ -1,0 +1,25 @@
+-- ft.page: `get-identities` processor
+
+`get-identities` processor can be used to find all the
+[identities](/dev/user-identity/) of the user making request.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.user-identity list identities:
+$processor$: get-identities
+
+-- ft.markdown:
+
+This will initialise the list `identities` with the user's identities.
+
+-- ft.code: `fpm.user-identity` type
+
+\-- or-type user-identity:
+\--- email:
+string email:
+
+\--- github:
+string github:
+
+

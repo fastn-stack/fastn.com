@@ -87,6 +87,12 @@ implements: fifthtry.github.io/theme
     url: /processors/get-data/
   - `$processor$: sitemap`
     url: /processors/sitemap/
+  - `$processor$: belongs-to`
+    url: /processors/belongs-to/
+  - `$processor$: get-identities`
+    url: /processors/get-identities/
+  - `$processor$: get-groups`
+    url: /processors/get-groups/
   - `import: fpm`
     url: /fpm-vars/
 

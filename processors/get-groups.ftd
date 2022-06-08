@@ -1,0 +1,22 @@
+-- ft.page: `get-groups` processor
+
+`get-groups` processor can be used to find all the [groups](/dev/user-group/)
+the current user belongs to.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.user-group list groups:
+$processor$: get-groups
+
+-- ft.markdown:
+
+This will initialise the list `groups` with the groups user belongs to.
+
+-- ft.code: `fpm.user-group` type
+
+\-- record user-group:
+optional string name:
+string id:
+
+
