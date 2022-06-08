@@ -16,17 +16,20 @@ The FPM Controller Service's enpoint is computed by using environement
 variable `FPM_CONTROLLER`, which will look something like this:
 `https://controller.fifthtry.com`, with the API path.
 
-FPM Controller Service has more than one APIs: /get-zip/ and /fpm-ready/.
+FPM Controller Service has more than one APIs: /get-package/ and /fpm-ready/.
 
--- ft.h1: `/get-zip/`
+-- ft.h1: `/get-package/`
 
 Through an environemnt variable `FPM_INSTANCE_ID`, the `fpm serve` will learn
-it's `instance id`, and it will pass the instance id to the `get-zip` API.
+it's `instance id`, and it will pass the instance id to the `get-package` API.
 
-The API returns the URL of a package to download. The URL points to a zip file.
+The API returns the URL of the package to be downloaded, git repository URL and 
+the package name.
 
 FPM will download the zip file and unzip it in current directory. The current
 directory will contain `FPM.ftd` and other files of the package.
+
+The API will respond with the latest commit SHA as the response.
 
 FPM will then calls [`fpm install`](/cli/install/) on it.
 
