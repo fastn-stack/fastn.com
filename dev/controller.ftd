@@ -8,7 +8,7 @@ not enabled by default.
 -- ft.h1: Controller Communication
 
 When `controller` feature is enabled, `fpm serve` will first communicate with
-the FPM controller service's `/get-zip/` API.
+the FPM controller service's `/get-package/` API.
 
 -- ft.h2: FPM Controller Service Endpoint
 
