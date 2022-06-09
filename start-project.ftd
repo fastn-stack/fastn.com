@@ -2,8 +2,6 @@
 
 -- ft.markdown:
 
-Status: In development
-
 `fpm start-project <package-name> [package-path]` is used to generate a template project under the given
 package name at the specific path if provided.
 
