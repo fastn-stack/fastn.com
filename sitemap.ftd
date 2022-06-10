@@ -247,8 +247,6 @@ from section, subsection and it's parent TOC. i.e. `key1: value1`, `key2: value2
 `key3: value3`, `key4: value4` and `key5: value5`
 
 
-
-
 -- ft.h1: Variable can be changed based on key value data
 
 Using the `get-data`, the title can be different:
@@ -273,11 +271,11 @@ lang: ftd
 
 # Overview
 
-- foo/
+- foo: foo/
 
 # Development
 
-- foo/-/1
+- foo: foo/-/1
   show-dev-info: true
 
 
