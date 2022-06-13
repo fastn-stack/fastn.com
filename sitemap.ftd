@@ -322,3 +322,42 @@ So the document `intro.ftd` in the package `bar.com` is included in the sitemap
 with the variant `main`.
 The generated HTML includes the canonical url with value as `bar.com/intro`
 
+
+-- ft.h1: Skip Header
+
+`skip: true`
+
+-- ft.h2: Motivation Behind `skip` Header
+
+If people want to draft something and don't want to publish any section, sub
+section or toc, they can use `skip` in section, sub-section and toc header.
+
+The skipped section, sub-section or toc would not be available in [processor
+sitemap](processors/sitemap/) till it is not the active opened page.
+
+
+-- ft.h2: `skip` in Section
+
+We have header called `skip`(by default `false`), using this header we can skip
+the whole section.
+
+-- ft.code:
+lang: ftd
+
+# Section 1: /section1
+
+## Section 1 Subsection 1: /subsection1
+
+## Section 1 Subsection 2: /subsection2
+
+# Section 2: /section2
+skip: true
+
+## Section 2 Subsection 1: /subsection1
+
+## Section 2 Subsection 2: /subsection2
+
+
+-- ft.markdown:
+
+In this case, Whole Section 2 will be skipped and will not display.
