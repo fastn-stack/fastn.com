@@ -104,7 +104,7 @@ lang: ftd
 
 {
   "name": "arpita",
-  "age": 15 ,
+  "age": 15,
   "gender": "female"
 }
 
@@ -121,5 +121,6 @@ arpita
 female
 
 -- ft.markdown:
+
 
 NOTE : It will throw an error if other than .json file is used.
