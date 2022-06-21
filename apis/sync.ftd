@@ -1,4 +1,4 @@
--- ft.page: sync API `/-/sync/`
+-- ft.page: API `/-/sync/`
 
 In sync, It will perform two way merge, Firstly pull content from fpm remote(fpm
 is running in remote mode) to fpm local client and if it succeed then it will
@@ -28,7 +28,9 @@ conflicts and run `fpm sync` again.
 
 - Client will send `latest.ftd` to server and server will compare client's
 `latest.ftd` and server's `latest.ftd` and send back updated content in
-response according to server's `latest.ftd`
+response according to server's `latest.ftd`. In this case it will use [Fetch
+Latest API](/apis/fetch-latest/)
+
 - Client will update its local content, If merge conflicts occurred then `sync`
 will stop it's process.
 - Client will send updated content back to server. In this case it will call
@@ -46,7 +48,7 @@ conflicts and run `sync` again.
 - URL:
     - `/-/sync/`
 
-- Input Body
+- Request Body
 
 -- ft.code:
 lang: json
@@ -126,12 +128,18 @@ lang: json
     "success": true,
     "code": "OK",
     "data": {
-        "files": [{
-            "path": "Absolute file path",
-            "status": "Add/Delete",
-            "content": "Conflicted Content"
-            "version": "file latest version",
-        }]
+        "files": [
+            {
+                "path": "Absolute file path",
+                "status": "Add",
+                "content": "Conflicted Content"
+                "version": "file latest version",
+            },
+            {
+                "path": "Absolute file path",
+                "status": "Delete",
+            }
+        ]
     }
 }
 

@@ -1,0 +1,62 @@
+-- ft.page: API `/-/fetch-latest/`
+
+In this API client will send `latest.ftd` to server and server will compare this
+file with it's `latest.ftd` and it will return updated version of documents.
+
+-- ft.h1: API POST `/-/fetch-latest/`
+
+- Header:
+    - cookie: `identity`
+
+- URL:
+    - `/-/fetch-latest/`
+
+- Request Body
+
+-- ft.code:
+lang: json
+{
+    "package_name": "<Name of the package>",
+    "latest-ftd": "content of latest ftd"
+}
+
+-- ft.h1: Responses
+
+-- ft.h2: Success Response
+
+-- ftd.code:
+lang: json
+{
+    "success": true,
+    "code": "OK",
+    "data": {
+        "files": [
+            {
+                "path": "Absolute file path",
+                "status": "Add",
+                "content": "File Content",
+                "version": "file latest version",
+            },
+            {
+                "path": "Absolute file path",
+                "status": "Update",
+                "content": "File Content",
+                "version": "file latest version",
+            },
+            {
+                "path": "Absolute file path",
+                "status": "Delete"
+            }
+        ]
+    }
+}
+
+-- ft.h2: Error Response
+
+-- ftd.code:
+lang: json
+{
+    "success": false,
+    "code": "UN_AUTHORIZED", // May be not needed
+    "message": "You do not have access to update this document",
+}
