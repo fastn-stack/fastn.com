@@ -53,7 +53,7 @@ lang: json
 {
     "package_name": "<Name of the package>",
     "files": [{
-        "mode": "A/U/D",
+        "mode": "Add/Update/Delete",
         "path": "<Absolute file path>",
         "content": "file content",
         "version": "file version which fpm store sent earlier"
@@ -81,6 +81,69 @@ In performing three way merge, If there is conflict then return conflicted conte
 to client with remote latest version, else no conflicts, then save merged content
 into filesystem and update latest version in `latest.ftd` and return latest
 version of the document.
+
+
+-- ft.h1: Responses
+
+-- ft.h2: Success Response Without Conflict
+
+-- ftd.code:
+lang: json
+{
+    "success": true,
+    "code": "OK",
+    "data": {
+        "files": [{
+            "path": "Absolute file path",
+            "status": "NoConflict",
+            "version": "file latest version",
+        }]
+    }
+}
+
+-- ft.h2: Success Response With Conflict
+
+-- ftd.code:
+lang: json
+{
+    "success": true,
+    "code": "OK",
+    "data": {
+        "files": [{
+            "path": "Absolute file path",
+            "status": "Conflict",
+            "content": "Conflicted Content"
+            "version": "file latest version",
+        }]
+    }
+}
+
+-- ft.h2: Success Response With New Files Added or Deleted
+
+-- ftd.code:
+lang: json
+{
+    "success": true,
+    "code": "OK",
+    "data": {
+        "files": [{
+            "path": "Absolute file path",
+            "status": "Add/Delete",
+            "content": "Conflicted Content"
+            "version": "file latest version",
+        }]
+    }
+}
+
+-- ft.h2: Error Response
+
+-- ftd.code:
+lang: json
+{
+    "success": false,
+    "code": "UN_AUTHORIZED", // May be not needed
+    "message": "You do not have access to update this document",
+}
 
 
 -- ft.h1: Partial Sync
