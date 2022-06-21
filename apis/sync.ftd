@@ -3,3 +3,36 @@
 In sync, It will perform two way merge, Firstly pull content from fpm remote(fpm
 is running in remote mode) to fpm local client and if it succeed then it will
 merge client's local change to fpm remote.
+
+
+-- ft.h1: How We Will Implement
+
+-- ft.h2: Version 1
+
+- Client will ask `latest.ftd` from `fpm remote` server
+- Then it will compare local content with server's `latest.ftd`
+- If `latest.ftd` is diverged then it will ask updated files from `fpm remote`
+server
+
+- Server will send updated files to Client
+- Client will update local content according to `latest.ftd`. It may be possible
+that conflicts occur and client will solve conflicts. If any merged conflicts
+occurred `sync` will stop it's process.
+
+- Send updated file to server back. In this case it will use sync API.
+- It may be possible till client send back updated content to server, server
+content has diverged and conflicts occur again. Then client has to resolve
+conflicts and run `fpm sync` again.
+
+-- ft.h2: Version 2
+
+- Client will send `latest.ftd` to server and server will compare client's
+`latest.ftd` and server's `latest.ftd` and send back updated content in
+response according to server's `latest.ftd`
+- Client will update its local content, If merge conflicts occurred then `sync`
+will stop it's process.
+- Client will send updated content back to server. In this case it will call
+sync API.
+- It may be possible till client send back updated content to server, server
+content has diverged and conflicts occur again. Then client has to resolve
+conflicts and run `sync` again.
