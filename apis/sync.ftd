@@ -26,10 +26,9 @@ conflicts and run `fpm sync` again.
 
 -- ft.h2: Version 2
 
-- Client will send `latest.ftd` to server and server will compare client's
-`latest.ftd` and server's `latest.ftd` and send back updated content in
-response according to server's `latest.ftd`. In this case it will use [Fetch
-Latest API](/apis/fetch-latest/)
+- Client will send it's `latest.ftd` and updated content to server and server
+will compare client's `latest.ftd` and server's `latest.ftd` and send back
+updated content in response according to server's `latest.ftd`.
 
 - Client will update its local content, If merge conflicts occurred then `sync`
 will stop it's process.
@@ -65,8 +64,8 @@ lang: json
             "mode": "Delete",
             "path": "<Absolute file path>",
         }
-
-    ]
+    ],
+    "latest-ftd": "latest ftd content"
 }
 
 -- ft.h1: How Will It Work

@@ -106,7 +106,6 @@ implements: fifthtry.github.io/theme
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
 - `fpm sync` API: /apis/sync/
-- `fpm fetch latest` API: /apis/fetch-latest/
 
 ## Using `fpm` Crate: crate/
 
