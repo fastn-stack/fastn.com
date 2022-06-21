@@ -1,0 +1,5 @@
+-- ft.page: sync API `/-/sync/`
+
+In sync, It will perform two way merge, Firstly pull content from fpm remote(fpm
+is running in remote mode) to fpm local client and if it succeed then it will
+merge client's local change to fpm remote.

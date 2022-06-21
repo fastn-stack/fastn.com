@@ -1,0 +1,21 @@
+-- ft.page: FPM Modes
+
+FPM will have two modes, `local` and `remote`. It will be configurable while
+building FPM binaries.
+
+
+-- ft.h2: FPM Local Mode
+
+In `local` mode, It will provide `fpm cli` commands like `fpm sync`,
+`fpm serve`, etc... .
+
+-- ft.h2: FPM Remote Mode
+
+In `remote` mode, It will provide [sync API](/apis/sync). Only filesystem is
+going to be data store.
+
+
+-- ft.h2: FPM Remote Store Mode
+
+In `remote-store` mode, it will act same as `remote` mode but data store will
+be database and filesystem will act as cache.

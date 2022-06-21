@@ -55,7 +55,7 @@ implements: fifthtry.github.io/theme
   - `fpm diff`: /diff/
   - `fpm update`: /update/
   - `fpm serve`: /serve/
-
+- FPM Modes: /modes/
 
 
 
@@ -105,7 +105,7 @@ implements: fifthtry.github.io/theme
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
-
+- `fpm sync` API: /apis/sync/
 
 ## Using `fpm` Crate: crate/
 
