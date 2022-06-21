@@ -36,3 +36,66 @@ sync API.
 - It may be possible till client send back updated content to server, server
 content has diverged and conflicts occur again. Then client has to resolve
 conflicts and run `sync` again.
+
+
+-- ft.h1: API POST `/-/sync/`
+
+- Header:
+    - cookie: `identity`
+
+- URL:
+    - `/-/sync/`
+
+- Input Body
+
+-- ft.code:
+lang: json
+{
+    "package_name": "<Name of the package>",
+    "files": [{
+        "mode": "A/U/D",
+        "path": "<Absolute file path>",
+        "content": "file content",
+        "version": "file version which fpm store sent earlier"
+    }]
+}
+
+-- ft.h1: How Will It Work
+
+Get the document from filesystem with request `path` and latest document version
+from `latest.ftd`, compare both versions, request `version` and latest version.
+
+If both the versions are same:
+
+Merge the content of both, save it in database and calculate the new version
+version and update it into `latest.ftd`.
+
+If both the versions are not same:
+
+Then it has to perform three way merge, to perform three way merge it needs
+three documents to merge together, file `content` in request, content from
+filesystem(latest version on the remote) and least common ancestor of both of
+these.
+
+In performing three way merge, If there is conflict then return conflicted content
+to client with remote latest version, else no conflicts, then save merged content
+into filesystem and update latest version in `latest.ftd` and return latest
+version of the document.
+
+
+-- ft.h1: Partial Sync
+
+Sync operation will be performed partially as well, by mean of partial let's say
+there are five documents, 2 have no conflicts and 3 have conflicts, so 2 document
+will be synced and 3 document will be returned with conflicted content with
+server's latest version.
+
+
+-- ft.h2: Version Data Structure
+
+- path: file absolute path
+- hash: SHA256 of the content
+- author: Who has done this write
+- message: If provided any
+- datetime: When this has done
+- incremental version number
