@@ -54,12 +54,19 @@ conflicts and run `sync` again.
 lang: json
 {
     "package_name": "<Name of the package>",
-    "files": [{
-        "mode": "Add/Update/Delete",
-        "path": "<Absolute file path>",
-        "content": "file content",
-        "version": "file version which fpm store sent earlier"
-    }]
+    "files": [
+        {
+            "mode": "Add/Update",
+            "path": "<Absolute file path>",
+            "content": "file content",
+            "version": "file version which fpm store sent earlier"
+        },
+        {
+            "mode": "Delete",
+            "path": "<Absolute file path>",
+        }
+
+    ]
 }
 
 -- ft.h1: How Will It Work
