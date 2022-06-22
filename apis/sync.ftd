@@ -175,3 +175,21 @@ We will always give priority to update
 -- ft.h2: Scenario 2: If a file is updated in remote and deleted in local
 
 We will always give priority to update
+
+
+-- code: Sync Curl Request
+lang: sh
+
+curl --location --request POST 'http://127.0.0.1:8000/-/sync/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "package_name": "arpita",
+    "files": [
+        {
+            "action": "Add",
+            "path": "this is file path",
+            "content": [61,73, 64, 61, 73, 64, 61, 73, 64, 73]
+        }
+    ],
+    "latest_ftd": "asdasd"
+}'
