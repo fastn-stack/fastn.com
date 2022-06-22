@@ -55,17 +55,16 @@ lang: json
     "package_name": "<Name of the package>",
     "files": [
         {
-            "mode": "Add/Update",
+            "action": "Add/Update",
             "path": "<Absolute file path>",
-            "content": "file content",
-            "version": "file version which fpm store sent earlier"
+            "content": "file content"
         },
         {
-            "mode": "Delete",
+            "action": "Delete",
             "path": "<Absolute file path>",
         }
     ],
-    "latest-ftd": "latest ftd content"
+    "latest_ftd": "latest ftd content"
 }
 
 -- ft.h1: How Will It Work
@@ -101,53 +100,34 @@ lang: json
     "success": true,
     "code": "OK",
     "data": {
-        "files": [{
-            "path": "Absolute file path",
-            "status": "NoConflict",
-            "version": "file latest version",
-        }]
-    }
-}
-
--- ft.h2: Success Response With Conflict
-
--- ftd.code:
-lang: json
-{
-    "success": true,
-    "code": "OK",
-    "data": {
-        "files": [{
-            "path": "Absolute file path",
-            "status": "Conflict",
-            "content": "Conflicted Content"
-            "version": "file latest version",
-        }]
-    }
-}
-
--- ft.h2: Success Response With New Files Added or Deleted
-
--- ftd.code:
-lang: json
-{
-    "success": true,
-    "code": "OK",
-    "data": {
         "files": [
             {
+                "action": "Update",
                 "path": "Absolute file path",
-                "status": "Add",
-                "content": "Conflicted Content"
-                "version": "file latest version",
+                "status": "NoConflict",
+                "content": "file content"
             },
             {
+                "action": "Add",
                 "path": "Absolute file path",
-                "status": "Delete",
-            }
-        ]
+                "status": "NoConflict",
+                "content": "file content"
+            },
+            {
+                "action": "Delete",
+                "path": "Absolute file path",
+            },
+            {
+                "action": "Update",
+                "path": "Absolute file path",
+                "status": "Conflict",
+                "content": "file content"
+            },
+        ],
+        "latest_ftd": "Content of latest ftd file"
     }
 }
+
 
 -- ft.h2: Error Response
 
@@ -176,3 +156,14 @@ server's latest version.
 - message: If provided any
 - datetime: When this has done
 - incremental version number
+
+
+-- ft.h1: Scenarios
+
+-- ft.h2: Scenario 1: If a file is deleted from remote and updated in local
+
+We will always give priority to update
+
+-- ft.h2: Scenario 2: If a file is updated in remote and deleted in local
+
+We will always give priority to update
