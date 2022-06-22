@@ -177,7 +177,7 @@ We will always give priority to update
 We will always give priority to update
 
 
--- code: Sync Curl Request
+-- ft.code: Sync Curl Request
 lang: sh
 
 curl --location --request POST 'http://127.0.0.1:8000/-/sync/' \
@@ -193,3 +193,11 @@ curl --location --request POST 'http://127.0.0.1:8000/-/sync/' \
     ],
     "latest_ftd": "asdasd"
 }'
+
+
+-- ft.h1: How To
+
+- Get all the updated, added and deleted files
+- Get Updated Files -> If content differs from latest snapshot
+- Get Added Files -> If files does not present in latest snapshot
+- Get Deleted Files -> If file present in latest.ftd and not present in directory
