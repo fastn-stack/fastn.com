@@ -124,6 +124,14 @@ lang: json
                 "content": "file content"
             },
         ],
+        "dot_history": {
+            "files": [
+                {
+                    "path": "file path",
+                    "content": "content of the file"
+                }
+            ]
+        },
         "latest_ftd": "Content of latest ftd file"
     }
 }
