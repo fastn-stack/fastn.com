@@ -197,7 +197,23 @@ curl --location --request POST 'http://127.0.0.1:8000/-/sync/' \
 
 -- ft.h1: How To
 
+-- ft.h2: Client
+
 - Get all the updated, added and deleted files
 - Get Updated Files -> If content differs from latest snapshot
 - Get Added Files -> If files does not present in latest snapshot
 - Get Deleted Files -> If file present in latest.ftd and not present in directory
+
+-- ft.h2: Server
+
+- Steps
+- Read latest.ftd and create snapshot version
+- Iterate over Added files, create them and update new version in latest.ftd
+- Iterate over Deleted Files, If version are same remove it from remote
+ otherwise send updated file
+- Iterate over Update Files, get the base file according to client latest.ftd and
+ apply three way merge,
+- If no conflict merge it, update file on remote and send back new content as
+ Updated
+- If conflict occur, Then send back updated version in latest.ftd with conflicted
+ content
