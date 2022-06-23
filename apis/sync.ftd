@@ -217,3 +217,16 @@ curl --location --request POST 'http://127.0.0.1:8000/-/sync/' \
  Updated
 - If conflict occur, Then send back updated version in latest.ftd with conflicted
  content
+
+- Send back Updated files(Current Directory)
+-
+- Find all newly added files which are not in client latest.ftd
+- Find all the Update files at server, need to find out different snapshots in latest.ftd
+- Find deleted files, entry will not available in server's latest.ftd but will be available
+- client's latest.ftd
+-
+- Send back all new .history files
+-
+- find difference between client's latest.ftd and server's latest.ftd and send back those files
+-
+- Send latest.ftd file as well
