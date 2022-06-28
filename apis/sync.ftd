@@ -230,3 +230,32 @@ curl --location --request POST 'http://127.0.0.1:8000/-/sync/' \
 - find difference between client's latest.ftd and server's latest.ftd and send back those files
 -
 - Send latest.ftd file as well
+
+
+-- ft.h1: `latest.ftd`
+
+There will be one more field `hash` of the content
+
+-- ft.h1: `workspace.ftd`
+
+-- ft.h1: Status
+
+-- ft.h2: Added
+
+There are some files which are added on server
+
+-- ft.h2: Deleted
+
+Some files which are deleted on remote
+
+-- ft.h2: Outdated
+
+Files which are updated on remote and not synced
+
+-- ft.h2: Conflicted
+
+Files which have conflict with remote
+
+-- ft.h2: Modified
+
+Files which are modified on remote
