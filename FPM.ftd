@@ -103,6 +103,10 @@ implements: fifthtry.github.io/theme
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
+- `fpm controller`: /dev/fpm-controller/
+  - Entry Server: /dev/fpm-controller/entry-server/
+  - Setup Guidelines: /dev/fpm-controller/setup-guidelines/
+  - Deployment Guidelines: /dev/fpm-controller/deployment/
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/

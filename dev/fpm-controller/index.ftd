@@ -1,0 +1,27 @@
+-- import: fpm.dev/assets
+
+-- ft.page: `fpm-controller`
+
+-- ft.h1: FPM Controller architecture
+
+FPM controller comprises of a few pieces which help in management of the system
+
+-- ft.image:
+src: $assets.files.static.images.fpm-controller.architecture-overview.svg
+width: fill
+
+-- ft.h2: Entry server
+
+Entry server manages the user coordination and the traffic routing
+
+- Django app: This app is the main entry point of the application
+- Nginx: Nginx acts as the reverse proxy for the servers that spawn and is used 
+  to route the traffic accordingly
+
+-- ft.h2: Client server(s)
+
+For every package that gets deployed on [5thtry.com](https://5thtry.com) a client server 
+is provisioned. This client server is a dedicated instance for the package.
+
+- fpm cli(controller mode): Run in the controller mode, this spawns a service 
+which communicates with the entry server and evaluate the configuration of the system.

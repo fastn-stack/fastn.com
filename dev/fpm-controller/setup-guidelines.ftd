@@ -1,0 +1,100 @@
+-- ft.page: `fpm-controller` setup guidelines
+
+-- ft.h1: Entry server
+
+-- ft.code:
+lang: sh
+caption: Install system dependencies
+
+\$ sudo yum install postgresql-devel # installation for psycopg2 instead of complete postgresql
+$ pip3 install gunicorn
+
+-- ft.code:
+lang: service
+caption: /etc/systemd/system/django-app.service
+
+[Unit]
+Description = Start django service
+After = network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/www/src/dj
+ExecStart = /home/ec2-user/.local/bin/gunicorn proj.wsgi
+
+[Install]
+WantedBy = multi-user.target
+
+
+-- ft.code:
+lang: sh
+caption: Enabling the django application
+
+sudo systemctl start django-app
+sudo systemctl enable django-app
+
+
+-- ft.code:
+lang: conf
+caption: Nginx configuration for setting up django application
+
+
+server {
+    listen       80;
+    listen       [::]:80;
+    server_name fifthtry.io;
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+    }
+}
+
+
+-- ft.code:
+lang: conf
+caption: Nginx configuration for client servers
+
+server {
+    listen       80;
+    listen       [::]:80;
+    server_name %s.5thtry.com;
+    location / {
+        proxy_pass http://%s:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_buffering off;
+    }
+}
+
+
+-- ft.code:
+lang: sh
+caption: Setting up permissions for the user to restart nginx without password(configuration reload)
+
+\$ sudo visudo
+
+# Add to the bottom of the file
+
+ec2-user ALL=(ALL) NOPASSWD: /bin/systemctl restart nginx
+
+
+-- ft.h1: Client Server
+
+-- ft.code:
+lang: service
+caption: Systemd configuration for running the fpm application \n `/etc/systemd/system/fpm-app.service`
+
+[Unit]
+Description = Start fpm service
+After = network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/www/
+Environment="FPM_CONTROLLER=https://5thtry.com"
+ExecStart=/bin/sh -c '/usr/bin/rm -rf {*,.*};export FPM_INSTANCE_ID=$(/usr/bin/curl http://169.254.169.254/latest/meta-data/instance-id/);/usr/local/bin/fpm serve --bind 0.0.0.0'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy = multi-user.target

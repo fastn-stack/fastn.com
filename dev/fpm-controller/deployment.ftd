@@ -1,0 +1,22 @@
+-- ft.page: Deployment
+
+-- ft.h1: `ssh` into the server
+
+-- ft.code:
+lang: sh
+caption: ssh into the server
+
+\$ ssh -i /path/to/secret.pem ec2-user@public-server-ip
+
+
+-- ft.h1: Updating the `django` app codebase
+
+-- ft.code:
+lang: sh
+caption: Update the codebase and restart server
+
+\$ cd www/
+$ git pull origin main
+$ cd src/dj/
+$ python3 manage.py migrate # Optional step
+$ sudo systemctl restart django-app

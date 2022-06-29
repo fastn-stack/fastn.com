@@ -1,0 +1,30 @@
+
+-- ft.page: Entry Server
+
+-- ft.h1: Django application
+
+Django application is the orchestrator of the system. This application is the user
+facing application where a simple UI is provided to install a package to the system.
+
+Once installed, a server instance is provisioned for the package and the traffic
+routing configuration is managed by the django application.
+
+-- ft.h1: Background services
+
+-- ft.h2: Client last access watcher
+
+-- ft.h2: Client termination watcher
+
+-- ft.h1: Nginx
+
+Once the configuration is installed by django and put into effect, the nginx 
+takes care of the traffic routing and the reverse proxy.
+
+The access and error logs are generated for the applications in effect.
+
+-- ft.h1: Systemd
+
+Systemd is a core system service that is used to keep the django service alive.
+
+A service file is created for the django-app and the traffic is proxied to port
+80 via nginx.
