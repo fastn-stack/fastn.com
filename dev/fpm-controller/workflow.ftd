@@ -1,0 +1,19 @@
+-- ft.page: Server provisioning workflow
+
+-- ft.h1: AWS Workflow
+
+The system relies on the AWS EC2 instances to run the final client fpm application.
+
+-- ft.h2: EC2 launch template
+
+The Django application uses the [AWS EC2 launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html) 
+to provision a server and store the configuration in the DB.
+
+-- ft.h2: FPM client server AMI
+
+Once the provisioned, the server boots up the fpm client AMI. Using the systemd 
+configuration, the system initializes a background process `fpm serve` which requests
+the information from the entry server corresponding to the instance ID.
+
+Once the `fpm` application boots up sucessfully, it publishes the status to the 
+entry server and the routing is configured for the same in the entry server.

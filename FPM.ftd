@@ -107,6 +107,7 @@ implements: fifthtry.github.io/theme
   - Entry Server: /dev/fpm-controller/entry-server/
   - Setup Guidelines: /dev/fpm-controller/setup-guidelines/
   - Deployment Guidelines: /dev/fpm-controller/deployment/
+  - AWS Workflow: /dev/fpm-controller/workflow/
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
