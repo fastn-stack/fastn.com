@@ -1,0 +1,184 @@
+-- ft.page: How sync works
+
+
+-- ft.h1: `.fpm/workspace.ftd`
+
+After fpm clone, the .fpm/workspace.ftd created. This contains entry for all the files in the file system.
+It is hashmap of filename to version.
+
+The only time the workspace is updated is when we do a sync or resolve a conflict.
+
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.workspace-file: <filename>
+timestamp: <timestamp>
+
+
+
+-- ft.h1: `.history/history.ftd`
+
+This contains the history related information for the files
+
+
+-- ft.code:
+lang: ftd
+
+
+\-- fpm.history-file: <filename>
+
+\--- action.add:
+timestamp: <timestamp>
+
+
+
+
+-- ft.h1: Global sync behaviour
+
+1. history.ftd
+
+
+
+
+
+-- ft.h1: `new-file-added`
+
+Before sync:
+
+Create file in file system
+
+After sync:
+> .history/index.v1.ftd
+> Create entry in .latest.ftd
+> Create entry .history/history.ftd
+
+```ftd
+
+-- fpm.history: index.ftd
+
+--- fpm.status: Added
+timestamp: v1
+
+```
+
+> Create entry in `.fpm/workspace.ftd`
+
+
+-- ft.h1: `new-file-added-after-already-added`
+
+Before sync:
+
+Create file in file system
+
+After sync:
+> Return conflict (index.v1.ftd: content and version)
+> Create entry in .fpm/workspace.ftd
+
+```ftd
+-- fpm.workspace: index.ftd
+status: conflicted
+version: v1
+```
+
+> Don't modify index.ftd in fs
+
+
+
+-- ft.h1: `file-deleted`
+
+Before sync:
+
+Delete file in file system
+
+After sync:
+> Remove entry from .history/.latest.ftd
+> Create entry in .history/history.ftd
+
+```ftd
+
+-- fpm.history: index.ftd
+
+--- fpm.status: Deleted
+timestamp: v1
+```
+
+> Remove entry from .fpm/workspace.ftd
+
+
+
+
+-- ft.h1: `file-deleted-after-already-modified`
+
+Before sync:
+
+Delete the file
+
+After sync:
+> Return conflict (index.v1.ftd: content and version)
+> Create entry in .fpm/workspace.ftd
+
+```ftd
+-- fpm.workspace: index.ftd
+version: v2
+```
+> It won't restore the file in fs
+
+
+
+
+
+-- ft.h1: `file-deleted-after-already-deleted`
+
+
+Before sync:
+
+Delete file in file system
+
+After sync:
+
+Nothing
+
+> Remove entry from `.fpm/workspace.ftd`
+
+
+
+
+-- ft.h1: `file-modified`
+
+Before sync:
+
+modify the file
+
+After sync:
+
+> Create new snapshot .history/index.v2.ftd
+> Create entry in .latest.ftd
+> Create entry in .history/history.ftd
+
+
+
+-- ft.h1: `file-modified-after-already-deleted`
+
+Before sync:
+
+modify the file
+
+After sync:
+
+Nothing
+
+
+
+-- ft.h1: `file-modified-after-already-modified`
+
+Before sync:
+
+modify the file
+
+After sync:
+
+Nothing
+
+
+
