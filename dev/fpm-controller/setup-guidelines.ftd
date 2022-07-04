@@ -98,3 +98,13 @@ RestartSec=3
 
 [Install]
 WantedBy = multi-user.target
+
+
+-- ft.h2: Certificate issuance
+
+-- ft.code:
+lang: sh
+caption: Install certbot
+
+\$ sudo amazon-linux-extras install epel
+$ sudo yum install certbot

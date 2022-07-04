@@ -9,4 +9,4 @@ FPM comes with following built in `ftd` `$processor$`s.
 - [`$processor$: package-query`](/fpm/package-query/)
 
 FPM also comes with a special document [`fpm`](/fpm/fpm-vars/) that can be
-imported by any document, which contains helpful variables.
+imported by any document, which contains helpful variables. 
