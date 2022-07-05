@@ -1,8 +1,6 @@
 -- ft.page: `fpm sync`
 
 
--- ft.markdown: 
-
 `fpm sync` operates in two modes. If the package is hosted on `fpm-repo` then it
 syncs the content of local folder with remote [not yet implemented]. If the package
 is hosted on `github` etc, then `sync` creates a snapshot of modified files in

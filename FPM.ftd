@@ -55,6 +55,7 @@ implements: fifthtry.github.io/theme
   - `fpm diff`: /diff/
   - `fpm update`: /update/
   - `fpm serve`: /serve/
+  - `fpm install`: /cli/install/
 
 
 
@@ -99,6 +100,7 @@ implements: fifthtry.github.io/theme
 - Journal: /journal/
 - Contribution Guide: /dev/contribute/
 - How Versioning Works: /dev/versioning/
+- FPM Controller Support: /dev/controller/
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/

@@ -1,0 +1,52 @@
+-- ft.page: `fpm install`
+
+`fpm install` installs all the dependencies of current package.
+
+-- ft.h2: Synopsis
+
+-- ft.code:
+lang: sh
+
+fpm install
+fpm install <package name> # TODO
+fpm install <git url> # TODO
+fpm install <tarball file> # TODO
+fpm install <tarball url> # TODO
+fpm install <github username>/<github project> # TODO
+
+aliases: add, i, install
+
+
+-- ft.h2: Description
+
+`fpm install` installs the package and any packages that it depends on.
+
+A `package` is:
+
+- a) a folder that contains `FPM.ftd`
+- b) a gzipped tarball containing (a)
+- c) a url that resolves to (b)
+- d) a <git remote url> that resolves to (a)
+
+- `fpm install` install
+
+
+Install the dependencies to local `.packages` folder. By default, `fpm install`
+will install all packages listed as dependencies in `FPM.ftd` file.
+
+
+- `fpm install <package name>`
+
+
+- `fpm install <tarball file>`
+
+Install a package that is sitting on your file system.
+
+Tarball requirements:
+- The filename must use .tar, .tar.gz, or .tgz as the extension.
+
+
+- `fpm install <tarball url>`
+
+Fetch the tarball url, and then install it. The url must start with `http://` or
+`https://`
