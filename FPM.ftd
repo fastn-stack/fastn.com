@@ -114,6 +114,7 @@ implements: fifthtry.github.io/theme
   - `sync` API: /sitemap/sync/
   - `view-src` API: /sitemap/view-src/
   - `edit` API: /sitemap/edit/
+  - `editor-sync`: /sitemap/editor-sync/
 
 ## Using `fpm` Crate: crate/
 
