@@ -1,0 +1,33 @@
+-- ft.page: `get-package` API
+
+This API is get called from `fpm`, when it need to get the package to deploy
+on the instance.
+
+
+-- ft.h1: API
+
+-- ft.h2: URL and Parameters
+
+URL of the API is: `/v1/fpm/get-package`
+
+Query Parameter: `ec2_instance_id`
+
+
+-- ft.h2: Request Method
+
+Request Method of this API is `GET`
+
+-- ft.h2: Response
+
+The output of the API is:
+
+-- ft.code:
+lang: json
+{
+    "success": true,
+    "result": {
+        "package": "<name of the package>",
+        "git": "<git url of the package>",
+        "base": "<base url of the package>"
+    }
+}

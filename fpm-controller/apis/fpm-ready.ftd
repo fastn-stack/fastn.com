@@ -1,0 +1,26 @@
+-- ft.page: `fpm-ready` API
+
+This API is get called from `fpm`, when the `fpm serve` is ready to serve the
+package.
+
+-- ft.h1: API
+
+-- ft.h2: URL and Parameters
+
+URL of the API is: `/v1/fpm/fpm-ready`
+
+Query Parameters: `ec2_instance_id` and `git_hash`.
+
+-- ft.h2: Request Method
+
+Request Method of this API is `GET`
+
+-- ft.h2: Response
+
+The output of the API is:
+
+-- ft.code:
+lang: json
+{
+    "success": true
+}

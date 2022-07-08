@@ -102,6 +102,12 @@ implements: fifthtry.github.io/theme
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
+
+- FPM Controller: /fpm-controller/
+  - `fpm-ready` API: /fpm-controller/apis/fpm-ready/
+  - `get-package` API: /fpm-controller/apis/get-package/
+  - Update `fpm` Binary: /fpm-controller/update-fpm-binary/
+
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
