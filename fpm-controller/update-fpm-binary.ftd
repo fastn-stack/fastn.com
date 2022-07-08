@@ -1,4 +1,4 @@
--- ft.h1: How to update `fpm` binary on ec2 instance
+-- ft.page: How to update `fpm` binary on ec2 instance
 
 -- ft.h2: `ssh` To `fpm` Instance
 
