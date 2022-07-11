@@ -192,20 +192,21 @@ Before sync:
 Create file in file system
 
 After sync:
-> .history/index.v1.ftd
-> Create entry in .latest.ftd
-> Create entry .history/history.ftd
+- .history/index.v1.ftd
+- Create entry in .latest.ftd
+- Create entry .history/history.ftd
 
-```ftd
+-- ft.code:
+lang: ftd
 
--- fpm.history: index.ftd
+\-- fpm.history: index.ftd
 
---- fpm.status: Added
+\--- fpm.status: Added
 timestamp: v1
 
-```
+-- ft.markdown:
 
-> Create entry in `.fpm/workspace.ftd`
+- Create entry in `.fpm/workspace.ftd`
 
 
 -- ft.h1: `new-file-added-after-already-added`
@@ -215,16 +216,19 @@ Before sync:
 Create file in file system
 
 After sync:
-> Return conflict (index.v1.ftd: content and version)
-> Create entry in .fpm/workspace.ftd
+- Return conflict (index.v1.ftd: content and version)
+- Create entry in .fpm/workspace.ftd
 
-```ftd
--- fpm.workspace: index.ftd
+-- ft.code:
+lang: ftd
+
+\-- fpm.workspace: index.ftd
 status: conflicted
 version: v1
-```
 
-> Don't modify index.ftd in fs
+-- ft.markdown:
+
+- Don't modify index.ftd in fs
 
 
 
@@ -235,18 +239,20 @@ Before sync:
 Delete file in file system
 
 After sync:
-> Remove entry from .history/.latest.ftd
-> Create entry in .history/history.ftd
+- Remove entry from .history/.latest.ftd
+- Create entry in .history/history.ftd
 
-```ftd
+-- ft.code:
+lang: ftd
 
--- fpm.history: index.ftd
+\-- fpm.history: index.ftd
 
---- fpm.status: Deleted
+\--- fpm.status: Deleted
 timestamp: v1
-```
 
-> Remove entry from .fpm/workspace.ftd
+-- ft.markdown:
+
+- Remove entry from .fpm/workspace.ftd
 
 
 
@@ -258,14 +264,18 @@ Before sync:
 Delete the file
 
 After sync:
-> Return conflict (index.v1.ftd: content and version)
-> Create entry in .fpm/workspace.ftd
+- Return conflict (index.v1.ftd: content and version)
+- Create entry in .fpm/workspace.ftd
 
-```ftd
--- fpm.workspace: index.ftd
+-- ft.code:
+lang: ftd
+
+\-- fpm.workspace: index.ftd
 version: v2
-```
-> It won't restore the file in fs
+
+-- ft.markdown:
+
+- It won't restore the file in fs
 
 
 
@@ -282,7 +292,7 @@ After sync:
 
 Nothing
 
-> Remove entry from `.fpm/workspace.ftd`
+- Remove entry from `.fpm/workspace.ftd`
 
 
 
@@ -295,9 +305,9 @@ modify the file
 
 After sync:
 
-> Create new snapshot .history/index.v2.ftd
-> Create entry in .latest.ftd
-> Create entry in .history/history.ftd
+- Create new snapshot .history/index.v2.ftd
+- Create entry in .latest.ftd
+- Create entry in .history/history.ftd
 
 
 
