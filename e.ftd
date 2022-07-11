@@ -966,7 +966,7 @@ operation: delete
 -- ftd.column print-toc-item:
 fpm.toc-item toc:
 boolean is-first: false
-margin-left if not $is-first: 20
+margin-left if not $is-first: $fpm.space.space-3
 boolean show-actions: false
 boolean show-rename: false
 boolean show: false
@@ -1046,6 +1046,7 @@ id: rename-area
 --- ftd.row:
 width: fill
 id: switch-container
+padding-left if not $is-first: $fpm.space.space-3
 
 \--- ftd.row:
 if: $is-first
