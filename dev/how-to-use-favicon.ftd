@@ -1,0 +1,32 @@
+-- ft.page: How to Use Favicon
+
+-- ft.markdown:
+
+There are two ways by which you can use favicon:
+
+* Either pass the path to your favicon file as header under fpm.package in FPM.ftd.
+This favicon path should be relative to the root package folder.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.package: some-package-name
+favicon: path/to/your/favicon.*
+
+-- ft.markdown:
+
+* Or just put a favicon.* file in the root package folder which will be picked up by default.
+
+## Favicon.* conflict
+In case of multiple favicon.* files in the same package folder,
+then the favicon file will be selected in the priority order `ico > svg > png > jpg`.
+
+Refer this [`issue`](https://github.com/FifthTry/fpm/issues/246) for more details.
+
+
+
+
+
+
+
+
