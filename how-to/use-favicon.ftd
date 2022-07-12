@@ -23,11 +23,3 @@ fpm.package in FPM.ftd.
 
 In case of multiple favicon.* files in the same package folder,
 then the favicon file will be selected in the priority order `ico > svg > png > jpg`.
-
-
-
-
-
-
-
-
