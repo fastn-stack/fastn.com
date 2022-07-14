@@ -1,0 +1,288 @@
+-- ft.page: CR
+
+
+We have two states
+
+-- ft.h1: Server state
+
+The server state is stored inside the `.server-state` folder. It comprises all
+files' history and tracking information.
+
+-- ft.code:
+lang: ftd
+
+\-- record server-state:
+file-history list history:
+file-tracking list tracks:
+
+-- ft.markdown:
+
+History-related information is stored in the `.server-state/history.ftd` and
+track-related information is stored in the `server-state/tracks.ftd`
+
+
+
+
+
+-- ft.h2: History
+
+File history captures every modification to a file. It also included information
+about changes that happened due to merges, if an action happened to the “main branch”
+via merge from a CR, we store the CR where the change came from in the `src-cr` field.
+
+
+-- ft.code:
+lang: ftd
+
+\-- record file-history:
+caption filename:
+file-edit list history:
+
+\-- or-type file-edit:
+\--- added:
+caption or body message:
+integer timestamp:
+integer version:
+string author:
+option integer src-cr:
+
+\--- updated:
+caption or body message:
+integer timestamp:
+integer version:
+string author:
+option integer src-cr:
+
+\--- deleted:
+caption or body message:
+integer timestamp:
+integer version:
+string author:
+option integer src-cr:
+
+
+-- ft.markdown:
+
+Or we can have file-edit as a record
+
+
+-- ft.code:
+lang: ftd
+
+\-- record file-edit:
+caption or body message:
+integer timestamp:
+integer version:
+string author:
+option integer src-cr:
+string operation:
+
+-- ft.markdown:
+
+Actual content is stored in the file system based on
+`.server-state/<file-name-without-last-extension>.<version>.<extension>`.
+
+Also, the version number starts with 1 for every file, and is incremented by
+one for every change in that file. Delete also increments the version number.
+
+
+
+-- ft.h2: Tracks
+
+A file can track one or more files. Any file that is tracking another file has
+an entry in `server-state.track`, represented by file-tracking.
+
+
+-- ft.code:
+lang: ftd
+
+\-- record file-tracking:
+caption filename:
+tracking-info list tracks:
+
+
+-- ft.markdown:
+
+Every file that is being tracked is recorded using `tracking-info`.
+
+-- ft.code:
+lang: ftd
+
+\-- record tracking-info:
+caption filename:
+integer version:
+option integer self-version:
+
+
+-- ft.code: In `fpm.ftd`
+lang: ftd
+
+\-- file-tracking list tracker:
+
+-- ft.markdown:
+
+Say `a.ftd` is tracking `b.ftd`. We have some operations that mark `a.ftd` up
+to date with `b.ftd`. This can happen when we sync with remote, say if `a` was
+local and `b` was a remote version of the same file. This can happen when the
+author performs fpm mark-up-to-date action if `a` is tracking `b` in an ad-hoc
+fashion, or if `a` is a translation of `b`. This can also happen when a merge
+happens from CR, if `a` was the CR version of `b`, and was being merged into `b`.
+
+`version` represents the version of `b.ftd` , and `self-version` represents the
+version of `a.ftd`.
+
+
+
+-- ft.h1: Client state
+
+
+On the client, the state is largely two: workspace content and the unsynced
+tracking information.
+
+
+-- ft.code:
+lang: ftd
+
+\-- record client-state:
+workspace-entry list workspace:
+file-tracking list unsynced-tracks:
+
+\-- record workspace-entry:
+caption filename:
+optional boolean deleted:
+integer version:
+
+-- ft.markdown:
+
+Client state is stored in `.client-state` folder. Workspace information is
+stored in `.client-state/workspace.ftd` and unsynced changes are stored in
+`.client-state/unsynced.tracks.ftd`.
+
+
+-- ft.h1: Operations
+
+Given the current server and client state, a bunch of operations are there,
+which either print some output or update either the client or server state.
+
+
+-- ft.h2: `fpm clone`
+
+This command starts with a remote state and no client state, and fetches the
+client state and lays things out.
+
+It also stores the server state in `.server-state` folder. This folder contains
+`history.ftd`, `tracks.ftd` and `index.1.ftd` etc.
+
+
+-- ft.h2: `fpm start-tracking a.ftd --target b.ftd`
+
+With this command, `a.ftd` starts tracking `b.ftd`. In case of server or any new
+package, this creates entry in `.server-state/tracks.ftd`. In case of client,
+this commands creates the entry in `.client-state/tracks.ftd`
+
+In case, if the files (`a.ftd` and `b.ftd`) are not synced i.e. latest snapshot is
+not created or is not in sync with the workspace, this command does nothing,
+instead, it throws a warning asking to sync first. Let's say the `a.ftd` version is
+1 and the `b.ftd` version is 2 then the entry looks something like this.
+
+
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.tracker : a.ftd
+
+\-- tracks: b.ftd
+version: 2
+self-version: 1
+
+
+
+-- ft.h2: `fpm status`
+
+This shows the changes in local. Sync-related and track-related information
+
+
+
+-- ft.h2: `fpm sync`
+
+On the client, some files are updated, if there is a mergeable change on the server,
+along with their entries in the workspace file.
+
+On every sync, we also copy and update the server-state to the `.server-state` folder.
+
+
+-- ft.h2: `fpm create-cr --title <optional title> --description <optional description>`
+
+This command creates a new CR. In case, if the package is not a client (not a clone
+package) then this does nothing, rather gives a warning that this command is not
+supported. It achieves this in the following steps:
+
+- It calls the server/remote post API `create-cr/` with title and description,
+both are optional fields.
+- The server acquires the lock and reads the file `.server-state/cr`. This file contains
+the current CR number. It then increments the CR number by one and then releases the lock.
+- The server then creates a file `-/<cr-number>/about.ftd`. This file stores the title and
+description of the CR. In case the title is not specified, then the CR number becomes the title
+
+-- ft.code:
+lang: ftd
+
+\-- record cr-about-data:
+caption title:
+optional body description:
+
+-- ft.markdown:
+
+- Afterwards, the server returns the cr-number. (Probably also the file
+`-/<cr-number>/about.ftd` content. Not sure though).
+- On the client side, the file `-/<cr-number>/about.ftd` is created with
+data similar to the server.
+
+
+-- ft.h2: `fpm cr <cr-number> <operation> <file-name>`
+
+The operations available are `add` and `delete`
+
+-- ft.h3: `add`
+
+This operation adds a new file or existing file (with some modification) in CR
+(let’s say the CR number is 1).
+
+In case of adding a new file, let's say `foo.ftd`, just create a new file in a
+current file system, do some modification if needed and then run this command
+`fpm cr 1 add foo.ftd`.
+
+Similarly, in the case of adding an existing file with some modification in CR,
+just do the modification and run the command.
+
+On running this command, it first checks if the file is different from the latest
+version in the history or if it’s a new file altogether, else this fails with
+a warning that no changes detected. It then clones the file from the current file
+system to the `-/<cr-number>/<file-name>`.
+
+(Should it also creates the entry in `.client-state/-/<cr-number>/workspace.ftd` file??)
+
+
+-- ft.h3: `delete`
+
+This operation deletes the existing file in the CR. It first checks if the file exists
+in the latest history else this fails with the warning that the file doesn’t exist.
+It creates an entry in the `.client-state/-/<cr-number>/workspace.ftd`.
+
+-- ft.code:
+lang: ftd
+
+\-- workspace-entry list entry:
+
+\-- entry: <file-name>
+deleted: true
+version: 1
+
+
+
+
+
+
+
+
