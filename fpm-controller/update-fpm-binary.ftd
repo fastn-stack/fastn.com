@@ -1,0 +1,16 @@
+-- ft.page: How to update `fpm` binary on ec2 instance
+
+-- ft.h2: `ssh` To `fpm` Instance
+
+-- ft.code:
+lang: sh
+
+ssh -i <private certificate path> <ec2-user>@<machine-ip>
+
+-- ft.h2: On Virtual Machine Restart `fpm-app`
+
+-- ft.code:
+lang: sh
+
+sudo systemctl restart fpm-app
+journalctl -u fpm-app -ef # for log check of fpm-app
