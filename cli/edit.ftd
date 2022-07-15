@@ -1,0 +1,17 @@
+-- ft.page: `fpm edit <file-name> --cr <cr-number>`
+
+This command works with cr number only, else it fails
+This would create entry in workspace.ftd and only the files added would be
+consider for sync.
+
+This command will clone the file in cr directory `-/<cr-number>` and also
+start tracking with the latest version.
+
+
+-- ft.h1:  Error handling
+
+If the file doesn't exist in the latest history then throw error
+
+
+
+

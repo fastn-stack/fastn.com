@@ -1,0 +1,166 @@
+-- ft.page: How CR Works
+
+-- ft.h1: Reserved CR IDs
+
+Each clone has a unique id, stored in `.client-state/clone-id.ftd`. The id is
+created by the server.
+
+On clone we create `.client-state/reserved-crs.ftd`, and store the 5 CR numbers
+we get from server.
+
+Server will have `.server-state/reserved-crs.ftd` which will mention the CRs
+handed out to each "clone".
+
+-- ft.code: `.server-state/reserved-crs.ftd`
+lang: ftd
+
+\-- client: <client-id>
+reserved-cr: 1
+reserved-cr: 2
+reserved-cr: 3
+reserved-cr: 4
+reserved-cr: 5
+
+\-- client: <client-id>
+reserved-cr: 6
+reserved-cr: 7
+reserved-cr: 8
+reserved-cr: 9
+reserved-cr: 10
+
+-- ft.markdown:
+
+On every sync, we replenish our reserved CR pool.
+
+-- ft.h1: Create A New CR
+
+`fpm create-cr` can be used to create a CR. It will invoke `$EDITOR` with:
+
+-- ft.code:
+lang: ftd
+
+\-- cr.title: <emtpy>
+id: 1
+
+<description>
+
+-- ft.markdown:
+
+We find the smallest CR number from reserved CR, and create
+`/-/<cr-id>/-/about.ftd`.
+
+On next `fpm sync`, the `about.ftd` file would be synced and everyone will have
+access to it. Server will also replenish the reserved cr pool as we have
+consumed one CR number from there.
+
+-- ft.h1: Add a new file in CR
+
+`fpm cr <cr-number> --add <filename>`
+
+To add a new file, create the file `/-/<cr-id>/<file.ftd>`, and let user edit
+the file.
+
+On sync the file would be synced. From sync's perspective this is just a normal
+file. Before sync `workspace.ftd` will not have a version number for this file,
+and post sync it will.
+
+-- ft.h1: Edit an existing file in CR
+
+`fpm cr <cr-number> --add <filename>`
+
+If we want to edit `foo.ftd` in CR 1, we have to create `-/1/foo.ftd` and make
+it [start tracking](/dev/track/) `foo.ftd`.
+
+On the sync the two files will be synced with server. One every update server
+will update the `self-version` in the `.track/-/1/foo.ftd`.
+
+-- ft.h1: Editing a file both on client and server
+
+Say you started editing the file, but someone else also started editing the
+file at the same time and their sync landed first. If we handle this as regular
+conflict (both sides added a file) we ask end users to do a lot. We can make
+users life better by implementing a special case for this scenario, and use the
+smaller version number from both tracking files, and do a three way sync. If the
+sync succeeds there is no conflict.
+
+-- ft.h1: Delete a file in CR
+
+`fpm rm <filename> --cr <cr-number>`
+
+We will have a file called `/-/1/-/deleted.ftd` which stores all the files and
+their versions that were deleted by CR number 1.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.deleted: file/name.ftd
+version: v1
+
+-- ft.markdown:
+
+This file gets synced with server as normal file.
+
+-- ft.h1: Detect conflict in CR
+
+We can detect if a file `/-/1/foo.ftd` in CR 1 is conflicted with corresponding
+`foo.ftd` in main by looking at `.track/-/1/foo.ftd.track` to get the version
+number, and finding the content of that version of `foo.ftd` from
+`.server-state/foo.<version>.ftd`, and using it as "base", and content of
+`foo.ftd` as "theirs" and content of `/-/1/foo.ftd` as ours and do three way
+merge.
+
+If `/-/1/foo.ftd` does not exist, we check for `/-/1/-/deleted.ftd`, and see if
+the version for `foo.ftd` in that file is different than the latest version of
+`foo.ftd`.
+
+-- ft.h1: Merge changes in main to CR
+
+`fpm merge --src=main --dest=1 foo.ftd` # --src=main is default, if no
+file/folder name, merge all
+
+
+Merge only happens on server for now
+
+We perform the three way merge as described in  previous section. We use content
+of `foo.ftd` as "theirs" and content of `/-/1/foo.ftd` as "ours". If there is
+no conflict we update `/-/1/foo.ftd` with the merged content, and update the
+tracking information corresponding to `/-/1/foo.ftd` against `foo.ftd` (store
+the version of `foo.ftd` we just merged in `.track/-/1/foo.ftd`.
+
+-- ft.h1: Merge CR changes to main
+
+
+`fpm merge --src=1 --dest=main foo.ftd`
+
+Merge only happens on server for now
+
+We perform the three way merge as described in previous section. We use content
+of `foo.ftd` as "ours" and content of `/-/1/foo.ftd` as "theirs". If there is
+no conflict we update `foo.ftd` with the merged content, delete `/-/1/foo.ftd`,
+and `.track/-/1/foo.ftd` and increment the version number of all three files in
+`history.ftd`.
+
+-- ft.h1: Resolve conflict in CR when merging from main Or from CR into main
+
+In both these scenarios, we will create a temporary file with conflict markers
+as described in previous two steps and launch `$EDITOR`, and once user has
+resolved conflict we will do what is described in previous two steps.
+
+-- ft.h1: Close a CR
+
+To close a CR we update the `about.ftd` and set `status: closed`.
+
+`fpm close-cr <cr-number>`
+
+This sets the `close` flag in `-/<cr-number>/-/about.ftd`.
+
+
+-- ft.h1: Update CR About
+
+
+-- ft.h1: `fpm status --cr=1`
+-- ft.h1: `fpm status` (sync status)
+-- ft.h1: `fpm status --versions`
+-- ft.h1: `fpm status --translation`
+
+

@@ -1,0 +1,16 @@
+-- ft.page: `fpm rm <file-name>`
+
+
+This would create entry in workspace.ftd and this file is consider for sync
+
+-- ft.h1: `fpm rm <file-name> --cr <cr-number>`
+
+This would add an entry in `-/<cr-number>/-/delete.ftd`
+
+-- ft.h1: Error Handling
+
+If the file doesn't exist in the latest history then throw error
+
+
+
+

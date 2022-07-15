@@ -1,0 +1,54 @@
+-- ft.page: How track works
+
+Say `a.ftd` is tracking `b.ftd`. We have some operations that mark `a.ftd` up
+to date with `b.ftd`. This can happen when the author performs fpm
+mark-up-to-date action if `a` is tracking `b` in an ad-hoc fashion, or if `a` is
+a translation of `b`. This can also happen when a merge happens from CR, if `a`
+was the CR version of `b`, and was being merged into `b`.
+
+`version` represents the version of `b.ftd` , and `self-version` represents the
+version of `a.ftd`.
+
+Every file that is tracking something has a corresponding file:
+`.tracks/<filename>.track`, which contains a list of `tracking-info`.
+
+-- ft.code:
+lang: ftd
+
+\-- record tracking-info:
+caption filename:
+integer version:
+option integer self-version:
+
+-- ft.markdown:
+
+Sample track file:
+
+-- ft.code: `.tracks/a.ftd.track`
+lang: ftd
+
+\-- import: fpm
+\-- fpm.tracks: b.ftd
+version: 2
+self-version: 1
+
+-- ft.h1: To Start Tracking A File
+
+Tracking is initialised by creating a `.tracks/<filename>.track` file.
+
+`self-version` may be missing if the file is being added and tracked at the
+same time.
+
+The job of `fpm sync` is to also populate the missing `self-version` in every
+`.track` file on successfully syncing the corresponding file. This will be done
+by server.
+
+If `a.ftd` wants to track `b.ftd`, `b.ftd` must be first synced with the server
+else we do not have version number.
+
+`fpm start-tracking a.ftd --target b.ftd`
+
+
+-- ft.h1: `fpm stop-tracking a.ftd --target b.ftd`
+
+-- ft.h1: `fpm mark-up-to-date a.ftd --target b.ftd`

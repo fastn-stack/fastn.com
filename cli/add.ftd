@@ -1,0 +1,19 @@
+-- ft.page: `fpm add <file-name>`
+
+
+This would create entry in workspace.ftd and only the files added would be
+consider for sync.
+
+-- ft.h1: `fpm add <file-name> --cr <cr-number>`
+
+This command will create a file in cr `-/<cr-number>/<file-name>`
+
+-- ft.h1:  Error handling
+
+Adding a file that exists in latest history would suggest to use `fpm edit`
+instead.
+
+
+
+
+
