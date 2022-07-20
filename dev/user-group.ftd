@@ -65,7 +65,7 @@ lang: ftd
 \-- fpm.user-group: FifthTry People
 id: fifthtry-people
 import: amitu.com/fifthtry-people
-except: foo@bar.com
+-email: foo@bar.com
 email: gvr@gmail.com
 
 -- ft.markdown:
