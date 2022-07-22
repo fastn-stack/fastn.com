@@ -64,11 +64,12 @@ lang: ftd
 
 \-- fpm.user-group: FifthTry People
 id: fifthtry-people
-import: amitu.com/fifthtry-people
+group: amitu.com/fifthtry-people
 -email: foo@bar.com
 email: gvr@gmail.com
+github: abrarnitk
 
 -- ft.markdown:
 
-This will combile all `imports` and other group identities, but `except` ones
+This will combile all `group` and other group identities, but `except` ones
 will be explicitly removed from the combined set.
