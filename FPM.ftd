@@ -91,8 +91,10 @@ implements: fifthtry.github.io/theme
     url: /processors/belongs-to/
   - `$processor$: get-identities`
     url: /processors/get-identities/
-  - `$processor$: get-groups`
-    url: /processors/get-groups/
+  - `$processor$: user-groups`
+    url: /processors/user-groups/
+  - `$processor$: user-group-by-id`
+    url: /processors/user-group-by-id/
   - `import: fpm`
     url: /fpm-vars/
 

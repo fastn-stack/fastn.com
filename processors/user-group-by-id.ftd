@@ -1,0 +1,27 @@
+-- ft.page: `user-group-by-id` processor
+
+`user-group-by-id` can be used to find the [group](/dev/user-group) by `id`.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.user-group-compat group:
+$processor$: user-group-by-id
+id: readers-group
+
+-- fpm.markdown:
+
+This will initialize `group` which having `id` `readers-group` in `FPM.ftd`
+
+-- ft.code: `fpm.user-group-compat` type
+lang: ftd
+
+\-- record user-group-compat:
+caption id:
+optional string title:
+optional string description:
+key-value-data list group-members:
+
+\-- record key-value-data:
+string key:
+string value:
