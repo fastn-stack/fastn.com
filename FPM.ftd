@@ -2,6 +2,7 @@
 
 -- fpm.package: fpm.dev
 zip: github.com/fifthtry/fpm.dev/archive/refs/heads/main.zip
+base: https://raw.githubusercontent.com/fifthtry/fpm.dev/main
 language: English
 translation: hi.fpm.dev
 
@@ -10,16 +11,15 @@ implements: fifthtry.github.io/theme
 
 -- fpm.dependency: fifthtry.github.io/product-switcher as ps
 -- fpm.dependency: fifthtry.github.io/fifthtry-brand-switcher as fbs
-
+-- fpm.dependency: fifthtry.github.io/bling
 -- fpm.dependency: fifthtry.github.io/color-doc as cd
-
-
+-- fpm.dependency: fifthtry.github.io/admonitions
+-- fpm.dependency: fifthtry.github.io/roboto-mono as mono
 
 
 -- fpm.auto-import: ft
 -- fpm.auto-import: fpm.dev/FPM/config
 -- fpm.auto-import: fpm
-
 
 
 -- fpm.sitemap:
@@ -42,19 +42,24 @@ implements: fifthtry.github.io/theme
   - Create new fpm project on github: /author/create-on-github/
 - How to install fpm on local machine: /how-to/install/
 - Build fpm project locally: /author/build-project/
+- Featured Components: /featured/
 - How To:
   - Install `fpm`: /how-to/install/
   - Update `fpm`: /how-to/update/
   - Get started with Github pages: /how-to/get-started-github-pages/
   - Get started with Vercel: /how-to/get-started-vercel/
+  - Use Favicon: /favicon/
 - `fpm` Usage: /usage/
+  - `fpm start-project`: /start-project/
   - `fpm build`: /build/
   - `fpm sync`: /sync/
   - `fpm status`: /status/
   - `fpm diff`: /diff/
   - `fpm update`: /update/
   - `fpm serve`: /serve/
-
+  - `fpm add`: /cli/add/
+  - `fpm rm`: /cli/rm/
+- How to use Favicon: /favicon/
 
 
 
@@ -97,6 +102,9 @@ implements: fifthtry.github.io/theme
     url: /processors/user-group-by-id/
   - `import: fpm`
     url: /fpm-vars/
+  - Foreign Variables: /theme/foreign-variables/
+  - `$processor$: full-sitemap`
+    url: /full-sitemap/
 
 
 # Development: /journal/
@@ -107,6 +115,7 @@ implements: fifthtry.github.io/theme
 - Journal: /journal/
 - Contribution Guide: /dev/contribute/
 - How Versioning Works: /dev/versioning/
+- How Sync Works: /dev/sync/
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
@@ -116,7 +125,17 @@ implements: fifthtry.github.io/theme
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
-
+- Sitemap:
+  - `serve`: Serve FTD Files
+    url: /sitemap/serve/
+  - `static`: Serve Static Files
+    url: /sitemap/static/
+  - `favicon.ico`: /sitemap/favicon/
+  - `sync` API: /sitemap/sync/
+  - `view-src` API: /sitemap/view-src/
+  - `edit` API: /sitemap/edit/
+  - `editor-sync` API: /sitemap/editor-sync/
+  - `clone` API: /sitemap/clone/
 
 ## Using `fpm` Crate: crate/
 
@@ -146,7 +165,7 @@ implements: fifthtry.github.io/theme
   - `ftd`: /crate/deps/ftd/
   - `fbt-lib`: /crate/deps/fbt-lib/
   - `camino`: /crate/deps/camino/
-
+  - `infer`: /crate/deps/infer/
 
 /-- fpm.toc-item list author-section:
 
