@@ -22,6 +22,18 @@ implements: fifthtry.github.io/theme
 -- fpm.auto-import: fpm
 
 
+-- fpm.user-group readers: fpm_readers
+email: abrark@fifthtry.com
+email: amitu@ffithtry.com
+email: arpita@ffithtry.com
+
+
+-- fpm.user-group writers: fpm_writers
+email: abrark@fifthtry.com
+email: amitu@ffithtry.com
+email: arpita@ffithtry.com
+
+
 -- fpm.sitemap:
 
 # Home: /
