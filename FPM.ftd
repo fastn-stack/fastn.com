@@ -114,7 +114,7 @@ email: arpita@fifthtry.com
   - `$processor$: user-groups`
     url: processors/user-groups/
   - `$processor$: user-group-by-id`
-    url: processors/user-groups/
+    url: processors/user-group-by-id/
 
 
 # Development: /journal/
