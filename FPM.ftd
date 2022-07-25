@@ -22,16 +22,16 @@ implements: fifthtry.github.io/theme
 -- fpm.auto-import: fpm
 
 
--- fpm.user-group readers: fpm_readers
+-- fpm.user-group: fpm-readers
 email: abrark@fifthtry.com
 email: amitu@ffithtry.com
 email: arpita@ffithtry.com
 
 
--- fpm.user-group writers: fpm_writers
+-- fpm.user-group: fpm-writers
 email: abrark@fifthtry.com
-email: amitu@ffithtry.com
-email: arpita@ffithtry.com
+email: amitu@fifthtry.com
+email: arpita@fifthtry.com
 
 
 -- fpm.sitemap:
@@ -94,6 +94,8 @@ email: arpita@ffithtry.com
 - How to use Google Font: theme/google-font-how-to-use/
 - FPM Sitemap: sitemap/
 - FTD Host Features: /ftd-host/
+  - `import: fpm`
+    url: /theme/fpm/
   - `$processor$: http`
     url: /http/
   - `$processor$: toc`
@@ -108,7 +110,11 @@ email: arpita@ffithtry.com
     url: /fpm-vars/
   - Foreign Variables: /theme/foreign-variables/
   - `$processor$: full-sitemap`
-    url: /full-sitemap/
+    url: /processors/full-sitemap/
+  - `$processor$: user-groups`
+    url: processors/user-groups/
+  - `$processor$: user-group-by-id`
+    url: processors/user-groups/
 
 
 # Development: /journal/
@@ -123,6 +129,8 @@ email: arpita@ffithtry.com
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
+- What Is `user-identity`?: /dev/user-identity/
+- What Is `user-group`?: /dev/user-group/
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
