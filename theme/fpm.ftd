@@ -8,8 +8,8 @@ This file contain information about what all things are present in `fpm`
 -- ft.code:
 lang: ftd
 
-\; Need to think of a type like object
--- record user-group-data:
+\; Need to think of a type like object, make keys dynamic
+\-- record user-group-data:
 caption id:
 optional caption title:
 optional body description:

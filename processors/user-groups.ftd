@@ -14,15 +14,5 @@ $processor$: user-groups
 This will initialise the list `groups` with the all the groups which are
 present in current FPM package.
 
--- ft.code: `fpm.user-group-compat` type
-lang: ftd
 
-\-- record user-group-compat:
-caption id:
-optional string title:
-optional string description:
-key-value-data list group-members:
-
-\-- record key-value-data:
-string key:
-string value:
+Check type [user-group-compat](/theme/fpm/)
