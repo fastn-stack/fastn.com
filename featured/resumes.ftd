@@ -1,5 +1,5 @@
 -- import: fpm.dev/assets
--- import: fpm.dev/featured/featured as ft-ui
+-- import: fpm.dev/featured as ft-ui
 
 -- ft.page: Resumes
 
@@ -29,7 +29,7 @@ licence-url: https://github.com/FifthTry/resume-caffeine/blob/main/LICENSE
 github-url: https://github.com/FifthTry/resume-caffeine/
 
 `fifthtry.github.io/resume-caffeine` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site/`. You can change color-scheme OR site theme using
+of `fifthtry.github.io/doc-site`. You can change color-scheme OR site theme using
 it. ex. [Site themes](/featured/doc-site/), [Color Schemes](/featured/color-cs).
 
 
@@ -38,9 +38,10 @@ template-url: http://fifthtry.github.io/resume-paper/
 screenshot: $assets.files.static.paper.png
 licence-url: https://github.com/FifthTry/resume-paper/blob/main/LICENSE
 github-url: https://github.com/FifthTry/resume-paper/
+is-last: true
 
 `fifthtry.github.io/resume-paper` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site/`. You can change color-scheme OR site theme using
+of `fifthtry.github.io/doc-site`. You can change color-scheme OR site theme using
 it. ex. [Site themes](/featured/doc-site/), [Color Schemes](/featured/color-cs).
 
 
@@ -49,8 +50,7 @@ template-url: http://fifthtry.github.io/resume-elegant/
 screenshot: $assets.files.static.elegant.png
 licence-url: https://github.com/FifthTry/resume-elegant/blob/main/LICENSE
 github-url: https://github.com/FifthTry/resume-elegant/
-is-last: true
 
 `fifthtry.github.io/resume-elegant` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site/`. You can change color-scheme OR site theme using
+of `fifthtry.github.io/doc-site`. You can change color-scheme OR site theme using
 it. ex. [Site themes](/featured/doc-site/), [Color Schemes](/featured/color-cs).

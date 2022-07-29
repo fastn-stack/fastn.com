@@ -1,11 +1,5 @@
 -- import: fpm.dev/assets
 
--- boolean show-grid: true
--- boolean show-list: false
-
-
-
-
 
 -- ft.page: Featured components
 
@@ -22,22 +16,18 @@ These components can be used inside your personal web sites or organizational st
 web sites developed using `FPM` package.
 
 -- grid-view: Documentation Sites:
-if: $show-grid
 templates: $doc-sites
 more-link: /featured/doc-sites/
 
 -- grid-view: Resumes:
-if: $show-grid
 templates: $resumes
 more-link: /featured/resumes/
 
 -- grid-view: Component Libraries
-if: $show-grid
 templates: $bling
 more-link: /featured/components-library/
 
 -- grid-view: Color Schemes
-if: $show-grid
 templates: $schemes
 more-link: /featured/color-cs/
 
@@ -103,7 +93,6 @@ color if $MOUSE-IN: $fpm.color.main.cta-primary.base
 if: not $ft.is-mobile
 width: fill
 wrap: true
-spacing: 46
 
 --- grid-of-items: $obj.title
 $loop$: $templates as $obj
@@ -154,17 +143,19 @@ width if not $ft.is-mobile: percent 46
 margin-top: $fpm.space.space-6
 margin-bottom: $fpm.space.space-6
 width if $ft.is-mobile: fill
+margin-right: 46
+margin-right if $is-last: 0
+
 
 --- ftd.column:
 width: fill
-margin-left if $is-last: -44
-margin-left if $ft.is-mobile: 0
 id: parent
 spacing: 16
 
 --- ftd.row:
 id: main-wrapper
 width: fill
+
 
 --- ftd.row:
 width: fill
@@ -293,7 +284,7 @@ screenshot: $assets.files.static.doc-site.png
 licence-url: https://github.com/FifthTry/doc-site/blob/main/LICENSE
 github-url: https://github.com/FifthTry/doc-site/
 
-`fifthtry.github.io/doc-site/` is a grey color theme. Most of our websites are
+`fifthtry.github.io/doc-site` is a grey color theme. Most of our websites are
 using `doc-site` as base theme. Click on image OR package name to view it's working 
 demo. 
 
@@ -302,6 +293,7 @@ template-url: https://fifthtry.github.io/Blue-Sapphire-Template/
 screenshot: $assets.files.static.blue-sapphire.png
 licence-url: https://github.com/FifthTry/Blue-Sapphire-Template/blob/main/LICENSE
 github-url: https://fifthtry.github.io/Blue-Sapphire-Template/
+is-last: true
 
 `fifthtry.github.io/Blue-Sapphire-Template` is based on Blue Saffire Theme. This is 
 ready to use template for your web packages. Click on image OR package name to see
@@ -325,16 +317,17 @@ licence-url: https://github.com/FifthTry/resume-caffeine/blob/main/LICENSE
 github-url: https://github.com/FifthTry/resume-caffeine/
 
 `fifthtry.github.io/resume-caffeine` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site/`
+of `fifthtry.github.io/doc-site`
 
 -- resumes: Paper
 template-url: http://fifthtry.github.io/resume-paper/
 screenshot: $assets.files.static.paper.png
 licence-url: https://github.com/FifthTry/resume-paper/blob/main/LICENSE
 github-url: https://github.com/FifthTry/resume-paper/
+is-last: true
 
 `fifthtry.github.io/resume-paper` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site/`
+of `fifthtry.github.io/doc-site`
 
 
 
@@ -348,7 +341,7 @@ of `fifthtry.github.io/doc-site/`
 
 -- template list schemes:
 
--- schemes: Color Doc
+-- schemes: FPM Default
 template-url: https://fifthtry.github.io/color-doc/
 screenshot: $assets.files.static.color-doc.png
 licence-url: https://github.com/FifthTry/color-doc/blob/main/LICENSE
@@ -357,13 +350,15 @@ github-url: https://github.com/FifthTry/color-doc/
 `fifthtry.github.io/color-doc` is a grey color scheme. Our web sites are using
 this color scheme. For ex. [`fpm.dev`](https://fpm.dev/), [`ftd.dev`](https://ftd.dev/) etc.
 
--- schemes: Forest CS
-template-url: https://fifthtry.github.io/forest-cs/
-screenshot: $assets.files.static.forest-cs.png
-licence-url: https://github.com/FifthTry/forest-cs/blob/main/LICENSE
-github-url: https://github.com/FifthTry/forest-cs/
+-- schemes: Night Moon CS
+template-url: https://fifthtry.github.io/night-moon/
+screenshot: $assets.files.static.night-moon.png
+licence-url: https://github.com/FifthTry/night-moon/blob/main/LICENSE
+github-url: https://github.com/FifthTry/night-moon/
+is-last: true
 
-`fifthtry.github.io/forest-cs` is a forest green color scheme. See forest-cs color scheme we using on our [`df.fifthtry.com`](https://df.fifthtry.com/)
+`fifthtry.github.io/night-moon` is a blue(night moon) color scheme. See its 
+documentation to use it. [Night Moon](https://fifthtry.github.io/night-moon/)
 
 
 
@@ -391,6 +386,7 @@ template-url: https://fifthtry.github.io/slideshow/
 screenshot: $assets.files.static.slideshow-demo.png
 licence-url: https://github.com/FifthTry/slideshow/blob/main/LICENSE
 github-url: https://github.com/FifthTry/slideshow/
+is-last: true
 
 `fifthtry.github.io/slideshow` is a image gallery component which can be used 
 inside `FTD` web packages.

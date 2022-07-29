@@ -1,5 +1,5 @@
 -- import: fpm.dev/assets
--- import: fpm.dev/featured/featured as ft-ui
+-- import: fpm.dev/featured as ft-ui
 
 
 -- boolean show-grid: true
@@ -33,7 +33,7 @@ screenshot: $assets.files.static.doc-site.png
 licence-url: https://github.com/FifthTry/doc-site/blob/main/LICENSE
 github-url: https://github.com/FifthTry/doc-site/
 
-`fifthtry.github.io/doc-site/` is a grey color theme. Most of our websites are
+`fifthtry.github.io/doc-site` is a grey color theme. Most of our websites are
 using `doc-site` as base theme. Click on image OR package name to view it's working 
 demo. 
 
@@ -43,6 +43,7 @@ template-url: https://fifthtry.github.io/Blue-Sapphire-Template/
 screenshot: $assets.files.static.blue-sapphire.png
 licence-url: https://github.com/FifthTry/Blue-Sapphire-Template/blob/main/LICENSE
 github-url: https://fifthtry.github.io/Blue-Sapphire-Template/
+is-last: true
 
 `fifthtry.github.io/Blue-Sapphire-Template` is based on Blue Saffire Theme. This is 
 ready to use template for your web packages. Click on image OR package name to see
@@ -53,7 +54,6 @@ template-url: https://fifthtry.github.io/Forest-Template/
 screenshot: $assets.files.static.forest.png
 licence-url: https://github.com/FifthTry/Forest-Template/blob/master/LICENSE
 github-url: https://github.com/FifthTry/Forest-Template/
-is-last: true
 
 `fifthtry.github.io/Forest-Template` is based on Forest Theme. This is 
 ready to use template for your web packages. Click on image OR package name to see

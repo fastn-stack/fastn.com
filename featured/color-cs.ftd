@@ -1,5 +1,5 @@
 -- import: fpm.dev/assets
--- import: fpm.dev/featured/featured as ft-ui
+-- import: fpm.dev/featured as ft-ui
 
 
 
@@ -26,7 +26,7 @@ templates: $schemes
 
 -- ft-ui.template list schemes:
 
--- schemes: Color Doc
+-- schemes: FPM Default CS
 template-url: https://fifthtry.github.io/color-doc/
 screenshot: $assets.files.static.color-doc.png
 licence-url: https://github.com/FifthTry/color-doc/blob/main/LICENSE
@@ -40,16 +40,16 @@ template-url: https://fifthtry.github.io/forest-cs/
 screenshot: $assets.files.static.forest-cs.png
 licence-url: https://github.com/FifthTry/forest-cs/blob/main/LICENSE
 github-url: https://github.com/FifthTry/forest-cs/
+is-last: true
 
 `fifthtry.github.io/forest-cs` is a forest green color scheme. See forest-cs color scheme we using on our [`df.fifthtry.com`](https://df.fifthtry.com/)
 
 
--- schemes: Night Moon
+-- schemes: Night Moon CS
 template-url: https://fifthtry.github.io/night-moon/
 screenshot: $assets.files.static.night-moon.png
 licence-url: https://github.com/FifthTry/night-moon/blob/main/LICENSE
 github-url: https://github.com/FifthTry/night-moon/
-is-last: true
 
 `fifthtry.github.io/night-moon` is a blue(night moon) color scheme. See its 
 documentation to use it. [Night Moon](https://fifthtry.github.io/night-moon/)
