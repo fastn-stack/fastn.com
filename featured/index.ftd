@@ -341,7 +341,7 @@ of `fifthtry.github.io/doc-site`
 
 -- template list schemes:
 
--- schemes: FPM Default
+-- schemes: FPM Default CS
 template-url: https://fifthtry.github.io/color-doc/
 screenshot: $assets.files.static.color-doc.png
 licence-url: https://github.com/FifthTry/color-doc/blob/main/LICENSE
