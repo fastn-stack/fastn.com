@@ -9,9 +9,9 @@ is `/x/y/`. If request is `/foo/ftd/` so It will return None.
 -- ft.code:
 lang: ftd
 
--- ftd.text: Document Suffix
+\-- ftd.text: Document Suffix
 
--- string document-suffix:
+\-- optional string document-suffix:
 $processor$: document-suffix
 
--- ftd.text: $document-suffix
+\-- ftd.text: $document-suffix
