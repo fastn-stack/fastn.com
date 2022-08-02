@@ -3,7 +3,7 @@
 `document-suffix` processor is used to find suffix of a requested document.
 
 If request path is `/foo/ftd/-/x/y/` so It will return portion after `-` which
-is `/x/y/`.
+is `/x/y/`. If request is `/foo/ftd/` so It will return None.
 
 
 -- ft.code:
