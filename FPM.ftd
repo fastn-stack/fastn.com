@@ -123,6 +123,9 @@ email: arpita@fifthtry.com
     url: processors/document-readers/
   - `$processor$: document-writers`
     url: processors/document-writers/
+  - `$processor$: document-filename`
+    url: processors/document-filename/
+
 
 
 # Development: /journal/
