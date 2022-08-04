@@ -11,7 +11,7 @@ for current document.
 
 
 Also note current document is the "main document", the document requested
-over HTTP. If ``/foo/` is accessed, and foo.ftd imports `bar.ftd`, and in
+over HTTP. If `/foo/` is accessed, and foo.ftd imports `bar.ftd`, and in
 `bar.ftd` we use `document-id` processor, it will still return `/foo/`.
 
 
