@@ -1,0 +1,17 @@
+-- ft.page: `fpm::UserGroupCompat`
+
+`fpm::UserGroupCompat` is used in `ftd` for UI purpose, means it gets serialized
+into [fpm.user-group-compat](/theme/fpm/#user-group-compat).
+
+-- ft.code:
+lang: rs
+
+#[derive(Debug, serde::Serialize)]
+pub struct UserGroupCompat {
+    id: String,
+    title: Option<String>,
+    description: Option<String>,
+    // It will contain all group members, like group, email and -email, etc...
+    #[serde(rename = "group-members")]
+    group_members: Vec<fpm::library::full_sitemap::KeyValueData>,
+}
