@@ -29,15 +29,20 @@ All these are called user identities. Example identities:
 All these strings are now known as `user identity`.
 
 
--- ft.h1: Normal vs Special Identities
+-- ft.h1: Kinds Of Identities
 
 Some identities are `normal identities` and some identites are `special identities`.
+And some identies are `computed identities`.
+
+-- ft.h2: `normal identities`
 
 Identites that uniquely identifies individuals are `normal identities` and e.g. 
 `github: amitu` or `email: amitu@fifthtry.com`. Such identities we do not have to
 send to `get-identities api` since these are actual identities, and as long as
 you are logged in using email or github, you will always know the email address
 or github username.
+
+-- ft.h2: `special identity`
 
 But consider identity like `github-likes: FifthTry/fpm`. These are `special 
 identities` because requires an API call to do membership check. Only if the `FPM.ftd`
@@ -81,7 +86,7 @@ So if the current request is read we have to only ask Github if current user has
 liked `FifthTry/fpm` and need not ask Github if current user is member to 
 `FifthTry/devops` Github team.
 
--- ft.h2: Computed Identities
+-- ft.h2: `computed Identities`
 
 What about `email-domain: fifthtry.com`? `get-identity API` need not return this, 
 only returning `email: amitu@fifthtry.com` is suffecient to know that one also 
