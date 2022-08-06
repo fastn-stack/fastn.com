@@ -27,3 +27,15 @@ All these are called user identities. Example identities:
 `github: amitu`, `telegram: fifthtry`, `telegram-group: fossunited` and so on.
 
 All these strings are now known as `user identity`.
+
+
+-- ft.h1: Normal vs Special Identities
+
+Some identities are `normal identities` and some identites are `special identities`.
+
+Identites that uniquely identifies individuals are `normal identities` and eg. 
+`github: amitu` or `email: amitu@fifthtry.com`.
+
+`special identities` are those identities which requires an API call to do 
+membership check. 
+
