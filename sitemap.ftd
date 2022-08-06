@@ -559,3 +559,36 @@ site is only readable by `foo`.
 
 You can still specify access control at any node, and regular inheritance rules
 specified above will apply.
+
+-- ft.h1: How Is ACL Implemented
+
+For HTTP request get `doc-id` and `read`. Based on this find the groups using `get-readers` or
+`get-writers`. Given `these groups`, `total identities` (travese all group trees, and find all
+identities, remove the minus signs, and create a set of all identities). Pass `total identities`
+to `get-indentities API`, it returns `actual identities` for the current user.
+
+-- ft.code:
+lang: rs
+
+struct UserGroup {
+    identities: Vec<KeyValuePair>,
+    groups: Vec<UserGroup>,
+}
+
+fn belongs_to(group: UserGroup, actual_identities: Vec<UserIdentity>) -> Option<bool> {
+    for i in actual_identities {
+        for gi in group.identites {
+            if gi == i {
+                return Some(true)
+            }
+        }
+    }
+    
+    for g in group.groups {
+        if let Some(x) = belongs_to(g, actual_identities) {
+            return Some(x)
+        }
+    }
+    
+    return None
+}
