@@ -33,9 +33,58 @@ All these strings are now known as `user identity`.
 
 Some identities are `normal identities` and some identites are `special identities`.
 
-Identites that uniquely identifies individuals are `normal identities` and eg. 
-`github: amitu` or `email: amitu@fifthtry.com`.
+Identites that uniquely identifies individuals are `normal identities` and e.g. 
+`github: amitu` or `email: amitu@fifthtry.com`. Such identities we do not have to
+send to `get-identities api` since these are actual identities, and as long as
+you are logged in using email or github, you will always know the email address
+or github username.
 
-`special identities` are those identities which requires an API call to do 
-membership check. 
+But consider identity like `github-likes: FifthTry/fpm`. These are `special 
+identities` because requires an API call to do membership check. Only if the `FPM.ftd`
+file is mentioning `github-likes: FifthTry/fpm` should we ask Github if currently
+logged in user has liked `FifthTry/fpm` repo or not. `get-identity api` can not
+return a universe of all repositories I have liked (to get this data Github provides
+a paginated API, and even if we find all the thousands, it would be still wasteful
+work to fetch all thousand). Also we do not just have `github-likes`, but also 
+`github-sponsors` and `github-follows` etc etc, each of them with potentially huge
+responses. 
 
+So we have to pass `github-likes: FifthTry/fpm` to `get-identities API` so it can call 
+Github and ascertain if current user has liked `FifthTry/fpm` so far or not. For every
+identity that is actually needed, e.g. if we have to first check why are we calling
+`get-identities API`, are we calling the API because this is a read or write request?
+And for what URL? Based on the URL and if it is a read or write call, we can find out
+what identities are needed to decide if you have access. E.g. say if a. FPM.ftd sitemap
+is setup such that current URL requires `github-likes: FifthTry/fpm` for read access 
+(only people who have liked `FifthTry/fpm` can read this page) and 
+`github-team: FifthTry/deops` for write access (only people part of `FifthTry/deops`
+team on Github can edit this page). 
+
+-- ft.code: `FPM.ftd`
+lang: ftd
+
+\-- fpm.user-group: fpm-likers
+github-likes: FifthTry/fpm
+
+\-- fpm.user-group: fifthtry-devops
+github-teams: FifthTry/deops
+
+\-- fpm.sitemap:
+
+# Homepage: /
+readers: fpm-likers
+writers: fifthtry-devops
+
+-- ft.markdown:
+
+So if the current request is read we have to only ask Github if current user has 
+liked `FifthTry/fpm` and need not ask Github if current user is member to 
+`FifthTry/devops` Github team.
+
+-- ft.h2: Computed Identities
+
+What about `email-domain: fifthtry.com`? `get-identity API` need not return this, 
+only returning `email: amitu@fifthtry.com` is suffecient to know that one also 
+belongs to `email-domain: fifthtry.com`. `email-domain: fifthtry.com` is a derived 
+identity. `Computed identities` can be derived from `normal identities` without 
+any network calls etc, using pure computation.
