@@ -9,11 +9,19 @@ Following below practices will help you reduce, build errors and aviod code mess
 `.ftd` files.
 
 
-- Always keep space after `:` in each declaration. e.g. `-- ftd.text: `
-- Always keep 10 lines space between two `ftd` components.
-- Never repeat attributes in one component declaration. e.g. below:
+-- ft.h1: Space after `colon :`
 
--- code-block: Bad Practice
+Always keep space after `:` in each declaration. e.g. `-- ftd.text: `
+
+-- ft.h1: 10 lines space between 2 components 
+
+ Always keep 10 lines space between two `ftd` components.
+
+-- ft.h1: Never repeat attributes
+
+Never repeat attributes in one component declaration. e.g. below:
+
+--- code-block: Bad Practice
 
 \-- ftd.text: Some title here
 role: $fpm.type.fine-print
@@ -21,7 +29,7 @@ spacing: 4 <--
 color: $fpm.color.main.text
 spacing: 10 <--
 
--- code-block: Good Practice
+--- code-block: Good Practice
 
 \-- ftd.text: Some title here
 role: $fpm.type.fine-print
@@ -29,9 +37,9 @@ color: $fpm.color.main.text
 spacing: 10
 
 
--- ft.markdown:
+-- ft.h1: `ftd` variables first
 
-- always declare `ftd` variables first while creating new component. e.g. below
+Always declare `ftd` variables first while creating new component. e.g. below
 
 -- code-block: 
 
