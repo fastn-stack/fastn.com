@@ -9,16 +9,23 @@ lang: rs
 #[derive(Debug, Clone)]
 pub struct Package {
     pub name: String,
+    /// The `versioned` stores the boolean value storing of the fpm package is versioned or not
+    pub versioned: bool,
     pub translation_of: Box<Option<Package>>,
     pub translations: Vec<Package>,
     pub language: Option<String>,
     pub about: Option<String>,
     pub zip: Option<String>,
+    pub base: Option<String>,
     pub translation_status_summary: Option<fpm::translation::TranslationStatusSummary>,
     pub canonical_url: Option<String>,
+    /// `dependencies` keeps track of direct dependencies of a given package. This too should be
+    /// moved to `fpm::Package` to support recursive dependencies etc.
     pub dependencies: Vec<fpm::Dependency>,
     /// `auto_import` keeps track of the global auto imports in the package.
     pub auto_import: Vec<fpm::AutoImport>,
+    /// `fpm_path` contains the fpm package root. This value is found in `FPM.ftd` or
+    /// `FPM.manifest.ftd` file.
     pub fpm_path: Option<camino::Utf8PathBuf>,
     /// `ignored` keeps track of files that are to be ignored by `fpm build`, `fpm sync` etc.
     pub ignored_paths: Vec<String>,
@@ -26,9 +33,26 @@ pub struct Package {
     ///
     /// Note that this too is kind of bad design, we will move fonts to `fpm::Package` struct soon.
     pub fonts: Vec<fpm::Font>,
-
     pub import_auto_imports_from_original: bool,
-    pub sitemap: Option<fpm::sitemap::SitemapTemp>,
+
+    pub groups: std::collections::BTreeMap<String, crate::user_group::UserGroup>,
+
+    /// sitemap stores the structure of the package. The structure includes sections, subsections
+    /// and table of content (`toc`). This automatically converts the documents in package into the
+    /// corresponding to structure.
+    pub sitemap: Option<fpm::sitemap::Sitemap>,
+
+    /// sitemap stores the structure of the package. The structure includes sections, subsections
+    /// and table of content (`toc`). This automatically converts the documents in package into the
+    /// corresponding to structure.
+    pub sitemap_temp: Option<fpm::sitemap::SitemapTemp>,
+    /// Optional path for favicon icon to be used.
+    ///
+    /// By default if any file favicon.* is present in package and favicon is not specified
+    /// in FPM.ftd, that file will be used.
+    ///
+    /// If more than one favicon.* file is present, we will use them
+    /// in following priority: .ico > .svg > .png > .jpg.
     pub favicon: Option<String>,
 }
 
