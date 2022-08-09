@@ -21,7 +21,8 @@ Always keep space after `:` in each declaration. e.g. `-- ftd.text: `
 
 Never repeat attributes in one component declaration. e.g. below:
 
---- code-block: Bad Practice
+--- ft.code: Bad Practice
+lang: ftd
 
 \-- ftd.text: Some title here
 role: $fpm.type.fine-print
@@ -29,7 +30,8 @@ spacing: 4 <--
 color: $fpm.color.main.text
 spacing: 10 <--
 
---- code-block: Good Practice
+--- ft.code: Good Practice
+lang: ftd
 
 \-- ftd.text: Some title here
 role: $fpm.type.fine-print
@@ -41,7 +43,8 @@ spacing: 10
 
 Always declare `ftd` variables first while creating new component. e.g. below
 
--- code-block: 
+-- ft.code: 
+lang: ftd
 
 \-- ftd.column my-ftd-component:
 boolean show-bar: false
@@ -51,20 +54,3 @@ integer number:
 width: fill
 background-color: $fpm.color.main.background.base
 
-
-
-
-
-
-
-
-
--- ftd.column code-block:
-optional caption title:
-body body:
-width: fill
-
---- ft.code: $title
-lang: ftd
-
-$body
