@@ -46,6 +46,15 @@ django
 Response:
 
 
-Pass all the cookies to `get-identities` API
 
+
+FPM Auth Workflow
+   - Identities from fpm controller
+       Get Identities from sitemap by document
+       Get Identities from fpm controller
+   - Identities from request cookies
+   - Identities from cli parameter
+   Call function belongs to on them
+
+Pass all the cookies to `get-identities` API
 
