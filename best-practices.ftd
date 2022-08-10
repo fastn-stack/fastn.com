@@ -9,19 +9,16 @@ Following below practices will help you reduce, build errors and aviod code mess
 `.ftd` files.
 
 
--- ft.h1: Space after `colon :`
+-- rule: Keep space after `:` in each declaration. e.g. `-- ftd.text: `
 
-Always keep space after `:` in each declaration. e.g. `-- ftd.text: `
+-- rule: Always keep 10 lines space between two `ftd` components.
 
--- ft.h1: 10 lines space between 2 components 
+-- rule: Never repeat attributes in one component declaration
 
- Always keep 10 lines space between two `ftd` components.
+e.g. below:
 
--- ft.h1: Never repeat attributes
-
-Never repeat attributes in one component declaration. e.g. below:
-
---- code-block: Bad Practice
+--- ft.code: Bad Practice
+lang: ftd 
 
 \-- ftd.text: Some title here
 role: $fpm.type.fine-print
@@ -29,7 +26,8 @@ spacing: 4 <--
 color: $fpm.color.main.text
 spacing: 10 <--
 
---- code-block: Good Practice
+--- ft.code: Good Practice
+lang: ftd 
 
 \-- ftd.text: Some title here
 role: $fpm.type.fine-print
@@ -37,11 +35,12 @@ color: $fpm.color.main.text
 spacing: 10
 
 
--- ft.h1: `ftd` variables first
+-- rule: `ftd` variables first
 
 Always declare `ftd` variables first while creating new component. e.g. below
 
--- code-block: 
+--- ft.code:
+lang: ftd 
 
 \-- ftd.column my-ftd-component:
 boolean show-bar: false
@@ -59,12 +58,27 @@ background-color: $fpm.color.main.background.base
 
 
 
--- ftd.column code-block:
-optional caption title:
-body body:
+-- ftd.column rule:
+caption title:
+optional body body:
+width: fill
+append-at: inner
+padding-top: $fpm.space.space-3
+
+--- ftd.text:
+caption $title:
+text: $title
+region: title
+role: $fpm.type.heading-small
+color: $fpm.color.main.text-strong
+padding-bottom: $fpm.space.space-3
+
+--- ftd.column:
+id: inner
 width: fill
 
---- ft.code: $title
-lang: ftd
-
-$body
+--- ftd.text:
+if: $body is not null
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.text
