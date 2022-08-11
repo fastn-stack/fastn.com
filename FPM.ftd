@@ -54,27 +54,32 @@ email: arpita@fifthtry.com
   - Create new fpm project on github: /author/create-on-github/
 - How to install fpm on local machine: /how-to/install/
 - Build fpm project locally: /author/build-project/
-- Featured Components: /featured/featured/
+- Featured Components: /featured/
   - Documentation Sites: /featured/doc-sites/
   - Resumes: /featured/resumes/
   - Color Schemes: /featured/color-cs/
   - Component Libraries: /featured/components-library/
+  - Fonts: /featured/fonts/
 - How To:
   - Install `fpm`: /how-to/install/
   - Update `fpm`: /how-to/update/
   - Get started with Github pages: /how-to/get-started-github-pages/
   - Get started with Vercel: /how-to/get-started-vercel/
   - Use Favicon: /favicon/
+  - Custom Fonts: /how-to/custom-fonts/
+  - Create Font Package: /how-to/create-font-package/
 - `fpm` Usage: /usage/
   - `fpm start-project`: /start-project/
   - `fpm build`: /build/
-  - `fpm sync`: /sync/
+  - `fpm sync`: /cli/sync/
   - `fpm status`: /status/
   - `fpm diff`: /diff/
   - `fpm update`: /update/
   - `fpm serve`: /serve/
   - `fpm add`: /cli/add/
   - `fpm rm`: /cli/rm/
+  - `fpm resolve-conflict`: /cli/resolve-conflict/
+  - `fpm clone`: /cli/clone/
 - How to use Favicon: /favicon/
 
 
@@ -83,8 +88,8 @@ email: arpita@fifthtry.com
 
 
 # Themes Guide: themes/
-
 - About Themes: themes/
+- Best Practices: /best-practices/
 - Package Interface: package-interface/
 - Theme Config: theme/config/
 - Responsive Themes: theme/responsive/
@@ -95,7 +100,6 @@ email: arpita@fifthtry.com
 - FPM Typography: theme/type/
 - FPM Color: theme/color/
 - FPM Space: theme/space/
-- How to use Google Font: theme/google-font-how-to-use/
 - FPM Sitemap: sitemap/
 - FTD Host Features: /ftd-host/
 - Glossary: /glossary/
@@ -124,8 +128,8 @@ email: arpita@fifthtry.com
     url: /processors/document-readers/
   - `$processor$: document-writers`
     url: /processors/document-writers/
-  - `$processor$: document-filename`
-    url: /processors/document-filename/
+  - `$processor$: document-name`
+    url: /processors/document-name/
   - `$processor$: document-id`
     url: /processors/document-id/
   - `$processor$: document-full-id`
@@ -145,6 +149,7 @@ email: arpita@fifthtry.com
 - Contribution Guide: /dev/contribute/
 - How Versioning Works: /dev/versioning/
 - How Sync Works: /dev/sync/
+- Understanding FPM sync conflicts: /sync-conflict/
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
@@ -164,6 +169,8 @@ email: arpita@fifthtry.com
   - `edit` API: /sitemap/edit/
   - `editor-sync` API: /sitemap/editor-sync/
   - `clone` API: /sitemap/clone/
+- Glossary:
+  - syncglossary: /glossary/
 
 ## Using `fpm` Crate: crate/
 
