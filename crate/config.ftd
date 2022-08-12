@@ -18,7 +18,7 @@ pub struct Config {
     pub original_directory: camino::Utf8PathBuf,
     pub extra_data: serde_json::Map<String, serde_json::Value>,
     pub current_document: Option<String>,
-    pub all_packages: std::collections::BTreeMap<String, fpm::Package>,
+    pub all_packages: std::cell::RefCell<std::collections::BTreeMap<String, fpm::Package>>,
     pub downloaded_assets: std::collections::BTreeMap<String, String>,
 }
 
