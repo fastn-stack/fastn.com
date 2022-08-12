@@ -2,6 +2,7 @@
 
 `fpm::Package` struct keeps track of a single fpm package.
 
+[Source Code](https://github.com/FifthTry/fpm/blob/main/src/config.rs)
 
 -- ft.code:
 lang: rs

@@ -1,9 +1,14 @@
 -- ft.page: `fpm::Config`
 
-`fpm::Config` struct keeps track of configuration for a FPM package. In order
-to perform any operation on a package, this struct should be first created.
+`fpm::Config` struct keeps track of configuration for a FPM package that is
+shared with the entire program. It is constructed from the content of `FPM.ftd`
+file for the package. In order to perform any operation on a package,
+this struct should be first created.
 
-`fpm::Config::read()` can be used to construct `fpm::Config` struct.
+`Config` is created using `Config::read()` method, and should be constructed
+only once in the `main()` and passed everywhere.
+
+[Source Code](https://github.com/FifthTry/fpm/blob/main/src/config.rs)
 
 
 -- ft.code:
