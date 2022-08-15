@@ -1,11 +1,37 @@
--- ft.page: `fpm rm <file-name>`
+-- ft.page: `fpm rm`
 
 
-This would create entry in workspace.ftd and this file is consider for sync
+-- ft.h1: `fpm rm <file-name>`
+
+This would mark the file deleted in workspace.ftd.
+This would delete the file.
+
+-- ft.code: `.client-workspace/workspace.ftd`
+lang: ftd
+
+\-- fpm.client-workspace: <file-name>
+version: <remote-version>
+cr: <cr-number>
+deleted: true
 
 -- ft.h1: `fpm rm <file-name> --cr <cr-number>`
 
-This would add an entry in `-/<cr-number>/-/delete.ftd`
+This would add an entry in -/<cr-number>/-/delete.ftd
+
+-- ft.code: `-/<cr-number>/-/delete.ftd`
+lang: ftd
+
+\-- fpm.deleted: <file-name>
+version: <remote-version>
+
+
+-- ft.code: `.client-workspace/workspace.ftd`
+lang: ftd
+
+\-- fpm.client-workspace: -/<cr-number>/-/delete.ftd
+version: <remote-version>
+cr: <cr-number>
+
 
 -- ft.h1: Error Handling
 

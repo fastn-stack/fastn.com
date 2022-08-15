@@ -4,14 +4,24 @@
 This would create entry in workspace.ftd and only the files added would be
 consider for sync.
 
--- ft.h1: `fpm add <file-name> --cr <cr-number>`
+-- ft.h1: `fpm add -/<cr-number>/<file-name>`
 
-This command will create a file in cr `-/<cr-number>/<file-name>`
+This command should check that a file in cr `-/<cr-number>/<file-name>` exists.
+
+-- ft.code: `.client-workspace/workspace.ftd`
+lang: ftd
+
+\-- fpm.client-workspace: <file-name>
+cr: <cr-number>
+
 
 -- ft.h1:  Error handling
 
 Adding a file that exists in latest history would suggest to use `fpm edit`
 instead.
+
+
+
 
 
 

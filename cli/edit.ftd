@@ -4,12 +4,27 @@ This command works with cr number only, else it fails
 This would create entry in workspace.ftd and only the files added would be
 consider for sync.
 
-This command will clone the file in cr directory `-/<cr-number>` and also
+This command will copy the file in cr directory `-/<cr-number>` and also
 start tracking with the latest version.
+
+
+-- ft.code: `.client-workspace/workspace.ftd`
+lang: ftd
+
+\-- fpm.client-workspace: -/<cr-number>/<file-name>
+version: <remote-version>
+
+
+-- ft.code: `.tracks/-/<cr-number>/<file-name>`
+lang: ftd
+
+\-- fpm.tracks: <file-name>
+version: <remote-version>
 
 
 -- ft.h1:  Error handling
 
+If file is already in `-/<cr-number>` directory, throw error
 If the file doesn't exist in the latest history then throw error
 
 
