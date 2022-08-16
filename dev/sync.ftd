@@ -75,8 +75,37 @@ string operation:
 Actual content is stored in the file system based on
 `.server-state/<file-name-without-last-extension>.<version>.<extension>`.
 
-Also, the version number starts with 1 for every file, and is incremented by
-one for every change in that file. Delete also increments the version number.
+
+-- ft.h2: Global Versioning
+
+For a FPM project, there is a single version number that represents current state of
+the server. This number is incremented by one on every successful sync. 
+
+-- ft.h2: Consistent Read
+
+Since sync operation modifies multiple files in the package, if we do not take 
+care we can indavertantly read inconsistent state from file system. We have to 
+ensure reads are always consistent, even in the middle of a large sync.
+
+-- ft.h3: Locked `version-number`
+
+First we use global read-write lock mutex, with single writer, and multiple
+readers. Since fpm server is single server, in the server's memory there exists
+a variable called `version-number`, which is can be read by any number of threads
+but can be updated by only one thread. All fpm server's read operations take a
+read lock to read the `version-number`, and sync operation takes a write lock and
+updates `version-number`.
+
+Most important thing is that the `version-number` is only updated after successful
+sync operation, at the very end, after everything else has happened.
+
+-- ft.h3: Read From History
+
+Till the `version-number` has been updated, all reads read operations do not read
+from the "workspace" on the server, but from the history folder. If current version
+number is `v1`, and sync operation is going on, some `v2` files may exist in history
+folder. But the readers ignore any file with version greater than current value of
+`version-number`.
 
 
 
