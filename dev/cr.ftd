@@ -34,24 +34,46 @@ On every sync, we replenish our reserved CR pool.
 
 -- ft.h1: Create A New CR
 
-`fpm create-cr` can be used to create a CR. It will invoke `$EDITOR` with:
+`fpm create-cr "<title of CR>"` can be used to create a CR. 
 
--- ft.code:
-lang: ftd
-
-\-- cr.title: <emtpy>
-id: 1
-
-<description>
 
 -- ft.markdown:
 
 We find the smallest CR number from reserved CR, and create
-`/-/<cr-id>/-/about.ftd`.
+`/-/<cr-id>/-/meta.ftd`:
 
-On next `fpm sync`, the `about.ftd` file would be synced and everyone will have
+-- ft.code:
+lang: ftd
+
+\-- import: fpm
+
+\-- fpm.cr: <title>
+status: open
+
+-- ft.markdown:
+
+On next `fpm sync`, the `meta.ftd` file would be synced and everyone will have
 access to it. Server will also replenish the reserved cr pool as we have
 consumed one CR number from there.
+
+-- ft.h1: Edit CR Description
+
+The description of a CR is stored in `/-/<cr-id>/-/about.ftd`.
+
+`fpm cr <cr-number> edit` launched `$EDITOR` with the content of `about.ftd`.
+
+If the file does not exist it will be initialised with `FPM/default-cr-about.ftd` if
+present, else, `THEME/default-cr-about.ftd`.
+
+
+-- ft.h1: Edit CR Title
+
+`fpm cr <cr-number> edit-title` will launch `$EDITOR` with current title.
+
+Note: Only the first line would be used as CR title. Content before the first
+new line character is first line.
+
+
 
 -- ft.h1: Add a new file in CR
 
