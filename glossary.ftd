@@ -3,6 +3,10 @@
 An FPM Glossary
 
 
+-- ft.h2: Change Request
+
+Generate a request asking remote project to pull changes into main.
+
 -- ft.h2: clone
 
 As a verb: Clone a [remote](glossary/#remote) into a new directory which becomes

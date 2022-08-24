@@ -1,0 +1,39 @@
+-- ft.page: `create-cr` API
+
+The `create-cr` API is used to create a new [Change Request](glossary/#change-request).
+This API is called by `create-cr` page.
+
+It works for only [clone](glossary/#clone).
+
+-- ft.h1: API
+
+-- ft.h2: URL and Parameters
+
+The URL of the API is: `/-/create-cr/`
+
+-- ft.h2: Request Method
+
+Request Method of this API is `POST`
+
+-- ft.h2: Input
+
+The input of this API is:
+
+-- ft.code:
+lang: rs
+
+pub struct CreateCRRequest {
+    pub title: Option<String>,
+}
+
+-- ft.h2: Response
+
+The output of the API is:
+
+-- ft.code:
+lang: rs
+
+#[derive(serde::Serialize, serde::Deserialize, std::fmt::Debug)]
+struct CreateCRResponse {
+    url: String,
+}
