@@ -165,6 +165,8 @@ email: arpita@fifthtry.com
   url: /processors/document-suffix/
 - `$processor$: get-identities`
   url: /processors/get-identities/
+- `$processor$: cr-meta`
+  url: /processors/cr-meta/
 
 
 # Development: /journal/

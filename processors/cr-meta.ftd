@@ -1,0 +1,20 @@
+-- ft.page: `cr-meta` processor
+
+`cr-meta` processor is used to get the Change request related details
+
+`document-id` processor is used to get id of the document
+
+Let's say, If request path is `/foo/ftd/` or `/foo/ftd/-/x/y/` so document id
+will be `/foo/ftd/` and `/foo/ftd/` respectively.
+
+
+-- ft.code:
+lang: ftd
+
+\-- string document-id:
+$processor$: document-id
+
+
+\-- ftd.text: Document Id
+
+\-- ftd.text: $document-id
