@@ -3,12 +3,12 @@
 This API `/-/clear-cache/` clear files from where the `fpm` instance is running.
 
 `fpm` downloads them from the internet with given [
-`download-base-url`](/crate/package/#`download_base_url`) and caches it so
+`download-base-url`](/crate/package/#download-base-url) and caches it so
 next time when someone asks for the same files again from `fpm` to serve, it
-will not download from the internet, It will from local cache.
+will not download from the internet, It will serve from local cache.
 
 So to serve an updated version of files we have to remove those files or
-packages from  `fpm` local cache, which can be done using this API.
+packages from `fpm` local cache, which can be done using this API.
 
 -- ft.h1: API: `/-/clear-cache/`
 
