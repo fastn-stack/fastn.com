@@ -1,4 +1,4 @@
--- ft.page: `/-/clear-cache` API
+-- ft.page: `/-/clear-cache/` API
 
 This API `/-/clear-cache/` will clear files from where the `fpm` instance is
 running.
