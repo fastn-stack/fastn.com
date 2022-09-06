@@ -21,7 +21,7 @@ Query Parameters: `file`, `package`, `all-dependencies`
 
 `file` provides path of the file with respect to `main` or foreign package.
 
-E.g.: `?file=a.ftd`, `?file=foo/abc.ftd`, `<package-name>/foo.ftd`
+E.g.: `?file=a.ftd`, `?file=foo/abc.ftd`, `?<package-name>/foo.ftd`
 
 This argument can be provided more than once.
 
@@ -51,6 +51,8 @@ directory.
 
 `all-dependencies` provides boolean value, whether to remove dependencies or not
 default value of it is `false`.
+
+E.g.: `?all-dependencies=true`
 
 -- ft.h3: Expected Behaviour
 
