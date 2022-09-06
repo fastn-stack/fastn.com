@@ -108,7 +108,7 @@ This function is to remove file, symlink or directory from given path.
 -- ft.code:
 lang: rs
 
-async fn remove(path: &camino::Utf8PathBuf) -> std::io::Result<()>
+async fn remove(path: &camino::Utf8Path) -> std::io::Result<()>
 
 -- ft.markdown:
 
@@ -128,7 +128,7 @@ This function is to remove file from `root` except provided files.
 -- ft.code:
 lang: rs
 
-async fn remove_except(root: &camino::Utf8PathBuf, except: &[&str]) -> fpm::Result<()>
+async fn remove_except(root: &camino::Utf8Path, except: &[&str]) -> fpm::Result<()>
 
 -- ft.markdown:
 
