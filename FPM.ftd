@@ -180,6 +180,7 @@ email: arpita@fifthtry.com
 - How Sync Works: /dev/sync/
 - Understanding FPM sync conflicts: /sync-conflict/
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
+- What is `digest.json`?: /dev/digest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
 - What Is `user-identity`?: /dev/user-identity/
