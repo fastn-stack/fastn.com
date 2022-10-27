@@ -1,0 +1,83 @@
+-- import: fpm.dev/assets
+-- import: fpm.dev/static
+
+-- ft.page: Using WASM backend with fpm
+
+[Webassembly](https://webassembly.org/) or WASM is a binary instruction format 
+for a stack-based virtual machine. Designed as a portable compilation target, WASM + FPM
+helps the user to write the backend code in the [language of their choice](https://webassembly.org/getting-started/developers-guide/)
+and compile it to WASM and run it in a sandbox environment while serving your FPM package.
+
+-- ft.h2: How it Works
+
+FPM backend is the lowest priority catch all route evaluation. Once the `backend`
+attribute is enabled for a package, any request that results in a 404 gets handed
+over to the WASM backend which can then proceed to process the request as needed.
+
+-- ft.h2: Configuration
+
+If you want to enable backend on any FPM application you need to make the 
+following changes to your package
+
+* Add `backend: true` as an attribute to your package definition in FPM.ftd
+
+-- ft.code:
+lang: ftd
+caption: foo.bar/FPM.ftd
+
+\-- fpm.package: foo.bar
+backend: true
+
+-- ft.markdown:
+
+* Add the `backend.wasm` file to the root directory of the package.
+
+-- ft.h2: Limitations
+
+The WASM backend implementation has a strict contract. The contract is available
+in the [guest_backend.wit](
+    https://raw.githubusercontent.com/ftd-lang/fpm-utils/main/wits/guest_backend.wit)
+file. The backend WASM module has to expose a `handlerequest` function which accepts
+the `guest_backend::HTTPRequest` as a parameter and has to return the 
+`guest_backend::HTTPResponse` object.
+
+The backend can only return the data in the JSON format.
+
+
+-- ft.h2: Writing your own `backend.wasm` file
+
+In this example we'll explore the implementation using the Rust as the backend
+language.
+
+-- ft.code:
+lang: sh
+
+cargo init backend --lib
+cd backend
+
+-- ft.markdown:
+
+In your package's `Cargo.toml` add a dependency to the `fpm-utils-macro` crate
+
+-- ft.code:
+lang: toml
+caption: backend/Cargo.toml
+
+[dependency]
+fpm-utils-macros = {path="../fpm-utils/crates/fpm-utils-macros"}
+
+-- ft.markdown:
+
+And finally, you can start writing the backend code in your `lib.rs` file.
+
+-- ft.code:
+lang: rs
+caption: backend/src/lib.rs
+
+#[fpm_utils_macros::wasm_backend]
+fn handlerequest(a: guest_backend::Httprequest) -> guest_backend::Httpresponse {
+    guest_backend::Httpresponse {
+        data: String::from("Hello World!"),
+        success: true,
+    }
+}
