@@ -122,7 +122,6 @@ email: arpita@fifthtry.com
 - Responsive Themes: /theme/responsive/
 - Dark Mode: /theme/dark-mode/
 - Components: /theme/header/
-  - Dark Mode: /theme/header/
 - FPM Typography: /theme/type/
 - FPM Color: /theme/color/
 - FPM Space: /theme/space/
