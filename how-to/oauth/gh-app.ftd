@@ -1,2 +1,14 @@
+-- import: fpm.dev/assets
+
 -- ft.page: How To Install GitHub OAuth App
 
+-- ft.markdown:
+
+For Oauth Authentication using Github first of all a developer needs to create a new app on github. Follow steps given below to create a new app on github.
+
+-- ft.markdown:
+
+From the right side of your github top bar. Click on profile picture then it will open drop down. From the drop down click on “Settings”.
+
+-- ftd.image:
+src: $assets.files.static.images.auth.github-app-1.png
