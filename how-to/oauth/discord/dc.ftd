@@ -1,7 +1,7 @@
--- ft.page: Github OAuth
+-- ft.page: Discord OAuth
 
 
-For Github Oauth using FPM. Follow please setps given below:
+For Discord Oauth using FPM. Follow please setps given below:
 
 - [How to create a Github App](/how-to/oauth/gh-app/)
 - [Login Flow](/how-to/oauth/gh-login/)

@@ -11,4 +11,4 @@ For Oauth Authentication using Github first of all a developer needs to create a
 From the right side of your github top bar. Click on profile picture then it will open drop down. From the drop down click on “Settings”.
 
 -- ftd.image:
-src: $assets.files.static.images.auth.github-app-1.png
+src: $assets.files.static.images.auth.github.github-app-1.png
