@@ -3,59 +3,58 @@
 -- ft.h1: `twitter-liking`: `<twitter-id>`
 
 This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she starred 
-the input repo. 
+logged-in user will only be allowed to access a page if he/she liked a tweet. 
 
 -- ft.code:
 lang: ftd
 
 \-- ft.code:
 lang: rust
-Url: https://api.github.com/user/starred
+Url: https://api.twitter.com/2/tweets/{tweet-id}/liking_users
 Method: Get
 Authorization: Bearer {access_token}
 
 -- ft.h1: `twitter-followers`: `<account-name>`
 
 This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she subscribed 
-the input repo. 
+logged-in user will only be allowed to access a page if he/she is follower 
+of the account. 
 
 -- ft.code:
 lang: ftd
 
 \-- ft.code:
 lang: rust
-Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
+Url: https://api.twitter.com/2/users/{user-id}/followers
 Method: Get
 Authorization: Bearer {access_token}
 
 -- ft.h1: `twitter-follows`: `<account-name>`
 
 This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she has followed 
-the input repo.
+logged-in user will only be allowed to access a page if he/she has been 
+followed by the account.
 
 -- ft.code:
 lang: ftd
 
 \-- ft.code:
 lang: rust
-Url: https://api.github.com/user/following
+Url: https://api.twitter.com/2/users/{user-id}/following
 Method: Get
 Authorization: Bearer {access_token}
 
 -- ft.h1: `twitter-retweet`: `<twitter-id>`
 
 This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she is contributor 
-of input repo.
+logged-in user will only be allowed to access a page if he/she 
+has retweeted the tweet.
 
 -- ft.code:
 lang: ftd
 
 \-- ft.code:
 lang: rust
-Url: https://api.github.com/repos/{repo_name}/contributors
+Url: https://api.twitter.com/2/tweets/{tweet-id}/retweeted_by
 Method: Get
 Authorization: Bearer {access_token}
