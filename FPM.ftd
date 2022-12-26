@@ -109,11 +109,13 @@ email: arpita@fifthtry.com
 
 ## FPM Auth: /how-to/oauth/
 
-- GitHub OAuth: /how-to/oauth/github/gh/
-  - Install GitHub OAuth App: /how-to/oauth/github/gh-app/
-  - Login Flow: /how-to/oauth/github/gh-login/
-  - GitHub FPM Identities: /how-to/oauth/github/gh-ids/
-  - Access Control With Identities: /how-to/oauth/github/gh-acl/
+- Install GitHub OAuth App: /how-to/oauth/gh-app/
+  document: /how-to/oauth/github/gh-app/
+  - Login Flow: /how-to/oauth/gh-login/
+    document: /how-to/oauth/github/gh-login/
+  - GitHub FPM Identities: /how-to/oauth/gh-ids/
+    document: /how-to/oauth/github/gh-ids/
+    
 # Builder Manual: /themes/
 
 ## Manual: /themes/

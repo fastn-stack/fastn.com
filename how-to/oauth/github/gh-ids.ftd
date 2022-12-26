@@ -1,4 +1,111 @@
 -- ft.page: How To Use GitHub Identities
 
-- github-team: <team-name>
-- github-starred: <repo-name>
+-- ft.h1: `github-starred`: `<repo-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she starred 
+the input repo. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/user/starred
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `github-watches`: `<repo-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she subscribed 
+the input repo. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `github-follows`: `<repo-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she has followed 
+the input repo.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/user/following
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `github-contributor`: `<repo-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she is contributor 
+of input repo.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/repos/{repo_name}/contributors
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `github-collaborator`: `<repo-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she is collaborator
+of input repo.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/repos/{repo_name}/collaborators
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `github-team`: `<team-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she 
+is part of the team.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `github-sponsor`: `<user-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she 
+has sponsored the user.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/graphql
+Method: Get
+Authorization: Bearer {access_token}
+Query: query { user(login:{user_name}){isSponsoredBy(accountLogin:{sponsored_by})}}
+ 
+
+
+

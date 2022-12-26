@@ -1,8 +1,9 @@
 -- ft.page: FPM OAuth Integrations
 
-Please check following FPM Oauth:
+-- ft.h1: FPM with GitHub Authentication
 
-- [FPM with GitHub Authentication](/how-to/oauth/github/gh/)
-- [FPM with Twitter Authentication](/how-to/oauth/twitter/tw/)
-- [FPM with Telegram Authentication](/how-to/oauth/telegram/tl/)
-- [FPM with Discord Authentication](/how-to/oauth/discord/dc/)
+-- ft.h1: FPM with Twitter Authentication
+
+-- ft.h1: FPM with Telegram Authentication
+
+-- ft.h1: FPM with Discord Authentication
