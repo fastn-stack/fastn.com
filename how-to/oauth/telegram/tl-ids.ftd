@@ -1,0 +1,46 @@
+-- ft.page: How To Use Telegram Identities
+
+-- ft.h1: `telegram-group`: `<group-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she starred 
+the input repo. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/user/starred
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `telegram-admin`: `<group-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she subscribed 
+the input repo. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `telegram-channel`: `<repo-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she has followed 
+the input repo.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.github.com/user/following
+Method: Get
+Authorization: Bearer {access_token}

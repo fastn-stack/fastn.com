@@ -1,0 +1,60 @@
+-- ft.page: How To Use Discord Identities
+
+-- ft.h1: `discord-server`: `<server-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user has joined the server or not. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://discord.com/api/users/@me/guilds
+Method: Get
+Authorization: Bearer {access_token}
+
+-- ft.h1: `discord-thread`: `<thread-id>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if 
+he/she is member of the thread. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://discord.com/api/channels/{thread-id}/thread-members
+Method: Get
+Authorization: Bot {bot_id}
+
+-- ft.h1: `discord-event`: `<event-id>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she joined the event.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://discord.com/api/guilds/{guild-id}/scheduled-events/{event-id}/users
+Method: Get
+Authorization: Bot {bot_id}
+
+-- ft.h1: `discord-permission`: `<permission-id>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she 
+has been given specific permission.
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://discord.com/api/guilds/{guild-id}/members/{user-id}
+Method: Get
+Header Parameters
+Authorization: Bot {bot_id}

@@ -13,6 +13,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/user/starred
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `github-watches`: `<repo-name>`
@@ -28,6 +29,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `github-follows`: `<repo-name>`
@@ -43,6 +45,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/user/following
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `github-contributor`: `<repo-name>`
@@ -58,6 +61,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/repos/{repo_name}/contributors
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `github-collaborator`: `<repo-name>`
@@ -73,6 +77,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/repos/{repo_name}/collaborators
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `github-team`: `<team-name>`
@@ -88,6 +93,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `github-sponsor`: `<user-name>`
@@ -103,6 +109,7 @@ lang: ftd
 lang: rust
 Url: https://api.github.com/graphql
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 Query: query { user(login:{user_name}){isSponsoredBy(accountLogin:{sponsored_by})}}
  
