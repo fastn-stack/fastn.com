@@ -2,7 +2,7 @@
 
 -- fpm.package: fpm.dev
 zip: github.com/fifthtry/fpm.dev/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/fpm.dev/main
+download-base-url: https://raw.githubusercontent.com/fifthtry/fpm.dev/main
 language: English
 translation: hi.fpm.dev
 
@@ -38,10 +38,17 @@ email: arpita@fifthtry.com
 
 # Home: /
 
-- Features: /about/
+- Features: /features/
   - Package Manager: /package-manager/
   - Remixing Sites: /remixing/
-- Open Source: /open-source/
+  - FPM Server: /server/
+  - Static Site Generator: /static/
+  - Offline Sync: /offline/
+  - Version Control For Masses: /vcs/
+  - Online Editor: /editor/
+  - Color Scheme : /cs/
+  - Authentication and fine grained access control: /acl/
+- Featured Packages: /featured/-/home/
 - Why Not To Use `fpm`?: /why-not/
 - Open Source: /open-source/
 - Known Issues: /known-issues/
@@ -50,75 +57,122 @@ email: arpita@fifthtry.com
 
 # Author Manual: /author/
 
+## Manual: /author/
+
+- About Author Manual: /author/
+- Sitemap: /sitemap/
+
+## Featured: /featured/
+
+- Featured Components: /featured/
+- Documentation Sites: /featured/doc-sites/
+- Resumes: /featured/resumes/
+- Color Schemes: /featured/cs/
+- Component Libraries: /featured/components-library/
+- Fonts: /featured/fonts/
+
+## How Tos: /how-to/install/
+
+- Install `fpm`: /how-to/install/
+- Update `fpm`: /how-to/update/
 - Create new fpm project: /author/create-project/
-  - Create new fpm project on github: /author/create-on-github/
-- How to install fpm on local machine: /how-to/install/
+- Create new fpm project on github: /author/create-on-github/
 - Build fpm project locally: /author/build-project/
-- Featured Components: /featured/index.html
-  - Documentation Sites: /featured/doc-sites/
-  - Resumes: /featured/resumes/
-  - Color Schemes: /featured/color-cs/
-  - Component Libraries: /featured/components-library/
-- How To:
-  - Install `fpm`: /how-to/install/
-  - Update `fpm`: /how-to/update/
-  - Get started with Github pages: /how-to/get-started-github-pages/
-  - Get started with Vercel: /how-to/get-started-vercel/
-  - Use Favicon: /favicon/
-- `fpm` Usage: /usage/
-  - `fpm start-project`: /start-project/
-  - `fpm build`: /build/
-  - `fpm sync`: /sync/
-  - `fpm status`: /status/
-  - `fpm diff`: /diff/
-  - `fpm update`: /update/
-  - `fpm serve`: /serve/
-  - `fpm add`: /cli/add/
-  - `fpm rm`: /cli/rm/
-- How to use Favicon: /favicon/
+- Publishing On Github pages: /how-to/github-pages/
+- Publishing On Vercel: /how-to/vercel/
+- Use Favicon: /favicon/
+- Custom Fonts: /how-to/custom-fonts/
+- Create Font Package: /how-to/create-font-package/
+- Auth Testing: /how-to/auth-testing/
+- FPM & FTD Domain Setup: /how-to/domain-setup/
+
+## Editor Manual: /editor/manual/
+
+- About Editor Manual: /editor/manual/
+- Keyboard Shortcuts: /editor/shortcuts/
+
+## CLI Manual: /usage/
+
+- Usage: /usage/
+- `fpm start-project`: /start-project/
+- `fpm build`: /build/
+- `fpm sync`: /cli/sync/
+- `fpm status`: /status/
+- `fpm diff`: /diff/
+- `fpm update`: /update/
+- `fpm serve`: /serve/
+- `fpm add`: /cli/add/
+- `fpm rm`: /cli/rm/
+- `fpm resolve-conflict`: /cli/resolve-conflict/
+- `fpm clone`: /cli/clone/
 
 
+## FPM Auth: /how-to/oauth/
+
+- GitHub OAuth: /how-to/oauth/gh/
+  - Install GitHub OAuth App: /how-to/oauth/gh-app/
+  - Login Flow: /how-to/oauth/gh-login/
+  - GitHub FPM Identities: /how-to/oauth/gh-ids/
+  - Access Control With Identities: /how-to/oauth/gh-acl/
 
 
+# Builder Manual: /themes/
 
+## Manual: /themes/
 
-# Themes Guide: themes/
+- About Builder Manual: /themes/
+- Best Practices: /best-practices/
+- Package Interface: /package-interface/
+- Theme Config: /theme/config/
+- Responsive Themes: /theme/responsive/
+- Dark Mode: /theme/dark-mode/
+- Components: /theme/header/
+- FPM Typography: /theme/type/
+- FPM Color: /theme/color/
+- FPM Space: /theme/space/
 
-- About Themes: themes/
-- Package Interface: package-interface/
-- Theme Config: theme/config/
-- Responsive Themes: theme/responsive/
-- Dark Mode: theme/dark-mode/
-- Components: theme/header/
-  - Dark Mode: theme/header/
-- FPM Variables: vars/
-- FPM Typography: theme/type/
-- FPM Color: theme/color/
-- FPM Space: theme/space/
-- How to use Google Font: theme/google-font-how-to-use/
-- FPM Sitemap: sitemap/
-- FTD Host Features: /ftd-host/
-  - `import: fpm`
-    url: /theme/fpm/
-  - `$processor$: http`
-    url: /http/
-  - `$processor$: toc`
-    url: /toc/
-  - `$processor$: package-query`
-    url: /package-query/
-  - `$processor$: get-data`
-    url: /processors/get-data/
-  - `$processor$: sitemap`
-    url: /processors/sitemap/
-  - `import: fpm`
-    url: /fpm-vars/
-  - Foreign Variables: /theme/foreign-variables/
-  - `$processor$: full-sitemap`
-    url: /processors/full-sitemap/
-  - `$processor$: user-groups`
-    url: processors/user-groups/
-  - `$processor$: user-group-by-id`
-    url: processors/user-group-by-id/
+## FTD Host Features: /ftd-host/
+
+- FPM Variables: /vars/
+- `import: fpm`
+  url: /theme/fpm/
+- `$processor$: http`
+  url: /http/
+- `$processor$: toc`
+  url: /toc/
+- `$processor$: package-query`
+  url: /package-query/
+- `$processor$: get-data`
+  url: /processors/get-data/
+- `$processor$: sitemap`
+  url: /processors/sitemap/
+- `import: fpm`
+  url: /fpm-vars/
+- Foreign Variables: /theme/foreign-variables/
+- `$processor$: full-sitemap`
+  url: /processors/full-sitemap/
+- `$processor$: user-groups`
+  url: /processors/user-groups/
+- `$processor$: user-group-by-id`
+  url: /processors/user-group-by-id/
+- `$processor$: document-readers`
+  url: /processors/document-readers/
+- `$processor$: document-writers`
+  url: /processors/document-writers/
+- `$processor$: document-name`
+  url: /processors/document-name/
+- `$processor$: document-id`
+  url: /processors/document-id/
+- `$processor$: document-full-id`
+  url: /processors/document-full-id/
+- `$processor$: document-suffix`
+  url: /processors/document-suffix/
+- `$processor$: get-identities`
+  url: /processors/get-identities/
+- `$processor$: request-data`
+  url: /processors/request-data/
+- `$processor$: fpm-apps`
+  url: /apps/
 
 
 # Development: /journal/
@@ -126,15 +180,20 @@ email: arpita@fifthtry.com
 ## Overview: /journal/
 
 - Roadmap: /roadmap/
+- All `FTD` components: /all/
 - Journal: /journal/
+- Glossary: /glossary/
 - Contribution Guide: /dev/contribute/
 - How Versioning Works: /dev/versioning/
 - How Sync Works: /dev/sync/
+- Understanding FPM sync conflicts: /sync-conflict/
 - What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
 - File System Organization: /fs/
   - `FPM.ftd`: /fpm-ftd-file/
 - What Is `user-identity`?: /dev/user-identity/
 - What Is `user-group`?: /dev/user-group/
+- Remote Identity: /dev/remote-identity/
+- Local Identity: /dev/local-identity/
 - Day To Day:
   - How To Run Tests: /day-to-day/how-to-run-tests/
   - How To Update Failing Snapshot Tests: /day-to-day/how-to-fix-tests/
@@ -149,6 +208,9 @@ email: arpita@fifthtry.com
   - `edit` API: /sitemap/edit/
   - `editor-sync` API: /sitemap/editor-sync/
   - `clone` API: /sitemap/clone/
+  - `clear-cache` API: /sitemap/clear-cache/
+- Glossary:
+  - syncglossary: /glossary/
 
 ## Using `fpm` Crate: crate/
 

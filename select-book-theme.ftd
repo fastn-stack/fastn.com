@@ -16,7 +16,7 @@
 -- integer max-width: 1000
 -- string github: NA
 -- string site-name: NA
--- optional ftd.image-src site-icon: 
+-- optional ftd.image-src site-icon:
 -- string site-url: NA
 
 
@@ -401,8 +401,6 @@ width: fill
 if: not $ft.is-mobile
 footer-toc: $footer-toc
 
-container: ftd.main
-
 --- footer-mobile:
 if: $ft.is-mobile
 footer-toc: $footer-toc
@@ -498,8 +496,6 @@ spacing: 40
 -- ftd.column hero-mobile:
 caption title:
 ftd.image-src image:
-optional string id:
-id: $id
 width: fill
 background-color: $fpm.color.main.background.base
 padding-horizontal: 20
@@ -701,7 +697,6 @@ text: $title
 caption $title:
 region: title
 role: $fpm.type.heading-large
-text: $title
 color: $fpm.color.main.text
 padding-bottom: 16
 padding-top: 8
@@ -975,7 +970,6 @@ align: center
 
 --- ftd.text: $title
 width: fill
-width: fill
 text-align: center
 color: $fpm.color.main.text
 role: $fpm.type.label-big
@@ -1047,13 +1041,11 @@ align: center
 
 --- ftd.text: $title
 width: fill
-width: fill
 text-align: center
 color: $fpm.color.main.text
 role: $fpm.type.heading-large
 
 --- ftd.text: $designation
-width: fill
 width: fill
 text-align: center
 color: $fpm.color.main.text
@@ -1061,7 +1053,6 @@ role: $fpm.type.heading-medium
 
 --- ftd.text:
 text: $body
-width: fill
 width: fill
 text-align: center
 color: $fpm.color.main.text
@@ -1077,7 +1068,7 @@ role: $fpm.type.heading-medium
 
 
 -- ftd.iframe iframe:
-string src: 
+string src:
 src: $src
 height: 400
 width: fill
@@ -1092,8 +1083,8 @@ margin-bottom: 34
 
 
 -- ftd.iframe youtube:
-string id:
-youtube: $id
+caption v:
+youtube: $v
 height: 400
 width: fill
 margin-bottom: 34
@@ -1107,8 +1098,6 @@ margin-bottom: 34
 
 
 -- ftd.column container:
-optional string id:
-id: $id
 max-width: 800
 width: fill
 padding-top: 15
@@ -1167,7 +1156,6 @@ ftd.image-src src:
 optional caption caption:
 optional body body:
 optional string link:
-optional string align:
 optional string width:
 optional string height:
 width: fill

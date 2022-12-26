@@ -1,5 +1,11 @@
 -- import: fpm.dev/assets
 
+-- boolean show-grid: true
+-- boolean show-list: false
+
+
+
+
 
 -- ft.page: Featured components
 
@@ -16,21 +22,31 @@ These components can be used inside your personal web sites or organizational st
 web sites developed using `FPM` package.
 
 -- grid-view: Documentation Sites:
+if: $show-grid
 templates: $doc-sites
 more-link: /featured/doc-sites/
 
 -- grid-view: Resumes:
+if: $show-grid
 templates: $resumes
 more-link: /featured/resumes/
 
 -- grid-view: Component Libraries
+if: $show-grid
 templates: $bling
 more-link: /featured/components-library/
 
 -- grid-view: Color Schemes
+if: $show-grid
 templates: $schemes
-more-link: /featured/color-cs/
+more-link: /featured/cs/
 
+
+-- grid-view: Fonts
+if: $show-grid
+templates: $font
+more-link-text: How to use fonts
+more-link: /featured/fonts/
 
 
 
@@ -44,6 +60,7 @@ more-link: /featured/color-cs/
 optional caption title:
 template list templates:
 optional string more-link: 
+optional string more-link-text: View all 
 boolean hover: false
 width: fill
 border-top: 1
@@ -74,7 +91,7 @@ margin-top: $fpm.space.space-5
 padding-right: $fpm.space.space-5
 padding-right if $ft.is-mobile: $fpm.space.space-0
 
---- ftd.text: View all
+--- ftd.text: $more-link-text
 if: $more-link is not null
 link: $more-link
 role: $fpm.type.fine-print
@@ -93,6 +110,7 @@ color if $MOUSE-IN: $fpm.color.main.cta-primary.base
 if: not $ft.is-mobile
 width: fill
 wrap: true
+spacing: 46
 
 --- grid-of-items: $obj.title
 $loop$: $templates as $obj
@@ -138,24 +156,22 @@ boolean is-last:
 boolean github-hover: false
 boolean mit-hover: false
 body body:
-ftd.image-src screenshot:
+optional ftd.image-src screenshot:
 width if not $ft.is-mobile: percent 46
 margin-top: $fpm.space.space-6
 margin-bottom: $fpm.space.space-6
 width if $ft.is-mobile: fill
-margin-right: 46
-margin-right if $is-last: 0
-
 
 --- ftd.column:
 width: fill
+margin-left if $is-last: -44
+margin-left if $ft.is-mobile: 0
 id: parent
 spacing: 16
 
 --- ftd.row:
 id: main-wrapper
 width: fill
-
 
 --- ftd.row:
 width: fill
@@ -232,6 +248,7 @@ $on-mouse-leave$: $mit-hover = false
 --- container: parent
 
 --- ftd.column:
+if: $screenshot is not null
 width: fill
 border-width: 1
 border-color: $fpm.color.main.text
@@ -241,6 +258,7 @@ link: $template-url
 open-in-new-tab: true
 
 --- ftd.image:
+if: $screenshot is not null
 src: $screenshot
 width: fill
 height: auto
@@ -270,7 +288,7 @@ color: $fpm.color.main.text
 -- record template:
 caption title:
 string template-url: 
-ftd.image-src screenshot:
+optional ftd.image-src screenshot:
 string licence-url: 
 string github-url:
 body body: 
@@ -284,7 +302,7 @@ screenshot: $assets.files.static.doc-site.png
 licence-url: https://github.com/FifthTry/doc-site/blob/main/LICENSE
 github-url: https://github.com/FifthTry/doc-site/
 
-`fifthtry.github.io/doc-site` is a grey color theme. Most of our websites are
+`fifthtry.github.io/doc-site/` is a grey color theme. Most of our websites are
 using `doc-site` as base theme. Click on image OR package name to view it's working 
 demo. 
 
@@ -293,7 +311,6 @@ template-url: https://fifthtry.github.io/Blue-Sapphire-Template/
 screenshot: $assets.files.static.blue-sapphire.png
 licence-url: https://github.com/FifthTry/Blue-Sapphire-Template/blob/main/LICENSE
 github-url: https://fifthtry.github.io/Blue-Sapphire-Template/
-is-last: true
 
 `fifthtry.github.io/Blue-Sapphire-Template` is based on Blue Saffire Theme. This is 
 ready to use template for your web packages. Click on image OR package name to see
@@ -311,23 +328,22 @@ it's working demo and usage.
 -- template list resumes:
 
 -- resumes: Caffeine
-template-url: http://fifthtry.github.io/resume-caffeine/
+template-url: http://fifthtry.github.io/caffeine-resume/
 screenshot: $assets.files.static.caffiene.png
-licence-url: https://github.com/FifthTry/resume-caffeine/blob/main/LICENSE
-github-url: https://github.com/FifthTry/resume-caffeine/
+licence-url: https://github.com/FifthTry/caffeine-resume/blob/main/LICENSE
+github-url: https://github.com/FifthTry/caffeine-resume/
 
-`fifthtry.github.io/resume-caffeine` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site`
+`fifthtry.github.io/caffeine-resume` is resume theme based on our grey color scheme
+of `fifthtry.github.io/doc-site/`
 
 -- resumes: Paper
-template-url: http://fifthtry.github.io/resume-paper/
+template-url: http://fifthtry.github.io/paper-resume/
 screenshot: $assets.files.static.paper.png
-licence-url: https://github.com/FifthTry/resume-paper/blob/main/LICENSE
-github-url: https://github.com/FifthTry/resume-paper/
-is-last: true
+licence-url: https://github.com/FifthTry/paper-resume/blob/main/LICENSE
+github-url: https://github.com/FifthTry/paper-resume/
 
-`fifthtry.github.io/resume-paper` is resume theme based on our grey color scheme
-of `fifthtry.github.io/doc-site`
+`fifthtry.github.io/paper-resume` is resume theme based on our grey color scheme
+of `fifthtry.github.io/doc-site/`
 
 
 
@@ -341,7 +357,7 @@ of `fifthtry.github.io/doc-site`
 
 -- template list schemes:
 
--- schemes: FPM Default CS
+-- schemes: Color Doc
 template-url: https://fifthtry.github.io/color-doc/
 screenshot: $assets.files.static.color-doc.png
 licence-url: https://github.com/FifthTry/color-doc/blob/main/LICENSE
@@ -350,15 +366,13 @@ github-url: https://github.com/FifthTry/color-doc/
 `fifthtry.github.io/color-doc` is a grey color scheme. Our web sites are using
 this color scheme. For ex. [`fpm.dev`](https://fpm.dev/), [`ftd.dev`](https://ftd.dev/) etc.
 
--- schemes: Night Moon CS
-template-url: https://fifthtry.github.io/night-moon-cs/
-screenshot: $assets.files.static.night-moon.png
-licence-url: https://github.com/FifthTry/night-moon-cs/blob/main/LICENSE
-github-url: https://github.com/FifthTry/night-moon-cs/
-is-last: true
+-- schemes: Forest CS
+template-url: https://fifthtry.github.io/forest-cs/
+screenshot: $assets.files.static.forest-cs.png
+licence-url: https://github.com/FifthTry/forest-cs/blob/main/LICENSE
+github-url: https://github.com/FifthTry/forest-cs/
 
-`fifthtry.github.io/night-moon-cs` is a blue(night moon) color scheme. See its 
-documentation to use it. [Night Moon](https://fifthtry.github.io/night-moon-cs/)
+`fifthtry.github.io/forest-cs` is a forest green color scheme. See forest-cs color scheme we using on our [`df.fifthtry.com`](https://df.fifthtry.com/)
 
 
 
@@ -381,16 +395,41 @@ github-url: https://github.com/FifthTry/bling/
 `fifthtry.github.io/bling` is develoed and designed with various components which 
 can be used inside `FTD` web packages.
 
--- bling: Slideshow
-template-url: https://fifthtry.github.io/slideshow/
+-- bling: Image Gallery
+template-url: https://fifthtry.github.io/imago-gallery-ig/
 screenshot: $assets.files.static.slideshow-demo.png
-licence-url: https://github.com/FifthTry/slideshow/blob/main/LICENSE
-github-url: https://github.com/FifthTry/slideshow/
-is-last: true
+licence-url: https://github.com/FifthTry/imago-gallery-ig/blob/main/LICENSE
+github-url: https://github.com/FifthTry/imago-gallery-ig/
 
-`fifthtry.github.io/slideshow` is a image gallery component which can be used 
+`fifthtry.github.io/imago-gallery-ig` is a image gallery component which can be used 
 inside `FTD` web packages.
 
+
+
+
+
+
+
+
+
+
+-- template list font:
+
+-- font: Inter
+template-url: https://fifthtry.github.io/inter/
+licence-url: https://github.com/FifthTry/inter/blob/main/LICENSE
+github-url: https://github.com/FifthTry/inter
+
+`fifthtry.github.io/inter` font is available and can be used inside `FTD` web 
+packages.
+
+-- font: Roboto
+template-url: https://fifthtry.github.io/roboto/
+licence-url: https://github.com/FifthTry/roboto/blob/main/LICENSE
+github-url: https://github.com/FifthTry/roboto/
+
+`fifthtry.github.io/roboto` font is available and can be used inside `FTD` web 
+packages.
 
 
 
@@ -411,3 +450,71 @@ mobile: $copy-print-medium-desktop
 xl: $copy-print-medium-desktop
 weight: 400
 
+
+
+
+
+
+
+
+
+
+-- ftd.column font-package:
+caption name:
+string github:
+string google:
+string site:
+padding: 20
+border-width: 2
+border-radius: 5
+border-color: $fpm.color.main.border
+margin-bottom: 20
+spacing: 10
+
+--- ftd.text: $name
+role: $fpm.type.copy-large
+color: $fpm.color.main.text-strong
+
+--- kv: Google:
+value: $google
+
+--- kv: Github:
+value: $github
+
+--- kv: Site:
+value: $site
+
+-- ftd.row kv:
+caption key:
+body value:
+width: fill
+spacing: 5
+
+--- ftd.text: $key
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+
+--- ftd.text: $value
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+
+
+
+
+
+-- ftd.column fonts:
+width: fill
+
+--- ftd.row:
+width: fill
+spacing: 34
+
+--- font-package: Inter
+google: https://fonts.google.com/specimen/Inter
+site: https://fifthtry.github.io/inter/
+github: https://github.com/FifthTry/inter
+
+--- font-package: Roboto
+google: https://fonts.google.com/specimen/Roboto
+site: https://fifthtry.github.io/roboto/
+github: https://github.com/FifthTry/roboto

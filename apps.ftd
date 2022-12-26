@@ -1,0 +1,50 @@
+-- ft.page: FPM Apps
+
+Bhut kuch btane k liye par abhi bas important
+
+-- ft.h1: How To Use Apps In FPM.ftd
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.app: Todos for Family
+mount-point: /todos/
+package: kameri-app.herokuapp.com
+end-point: https://kameri-service.herokuapp.com
+config: db_url=$ENV.DB_URL
+config: name=Upadhyay Khanadan
+
+\-- fpm.app: Movies
+mount-point: /movies/
+package: movie-db
+end-point: http://127.0.0.1:8001
+config: db_url=$ENV.DB_URL
+config: name=Upadhyay Khanadan
+
+-- ft.h1: `fpm-apps` Processor
+
+How to fetch these apps information using `fpm-apps` processor.
+
+We have defined a type in `fpm` named `app-ui`, which is record contains below
+fields.
+
+-- ft.code: How To Use `fpm-apps` Processor
+lang: ftd
+
+\-- fpm.app-ui apps:
+$processor$: fpm-apps
+
+\;; defined types in fpm itself
+\-- record app-ui-item:
+caption name:
+string package:
+string url:
+optional string icon:
+
+\-- record app-indexy-item:
+integer index:
+app-ui-item item:
+
+\-- record app-ui:
+integer len:
+app-indexy-item list items:

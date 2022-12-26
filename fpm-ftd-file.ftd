@@ -44,6 +44,11 @@ specific version from Git repo, you can locate its corresponding `.zip` file and
 store it here.
 
 
+-- ft.h2: `download-base-url`
+
+`download-base-url` is the base url of package where it is actually stored.
+
+
 -- ft.h1: `fpm.dependency`
 
 A package can depend on another package.
@@ -72,6 +77,67 @@ Any number of dependencies can be mentioned.
 
 This is the repo where the dependency is hosted. If the `repo` is omitted it is
 assumed to the same as `repo` of the current package.
+
+
+-- ft.h2: `mount-point`
+
+`fpm.dependency` now contains a header `mount-point`. It is used for clean urls
+for a dependency.
+
+
+-- ft.code: abrark/FPM.ftd
+lang: ftd
+
+\-- import: fpm
+
+\-- fpm.package: abrark.com
+
+
+\-- fpm.dependency: fifthtry.github.io/todos as todos
+mount-point: /todos/
+
+\-- fpm.sitemap:
+
+# Todos
+- TODOs: /todos/
+
+-- ft.markdown:
+
+All the requests coming to `abrark.com` which has prefix `/todos/`(`mount-point`)
+in the urls, will be served by package `fifthtry.github.io/todos`.
+
+
+-- ft.code: fifthtry.github.io/todos/FPM.ftd
+lang: ftd
+
+\-- import: fpm
+
+\-- fpm.package: fifthtry.github.io/todos
+download-base-url: https://raw.githubusercontent.com/fifthtry/kameri-app/main
+
+\-- fpm.sitemap:
+
+# App: /
+
+- Add Todo: /add-todo/
+- Update Todo: /update-todo/
+- List: /
+
+
+-- ft.h2: `icon`
+
+Package can have a optional icon as well, which is type of ftd.image-src.
+
+-- ft.code:
+lang: ftd
+
+\-- ftd.image-src icon:
+dark: dark-image.png
+light: light-image.png
+
+\-- fpm.package: kameri-app.herokuapp.com
+download-base-url: https://raw.githubusercontent.com/fifthtry/kameri-app/main
+icon: $icon
 
 
 -- ft.h1: `fpm.font`
@@ -127,12 +193,13 @@ lang: ftd
 
 Any number of patterns can be specified.
 
--- ft.h1: `fpm.sitemap`
 
-You can add a sitemap in FPM.ftd file. Details in [sitemap docs](sitemap/).
+-- ft.h1: User Group `fpm.user-group`
+
+You can add user groups to FPM.ftd file. Details in [user-group
+docs](/dev/user-group)
 
 
--- ft.h1: User Group
 
 -- ft.code:
 lang: ftd
@@ -145,3 +212,106 @@ github: arpita@gmail.com
 -github: amitu@gmail.com
 -github: amitu1@gmail.com
 group: fifthtry.github.io/doc-site/group_id
+
+\-- fpm.user-group: writers
+email: abrark@gmail.com
+email: arpita@gmail.com
+-email: amitu@gmail.com
+github: arpita@gmail.com
+-github: amitu@gmail.com
+-github: amitu1@gmail.com
+group: fifthtry.github.io/doc-site/group_id
+
+
+
+-- ft.h1: `fpm.sitemap`
+
+You can add a sitemap in FPM.ftd file. Details in [sitemap docs](sitemap/).
+In sitemap you can also put `readers` and `writers` user groups at section,
+subsection and toc level.
+
+Note: `sitemap` will only contain urls without dynamic parameters.
+
+-- ft.code:
+lang: ftd
+
+\-- fpm.sitemap:
+readers: readers
+writers: writers
+
+# Section1: /
+readers: readers
+writers: writers
+
+## Subsection1: /subsection1
+readers: readers
+writers: writers
+
+- ToC 1: /page1
+readers: random
+
+- ToC 2: /page2
+readers: random
+
+-- ft.h1: `fpm.dynamic-urls`
+
+You can add a `dynamic-urls`, syntactically same as sitemap. In`dynamic-urls`
+you can also put `readers` and `writers` user groups at section, subsection
+and toc level.
+
+Note: `dynamic-urls` will only contain urls with dynamic parameters.
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.dynamic-urls:
+
+# Manager
+url: /<string:username>/manager/<integer:age>/
+document: person-manager.ftd
+readers: readers
+writers: writers
+- Task1
+  url: /<string:username>/task/<integer:age>/
+  document: task-type-1.ftd
+  readers: readers
+  writers: writers
+
+
+-- ft.h1: `fpm.app`
+
+
+
+-- ft.code: App Type
+lang: ftd
+
+;; FPM Apps Installation
+;; for FPM.ftd
+\-- record app-data:
+caption name:
+string package:
+string mount-point:
+optional string end-point:
+string list config:
+string list readers:
+string list writers:
+
+-- ft.code: App Processor
+lang: ftd
+
+\-- record app-ui-item:
+caption name:
+string package:
+string url:
+optional string icon:
+
+\-- record app-indexy-item:
+integer index:
+app-ui-item item:
+
+\-- record app-ui:
+integer len:
+app-indexy-item list items:
+
+\-- fpm.app-ui apps:
+$processor$: fpm-apps
