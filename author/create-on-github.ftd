@@ -15,6 +15,17 @@ Go to [this url](https://github.com/FifthTry/fpm-template/generate) and create a
 
 
 
+--- ft.image: How to create new repository using `fpm-template`
+src: $assets.files.static.docs.create-new-repository.png
+width: fill
+
+Click on Public to make your `FTD` website visible to public. You can click on 
+Private in-case you want to keep it private. We recommend keeping the Public 
+selected.
+
+You can also add description of your `FTD` website(optional). 
+
+
 
 -- ft.h1: Rewrite file
 
@@ -28,6 +39,10 @@ zip: <url-where-repo-is-available>
 
 
 -- ft.markdown:
+
+--- ft.image: On `Settings` tab follow `Step-1` to `Step-5` ⚙️
+src: $assets.files.static.docs.settings-step-1-to-5.png
+width: fill
 
 As this is github repo, the `<package-name>` should be
 `<github organisation/username>.github.io/<repository name>`. In case if the organisation/user

@@ -1,5 +1,7 @@
--- ft.page: fpm: FTD Package Manager & Static Site Generator
+-- import: fpm.dev/assets
 
+
+-- ft.page: fpm: FTD Package Manager & Static Site Generator
 
 FPM is a command line tool written in Rust that acts as both package manager for
 [FTD](https://ftd.dev/) programs as well as static site generator that converts
@@ -22,3 +24,40 @@ Discord: [#fpm on FifthTry](https://discord.gg/a7eBUeutWD)
 
 --- ft.youtube:
 id: rny1EGkqw_M
+
+
+
+
+-- as.app-switcher:
+
+--- as.my-app: FTD.dev
+url: https://ftd.dev
+src: $assets.files.static.images.FTD.svg
+
+--- as.my-app: FPM.dev
+url: https://fpm.dev
+src: $assets.files.static.images.FPM.svg
+
+--- as.my-app: FifthTry
+url: https://fifthtry.com
+src: $assets.files.static.images.Fifthtry.svg
+
+--- as.my-app: FTD.dev
+url: https://ftd.dev
+src: $assets.files.static.images.FTD.svg
+
+--- as.my-app: FPM.dev
+url: https://fpm.dev
+src: $assets.files.static.images.FPM.svg
+
+--- as.my-app: FifthTry
+url: https://fifthtry.com
+src: $assets.files.static.images.Fifthtry.svg
+
+--- as.my-app: FPM.dev
+url: https://fpm.dev
+src: $assets.files.static.images.FPM.svg
+
+--- as.my-app: FifthTry
+url: https://fifthtry.com
+src: $assets.files.static.images.Fifthtry.svg
