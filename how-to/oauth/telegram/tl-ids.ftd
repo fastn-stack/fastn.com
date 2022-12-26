@@ -1,46 +1,55 @@
 -- ft.page: How To Use Telegram Identities
 
--- ft.h1: `telegram-group`: `<group-name>`
-
-This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she starred 
-the input repo. 
-
--- ft.code:
-lang: ftd
-
-\-- ft.code:
-lang: rust
-Url: https://api.github.com/user/starred
-Method: Get
-Authorization: Bearer {access_token}
-
 -- ft.h1: `telegram-admin`: `<group-name>`
 
 This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she subscribed 
-the input repo. 
+logged-in user will only be allowed to access a page if he/she 
+is admin of the group. 
 
 -- ft.code:
 lang: ftd
 
 \-- ft.code:
 lang: rust
-Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
+Url: https://api.telegram.org/bot{telegram-bot-token}/getChatAdministrators?
+chat_id="@group_name"
 Method: Get
-Authorization: Bearer {access_token}
+Header Parameters
+Accept: application/json
+user-agent: {user_agent}
+
+-- ft.h1: `telegram-group`: `<group-name>`
+
+This user identity will be used to implement the restrictions that the 
+logged-in user will only be allowed to access a page if he/she 
+has joined group. 
+
+-- ft.code:
+lang: ftd
+
+\-- ft.code:
+lang: rust
+Url: https://api.telegram.org/bot{telegram-bot-token}/getChatMember?
+chat_id="@group_name"&user_id="user_id"
+Method: Get
+Header Parameters
+Accept: application/json
+user-agent: {user_agent}
 
 -- ft.h1: `telegram-channel`: `<repo-name>`
 
 This user identity will be used to implement the restrictions that the 
-logged-in user will only be allowed to access a page if he/she has followed 
-the input repo.
+logged-in user will only be allowed to access a page if he/she 
+has been included in channel.
 
 -- ft.code:
 lang: ftd
 
 \-- ft.code:
 lang: rust
-Url: https://api.github.com/user/following
+Url: https://api.telegram.org/bot{telegram-bot-token}/getChatMember?
+chat_id="@group_name"&user_id="user_id"
 Method: Get
-Authorization: Bearer {access_token}
+Header Parameters
+Accept: application/json
+user-agent: {user_agent}

@@ -4,43 +4,28 @@
 
 -- ft.markdown:
 
-For Oauth Authentication using Github first of all a developer needs to create a new app on github. Follow steps given below to create a new app on github.
-
--- ft.markdown:
-
-From the right side of your github top bar. Click on profile picture then it will open drop down. From the drop down click on “Settings”.
+For Telegram Oauth Authentication first of all you need to create a 
+Telegram App.
+To create a Telegram App click on https://my.telegram.org/.
+Login using your telegram registered phone number.
 
 -- ft.image:
-src: $assets.files.static.images.auth.github.github-app-1.png
+src: $assets.files.static.images.auth.telegram.telegram-app-1.png
+align: center
+
+-- ft.image:
+src: $assets.files.static.images.auth.telegram.telegram-app-2.png
 align: center
 
 -- ft.markdown:
 
-From your Settings page. Scroll down and on your left side menu click on “Developer Settings” given at the end.
+Once logged in please click on `API development tools`.
 
 -- ft.image:
-src: $assets.files.static.images.auth.github.github-app-2.png
+src: $assets.files.static.images.auth.telegram.telegram-app-3.png
 align: center
 
 -- ft.markdown:
 
-From Developer Setting page click on “OAuth Apps” to create new App
-
--- ft.image:
-src: $assets.files.static.images.auth.github.github-app-3.png
-align: center
-
--- ft.markdown:
-
-Here you can get Client Id and Client Secret that you can save in somewhere 
-that will be used to access the application.
-
--- ft.markdown:
-
-Also fill in the Homepage Url and Authorization callback url. 
-Authorization callback url is the url where github will redirect users 
-with code and state after login.
-
--- ft.image:
-src: $assets.files.static.images.auth.github.github-app-4.png
-align: center
+Create the application in response it will give you `App Id` and 
+`App Secret` please save it in a secure file.

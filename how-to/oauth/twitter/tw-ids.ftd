@@ -12,6 +12,7 @@ lang: ftd
 lang: rust
 Url: https://api.twitter.com/2/tweets/{tweet-id}/liking_users
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `twitter-followers`: `<account-name>`
@@ -27,6 +28,7 @@ lang: ftd
 lang: rust
 Url: https://api.twitter.com/2/users/{user-id}/followers
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `twitter-follows`: `<account-name>`
@@ -42,6 +44,7 @@ lang: ftd
 lang: rust
 Url: https://api.twitter.com/2/users/{user-id}/following
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `twitter-retweet`: `<twitter-id>`
@@ -57,4 +60,5 @@ lang: ftd
 lang: rust
 Url: https://api.twitter.com/2/tweets/{tweet-id}/retweeted_by
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
