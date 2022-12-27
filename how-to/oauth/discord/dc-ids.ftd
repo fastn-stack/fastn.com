@@ -8,10 +8,9 @@ logged-in user has joined the server or not.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://discord.com/api/users/@me/guilds
 Method: Get
+Header Parameters
 Authorization: Bearer {access_token}
 
 -- ft.h1: `discord-thread`: `<thread-id>`
@@ -23,10 +22,9 @@ he/she is member of the thread.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://discord.com/api/channels/{thread-id}/thread-members
 Method: Get
+Header Parameters
 Authorization: Bot {bot_id}
 
 -- ft.h1: `discord-event`: `<event-id>`
@@ -37,10 +35,9 @@ logged-in user will only be allowed to access a page if he/she joined the event.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://discord.com/api/guilds/{guild-id}/scheduled-events/{event-id}/users
 Method: Get
+Header Parameters
 Authorization: Bot {bot_id}
 
 -- ft.h1: `discord-permission`: `<permission-id>`
@@ -52,8 +49,6 @@ has been given specific permission.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://discord.com/api/guilds/{guild-id}/members/{user-id}
 Method: Get
 Header Parameters

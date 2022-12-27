@@ -14,8 +14,6 @@ state=state&code_challenge=challenge&code_challenge_method=plain
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://twitter.com/i/oauth2/authorize
 ?client_id={client_id}&redirect_uri={redirect_url}&response_type=code&
 state=state&code_challenge=challenge&code_challenge_method=plain
@@ -38,8 +36,6 @@ Use token url to get access token on discord.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.twitter.com/2/oauth2/token
 Method: Get
 Header Parameters
@@ -55,8 +51,6 @@ cookies/session or in a database that will be used for other Http Apis.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.twitter.com/2/users/me
 Method: Get
 Header Parameters
@@ -67,8 +61,6 @@ Authorization: Bearer {access_token}
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.twitter.com/2/users/by/username/{user_name}
 Method: Get
 Header Parameters

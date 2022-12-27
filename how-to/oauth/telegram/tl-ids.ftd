@@ -9,8 +9,6 @@ is admin of the group.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.telegram.org/bot{telegram-bot-token}/getChatAdministrators?
 chat_id="@group_name"
 Method: Get
@@ -27,8 +25,6 @@ has joined group.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.telegram.org/bot{telegram-bot-token}/getChatMember?
 chat_id="@group_name"&user_id="user_id"
 Method: Get
@@ -45,8 +41,6 @@ has been included in channel.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.telegram.org/bot{telegram-bot-token}/getChatMember?
 chat_id="@group_name"&user_id="user_id"
 Method: Get

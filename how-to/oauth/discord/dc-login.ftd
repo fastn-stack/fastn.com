@@ -32,8 +32,6 @@ Use token url to get access token on discord.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://discord.com/api/oauth2/token
 Method: Post
 Parameters
@@ -53,8 +51,6 @@ cookies/session or in a database that will be used for other Http Apis.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://discord.com/api/users/@me
 Method: Get
 

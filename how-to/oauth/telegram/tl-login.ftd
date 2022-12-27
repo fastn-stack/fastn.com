@@ -18,8 +18,6 @@ You can use the Callback function or you can give a redirect url.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Script
 <script async src="https://telegram.org/js/telegram-widget.js?21" 
 data-telegram-login="fpmuserbot" data-size="medium" data-auth-url="" 

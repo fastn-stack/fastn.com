@@ -8,8 +8,6 @@ logged-in user will only be allowed to access a page if he/she liked a tweet.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.twitter.com/2/tweets/{tweet-id}/liking_users
 Method: Get
 Header Parameters
@@ -24,8 +22,6 @@ of the account.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.twitter.com/2/users/{user-id}/followers
 Method: Get
 Header Parameters
@@ -40,8 +36,7 @@ followed by the account.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
+
 Url: https://api.twitter.com/2/users/{user-id}/following
 Method: Get
 Header Parameters
@@ -56,8 +51,7 @@ has retweeted the tweet.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
+
 Url: https://api.twitter.com/2/tweets/{tweet-id}/retweeted_by
 Method: Get
 Header Parameters
