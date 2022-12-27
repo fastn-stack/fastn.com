@@ -18,14 +18,14 @@ logged-in user has joined the server or not.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: server-members
+discord-server: FifthTry.com
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Discord Server: /
+readers: server-members
 
 -- ft.h2: Discord Resource API
 
@@ -50,14 +50,14 @@ he/she is member of the thread.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: thread-members
+discord-thread: 1050487724727091291
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Discord Thread: /
+readers: thread-members
 
 -- ft.h2: Discord Resource API
 
@@ -81,14 +81,14 @@ logged-in user will only be allowed to access a page if he/she joined the event.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: event-members
+discord-event: 1050685780747620362
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Discord Event: /
+readers: event-members
 
 -- ft.h2: Discord Resource API
 
@@ -113,14 +113,14 @@ has been given specific permission.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: permitted-members
+discord-permission: 1051824761375834193
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Discord Permission: /
+readers: permitted-members
 
 -- ft.h2: Discord Resource API
 

@@ -19,14 +19,14 @@ is admin of the group.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: group-admins
+telegram-admin: @fpmgrp
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Telegram Admin: /
+readers: group-admins
 
 -- ft.h2: Telegram Resource API
 
@@ -53,14 +53,14 @@ has joined group.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: group-members
+telegram-group: @fpmgrp
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Telegram Group: /
+readers: group-members
 
 -- ft.h2: Telegram Resource API
 
@@ -87,14 +87,14 @@ has been included in channel.
 -- ft.code: FPM.ftd
 lang: ftd
 
-\-- fpm.user-group: starred-repos
-github-starred: ftd-lang/fpm
+\-- fpm.user-group: channel-members
+telegram-channel: @fpmapp
 
 
 \-- fpm.sitemap:
 
-# Github Starred: /
-readers: starred-repos
+# Telegram Channel: /
+readers: channel-members
 
 -- ft.h2: Telegram Resource API
 
