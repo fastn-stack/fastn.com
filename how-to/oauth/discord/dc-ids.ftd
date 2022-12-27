@@ -1,9 +1,33 @@
 -- ft.page: How To Use Discord Identities
 
+-- ft.markdown:
+
+A fpm package can limit who has read or write access. We do it by organising a
+set of [user identities](/dev/user-identity/) using `user group` and then using
+the `user group` in the [sitemap](/sitemap/).
+
 -- ft.h1: `discord-server`: `<server-name>`
 
+-- ft.markdown:
+
 This user identity will be used to implement the restrictions that the 
-logged-in user has joined the server or not. 
+logged-in user has joined the server or not.
+
+-- ft.h2: How To Use It
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.user-group: starred-repos
+github-starred: ftd-lang/fpm
+
+
+\-- fpm.sitemap:
+
+# Github Starred: /
+readers: starred-repos
+
+-- ft.h2: Discord Resource API
 
 -- ft.code:
 lang: ftd
@@ -15,9 +39,27 @@ Authorization: Bearer {access_token}
 
 -- ft.h1: `discord-thread`: `<thread-id>`
 
+-- ft.markdown:
+
 This user identity will be used to implement the restrictions that the 
 logged-in user will only be allowed to access a page if 
 he/she is member of the thread. 
+
+-- ft.h2: How To Use It
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.user-group: starred-repos
+github-starred: ftd-lang/fpm
+
+
+\-- fpm.sitemap:
+
+# Github Starred: /
+readers: starred-repos
+
+-- ft.h2: Discord Resource API
 
 -- ft.code:
 lang: ftd
@@ -29,8 +71,26 @@ Authorization: Bot {bot_id}
 
 -- ft.h1: `discord-event`: `<event-id>`
 
+-- ft.markdown:
+
 This user identity will be used to implement the restrictions that the 
 logged-in user will only be allowed to access a page if he/she joined the event.
+
+-- ft.h2: How To Use It
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.user-group: starred-repos
+github-starred: ftd-lang/fpm
+
+
+\-- fpm.sitemap:
+
+# Github Starred: /
+readers: starred-repos
+
+-- ft.h2: Discord Resource API
 
 -- ft.code:
 lang: ftd
@@ -42,9 +102,27 @@ Authorization: Bot {bot_id}
 
 -- ft.h1: `discord-permission`: `<permission-id>`
 
+-- ft.markdown:
+
 This user identity will be used to implement the restrictions that the 
 logged-in user will only be allowed to access a page if he/she 
 has been given specific permission.
+
+-- ft.h2: How To Use It
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.user-group: starred-repos
+github-starred: ftd-lang/fpm
+
+
+\-- fpm.sitemap:
+
+# Github Starred: /
+readers: starred-repos
+
+-- ft.h2: Discord Resource API
 
 -- ft.code:
 lang: ftd
