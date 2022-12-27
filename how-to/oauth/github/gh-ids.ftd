@@ -6,15 +6,35 @@ This user identity will be used to implement the restrictions that the
 logged-in user will only be allowed to access a page if he/she starred 
 the input repo. 
 
+-- ft.h2: How To Use It
+
+[User Group](/dev/user-group/)
+
+[User Identity](/dev/user-identity/)
+
+-- ft.code: FPM.ftd
+lang: ftd
+
+\-- fpm.user-group: starred-repos
+github-starred: ftd-lang/fpm
+github-starred: ftd-lang/ftd
+
+
+\-- fpm.sitemap:
+
+# Github Starred: /
+readers: starred-repos
+
+-- ft.h2: GitHub Resource API
+
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.github.com/user/starred
 Method: Get
 Header Parameters
 Authorization: Bearer {access_token}
+
 
 -- ft.h1: `github-watches`: `<repo-name>`
 
@@ -25,8 +45,6 @@ the input repo.
 -- ft.code:
 lang: ftd
 
-\-- ft.code:
-lang: rust
 Url: https://api.github.com/orgs/{org_title}/teams/{team_name}
 Method: Get
 Header Parameters
