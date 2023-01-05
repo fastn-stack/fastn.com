@@ -283,7 +283,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/dash-dash-ds/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Featured
-last-updated: 19th Nov 2022
+last-updated: 19 Nov 2022
 
 `DS` means documentation site. `ds` is ready to use template for your `FTD` web sites, blogs etc.
 
@@ -295,7 +295,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Blue-Sapphire-Template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
-last-updated: 27th Jul 2022
+last-updated: 27 Jul 2022
 
 `DS` means documentation site. `Blue-Sapphire-Template` was ready to use template for your `FTD` web sites, blogs etc. Its outdated for `FTD` use.
 
@@ -343,6 +343,7 @@ package-type: CS
 licence-url: https://github.com/FifthTry/blue-sapphire-cs/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `cs` means color scheme. `blue-sapphire-cs` is ready to use color scheme. It is in blue sapphire colors.
 
@@ -354,6 +355,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/slides/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 26 Dec 2022
 
 `slides` is a presentation template.
 
@@ -365,6 +367,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/simple-dark-slides/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 08 Oct 2022
 
 `simple-dark-slides` is a `slides` presentation theme.
 
@@ -376,6 +379,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/streamline-slides/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 12 Oct 2022
 
 `streamline-slides` is a `slides` presentation theme.
 
@@ -387,6 +391,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/momentum-slides/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 12 Oct 2022
 
 `momentum-slides` is a `slides` presentation theme.
 
@@ -398,6 +403,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/Crispy-Presentation-Theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 03 Sep 2022
 
 `Crispy-Presentation-Theme` was a `slides` presentation theme. Its now outdated and should not be used into `FTD` packages.
 
@@ -409,6 +415,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/Crispy-Presentation-Template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 03 Sep 2022
 
 `Crispy-Presentation-Template` was a `slides` presentation template. Its now outdated and should not be used into `FTD` packages.
 
@@ -420,6 +427,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/Rotary-Presentation-Theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 12 Jul 2022
 
 `Rotary-Presentation-Theme` was a `slides` presentation theme. Its now outdated and should not be used into `FTD` packages.
 
@@ -431,6 +439,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/Rotary-Presentation-Template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Aug 2022
 
 `Rotary-Presentation-Template` was a `slides` presentation template. Its now outdated and should not be used into `FTD` packages.
 
@@ -442,6 +451,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/Giggle-Presentation-Theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 18 Jul 2022
 
 `Giggle-Presentation-Theme` was a `slides` presentation theme. Its now outdated and should not be used into `FTD` packages.
 
@@ -453,6 +463,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/Giggle-Presentation-Template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Aug 2022
 
 `Giggle-Presentation-Template` was a `slides` presentation template. Its now outdated and should not be used into `FTD` packages.
 
@@ -464,6 +475,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/bling/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Featured
+last-updated: 04 Jan 2023
 
 `BL` means bling library. `bling` is a library of `FTD` components. `BL` has more than `10+` components, which are ready to use for your web packages.
 
@@ -475,6 +487,7 @@ package-type: IG
 licence-url: https://github.com/FifthTry/slika-ig/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 22 Aug 2022
 
 `IG` means image gallery. `slika-ig` image gallery is ready to use for your `FTD` web packages.
 
@@ -486,6 +499,7 @@ package-type: IG
 licence-url: https://github.com/FifthTry/imagen-ig/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 22 Aug 2022
 
 `IG` means image gallery. `imagen-ig` image gallery is ready to use for your `FTD` web packages.
 
@@ -497,6 +511,7 @@ package-type: IG
 licence-url: https://github.com/FifthTry/imago-gallery-ig/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Featured
+last-updated: 03 Sep 2022
 
 `IG` means image gallery. `imago-gallery-ig` image gallery is ready to use for your `FTD` web packages.
 
@@ -508,6 +523,7 @@ package-type: Typography
 licence-url: https://github.com/FifthTry/typography/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `TF` means typography. `typography` contains `h0`,`h1`, `h2`, `h3` and `markdown` which can be used on `FTD` web sites as `typography` component.
 
@@ -519,6 +535,7 @@ package-type: Header
 licence-url: https://github.com/FifthTry/header/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 16 Nov 2022
 
 `H` means header. `header` can be used on `FTD` web sites as `header` component.
 
@@ -530,6 +547,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/admonitions/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 03 Jan 2023
 
 `cbox` means admonitions. `admonitions` can be used on `FTD` web sites as `admonitions` component.
 
@@ -541,6 +559,7 @@ package-type: CB
 licence-url: https://github.com/FifthTry/code-block/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `cb` means code-block. `code-block` can be used on `FTD` web sites as `code-block` component.
 
@@ -552,6 +571,7 @@ package-type: LS
 licence-url: https://github.com/FifthTry/language-switcher/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `ls` means language switcher. `language-switcher` component can be used to translates web page content in available languages.
 
@@ -563,6 +583,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/inter/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 23 Dec 2022
 
 `inter-font` is included in `FTD`. `inter-font` can be used on `FTD` web sites to change font of your web pages. Original trademark of `github.com/rsms/inter`.
 
@@ -574,6 +595,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/lato-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 14 Nov 2022
 
 `lato-font` is included in `FTD`. `lato-font` can be used on `FTD` web sites to change font of your web pages.
 
@@ -585,6 +607,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/roboto/blob/main/LICENSE
 licence-name: Apache-2.0
 status: Documented
+last-updated: 14 Nov 2022
 
 `roboto-font` is included in `FTD`. `roboto-font` can be used on `FTD` web sites to change font of your web pages.
 
@@ -596,6 +619,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/roboto-mono/blob/main/LICENSE
 licence-name: Apache-2.0
 status: Documented
+last-updated: 14 Nov 2022
 
 `roboto-mono-font` is included in `FTD`. `roboto-mono-font` can be used on `FTD` web sites to change font of your web pages.
 
@@ -607,6 +631,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/virgil-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 03 Sep 2022
 
 `virgil-font` is included in `FTD`. `virgil-font` can be used on `FTD` web sites to change font of your web pages. Inspired by `github.com/excalidraw/virgil`.
 
@@ -618,6 +643,7 @@ package-type: PS
 licence-url: https://github.com/FifthTry/product-switcher/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `PS` means product switcher. `switcher` can be used on your web pages as a brand website switcher.
 
@@ -629,6 +655,7 @@ package-type: Component
 licence-url: https://github.com/FifthTry/dark-mode-switcher/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `DMS` means dark mode switcher. `dark-mode-switcher` can be used on your web pages as a dark and light theme switcher.
 
@@ -640,6 +667,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/button/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 18 Nov 2022
 
 `BT` means button. `button` can be used on your web pages as a button component.
 
@@ -651,6 +679,7 @@ package-type: Icons
 licence-url: https://github.com/FifthTry/octicon/blob/main/LICENSE
 licence-name: Apache-2.0
 status: Documented
+last-updated: 01 Sep 2022
 
 `IC` means icon. `octicon` can be used on your web pages as a octicons icon component.
 
@@ -662,6 +691,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 04 Jan 2023
 
  `resume` is default resume data package. Its used in all resume themes as resume data template.
 
@@ -673,6 +703,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/paper-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 29 Dec 2022
 
 `paper-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -684,6 +715,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/caffeine-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 04 Jan 2023
 
 `caffeine-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -695,6 +727,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/elegant-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 26 Jul 2022
 
 `elegant-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -706,6 +739,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/onepage-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 23 Aug 2022
 
 `onepage-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -717,6 +751,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/actual-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 23 Aug 2022
 
 `actual-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -728,6 +763,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/spartan-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 23 Aug 2022
 
 `spartan-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -739,6 +775,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/resume-autumn/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 23 Aug 2022
 
 `resume-autumn` is a resume theme. `resume` template is required as default resume data template.
 
@@ -750,6 +787,7 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/kendall-resume/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 23 Aug 2022
 
 `kendall-resume` is a resume theme. `resume` template is required as default resume data template.
 
@@ -761,6 +799,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/simple-blog/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Aug 2022
 
 `simple-blog` was a blog theme. `simple-blog` theme can be used as `FTD` blog template for bloggers.
 
@@ -772,6 +811,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/blog-components/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 01 Sep 2022
 
 `blog-components` are used in a `ds` package. Its outdated and should not be used into `FTD` packages.
 
@@ -783,6 +823,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Rocky-Blog-Theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Aug 2022
 
 `Rocky-Blog-Theme` is `FTD` blog theme for bloggers. Its outdated and should not be used into `FTD` packages.
 
@@ -794,6 +835,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/Rocky-Blog-Template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 11 Jan 2022
 
 `Rocky-Blog-Template` is `FTD` blog theme for bloggers. Its outdated and should not be used into `FTD` packages.
 
@@ -805,6 +847,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/fpm-book/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 04 Feb 2022
 
 `fpm-book` is `FTD` book theme for authors. Its outdated and should not be used into `FTD` packages.
 
@@ -816,6 +859,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Forest-FOSS-Template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 21 Jan 2022
 
 `Forest-FOSS-Template` is `FTD` book theme for authors. Its outdated and should not be used into `FTD` packages.
 
@@ -827,6 +871,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/jupiter-foss-template/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 04 Feb 2022
 
 `jupiter-foss-template` is `FTD` static web site theme. Its outdated and should not be used into `FTD` packages.
 
@@ -838,6 +883,7 @@ package-type: Footer
 licence-url: https://github.com/FifthTry/footer/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: In Progress
+last-updated: 23 Aug 2022
 
 `footer` will be used in a `ds` package. 
 
@@ -849,6 +895,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/ForestTheme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `ForestTheme` is ready to use color scheme.
 
@@ -860,6 +907,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Docusaurus-theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Mar 2022
 
 `Docusaurus-theme` allows you to get started with a FPM powered blog.
 
@@ -871,6 +919,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/blog-theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Mar 2022
 
 `blog-theme` is a simple blog theme for fpm packages.
 
@@ -882,6 +931,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Green-theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Mar 2022
 
 `Green-theme` is a theme for creating FPM powered open source project page.
 
@@ -893,6 +943,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Jupiter-theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 23 Mar 2022
 
 `Jupiter-theme` is a part of `Flash-theme`. Template for book written as FPM Package.
 
@@ -904,6 +955,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Flash-theme/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Outdated
+last-updated: 28 Jan 2022
 
 `Flash-theme` is a template for book written as FPM Package.
 
@@ -915,6 +967,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/spider-book-ds/blob/main/LICENSE
 licence-name: BSD-3-Clause
 status: Documented
+last-updated: 22 Nov 2022
 
 `spider-book-ds` is a chrome book documentation site.
 
@@ -926,6 +979,7 @@ package-type: CS
 licence-url: https://github.com/FifthTry/dash-dash-cs/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 Color scheme for `dash-dash-cs`.
 
@@ -937,6 +991,7 @@ package-type: CS
 licence-url: https://github.com/FifthTry/spider-book-cs/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 `spider-book-cs` Chrome book Color Scheme is a light color scheme used for chrome-book-ds.
 
@@ -948,6 +1003,7 @@ package-type: Slides
 licence-url: https://github.com/FifthTry/simple-light-slides/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 12 Oct 2022
 
 `simple-light-slides` is a `slides` presentation theme.
 
@@ -959,6 +1015,7 @@ package-type: DS
 licence-url: https://github.com/FifthTry/Forest-Template/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 26 Jul 2022
 
 `DS` means documentation site. `Forest-Template` is ready to use template for your `FTD` web sites, blogs etc.
 
@@ -970,6 +1027,7 @@ package-type: PS
 licence-url: https://github.com/FifthTry/texty-ps/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Coded
+last-updated: 05 Jan 2023
 
 `texty-ps` is a personal site help you to create your personal websites.
 
@@ -981,6 +1039,7 @@ package-type: PS
 licence-url: https://github.com/FifthTry/jony-ps/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Coded
+last-updated: 21 Dec 2022
 
 `jony-ps` is a personal site help you to create your personal websites.
 
@@ -992,6 +1051,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/images/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 05 Sep 2022
 
 A collection `images` components for FTD web package.
 
@@ -1003,6 +1063,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/tiro-devnagari-marathi-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 19 Nov 2022
 
 `tiro-devnagari-marathi-font` is included in `FTD`. `tiro-devnagari-marathi-font` can be used on `FTD` web sites to change font of your web pages. Original trademark of `github.com/rsms/inter`.
 
@@ -1014,6 +1075,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/karma-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 18 Nov 2022
 
 `karma-font` is included in `FTD`. `karma-font` can be used on `FTD` web sites to change font of your web pages. Original trademark of `github.com/rsms/inter`.
 
@@ -1025,6 +1087,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/pragati-narrow-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 18 Nov 2022
 
 `pragati-narrow-font` is included in `FTD`. `pragati-narrow-font` can be used on `FTD` web sites to change font of your web pages. Original trademark of `github.com/rsms/inter`.
 
@@ -1036,6 +1099,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/khand-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 18 Nov 2022
 
 `khand-font` is included in `FTD`. `khand-font` can be used on `FTD` web sites to change font of your web pages. Original trademark of `github.com/rsms/inter`.
 
@@ -1047,6 +1111,7 @@ package-type: Font
 licence-url: https://github.com/FifthTry/arya-font/blob/main/LICENSE
 licence-name: SIL-1.1
 status: Documented
+last-updated: 13 Nov 2022
 
 `arya-font` is included in `FTD`. `arya-font` can be used on `FTD` web sites to change font of your web pages. Original trademark of `github.com/rsms/inter`.
 
@@ -1058,6 +1123,7 @@ package-type: Form
 licence-url: https://github.com/FifthTry/form/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 `form` can be used on your web-page as a form component.
 
@@ -1069,6 +1135,7 @@ package-type: Cards
 licence-url: https://github.com/FifthTry/cards/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 28 Dec 2022
 
 `cards` can be used on your web-page as a cards component.
 
@@ -1080,6 +1147,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/package-doc/blob/main/LICENSE
 licence-name: BSD 2-Clause
 status: Documented
+last-updated: 03 Jan 2023
 
 `package-doc` is a FPM Package Documentation Helpers.
 
@@ -1091,6 +1159,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/demo-day/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 05 Jan 2023
 
 `DD` stands for `demo-day`. Template for Demo Day.
 
@@ -1102,6 +1171,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/subscription-app/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 `SA` stands for `subscription-app`. This FTD subscription app template 
 helps your FTD website users to subscribe.
@@ -1114,6 +1184,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/app-switcher/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 `AS` stands for `app-switcher`. App Switcher FTD component is used to 
 switch between apps of FTD web-site.
@@ -1126,6 +1197,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/workshop-page/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 `WS` stands for `workshop-page`. Workshop page is -- ws component for 
 workshop workbook.
@@ -1138,6 +1210,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/event/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Oct 2022
 
 `E` stands for `event`. This will help you to create different events.
 
@@ -1149,6 +1222,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/key-value-table/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: Documented
+last-updated: 21 Dec 2022
 
 `key-value-table` to be called as `kvt` is a data table with tooltip feature.
 
@@ -1160,6 +1234,7 @@ package-type: CL
 licence-url: https://github.com/FifthTry/toc/blob/main/LICENSE
 licence-name: BSD 2-Clause
 status: Documented
+last-updated: 01 Sep 2022
 
 `TOC` is a toc component help you to create table of content in you website.
 
@@ -1171,5 +1246,6 @@ package-type: Resume
 licence-url: https://github.com/FifthTry/flat-resume/blob/main/LICENSE
 licence-name: BSD 3-Clause
 status: In Progress
+last-updated: 21 Dec 2022
 
 `flat-resume` is a resume theme. `resume` template is required as default resume data template.
