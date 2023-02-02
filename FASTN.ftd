@@ -12,7 +12,7 @@ implements: fifthtry.github.io/theme
 -- fastn.dependency: fifthtry.github.io/product-switcher as ps
 -- fastn.dependency: fifthtry.github.io/fifthtry-brand-switcher as fbs
 -- fastn.dependency: fifthtry.github.io/bling
-;; -- fastn.dependency: fifthtry.github.io/color-doc as cd
+-- fastn.dependency: fifthtry.github.io/color-doc as cd
 -- fastn.dependency: fifthtry.github.io/admonitions
 -- fastn.dependency: fifthtry.github.io/roboto-mono as mono
 

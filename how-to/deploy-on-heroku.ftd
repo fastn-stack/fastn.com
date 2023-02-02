@@ -1,3 +1,5 @@
+-- import: ds as ft
+
 -- import: fastn.dev/assets
 
 -- ft.page: Deploy FASTN Package On Heroku
@@ -11,7 +13,7 @@
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-1.png
-width: fill
+width: fill-container
 
 - Do the appropriate fill outs in github page and then click `Create repository
 from template.`
@@ -22,7 +24,7 @@ Note: Wait till the `Rename the project from template` workflow executed success
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-3.png
-width: fill
+width: fill-container
 
 -- ft.h1: Deploy on Heroku
 
@@ -32,7 +34,7 @@ this button, you should be landed to `heroku.com`.
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-6.png
-width: fill
+width: fill-container
 
 
 -- ft.markdown:
@@ -43,14 +45,14 @@ Fill the `App name` which should be unique to heroku apps and click on
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-7.png
-width: fill
+width: fill-container
 
 After filling the `App name` and clicking on the `Deploy app`, you should see
 the below output(build logs) and `Your app was successfully deployed`.
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-8.png
-width: fill
+width: fill-container
 
 Now click on `View` button, and your FASTN App is ready with Heroku.
 
@@ -58,7 +60,7 @@ Yay!!! 💃
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-9.png
-width: fill
+width: fill-container
 
 
 -- ft.h1: How To Redeploy FASTN Package
@@ -78,7 +80,7 @@ give a token.
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-10.png
-width: fill
+width: fill-container
 
 
 -- ft.h2: Set Heroku Auth Token to GitHub Repository
@@ -90,11 +92,11 @@ Heroku Auth token in the `Secret` and click on the `Add secret` button.
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-11.png
-width: fill
+width: fill-container
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-12.png
-width: fill
+width: fill-container
 
 -- ft.h2: Update GitHub Workflow Actions
 
@@ -137,7 +139,7 @@ automatically fetch your new content from your GitHub repository.
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-13.png
-width: fill
+width: fill-container
 
 
 -- ft.h2: How to Update `fastn` Binary on Heroku
@@ -155,7 +157,7 @@ Heroku application, by default it uses `web.1` if you have not changed it.
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-14.png
-width: fill
+width: fill-container
 
 
 -- ft.h1: Contact Us
@@ -164,3 +166,5 @@ If you are getting any issue while deploying or with the above process, feel
 free to contact us on [Discord](https://discord.gg/CPNtd3TF).
 
 If you think it worked well, Please starred [FASTN](https://github.com/FifthTry/fastn).
+
+-- end: ft.page

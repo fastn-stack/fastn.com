@@ -61,7 +61,7 @@ boolean show-bar: false
 string marktext:
 string blah:
 integer number:
-width: fill
+width: fill-container
 background-color: $fastn.color.main.background.base
 
 \-- end: my-ftd-component

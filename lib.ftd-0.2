@@ -1,4 +1,4 @@
--- import: ft
+-- import: ds as ft
 -- import: fastn.dev/assets
 -- import: fifthtry.github.io/bling/assets as b-assets
 -- import: fifthtry.github.io/bling/chat
@@ -100,7 +100,7 @@ ftd.image-src image:
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
-padding-horizontal.px: $ft.content-padding.px
+/padding-horizontal.px: $ft.content-padding.px
 padding-vertical.px: 50
 spacing.fixed.px: 40
 ;;open: true
@@ -111,7 +111,7 @@ width: fill-container
 
 -- ftd.text: $hero-desktop.title
 color: $inherited.colors.text
-width.fixed.percent:: 75
+width.fixed.percent: 75
 ;;position: center
 role: $inherited.types.heading-large
 
@@ -193,12 +193,12 @@ spacing.fixed.px: 30
 caption title:
 string url:
 optional ftd.color color: $inherited.colors.text
-optional ftd.color background-solid: $inherited.colors.background.base
+optional ftd.color background_solid: $inherited.colors.background.base
 
 -- ftd.text: $action-button.title
 link: $action-button.url
-background.solid: $action-button.background-solid
-if: { action-button.background-solid != NULL }
+background.solid: $action-button.background_solid
+if: { action-button.background_solid != NULL }
 color: $action-button.color
 if: { action-button.color != NULL }
 border-radius.px: 6

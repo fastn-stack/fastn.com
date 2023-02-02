@@ -1,3 +1,5 @@
+-- import: ds as ft
+
 -- import: fastn.dev/assets
 
 -- ft.page: Deploy FASTN Package On Heroku
@@ -116,7 +118,7 @@ the Heroku Platform API?](https://help.heroku.com/PBGP6IDE/how-should-i-generate
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-1.png
-width: fill
+width: fill-container
 
 - Do the appropriate fill outs in github page and then click `Create repository
 from template.`
@@ -160,7 +162,7 @@ For more details: Visit [Creating encrypted secrets for a repository](https://do
 
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-2.png
-width: fill
+width: fill-container
 
 
 -- ft.h1: 3️⃣ Deploy on Heroku Using Github
@@ -173,7 +175,7 @@ width: fill
 ;; TODO: Need to change the image
 -- ft.image:
 src: $assets.files.static.deploy-on-heroku-1.png
-width: fill
+width: fill-container
 
 - Do the appropriate fill outs in github page and then click `Create repository
 from template.`
@@ -213,3 +215,5 @@ lang: diff
 - Heroku app setup
 - use `fastn-template` github template for fastn package which id to be deployed
 - Heroku push using `fastn-heroku` repo as github template
+
+-- end: ft.page

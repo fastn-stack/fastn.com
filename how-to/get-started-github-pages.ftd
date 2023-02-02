@@ -1,3 +1,5 @@
+-- import: ds as ft
+
 -- import: fastn.dev/assets
 
 -- ft.page: Getting started with github pages
@@ -19,7 +21,7 @@ browser and click on the `Use this template` button
 
 -- ft.image: Step I: Use the template repository to initialize your repository
 src: $assets.files.how-to.github-use-this-template.png
-width: fill
+width: fill-container
 
 -- ft.h2: Step 2: Updating the configs in repository
 
@@ -46,4 +48,6 @@ Choose the `build` branch in the dropdown and in the directory dropdown, choose
 
 -- ft.image:
 src: $assets.files.how-to.github-pages-initialize.png
-width: fill
+width: fill-container
+
+-- end: ft.page
