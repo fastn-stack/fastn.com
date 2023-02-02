@@ -1,25 +1,25 @@
--- import: fpm.dev/assets
+-- import: fastn.dev/assets
 
 
 -- ds.page:
 
--- ds.h1: FPM binary Installation Using Windows
+-- ds.h1: FASTN binary Installation Using Windows
 
 -- ds.markdown:
 
-download the latest version [fpm binary installation](https://github.com/ftd-lang/fpm/releases)
+download the latest version [fastn binary installation](https://github.com/ftd-lang/fastn/releases)
 
 -- ds.image:
-src: $assets.files.static.images.setup.fpm.png
+src: $assets.files.static.images.setup.fastn.png
 ;; scale: 1
 width: fill-container
 
 -- ds.markdown:
 
-Make a folder and added fpm release on it.
+Make a folder and added fastn release on it.
 
 -- ds.image:
-src: $assets.files.static.images.setup.fpm-folder.png
+src: $assets.files.static.images.setup.fastn-folder.png
 ;; scale: 1
 width: fill-container
 
@@ -31,7 +31,7 @@ Go to Menu Bar
 
 
 -- ds.image:
-src: $assets.files.static.images.setup.setup-fpm.png
+src: $assets.files.static.images.setup.setup-fastn.png
 ;; scale: 1
 width: fill-container
 

@@ -1,10 +1,10 @@
--- ft.page: Deploy FPM on Heroku
+-- ft.page: Deploy FASTN on Heroku
 
 ## Steps:
-- Setup Heroku `abrark-app` with `fpm-heroku`
-- FPM Template
+- Setup Heroku `abrark-app` with `fastn-heroku`
+- FASTN Template
     - Added Workflows
-      - Update FPM binary on Heroku
+      - Update FASTN binary on Heroku
       - Update ftd content on Heroku
 - What to in these templates
 - Setup HEROKU_TOKEN in your github repositories secret key
@@ -12,4 +12,4 @@
 
 For Public:
 - Deploy Rust Binary On Heroku
-- Deploy FPM on Heroku
+- Deploy FASTN on Heroku

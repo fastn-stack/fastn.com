@@ -1,6 +1,6 @@
--- ds.page: `import: fpm`
+-- ds.page: `import: fastn`
 
-This file contain information about what all things are present in `fpm`
+This file contain information about what all things are present in `fastn`
 
 
 -- ds.h1: User Group
@@ -70,7 +70,7 @@ key-value-data list group-members:
 
 -- ds.h1: Sitemap
 
-Sitemap structure in FPM, It contains reader, writer groups and sitemap body.
+Sitemap structure in FASTN, It contains reader, writer groups and sitemap body.
 
 -- ds.code:
 lang: ftd
@@ -86,7 +86,7 @@ body sitemap-body:
 
 -- ds.h1: Sitemap Compat
 
-Sitemap Compat is the output for UI of `fpm.sitemap`
+Sitemap Compat is the output for UI of `fastn.sitemap`
 
 -- ds.code:
 lang: ftd

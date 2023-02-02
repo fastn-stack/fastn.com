@@ -1,5 +1,5 @@
--- import: fpm.dev/lib
--- import: fpm.dev/assets
+-- import: fastn.dev/lib
+-- import: fastn.dev/assets
 
 
 -- ft.page:
@@ -30,15 +30,15 @@ live_preview: https://fifthtry.github.io/Forest-Template/
 
 --- lib.theme: Jupiter
 if: not $ftd.dark-mode
-link: https://github.com/FifthTry/fpm-book/generate
+link: https://github.com/FifthTry/fastn-book/generate
 image: $assets.files.static.images.jupiter-light.jpg
-live_preview: https://fifthtry.github.io/fpm-book/
+live_preview: https://fifthtry.github.io/fastn-book/
 
 --- lib.theme: Jupiter
 if: $ftd.dark-mode
-link: https://github.com/FifthTry/fpm-book/generate
+link: https://github.com/FifthTry/fastn-book/generate
 image: $assets.files.static.images.jupiter-dark.jpg
-live_preview: https://fifthtry.github.io/fpm-book/
+live_preview: https://fifthtry.github.io/fastn-book/
 
 
 --- lib.theme: Blue Sapphire

@@ -4,27 +4,27 @@
 
 
 
--- ds.page: `FPM.ftd`
+-- ds.page: `FASTN.ftd`
 
 -- ds.markdown: 
 
-In every [FPM package](/fs/) there must be a file named `FPM.ftd`.
+In every [FASTN package](/fs/) there must be a file named `FASTN.ftd`.
 
 -- ds.code:
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: amitu
+\-- fastn.package: amitu
 repo: github
 
 
 
 
 
--- ds.h1: `fpm.package`
+-- ds.h1: `fastn.package`
 
-This is the only mandatory `ftd section` in `FPM.ftd` file.
+This is the only mandatory `ftd section` in `FASTN.ftd` file.
 
 
 
@@ -40,9 +40,9 @@ This is the name of the package. This is the only required value.
 
 -- ds.h2: `repo: optional string`
 
-An FPM package can be hosted on [`fpm-repo`](/fpm/about/) or on Github etc.
+An FASTN package can be hosted on [`fastn-repo`](/fastn/about/) or on Github etc.
 
-If the key is missing, the package is assumed to be hosted on `fpm-repo`,
+If the key is missing, the package is assumed to be hosted on `fastn-repo`,
 `www.fifthtry.com`.
 
 If the package is hosted on Github, then it must be `repo: github`.
@@ -67,18 +67,18 @@ store it here.
 
 
 
--- ds.h1: `fpm.dependency`
+-- ds.h1: `fastn.dependency`
 
 A package can depend on another package.
 
 -- ds.code:
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: amitu
+\-- fastn.package: amitu
 
-\-- fpm.dependency: fifthtry/fpm-blog
+\-- fastn.dependency: fifthtry/fastn-blog
 repo: github
 
 
@@ -87,8 +87,8 @@ repo: github
 
 -- ds.markdown:
 
-Here the package `amitu` has a dependency on `fifthtry/fpm-blog`. When any
-dependency is specified, `fpm build` downloads and stored it in `.packages` folder.
+Here the package `amitu` has a dependency on `fifthtry/fastn-blog`. When any
+dependency is specified, `fastn build` downloads and stored it in `.packages` folder.
 
 Any number of dependencies can be mentioned.
 
@@ -107,20 +107,20 @@ assumed to the same as `repo` of the current package.
 
 -- ds.h2: `mount-point`
 
-`fpm.dependency` now contains a header `mount-point`. It is used for clean urls
+`fastn.dependency` now contains a header `mount-point`. It is used for clean urls
 for a dependency.
 
--- ds.code: abrark/FPM.ftd
+-- ds.code: abrark/FASTN.ftd
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: abrark.com
+\-- fastn.package: abrark.com
 
-\-- fpm.dependency: fifthtry.github.io/todos as todos
+\-- fastn.dependency: fifthtry.github.io/todos as todos
 mount-point: /todos/
 
-\-- fpm.sitemap:
+\-- fastn.sitemap:
 
 # Todos
 - TODOs: /todos/
@@ -134,15 +134,15 @@ mount-point: /todos/
 All the requests coming to `abrark.com` which has prefix `/todos/`(`mount-point`)
 in the urls, will be served by package `fifthtry.github.io/todos`.
 
--- ds.code: fifthtry.github.io/todos/FPM.ftd
+-- ds.code: fifthtry.github.io/todos/FASTN.ftd
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: fifthtry.github.io/todos
+\-- fastn.package: fifthtry.github.io/todos
 download-base-url: https://raw.githubusercontent.com/fifthtry/kameri-app/main
 
-\-- fpm.sitemap:
+\-- fastn.sitemap:
 
 # App: /
 
@@ -165,7 +165,7 @@ lang: ftd
 dark: dark-image.png
 light: light-image.png
 
-\-- fpm.package: kameri-app.herokuapp.com
+\-- fastn.package: kameri-app.herokuapp.com
 download-base-url: https://raw.githubusercontent.com/fifthtry/kameri-app/main
 icon: $icon
 
@@ -173,7 +173,7 @@ icon: $icon
 
 
 
--- ds.h1: `fpm.font`
+-- ds.h1: `fastn.font`
 
 Any custom fonts can be included in FTD generated HTML files by using `font`
 blocks:
@@ -181,7 +181,7 @@ blocks:
 -- ds.code:
 lang: ftd
 
-\-- fpm.font: myFirstFont
+\-- fastn.font: myFirstFont
 woff: sansation_light.woff
 woff2: sansation_light.woff
 
@@ -214,19 +214,19 @@ At least one of the two must be provided.
 
 
 
--- ds.h1: `fpm.ignore`
+-- ds.h1: `fastn.ignore`
 
 You can add files to ignore when creating a build. Ignored files are not processed
 during build process, and are not made part of `.build` folder.
 
-By default `fpm` already ignores all files that `git` ignores, if the package is
-part of a git repository. You can also ignore files by using `fpm.ignore`:
+By default `fastn` already ignores all files that `git` ignores, if the package is
+part of a git repository. You can also ignore files by using `fastn.ignore`:
 
 -- ds.code:
 lang: ftd
 
-\-- fpm.ignore: *.txt
-\-- fpm.ignore: /db.sqlite
+\-- fastn.ignore: *.txt
+\-- fastn.ignore: /db.sqlite
 
 
 
@@ -240,15 +240,15 @@ Any number of patterns can be specified.
 
 
 
--- ds.h1: User Group `fpm.user-group`
+-- ds.h1: User Group `fastn.user-group`
 
-You can add user groups to FPM.ftd file. Details in [user-group
+You can add user groups to FASTN.ftd file. Details in [user-group
 docs](/dev/user-group)
 
 -- ds.code:
 lang: ftd
 
-\-- fpm.user-group: readers
+\-- fastn.user-group: readers
 email: abrark@gmail.com
 email: arpita@gmail.com
 -email: amitu@gmail.com
@@ -257,7 +257,7 @@ github: arpita@gmail.com
 -github: amitu1@gmail.com
 group: fifthtry.github.io/doc-site/group_id
 
-\-- fpm.user-group: writers
+\-- fastn.user-group: writers
 email: abrark@gmail.com
 email: arpita@gmail.com
 -email: amitu@gmail.com
@@ -270,9 +270,9 @@ group: fifthtry.github.io/doc-site/group_id
 
 
 
--- ds.h1: `fpm.sitemap`
+-- ds.h1: `fastn.sitemap`
 
-You can add a sitemap in FPM.ftd file. Details in [sitemap docs](sitemap/).
+You can add a sitemap in FASTN.ftd file. Details in [sitemap docs](sitemap/).
 In sitemap you can also put `readers` and `writers` user groups at section,
 subsection and toc level.
 
@@ -281,7 +281,7 @@ Note: `sitemap` will only contain urls without dynamic parameters.
 -- ds.code:
 lang: ftd
 
-\-- fpm.sitemap:
+\-- fastn.sitemap:
 readers: readers
 writers: writers
 
@@ -303,7 +303,7 @@ readers: random
 
 
 
--- ds.h1: `fpm.dynamic-urls`
+-- ds.h1: `fastn.dynamic-urls`
 
 You can add a `dynamic-urls`, syntactically same as sitemap. In`dynamic-urls`
 you can also put `readers` and `writers` user groups at section, subsection
@@ -311,10 +311,10 @@ and toc level.
 
 Note: `dynamic-urls` will only contain urls with dynamic parameters.
 
--- ds.code: FPM.ftd
+-- ds.code: FASTN.ftd
 lang: ftd
 
-\-- fpm.dynamic-urls:
+\-- fastn.dynamic-urls:
 
 # Manager
 url: /<string:username>/manager/<integer:age>/
@@ -331,13 +331,13 @@ writers: writers
 
 
 
--- ds.h1: `fpm.app`
+-- ds.h1: `fastn.app`
 
 -- ds.code: App Type
 lang: ftd
 
-;; FPM Apps Installation
-;; for FPM.ftd
+;; FASTN Apps Installation
+;; for FASTN.ftd
 \-- record app-data:
 caption name:
 string package:
@@ -364,7 +364,7 @@ app-ui-item item:
 integer len:
 app-indexy-item list items:
 
-\-- fpm.app-ui apps:
-$processor$: fpm-apps
+\-- fastn.app-ui apps:
+$processor$: fastn-apps
 
 -- end: ds.page

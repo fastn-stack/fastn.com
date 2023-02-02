@@ -1,48 +1,48 @@
--- import: fpm
+-- import: fastn
 
--- fpm.package: fpm.dev
-zip: github.com/fifthtry/fpm.dev/archive/refs/heads/main.zip
-download-base-url: https://raw.githubusercontent.com/fifthtry/fpm.dev/main
+-- fastn.package: fastn.dev
+zip: github.com/fifthtry/fastn.dev/archive/refs/heads/main.zip
+download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.dev/main
 language: English
-translation: hi.fpm.dev
+translation: hi.fastn.dev
 
--- fpm.dependency: fifthtry.github.io/doc-site as ds
+-- fastn.dependency: fifthtry.github.io/doc-site as ds
 implements: fifthtry.github.io/theme
 
--- fpm.dependency: fifthtry.github.io/product-switcher as ps
--- fpm.dependency: fifthtry.github.io/fifthtry-brand-switcher as fbs
--- fpm.dependency: fifthtry.github.io/bling
-;; -- fpm.dependency: fifthtry.github.io/color-doc as cd
--- fpm.dependency: fifthtry.github.io/admonitions
--- fpm.dependency: fifthtry.github.io/roboto-mono as mono
+-- fastn.dependency: fifthtry.github.io/product-switcher as ps
+-- fastn.dependency: fifthtry.github.io/fifthtry-brand-switcher as fbs
+-- fastn.dependency: fifthtry.github.io/bling
+;; -- fastn.dependency: fifthtry.github.io/color-doc as cd
+-- fastn.dependency: fifthtry.github.io/admonitions
+-- fastn.dependency: fifthtry.github.io/roboto-mono as mono
 
 
--- fpm.auto-import: ds
--- fpm.auto-import: fpm.dev/FPM/config
--- fpm.auto-import: fpm
+-- fastn.auto-import: ds
+-- fastn.auto-import: fastn.dev/FASTN/config
+-- fastn.auto-import: fastn
 
 
 
--- fpm.user-group: fpm-readers
+-- fastn.user-group: fastn-readers
 email: abrark@fifthtry.com
 email: amitu@ffithtry.com
 email: arpita@ffithtry.com
 
 
--- fpm.user-group: fpm-writers
+-- fastn.user-group: fastn-writers
 email: abrark@fifthtry.com
 email: amitu@fifthtry.com
 email: arpita@fifthtry.com
 
 
--- fpm.sitemap:
+-- fastn.sitemap:
 
 # Home: /
 
 - Features: /features/
   - Package Manager: /package-manager/
   - Remixing Sites: /remixing/
-  - FPM Server: /server/
+  - FASTN Server: /server/
   - Static Site Generator: /static/
   - Offline Sync: /offline/
   - Version Control For Masses: /vcs/
@@ -50,7 +50,7 @@ email: arpita@fifthtry.com
   - Color Scheme : /cs/
   - Authentication and fine grained access control: /acl/
 - Featured Packages: /featured/-/home/
-- Why Not To Use `fpm`?: /why-not/
+- Why Not To Use `fastn`?: /why-not/
 - Open Source: /open-source/
 - Known Issues: /known-issues/
 
@@ -74,19 +74,19 @@ email: arpita@fifthtry.com
 
 ## How Tos: /how-to/install/
 
-- Install `fpm`: /how-to/install/
-  - `fpm` binary installation: /setup/fpm-binary-installation/
-- Update `fpm`: /how-to/update/
-- Create new fpm project: /author/create-project/
-- Create new fpm project on github: /author/create-on-github/
-- Build fpm project locally: /author/build-project/
+- Install `fastn`: /how-to/install/
+  - `fastn` binary installation: /setup/fastn-binary-installation/
+- Update `fastn`: /how-to/update/
+- Create new fastn project: /author/create-project/
+- Create new fastn project on github: /author/create-on-github/
+- Build fastn project locally: /author/build-project/
 - Publishing On Github pages: /how-to/github-pages/
 - Publishing On Vercel: /how-to/vercel/
 - Use Favicon: /favicon/
 - Custom Fonts: /how-to/custom-fonts/
 - Create Font Package: /how-to/create-font-package/
 - Auth Testing: /how-to/auth-testing/
-- FPM & FTD Domain Setup: /how-to/domain-setup/
+- FASTN & FTD Domain Setup: /how-to/domain-setup/
 
 ## Editor Manual: /editor/manual/
 
@@ -96,40 +96,40 @@ email: arpita@fifthtry.com
 ## CLI Manual: /usage/
 
 - Usage: /usage/
-- `fpm start-project`: /start-project/
-- `fpm build`: /build/
-- `fpm sync`: /cli/sync/
-- `fpm status`: /status/
-- `fpm diff`: /diff/
-- `fpm update`: /update/
-- `fpm serve`: /serve/
-- `fpm add`: /cli/add/
-- `fpm rm`: /cli/rm/
-- `fpm resolve-conflict`: /cli/resolve-conflict/
-- `fpm clone`: /cli/clone/
+- `fastn start-project`: /start-project/
+- `fastn build`: /build/
+- `fastn sync`: /cli/sync/
+- `fastn status`: /status/
+- `fastn diff`: /diff/
+- `fastn update`: /update/
+- `fastn serve`: /serve/
+- `fastn add`: /cli/add/
+- `fastn rm`: /cli/rm/
+- `fastn resolve-conflict`: /cli/resolve-conflict/
+- `fastn clone`: /cli/clone/
 
 
-## FPM Auth: /how-to/oauth/
+## FASTN Auth: /how-to/oauth/
 
 
-;; fpm build is failing , with document
+;; fastn build is failing , with document
 ;; in the below case it is still looking for the document
 ;; `/how-to/oauth/gh-app/` while it should look for the
 ;; /how-to/oauth/github/gh-app/
 
 - Create GitHub OAuth App: /how-to/oauth/github/gh-app/
   - Login Flow: /how-to/oauth/github/gh-login/
-  - GitHub FPM Identities: /how-to/oauth/github/gh-ids/
+  - GitHub FASTN Identities: /how-to/oauth/github/gh-ids/
 - Create Discord OAuth App: /how-to/oauth/discord/dc-app/
   - Login Flow: /how-to/oauth/discord/dc-login/
-  - Discord FPM Identities: /how-to/oauth/discord/dc-ids/
+  - Discord FASTN Identities: /how-to/oauth/discord/dc-ids/
 - Create Twitter OAuth App: /how-to/oauth/twitter/tw-app/
   - Login Flow: /how-to/oauth/twitter/tw-login/
-  - Twitter FPM Identities: /how-to/oauth/twitter/tw-ids/
+  - Twitter FASTN Identities: /how-to/oauth/twitter/tw-ids/
 - Create Telegram OAuth App: /how-to/oauth/telegram/tl-app/
   - How to Create Bot: /how-to/oauth/telegram/tl-bot/
   - Login Flow: /how-to/oauth/telegram/tl-login/
-  - Telegram FPM Identities: /how-to/oauth/telegram/tl-ids/
+  - Telegram FASTN Identities: /how-to/oauth/telegram/tl-ids/
 
 # Builder Manual: /themes/
 
@@ -142,15 +142,15 @@ email: arpita@fifthtry.com
 - Responsive Themes: /theme/responsive/
 - Dark Mode: /theme/dark-mode/
 - Components: /theme/header/
-- FPM Typography: /theme/type/
-;; - FPM Color: /theme/color/ -- TODO need fix of color-doc package
-;; - FPM Space: /theme/space/ -- TODO removed from FTD 0.3 upgrade
+- FASTN Typography: /theme/type/
+;; - FASTN Color: /theme/color/ -- TODO need fix of color-doc package
+;; - FASTN Space: /theme/space/ -- TODO removed from FTD 0.3 upgrade
 
 ## FTD Host Features: /ftd-host/
 
-- FPM Variables: /vars/
-- `import: fpm`
-  url: /theme/fpm/
+- FASTN Variables: /vars/
+- `import: fastn`
+  url: /theme/fastn/
 - `$processor$: http`
   url: /http/
 - `$processor$: toc`
@@ -161,8 +161,8 @@ email: arpita@fifthtry.com
   url: /processors/get-data/
 - `$processor$: sitemap`
   url: /processors/sitemap/
-- `import: fpm`
-  url: /fpm-vars/
+- `import: fastn`
+  url: /fastn-vars/
 - Foreign Variables: /theme/foreign-variables/
 - `$processor$: full-sitemap`
   url: /processors/full-sitemap/
@@ -186,7 +186,7 @@ email: arpita@fifthtry.com
   url: /processors/get-identities/
 - `$processor$: request-data`
   url: /processors/request-data/
-- `$processor$: fpm-apps`
+- `$processor$: fastn-apps`
   url: /apps/
 
 
@@ -201,10 +201,10 @@ email: arpita@fifthtry.com
 - Contribution Guide: /dev/contribute/
 - How Versioning Works: /dev/versioning/
 - How Sync Works: /dev/sync/
-- Understanding FPM sync conflicts: /sync-conflict/
-- What is `FPM.manifest.ftd`?: /dev/fpm-manifest/
+- Understanding FASTN sync conflicts: /sync-conflict/
+- What is `FASTN.manifest.ftd`?: /dev/fastn-manifest/
 - File System Organization: /fs/
-  - `FPM.ftd`: /fpm-ftd-file/
+  - `FASTN.ftd`: /fastn-ftd-file/
 - What Is `user-identity`?: /dev/user-identity/
 - What Is `user-group`?: /dev/user-group/
 - Remote Identity: /dev/remote-identity/
@@ -227,29 +227,29 @@ email: arpita@fifthtry.com
 - Glossary:
   - syncglossary: /glossary/
 
-## Using `fpm` Crate: crate/
+## Using `fastn` Crate: crate/
 
 - Overview: /crate/
-- `fpm::Config`
+- `fastn::Config`
   url: /crate/config/
-- `fpm::Document`
+- `fastn::Document`
   url: /crate/document/
-- `fpm::Error`
+- `fastn::Error`
   url: /crate/error/
-- `fpm::File`
+- `fastn::File`
   url: /crate/file/
-- `fpm::Font`
+- `fastn::Font`
   url: /crate/font/
-- `fpm::Package`
+- `fastn::Package`
   url: /crate/package/
-- `fpm::render`
+- `fastn::render`
   url: /crate/render/
-- `fpm::Result`
+- `fastn::Result`
   url: /crate/result/
-- `fpm::StaticFile`
+- `fastn::StaticFile`
   url: /crate/static-file/
 - Private Stuff:
-  - `fpm::utils`
+  - `fastn::utils`
     url: /crate/utils/
 - Dependencies:
   - `ftd`: /crate/deps/ftd/
@@ -257,25 +257,25 @@ email: arpita@fifthtry.com
   - `camino`: /crate/deps/camino/
   - `infer`: /crate/deps/infer/
 
-/-- fpm.toc-item list author-section:
+/-- fastn.toc-item list author-section:
 
-- How to create new fpm project using template `fpm-template`
+- How to create new fastn project using template `fastn-template`
   - on github
   - on gitlab
   - on bitbucket
   - from scratch
-- How to install fpm on local machine
-- Build fpm site locally
+- How to install fastn on local machine
+- Build fastn site locally
 - Article on sitemap
   - What is sitemap
   - How to use it?
 - How to change common site property like site logo and site name?
 - How to change color-scheme?
-- component that can be used with your fpm site
+- component that can be used with your fastn site
   - code-block
   - slideshow (rename it to feature_display)
   - featured-article (copy from dotcom/blog/index.ftd to a new repo)
   - post-list (copy from dotcom/blog/index.ftd to a new repo)
-- how to use fpm site as a blog
+- how to use fastn site as a blog
 - Competitor
   - swimm.io

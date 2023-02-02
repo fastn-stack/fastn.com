@@ -1,4 +1,4 @@
--- ds.page: `import: fpm`
+-- ds.page: `import: fastn`
 
 
 
@@ -8,7 +8,7 @@
 
 The current document being processed.
 
--- ds.h1: `language-toc: list fpm.language-toc-item`
+-- ds.h1: `language-toc: list fastn.language-toc-item`
 
 This contains the list of language-toc-item.
 
