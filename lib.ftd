@@ -193,12 +193,14 @@ spacing.fixed.px: 30
 caption title:
 string url:
 optional ftd.color color: $inherited.colors.text
-optional ftd.color background.solid: $inherited.colors.background.base
+optional ftd.color background-solid: $inherited.colors.background.base
 
 -- ftd.text: $action-button.title
 link: $action-button.url
-background.solid: $action-button.background.solid
+background.solid: $action-button.background-solid
+if: { action-button.background-solid != NULL }
 color: $action-button.color
+if: { action-button.color != NULL }
 border-radius.px: 6
 padding-vertical.px: 15
 padding-horizontal.px: 40

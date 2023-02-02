@@ -10,8 +10,8 @@ image: $assets.files.static.images.github-light.svg
 -- lib.action-button: Get Started
 slot: cta-1
 url: /install/
-background-color: $fastn.color.main.background.base
-color: $fastn.color.main.text
+background-color: $inherited.colors.main.background.base
+color: $inherited.colors.main.text
 
 
 -- ds.content:
