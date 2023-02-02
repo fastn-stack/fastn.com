@@ -4,23 +4,23 @@
 -- ft.page:
 
 
--- ft.h0: `FPM.ftd`
+-- ft.h0: `FASTN.ftd`
 
-In every [FPM package](/fpm/fs/) there must be a file named `FPM.ftd`.
+In every [FASTN package](/fastn/fs/) there must be a file named `FASTN.ftd`.
 
 
 -- ft.code:
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: amitu
+\-- fastn.package: amitu
 repo: github
 
 
--- ft.h1: `fpm.package`
+-- ft.h1: `fastn.package`
 
-This is the only mandatory `ftd section` in `FPM.ftd` file.
+This is the only mandatory `ftd section` in `FASTN.ftd` file.
 
 
 -- ft.h2: `name: caption`
@@ -30,9 +30,9 @@ This is the name of the package. This is the only required value.
 
 -- ft.h2: `repo: optional string`
 
-An FPM package can be hosted on [`fpm-repo`](/fpm/about/) or on Github etc.
+An FASTN package can be hosted on [`fastn-repo`](/fastn/about/) or on Github etc.
 
-If the key is missing, the package is assumed to be hosted on `fpm-repo`, 
+If the key is missing, the package is assumed to be hosted on `fastn-repo`, 
 `www.fifthtry.com`.
 
 If the package is hosted on Github, then it must be `repo: github`. 
@@ -46,7 +46,7 @@ specific version from Git repo, you can locate its corresponding `.zip` file and
 store it here.
 
 
--- ft.h1: `fpm.dependency`
+-- ft.h1: `fastn.dependency`
 
 A package can depend on another package.
 
@@ -54,18 +54,18 @@ A package can depend on another package.
 -- ft.code:
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: amitu
+\-- fastn.package: amitu
 
-\-- fpm.dependency: fifthtry/fpm-blog
+\-- fastn.dependency: fifthtry/fastn-blog
 repo: github
 
 
 -- ft.markdown:
 
-Here the package `amitu` has a dependency on `fifthtry/fpm-blog`. When any 
-dependency is specified, `fpm build` downloads and stored it in `.packages` folder.
+Here the package `amitu` has a dependency on `fifthtry/fastn-blog`. When any 
+dependency is specified, `fastn build` downloads and stored it in `.packages` folder.
 
 Any number of dependencies can be mentioned.
 

@@ -1,7 +1,7 @@
 -- ft.page:
 
 
--- ft.h0: `import: fpm`
+-- ft.h0: `import: fastn`
 
 
 -- ft.h1: `document-id: String`
@@ -9,7 +9,7 @@
 The current document being processed.
 
 
--- ft.h1: `language-toc: list fpm.language-toc-item`
+-- ft.h1: `language-toc: list fastn.language-toc-item`
 
 This contains the list of language-toc-item.
 

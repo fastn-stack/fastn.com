@@ -1,10 +1,10 @@
--- import: fpm
+-- import: fastn
 -- import: fifthtry.github.io/code-block as cb
--- import: fpm.dev/assets
+-- import: fastn.dev/assets
 
 
 
--- header-sticky-title uptodate: $fpm.i18n.upto-date
+-- header-sticky-title uptodate: $fastn.i18n.upto-date
 icon: true
 light-icon-path: $assets.files.static.translation-icons.large.translations-success.png
 
@@ -12,25 +12,25 @@ light-icon-path: $assets.files.static.translation-icons.large.translations-succe
 
 
 
--- header-sticky-title missing: $fpm.i18n.missing
+-- header-sticky-title missing: $fastn.i18n.missing
 icon: true
 light-icon-path: $assets.files.static.translation-icons.large.translations-missing.png
 
 
-$fpm.i18n.translation-not-available
+$fastn.i18n.translation-not-available
 
 
 
 
 
--- header-sticky-title nevermarked: $fpm.i18n.never-marked
+-- header-sticky-title nevermarked: $fastn.i18n.never-marked
 icon: true
-button-text-main: $fpm.i18n.show-unapproved-version
-button-text-fallback: $fpm.i18n.show-latest-version
+button-text-main: $fastn.i18n.show-unapproved-version
+button-text-fallback: $fastn.i18n.show-latest-version
 light-icon-path: $assets.files.static.translation-icons.large.translations-info.png
 
 
-$fpm.i18n.unapproved-heading
+$fastn.i18n.unapproved-heading
 
 
 
@@ -40,20 +40,20 @@ $fpm.i18n.unapproved-heading
 
 
 
--- header-sticky-title outdated: $fpm.i18n.out-dated
+-- header-sticky-title outdated: $fastn.i18n.out-dated
 icon: true
-button-text-main: $fpm.i18n.show-latest-version
-button-text-fallback: $fpm.i18n.show-outdated-version
+button-text-main: $fastn.i18n.show-latest-version
+button-text-fallback: $fastn.i18n.show-outdated-version
 link-text: View changes
-green-title: $fpm.i18n.out-dated-heading
+green-title: $fastn.i18n.out-dated-heading
 light-icon-path: $assets.files.static.translation-icons.large.translations-title-default.png
 
-$fpm.i18n.out-dated-body
+$fastn.i18n.out-dated-body
 
 --- code-block: The following changes has been made in English edition since last modification
-if: $fpm.translation-diff-open
+if: $fastn.translation-diff-open
 
-$fpm.diff
+$fastn.diff
 
 
 
@@ -73,14 +73,14 @@ caption title:
 body body:
 width: fill
 border-top: 1
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 margin-top: 20
 boolean open: false
 
 --- ftd.text: $title
 padding-vertical: 10
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 --- code:
 lang: diff
@@ -130,7 +130,7 @@ padding-horizontal: 50
 border-bottom-radius: 20
 margin-top: -20
 margin-bottom: 20
-background-color: $fpm.design.color.brand.region
+background-color: $fastn.design.color.brand.region
 
 --- ftd.row:
 
@@ -146,8 +146,8 @@ margin-top: 4
 
 --- ftd.text: $title
 region: title
-color: $fpm.design.color.brand.on-region
-role: $fpm.design.type.headline-medium
+color: $fastn.design.color.brand.on-region
+role: $fastn.design.type.headline-medium
 
 --- container: ftd.main
 
@@ -164,8 +164,8 @@ body: $body
 
 --- ftd.text: $green-title
 margin-top: -10
-color: $fpm.design.color.brand.on-region
-role: $fpm.design.type.headline-small
+color: $fastn.design.color.brand.on-region
+role: $fastn.design.type.headline-small
 
 
 --- container: ftd.main
@@ -177,7 +177,7 @@ spacing: 40
 margin-top: 20
 
 --- ftd.text: $button-text-main
-if: not $fpm.is-fallback
+if: not $fastn.is-fallback
 $on-click$: message-host show_fallback
 $on-click$: stop-propagation
 $on-click$: prevent-default
@@ -185,13 +185,13 @@ border-width: 1
 border-radius: 6
 padding-vertical: 10
 padding-horizontal: 25
-border-color: $fpm.design.color.brand.primary-action
-role: $fpm.design.type.label-medium
-color: $fpm.design.color.brand.on-primary-action
-background-color: $fpm.design.color.brand.primary-action
+border-color: $fastn.design.color.brand.primary-action
+role: $fastn.design.type.label-medium
+color: $fastn.design.color.brand.on-primary-action
+background-color: $fastn.design.color.brand.primary-action
 
 --- ftd.text: $button-text-fallback
-if: $fpm.is-fallback
+if: $fastn.is-fallback
 $on-click$: message-host show_main
 $on-click$: stop-propagation
 $on-click$: prevent-default
@@ -199,16 +199,16 @@ border-width: 1
 border-radius: 6
 padding-vertical: 10
 padding-horizontal: 25
-border-color: $fpm.design.color.brand.secondary-action
-role: $fpm.design.type.label-medium
-color: $fpm.design.color.brand.on-secondary-action
-background-color: $fpm.design.color.brand.secondary-action
+border-color: $fastn.design.color.brand.secondary-action
+role: $fastn.design.type.label-medium
+color: $fastn.design.color.brand.on-secondary-action
+background-color: $fastn.design.color.brand.secondary-action
 
 
 --- ftd.text: $link-text
-role: $fpm.design.type.label-large
+role: $fastn.design.type.label-large
 padding-top: 10
-color: $fpm.design.color.brand.on-region
+color: $fastn.design.color.brand.on-region
 $on-click$: message-host toggle-translation-diff
 
 
@@ -231,7 +231,7 @@ optional ftd.image-src light-icon-path:
 width: fill
 padding-bottom: 10
 border-bottom: 1
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 margin-bottom: 20
 
 --- ftd.row:
@@ -250,7 +250,7 @@ text: $title
 caption $title:
 region: title
 text: $title
-role: $fpm.design.type.display-medium
+role: $fastn.design.type.display-medium
 
 --- container: ftd.main
 
@@ -262,7 +262,7 @@ text: $title
 caption $title:
 region: title
 text: $title
-role: $fpm.design.type.display-medium
+role: $fastn.design.type.display-medium
 
 
 
@@ -279,18 +279,18 @@ margin-bottom: 25
 spacing: 2
 
 --- ftd.text: $key
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 --- ftd.text: $value
 if: $value is not null
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 --- ftd.text: $default
 if: $value is null
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -313,21 +313,21 @@ width: fill
 
 
 --- ftd.text: $key
-role: $fpm.design.type.body-small
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-small
+color: $fastn.design.color.brand.on-region
 
 --- ftd.column:
 width: fill
 
 --- ftd.text: $value
 if: $value is not null
-role: $fpm.design.type.body-small
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-small
+color: $fastn.design.color.brand.on-region
 
 --- ftd.text: $default
 if: $value is null
-role: $fpm.design.type.body-small
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-small
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -349,21 +349,21 @@ width: fill
 
 --- ftd.text: $title
 region: title
-role: $fpm.design.type.headline-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.headline-medium
+color: $fastn.design.color.brand.on-region
 align: center
-link: $fpm.home-url
+link: $fastn.home-url
 white-space: nowrap
 
---- ftd.text: $fpm.language
-if: $fpm.language is not null
+--- ftd.text: $fastn.language
+if: $fastn.language is not null
 border-radius: 4
 padding-vertical: 5
 padding-horizontal: 10
 align: center
-background-color: $fpm.design.color.brand.region
-role: $fpm.design.type.headline-medium
-color: $fpm.design.color.brand.on-region
+background-color: $fastn.design.color.brand.region
+role: $fastn.design.type.headline-medium
+color: $fastn.design.color.brand.on-region
 
 
 --- ftd.column:
@@ -400,9 +400,9 @@ region: h0
 --- ftd.text:
 text: $title
 region: title
-role: $fpm.design.type.headline-large
+role: $fastn.design.type.headline-large
 text: $title
-color: $fpm.design.color.brand.on-region
+color: $fastn.design.color.brand.on-region
 padding-bottom: 24
 
 --- container: ftd.main
@@ -424,10 +424,10 @@ body: $body
 
 
 -- ftd.row print-inline:
-fpm.all-language-status-data data:
+fastn.all-language-status-data data:
 width: fill
 padding: 10
-color: $fpm.design.color.brand.on-region
+color: $fastn.design.color.brand.on-region
 
 
 --- ftd.text: $data.language
@@ -435,31 +435,31 @@ link: $data.url
 width: percent 15
 padding: 5
 text-align: left
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer:  $data.missing
 width: percent 15
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer: $data.never-marked
 width: percent 22
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer: $data.out-dated
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer: $data.upto-date
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.text: $data.last-modified-on
 if: $data.last-modified-on is not null
@@ -467,7 +467,7 @@ link: $data.url
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.text: Never Synced
 if: $data.last-modified-on is null
@@ -475,7 +475,7 @@ link: $data.url
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 
 
@@ -487,11 +487,11 @@ role: $fpm.design.type.body-small
 
 
 -- ftd.column translation-status:
-background-color: $fpm.design.color.brand.region
+background-color: $fastn.design.color.brand.region
 width: fill
 max-width: 1000
 border-radius: 5
-color: $fpm.design.color.brand.on-region
+color: $fastn.design.color.brand.on-region
 padding: 10
 border-radius: 5
 
@@ -539,7 +539,7 @@ column-width: percent 20
 --- container: ftd.main
 
 --- print-inline:
-$loop$: $fpm.all-language-translation-status as $obj
+$loop$: $fastn.all-language-translation-status as $obj
 data: $obj
 
 
@@ -576,8 +576,8 @@ margin-right: $margin-right
 --- ftd.text: $title
 padding: 5
 text-align: left
-role: $fpm.design.type.body-small
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-small
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -617,8 +617,8 @@ margin-right: $margin-right
 --- ftd.text: $title
 padding: 5
 text-align: left
-role: $fpm.design.type.body-small
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-small
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -657,14 +657,14 @@ margin-right: $margin-right
 padding: 5
 padding if $count is not null: 0
 text-align: left
-role: $fpm.design.type.label-large
+role: $fastn.design.type.label-large
 color: $title-color
 
 --- ftd.text: $count
 if: $count is not null
 text-align: left
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 margin-left: 15
 
 --- container: ftd.main
@@ -678,16 +678,16 @@ text-align: right
 width: fill
 margin-top: 5
 margin-right: 10
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 /--- ftd.text: ︿
 text-align: right
 width: fill
 margin-top: 5
 margin-right: 10
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -707,8 +707,8 @@ width: fill
 padding-vertical: 10
 
 --- ftd.text: $title
-role: $fpm.design.type.body-medium
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-medium
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -725,7 +725,7 @@ color: $fpm.design.color.brand.on-region
 width: fill
 max-width: 1000
 border-radius: 5
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 border-style: dashed
 border-width: 2
 padding: 15
@@ -733,11 +733,11 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
-if: $fpm.missing-files is not empty
+if: $fastn.missing-files is not empty
 
 --- icon-title:
-title: $fpm.i18n.missing
-title-color: $fpm.design.color.brand.on-region
+title: $fastn.i18n.missing
+title-color: $fastn.design.color.brand.on-region
 icon: true
 icon-path-light: $assets.files.static.translation-icons.35x26.translations-missing.png
 margin-right: 20
@@ -750,7 +750,7 @@ width: fill
 if: $open
 
 --- key-item: $obj
-$loop$: $fpm.missing-files as $obj
+$loop$: $fastn.missing-files as $obj
 
 
 
@@ -766,7 +766,7 @@ $loop$: $fpm.missing-files as $obj
 width: fill
 max-width: 1000
 border-radius: 5
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 border-style: dashed
 border-width: 2
 padding: 15
@@ -774,13 +774,13 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
-if: $fpm.never-marked-files is not empty
+if: $fastn.never-marked-files is not empty
 
 
 --- icon-title:
 /if: $group-type 'nevermarked'
-title: $fpm.i18n.never-marked
-title-color: $fpm.design.color.brand.on-region
+title: $fastn.i18n.never-marked
+title-color: $fastn.design.color.brand.on-region
 icon: true
 icon-path-light: $assets.files.static.translation-icons.35x26.translations-info.png
 margin-right: 20
@@ -793,7 +793,7 @@ width: fill
 if: $open
 
 --- key-item: $obj
-$loop$: $fpm.never-marked-files as $obj
+$loop$: $fastn.never-marked-files as $obj
 
 
 
@@ -806,7 +806,7 @@ $loop$: $fpm.never-marked-files as $obj
 width: fill
 max-width: 1000
 border-radius: 5
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 border-style: dashed
 border-width: 2
 padding: 15
@@ -814,13 +814,13 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
-if: $fpm.outdated-files is not empty
+if: $fastn.outdated-files is not empty
 
 
 --- icon-title:
 /if: $group-type 'outdated'
-title: $fpm.i18n.out-dated
-title-color: $fpm.design.color.brand.on-region
+title: $fastn.i18n.out-dated
+title-color: $fastn.design.color.brand.on-region
 icon: true
 icon-path-light: $assets.files.static.translation-icons.35x26.translations-time.png
 margin-right: 20
@@ -834,7 +834,7 @@ width: fill
 if: $open
 
 --- key-item: $obj
-$loop$: $fpm.outdated-files as $obj
+$loop$: $fastn.outdated-files as $obj
 
 
 
@@ -849,7 +849,7 @@ $loop$: $fpm.outdated-files as $obj
 width: fill
 max-width: 1000
 border-radius: 5
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 border-style: dashed
 border-width: 2
 padding: 15
@@ -857,13 +857,13 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
-if: $fpm.upto-date-files is not empty
+if: $fastn.upto-date-files is not empty
 
 
 --- icon-title:
 /if: $group-type 'uptodate'
-title: $fpm.i18n.upto-date
-title-color: $fpm.design.color.brand.on-region
+title: $fastn.i18n.upto-date
+title-color: $fastn.design.color.brand.on-region
 icon: true
 icon-path-light: $assets.files.static.translation-icons.35x26.translations-success.png
 margin-right: 20
@@ -876,7 +876,7 @@ width: fill
 if: $open
 
 --- key-item: $obj
-$loop$: $fpm.upto-date-files as $obj
+$loop$: $fastn.upto-date-files as $obj
 
 
 
@@ -893,8 +893,8 @@ body body:
 text: $body
 padding-bottom: 10
 padding-top: 50
-role: $fpm.design.type.body-large
-color: $fpm.design.color.brand.on-region
+role: $fastn.design.type.body-large
+color: $fastn.design.color.brand.on-region
 
 
 
@@ -941,15 +941,15 @@ $body
 
 
 -- ftd.column language-status:
-background-color: $fpm.design.color.brand.region
+background-color: $fastn.design.color.brand.region
 width: fill
 max-width: 1000
 border-radius: 5
 
 --- ftd.row:
 width: fill
-background-color: $fpm.design.color.brand.region
-color: $fpm.design.color.brand.on-region
+background-color: $fastn.design.color.brand.region
+color: $fastn.design.color.brand.on-region
 padding: 10
 border-top-radius: 5
 
@@ -994,7 +994,7 @@ column-width: percent 20
 --- container: ftd.main
 
 --- print:
-$loop$: $fpm.all-language-translation-status as $obj
+$loop$: $fastn.all-language-translation-status as $obj
 data: $obj
 
 
@@ -1011,13 +1011,13 @@ data: $obj
 
 
 -- ftd.row print:
-fpm.all-language-status-data data:
+fastn.all-language-status-data data:
 width: fill
 border-bottom: 1
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 padding: 10
-color: $fpm.design.color.brand.on-region
-background-color: $fpm.design.color.brand.region
+color: $fastn.design.color.brand.on-region
+background-color: $fastn.design.color.brand.region
 
 
 --- ftd.text: $data.language
@@ -1025,31 +1025,31 @@ link: $data.url
 width: percent 15
 padding: 5
 text-align: left
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer:  $data.missing
 width: percent 15
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer: $data.never-marked
 width: percent 22
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer: $data.out-dated
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.integer: $data.upto-date
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.text: $data.last-modified-on
 if: $data.last-modified-on is not null
@@ -1057,14 +1057,14 @@ link: $data.url
 width: percent 20
 padding: 5
 text-align: center
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 --- ftd.text: Never Synced
 if: $data.last-modified-on is null
 link: $data.url
 width: percent 20
 padding: 5
-role: $fpm.design.type.body-small
+role: $fastn.design.type.body-small
 
 
 
@@ -1074,19 +1074,19 @@ role: $fpm.design.type.body-small
 -- ftd.column translation-banner:
 width: fill
 height: fill
-if: $fpm.translation-status is not null
+if: $fastn.translation-status is not null
 
 --- uptodate:
-if: $fpm.translation-status == UptoDate
+if: $fastn.translation-status == UptoDate
 
 --- missing:
-if: $fpm.translation-status == Missing
+if: $fastn.translation-status == Missing
 
 --- nevermarked:
-if: $fpm.translation-status == NeverMarked
+if: $fastn.translation-status == NeverMarked
 
 --- outdated:
-if: $fpm.translation-status == Outdated
+if: $fastn.translation-status == Outdated
 
 
 
@@ -1100,7 +1100,7 @@ if: $fpm.translation-status == Outdated
 width: fill
 max-width: 1000
 border-radius: 5
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 border-style: dashed
 border-width: 2
 padding: 15
@@ -1108,13 +1108,13 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
-if: $fpm.never-marked-files is not empty
+if: $fastn.never-marked-files is not empty
 
 
 --- icon-title:
 /if: $group-type 'nevermarked'
-title: $fpm.i18n.never-marked
-title-color: $fpm.design.color.brand.on-region
+title: $fastn.i18n.never-marked
+title-color: $fastn.design.color.brand.on-region
 icon: true
 icon-path-light: $assets.files.static.translation-icons.35x26.translations-info.png
 margin-right: 20
@@ -1127,7 +1127,7 @@ width: fill
 if: $open
 
 --- key-item: $obj
-$loop$: $fpm.never-marked-files as $obj
+$loop$: $fastn.never-marked-files as $obj
 
 
 
@@ -1141,7 +1141,7 @@ $loop$: $fpm.never-marked-files as $obj
 width: fill
 max-width: 1000
 border-radius: 5
-border-color: $fpm.design.color.brand.on-region
+border-color: $fastn.design.color.brand.on-region
 border-style: dashed
 border-width: 2
 padding: 15
@@ -1149,13 +1149,13 @@ border-radius: 5
 margin-top: 20
 boolean open: false
 optional string group-type:
-if: $fpm.upto-date-files is not empty
+if: $fastn.upto-date-files is not empty
 
 
 --- icon-title:
 /if: $group-type 'uptodate'
-title: $fpm.i18n.upto-date
-title-color: $fpm.design.color.brand.on-region
+title: $fastn.i18n.upto-date
+title-color: $fastn.design.color.brand.on-region
 icon: true
 icon-path-light: $assets.files.static.translation-icons.35x26.translations-success.png
 margin-right: 20
@@ -1168,4 +1168,4 @@ width: fill
 if: $open
 
 --- key-item: $obj
-$loop$: $fpm.upto-date-files as $obj
+$loop$: $fastn.upto-date-files as $obj

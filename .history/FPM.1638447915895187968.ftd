@@ -4,17 +4,17 @@
 -- ft.page:
 
 
--- ft.h0: `FPM.ftd`
+-- ft.h0: `FASTN.ftd`
 
-In every [FPM package](/fpm/fs/) there must be a file named `FPM.ftd`.
+In every [FASTN package](/fastn/fs/) there must be a file named `FASTN.ftd`.
 
 
 -- ft.code:
 lang: ftd
 
-\-- import: fpm
+\-- import: fastn
 
-\-- fpm.package: amitu
+\-- fastn.package: amitu
 
 
 -- ft.h2: `name: caption`
@@ -24,9 +24,9 @@ This is the name of the package. This is the only required value.
 
 -- ft.h2: `repo: optional string`
 
-An FPM package can be hosted on [`fpm-repo`](/fpm/about/) or on Github etc.
+An FASTN package can be hosted on [`fastn-repo`](/fastn/about/) or on Github etc.
 
-If the key is missing, the package is assumed to be hosted on `fpm-repo`, 
+If the key is missing, the package is assumed to be hosted on `fastn-repo`, 
 `www.fifthtry.com`.
 
 If the package is hosted on Github, then it must be `repo: github`. 

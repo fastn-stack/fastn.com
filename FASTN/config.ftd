@@ -1,7 +1,7 @@
 -- import: ft
 -- import: ps
 -- import: fbs
--- import: fpm.dev/assets
+-- import: fastn.dev/assets
 
 
 -- ps.current-product: 3
@@ -18,14 +18,14 @@ dark: $assets.files.static.logo-fifthtry-dark.svg.dark
 
 -- ft.brand-caption: Created by
 
--- ft.brand-site-name: FPM
+-- ft.brand-site-name: FASTN
 
 
 -- ft.brand-site-logo:
-light: $assets.files.static.images.fpm.png.light
-dark: $assets.files.static.images.fpm.png.dark
+light: $assets.files.static.images.fastn.png.light
+dark: $assets.files.static.images.fastn.png.dark
 
--- ft.github: https://github.com/fifthtry/fpm
+-- ft.github: https://github.com/fifthtry/fastn
 
 
--- fpm.toc-item list empty-toc:
+-- fastn.toc-item list empty-toc:
