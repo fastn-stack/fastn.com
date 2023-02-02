@@ -1,5 +1,5 @@
--- import: fpm.dev/lib
--- import: fpm.dev/assets
+-- import: fastn.dev/lib
+-- import: fastn.dev/assets
 
 -- ds.page:
 toc: $config.empty-toc
