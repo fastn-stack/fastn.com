@@ -1,9 +1,9 @@
 -- import: fastn.dev/utils as utils
 
--- my-ds.page: Figma token processors
+-- my-ds.page: Exporting fastn color-scheme as figma tokens json
 
 In `ftd`, we have two processors to export `ftd.color-scheme` variable
-as `figma json` tokens in old and new formats as mentioned below:
+as `figma tokens json` in old and new formats as mentioned below:
 
 -- ds.h1: `figma-cs-token` processor
 
@@ -30,7 +30,7 @@ lang: ftd
 \-- string figma:
 $processor$: pr.figma-cs-token
 variable: $my-color-scheme
-name: cs-1
+name: my-cs
 
 -- utils.show-hide-code:
 lang: json
@@ -63,7 +63,7 @@ lang: ftd
 \-- string old-figma:
 $processor$: pr.figma-cs-token-old
 variable: $my-color-scheme
-name: cs-1
+name: my-cs
 
 -- utils.show-hide-code:
 lang: json
@@ -76,7 +76,7 @@ code-title: Sample output (old format)
 -- string sample-json-output:
 
 {
-"cs-1-light": {
+"my-cs-light": {
   "Accent Colors": {
     "primary": {
       "value": "#ef8435",
@@ -358,7 +358,7 @@ code-title: Sample output (old format)
     }
   }
 },
-"cs-1-dark": {
+"my-cs-dark": {
   "Accent Colors": {
     "primary": {
       "value": "#ef8435",
@@ -645,7 +645,7 @@ code-title: Sample output (old format)
 -- string sample-json-output-old:
 
 {
-"cs-1 light": {
+"my-cs light": {
 "Accent Colors": {
     "$fpm": {
         "color": {
@@ -1015,7 +1015,7 @@ code-title: Sample output (old format)
     }
 }
 },
-"cs-1 dark": {
+"my-cs dark": {
 "Accent Colors": {
     "$fpm": {
         "color": {
