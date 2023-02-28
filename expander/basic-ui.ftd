@@ -31,17 +31,17 @@ some of the `featured components`.
 
 Here is the list of packages I have used:
 
--- cbox.text-2: **doc-site**
+-- cbox.text-4: **doc-site**
 
  fifthtry.github.io/doc-site    
 
 
--- cbox.text-2: **admonitions**
+-- cbox.text-4: **admonitions**
 
   fifthtry.github.io/admonitions
 
 
--- cbox.text-2:  **color-scheme**
+-- cbox.text-4:  **color-scheme**
 
 fifthtry.github.io/winter-cs     
 
@@ -51,7 +51,7 @@ fifthtry.github.io/winter-cs
 You can include any such component of your own. For example, I will include the box component I created earlier.
 
 
--- cbox.text-2: **expander**
+-- cbox.text-4: **expander**
 
 gargajit.github.io/expander     
 
