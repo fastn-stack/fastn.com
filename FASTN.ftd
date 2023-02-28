@@ -71,7 +71,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 - Docs Home: /docs/
 - Getting Started: /setup/
   document: ftd/setup.ftd
-- Create & Serve `fastn` package: /create-fastn-package/
+- Create `fastn` package: /create-fastn-package/
   document: ftd/create-fastn-package.ftd
 - Best Practices: /best-practices/
 
