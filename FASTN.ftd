@@ -3,6 +3,7 @@
 -- fastn.package: fastn.io
 download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 
+-- fastn.dependency: fastn-stack.github.io/fastn-js
 -- fastn.dependency: fifthtry.github.io/doc-site as ds
 -- fastn.dependency: fifthtry.github.io/winter-cs
 -- fastn.dependency: fifthtry.github.io/dark-flame-cs
@@ -14,21 +15,31 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 -- fastn.dependency: fifthtry.github.io/admonitions
 -- fastn.dependency: fastn-stack.github.io/ftd-web-component-example
 -- fastn.dependency: gargajit.github.io/expander
+-- fastn.dependency: fifthtry.github.io/common
+-- fastn.dependency: fifthtry.github.io/fastn-ui
+-- fastn.dependency: fifthtry.github.io/fastn-typography
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn.io/FASTN/my-ds as my-ds
 -- fastn.auto-import: fastn.io/assets as fastn-assets
+-- fastn.auto-import: fifthtry.github.io/common as common
 
 
 
 -- fastn.sitemap:
 
-# Home: /
 
-## Intro: /
+
+
+# Learn: /overview/
+
+## Learn: /overview/
+
+- Overview: /overview/
 
 ## Features: /features/
 
+- Overview: /features/
 - Package Manager: /package-manager/
   document: features/package-manager.ftd
 - Static Site Generator: /static/
@@ -41,40 +52,45 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
   document: features/sitemap.ftd
 
 
-## Featured Components: /featured/
-
-- Featured Components: /featured/
-- Documentation Sites: /featured/doc-sites/
-- Color Schemes: /featured/cs/
-- Component Libraries: /featured/components-library/
-- Fonts: /featured/fonts/
-
-# FTD: /ftd/
-
-- Overview: /ftd/
-- `ftd p1` grammar: /ftd/p1-grammar/
-- Data Modelling: /ftd/data-modelling/
-- Variables: /ftd/variables/
-- Built-in Types: /ftd/built-in-types/
-- `record`: /ftd/record/
-- `or-type`: /ftd/or-type/
-- `list`: /ftd/list/
+## Events: events/01/
 
 
-# Learn: /docs/
+# Design: /figma/
+  document: /cs/ftd-to-figma/
+
+- Use Figma Tokens with fastn color schemes: /figma/
+  document: /cs/ftd-to-figma/
+- Create your own fastn color scheme from Figma json: /figma-to-fastn-cs/
+  document: /cs/figma-to-ftd/
+- Modify color scheme package: /modify-cs/
+  document: cs/modify-cs.ftd
+- Create `font` package: /create-font-package/
+  document: author/how-to/create-font-package.ftd
+
+# Develop: /docs/
 
 ## Docs: /docs/
 
 - Docs Home: /docs/
 - Getting Started: /setup/
   document: ftd/setup.ftd
-- Create & Serve `fastn` package: /create-fastn-package/
-  document: ftd/create-fastn-package.ftd
+- Create `fastn` package: /create-fastn-package/
+  document: author/how-to/create-fastn-package.ftd
 - Best Practices: /best-practices/
+- `ftd p1` grammar: /ftd/p1-grammar/
+
+## Data Modelling: /ftd/data-modelling/
+
+- Data Modelling: /ftd/data-modelling/
+- Variables: /ftd/variables/
+- Built-in Types: /ftd/built-in-types/
+- `record`: /ftd/record/
+- `or-type`: /ftd/or-type/
+- 🚧 `list`: /ftd/list/
 
 
 ## How Tos: /install/
-document: author/how-to/install.ftd
+  document: author/how-to/install.ftd
 
 - Install `fastn`: /install/
   document: author/how-to/install.ftd
@@ -82,22 +98,10 @@ document: author/how-to/install.ftd
     document: author/setup/windows.ftd
   - On MacOS/Linux: /macos/
     document: author/setup/macos.ftd
-- Publishing On Github pages: /github-pages/
-  document: author/how-to/github-pages.ftd
-- Publishing On Vercel: /vercel/
-  document: author/how-to/vercel.ftd
 - Open terminal: /open-terminal/
   document: author/how-to/open-terminal.ftd
 - Use color scheme package: /use-cs/
   document: cs/use-color-package.ftd
-- Modify color scheme package: /modify-cs/
-  document: cs/modify-cs.ftd
-- Use Figma Tokens with fastn color schemes: /figma/
-  document: /cs/ftd-to-figma/
-- Create your own fastn color scheme from Figma json: /figma-to-fastn-cs/
-  document: /cs/figma-to-ftd/
-- Create `font` package: /create-font-package/
-  document: author/how-to/create-font-package.ftd
 
 ## FTD Host Features: /ftd-host/
 
@@ -116,16 +120,52 @@ document: author/how-to/install.ftd
 
 - Overview: /expander/
 - Part 1. Hello World: /expander/hello-world/
+  - Install `fastn`: /install/-/expander/
+    document: author/how-to/install.ftd
+    - On Windows: /windows/-/expander/
+      document: author/setup/windows.ftd
+    - On MacOS/Linux: /macos/-/expander/
+      document: author/setup/macos.ftd
 - Part 2. Basic UI: /expander/basic-ui/
 - Part 3. Components: /expander/components/
 - Part 4. Event Handling: /expander/events/
 - Part 5. Publish a package: /expander/publish/
 - Part 6. Polishing UI: /expander/polish/
 
+# Build: /install/-/build/
+  document: author/how-to/install.ftd
 
+## Build: /install/-/build/
+  document: author/how-to/install.ftd
+
+- Install: /install/-/build/
+  document: author/how-to/install.ftd
+
+## Featured Components: /featured/
+
+- Featured Components: /featured/
+- Documentation Sites: /featured/doc-sites/
+- Color Schemes: /featured/cs/
+- Component Libraries: /featured/components-library/
+- Fonts: /featured/fonts/
+
+
+# Deploy: /github-pages/
+  document: author/how-to/github-pages.ftd
+
+- Publishing On Github pages: /github-pages/
+  document: author/how-to/github-pages.ftd
+- Publishing On Vercel: /vercel/
+  document: author/how-to/vercel.ftd
 
 # Blog: /blog/web-components/
 
 - Ahoy, Web Components!: /blog/web-components/
 - Color Scheme: /colors/
   document: blog/show-cs.ftd
+
+# Planning: /planning/
+skip: true
+
+- Overview: /planning/
+- Developer Course: /planning/developer-course/

@@ -15,6 +15,9 @@ name: sunset-cs
 
 -- my-ds.page: How to use Figma Tokens with fastn color schemes
 
+-- ds.youtube:
+v: 77axdv6ZdO4
+
 -- ds.h1: Install figma token
 
 If you already have this
@@ -28,7 +31,6 @@ on the `New design file` button as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.create-new-design-file.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Open Figma Tokens plugin
@@ -38,7 +40,6 @@ Select quick actions from menu to open `Token Studio for figma`
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.quick-actions.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -48,7 +49,6 @@ and launch that plugin by clicking on it.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-token-studio.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Create a new empty file inside figma plugin
@@ -58,52 +58,47 @@ by clicking on its button as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-new-empty-file.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Save the forest theme json
 
-Click on the below copy button inside forest-cs code-block
+Download and save the below json code by clicking at the download
+icon in the code-block below.
+
+`Note:` You can also get this json from its
+[color documentation](https://fifthtry.github.io/forest-cs/)
 
 -- ds.code: forest-cs
 lang: json
 max-height: 300
+download: forest-cs.json
 
 $forest-figma
-
--- ds.markdown:
-
-Create a new json file named `forest-cs.json` using your favourite
-text editor (for eg. Sublime Text) and paste the content you just copied
-and save it.
 
 -- ds.h1: Load `forest-cs.json` inside figma plugin
 
 To load `forest-cs.json` which we just created,
 
-Step 1: Click on the Load button
+Step 1: Under `Tools` -> Click on `Load from file/folder or Preset`
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-load-button.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
 
-Step 2: Go under File Tab
+Step 2: Go under `File` Tab
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-file.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
 
-Step 3: Click on Choose File button
+Step 3: Click on `Choose File` button
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-choose-file.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -113,7 +108,6 @@ and click on open button.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-forest-cs.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -124,7 +118,6 @@ active color scheme.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-forest-cs-light.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Create a new rectangle
@@ -133,7 +126,6 @@ To do this first select rectangle shape from top menu.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-rectangle-shape.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -142,7 +134,6 @@ After selecting it, drag the cursor and create your rectangle.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.create-rectangle.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -152,7 +143,6 @@ and change its color to `Background Colors -> base` as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-rectangle-color.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Create a new text-block
@@ -161,7 +151,6 @@ First, select the Text option from the top menu.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-text-option.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -172,7 +161,6 @@ let's say `Hello There`
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.hello-text-block.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -183,7 +171,6 @@ So now, select the text-block and change its color to
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-text-block-color.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Test your design in dark mode
@@ -192,17 +179,20 @@ Toggle the `forest-cs-dark` checkbox to change the design with dark color scheme
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.forest-toggle-cs.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Lets try another color scheme
 
-Let's use `sunset-cs` now. Save the following json to a new json file
-named `sunset-cs.json`.
+Let's use `sunset-cs` now. Download this below json code as a new json file
+named `sunset-cs.json` by clicking at the download button.
+
+`Note:` You can also get this json from its
+[color documentation](https://fifthtry.github.io/saturated-sunset-cs/)
 
 -- ds.code: Sunset-cs
 lang: json
 max-height: 300
+download: sunset-cs.json
 
 $sunset-figma
 
@@ -216,7 +206,6 @@ Click on `Choose File` -> Open `sunset.cs.json`
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.open-sunset-cs.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -225,7 +214,6 @@ After loading `sunset-cs.json`, check the `sunset-cs-light` checkbox as shown be
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.select-sunset-cs-light.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -234,12 +222,24 @@ To see the design in dark color scheme, toggle `sunset-cs-dark` checkbox.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b1.sunset-toggle-cs.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
 
 Congratulations you have successfully completed this tutorial.
 
+-- ds.h1: Learn More
+
+- [About how to create your own fastn color-scheme from figma](/figma-to-fastn-cs/)
+
+-- ds.h1: More Awesome fastn color-schemes
+
+Check out these fastn color-schemes which you can use right away
+
+- [Forest CS](https://fifthtry.github.io/forest-cs/)
+- [Winter CS](https://fifthtry.github.io/winter-cs/)
+- [Saturated sunset CS](https://fifthtry.github.io/saturated-sunset-cs/)
+- [Black Forest CS](https://fifthtry.github.io/black-forest-cs/)
+- [Dark flame CS](https://fifthtry.github.io/dark-flame-cs/)
 
 -- end: my-ds.page

@@ -1,4 +1,4 @@
--- import: fastn.io/cs/json-exporter as j
+-- import: fastn-stack.github.io/fastn-js/json-exporter as j
 -- import: fifthtry.github.io/forest-cs as forest-cs
 -- import: heulitig.github.io/figma-tokens-tutorial/assets as assets
 -- import: fastn/processors as pr
@@ -10,6 +10,11 @@ name: forest-cs
 
 
 -- my-ds.page: How to create your own `Fastn Color Scheme` from Figma json
+
+-- ds.youtube:
+v: znH1AEf6SMk
+
+-- ds.markdown:
 
 It happens quite often that we get a hold of some nice color-scheme
 package which we believe would look good on our pages
@@ -37,7 +42,6 @@ You can use any of your existing figma file or create a new one as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.0.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -45,15 +49,18 @@ width: fill-container
 In this tutorial, I will be using the same figma file which I used in this
 [tutorial guide](https://fastn.io/figma)
 
--- ds.h1: Create forest-cs.json file
+-- ds.h1: Download forest-cs.json file
 
-Copy the below json and create a new file named "forest-cs.json"
-using any of your favourite text editor (for eg. Sublime Text)
-and save it.
+Download the below json code as a new json file named `forest-cs.json`
+by clicking on the download icon in the code-block below.
+
+`Note:` You can also get this json from its
+[color documentation](https://fifthtry.github.io/forest-cs/)
 
 -- ds.code: forest-cs
 lang: json
 max-height: 350
+download: forest-cs.json
 
 $forest-figma
 
@@ -64,7 +71,6 @@ head to `Tools` -> `Load from File/Folder or Preset` as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.1.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -73,7 +79,6 @@ Then under `File` tab, click on `Choose File` option
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.2.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -83,7 +88,6 @@ which you saved as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.3.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -93,7 +97,6 @@ light color-scheme in your page.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.4.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Check your component colors
@@ -103,7 +106,6 @@ inside your figma plugin once you select the rectangle as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.6.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -112,7 +114,6 @@ And text is using this color: `Standalone Colors -> text`
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.7.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Let's modify some colors
@@ -130,7 +131,6 @@ as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.5.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -142,7 +142,6 @@ as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.8.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -152,7 +151,6 @@ on its color circle i.e Standalone Colors -> text as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.9.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -162,7 +160,6 @@ to #0b5394 (for blue color) then hit Save button
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.10.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -171,7 +168,6 @@ This looks much better now :)
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.11.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -188,7 +184,6 @@ in your Figma Tokens plugin as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.12.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -197,7 +192,6 @@ After doing that, copy the json from the preview section as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.13.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -217,17 +211,17 @@ And paste this merged json in the text-box below.
 You will see the generated FTD code. Copy this FTD code by clicking
 on the copy icon at the top of the code-block above.
 
--- ds.h1: Go to the github repo of `sailing-shark-cs`
+-- ds.h1: Go to the `sailing-shark-cs` github repository
 
 This repo is a template repo for fastn color-schemes, we will create
-our own color-scheme repo using this.
+our own color-scheme repo using this. To visit this repo,
+[click here](https://github.com/FifthTry/sailing-shark-cs)
 
 To do that, click on the `Use this template` button then `Create a new repository`
 as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.22.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -237,7 +231,6 @@ from template` button.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.23.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -247,7 +240,6 @@ created using this template like this:
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.24.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -261,7 +253,6 @@ based on your repo name and username as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.25.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -271,7 +262,6 @@ and make your changes
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.26.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -280,7 +270,6 @@ Like this
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.27.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -290,7 +279,6 @@ by committing directly on the main branch as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.28.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Modify index.ftd
@@ -300,7 +288,6 @@ based on your username and repository name as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.29.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -309,7 +296,6 @@ Like this
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.30.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Modify colors.ftd
@@ -318,7 +304,6 @@ Go to your colors.ftd file in your repo and click on the edit button
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.35.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -330,7 +315,6 @@ press on Commit changes button as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.30.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Activate github pages
@@ -339,7 +323,6 @@ Now to activate github pages (gh-pages) go to Settings as shown below
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.31.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -348,7 +331,6 @@ Go to Pages tab
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.32.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
@@ -359,7 +341,6 @@ as shown below.
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.33.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.h1: Preview your color-scheme in action
@@ -372,11 +353,20 @@ In my case, my color-scheme will be deployed at
 
 -- ftd.image:
 src: $fastn-assets.files.images.figma.b2.final.png
-height.fixed.px: 350
 width: fill-container
 
 -- ds.markdown:
 
 Congratulations you have completed this tutorial.
+
+-- ds.h1: More Awesome fastn color-schemes
+
+Check out these fastn color-schemes which you can use right away
+
+- [Forest CS](https://fifthtry.github.io/forest-cs/)
+- [Winter CS](https://fifthtry.github.io/winter-cs/)
+- [Saturated sunset CS](https://fifthtry.github.io/saturated-sunset-cs/)
+- [Black Forest CS](https://fifthtry.github.io/black-forest-cs/)
+- [Dark flame CS](https://fifthtry.github.io/dark-flame-cs/)
 
 -- end: my-ds.page
