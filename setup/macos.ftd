@@ -6,9 +6,18 @@
 
 For MacOS/Linux machine, there are three ways to install `fastn`. 
 
+<<<<<<< Updated upstream:setup/macos.ftd
 1. `fastn` through `pre-built binary`
 2. `fastn` using `cargo`
 3. `fastn` from `source`
+=======
+1. [`fastn` through `pre-built binary`](macos/#fastn-through-pre-built-binary)
+ (Recommended)
+2. [`fastn` using `cargo`](macos/#fastn-using-cargo)
+3. [`fastn` from `source`](macos/#fastn-from-source)
+
+
+>>>>>>> Stashed changes:author/setup/macos.ftd
 
 -- cbox.info: Our Recommendation
 
@@ -16,6 +25,9 @@ We recommend you to install `fastn` through `pre-built binary`.
 
 This is the preferred method as it only requires downloading the binary and
 installing it on your local system.
+
+-- ds.image:
+src: $fastn-assets.files.images.setup.macos-fastn-installation.gif
 
 -- ds.markdown: 
 
@@ -35,7 +47,9 @@ follow the steps given below.
 -- ds.youtube:
 v: cWdivkyoOTA
 
--- ds.h3: First Step: Copy the following command:
+-- ds.h3: First Step: Copy the Installer Script
+
+Copy the following command:
 
 -- ds.code: Installer Script
 lang: ftd
@@ -47,6 +61,14 @@ sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/ftd-lang/fastn/main
 You can find Terminal on the Dock or you can search for Terminal using Spotlight
 Search. Shortcut to open Spotlight Search, press cmd + spacebar buttons, on your
 keyboard.
+
+-- cbox.tip: Tip
+
+New to the concept of `terminal` and want to read about it?
+
+Checkout the [Terminal documentation](https://fastn.io/open-terminal/).
+
+-- end: cbox.tip
 
 -- ds.h3: Third Step: Run the Installer Script
 
@@ -61,11 +83,9 @@ width: fill-container
 
 -- ds.markdown:
 
-Let the `fastn` installation complete.
+Once the script runs 100%, installation of `fastn` is complete.
 
-
-You can verify that installation is complete by running the command, `fastn`,
-in the `Terminal`.
+To verify, open terminal and execute the command, `fastn`.
 
 
 
