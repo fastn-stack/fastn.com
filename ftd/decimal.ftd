@@ -1,0 +1,152 @@
+-- my-ds.page: `ftd.decimal`
+
+`ftd.decimal` is a component used to render a decimal value in an `ftd`
+document.
+
+-- ds.h1: Usage
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.decimal: 10.01
+
+-- ds.output:
+
+-- ftd.decimal: 10.01
+color: $inherited.colors.text
+
+-- end: ds.output
+
+-- ds.h1: Attributes
+
+`ftd.decimal` accepts the below attributes as well all the [common
+attributes](ftd/common/).
+
+
+-- ds.h2: `value: decimal`
+
+This is the value to show. It is a required field.
+
+There are three ways to pass integer to `ftd.decimal`: as `caption`, as a
+`value` `header`, or as `body`.
+
+-- ds.code: As a `caption`
+lang: ftd
+
+\-- ftd.decimal: 10000.9999
+
+
+-- ds.code: As a `value` header
+lang: ftd
+
+\-- ftd.decimal:
+value: 10000.9999
+
+
+-- ds.code: As a `body`
+lang: ftd
+
+\-- ftd.decimal:
+
+10000.9999
+
+
+-- ds.output:
+
+-- ftd.decimal:
+color: $inherited.colors.text-strong
+
+10000.9999
+
+-- end: ds.output
+
+-- ds.h2: `text-align: optional ftd.text-align`
+
+This attribute is used to align the decimal within `ftd.decimal`. It accepts the
+[`ftd.text-align`](ftd/built-in-types/#ftd-text-align) type value and is
+optional.
+
+
+-- ftd.row:
+spacing.fixed.px: 10
+
+-- ftd.decimal: 1000000.999999999
+width.fixed.px: 70
+text-align: center
+border-width.px: 1
+border-radius.px: 3
+padding.px: 5
+color: $inherited.colors.text-strong
+
+
+
+-- ftd.decimal: 1000000.999999999
+width.fixed.px: 70
+text-align: start
+border-width.px: 1
+border-radius.px: 3
+padding.px: 5
+color: $inherited.colors.text-strong
+
+
+
+-- ftd.decimal: 1000000.999999999
+width.fixed.px: 70
+text-align: end
+border-width.px: 1
+border-radius.px: 3
+padding.px: 5
+color: $inherited.colors.text-strong
+
+
+
+-- ftd.decimal: 1000000.999999999
+width.fixed.px: 70
+text-align: justify
+border-width.px: 1
+border-radius.px: 3
+padding.px: 5
+color: $inherited.colors.text-strong
+
+
+-- end: ftd.row
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.decimal: 1000000.999999999
+width.fixed.px: 70
+text-align: center
+
+
+-- ds.h2: `format: optional string`
+
+This is a format string.
+
+Consider the following example. It is shown as (percent):
+
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.decimal:
+value: 0.94623
+format: .0%
+
+
+-- ds.output:
+
+-- ftd.decimal:
+value: 0.94623
+format: .0%
+color: $inherited.colors.text-strong
+
+-- end: ds.output
+
+-- ds.markdown:
+
+You can find documentation of formatting strings
+[here](https://docs.rs/format_num/0.1.0/format_num/).
+
+
+-- end: my-ds.page
