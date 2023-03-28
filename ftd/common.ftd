@@ -448,6 +448,43 @@ background.solid: $red-yellow
 -- end: ds.output
 
 
+
+
+
+-- ds.h1: `background.image: optional ftd.background-image`
+
+The `background.image` property sets the background image of an element. It takes
+input of [`ftd.background-image`](ftd/built-in-types/#ftd-background-image)
+type and is optional.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- ftd.background-image bg-image: ;; <hl>
+src: $fastn-assets.files.images.logo-fifthtry.svg ;; <hl>
+repeat: no-repeat ;; <hl>
+position: center ;; <hl>
+
+\-- ftd.row:
+width: fill-container
+height.fixed.px: 200
+background.image: $bg-image ;; <hl>
+
+\-- ftd.text: Fifthtry logo as background image
+
+\-- end: ftd.row
+
+-- ds.rendered.output:
+
+-- render-bg:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
 -- ds.h1: `border-width.px: Integer`
 
 Use this property to specify the width of the border. By default the `border-width`
@@ -1927,3 +1964,21 @@ and smiled, and passed it off Ere from the door she stept—
 -- ftd.color red-yellow:
 light: red
 dark: yellow
+
+-- ftd.background-image bg-image:
+src: $fastn-assets.files.images.logo-fifthtry.svg
+repeat: no-repeat
+position: center
+
+-- component render-bg:
+
+-- ftd.row:
+width: fill-container
+height.fixed.px: 200
+background.image: $bg-image
+
+-- ftd.text: Fifthtry logo as background image
+
+-- end: ftd.row
+
+-- end: render-bg
