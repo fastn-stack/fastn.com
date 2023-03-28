@@ -6,24 +6,8 @@ These attributes are available to `ftd.text`, `ftd.integer`,
 -- ds.h2: `style: optional list ftd.text-style`
 
 This `style` attribute can be used to add inline styles on the rendered content.
-It accepts a list of `ftd.text-style` values and is optional.
-
--- ds.code: or-type ftd.text-style
-lang: ftd
-
-\-- or-type ftd.text-style:
-constant string underline: underline
-constant string strike: strike
-constant string italic: italic
-constant string heavy: heavy
-constant string extra-bold: extra-bold
-constant string semi-bold: semi-bold
-constant string bold: bold
-constant string regular: regular
-constant string medium: medium
-constant string light: light
-constant string extra-light: extra-light
-constant string hairline: hairline
+It accepts a list of [`ftd.text-style`](ftd/built-in-types/#ftd-text-style)
+values and is optional.
 
 -- ds.rendered: Sample code using `style`
 
@@ -162,7 +146,8 @@ color: $inherited.colors.text-strong
 -- ds.h2: `text-indent: optional ftd.length`
 
 This attribute can be used to specify the indentation of the
-first line in the rendered text.
+first line in the rendered text. It accepts a
+[`ftd.length`](ftd/built-in-types/#ftd-length) value and is optional.
 
 -- ds.rendered: Sample code using `text-indent`
 
@@ -172,7 +157,9 @@ first line in the rendered text.
 text-indent.px: 30 ;; <hl>
 color: $inherited.colors.text-strong
 
-This is some indented text
+This is some indented text.
+
+It only applies spacing at the beginning of the first line.
 
 -- ds.rendered.output:
 
@@ -180,7 +167,9 @@ This is some indented text
 text-indent.px: 30
 color: $inherited.colors.text-strong
 
-This is some indented text
+This is some indented text.
+
+It only applies spacing at the beginning of the first line.
 
 -- end: ds.rendered.output
 

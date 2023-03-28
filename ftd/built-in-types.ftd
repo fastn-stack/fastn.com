@@ -51,6 +51,7 @@ These types can be categorized into two main groups: **Primitive** and
   - [`ftd.loading`](ftd/built-in-types/#ftd-loading)
   - [`ftd.text-input-type`](ftd/built-in-types/#ftd-text-input-type)
   - [`ftd.type`](ftd/built-in-types/#ftd-type)
+  - [`ftd.text-style`](ftd/built-in-types/#ftd-text-style)
 
 
 
@@ -1599,6 +1600,54 @@ with dynamic keyboards.
 
 
 
+
+-- ds.h2: `ftd.text-style`
+
+`ftd.text-style` is an `or-type`. The `style` under text attributes
+accepts the `optional list` of this type. It allows various constant values which
+defines the specific inline style.
+
+-- ds.code: `ftd.text-style`
+lang: ftd
+
+\-- or-type text-style:
+
+\-- constant string underline: underline
+\-- constant string strike: strike
+\-- constant string italic: italic
+\-- constant string heavy: heavy
+\-- constant string extra-bold: extra-bold
+\-- constant string semi-bold: semi-bold
+\-- constant string bold: bold
+\-- constant string regular: regular
+\-- constant string medium: medium
+\-- constant string light: light
+\-- constant string extra-light: extra-light
+\-- constant string hairline: hairline
+
+\-- end: text-style
+
+-- ds.markdown:
+
+As you can see above the `ftd.text-style` has following variants:
+
+**Text Decoration**
+- `underline`: This value will set the text to have a decorative line beneath it.
+- `strike`: This value will set the text to have a decorative line going through its middle.
+
+**Font Style**
+- `italic`: This value will make your text italic.
+
+**Font Weights**
+- `heavy`: This value will set the font weight to 900.
+- `extra-bold`: This value will set the font weight to 800.
+- `bold`: This value will set the font weight to 700.
+- `semi-bold`: This value will set the font weight to 600.
+- `medium`: This value will set the font weight to 500.
+- `regular`: This value will set the font weight to 400.
+- `light`: This value will set the font weight to 300.
+- `extra-light`: This value will set the font weight to 200.
+- `hairline`: This value will set the font weight to 100.
 
 
 
