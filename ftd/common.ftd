@@ -575,31 +575,178 @@ color: $inherited.colors.text
 -- end: ds.output
 
 
--- ds.h1: `;; border-style: String`
+
+
+
+-- ds.h1: `border-style: optional ftd.border-style`
 
 The border-style property sets the style of an element's borders.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
 
+-- ds.rendered: Specifying border style
 
--- ds.code: specifying border width
-lang: ftd
+-- ds.rendered.input:
 
 \-- ftd.text: FifthTry
-;; border-style: dashed
+border-style: dashed ;; <hl>
 border-width.px: 2
 
-
--- ds.markdown:
-
-This will render like this:
-
--- ds.output:
+-- ds.rendered.output:
 
 -- ftd.text: FifthTry
-;; border-style: dashed
+border-style: dashed
 border-width.px: 2
-color: $inherited.colors.text
 
--- end: ds.output
+
+
+
+
+-- ds.h1: `border-style-left: optional ftd.border-style`
+
+The border-style property sets the style of an element's left border.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
+
+-- ds.rendered: Specifying style for left border
+
+-- ds.rendered.input:
+
+\-- ftd.text: FifthTry
+border-style-left: dashed ;; <hl>
+border-width.px: 2
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+border-style-left: dashed
+border-width.px: 2
+
+
+
+
+-- ds.h1: `border-style-right: optional ftd.border-style`
+
+The border-style property sets the style of an element's right border.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
+
+-- ds.rendered: Specifying style for right border
+
+-- ds.rendered.input:
+
+\-- ftd.text: FifthTry
+border-style-right: dashed ;; <hl>
+border-width.px: 2
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+border-style-right: dashed
+border-width.px: 2
+
+
+
+
+
+-- ds.h1: `border-style-top: optional ftd.border-style`
+
+The border-style property sets the style of an element's top border.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
+
+-- ds.rendered: Specifying style for top border
+
+-- ds.rendered.input:
+
+\-- ftd.text: FifthTry
+border-style-top: dashed ;; <hl>
+border-width.px: 2
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+border-style-top: dashed
+border-width.px: 2
+
+
+
+
+
+-- ds.h1: `border-style-bottom: optional ftd.border-style`
+
+The border-style property sets the style of an element's bottom border.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
+
+-- ds.rendered: Specifying style for bottom border
+
+-- ds.rendered.input:
+
+\-- ftd.text: FifthTry
+border-style-bottom: dashed ;; <hl>
+border-width.px: 2
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+border-style-bottom: dashed
+border-width.px: 2
+
+
+
+
+
+
+-- ds.h1: `border-style-horizontal: optional ftd.border-style`
+
+The border-style property sets the style of an element's left and right borders.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
+
+-- ds.rendered: Specifying style for horizontal borders
+
+-- ds.rendered.input:
+
+\-- ftd.text: FifthTry
+border-style-horizontal: dashed ;; <hl>
+border-width.px: 2
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+border-style-horizontal: dashed
+border-width.px: 2
+
+
+
+
+
+
+-- ds.h1: `border-style-vertical: optional ftd.border-style`
+
+The border-style property sets the style of an element's top and bottom borders.
+It takes a [`ftd.border-style`](ftd/built-in-types/#ftd-border-style)
+value and is optional.
+
+-- ds.rendered: Specifying style for vertical borders
+
+-- ds.rendered.input:
+
+\-- ftd.text: FifthTry
+border-style-vertical: dashed ;; <hl>
+border-width.px: 2
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+border-style-vertical: dashed
+border-width.px: 2
+
+
+
+
+
 
 
 -- ds.h1: `border-color:` [`ftd.color`](/built-in-types/#ftd-color)
