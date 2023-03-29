@@ -443,14 +443,14 @@ input of [`ftd.color`](ftd/built-in-types/#ftd-color) type.
 -- ds.rendered.input:
 
 \-- ftd.text: FifthTry
-background.solid: $red-yellow ;; <hl>
+background.solid: $yellow-red ;; <hl>
 color: $inherited.colors.text-strong
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 color: $inherited.colors.text-strong
-background.solid: $red-yellow
+background.solid: $yellow-red
 
 -- end: ds.rendered.output
 
@@ -1358,7 +1358,7 @@ which is of record type and is optional.
 -- ds.rendered.input:
 
 \-- ftd.shadow s: ;; <hl>
-color: red ;; <hl>
+color: $yellow-red ;; <hl>
 x-offset: 3 ;; <hl>
 y-offset: 5 ;; <hl>
 blur: 1 ;; <hl>
@@ -1928,6 +1928,10 @@ and smiled, and passed it off Ere from the door she stept—
 light: red
 dark: yellow
 
+-- ftd.color yellow-red:
+light: yellow
+dark: red
+
 -- ftd.background-image bg-image:
 src: $fastn-assets.files.images.logo-fifthtry.svg
 repeat: no-repeat
@@ -1947,7 +1951,7 @@ background.image: $bg-image
 -- end: render-bg
 
 -- ftd.shadow s:
-color: red
+color: $yellow-red
 x-offset.px: 3
 y-offset.px: 5
 blur.px: 1
