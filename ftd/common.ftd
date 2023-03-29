@@ -1303,14 +1303,53 @@ This will render like this:
 -- ftd.text: google
 link: https://www.google.com
 
+-- end: ds.output
+
+
+
+
+
+
+-- ds.h1: `shadow: optional ftd.shadow`
+
+This property will let you create a box shadow. It takes
+[`ftd.shadow`](ftd/built-in-types/#ftd-shadow) value
+which is of record type and is optional.
+
+-- ds.rendered: Sample code using `shadow`
+
+-- ds.rendered.input:
+
+\-- ftd.shadow s: ;; <hl>
+color: red ;; <hl>
+x-offset: 3 ;; <hl>
+y-offset: 5 ;; <hl>
+blur: 1 ;; <hl>
+spread: 2 ;; <hl>
+inset: true ;; <hl>
+
+\-- ftd.text: FifthTry
+shadow: $s ;; <hl>
+margin.px: 10
+
+-- ds.rendered.output:
+
+-- ftd.text: FifthTry
+shadow: $s
+margin.px: 10
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
 
 -- ds.h1: `open-in-new-tab: boolean, default=False`
 
 If `link` is provided, this attribute can also be set to open the link in new
 tab instead of current tab.
-
--- end: ds.output
-
 
 -- ds.code:
 lang: ftd
@@ -1731,106 +1770,6 @@ lang: ftd
 \-- ftd.text: FifthTry
 top: 1
 
-/-- ds.h1: `shadow-offset-x: Integer`
-
-It is one of the shadow property. It is length value to set the shadow offset.
-`shadow-offset-x` specifies the horizontal distance. Negative values place the
-shadow to the left of the element.
-
-
-/-- ds.code:
-lang: ftd
-
-\-- ftd.text: FifthTry
-shadow-offset-x: 1
-
-
-/-- ds.h1: `shadow-offset-y: Integer`
-
-It is one of the shadow property. It is length value to set the shadow offset.
-`shadow-offset-y` specifies the vertical distance. Negative values place the
-shadow above the element.
-
-
-/-- ds.code:
-lang: ftd
-
-\-- ftd.text: FifthTry
-shadow-offset-y: 1
-
-
-/-- ds.h1: `shadow-blur: Integer`
-
-It adds blur in shadow. The larger the value of `shadow-blur`, the bigger
-the blur, so the shadow becomes bigger and lighter. Negative values are
-not allowed.
-
-
-/-- ds.code:
-lang: ftd
-
-\-- ftd.text: FifthTry
-shadow-blur: 4
-
-
-/-- ds.h1: `shadow-size: Integer`
-
-It specifies the size of shadow. Positive values will cause the shadow to
-expand and grow bigger, negative values will cause the shadow to shrink.
-
-
-/-- ds.h1: `shadow-color:` [`ftd.color`](/built-in-types/#ftd-color)
-
-The shadow-color property sets the shadow color of an element. It takes
-input of [`ftd.color`](/built-in-types/#ftd-color) type.
-
-
-/-- ds.code: specifying color
-lang: ftd
-
-\-- ftd.color yellow:
-light: yellow
-dark: yellow
-
-\-- ftd.text: FifthTry
-shadow-color: $red-yellow
-
-
-/-- ds.markdown:
-
-Let's combine all shadow properties and see the output.
-
-
-/-- ds.code:
-lang: ftd
-
-\-- ftd.text: FifthTry
-shadow-offset-x: 14
-shadow-offset-y: 10
-shadow-blur: 5
-shadow-size: 4
-shadow-color: $yellow
-padding.px: 20
-background.solid: $red-yellow
-
-
-
-/-- ds.output:
-
-/-- ftd.color yellow:
-light: yellow
-dark: yellow
-
-/-- ftd.text: FifthTry
-shadow-offset-x: 14
-shadow-offset-y: 10
-shadow-blur: 5
-shadow-size: 4
-shadow-color: $yellow
-padding.px: 20
-background.solid: $red-yellow
-color: $inherited.colors.text-strong
-
 -- ds.h1: `z-index: Integer`
 
 The z-index property specifies the stack order of an element.
@@ -1982,3 +1921,11 @@ background.image: $bg-image
 -- end: ftd.row
 
 -- end: render-bg
+
+-- ftd.shadow s:
+color: red
+x-offset.px: 3
+y-offset.px: 5
+blur.px: 1
+spread.px: 2
+inset: true
