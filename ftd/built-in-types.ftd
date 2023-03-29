@@ -30,6 +30,7 @@ These types can be categorized into two main groups: **Primitive** and
   - [`ftd.ui`](ftd/built-in-types/#ftd-ui)
   - [`children`](ftd/built-in-types/#children)
 - [Derived Types](ftd/built-in-types/#derived-types)
+  - [`ftd.background`](ftd/built-in-types/#ftd-background)
   - [`ftd.background-image`](ftd/built-in-types/#ftd-background-image)
   - [`ftd.background-repeat`](ftd/built-in-types/#ftd-background-repeat)
   - [`ftd.background-position`](ftd/built-in-types/#ftd-background-position)
@@ -345,6 +346,43 @@ explicit key, as in the second and third `foo` component invocation.
 Derived types are more complex and are built using primitive types or other
 derived types. Derived types comes in two types: [`record`](ftd/record/) and
 [`or-type`](ftd/or-type/).
+
+
+
+
+
+
+-- ds.h2: `ftd.background`
+
+`ftd.background` is an `or-type`. It accepts either solid color of type
+`ftd.color` or an image of type `ftd.background-image`.
+
+-- ds.code: `ftd.background`
+lang: ftd
+
+\-- or-type background:
+
+\-- ftd.color solid:
+\-- ftd.background-image image:
+
+\-- end: background
+
+-- ds.markdown:
+
+As shown above, the `ftd.background` has following variants:
+
+- `solid`: This value will set the specified solid color as the background.
+It takes value of type `ftd.color`.
+
+- `image`: This value will set the specified image as the background image
+It takes value of type `ftd.background-image`.
+
+
+
+
+
+
+
 
 -- ds.h2: `ftd.background-image`
 
