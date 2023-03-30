@@ -94,6 +94,9 @@ The available themes are:
 - fastn-theme-1-dark
 - fastn-theme-1-light
 
+`Note`: Use your desired `background color` based on your theme when using
+any fastn code themes since these fastn themes doesn't define any background
+color by itself.
 
 -- ds.rendered: Sample code using `fastn-theme.dark` theme
 
@@ -102,6 +105,7 @@ The available themes are:
 \-- ftd.code:
 lang: py
 theme: fastn-theme.dark ;; <hl>
+background.solid: black
 
 value = "hello world"
 print(value)
@@ -132,6 +136,7 @@ print(value)
 \-- ftd.code:
 lang: py
 theme: fastn-theme.light ;; <hl>
+background.solid: white
 
 value = "hello world"
 print(value)
@@ -162,6 +167,7 @@ print(value)
 \-- ftd.code:
 lang: py
 theme: fastn-theme-1.dark ;; <hl>
+background.solid: black
 
 value = "hello world"
 print(value)
@@ -193,6 +199,7 @@ print(value)
 \-- ftd.code:
 lang: py
 theme: fastn-theme-1.light ;; <hl>
+background.solid: white
 
 value = "hello world"
 print(value)
