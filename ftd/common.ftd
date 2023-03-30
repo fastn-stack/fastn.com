@@ -503,11 +503,9 @@ and is optional.
 
 -- ds.rendered.input:
 
--- ds.rendered.input:
-
-\-- ftd.color red-yellow: ;; <hl>
-light: red ;; <hl>
-dark: yellow ;; <hl>
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
 
 \-- ftd.column:
 width.fixed.px: 200
@@ -1283,19 +1281,50 @@ This converts the element to a hyper link.
 
 -- ds.rendered.input:
 
-\-- ftd.text: google
-link: https://www.google.com ;; <hl>
+\-- ftd.text: fifthtry
+link: https://www.fifthtry.com ;; <hl>
 color: $inherited.colors.text
 
 -- ds.rendered.output:
 
--- ftd.text: google
-link: https://www.google.com
+-- ftd.text: fifthtry
+link: https://www.fifthtry.com
 color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
 -- end: ds.rendered
+
+
+
+
+
+-- ds.h1: `open-in-new-tab: optional boolean, default=False`
+
+If `link` is provided, this attribute can also be set to open the link in new
+tab instead of current tab. By default, this attribute is set to `false`.
+This attribute takes a [`boolean`](ftd/built-in-types/#boolean) value as input
+and is optional
+
+-- ds.rendered: Sample code using `open-in-new-tab` along with `link`
+
+-- ds.rendered.input:
+
+\-- ftd.text: fifthtry (opens in new tab)
+link: https://www.fifthtry.com
+open-in-new-tab: true ;; <hl>
+color: $inherited.colors.text
+
+-- ds.rendered.output:
+
+-- ftd.text: fifthtry (opens in new tab)
+link: https://www.fifthtry.com
+open-in-new-tab: true
+color: $inherited.colors.text
+
+-- end: ds.rendered.output
+
+
 
 
 
@@ -1338,36 +1367,6 @@ color: $inherited.colors.text
 -- end: ds.rendered.output
 
 -- end: ds.rendered
-
-
-
-
-
-
--- ds.h1: `open-in-new-tab: optional boolean, default=False`
-
-If `link` is provided, this attribute can also be set to open the link in new
-tab instead of current tab. By default, this attribute is set to `false`.
-This attribute takes a [`boolean`](ftd/built-in-types/#boolean) value as input
-and is optional
-
--- ds.rendered: Sample code using `open-in-new-tab` along with `link`
-
--- ds.rendered.input:
-
-\-- ftd.text: google (opens in new tab)
-link: https://www.google.com
-open-in-new-tab: true ;; <hl>
-color: $inherited.colors.text
-
--- ds.rendered.output:
-
--- ftd.text: google (opens in new tab)
-link: https://www.google.com
-open-in-new-tab: true
-color: $inherited.colors.text
-
--- end: ds.rendered.output
 
 
 
@@ -1779,12 +1778,6 @@ DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.
 
 
 
--- end: ds.rendered.output
-
--- end: ds.rendered
-
-
-
 
 
 -- ds.h1: `cursor: optional ftd.cursor`
@@ -1928,10 +1921,6 @@ color: $inherited.colors.text
 
 
 
--- end: ds.rendered.output
-
--- end: ds.rendered
-
 
 
 
@@ -1949,19 +1938,51 @@ This converts the element to a hyper link.
 
 -- ds.rendered.input:
 
-\-- ftd.text: google
-link: https://www.google.com ;; <hl>
+\-- ftd.text: fifthtry
+link: https://www.fifthtry.com ;; <hl>
 color: $inherited.colors.text
 
 -- ds.rendered.output:
 
--- ftd.text: google
-link: https://www.google.com
+-- ftd.text: fifthtry
+link: https://www.fifthtry.com
 color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
 -- end: ds.rendered
+
+
+
+
+
+
+
+-- ds.h1: `open-in-new-tab: optional boolean, default=False`
+
+If `link` is provided, this attribute can also be set to open the link in new
+tab instead of current tab. By default, this attribute is set to `false`.
+
+-- ds.rendered: Sample code using `open-in-new-tab` along with `link`
+
+-- ds.rendered.input:
+
+\-- ftd.text: fifthtry (opens in new tab)
+link: https://www.fifthtry.com
+open-in-new-tab: true ;; <hl>
+color: $inherited.colors.text
+
+-- ds.rendered.output:
+
+-- ftd.text: fifthtry (opens in new tab)
+link: https://www.fifthtry.com
+open-in-new-tab: true
+color: $inherited.colors.text
+
+-- end: ds.rendered.output
+
+
+
 
 
 
@@ -2004,34 +2025,6 @@ color: $inherited.colors.text
 -- end: ds.rendered.output
 
 -- end: ds.rendered
-
-
-
-
-
-
--- ds.h1: `open-in-new-tab: optional boolean, default=False`
-
-If `link` is provided, this attribute can also be set to open the link in new
-tab instead of current tab. By default, this attribute is set to `false`.
-
--- ds.rendered: Sample code using `open-in-new-tab` along with `link`
-
--- ds.rendered.input:
-
-\-- ftd.text: google (opens in new tab)
-link: https://www.google.com
-open-in-new-tab: true ;; <hl>
-color: $inherited.colors.text
-
--- ds.rendered.output:
-
--- ftd.text: google (opens in new tab)
-link: https://www.google.com
-open-in-new-tab: true
-color: $inherited.colors.text
-
--- end: ds.rendered.output
 
 
 
