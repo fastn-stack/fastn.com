@@ -3,26 +3,25 @@
 `ftd.code` is a component used to render the code component in an `ftd`
 document.
 
+-- ds.rendered: Sample Usage
 
--- ds.h1: Usage
-
--- ds.code:
-lang: ftd
+-- ds.rendered.input:
 
 \-- ftd.code:
 lang: py
 
 print("hello world")
 
--- ds.output:
+-- ds.rendered.output:
 
 -- ftd.code:
 lang: py
 
 print("hello world")
 
--- end: ds.output
+-- end: ds.rendered.output
 
+-- end: ds.rendered
 
 -- ds.h1: Attributes
 
@@ -30,23 +29,26 @@ The `ftd.code` component accepts the below attributes along with the
 [common attributes](ftd/common/).
 
 
--- ds.h2: `text: string`
+-- ds.h2: `text: caption or body`
 
-This is the text or code to show. It accepts the value both in caption
-or body besides in header.
+This is the text or code to show. It accepts the value both in [caption
+or body]() besides in header.
 
--- ds.code:
-lang: ftd
+-- ds.rendered: Sample code using `text`
+
+-- ds.rendered.input:
 
 \-- ftd.code:
-text: print("hello world")
+text: print("hello world") ;; <hl>
 
--- ds.output:
+-- ds.rendered.output:
 
 -- ftd.code:
 text: print("hello world")
 
--- end: ds.output
+-- end: ds.rendered.output
+
+-- end: ds.rendered
 
 -- ds.h2: `lang: optional string`
 
@@ -54,8 +56,9 @@ The `lang` property defines the language of the code. It is an
 optional field. In case if the value is not provided, this
 will take `txt` as default value.
 
--- ds.code:
-lang: ftd
+-- ds.rendered: Sample code using `lang`
+
+-- ds.rendered.input:
 
 \-- ftd.code:
 lang: py
@@ -63,7 +66,7 @@ lang: py
 value = "hello world"
 print(value)
 
--- ds.output:
+-- ds.rendered.output:
 
 -- ftd.code:
 lang: py
@@ -71,7 +74,9 @@ lang: py
 value = "hello world"
 print(value)
 
--- end: ds.output
+-- end: ds.rendered.output
+
+-- end: ds.rendered
 
 
 -- ds.h2: `theme: optional string`
@@ -92,17 +97,18 @@ The available themes are:
 Refer [this](https://docs.rs/syntect/latest/syntect/highlighting/struct.ThemeSet.html#method.load_defaults)
 for the list of themes available
 
--- ds.code:
-lang: ftd
+-- ds.rendered: Sample code using `Solarized (dark)` theme
+
+-- ds.rendered.input:
 
 \-- ftd.code:
 lang: py
-theme: Solarized (dark)
+theme: Solarized (dark) ;; <hl>
 
 value = "hello world"
 print(value)
 
--- ds.output: Solarized (dark)
+-- ds.rendered.output:
 
 -- ftd.code:
 lang: py
@@ -111,9 +117,22 @@ theme: Solarized (dark)
 value = "hello world"
 print(value)
 
--- end: ds.output
+-- end: ds.rendered.output
 
--- ds.output: base16-ocean.dark
+-- end: ds.rendered
+
+-- ds.rendered: Sample code using `base16-eighties.dark` theme
+
+-- ds.rendered.input:
+
+\-- ftd.code:
+lang: py
+theme: base16-ocean.dark ;; <hl>
+
+value = "hello world"
+print(value)
+
+-- ds.rendered.output:
 
 -- ftd.code:
 lang: py
@@ -122,9 +141,22 @@ theme: base16-ocean.dark
 value = "hello world"
 print(value)
 
--- end: ds.output
+-- end: ds.rendered.output
 
--- ds.output: base16-eighties.dark
+-- end: ds.rendered
+
+-- ds.rendered: Sample code using `base16-eighties.dark` theme
+
+-- ds.rendered.input:
+
+\-- ftd.code:
+lang: py
+theme: base16-eighties.dark ;; <hl>
+
+value = "hello world"
+print(value)
+
+-- ds.rendered.output: base16-eighties.dark
 
 -- ftd.code:
 lang: py
@@ -133,7 +165,14 @@ theme: base16-eighties.dark
 value = "hello world"
 print(value)
 
--- end: ds.output
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- ds.rendered: Sample code using `base16-mocha.dark` theme
+
+-- ds.rendered.input:
+
 
 
 -- ds.output: base16-mocha.dark
