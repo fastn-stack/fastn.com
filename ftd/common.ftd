@@ -1079,12 +1079,16 @@ this value is not provided.
 \-- ftd.text: FifthTry
 border-style: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1108,12 +1112,16 @@ value and is optional.
 \-- ftd.text: FifthTry
 border-style-left: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style-left: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1137,12 +1145,16 @@ value and is optional.
 \-- ftd.text: FifthTry
 border-style-right: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style-right: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1166,12 +1178,16 @@ value and is optional.
 \-- ftd.text: FifthTry
 border-style-top: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style-top: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1195,12 +1211,16 @@ value and is optional.
 \-- ftd.text: FifthTry
 border-style-bottom: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style-bottom: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1224,12 +1244,16 @@ value and is optional.
 \-- ftd.text: FifthTry
 border-style-horizontal: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style-horizontal: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1253,12 +1277,16 @@ value and is optional.
 \-- ftd.text: FifthTry
 border-style-vertical: dashed ;; <hl>
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- ds.rendered.output:
 
 -- ftd.text: FifthTry
 border-style-vertical: dashed
 border-width.px: 2
+border-color: $red-yellow
+color: $inherited.colors.text
 
 -- end: ds.rendered.output
 
@@ -1822,195 +1850,6 @@ color: $inherited.colors.text
 
 
 
--- ds.h1: `whitespace: optional ftd.whitespace`
-
-This property sets how white-space is handled inside an element.
-It takes value of type
-[`ftd.white-space`](ftd/built-in-types/#ftd-white-space) and is optional.
-
--- ds.rendered: Sample code using `whitespace`
-
--- ds.rendered.input:
-
-\-- string sample-text:
-
-But ere she from the church-door stepped She smiled and told us why:
-
-'It was a wicked woman's curse,' Quoth she, 'and what care I?'
-She smiled, and smiled, and passed it off Ere from the door she stept—
-
-\-- end: sample-text
-
-\-- ftd.column:
-spacing.fixed.px: 10
-color: $inherited.colors.text
-
-\-- ftd.text: $sample-text
-white-space: normal ;; <hl>
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
-\-- ftd.text: $sample-text
-white-space: nowrap ;; <hl>
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
-\-- ftd.text: $sample-text
-white-space: pre ;; <hl>
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
-\-- ftd.text: $sample-text
-white-space: break-spaces ;; <hl>
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
-\-- end: ftd.column
-
--- ds.rendered.output:
-
--- ftd.column:
-spacing.fixed.px: 10
-color: $inherited.colors.text
-
--- ftd.text: $sample-text
-white-space: normal
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
--- ftd.text: $sample-text
-white-space: nowrap
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
--- ftd.text: $sample-text
-white-space: pre
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
--- ftd.text: $sample-text
-white-space: break-spaces
-padding.px: 10
-width.fixed.px: 400
-border-color: $yellow-red
-border-width.px: 2
-
--- end: ftd.column
-
--- end: ds.rendered.output
-
--- end: ds.rendered
-
-
-
-
-
-
-
-
--- ds.h1: `text-transform: optional ftd.text-transform`
-
-This property defines how text of an element is capitalized.
-Using this property, you can capitalize, uppercase, lowercase your
-text. This takes value of type
-[`ftd.text-transform`](ftd/built-in-types/#ftd-text-transform)
-and is optional.
-
--- ds.rendered:
-
--- ds.rendered.input:
-
-\-- string sample-text:
-
-But ere she from the church-door stepped She smiled and told us why:
-
-'It was a wicked woman's curse,' Quoth she, 'and what care I?'
-She smiled, and smiled, and passed it off Ere from the door she stept—
-
-\-- end: sample-text
-
-\-- ftd.column:
-spacing.fixed.px: 10
-color: $inherited.colors.text
-
-\-- ftd.text: $sample-text
-padding.px: 10
-width.fixed.px: 400
-text-transform: none ;; <hl>
-
-\-- ftd.text: $sample-text
-padding.px: 10
-width.fixed.px: 400
-text-transform: capitalize ;; <hl>
-
-\-- ftd.text: $sample-text
-padding.px: 10
-width.fixed.px: 400
-text-transform: uppercase ;; <hl>
-
-\-- ftd.text: $sample-text
-padding.px: 10
-width.fixed.px: 400
-text-transform: lowercase ;; <hl>
-
-\-- end: ftd.column
-
--- ds.rendered.output:
-
--- ftd.column:
-spacing.fixed.px: 10
-color: $inherited.colors.text
-
--- ftd.text: $sample-text
-white-space: normal
-padding.px: 10
-width.fixed.px: 400
-text-transform: none
-
--- ftd.text: $sample-text
-white-space: normal
-padding.px: 10
-width.fixed.px: 400
-text-transform: capitalize
-
--- ftd.text: $sample-text
-white-space: normal
-padding.px: 10
-width.fixed.px: 400
-text-transform: uppercase
-
--- ftd.text: $sample-text
-white-space: normal
-padding.px: 10
-width.fixed.px: 400
-text-transform: lowercase
-
--- end: ftd.column
-
--- end: ds.rendered.output
-
--- end: ds.rendered
-
-
-
-
-
-
-
 -- ds.h1: `link: optional String`
 
 This converts the element to a hyper link.
@@ -2107,6 +1946,212 @@ color: $inherited.colors.text
 -- end: ds.rendered.output
 
 -- end: ds.rendered
+
+
+
+
+
+
+-- ds.h1: `whitespace: optional ftd.whitespace`
+
+This property sets how white-space is handled inside an element.
+It takes value of type
+[`ftd.white-space`](ftd/built-in-types/#ftd-white-space) and is optional.
+
+-- ds.rendered: Sample code using `whitespace`
+
+-- ds.rendered.input:
+
+\-- string sample-text:
+
+But ere she from the church-door stepped She smiled and told us why:
+
+'It was a wicked woman's curse,' Quoth she, 'and what care I?'
+She smiled, and smiled, and passed it off Ere from the door she stept—
+
+\-- end: sample-text
+
+\-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+\-- ftd.text: $sample-text
+white-space: normal ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+white-space: nowrap ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+white-space: pre ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+white-space: break-spaces ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: nowrap
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: pre
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: break-spaces
+padding.px: 10
+width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: `text-transform: optional ftd.text-transform`
+
+This text-transform property specifies how to capitalize an element's
+text. It can be used to make text appear in all-uppercase or all-lowercase,
+or with each word capitalized. This takes value of type
+[`ftd.text-transform`](ftd/built-in-types/#ftd-text-transform)
+and is optional.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- string sample-text:
+
+But ere she from the church-door stepped She smiled and told us why:
+
+'It was a wicked woman's curse,' Quoth she, 'and what care I?'
+She smiled, and smiled, and passed it off Ere from the door she stept—
+
+\-- end: sample-text
+
+\-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: none ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: capitalize ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: uppercase ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: lowercase ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: none
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: capitalize
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: uppercase
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: lowercase
+border-color: $red-yellow
+border-width.px: 2
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
 
 
 
