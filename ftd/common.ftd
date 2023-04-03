@@ -1271,110 +1271,6 @@ border-width.px: 2
 
 
 
-
--- ds.h1: `link: optional String`
-
-This converts the element to a hyper link.
-
-
--- ds.rendered: Sample code using `link`
-
--- ds.rendered.input:
-
-\-- ftd.text: fifthtry
-link: https://www.fifthtry.com ;; <hl>
-color: $inherited.colors.text
-
--- ds.rendered.output:
-
--- ftd.text: fifthtry
-link: https://www.fifthtry.com
-color: $inherited.colors.text
-
--- end: ds.rendered.output
-
--- end: ds.rendered
-
-
-
-
-
--- ds.h1: `open-in-new-tab: optional boolean, default=False`
-
-If `link` is provided, this attribute can also be set to open the link in new
-tab instead of current tab. By default, this attribute is set to `false`.
-This attribute takes a [`boolean`](ftd/built-in-types/#boolean) value as input
-and is optional
-
--- ds.rendered: Sample code using `open-in-new-tab` along with `link`
-
--- ds.rendered.input:
-
-\-- ftd.text: fifthtry (opens in new tab)
-link: https://www.fifthtry.com
-open-in-new-tab: true ;; <hl>
-color: $inherited.colors.text
-
--- ds.rendered.output:
-
--- ftd.text: fifthtry (opens in new tab)
-link: https://www.fifthtry.com
-open-in-new-tab: true
-color: $inherited.colors.text
-
--- end: ds.rendered.output
-
-
-
-
-
-
-
-
--- ds.h1: `shadow: optional ftd.shadow`
-
-This property will let you create a box shadow. It takes
-[`ftd.shadow`](ftd/built-in-types/#ftd-shadow) value
-which is of record type and is optional.
-
--- ds.rendered: Sample code using `shadow`
-
--- ds.rendered.input:
-
-\-- ftd.color yellow-red:
-light: yellow
-dark: red
-
-\-- ftd.shadow s: ;; <hl>
-color: $yellow-red ;; <hl>
-x-offset: 3 ;; <hl>
-y-offset: 5 ;; <hl>
-blur: 1 ;; <hl>
-spread: 2 ;; <hl>
-inset: true ;; <hl>
-
-\-- ftd.text: FifthTry
-shadow: $s ;; <hl>
-margin.px: 10
-
--- ds.rendered.output:
-
--- ftd.text: FifthTry
-shadow: $s
-margin.px: 10
-color: $inherited.colors.text
-
--- end: ds.rendered.output
-
--- end: ds.rendered
-
-
-
-
-
-
-
-
 -- ds.h1: `overflow: optional ftd.overflow`
 
 The overflow property specifies whether to clip the content, add a scroll bar,
@@ -1922,6 +1818,192 @@ color: $inherited.colors.text
 
 
 
+
+
+
+
+-- ds.h1: `whitespace: optional ftd.whitespace`
+
+This property sets how white-space is handled inside an element.
+It takes value of type
+[`ftd.white-space`](ftd/built-in-types/#ftd-white-space) and is optional.
+
+-- ds.rendered: Sample code using `whitespace`
+
+-- ds.rendered.input:
+
+\-- string sample-text:
+
+But ere she from the church-door stepped She smiled and told us why:
+
+'It was a wicked woman's curse,' Quoth she, 'and what care I?'
+She smiled, and smiled, and passed it off Ere from the door she stept—
+
+\-- end: sample-text
+
+\-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+\-- ftd.text: $sample-text
+white-space: normal ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+white-space: nowrap ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+white-space: pre ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+\-- ftd.text: $sample-text
+white-space: break-spaces ;; <hl>
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: nowrap
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: pre
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+-- ftd.text: $sample-text
+white-space: break-spaces
+padding.px: 10
+width.fixed.px: 400
+border-color: $yellow-red
+border-width.px: 2
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: `text-transform: optional ftd.text-transform`
+
+This property defines how text of an element is capitalized.
+Using this property, you can capitalize, uppercase, lowercase your
+text. This takes value of type
+[`ftd.text-transform`](ftd/built-in-types/#ftd-text-transform)
+and is optional.
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- string sample-text:
+
+But ere she from the church-door stepped She smiled and told us why:
+
+'It was a wicked woman's curse,' Quoth she, 'and what care I?'
+She smiled, and smiled, and passed it off Ere from the door she stept—
+
+\-- end: sample-text
+
+\-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: none ;; <hl>
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: capitalize ;; <hl>
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: uppercase ;; <hl>
+
+\-- ftd.text: $sample-text
+padding.px: 10
+width.fixed.px: 400
+text-transform: lowercase ;; <hl>
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+spacing.fixed.px: 10
+color: $inherited.colors.text
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: none
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: capitalize
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: uppercase
+
+-- ftd.text: $sample-text
+white-space: normal
+padding.px: 10
+width.fixed.px: 400
+text-transform: lowercase
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
 
 
 
@@ -3197,3 +3279,12 @@ y-offset.px: 5
 blur.px: 1
 spread.px: 2
 inset: true
+
+-- string sample-text:
+
+But ere she from the church-door stepped She smiled and told us why:
+
+'It was a wicked woman's curse,' Quoth she, 'and what care I?'
+She smiled, and smiled, and passed it off Ere from the door she stept—
+
+-- end: sample-text
