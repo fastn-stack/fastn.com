@@ -1,38 +1,5 @@
 -- my-ds.page: Best Practices for `ftd`/`fastn`
 
-We recommend following best practices.
-
--- best-practice: Keep 1 line space between two sections
-
--- ds.code: This is wrong
-lang: ftd
-
-\-- component planning:
-\-- ftd.row:
-margin-top.px: 26
-padding-left.px: 50
-width.fixed.px: 1400
-height: fill-container
-\-- end: ftd.row:
-\-- end: planning
-
-
--- ds.code: This is correct
-lang: ftd
-
-\-- component planning:
-
-\-- ftd.row:
-margin-top.px: 26
-padding-left.px: 50
-width.fixed.px: 1400
-height: fill-container
-
-\-- end: ftd.row:
-
-\-- end: planning
-
--- end: best-practice
 
 
 -- best-practice: Prefer use `$inherited.colors`

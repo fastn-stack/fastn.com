@@ -1,0 +1,20 @@
+-- ds.page: Import the packages
+
+We `import` the packages at the start of the `.ftd` file.
+
+-- ds.code: Example
+lang: ftd
+
+\-- import: <package-1>
+\-- import: <package-2>
+..
+\-- import: <package-n>
+
+\-- ds.page: title
+
+page content goes here
+
+\-- end: ds.page
+
+
+-- end: ds.page

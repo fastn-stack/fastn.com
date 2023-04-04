@@ -24,12 +24,14 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 -- fastn.auto-import: fastn.io/FASTN/my-ds as my-ds
 -- fastn.auto-import: fastn.io/assets as fastn-assets
 -- fastn.auto-import: fifthtry.github.io/common as common
+-- fastn.auto-import: fastn.io/utils as utils
+
+
+
 
 
 
 -- fastn.sitemap:
-
-
 
 
 # Learn: /overview/
@@ -92,8 +94,21 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
   document: ftd/setup.ftd
 - Create `fastn` package: /create-fastn-package/
   document: author/how-to/create-fastn-package.ftd
-- Best Practices: /best-practices/
 - `ftd p1` grammar: /ftd/p1-grammar/
+- Best Practices🚧: /best-practices/
+  - Formatting guidelines: /formatting/
+    document: /best-practices/formatting.ftd
+  - Import the packages: /import-at-top/
+    document: /best-practices/import-at-top.ftd
+  - Auto-import the packages: /auto-import/
+    document: /best-practices/auto-import.ftd
+  - Avoid CSS argument: /avoid-css-argument/
+    document: /best-practices/css-argument.ftd 
+  - Same argument and attribute types: /same-argument-attribute-type/
+    document: /best-practices/same-argument-attribute-type.ftd
+  - 
+
+
 
 ## Frontend: /frontend/
 
