@@ -19,6 +19,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 -- fastn.dependency: fifthtry.github.io/fastn-ui
 -- fastn.dependency: fifthtry.github.io/fastn-typography
 -- fastn.dependency: fifthtry.github.io/fastn-io-typography
+-- fastn.dependency: fifthtry.github.io/virgil-font-typography
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn.io/FASTN/my-ds as my-ds
@@ -107,6 +108,8 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
   - `ftd.text-input`: /ftd/text-input/
 - Common Attributes 🚧: /ftd/common/
 - Text Attributes 🚧: /ftd/text-attributes/
+- Container Attributes 🚧: /ftd/container-attributes/
+- Container Root Attributes 🚧: /ftd/container-root-attributes/
 
 ## How Tos: /install/
   document: author/how-to/install.ftd

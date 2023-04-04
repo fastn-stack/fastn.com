@@ -44,6 +44,7 @@ display: inline
 
 \-- ftd.text: World
 display: inline
+color: $red-yellow
 
 \-- end: ftd.container
 
@@ -57,6 +58,7 @@ display: inline
 
 -- ftd.text: World
 display: inline
+color: $red-yellow
 
 -- end: ftd.container
 
@@ -71,3 +73,7 @@ Two `ftd.text` components are displayed side by side since their display
 behavior is `inline`.
 
 -- end: my-ds.page
+
+-- ftd.color red-yellow:
+light: red
+dark: yellow

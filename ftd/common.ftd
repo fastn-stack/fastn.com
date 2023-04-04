@@ -585,6 +585,331 @@ color: $red-yellow
 
 
 
+
+-- ds.h1: `width: optional ftd.resizing, default=auto`
+
+This property sets the width of the element. It takes value of type
+type [`ftd.resizing`](ftd/built-in-types/#ftd-resizing)
+and is optional. Default value is set to `auto` if not provided.
+
+-- ds.rendered: Sample code using `width`
+
+-- ds.rendered.input:
+
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+\-- ftd.column:
+width.fixed.px: 100 ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: Width of this container is 100px
+color: $inherited.colors.text
+padding.px: 10
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+width.fixed.px: 100
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: Width of this container is 100px
+color: $inherited.colors.text
+padding.px: 10
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: `min-width: optional ftd.resizing`
+
+This property will set the minimum width of the element.
+It takes value of type [`ftd.resizing`](ftd/built-in-types/#ftd-resizing)
+and is optional.
+
+-- ds.rendered: Sample code using `min-width`
+
+-- ds.rendered.input:
+
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+\-- ftd.column:
+min-width.fixed.px: 400 ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: Min Width of this container is 400px
+color: $inherited.colors.text
+padding.px: 10
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+min-width.fixed.px: 400
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: Min Width of this container is 400px
+color: $inherited.colors.text
+padding.px: 10
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: `max-width: optional ftd.resizing`
+
+This property will set the maximum width of the element.
+It takes value of type [`ftd.resizing`](ftd/built-in-types/#ftd-resizing)
+and is optional.
+
+-- ds.rendered: Sample code using `max-width`
+
+-- ds.rendered.input:
+
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+\-- ftd.column:
+max-width.fixed.px: 300 ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text:
+color: $inherited.colors.text
+padding.px: 10
+
+Max Width of this container is 300px.
+If you add more text than it can accommodate, then it will overflow.
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+max-width.fixed.px: 300
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text:
+color: $inherited.colors.text
+padding.px: 10
+
+Max Width of this container is 300px.
+If you add more text than it can accommodate, then it will overflow.
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: `height: optional ftd.resizing, default=auto`
+
+This property sets the height of the element. It takes value of type
+type [`ftd.resizing`](ftd/built-in-types/#ftd-resizing)
+and is optional. Default value is set to `auto` if not provided.
+
+-- ds.rendered: Sample code using `height`
+
+-- ds.rendered.input:
+
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+\-- ftd.column:
+height.fixed.px: 100 ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text: Height of this container is 100px
+color: $inherited.colors.text
+padding.px: 10
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+height.fixed.px: 100
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text: Height of this container is 100px
+color: $inherited.colors.text
+padding.px: 10
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+-- ds.h1: `min-height: optional ftd.resizing`
+
+This property will set the minimum height of the element.
+It takes value of type [`ftd.resizing`](ftd/built-in-types/#ftd-resizing)
+and is optional.
+
+-- ds.rendered: Sample code using `min-height`
+
+-- ds.rendered.input:
+
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+\-- ftd.column:
+min-height.fixed.px: 100 ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
+spacing.fixed.px: 10
+
+\-- ftd.text: Min Height of this container is 100px
+color: $inherited.colors.text
+padding.px: 10
+
+\-- ftd.text:
+color: $inherited.colors.text
+padding.px: 10
+
+If more text are added inside this container, the text might overflow
+if it can't be accommodated.
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+min-height.fixed.px: 100
+border-color: $red-yellow
+border-width.px: 2
+spacing.fixed.px: 10
+
+-- ftd.text: Min Height of this container is 100px
+color: $inherited.colors.text
+padding.px: 10
+
+-- ftd.text:
+color: $inherited.colors.text
+padding.px: 10
+
+If more text are added inside this container, the text might overflow
+if it can't be accommodated.
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: `max-height: optional ftd.resizing`
+
+This property will set the maximum height of the element.
+It takes value of type [`ftd.resizing`](ftd/built-in-types/#ftd-resizing)
+and is optional.
+
+-- ds.rendered: Sample code using `max-height`
+
+-- ds.rendered.input:
+
+\-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+\-- ftd.column:
+max-height.fixed.px: 50 ;; <hl>
+max-width.fixed.px: 300
+border-color: $red-yellow
+border-width.px: 2
+
+\-- ftd.text:
+color: $inherited.colors.text
+padding.px: 10
+
+Max Height of this container is 50px.
+If you add more text than it can accommodate, then it will overflow.
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- ftd.column:
+max-height.fixed.px: 50
+max-width.fixed.px: 300
+border-color: $red-yellow
+border-width.px: 2
+
+-- ftd.text:
+color: $inherited.colors.text
+padding.px: 10
+
+Max Height of this container is 50px.
+If you add more text than it can accommodate, then it will overflow.
+
+-- end: ftd.column
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
 -- ds.h1: `background: optional ftd.background`
 
 The background property can be used to set the background of an element. The
@@ -1926,11 +2251,9 @@ dark: red
 
 \-- ftd.shadow s: ;; <hl>
 color: $yellow-red ;; <hl>
-x-offset: 3 ;; <hl>
-y-offset: 5 ;; <hl>
-blur: 1 ;; <hl>
-spread: 2 ;; <hl>
-inset: true ;; <hl>
+x-offset.px: 10 ;; <hl>
+y-offset.px: 10 ;; <hl>
+blur.px: 1 ;; <hl>
 
 \-- ftd.text: FifthTry
 shadow: $s ;; <hl>
@@ -2153,6 +2476,37 @@ border-width.px: 2
 
 
 
+
+
+
+
+
+-- ds.h1: `classes: string list`
+
+This property is used to specify a class to an element. It takes
+value as a list of strings.
+
+-- ds.rendered: Sample code using `classes`
+
+-- ds.rendered.input:
+
+\-- ftd.text:
+color: $inherited.colors.text
+classes: markdown, text ;; <hl>
+
+# This text has class `markdown` and `text`
+
+-- ds.rendered.output:
+
+-- ftd.text:
+color: $inherited.colors.text
+classes: markdown, text
+
+# This text has classes `markdown` and `text`
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
 
 
 
@@ -3319,11 +3673,9 @@ background.image: $bg-image
 
 -- ftd.shadow s:
 color: $yellow-red
-x-offset.px: 3
-y-offset.px: 5
+x-offset.px: 10
+y-offset.px: 10
 blur.px: 1
-spread.px: 2
-inset: true
 
 -- string sample-text:
 
