@@ -110,8 +110,8 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 - Text Attributes 🚧: /ftd/text-attributes/
 - Container Attributes 🚧: /ftd/container-attributes/
 - Container Root Attributes 🚧: /ftd/container-root-attributes/
-- FTD functions: /ftd/ftd-functions/
-- Appendix: /ftd/appendix/
+- FTD functions 🚧: /ftd/ftd-functions/
+- Appendix 🚧: /ftd/appendix/
 
 ## How Tos: /install/
   document: author/how-to/install.ftd

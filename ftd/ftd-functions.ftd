@@ -40,7 +40,7 @@ color: $inherited.colors.text
 
 
 
--- ds.h2: `append($a: mutable list, v: string)`
+-- ds.h2: `append($a: mutable list, v: string) ⚠️`
 
 This is a default ftd function that will append a string `v`
 to the end of the given mutable string list `a`.
@@ -86,7 +86,7 @@ $loop$: $vowels as $val
 
 -- ds.h1: Other functions
 
--- ds.h2: `toggle($a: bool)`
+-- ds.h2: `toggle($a: bool) ⚠️`
 
 This is FScript function. It will toggle the boolean variable which is passed
 as argument `a` to this function.
@@ -125,7 +125,7 @@ $on-click$: $ftd.toggle($a = $b) ;; <hl>
 
 
 
--- ds.h2: `increment($a: integer)`
+-- ds.h2: `increment($a: integer) ⚠️`
 
 This is FScript function. It will increment the integer variable by 1 which is passed
 as argument `a` to this function.
@@ -167,7 +167,7 @@ $on-click$: $ftd.increment($a = $x) ;; <hl>
 
 
 
--- ds.h2: `increment-by($a: integer, v: integer)`
+-- ds.h2: `increment-by($a: integer, v: integer) ⚠️`
 
 This is FScript function. It will increment the integer variable by value `v` which is passed
 as argument `a` to this function.
@@ -208,7 +208,7 @@ $on-click$: $ftd.increment-by($a = $x, v = 5)
 
 
 
--- ds.h2: `set-bool($a: bool, v: bool)`
+-- ds.h2: `set-bool($a: bool, v: bool) ⚠️`
 
 This is FScript function. It will set the boolean variable by value `v` which is passed
 as argument `a` to this function.
@@ -245,6 +245,120 @@ $on-click$: $ftd.set-bool($a = $b1, v = true) ;; <hl>
 
 
 
+-- ds.h2: `set-string($a: string, v: string) ⚠️`
+
+This is FScript function. It will set the string variable by value `v` which is passed
+as argument `a` to this function.
+
+-- ds.rendered: Sample code using `set-string()`
+
+-- ds.rendered.input:
+
+\-- string $s: Hello
+
+\-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+\-- ftd.text: $s
+
+\-- ftd.text: Click to set the string as World
+$on-click$: $ftd.set-string($a = $s, v = World) ;; <hl>
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- set-string-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
+-- ds.h2: `set-integer($a: integer, v: integer) ⚠️`
+
+This is FScript function. It will set the integer variable by value `v` which is passed
+as argument `a` to this function.
+
+-- ds.rendered: Sample code using `set-integer()`
+
+-- ds.rendered.input:
+
+\-- integer $y: 1
+
+\-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+\-- ftd.integer: $y
+
+\-- ftd.text: Click to set the integer as 100
+$on-click$: $ftd.set-integer($a = $y, v = 100)
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- set-integer-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
+
+
+
+-- ds.h2: `is_empty(a: any) ⚠️`
+
+This is FScript function. It gives if the value passed to argument `a` is null or empty.
+
+-- ds.rendered: Sample code using `is_empty()`
+
+-- ds.rendered.input:
+
+\-- optional string name:
+
+\-- ftd.text: name is empty
+if: { is_empty(name) } ;; <hl>
+
+\-- string list names:
+
+\-- ftd.text: There is no name in names
+if: { is_empty(names) } ;; <hl>
+
+-- ds.rendered.output:
+
+-- is-empty-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
 
 
 
@@ -252,7 +366,15 @@ $on-click$: $ftd.set-bool($a = $b1, v = true) ;; <hl>
 
 
 ;; VARIABLES ---------------------------------------
+-- optional string name:
+
+-- string list names:
+
+-- string $s: Hello
+
 -- integer $x: 1
+
+-- integer $y: 1
 
 -- boolean $b: false
 
@@ -375,3 +497,70 @@ $on-click$: $ftd.set-bool($a = $b1, v = true)
 
 
 -- end: set-bool-sample
+
+
+
+
+
+
+
+
+-- component set-string-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.text: $s
+
+-- ftd.text: Click to set the string as World
+$on-click$: $ftd.set-string($a = $s, v = World)
+
+-- end: ftd.column
+
+-- end: set-string-sample
+
+
+
+
+
+-- component set-integer-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.integer: $x
+
+-- ftd.text: Click to set the integer as 100
+$on-click$: $ftd.set-integer($a = $x, v = 100)
+
+-- end: ftd.column
+
+-- end: set-integer-sample
+
+
+
+
+
+
+
+
+-- component is-empty-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.text: name is empty
+/if: { is_empty(name) }
+
+-- ftd.text: There is no name in names
+/if: { is_empty(names) }
+
+-- end: ftd.column
+
+-- end: is-empty-sample
