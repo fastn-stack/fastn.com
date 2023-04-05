@@ -1,6 +1,6 @@
 -- ds.page: Container Component guidelines
 
--- utils.code-display: Using Conditional Attributes to Avoid Duplicating Similar Components
+-- utils.code-display: `conditional-attributes-removes-component-duplication`: Using conditional attributes to avoid duplicating similar components
 id: conditional-attributes-removes-component-duplication
 
  It's a good practice to avoid duplicating similar components with minor

@@ -8,8 +8,8 @@ introducing bugs.
 Following are the best-practices on how to use conditions:
 
 
--- utils.code-display: Default Values for Mutually Exclusive Statements
-id: default-values-mutually-exclusive-statements
+-- utils.code-display: `default-for-mutually-exclusive`: Default Values for Mutually Exclusive Statements
+id: default-for-mutually-exclusive
 
 For the two mutually exclusive statements, only one condition is required.
 For the other statement, use default value.
@@ -38,8 +38,8 @@ color: green
 
 
 
--- utils.code-display: Avoid redundancy with Conditions
-id: redundant-conditional-statements
+-- utils.code-display: `condition-to-remove-redundancy`: Avoid redundancy with Conditions
+id: condition-to-remove-redundancy
 
 Avoid Unnecessary Conditional Statements for `always true` or `always false`
 statements.
@@ -76,8 +76,8 @@ lang: ftd
 
 -- ds.h1: Conditions with respect to Parent and Child
 
--- utils.code-display: Avoiding same conditions on element and it's ancestor
-id: avoiding-same-conditions-on-parent-and-children-sections
+-- utils.code-display: `different-conditions-for-element-ancestor`: Avoiding same conditions on element and it's ancestor
+id: different-conditions-for-element-ancestor
 
 When creating same conditions on parent and children sections, it is not
 recommended to give the same condition of the parent section to the children
@@ -125,10 +125,12 @@ color: green ;; <hl>
 
 
 
--- utils.code-display: Avoiding mutually exclusive conditions on element and it's ancestor
+-- utils.code-display: 'mutually-exclusive-conditions': Avoiding mutually exclusive conditions on element and it's ancestor
+id: mutually-exclusive-conditions
 
 
-It's unnecessary to add mutually exclusive conditions to children sections, as they will never be true. This only adds complexity to the code. 
+It's unnecessary to add mutually exclusive conditions to children sections, as
+they will never be true. This only adds complexity to the code. 
 
 It's recommended to apply mutually exclusive conditions only to the parent
 section and include child sections within it. This approach simplifies the

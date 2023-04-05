@@ -10,7 +10,7 @@ value, and not a string or any other data type. Similarly, if a component
 expects a string input, then the argument being passed into that component
 should be a string, and not an integer or boolean value.
 
--- utils.code-display: Use consistent datatypes for arguments and their corresponding attributes
+-- utils.code-display: `consistent-data-types`: Use consistent datatypes for arguments and their corresponding attributes
 id: consistent-data-types
 
 -- ds.code: Not recommended

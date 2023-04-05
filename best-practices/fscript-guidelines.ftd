@@ -11,7 +11,7 @@ These guidelines should be followed while writing any FScript code.
 Using `$` for referencing inside FScript might increase readability issues if
 used extensively.
 
--- utils.code-display: Dollar not recommended in FScript
+-- utils.code-display: `no-dollar-in-fscript`: Dollar not recommended in FScript
 id: no-dollar-in-fscript
 
 -- ds.code: Not recommended

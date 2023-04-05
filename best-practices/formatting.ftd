@@ -172,7 +172,7 @@ content of component goes here
 -- end: utils.code-display
 
 
--- utils.code-display: Adding a line to the end of the document
+-- utils.code-display: `end-line`: Adding a line to the end of the document
 id: end-line
 
 It is done to ensure that the last line of code in the file does not end 
@@ -216,7 +216,13 @@ content goes here.
 -- utils.code-display: `conditional-expression`: One char space at the start and end of conditional expression
 id: conditional-expression
 
-The convention of adding `one character space after a colon` in written language is used to improve the `readability` of the text and make it `easier for readers to distinguish between the preceding text` and the `information that follows`.
+The convention of including a single space character before and after a
+conditional expression is a common coding style that helps to make the code
+more readable and easier to understand.
+
+Including these spaces is not strictly necessary for the code to function
+correctly, but it is considered good coding practice and can help make the code
+easier to maintain and modify in the future.
 
 -- ds.code: Not recommended
 lang: ftd
