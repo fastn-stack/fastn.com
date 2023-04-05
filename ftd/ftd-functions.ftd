@@ -1,0 +1,377 @@
+-- my-ds.page: ftd functions
+
+These functions are available as a part of ftd and can be used as per
+requirement.
+
+-- ds.h1: List functions
+
+-- ds.h2: `len(a: list)`
+
+This function will return the length of the list.
+
+-- ds.rendered: Sample code using `len()`
+
+-- ds.rendered.input:
+
+\-- string list places: Mumbai, New York, Bangalore
+
+\-- integer length(a):
+string list a:
+
+len(a) ;; <hl>
+
+\;; This will show the length of the
+\;; list `places` defined above
+
+\-- ftd.integer: $length(a = $places)
+color: $inherited.colors.text
+
+-- ds.rendered.output:
+
+-- ftd.integer: $length(a = $places)
+color: $inherited.colors.text
+
+-- end: ds.rendered.output
+
+
+
+
+
+
+
+
+-- ds.h2: `append($a: mutable list, v: string)`
+
+This is a default ftd function that will append a string `v`
+to the end of the given mutable string list `a`.
+
+-- ds.rendered: Sample code using `append()`
+
+-- ds.rendered.input:
+
+\-- string list vowels: a, e
+
+\-- void append(a,v):
+string list $a:
+string v:
+
+ftd.append(a, v); ;; <hl>
+
+\-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+
+\-- ftd.text: Append text
+$on-click$: $append($a = $vowels, v = fifthtry)
+
+\-- ftd.text: $val
+$loop$: $vowels as $val
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- append-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+-- ds.h1: Other functions
+
+-- ds.h2: `toggle($a: bool)`
+
+This is FScript function. It will toggle the boolean variable which is passed
+as argument `a` to this function.
+
+-- ds.rendered: Sample code using `toggle()`
+
+-- ds.rendered.input:
+
+\-- boolean $b: false
+
+\-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+\-- ftd.boolean: $b
+
+\-- ftd.text: Click to toggle
+$on-click$: $ftd.toggle($a = $b) ;; <hl>
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- toggle-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
+-- ds.h2: `increment($a: integer)`
+
+This is FScript function. It will increment the integer variable by 1 which is passed
+as argument `a` to this function.
+
+
+-- ds.rendered: Sample code using `increment()`
+
+-- ds.rendered.input:
+
+\-- integer $x: 1
+
+\-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+\-- ftd.integer: $x
+
+\-- ftd.text: Click to increment by 1
+$on-click$: $ftd.increment($a = $x) ;; <hl>
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- increment-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
+
+
+-- ds.h2: `increment-by($a: integer, v: integer)`
+
+This is FScript function. It will increment the integer variable by value `v` which is passed
+as argument `a` to this function.
+
+-- ds.rendered: Sample code using `increment-by()`
+
+-- ds.rendered.input:
+
+\-- integer $x: 1
+
+\-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+\-- ftd.integer: $x
+
+\-- ftd.text: Click to increment by 5
+$on-click$: $ftd.increment-by($a = $x, v = 5)
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- increment-by-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
+
+
+-- ds.h2: `set-bool($a: bool, v: bool)`
+
+This is FScript function. It will set the boolean variable by value `v` which is passed
+as argument `a` to this function.
+
+-- ds.rendered: Sample code using `set-bool()`
+
+-- ds.rendered.input:
+
+\-- boolean $b1: false
+
+\-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+\-- ftd.boolean: $b1
+
+\-- ftd.text: Click to set the boolean as true
+$on-click$: $ftd.set-bool($a = $b1, v = true) ;; <hl>
+
+\-- end: ftd.column
+
+-- ds.rendered.output:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+
+
+
+
+
+
+-- end: my-ds.page
+
+
+;; VARIABLES ---------------------------------------
+-- integer $x: 1
+
+-- boolean $b: false
+
+-- boolean $b1: false
+
+-- string list $vowels: a, e
+
+-- string list places: Mumbai, New York, Bangalore
+
+;; FUNCTIONS ----------------------------------------
+-- integer length(a):
+string list a:
+
+len(a)
+
+-- void append(a,v):
+string list $a:
+string v:
+
+ftd.append(a, v);
+
+;; CODE SAMPLES -------------------------------------
+-- component append-sample:
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+
+-- ftd.text: Append text
+$on-click$: $append($a = $vowels, v = fifthtry)
+
+-- ftd.text: $val
+$loop$: $vowels as $val
+
+-- end: ftd.column
+
+-- end: append-sample
+
+
+
+
+
+-- component toggle-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.boolean: $b
+
+-- ftd.text: Click to toggle
+$on-click$: $ftd.toggle($a = $b) ;; <hl>
+
+-- end: ftd.column
+
+-- end: toggle-sample
+
+
+
+
+
+
+-- component increment-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.integer: $x
+
+-- ftd.text: Click to increment by 1
+$on-click$: $ftd.increment($a = $x)
+
+-- end: ftd.column
+
+-- end: increment-sample
+
+
+
+
+
+
+
+-- component increment-by-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.integer: $x
+
+-- ftd.text: Click to increment by 5
+$on-click$: $ftd.increment-by($a = $x, v = 5)
+
+-- end: ftd.column
+
+-- end: increment-by-sample
+
+
+
+
+
+
+-- component set-bool-sample:
+
+-- ftd.column:
+color: $inherited.colors.text
+width: fill-container
+spacing.fixed.px: 10
+
+-- ftd.boolean: $b1
+
+-- ftd.text: Click to set the boolean as true
+$on-click$: $ftd.set-bool($a = $b1, v = true)
+
+-- end: ftd.column
+
+
+-- end: set-bool-sample
