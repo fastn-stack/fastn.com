@@ -1,13 +1,14 @@
 -- ds.page: Import the packages
 
-We `import` the packages at the start of the `.ftd` file.
+We `import` the packages at the start of the `.ftd` file and there should be no
+space between two imports.
 
 -- ds.code: Example
 lang: ftd
 
 \-- import: <package-1>
 \-- import: <package-2>
-..
+...
 \-- import: <package-n>
 
 \-- ds.page: title

@@ -102,11 +102,17 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
     document: /best-practices/import-at-top.ftd
   - Auto-import the packages: /auto-import/
     document: /best-practices/auto-import.ftd
-  - Avoid CSS argument: /avoid-css-argument/
-    document: /best-practices/css-argument.ftd 
+  - How to use Conditions: /how-to-use-conditions/
+    document: /best-practices/use-conditions.ftd
+  - Container guidelines: /container-guidelines/
+    document: /best-practices/container-guidelines.ftd
+  - Avoid style argument: /avoid-style-argument/
+    document: /best-practices/style-argument.ftd 
   - Same argument and attribute types: /same-argument-attribute-type/
     document: /best-practices/same-argument-attribute-type.ftd
-  - 
+  - FScript guidelines: /fscript-guidelines/
+    document: /best-practices/fscript-guidelines.ftd
+ 
 
 
 

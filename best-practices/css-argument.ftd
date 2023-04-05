@@ -1,6 +1,0 @@
--- ds.page: Avoid CSS argument
-
-Avoid taking CSS related attributes from the component's argument.
-
-
--- end: ds.page

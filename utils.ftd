@@ -284,3 +284,53 @@ children: $code-display.compare-wrap
 -- end: ftd.column
 
 -- end: code-display
+
+
+
+
+
+
+
+
+
+
+-- component tippy:
+optional caption title:
+optional body body:
+children tippy-wrap:
+
+-- ftd.column:
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+padding.px: 16
+border-radius.px: 4
+border-width.px: 1
+width: fill-container
+margin-top.px: 8
+margin-bottom.px: 32
+
+
+
+
+-- ftd.text: $tippy.title
+if: { tippy.title != NULL }
+color: $inherited.colors.text-strong
+role: $inherited.types.heading-small
+width: fill-container
+margin-bottom.px: 24
+
+
+-- ds.markdown:
+body: $tippy.body
+
+
+
+-- ftd.column:
+children: $tippy.tippy-wrap
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: tippy

@@ -1,11 +1,18 @@
 -- import: fastn.io/assets
 -- import: fifthtry.github.io/bling/tip as tip
 
+
 -- ds.page: Formatting guidelines
 
-Formatting guidelines help ensure that code is consistent, more readable,
+Formatting guidelines help us to ensure that code is consistent, more readable,
 well-formatted which can enhance the quality and effectiveness of
 communication.
+
+-- ds.h1: Why we should format code document
+
+Formatting code documents is important for creating maintainable, efficient,
+and collaborative codebases.
+
 
 Following are the formatting guidelines we follow:
 
@@ -23,7 +30,7 @@ src: $assets.files.images.best-practices.80-char-ruler.png
 width: fill-container
 
 
--- tippy: Shortcut keys to Wrap Paragraph at Ruler in Sublime Text
+-- utils.tippy: Shortcut keys to Wrap Paragraph at Ruler in Sublime Text
 
 - **MacOS**: Cmd + Option + Q
 - **Windows**: Alt + Q
@@ -195,68 +202,40 @@ lang: ftd
 content goes here.
 
 \-- end: ds.page
-<new-line> ;; <hl>
+\;; <hl>
 
 -- end: utils.code-display
 
 
+
+
+
+
+
+
+-- utils.code-display: `conditional-expression`: One char space at the start and end of conditional expression
+id: conditional-expression
+
+The convention of adding `one character space after a colon` in written language is used to improve the `readability` of the text and make it `easier for readers to distinguish between the preceding text` and the `information that follows`.
+
+-- ds.code: Not recommended
+lang: ftd
+
+\-- integer num: 1
+
+\-- ftd.text: Number is 1
+if: {num == 1}	;; <hl>
+
+-- ds.code: Recommended
+lang: ftd
+
+\-- integer num: 1
+
+\-- ftd.text: Number is 1
+if: { num == 1 }	;; <hl>
+
+-- end: utils.code-display
+
+
+
 -- end: ds.page
-
-
-
-
-
-
-
-
-
-
-
--- component tippy:
-optional caption title:
-optional body body:
-children tippy-wrap:
-
--- ftd.column:
-border-color: $inherited.colors.border
-background.solid: $inherited.colors.background.step-1
-padding.px: 16
-border-radius.px: 4
-border-width.px: 1
-width: fill-container
-margin-top.px: 8
-margin-bottom.px: 32
-
--- ftd.column:
-width: fill-container
-
--- ftd.row:
-margin-bottom.px: 24
-
-
--- ftd.text: $tippy.title
-if: { $tippy.title != NULL }
-color: $inherited.colors.text-strong
-role: $inherited.types.heading-small
-
--- end: ftd.row
-
--- end: ftd.column
-
--- ftd.column:
-width: fill-container
-
--- ds.markdown:
-body: $tippy.body
-
--- end: ftd.column
-
--- ftd.column:
-children: $tippy.tippy-wrap
-width: fill-container
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: tippy
