@@ -165,8 +165,47 @@ content of component goes here
 -- end: utils.code-display
 
 
+-- utils.code-display: Adding a line to the end of the document
+id: end-line
+
+It is done to ensure that the last line of code in the file does not end 
+without a newline.
+
+This is because some programming languages or tools might interpret the
+lack of a newline character as an error or warning, and it can also cause
+problems when different code files are merged or concatenated. Therefore,
+adding a newline at the end of the document is a good practice to ensure
+consistent behavior across different tools and systems.
+
+-- ds.code: Not recommended
+lang: ftd
+
+\-- ds.page: Page 1
+
+content goes here.
+
+\-- end: ds.page
+
+
+-- ds.code: Recommended
+lang: ftd
+
+\-- ds.page: Page 1
+
+content goes here.
+
+\-- end: ds.page
+<new-line> ;; <hl>
+
+-- end: utils.code-display
+
 
 -- end: ds.page
+
+
+
+
+
 
 
 
@@ -221,5 +260,3 @@ width: fill-container
 -- end: ftd.column
 
 -- end: tippy
-
-

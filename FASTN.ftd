@@ -95,7 +95,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 - Create `fastn` package: /create-fastn-package/
   document: author/how-to/create-fastn-package.ftd
 - `ftd p1` grammar: /ftd/p1-grammar/
-- Best Practices🚧: /best-practices/
+- Best Practices 🚧: /best-practices/
   - Formatting guidelines: /formatting/
     document: /best-practices/formatting.ftd
   - Import the packages: /import-at-top/
