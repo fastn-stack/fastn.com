@@ -2,7 +2,7 @@
 
 -- my-ds.page: Appendix
 
--- ds.h1: Common Attributes
+-- ds.h1: Attributes
 
 -- appendix.letter-stack:
 height.fixed.px: 800
@@ -54,6 +54,9 @@ link: /ftd/common/#anchor
 
 -- appendix.letter-data: align-self
 link: /ftd/common/#align-self
+
+-- appendix.letter-data: align-content
+link: /ftd/container-attributes/#align-content
 
 -- end: letter-contents-a
 
@@ -138,6 +141,9 @@ link: /ftd/common/#border-bottom-right-radius
 -- appendix.letter-data: color
 link: /ftd/common/#color
 
+-- appendix.letter-data: colors
+link: /ftd/container-root-attributes/#colors
+
 -- appendix.letter-data: cursor
 link: /ftd/common/#cursor
 
@@ -150,9 +156,17 @@ link: /ftd/common/#css
 -- appendix.letter-data: css-list
 link: /ftd/common/#css-list
 
+-- appendix.letter-data: children
+link: /ftd/container-root-attributes/#children
+
 -- end: letter-contents-c
 
 -- appendix.letter-data list letter-contents-d:
+
+-- appendix.letter-data: display
+link: /ftd/text-attributes/#display
+
+-- end: letter-contents-d
 
 -- appendix.letter-data list letter-contents-e:
 
@@ -303,15 +317,30 @@ link: /ftd/common/#shadow
 -- appendix.letter-data: sticky
 link: /ftd/common/#sticky
 
+-- appendix.letter-data: spacing
+link: /ftd/container-attributes/#spacing
+
+-- appendix.letter-data: style
+link: /ftd/text-attributes/#style
+
 -- end: letter-contents-s
 
 -- appendix.letter-data list letter-contents-t:
+
+-- appendix.letter-data: types
+link: /ftd/container-root-attributes/#types
 
 -- appendix.letter-data: top
 link: /ftd/common/#top
 
 -- appendix.letter-data: text-transform
 link: /ftd/common/#text-transform
+
+-- appendix.letter-data: text-indent
+link: /ftd/text-attributes/#text-indent
+
+-- appendix.letter-data: text-align
+link: /ftd/text-attributes/#text-align
 
 -- end: letter-contents-t
 
@@ -326,6 +355,9 @@ link: /ftd/common/#whitespace
 
 -- appendix.letter-data: width
 link: /ftd/common/#width
+
+-- appendix.letter-data: wrap
+link: /ftd/container-attributes/#wrap
 
 -- end: letter-contents-w
 

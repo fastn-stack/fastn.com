@@ -36,6 +36,11 @@ contents-z: $letter-contents-z
 
 -- end: my-ds.page
 
+-- ftd.color hover-c:
+light: coral
+dark: deepskyblue
+
+
 -- integer letter-list-length(a):
 letter-data list a:
 
@@ -55,7 +60,7 @@ optional string link:
 -- component letter:
 caption letter-name:
 optional string link:
-ftd.color hover-color: green
+ftd.color hover-color: $hover-c
 boolean $is-hovered: false
 
 -- ftd.text: $letter.letter-name

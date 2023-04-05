@@ -3,7 +3,8 @@
 These attributes are available to `ftd.text`, `ftd.integer`,
 `ftd.decimal` and `ftd.boolean` components.
 
--- ds.h2: `style: ftd.text-style list`
+-- ds.h1: `style: ftd.text-style list`
+id: style
 
 This `style` attribute can be used to add inline styles on the rendered content.
 It accepts a list of [`ftd.text-style`](ftd/built-in-types/#ftd-text-style)
@@ -51,7 +52,8 @@ color: $inherited.colors.text-strong
 
 -- end: ds.rendered
 
--- ds.h2: `text-align: optional ftd.text-align`
+-- ds.h1: `text-align: optional ftd.text-align`
+id: text-align
 
 This attribute is used to align the rendered content. It accepts the
 [`ftd.text-align`](ftd/built-in-types/#ftd-text-align) type value and is
@@ -162,7 +164,8 @@ this is **text-align: justify** text. a bit longer text so you can see what's go
 -- end: ds.rendered
 
 
--- ds.h2: `text-indent: optional ftd.length`
+-- ds.h1: `text-indent: optional ftd.length`
+id: text-indent
 
 This attribute can be used to specify the indentation of the
 first line in the rendered text. It accepts a
@@ -195,6 +198,7 @@ It only applies spacing at the beginning of the first line.
 -- end: ds.rendered
 
 -- ds.h2: `display: optional ftd.display`
+id: display
 
 This `display` attribute sets the display behaviour of an element.
 It accepts value of type [`ftd.display`](ftd/built-in-types/#ftd-display)

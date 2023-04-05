@@ -176,17 +176,17 @@ as argument `a` to this function.
 
 -- ds.rendered.input:
 
-\-- integer $x: 1
+\-- integer $z: 1
 
 \-- ftd.column:
 color: $inherited.colors.text
 width: fill-container
 spacing.fixed.px: 10
 
-\-- ftd.integer: $x
+\-- ftd.integer: $z
 
 \-- ftd.text: Click to increment by 5
-$on-click$: $ftd.increment-by($a = $x, v = 5)
+$on-click$: $ftd.increment-by($a = $z, v = 5)
 
 \-- end: ftd.column
 
@@ -232,6 +232,8 @@ $on-click$: $ftd.set-bool($a = $b1, v = true) ;; <hl>
 \-- end: ftd.column
 
 -- ds.rendered.output:
+
+-- set-bool-sample:
 
 -- end: ds.rendered.output
 
@@ -365,6 +367,11 @@ if: { is_empty(names) } ;; <hl>
 -- end: my-ds.page
 
 
+-- ftd.color red-yellow:
+light: red
+dark: yellow
+
+
 ;; VARIABLES ---------------------------------------
 -- optional string name:
 
@@ -375,6 +382,8 @@ if: { is_empty(names) } ;; <hl>
 -- integer $x: 1
 
 -- integer $y: 1
+
+-- integer $z: 1
 
 -- boolean $b: false
 
@@ -396,6 +405,19 @@ string v:
 
 ftd.append(a, v);
 
+-- component display-text:
+caption text:
+ftd.color border-color: $red-yellow
+
+-- ftd.text: $display-text.text
+color: $inherited.colors.text
+border-color: $display-text.border-color
+border-width.px: 2
+padding.px: 10
+
+-- end: display-text
+
+
 ;; CODE SAMPLES -------------------------------------
 -- component append-sample:
 
@@ -406,7 +428,7 @@ color: $inherited.colors.text
 -- ftd.text: Append text
 $on-click$: $append($a = $vowels, v = fifthtry)
 
--- ftd.text: $val
+-- display-text: $val
 $loop$: $vowels as $val
 
 -- end: ftd.column
@@ -426,7 +448,7 @@ spacing.fixed.px: 10
 
 -- ftd.boolean: $b
 
--- ftd.text: Click to toggle
+-- display-text: Click to toggle
 $on-click$: $ftd.toggle($a = $b) ;; <hl>
 
 -- end: ftd.column
@@ -447,7 +469,7 @@ spacing.fixed.px: 10
 
 -- ftd.integer: $x
 
--- ftd.text: Click to increment by 1
+-- display-text: Click to increment by 1
 $on-click$: $ftd.increment($a = $x)
 
 -- end: ftd.column
@@ -467,10 +489,10 @@ color: $inherited.colors.text
 width: fill-container
 spacing.fixed.px: 10
 
--- ftd.integer: $x
+-- ftd.integer: $z
 
--- ftd.text: Click to increment by 5
-$on-click$: $ftd.increment-by($a = $x, v = 5)
+-- display-text: Click to increment by 5
+$on-click$: $ftd.increment-by($a = $z, v = 5)
 
 -- end: ftd.column
 
@@ -490,7 +512,7 @@ spacing.fixed.px: 10
 
 -- ftd.boolean: $b1
 
--- ftd.text: Click to set the boolean as true
+-- display-text: Click to set the boolean as true
 $on-click$: $ftd.set-bool($a = $b1, v = true)
 
 -- end: ftd.column
@@ -514,7 +536,7 @@ spacing.fixed.px: 10
 
 -- ftd.text: $s
 
--- ftd.text: Click to set the string as World
+-- display-text: Click to set the string as World
 $on-click$: $ftd.set-string($a = $s, v = World)
 
 -- end: ftd.column
@@ -534,7 +556,7 @@ spacing.fixed.px: 10
 
 -- ftd.integer: $x
 
--- ftd.text: Click to set the integer as 100
+-- display-text: Click to set the integer as 100
 $on-click$: $ftd.set-integer($a = $x, v = 100)
 
 -- end: ftd.column
@@ -555,12 +577,18 @@ color: $inherited.colors.text
 width: fill-container
 spacing.fixed.px: 10
 
--- ftd.text: name is empty
-/if: { is_empty(name) }
+-- display-text: name is empty
+if: { ftd.is_empty(name) }
 
--- ftd.text: There is no name in names
-/if: { is_empty(names) }
+-- display-text: There is no name in names
+if: { ftd.is_empty(names) }
 
 -- end: ftd.column
 
 -- end: is-empty-sample
+
+
+
+
+
+

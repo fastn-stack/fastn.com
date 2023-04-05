@@ -5,6 +5,7 @@ components in ftd.
 
 
 -- ds.h1: `wrap: optional boolean`
+id: wrap
 
 This property is used to wrap flex elements. If the elements are not flex, this
 will have no effect.
@@ -47,6 +48,7 @@ wrap: true ;; <hl>
 
 
 -- ds.h1: `align-content: optional ftd.align`
+id: align-content
 
 This property defines how elements are aligned
 inside a flex container like `ftd.row`, `ftd.column`. It takes value of type
@@ -90,6 +92,7 @@ border-width.px: 2
 
 
 -- ds.h1: `spacing: optional ftd.spacing`
+id: spacing
 
 This property defines the spacing between and around the container elements.
 It takes value of type [`ftd.spacing`](ftd/built-in-types/#ftd-spacing)
