@@ -244,6 +244,7 @@ link: $item.link
 
 
 -- component letter-stack:
+optional caption title:
 ftd.resizing height:
 letter-data list contents-a: []
 letter-data list contents-b: []
@@ -271,7 +272,6 @@ letter-data list contents-w: []
 letter-data list contents-x: []
 letter-data list contents-y: []
 letter-data list contents-z: []
-
 
 -- ftd.column:
 wrap: true

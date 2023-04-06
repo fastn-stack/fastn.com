@@ -1,8 +1,8 @@
 -- import: fastn.io/ftd/utils as appendix
 
--- my-ds.page: Appendix
+-- my-ds.page: Attributes
 
--- ds.h1: Attributes
+-- ds.h1: Appendix
 
 -- appendix.letter-stack:
 height.fixed.px: 800
