@@ -65,6 +65,7 @@ boolean $is-hovered: false
 
 -- ftd.text: $letter.letter-name
 link if { letter.link != NULL }: $letter.link
+role: $inherited.types.copy-regular
 color: $inherited.colors.text
 color if { letter.is-hovered }: $letter.hover-color
 /style if { letter.is-hovered }: bold, underline
@@ -276,7 +277,7 @@ letter-data list contents-z: []
 -- ftd.column:
 wrap: true
 width: fill-container
-height.fixed.px: $letter-stack.height
+height: $letter-stack.height
 spacing.fixed.px: 10
 
 -- letter-category: A
