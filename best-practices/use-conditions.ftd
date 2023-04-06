@@ -89,8 +89,8 @@ It is not recommended to create same conditions on element and it's children.
 This approach adds an unnecessary line of code and can make the `ftd` code more
 difficult to read and maintain.
 
-Instead, the recommended approach is to include the condition only on the 
-element and then include any necessary child within that element.
+Instead, it is recommended to apply conditions only to the element
+itself, and omit applying conditions to its children.
 
 -- ds.code: Not recommended
 lang: ftd
