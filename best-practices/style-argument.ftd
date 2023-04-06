@@ -1,4 +1,4 @@
--- my-sds.page: Avoid style arguments
+-- my-ds.page: Avoid style arguments
 
 Any `ftd` file is either a `component library` or `content`. 
 Content files should not use "style arguments".
