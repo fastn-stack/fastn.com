@@ -40,10 +40,11 @@ id: minimize-Container-components
 
 
 This guideline advises against using container components when there is only 
-one or no child component, as it can lead to unnecessary abstraction and 
-complexity in the code. Instead, it's recommended to directly render the child 
-component in the parent component, which results in simpler and more readable 
-code.
+one or no child, as it can lead to unnecessary abstraction and complexity
+in the code. Instead, it's recommended to remove the parent container which
+results in simpler and more readable code.
+
+
 
 -- ds.code: Not recommended
 lang: ftd

@@ -6,7 +6,7 @@
 id: not-null-opt-arg
 
 This coding principle emphasizes the importance of using `if-condition` for
-`optional` arguments or variables, and ensuring that they have a `!null`
+`optional` arguments or variables, and ensuring that they have a "not null"
 condition. 
 
 By doing so, it helps prevent unexpected errors or bugs in the code
