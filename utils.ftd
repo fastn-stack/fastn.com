@@ -220,8 +220,6 @@ width: fill-container
 padding-horizontal.px: 14
 padding-vertical.px: 12
 background.solid: $inherited.colors.background.code
-;; border-top-left-radius.px: 4
-;; border-top-right-radius.px: 4
 
 -- ftd.row:
 spacing.fixed.px: 16
@@ -231,7 +229,6 @@ align-content: center
 width.fixed.px: 8
 height.fixed.px: 8
 background.solid: $inherited.colors.custom.one
-;; border-radius.px: 12
 
 -- end: ftd.column
 
@@ -248,13 +245,9 @@ width.fixed.percent if { ftd.device == "mobile" }: 80
 -- ftd.column:
 width: fill-container
 spacing.fixed.px: 32
-;; border-width.px: 1
-;; border-color: $inherited.colors.border
 padding-horizontal.px: 24
 padding-vertical.px: 24
-;; border-bottom-left-radius.px: 4
-;; border-bottom-right-radius.px: 4
-;; border-top-width.px: 0
+
 
 -- ftd.text:
 if: { code-display.body != NULL }
