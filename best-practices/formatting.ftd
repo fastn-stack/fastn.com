@@ -1,4 +1,5 @@
 -- import: fastn.io/assets
+-- import: fastn.io/utils
 -- import: fifthtry.github.io/bling/tip as tip
 
 
@@ -46,7 +47,7 @@ width: fill-container
 
 -- ds.markdown:
 
-**When Paragraph is not wrapped at ruler:**
+**When Paragraph is wrapped at ruler:**
 
 -- ds.image: 
 src: $assets.files.images.best-practices.good-word-wrapping.png
@@ -95,14 +96,13 @@ height: fill-container
 
 
 
-
-
-
-
 -- utils.code-display: `after-colon-space`: One char space after `:`
 id: after-colon-space
 
-The convention of adding `one character space after a colon` in written language is used to improve the `readability` of the text and make it `easier for readers to distinguish between the preceding text` and the `information that follows`.
+The convention of adding `one character space after a colon` in written 
+language is used to improve the `readability` of the text and make it `easier `
+for readers to distinguish between the preceding text` and the `information 
+that follows`.
 
 -- ds.code: Not recommended
 lang: ftd
@@ -128,7 +128,9 @@ lang: ftd
 -- utils.code-display: `component-gap`: 10 line space between two components
 id: component-gap
 
-The convention of adding 10 line spaces between two components in a document is a `formatting technique used to create a clear visual separation` and help organize the content for easier reading and comprehension.
+The convention of adding 10 line spaces between two components in a document is
+a `formatting technique used to create a clear visual separation` and help
+organize the content for easier reading and comprehension.
 
 -- ds.code: Not recommended
 lang: ftd

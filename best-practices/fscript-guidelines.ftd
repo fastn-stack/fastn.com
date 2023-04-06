@@ -1,3 +1,5 @@
+-- import: fastn.io/utils
+
 -- ds.page: FScript guidelines
 
 These guidelines should be followed while writing any FScript code. 

@@ -1,3 +1,5 @@
+-- import: fastn.io/utils
+
 -- ds.page: How to use Conditions
 
 By following the best practices for writing conditional statements, developers
@@ -70,23 +72,25 @@ lang: ftd
 -- end: utils.code-display
 
 
+-- ds.markdown:
+
+In the above case, the variable `num` is immutable i.e. the value of num is
+fixed to 1, therefore, `if: { num == 1 }` is always `true` and `if: { num ==
+2 }` is always `false`.
 
 
 
+-- ds.h1: Conditions with respect to element and it's children
 
--- ds.h1: Conditions with respect to Parent and Child
+-- utils.code-display: `different-conditions-for-element-children`: Avoiding same conditions on element and it's children
+id: different-conditions-for-element-children
 
--- utils.code-display: `different-conditions-for-element-ancestor`: Avoiding same conditions on element and it's ancestor
-id: different-conditions-for-element-ancestor
-
-When creating same conditions on parent and children sections, it is not
-recommended to give the same condition of the parent section to the children
-sections. This approach adds an unnecessary line of code and can make the FTD
-code more difficult to read and maintain.
+It is not recommended to create same conditions on element and it's children.
+This approach adds an unnecessary line of code and can make the `ftd` code more
+difficult to read and maintain.
 
 Instead, the recommended approach is to include the condition only on the 
-parent section, and then include any necessary child sections within that
-parent section
+element and then include any necessary child within that element.
 
 -- ds.code: Not recommended
 lang: ftd
@@ -125,16 +129,18 @@ color: green ;; <hl>
 
 
 
--- utils.code-display: 'mutually-exclusive-conditions': Avoiding mutually exclusive conditions on element and it's ancestor
+-- utils.code-display: 'mutually-exclusive-conditions': Avoiding mutually exclusive conditions on element and it's children
 id: mutually-exclusive-conditions
 
 
-It's unnecessary to add mutually exclusive conditions to children sections, as
-they will never be true. This only adds complexity to the code. 
+To simplify the code and reduce the risk of errors, it is unnecessary to add
+mutually exclusive conditions to the children and their attributes in relation
+to the element. These conditions will never be true and only add complexity to
+the code. 
 
-It's recommended to apply mutually exclusive conditions only to the parent
-section and include child sections within it. This approach simplifies the
-code, makes it easier to read, and reduces the risk of errors.
+Instead, it is recommended to apply conditions only to the element
+itself, and omit applying conditions to its children. This approach makes the
+code easier to read and understand.
 
 -- ds.code: Not recommended
 lang: ftd

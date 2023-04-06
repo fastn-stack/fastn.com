@@ -24,7 +24,6 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
 -- fastn.auto-import: fastn.io/FASTN/my-ds as my-ds
 -- fastn.auto-import: fastn.io/assets as fastn-assets
 -- fastn.auto-import: fifthtry.github.io/common as common
--- fastn.auto-import: fastn.io/utils as utils
 
 
 
@@ -106,12 +105,12 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/fastn.io/main
     document: /best-practices/use-conditions.ftd
   - Container guidelines: /container-guidelines/
     document: /best-practices/container-guidelines.ftd
-  - Avoid style argument: /avoid-style-argument/
-    document: /best-practices/style-argument.ftd 
   - Same argument and attribute types: /same-argument-attribute-type/
     document: /best-practices/same-argument-attribute-type.ftd
   - FScript guidelines: /fscript-guidelines/
     document: /best-practices/fscript-guidelines.ftd
+  - Inherited guidelines: /inherited-guidelines/
+    document: /best-practices/inherited-guidelines.ftd
  
 
 

@@ -1,3 +1,5 @@
+-- import: fastn.io/utils
+
 -- ds.page: Container Component guidelines
 
 -- utils.code-display: `conditional-attributes-removes-component-duplication`: Using conditional attributes to avoid duplicating similar components
