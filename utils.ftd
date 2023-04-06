@@ -231,7 +231,6 @@ align-content: center
 width.fixed.px: 8
 height.fixed.px: 8
 background.solid: $inherited.colors.custom.one
-;; border-radius.px: 12
 
 -- end: ftd.column
 
