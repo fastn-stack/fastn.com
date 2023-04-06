@@ -16,11 +16,10 @@ flex container components which are `ftd.row` and `ftd.column`.
 common to all container components.
 
 -- ds.h1: Appendix
-if: { ftd.device != "mobile" }
 
 -- appendix.letter-stack:
-if: { ftd.device != "mobile" }
-height.fixed.px: 1000
+height.fixed.px if { ftd.device != "mobile" }: 1000
+height: fill-container
 contents-a: $letter-contents-a
 contents-b: $letter-contents-b
 contents-c: $letter-contents-c
