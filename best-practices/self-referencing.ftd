@@ -2,7 +2,8 @@
 
 -- my-ds.page: Self-referencing guideline 🚧
 
--- utils.code-display: `self-ref-validity`: Preventing duplicate self-referencing properties
+-- utils.code-display: 
+title: `self-ref-validity`: Preventing duplicate self-referencing properties
 id: self-ref-validity
 
 When assigning values to self-referencing properties, it is important to avoid
