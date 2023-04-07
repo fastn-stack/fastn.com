@@ -2580,7 +2580,7 @@ color: $inherited.colors.text
 
 
 
--- ds.h1: `sticky: optional boolean ⚠️`
+-- ds.h1: `sticky: optional boolean`
 id: sticky
 
 This property lets you make an element stick to a specific position
