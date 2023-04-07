@@ -47,7 +47,7 @@ id: role-inheritance
 Specific values for `typography` requires additional code for responsive
 design.
 
-Meanwhile,`role-inheritance` allows for greater flexibility in using different
+Meanwhile,`role-inheritance` allows for flexibility in using different
 typography, while maintaining consistency across the design system.
 
 
