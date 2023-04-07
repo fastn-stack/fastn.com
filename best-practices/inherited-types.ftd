@@ -8,7 +8,7 @@ using different color schemes and typography.
 -- utils.code-display: `inherited-colors`: Prefer using `inherited.colors`to give colors
 id: inherited-colors
 
-`$inherited.colors` are part of `fastn` design system. If you use custom /
+`inherited.colors` are part of `fastn` design system. If you use custom /
 hardcoded colors then switching color schemes will not affect your component,
 and website maintainers using your component will have a great experience.
 
