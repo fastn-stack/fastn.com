@@ -9,8 +9,8 @@ fonts are simple variables.
 
 Using `assets` we can:
 
-- [Access files (including images)](/how-to-access-files/)
+- [Access files (including images)](/accessing-files/)
 
-- [Access font variables](/how-to-access-fonts/)
+- [Access font variables](/accessing-fonts/)
 
 -- end: my-ds.page
