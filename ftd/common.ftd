@@ -2598,6 +2598,8 @@ spacing.fixed.px: 50
 height.fixed.px: 200
 width.fixed.px: 300
 overflow-y: scroll
+border-color: $red-yellow
+border-width.px: 2
 
 \-- ftd.text: The blue planet below is sticky
 
@@ -2605,6 +2607,8 @@ overflow-y: scroll
 color: black
 background.solid: deepskyblue
 sticky: true ;; <hl>
+width.fixed.px: 120
+text-align: center
 left.px: 50
 top.px: 0
 
@@ -4571,6 +4575,8 @@ spacing.fixed.px: 50
 height.fixed.px: 200
 width.fixed.px: 300
 overflow-y: scroll
+border-color: $red-yellow
+border-width.px: 2
 
 -- ftd.text: The blue planet below is sticky
 
@@ -4578,6 +4584,8 @@ overflow-y: scroll
 color: black
 background.solid: deepskyblue
 sticky: true
+width.fixed.px: 120
+text-align: center
 left.px: 50
 top.px: 0
 
