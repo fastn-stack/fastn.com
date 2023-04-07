@@ -122,7 +122,7 @@ favicon: /-/fastn.io/images/favicon.svg
     document: /best-practices/optional-arg-not-null.ftd
   - Commenting: /commenting-guidelines/
     document: /best-practices/commenting-guidelines.ftd
-  - Self-referencing 🚧: /self-referencing-guidelines/
+  - Self-referencing: /self-referencing-guidelines/
     document: /best-practices/Self-referencing.ftd
   - Property: /property-guidelines/
     document: /best-practices/property-guidelines.ftd
