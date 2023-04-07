@@ -137,8 +137,8 @@ $on-click$: $ftd.set-integer($a = $component-number, v = 1) ;; <hl>
 
 -- ds.h2: Control attribute values using event-handling
 
-We can control the attribute values of components using event-handling as well
-along with conditional if expressions.
+We can use event-handling with conditional expressions to control the behaviour
+of components.
 
 -- ds.rendered: Sample code using event-handling to control attribute values
 
