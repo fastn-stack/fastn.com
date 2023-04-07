@@ -41,7 +41,7 @@ color: $inherited.colors.text
 
 
 
--- utils.code-display: `role-inheritance`: Prefer using `inherited` to give a role
+-- utils.code-display: `role-inheritance`: Prefer using `inherited.types` to give a role
 id: role-inheritance
 
 Specific values for `typography` requires additional code for responsive
