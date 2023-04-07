@@ -190,6 +190,38 @@ $on-click$: $ftd.enable-system-mode() ;; <hl>
 
 
 
+-- ds.h2: `copy-to-clipboard(text: string)`
+
+This is FScript as well as a standard ftd function.
+This function enables copy content in clipboard.
+
+-- ds.rendered: Sample code using `copy-to-clipboard()`
+
+-- ds.rendered.input:
+
+\-- void copy-me-call(text): ;; <hl>
+string text: ;; <hl>
+\;; <hl>
+ftd.copy_to_clipboard(text) ;; <hl>
+
+\-- ftd.text: Click to Copy ⭐️
+$on-click$: $copy-me-call(text = ⭐) ;; <hl>
+color: $inherited.colors.text
+border-color: $red-yellow
+border-width.px: 2
+padding.px: 10
+
+-- ds.rendered.output:
+
+-- copy-clipboard-sample:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
 
 
 
@@ -656,6 +688,12 @@ dark: yellow
 -- string list places: Mumbai, New York, Bangalore
 
 ;; FUNCTIONS ----------------------------------------
+-- void copy-me-call(text):
+string text:
+
+ftd.copy_to_clipboard(text)
+
+
 -- void set-dark():
 
 enable_dark_mode()
@@ -1045,6 +1083,16 @@ $on-click$: $clamp_with_limits($a = $n, by = 1, min = 1, max = 6)
 
 
 
+-- component copy-clipboard-sample:
+
+-- ftd.text: Click to Copy ⭐️
+$on-click$: $copy-me-call(text = ⭐)
+color: $inherited.colors.text
+border-color: $red-yellow
+border-width.px: 2
+padding.px: 10
+
+-- end: copy-clipboard-sample
 
 
 
