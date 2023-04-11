@@ -89,7 +89,7 @@ In ftd, there are several attributes which support responsive type such as
 
 \-- ftd.responsive-length responsive-padding-length:  ;; <hl>
 desktop.px: 15  ;; <hl>
-mobile.percent: 5  ;; <hl>
+mobile.px: 5  ;; <hl>
 
 \-- ftd.column:
 color: $inherited.colors.text
@@ -97,9 +97,13 @@ width: fill-container
 
 \-- ftd.text: This text has responsive padding for desktop and mobile
 padding.responsive: $responsive-padding-length ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
 
 \-- ftd.text: This is another piece of text having same responsive padding
 padding.responsive: $responsive-padding-length ;; <hl>
+border-color: $red-yellow
+border-width.px: 2
 
 \-- end: ftd.column
 
@@ -219,7 +223,7 @@ $on-mouse-leave$: $ftd.set-bool($a = $is-hovered, v = false) ;; <hl>
 
 -- ftd.responsive-length responsive-padding-length:
 desktop.px: 15
-mobile.percent: 5
+mobile.px: 5
 
 -- integer $component-number: 1
 
@@ -235,7 +239,9 @@ blur.px: 1
 light: yellow
 dark: red
 
-
+-- ftd.color red-yellow:
+light: red
+dark: yellow
 
 -- component if-component-sample:
 
@@ -341,9 +347,13 @@ width: fill-container
 
 -- ftd.text: This text has responsive padding for desktop and mobile
 padding.responsive: $responsive-padding-length
+border-color: $red-yellow
+border-width.px: 2
 
 -- ftd.text: This is another piece of text having same responsive padding
 padding.responsive: $responsive-padding-length
+border-color: $red-yellow
+border-width.px: 2
 
 -- end: ftd.column
 
