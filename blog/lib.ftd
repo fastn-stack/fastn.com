@@ -1,0 +1,88 @@
+-- component player:
+ftd.image-src avatar:
+body story:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+border-radius.px: 15
+border-width.px: 2
+margin-vertical.px: 8
+margin-horizontal.px: 20
+
+-- ftd.image:
+src: $player.avatar
+align-self: start
+padding.px: 3
+
+-- ftd.text: $player.story
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+padding.px: 10
+align-self: center
+
+
+-- end: ftd.row
+
+
+-- end: player
+
+
+
+-- component meet-the-team:
+caption title: Meet the Team
+boolean $show: true
+children players:
+
+-- ftd.column: 
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $meet-the-team.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- ftd.image:
+if: { meet-the-team.show }
+width.fixed.px: 35
+src: $fastn-assets.files.images.blog.uparrow.png
+$on-click$: $ftd.toggle($a = $meet-the-team.show)
+align-self: center
+padding-horizontal.px: 5
+
+
+-- ftd.image:
+if: { !meet-the-team.show }
+width.fixed.px: 35
+src: $fastn-assets.files.images.blog.downarrow.png
+$on-click$: $ftd.toggle($a = $meet-the-team.show)
+align-self: center
+padding-horizontal.px: 5
+
+
+-- end: ftd.row
+
+
+
+-- ftd.column:
+if: { meet-the-team.show }
+width: fill-container
+children: $meet-the-team.players
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: meet-the-team
+
+
+
+/-- component section:
+children data:
+
+
+-- end: section
+
