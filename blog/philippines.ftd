@@ -10,36 +10,26 @@ Back Story about how we meet the team.
 -- lib.meet-the-team:
 
 -- lib.player:
-avatar: $fastn-assets.files.images.blog.learner-avatar.png
-
-Hi, My name is so-and-so, and my story is so-and-so.
+member: $lib.glenn
 
 
-
--- lib.player:
-avatar: $fastn-assets.files.images.blog.learner-avatar.png
-
-Hi, My name is so-and-so, and my story is so-and-so.
 
 
 
 -- lib.player:
-avatar: $fastn-assets.files.images.blog.learner-avatar.png
+member: $lib.nicole
 
-Hi, My name is so-and-so, and my story is so-and-so.
+
 
 -- end: lib.meet-the-team
 
 
--- ds.h1: More details
+-- ds.h1: Tasks
 
-
-
-/-- lib.section:
+-- lib.tab-component: 
 
 
 
 
--- end: lib.section
 
 -- end: my-ds.page

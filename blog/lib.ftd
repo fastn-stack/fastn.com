@@ -1,6 +1,5 @@
 -- component player:
-ftd.image-src avatar:
-body story:
+member member:
 
 -- ftd.row:
 width: fill-container
@@ -8,14 +7,18 @@ height: hug-content
 border-radius.px: 15
 border-width.px: 2
 margin-vertical.px: 8
-margin-horizontal.px: 20
+/margin-horizontal.px: 20
+
+
 
 -- ftd.image:
-src: $player.avatar
+src: $player.member.avatar
 align-self: start
 padding.px: 3
 
--- ftd.text: $player.story
+
+
+-- ftd.text: $player.member.story
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 padding.px: 10
@@ -26,6 +29,10 @@ align-self: center
 
 
 -- end: player
+
+/-- ftd.color bg-color:
+light: #eab676
+dark: #393939
 
 
 
@@ -39,16 +46,21 @@ width: fill-container
 
 -- ftd.row:
 width: fill-container
+spacing: space-between
+$on-click$: $ftd.toggle($a = $meet-the-team.show)
+background.solid: $inherited.colors.background.step-1
+
 
 -- ftd.text: $meet-the-team.title
 role: $inherited.types.heading-medium
 color: $inherited.colors.text
+padding.px: 5
+
 
 -- ftd.image:
 if: { meet-the-team.show }
 width.fixed.px: 35
 src: $fastn-assets.files.images.blog.uparrow.png
-$on-click$: $ftd.toggle($a = $meet-the-team.show)
 align-self: center
 padding-horizontal.px: 5
 
@@ -57,7 +69,6 @@ padding-horizontal.px: 5
 if: { !meet-the-team.show }
 width.fixed.px: 35
 src: $fastn-assets.files.images.blog.downarrow.png
-$on-click$: $ftd.toggle($a = $meet-the-team.show)
 align-self: center
 padding-horizontal.px: 5
 
@@ -80,9 +91,189 @@ children: $meet-the-team.players
 
 
 
-/-- component section:
-children data:
 
 
--- end: section
 
+
+
+
+
+-- component tab-component:
+integer $active-tab-no: 0
+tab list tabs: $project-tabs
+
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.row:
+width: fill-container
+spacing: space-evenly
+
+
+
+-- ftd.text: $a.title
+$loop$: $tab-component.tabs as $a
+color: $inherited.colors.text
+$on-click$: $ftd.set-integer( $a = $tab-component.active-tab-no, v = $LOOP.COUNTER )
+border-width.px: 2
+padding.px: 10
+border-radius.px: 25
+
+-- end: ftd.row
+
+-- single-ui:
+if: { $tab-component.active-tab-no == $LOOP.COUNTER }
+$loop$: $tab-component.tabs as $a
+ui: $a.tab-content
+
+
+-- end: ftd.column
+
+-- end: tab-component
+
+
+
+
+
+
+
+
+
+-- component single-ui:
+ftd.ui ui:
+
+-- ftd.column:
+
+-- single-ui.ui:
+
+-- end: ftd.column
+
+-- end: single-ui
+
+
+
+
+;; ftd-ui list --------------------------------------
+
+-- ftd.ui list contents:
+
+;; Projects tab content
+
+-- ftd.column:
+
+-- ds.h1: Project 
+
+description of project 1
+
+-- ds.h1: Problem Statement
+
+description of problem statement
+
+
+-- end: ftd.column
+
+
+;; Submissions tab content
+
+-- ftd.column:
+
+-- ftd.text: Glenn's submission
+
+
+-- end: ftd.column
+
+
+
+-- end: contents
+
+
+;; tab list ------------------------------------------
+
+-- tab list project-tabs:
+
+-- tab: Projects
+tab-content: $contents.0
+
+-- tab: Submissions
+tab-content: $contents.1
+
+/-- tab: FAQs
+tab-content: $contents.2
+
+-- end: project-tabs
+
+
+
+
+
+;; records -------------------------------------------
+
+-- record tab:
+caption title:
+ftd.ui tab-content:
+
+
+
+-- record member:
+caption name:
+body story:
+project list projects:
+ftd.image-src avatar:
+
+
+-- record project:
+caption title:
+body desc:
+optional ftd.image-src project-img:
+optional string project-url:
+optional string submission-url:
+
+
+
+
+;; project list -------------------------------------
+
+
+-- project list glenn-projects:
+
+-- project: Expander
+project-url: https://fastn.io/expander
+
+Complete the Expander Crash Course and show the UI.
+
+
+-- end: glenn-projects
+
+
+
+
+-- project list nicole-projects:
+
+-- project: Expander
+project-url: https://fastn.io/expander
+
+Complete the Expander Crash Course and show the UI.
+
+
+-- end: nicole-projects
+
+
+
+
+
+;; members ------------------------------------------
+
+-- member glenn: Glenn
+projects: $glenn-projects
+avatar: $fastn-assets.files.images.blog.learner-avatar.png
+
+My name is Glenn and I am from Philippines.
+
+
+
+-- member nicole: Nicole
+projects: $nicole-projects
+avatar: $fastn-assets.files.images.blog.learner-avatar.png
+
+My name is Nicole and I am from Philippines.
