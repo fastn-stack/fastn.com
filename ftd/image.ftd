@@ -186,14 +186,14 @@ image](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#alt).
 
 \-- import: fastn.io/assets
 
-\-- ftd.image: $assets.files.images.foo.jpg
+\-- ftd.image: foo.jpg
 alt: Image can't be displayed ;; <hl>
 color: $inherited.colors.text
 padding.px: 10
 
 -- ds.rendered.output:
 
--- ftd.image: $assets.files.images.foo.jpg
+-- ftd.image: foo.jpg
 alt: Image can't be displayed
 color: $inherited.colors.text
 padding.px: 10
