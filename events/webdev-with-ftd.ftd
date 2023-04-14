@@ -66,6 +66,7 @@ Things you are going to learn:
 -- event.speakers: Speaker
 
 -- event.speaker: Govindaraman S
+avatar: $assets.files.images.events.Govindaraman_S.jpg
 profile: Front-End Developer from Trizwit Labs
 link: https://www.linkedin.com/in/govindaraman-s/
 
