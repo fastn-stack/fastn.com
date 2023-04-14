@@ -22,6 +22,7 @@ favicon: /-/fastn.io/images/favicon.svg
 -- fastn.dependency: fifthtry.github.io/winter-cs
 -- fastn.dependency: gargajit.github.io/expander
 -- fastn.dependency: fifthtry.github.io/dark-mode-switcher
+-- fastn.dependency: fastn-stack.github.io/media
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn.io/FASTN/my-ds as my-ds
@@ -93,13 +94,13 @@ favicon: /-/fastn.io/images/favicon.svg
 
 # Frontend: /frontend/
 
-## Docs: /frontend/
+## Docs: /setup/
+  document: ftd/setup.ftd
 
 - Getting Started: /setup/
   document: ftd/setup.ftd
 - Create `fastn` package: /create-fastn-package/
   document: author/how-to/create-fastn-package.ftd
-- `ftd p1` grammar: /ftd/p1-grammar/
 - Best Practices 🚧: /best-practices/
   - Formatting: /formatting/
     document: /best-practices/formatting.ftd
@@ -151,6 +152,8 @@ favicon: /-/fastn.io/images/favicon.svg
   - `ftd.container`: /ftd/container/
   - `ftd.text`: /ftd/text/
   - `ftd.image`: /ftd/image/
+  - `ftd.rive`: /rive/
+    document: ftd/rive.ftd
   - `ftd.iframe`: /ftd/iframe/
   - `ftd.integer`: /ftd/integer/
   - `ftd.decimal`: /ftd/decimal/
@@ -339,6 +342,16 @@ favicon: /-/fastn.io/images/favicon.svg
 - Overview: /d/
 - Maintainence: /d/m/
 - Next Edition: /d/next-edition/
+- Architecutre: /architecture/
+  document: d/architecture.ftd
+  - `ftd` crate 🚧: /ftd-crate/
+    document: d/ftd-crate.ftd
+  - `fastn-core` crate 🚧: /fastn-core-crate/
+    document: d/fastn-core-crate.ftd
+  - `fastn` crate 🚧: /fastn-crate/
+    document: d/fastn-crate.ftd
+- `ftd p1` grammar: /p1-grammar/
+  document: ftd/p1-grammar.ftd
 
 # Content Planning: /planning/
   skip: true
