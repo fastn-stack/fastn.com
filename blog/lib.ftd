@@ -15,7 +15,8 @@ margin-vertical.px: 8
 src: $player.member.avatar
 align-self: start
 padding.px: 3
-
+width.fixed.px: 180
+height.fixed.px: 180
 
 
 -- ftd.text: $player.member.story
@@ -108,7 +109,7 @@ width: fill-container
 
 -- ftd.row:
 width: fill-container
-spacing: space-evenly
+spacing: space-between
 
 
 
@@ -117,6 +118,7 @@ $loop$: $tab-component.tabs as $a
 color: $inherited.colors.text
 $on-click$: $ftd.set-integer( $a = $tab-component.active-tab-no, v = $LOOP.COUNTER )
 border-width.px: 2
+border-color if { $tab-component.active-tab-no == $LOOP.COUNTER } : crimson
 padding.px: 10
 border-radius.px: 25
 
@@ -154,6 +156,126 @@ ftd.ui ui:
 
 
 
+
+
+
+
+
+
+
+-- component faq:
+optional caption title:
+children child:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+padding-top.px if { ftd.device == "desktop" }: 76
+padding-bottom.px if { ftd.device == "desktop" }: 37
+
+
+-- ftd.column:
+width: fill-container
+padding.px if { ftd.device == "mobile" }: 20
+align-self: center
+
+-- ftd.text: $faq.title
+if: { faq.title != NULL }
+margin-bottom.px: 70
+align-self: center
+role: $inherited.types.heading-medium
+
+-- ftd.column:
+width: fill-container
+children: $faq.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
+
+
+
+
+
+
+
+
+
+
+
+-- component question-accordion: 
+caption title: Hi
+body body:
+boolean $open: false
+ftd.image-src src1: $fastn-assets.files.images.blog.faq.down.svg
+ftd.image-src src2: $fastn-assets.files.images.blog.faq.up.svg
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 23
+background.solid: $inherited.colors.background.step-1
+align-content: center
+classes: markdown
+
+-- ftd.row:
+;; background.solid: $fonts.eeeeee80
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 15
+padding-horizontal.px if { ftd.device == "mobile" } : 12
+padding-vertical.px: 15
+$on-click$: $ftd.toggle($a = $question-accordion.open)
+
+-- ftd.text: $question-accordion.title
+;; role: $fonts.nunito-18-18-700
+color if { question-accordion.open }: $inherited.colors.custom.four
+color: $inherited.colors.custom.one
+align-self: center
+
+-- ftd.image:
+if: { !question-accordion.open }
+src: $question-accordion.src1
+width.fixed.px: 12
+height.fixed.px: 14
+
+-- ftd.image:
+if: { question-accordion.open }
+src: $question-accordion.src2
+width.fixed.px: 12
+height.fixed.px: 14
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { question-accordion.open }
+padding-vertical.px: 15
+padding-horizontal.px: 15
+width: fill-container
+
+-- ftd.text:
+;; role: $fonts.size-18
+role if { ftd.device == "mobile" }: $inherited.types.fine-print
+color: $inherited.colors.custom.one
+
+$question-accordion.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: question-accordion
+
+
 ;; ftd-ui list --------------------------------------
 
 -- ftd.ui list contents:
@@ -184,8 +306,52 @@ description of problem statement
 -- end: ftd.column
 
 
+;; FAQs tab content
+
+-- ftd.column:
+;; width: fill-container
+
+-- ds.h1: FAQ section
+
+/-- faq:
+
+/-- question-accordion: What is Hello World?
+
+`Hello, World` is a simple program that is often used to introduce beginners
+to programming. The program simply displays the message "Hello, World!" on the
+screen or console.
+
+
+/-- ds.rendered: `Hello Word`
+
+/-- ds.rendered.input:
+
+\-- ftd.text: Hello World
+color: $inherited.colors.text
+
+/-- ds.rendered.output: 
+
+/-- ftd.text: Hello World
+color: $inherited.colors.text
+
+/-- end: ds.rendered.output
+
+/-- end: ds.rendered
+
+
+/-- end: faq
+
+
+-- end: ftd.column
+
 
 -- end: contents
+
+
+
+
+
+
 
 
 ;; tab list ------------------------------------------
@@ -198,7 +364,7 @@ tab-content: $contents.0
 -- tab: Submissions
 tab-content: $contents.1
 
-/-- tab: FAQs
+-- tab: FAQs
 tab-content: $contents.2
 
 -- end: project-tabs
@@ -246,6 +412,16 @@ Complete the Expander Crash Course and show the UI.
 -- end: glenn-projects
 
 
+-- project list hadrian-projects:
+
+-- project: Expander
+project-url: https://fastn.io/expander
+
+Complete the Expander Crash Course and show the UI.
+
+
+-- end: nicole-projects
+
 
 
 -- project list nicole-projects:
@@ -266,14 +442,31 @@ Complete the Expander Crash Course and show the UI.
 
 -- member glenn: Glenn
 projects: $glenn-projects
-avatar: $fastn-assets.files.images.blog.learner-avatar.png
+avatar: $fastn-assets.files.images.blog.glenn.jpg
 
-My name is Glenn and I am from Philippines.
+Kamusta? I'm a passionate artist and web designer. I love to integrate my
+drawings into UI/UX designs. I also code website front-ends that hopefully
+brings joy and amusement to people around me. 
 
 
+
+-- member hadrian: John Hadrian Caponpon
+projects: $nicole-projects
+avatar: $fastn-assets.files.images.blog.hadrian.jpg
+
+I am a diligent and trustworthy student studying BSIT from Polytechnic
+University of the Philippines Santo.tomas. I keep good track of time and am
+always eager to pick up new abilities. I have an excellent sense of humor,
+friendly, helpful, and respectful. I am friendly and diplomatic, and I have
+good listening skills when trying to solve issues.
 
 -- member nicole: Nicole
 projects: $nicole-projects
 avatar: $fastn-assets.files.images.blog.learner-avatar.png
 
-My name is Nicole and I am from Philippines.
+Magandang araw!
+
+I am Nicole Alcala, a passionate Web Developer based in the Philippines. As a
+detail-oriented individual, I am always striving for excellence in my work. I
+am driven by my dreams and constantly working towards turning them into
+reality.
