@@ -25,7 +25,7 @@ host: $trizwit
 venue: $venue
 
 Exciting news for web developers. **Trizwit Labs** along with **Google 
-Developer Student Club | MACE** and FifthTry are organizing a technical 
+Developer Student Club | MACE** and **FifthTry** are organizing a technical 
 session on web development using `ftd`! 🌐💻
 
 
@@ -36,7 +36,7 @@ writing prose, developed by the team at `FifthTry`.
 
  `ftd` is designed for everyone, not just programmers. that's designed to
 simplify the development process and help you build websites faster and more
-efficiently than everbefore. Say goodbye to the complexities of traditional
+efficiently than ever before. Say goodbye to the complexities of traditional
 programming languages and hello to a simplified and intuitive experience.
 
 `ftd` is a part of the new full stack web development, 
