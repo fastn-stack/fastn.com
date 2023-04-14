@@ -161,7 +161,44 @@ folder, it will be used for the `dark` field, while `show-cs-1.svg` will be used
 for the light field.
 
 
+
+
+
+
+
+
+-- ds.h2: `alt: optional string`
+
+This attribute specifies an alternate text for an image, if the image cannot be
+displayed. It takes value of type [`string`](ftd/built-in-types/#string)
+and is optional.
+
+-- ds.rendered: Sample code using `alt`
+
+-- ds.rendered.input:
+
+\-- ftd.image: foo.jpg
+alt: Image can't be displayed ;; <hl>
+color: $inherited.colors.text
+padding.px: 10
+
+-- ds.rendered.output:
+
+-- ftd.image: foo.jpg
+alt: Image can't be displayed
+color: $inherited.colors.text
+padding.px: 10
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
 -- end: my-ds.page
+
+
+
+
+
 
 
 -- ftd.image-src my-images:
