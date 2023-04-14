@@ -19,12 +19,23 @@ width.fixed.px: 180
 height.fixed.px: 180
 
 
+-- ftd.column:
+width: fill-container 
+
+-- ftd.text: $player.member.name
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+padding.px: 10
+align-self: start
+style: bold
+
 -- ftd.text: $player.member.story
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 padding.px: 10
 align-self: center
 
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -420,7 +431,7 @@ project-url: https://fastn.io/expander
 Complete the Expander Crash Course and show the UI.
 
 
--- end: nicole-projects
+-- end: hadrian-projects
 
 
 
@@ -450,7 +461,7 @@ brings joy and amusement to people around me.
 
 
 
--- member hadrian: John Hadrian Caponpon
+-- member hadrian: John Hadrian (aka Ian)
 projects: $nicole-projects
 avatar: $fastn-assets.files.images.blog.hadrian.jpg
 
@@ -462,7 +473,7 @@ good listening skills when trying to solve issues.
 
 -- member nicole: Nicole
 projects: $nicole-projects
-avatar: $fastn-assets.files.images.blog.learner-avatar.png
+avatar: $fastn-assets.files.images.blog.nicole.jpg
 
 Magandang araw!
 
