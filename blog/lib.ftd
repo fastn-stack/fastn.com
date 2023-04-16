@@ -17,6 +17,8 @@ align-self: start
 padding.px: 3
 width.fixed.px: 180
 height.fixed.px: 180
+border-radius.px: 15
+
 
 
 -- ftd.column:
@@ -291,20 +293,23 @@ $question-accordion.body
 
 -- ftd.ui list contents:
 
+
 ;; Projects tab content
 
 -- ftd.column:
+width: fill-container
 
--- ds.h1: Project 
+-- ds.h1: Project 1
 
 description of project 1
 
--- ds.h1: Problem Statement
+-- ds.h2: Problem Statement
 
 description of problem statement
 
 
 -- end: ftd.column
+
 
 
 ;; Submissions tab content
@@ -313,8 +318,17 @@ description of problem statement
 
 -- ftd.text: Glenn's submission
 
+-- ftd.text: Hadrian's submission
+
+-- ftd.text: Mark's submission
+
+-- ftd.text: Nicole's submission
+
+-- ftd.text: Zyle's submission
+
 
 -- end: ftd.column
+
 
 
 ;; FAQs tab content
@@ -356,9 +370,8 @@ color: $inherited.colors.text
 -- end: ftd.column
 
 
+
 -- end: contents
-
-
 
 
 
@@ -447,6 +460,27 @@ Complete the Expander Crash Course and show the UI.
 
 
 
+-- project list mark-projects:
+
+-- project: Expander
+project-url: https://fastn.io/expander
+
+Complete the Expander Crash Course and show the UI.
+
+
+-- end: mark-projects
+
+
+
+-- project list zyle-projects:
+
+-- project: Expander
+project-url: https://fastn.io/expander
+
+Complete the Expander Crash Course and show the UI.
+
+
+-- end: zyle-projects
 
 
 ;; members ------------------------------------------
@@ -460,7 +494,6 @@ drawings into UI/UX designs. I also code website front-ends that hopefully
 brings joy and amusement to people around me. 
 
 
-
 -- member hadrian: John Hadrian (aka Ian)
 projects: $nicole-projects
 avatar: $fastn-assets.files.images.blog.hadrian.jpg
@@ -470,6 +503,18 @@ University of the Philippines Santo.tomas. I keep good track of time and am
 always eager to pick up new abilities. I have an excellent sense of humor,
 friendly, helpful, and respectful. I am friendly and diplomatic, and I have
 good listening skills when trying to solve issues.
+
+
+-- member mark: Mark
+projects: $mark-projects
+avatar: $fastn-assets.files.images.blog.mark.jpg
+
+Hello, my name is Mark, and at the time of this writing, I am a fourth-year IT
+student with a strong proficiency in both backend and frontend tools,
+particularly in PHP programming. Because of my passion for game development and
+my eagerness to explore new technological possibilities, I am poised to make a
+valuable contribution to any project or team I work with.
+
 
 -- member nicole: Nicole
 projects: $nicole-projects
@@ -481,3 +526,13 @@ I am Nicole Alcala, a passionate Web Developer based in the Philippines. As a
 detail-oriented individual, I am always striving for excellence in my work. I
 am driven by my dreams and constantly working towards turning them into
 reality.
+
+
+-- member zyle: Zyle
+projects: $zyle-projects
+avatar: $fastn-assets.files.images.blog.zyle.jpg
+
+Hi there! My name is Zyle Allhen Manzanero, an aspiring web developer based in
+the Philippines. I'm eager to learn new things, more so about fastn and
+hopefully learn a lot from it. I always thrive for the improvement of both my
+personality and technical skills.

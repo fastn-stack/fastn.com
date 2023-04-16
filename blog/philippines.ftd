@@ -9,7 +9,7 @@
 We are five developers from the Philippines whore are eager to learn more on
 web development. We discovered `fastn` through our internship program and 
 hopefully this powerful tool will streamline our coding process, enabling 
-us to createmarket-ready, efficient, and impressive websites, fulfilling 
+us to create market-ready, efficient, and impressive websites, fulfilling 
 our goal of becoming skilled web developers.
 
 -- lib.meet-the-team:
@@ -23,8 +23,15 @@ member: $lib.hadrian
 
 
 -- lib.player:
+member: $lib.mark
+
+
+-- lib.player:
 member: $lib.nicole
 
+
+-- lib.player:
+member: $lib.zyle
 
 
 -- end: lib.meet-the-team
