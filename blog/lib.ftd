@@ -27,7 +27,7 @@ width: fill-container
 -- ftd.text: $player.member.name
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
-padding.px: 10
+;; padding.px: 10
 align-self: start
 style: bold
 
@@ -183,12 +183,10 @@ caption title: Default Header
 body body: Default Body
 boolean $open: false 
 boolean $over: false
-ftd.color headercolor: $header-text-color
-ftd.color bordercolor: $border-color
-ftd.color bodycolor: $body-text-color
-ftd.color hovercolor: $hover-color
-optional ftd.color bg-header: $bg-header
-optional ftd.color bg-body: $bg-body
+ftd.color textcolor: $inherited.colors.text
+ftd.color bordercolor: $inherited.colors.border-strong
+ftd.color hovercolor: $inherited.colors.cta-primary.hover
+ftd.color bg-color: $inherited.colors.background.base
 children wrapper: 
 
 
@@ -198,8 +196,8 @@ border-width.px: 4
 spacing.fixed.px: 10
 width: fill-container
 border-color: $box.bordercolor
-color: $box.bodycolor
-background.solid: $box.bg-body
+color: $box.textcolor
+background.solid: $box.bg-color
 
 
 
@@ -209,8 +207,8 @@ width: fill-container
 spacing: space-between
 border-bottom-width.px: 1
 padding.px: 10
-color: $box.headercolor
-background.solid: $box.bg-header
+color: $box.textcolor
+background.solid: $box.bg-color
 border-color: $box.bordercolor
 background.solid if { box.over }: $box.hovercolor
 $on-click$: $toggle($value = $box.open)
@@ -243,6 +241,12 @@ height: hug-content
 if: { box.open }
 
 
+-- ftd.column:
+if: { box.open }
+width: fill-container
+children: $box.wrapper
+
+-- end: ftd.column
 
 -- end: ftd.column
 ;; box column ends
@@ -257,43 +261,6 @@ boolean $value:
 value = !value;
 
 
-
-
-
-
-
--- ftd.color bg-header:
-light: #f1f8ff
-dark: #235294
-	
-
-
--- ftd.color bg-body:
-light: #f1f8ff
-dark: #235294
-
-
-
--- ftd.color header-text-color:
-light: #858692
-dark: #e2e8ec
-
-
-
--- ftd.color body-text-color:
-light: #3f3e43
-dark: #e2e8ec
-
-
-
--- ftd.color border-color:
-light: #79ad9e
-dark: #a0b2c1
-
-
--- ftd.color hover-color:
-light: #b7e7d9
-dark: #5276a9
 
 
 
