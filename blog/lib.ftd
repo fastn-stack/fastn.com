@@ -266,30 +266,108 @@ value = !value;
 
 
 
--- component project-card:
-member member:
+-- string add-prefix(prefix,value):
+string prefix:
+string value:
+
+prefix + ": " + value
+
+
+;; string = [a-z]*
+;; or-type = list["pending", "working", "completed"]
+
+
+
+/-- or-type status-value:
+
+/-- pending:
+/-- in-progress:
+/-- completed:
+
+/-- end: status-value
+
+
+
+
+-- component card-pair:
+member m1:
+member m2:
 integer num: 0
-
-
--- ftd.column:
-width: fill-container
-
 
 -- ftd.row:
 width: fill-container
+spacing: space-between
+
+-- project-card:
+width.fixed.percent: 40
+member: $card-pair.m1
+num: $card-pair.num
+
+-- project-card:
+width.fixed.percent: 40
+member: $card-pair.m2
+num: $card-pair.num
+
+-- end: ftd.row
+
+-- end: card-pair
+
+
+
+
+
+
+
+
+-- component single-card:
+member m:
+integer num: 0
+
+-- ftd.row:
+width: fill-container
+spacing: space-around
+
+-- project-card:
+width.fixed.percent: 40
+member: $single-card.m
+num: $single-card.num
+
+-- end: ftd.row
+
+-- end: single-card
+
+
+
+
+
+-- component project-card:
+member member:
+integer num: 0
+ftd.resizing width: fill-container
+
+-- ftd.column:
+width: $project-card.width
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+color: $inherited.colors.text
 
 -- ftd.text: $project-card.member.name
-align-self: center
-color: $inherited.colors.text
+align-self: start
+
+-- ftd.text: $add-prefix(prefix = Status, value = $proj.status)
+if: { project-card.num == LOOP.COUNTER }
+$loop$: $project-card.member.projects as $proj
 
 -- end: ftd.row
 
 -- inner-proj-card: $proj.title
-if: { $project-card.num == $LOOP.COUNTER }
+if: { project-card.num == LOOP.COUNTER }
 $loop$: $project-card.member.projects as $proj
+project-url: $proj.project-url
 
 $proj.desc
-
 
 -- end: ftd.column
 
@@ -297,22 +375,34 @@ $proj.desc
 
 
 
+
+
+
 -- component inner-proj-card:
 caption title:
+optional string project-url:
 body description:
-
+boolean $title-hover: false
 
 -- ftd.column:
 width: fill-container
 color: $inherited.colors.text
+border-width.px: 2
+padding.px: 5
 
 -- ftd.text: $inner-proj-card.title
 role: $inherited.types.heading-medium
+align-self: center
+color: $inherited.colors.text
+link: $inner-proj-card.project-url
+style if { inner-proj-card.title-hover }: underline
+$on-mouse-enter$: $ftd.set-bool($a = $inner-proj-card.title-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $inner-proj-card.title-hover, v = false)
 
 -- ftd.text: $inner-proj-card.description
 role: $inherited.types.copy-regular
-
-
+text-align: justify
+align-self: center
 
 -- end: ftd.column
 
@@ -329,12 +419,20 @@ role: $inherited.types.copy-regular
 
 -- ftd.column:
 ;; width: fill-container
+;; spacing.fixed.px: 10
 
 -- ds.h1: Project number - 1
 
--- project-card:
-member: $glenn
+-- card-pair:
+m1: $glenn
+m2: $hadrian
 
+-- single-card:
+m: $mark
+
+-- card-pair:
+m1: $nicole
+m2: $zyle
 
 -- end: ftd.column
 
@@ -399,6 +497,97 @@ color: $inherited.colors.text
 -- end: ftd.column
 
 
+
+
+;; Master Nomenclature
+
+-- ftd.column:
+
+-- ds.h1: Component Nomenclatures
+
+-- ds.code: Page
+lang: ftd
+
+\-- import: fastn/processors as pr
+
+\-- pr.sitemap-data sitemap:
+$processor$: fastn.sitemap
+
+\-- page:
+optional caption title:
+optional string description:
+optional body body:
+ftd.type-data types:
+ftd.color-scheme colors:
+optional ftd.image-src site-logo:
+optional string $site-url:
+optional string site-name:
+pr.toc-item list toc: $sitemap.toc
+pr.toc-item list sections: $sitemap.sections
+pr.toc-item list sub-sections: $sitemap.subsections
+optional pr.toc-item current-section: $sitemap.current-section
+optional pr.toc-item current-subsection: $sitemap.current-subsection
+optional pr.toc-item current-page: $sitemap.current-page
+pr.toc-item list footer-toc:
+children wrapper:
+ftd.ui list banner:
+ftd.ui list footer:
+
+<CREATE YOUR UI HERE>
+
+\-- end: page
+
+-- ds.code: Header
+lang: ftd
+
+\-- component h1:
+caption title:
+optional body body:
+children inner:
+optional string id:
+
+<CREATE YOUR UI HERE>
+
+\-- end: h1
+
+-- ds.markdown:
+
+Similarly, use the same header nomenclature for other header components like h2,
+ h3, ...
+
+-- ds.code: Markdown
+lang: ftd
+
+\-- component markdown:
+body body:
+
+<CREATE YOUR UI HERE>
+
+\-- end: markdown
+
+-- ds.code: Code Block
+lang: ftd
+
+\-- component code:
+optional caption caption:
+optional string download:
+body body:
+string lang:
+
+<CREATE YOUR UI HERE>
+
+\-- end: code
+
+-- ds.h1: Color Scheme
+
+Go to this [sailing-shark-cs repo](https://github.com/FifthTry/sailing-shark-cs)
+and use it as template and create your own color scheme by changing the values
+inside `colors.ftd`.
+
+-- end: ftd.column
+
+
+
 -- end: contents
 
 
@@ -418,6 +607,9 @@ tab-content: $contents.1
 
 -- tab: FAQs
 tab-content: $contents.2
+
+-- tab: Master Nomenclature
+tab-content: $contents.3
 
 -- end: project-tabs
 
@@ -447,6 +639,7 @@ body desc:
 optional ftd.image-src project-img:
 optional string project-url:
 optional string submission-url:
+string status: Pending
 
 
 
