@@ -330,6 +330,8 @@ favicon: /-/fastn.io/images/favicon.svg
 # Blog: /trizwitlabs/
   document: blog/trizwitlabs.ftd
 
+- trizwitlabs web event: /trizwitlabs/
+  document: blog/trizwitlabs.ftd
 - `fastn` goes to Philippines 🚧: /namaste-philippines/
   document: blog/philippines.ftd
 - Witty Hacks!: /wittyhacks/
