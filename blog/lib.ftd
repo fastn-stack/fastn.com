@@ -266,7 +266,35 @@ value = !value;
 
 
 
+-- component project-card:
+member member:
 
+-- ftd.column:
+width: fill-container
+
+
+-- ftd.row:
+;; width: fill-container
+
+-- ftd.text: $project-card.member.name
+align-self: center
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+
+
+
+-- ftd.column:
+width: fill-container
+
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: project-card
 
 
 
