@@ -268,13 +268,15 @@ value = !value;
 
 -- component project-card:
 member member:
+integer num: 0
+
 
 -- ftd.column:
 width: fill-container
 
 
 -- ftd.row:
-;; width: fill-container
+width: fill-container
 
 -- ftd.text: $project-card.member.name
 align-self: center
@@ -282,20 +284,39 @@ color: $inherited.colors.text
 
 -- end: ftd.row
 
+-- inner-proj-card: $proj.title
+if: { $project-card.num == $LOOP.COUNTER }
+$loop$: $project-card.member.projects as $proj
 
+$proj.desc
 
-
--- ftd.column:
-width: fill-container
-
-
-
--- end: ftd.column
 
 -- end: ftd.column
 
 -- end: project-card
 
+
+
+-- component inner-proj-card:
+caption title:
+body description:
+
+
+-- ftd.column:
+width: fill-container
+color: $inherited.colors.text
+
+-- ftd.text: $inner-proj-card.title
+role: $inherited.types.heading-medium
+
+-- ftd.text: $inner-proj-card.description
+role: $inherited.types.copy-regular
+
+
+
+-- end: ftd.column
+
+-- end: inner-proj-card
 
 
 
@@ -307,15 +328,12 @@ width: fill-container
 ;; Projects tab content
 
 -- ftd.column:
-width: fill-container
+;; width: fill-container
 
--- ds.h1: Project 1
+-- ds.h1: Project number - 1
 
-description of project 1
-
--- ds.h2: Problem Statement
-
-description of problem statement
+-- project-card:
+member: $glenn
 
 
 -- end: ftd.column
