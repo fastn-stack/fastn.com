@@ -128,10 +128,11 @@ spacing: space-between
 
 -- ftd.text: $a.title
 $loop$: $tab-component.tabs as $a
-color: $inherited.colors.text
+color: $inherited.colors.cta-primary.text
 $on-click$: $ftd.set-integer( $a = $tab-component.active-tab-no, v = $LOOP.COUNTER )
 border-width.px: 2
-border-color if { $tab-component.active-tab-no == $LOOP.COUNTER } : crimson
+border-color if { $tab-component.active-tab-no == $LOOP.COUNTER } : $inherited.colors.cta-primary.border
+background.solid if { $tab-component.active-tab-no == $LOOP.COUNTER } : $inherited.colors.cta-primary.base
 padding.px: 10
 border-radius.px: 25
 
@@ -141,6 +142,7 @@ border-radius.px: 25
 if: { $tab-component.active-tab-no == $LOOP.COUNTER }
 $loop$: $tab-component.tabs as $a
 ui: $a.tab-content
+
 
 
 -- end: ftd.column
@@ -159,6 +161,7 @@ ui: $a.tab-content
 ftd.ui ui:
 
 -- ftd.column:
+width: fill-container
 
 -- single-ui.ui:
 
@@ -175,118 +178,130 @@ ftd.ui ui:
 
 
 
+-- component box:
+caption title: Default Header
+body body: Default Body
+boolean $open: false 
+boolean $over: false
+ftd.color headercolor: $header-text-color
+ftd.color bordercolor: $border-color
+ftd.color bodycolor: $body-text-color
+ftd.color hovercolor: $hover-color
+optional ftd.color bg-header: $bg-header
+optional ftd.color bg-body: $bg-body
+children wrapper: 
 
--- component faq:
-optional caption title:
-children child:
 
+;; column for box
 -- ftd.column:
+border-width.px: 4
+spacing.fixed.px: 10
 width: fill-container
-
--- ftd.column:
-width: fill-container
-align-content: center
-background.solid: $inherited.colors.background.step-1
-padding-top.px if { ftd.device == "desktop" }: 76
-padding-bottom.px if { ftd.device == "desktop" }: 37
-
-
--- ftd.column:
-width: fill-container
-padding.px if { ftd.device == "mobile" }: 20
-align-self: center
-
--- ftd.text: $faq.title
-if: { faq.title != NULL }
-margin-bottom.px: 70
-align-self: center
-role: $inherited.types.heading-medium
-
--- ftd.column:
-width: fill-container
-children: $faq.child
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: ftd.column
-
--- end: faq
+border-color: $box.bordercolor
+color: $box.bodycolor
+background.solid: $box.bg-body
 
 
 
-
-
-
-
-
-
-
-
--- component question-accordion: 
-caption title: Hi
-body body:
-boolean $open: false
-ftd.image-src src1: $fastn-assets.files.images.blog.faq.down.svg
-ftd.image-src src2: $fastn-assets.files.images.blog.faq.up.svg
-
--- ftd.column:
-width: fill-container
-margin-bottom.px: 23
-background.solid: $inherited.colors.background.step-1
-align-content: center
-classes: markdown
-
+;; header Row
 -- ftd.row:
-;; background.solid: $fonts.eeeeee80
 width: fill-container
 spacing: space-between
-padding-horizontal.px: 15
-padding-horizontal.px if { ftd.device == "mobile" } : 12
-padding-vertical.px: 15
-$on-click$: $ftd.toggle($a = $question-accordion.open)
+border-bottom-width.px: 1
+padding.px: 10
+color: $box.headercolor
+background.solid: $box.bg-header
+border-color: $box.bordercolor
+background.solid if { box.over }: $box.hovercolor
+$on-click$: $toggle($value = $box.open)
+$on-mouse-enter$: $ftd.set-bool($a = $box.over, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $box.over, v = false)
 
--- ftd.text: $question-accordion.title
-;; role: $fonts.nunito-18-18-700
-color if { question-accordion.open }: $inherited.colors.custom.four
-color: $inherited.colors.custom.one
-align-self: center
 
--- ftd.image:
-if: { !question-accordion.open }
-src: $question-accordion.src1
-width.fixed.px: 12
-height.fixed.px: 14
 
--- ftd.image:
-if: { question-accordion.open }
-src: $question-accordion.src2
-width.fixed.px: 12
-height.fixed.px: 14
+
+-- ftd.text: $box.title
+
+-- ftd.image: 
+src: $fastn-assets.files.images.blog.downarrow.png
+width.fixed.px: 20
+if: { !box.open }
+
+
+-- ftd.image: 
+src: $fastn-assets.files.images.blog.uparrow.png
+width.fixed.px: 20
+if: { box.open }
 
 -- end: ftd.row
+;; header row ends
 
--- ftd.column:
-if: { question-accordion.open }
-padding-vertical.px: 15
-padding-horizontal.px: 15
-width: fill-container
 
--- ftd.text:
-;; role: $fonts.size-18
-role if { ftd.device == "mobile" }: $inherited.types.fine-print
-color: $inherited.colors.custom.one
+-- ftd.text: $box.body
+padding.px: 10
+height: hug-content
+if: { box.open }
 
-$question-accordion.body
+
 
 -- end: ftd.column
+;; box column ends
 
--- end: ftd.column
+-- end: box
 
--- end: question-accordion
+
+-- void toggle(value):
+boolean $value:
+
+
+value = !value;
+
+
+
+
+
+
+
+-- ftd.color bg-header:
+light: #f1f8ff
+dark: #235294
+	
+
+
+-- ftd.color bg-body:
+light: #f1f8ff
+dark: #235294
+
+
+
+-- ftd.color header-text-color:
+light: #858692
+dark: #e2e8ec
+
+
+
+-- ftd.color body-text-color:
+light: #3f3e43
+dark: #e2e8ec
+
+
+
+-- ftd.color border-color:
+light: #79ad9e
+dark: #a0b2c1
+
+
+-- ftd.color hover-color:
+light: #b7e7d9
+dark: #5276a9
+
+
+
+
+
+
+
+
 
 
 ;; ftd-ui list --------------------------------------
@@ -315,6 +330,9 @@ description of problem statement
 ;; Submissions tab content
 
 -- ftd.column:
+;; width: fill-container
+
+-- ds.h1: Submissions
 
 -- ftd.text: Glenn's submission
 
@@ -333,42 +351,39 @@ description of problem statement
 
 ;; FAQs tab content
 
+
 -- ftd.column:
 ;; width: fill-container
 
 -- ds.h1: FAQ section
 
-/-- faq:
-
-/-- question-accordion: What is Hello World?
+-- box: What is Hello World?
 
 `Hello, World` is a simple program that is often used to introduce beginners
 to programming. The program simply displays the message "Hello, World!" on the
 screen or console.
 
 
-/-- ds.rendered: `Hello Word`
+-- ds.rendered: `Hello Word`
 
-/-- ds.rendered.input:
+-- ds.rendered.input:
 
 \-- ftd.text: Hello World
 color: $inherited.colors.text
 
-/-- ds.rendered.output: 
+-- ds.rendered.output: 
 
-/-- ftd.text: Hello World
+-- ftd.text: Hello World
 color: $inherited.colors.text
 
-/-- end: ds.rendered.output
+-- end: ds.rendered.output
 
-/-- end: ds.rendered
+-- end: ds.rendered
 
 
-/-- end: faq
-
+-- end: box
 
 -- end: ftd.column
-
 
 
 -- end: contents
@@ -402,6 +417,7 @@ tab-content: $contents.2
 -- record tab:
 caption title:
 ftd.ui tab-content:
+
 
 
 
