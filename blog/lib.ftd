@@ -116,7 +116,7 @@ children: $meet-the-team.players
 integer $active-tab-no: 0
 tab list tabs: $project-tabs
 ;; boolean $is-hover: false
-ftd.shadow hover-shadow: $s
+;; ftd.shadow hover-shadow: $s
 
 -- ftd.column:
 width: fill-container
@@ -315,6 +315,7 @@ integer num: 0
 -- ftd.row:
 width: fill-container
 spacing: space-between
+margin.px: 20
 
 -- project-card:
 width.fixed.percent: 40
@@ -344,6 +345,7 @@ integer num: 0
 -- ftd.row:
 width: fill-container
 spacing: space-around
+margin.px: 20
 
 -- project-card:
 width.fixed.percent: 40
@@ -366,10 +368,12 @@ ftd.resizing width: fill-container
 -- ftd.column:
 width: $project-card.width
 
+
+
 -- ftd.row:
 width: fill-container
 spacing: space-between
-color: $inherited.colors.text
+color: $inherited.colors.custom.three
 
 -- ftd.text: $project-card.member.name
 align-self: start
@@ -407,6 +411,9 @@ width: fill-container
 color: $inherited.colors.text
 border-width.px: 2
 padding.px: 5
+border-radius.px: 5
+border-color: $inherited.colors.background.step-2
+background.solid: $inherited.colors.background.step-1
 
 -- ftd.text: $inner-proj-card.title
 role: $inherited.types.heading-medium
@@ -417,10 +424,12 @@ style if { inner-proj-card.title-hover }: underline
 $on-mouse-enter$: $ftd.set-bool($a = $inner-proj-card.title-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $inner-proj-card.title-hover, v = false)
 
+
 -- ftd.text: $inner-proj-card.description
 role: $inherited.types.copy-regular
-text-align: justify
+text-align: start
 align-self: center
+border-top-width.px: 1
 
 -- end: ftd.column
 
@@ -862,8 +871,10 @@ string status: Pending
 -- project: Expander
 project-url: https://fastn.io/expander
 
-Complete the Expander Crash Course and show the UI.
-
+- Go through the Expander Course
+- Recreate the component
+- Create a good-looking UI
+- Submit the URL in your Discord thread 
 
 -- end: glenn-projects
 
@@ -873,7 +884,10 @@ Complete the Expander Crash Course and show the UI.
 -- project: Expander
 project-url: https://fastn.io/expander
 
-Complete the Expander Crash Course and show the UI.
+- Go through the Expander Course
+- Recreate the component
+- Create a good-looking UI
+- Submit the URL in your Discord thread 
 
 
 -- end: hadrian-projects
@@ -885,7 +899,10 @@ Complete the Expander Crash Course and show the UI.
 -- project: Expander
 project-url: https://fastn.io/expander
 
-Complete the Expander Crash Course and show the UI.
+- Go through the Expander Course
+- Recreate the component
+- Create a good-looking UI
+- Submit the URL in your Discord thread 
 
 
 -- end: nicole-projects
@@ -897,7 +914,10 @@ Complete the Expander Crash Course and show the UI.
 -- project: Expander
 project-url: https://fastn.io/expander
 
-Complete the Expander Crash Course and show the UI.
+- Go through the Expander Course
+- Recreate the component
+- Create a good-looking UI
+- Submit the URL in your Discord thread 
 
 
 -- end: mark-projects
@@ -909,7 +929,10 @@ Complete the Expander Crash Course and show the UI.
 -- project: Expander
 project-url: https://fastn.io/expander
 
-Complete the Expander Crash Course and show the UI.
+- Go through the Expander Course
+- Recreate the component
+- Create a good-looking UI
+- Submit the URL in your Discord thread 
 
 
 -- end: zyle-projects
@@ -926,7 +949,7 @@ drawings into UI/UX designs. I also code website front-ends that hopefully
 brings joy and amusement to people around me. 
 
 
--- member hadrian: John Hadrian (aka Ian)
+-- member hadrian: Hadrian
 projects: $nicole-projects
 avatar: $fastn-assets.files.images.blog.hadrian.jpg
 
