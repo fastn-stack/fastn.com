@@ -115,8 +115,7 @@ children: $meet-the-team.players
 -- component tab-component:
 integer $active-tab-no: 0
 tab list tabs: $project-tabs
-;; boolean $is-hover: false
-;; ftd.shadow hover-shadow: $s
+
 
 -- ftd.column:
 width: fill-container
@@ -127,21 +126,18 @@ width: fill-container
 spacing: space-between
 
 
-
--- ftd.text: $a.title
+-- tab-ui:
 $loop$: $tab-component.tabs as $a
-color: $inherited.colors.cta-primary.text
-$on-click$: $ftd.set-integer( $a = $tab-component.active-tab-no, v = $LOOP.COUNTER )
-border-width.px: 2
-border-color if { $tab-component.active-tab-no == $LOOP.COUNTER } : $inherited.colors.cta-primary.border
-background.solid if { $tab-component.active-tab-no == $LOOP.COUNTER } : $inherited.colors.cta-danger.base
-padding.px: 10
-border-radius.px: 25
-;; shadow if { tab-component.is-hover }: $tab-component.hover-shadow
-;; $on-mouse-enter$: $ftd.set-bool($a = $tab-component.is-hover, v = true)
-;; $on-mouse-leave$: $ftd.set-bool($a = $tab-component.is-hover, v = false)
+a: $a
+idx: $LOOP.COUNTER
+$active-tab-no: $tab-component.active-tab-no
 
 -- end: ftd.row
+
+
+
+
+
 
 -- single-ui:
 if: { $tab-component.active-tab-no == $LOOP.COUNTER }
@@ -156,6 +152,32 @@ ui: $a.tab-content
 
 
 
+
+
+
+-- component tab-ui:
+tab a: 
+integer idx:
+integer $active-tab-no:
+boolean $is-hover: false
+
+-- ftd.text: $tab-ui.a.title
+color: $inherited.colors.cta-primary.text
+$on-click$: $ftd.set-integer( $a = $tab-ui.active-tab-no, v = $tab-ui.idx )
+border-width.px: 2
+border-color if { $tab-ui.active-tab-no == $tab-ui.idx } : $inherited.colors.cta-primary.border
+background.solid if { $tab-ui.active-tab-no == $tab-ui.idx } : $inherited.colors.cta-danger.base
+padding.px: 10
+border-radius.px: 25
+shadow if { tab-ui.is-hover }: $s
+$on-mouse-enter$: $ftd.set-bool($a = $tab-ui.is-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $tab-ui.is-hover, v = false)
+
+
+-- end: tab-ui
+
+
+
 -- ftd.shadow s:
 color: $shadow-color
 x-offset.px: 1
@@ -166,7 +188,7 @@ spread.px: 7
 
 
 -- ftd.color shadow-color:
-light: #ace0e4
+light: #e8bfb9
 dark: #E4B0AC
 
 
@@ -204,6 +226,7 @@ ftd.color bordercolor: $inherited.colors.warning.border
 ftd.color hovercolor: $inherited.colors.cta-danger.base
 ftd.color bg-color: $inherited.colors.background.base
 children wrapper: 
+
 
 
 ;; column for box
@@ -841,7 +864,7 @@ tab-content: $contents.3
 -- record tab:
 caption title:
 ftd.ui tab-content:
-;; boolean $is-hover: false
+
 
 
 
