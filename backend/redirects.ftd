@@ -6,8 +6,6 @@ using `fastn.redirects`.
 
 -- ds.h1: Format of using redirects
 
--- ds.markdown:
-
 The links which needs to be redirected somewhere has to be listed down in the
 body section of `fastn.redirects` as `key-value` tuples in the format
 `<REDIRECT-FROM>: <REDIRECT-TO>`.
