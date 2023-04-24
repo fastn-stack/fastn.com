@@ -295,6 +295,8 @@ favicon: /-/fastn.io/images/favicon.svg
   document: ftd-host/package-query.ftd
 - Reading JSON: /get-data/
   document: ftd-host/get-data.ftd
+- Redirects: /redirects/
+  document: backend/redirects.ftd
 
 
 # Create Website: /install/-/build/
