@@ -39,8 +39,6 @@ We will add a call-to-action button.
 Let's build this post-card now.
 
 Start with creating a `component`, let's give the component name as `post-card`.
-Since it will have children so it is a container component and hence needs to 
-end.
 
 -- ds.code:
 lang:ftd
