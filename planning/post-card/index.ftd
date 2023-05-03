@@ -31,10 +31,11 @@ We will create add a button to the post card as well.
 
 -- ds.h2: **Project build-up**
 
-\;; Show a demo page with the postt card that we are going to create
+\;; Show a demo page with the post card that we are going to create
 
 -- ds.image: 
 src: $fastn-assets.files.planning.post-card.postcard.png
+
 
 **Script:**
 
@@ -88,6 +89,7 @@ color: $inherited.colors.text
 border-width.px: 2
 border-color: $inherited.colors.border
 background.solid: $inherited.colors.background.step-1
+
 
 
 
