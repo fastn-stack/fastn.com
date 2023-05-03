@@ -24,9 +24,8 @@ In this video we will learn how to create a post-card using `fastn language`.
 
 We will create a component for the post-card.
 Apply various properties to it. 
-We will also give an image or gif to the psot-card
+We will also give an image or gif to the post-card.
 We will create add a button to the post card as well.
-
 
 
 -- ds.h2: **Project build-up**
