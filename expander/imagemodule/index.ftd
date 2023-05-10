@@ -10,7 +10,7 @@ if: { source == "default" }
 In this video we will learn how to add images in fastn modules.
 
 
--- lib.video-audience: How to include image in a module
+-- lib.video-audience: How to add images in modules
 if: { source == "planning" }
 owner: Ajit
 aud: Common
@@ -47,14 +47,12 @@ to read about it.
 -- ds.markdown:
 if: { source == "planning" }
 
-The video title says how to include image in a module. 
-So, what is a module?
+The video title says how to include image in a module. So, what is a module?
 
 -- ds.markdown:
 if: { source == "default" }
 
-The title says how to include image in a module. 
-So, what is a module?
+The title says how to include image in a module. So, what is a module?
 
 -- ds.markdown:
 
@@ -64,18 +62,18 @@ package.
 
 I have this package, so all the `.ftd` files you see are modules.
 
--- ds.h1: Rendering image in the browser. 
+-- ds.h1: Rendering image in the browser
 
 In my package, I have put all the images in the folder called `images`. 
 
-Now to render these images to the modules, we need to import the assets of this 
+Now to add these images to the modules, we need to import the assets of this 
 package.
 
 
 -- ds.h2: What is `assets`? 
 
-Every package has `assets` as a foreign vairable provided by `fastn` and this 
-variable can be used to access the images in the package.
+Every package has `assets` as a foreign variable provided by `fastn` and this 
+variable can be used to access the images or other files in the package.
 
 -- ds.code:
 lang: ftd
@@ -84,8 +82,8 @@ lang: ftd
 
 -- ds.h2: Section `ftd.image`
 
-Now we can refer to the images by using `ftd.image` and passing the file along 
-with it's path as the `source`. So we will write:
+Now we can display the image by using the component `ftd.image` and passing the 
+file path in `src`. So we will write:
 
 
 -- ds.code:
@@ -96,8 +94,18 @@ src: $assets.files.images.<image-file-name-with-extension>
 
 -- ds.markdown:
 
+$ is used for reference, then assets.
+
+`files` here is used to access the files present in the package.
+
+And anything after `files` it is the path to the file.
+
+
 Now, we can display this in the browser. Let's save the file and refresh the 
 browser.
+
+\;; dot seperated folder names
+
 
 We will do the same for all the modules where we want to add images.
 
