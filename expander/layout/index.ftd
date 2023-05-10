@@ -1,26 +1,44 @@
+-- import: fastn/processors as pr
+
+
 -- my-ds.page: Create `holy-grail` layout
+
+-- ds.markdown:
+if: { source == "default" }
+
+In this video we will learn how to create a `holy-grail` layout.
 
 
 -- video-audience: How to create holy-grail layout
+if: { source == "planning" }
 owner: Ajit
 aud: Common
+
 
 understanding of holy-grail layout
 
 
+-- ds.youtube:
+if: { source == "default" }
+v: https://youtu.be/tSX0io_zw18
+
+
+
+
 -- ds.h1: Intro Clip
+if: { source == "planning" }
 
 Welcome to the video!
 
 Today, we will learn how To create `holy-grail` layout using `fastn language`
 
 -- ds.image:
+if: { source == "planning" }
 src: $fastn-assets.files.expander.layout.intro.jpg
 
 
--- ds.h2: Holy-grail layout
-;; if: { source == "default" }
 
+-- ds.h2: Holy-grail layout
 
 Holy Grail is a layout pattern that’s very common on the web. 
 
@@ -326,6 +344,7 @@ And for formatting, to the parent row, I have added spacing between these two
 sections, `ftd.text` and `ftd.row`.
 
 -- ds.h1: Closing Remarks 
+if: { source == "planning" }
 
 Thank you guys, keep watching these videos to learn more about fastn. 
 Checkout the `fastn` website.
@@ -333,9 +352,21 @@ Support us by clicking on this link and give us a star on GitHub and join our
 fastn community on Discord.
 
 
+-- ds.markdown: 
+if: { source == "default" }
+
+Thank you guys, keep watching these videos to learn more about fastn. 
+
+Support us by giving a star on [GitHub](https://github.com/fastn-stack/fastn/) 
+and join our fastn community on [Discord](/discord/).
+
+
+
 -- ds.h1: Final Video
+if: { source == "planning" }
 
 -- ds.youtube:
+if: { source == "planning" }
 v: https://youtu.be/tSX0io_zw18
 
 
@@ -344,7 +375,7 @@ v: https://youtu.be/tSX0io_zw18
 
 
 
-/-- string source: default
+-- string source: default
 $processor$: pr.get-data
 key: source
 
