@@ -196,7 +196,7 @@ optional body body:
 ftd.image-src screenshot:
 
 -- ftd.column:
-width.fixed.percent if { ftd.device != "mobile" }: 32.58
+width.fixed.percent if { ftd.device != "mobile" }: 32
 width if { ftd.device == "mobile" }: fill-container
 margin-bottom.px: 60
 spacing.fixed.px: 16
