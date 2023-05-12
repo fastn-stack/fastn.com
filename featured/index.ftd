@@ -193,7 +193,7 @@ boolean is-last:
 boolean $github-hover: false
 boolean $mit-hover: false
 optional body body:
-optional ftd.image-src screenshot:
+ftd.image-src screenshot:
 
 -- ftd.column:
 width.fixed.percent if { ftd.device != "mobile" }: 32.58
@@ -226,12 +226,20 @@ z-index: 99
 color: white
 
 -- ftd.image:
-if: { grid-of-items.github-hover }
+if: { grid-of-items.github-hover && grid-of-items.github-url != NULL  }
 src: $fastn-assets.files.images.icon-github.svg
 width.fixed.px: 16
 height.fixed.px: 16
 align-self: center
 margin-right.px: 8
+
+-- ftd.image:
+if: { grid-of-items.github-hover && grid-of-items.licence-url != NULL }
+src: $fastn-assets.files.images.mit-icon.svg
+width.fixed.px: 16
+height.fixed.px: 16
+align-self: center
+
 
 -- end: ftd.row
 
