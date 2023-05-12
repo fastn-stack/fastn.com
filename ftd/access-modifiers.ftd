@@ -41,6 +41,14 @@ Here, we have defined a simple component `foo`. This component is using
 caption `name`.
 
 It has a private boolean argument `mouse-hovered` which can be only accessed
-from within the component itself. So calling
+from within the component itself. So while component invocation, we can't access
+this `mouse-hovered` argument.
+
+-- ds.code: Invalid component invocation
+lang: ftd
+
+\;; This should not be done
+\-- foo: xyz
+$mouse-hovered: false
 
 -- end: my-ds.page
