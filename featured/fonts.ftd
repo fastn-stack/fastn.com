@@ -13,7 +13,7 @@
 
 -- my-ds.page: List of fonts
 
-We have created some Google Fonts listed below:
+We have converted some Google Fonts to fastn package:
 
 -- ft-ui.grid-view:
 if: { show-grid }
@@ -119,6 +119,23 @@ licence-url: https://github.com/fastn-community/tiro-font/blob/main/LICENSE
 github-url: https://github.com/fastn-community/tiro-font
 
 `fastn-community.github.io/tiro-font` font is available and can be used inside
+`ftd` web packages.
+
+-- ft-ui.template: Playfair Display
+template-url: https://fastn-community.github.io/playfair-display-font/
+github-url: https://github.com/fastn-community/playfair-display-font
+licence-url: https://github.com/fastn-community/playfair-display-font/blob/main/LICENSE
+
+`fastn-community.github.io/playfair-display-font` font is available and can be used inside
+`ftd` web packages.
+
+-- ft-ui.template: Source Code Pro
+template-url: https://fastn-community.github.io/source-code-pro-font/
+github-url: https://github.com/fastn-community/source-code-pro-font
+licence-url: https://github.com/fastn-community/source-code-pro-font/blob/main/LICENSE
+
+`fastn-community.github.io/source-code-pro-font` font is available and can be used inside
+
 `ftd` web packages.
 
 -- end: font
