@@ -1,7 +1,7 @@
 -- import: fastn/processors as pr
 -- import: fastn.com/expander/lib
 
--- my-ds.page: Understanding Sitemap 🚧
+-- my-ds.page: Understanding Sitemap
 
 -- lib.video-audience: Understanding Sitemap
 if: { source == "planning" }
@@ -20,6 +20,12 @@ if: { source == "default" || source == "build" }
 v: 
 
 -- ds.markdown:
+
+A sitemap is a data-structure where information is provided about the files on 
+website. This structure is created over a layout.
+
+-- ds.h1: Sitemap
+if: { source == "planning" }
 
 A sitemap is a data-structure where information is provided about the files on 
 website. This structure is created over a layout.
@@ -85,6 +91,8 @@ So,
 
 So after a one line space.
 
+-- ds.h3: First section
+
 We put our first section like:
 
 -- ds.code:
@@ -109,7 +117,64 @@ the foo document, we need to write, `/foo`.
 Now based how do you want to structure your website, this section can have one 
 or more subsections or not.
 
+-- ds.h3: Second section
 
+Let's give another section to it.
+
+-- ds.code:
+lang: ftd
+
+\# Season: /current-season/
+   document: /seasons/summer.ftd
+
+-- ds.markdown:
+
+The URLs can be cleaned, customized and one document can be used multiple times 
+with different URLs using the document feature of sitemap.
+
+To know all about this feature checkout the dedicated video about
+[`How to create clean URLs'](/expander/sitemap-document).
+
+-- ds.markdown:
+if: { source == "planning" }
+
+Link is shared in the description.
+
+-- ds.h3: Subsections
+
+To give this section `season` some subsections we write:
+
+-- ds.code:
+lang: ftd
+
+\## Autumn: /autumn/
+    document: /seasons/autumn.ftd 
+
+\## Spring: /spring/
+    document: /seasons/spring.ftd 
+
+\## Summer: /summer/
+    document: /seasons/summer.ftd 
+
+\## Winter: /winter/
+    document: /seasons/winter.ftd
+
+-- ds.h3: TOCs
+
+Similarly, we can add TOCs, the only change will be we are going to start with 
+`-`
+
+-- ds.code:
+lang: ftd
+
+- Sunrise: /sunrise-in-autumn/
+  document: /seasons/day-events/sunrise.ftd
+- Sunset: /sunset-in-autumn/
+  document: /seasons/day-events/sunset.ftd
+
+-- ds.markdown: 
+
+and so on.
 
 /-- ds.h2:  
 
