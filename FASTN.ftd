@@ -373,7 +373,7 @@ favicon: /-/fastn.com/images/favicon.svg
   - Heroku: /heroku/
     document: deploy/heroku.ftd
 
-## Crash Course: /expander/hello-world/-/build/
+## Video Course: /expander/hello-world/-/build/
 
 - Hello World: /expander/hello-world/-/build/
   - Install `fastn`: /build-install/-/expander/
