@@ -433,9 +433,9 @@ favicon: /-/fastn.com/images/favicon.svg
   source: planning
 
 - Overview: /planning/
-- Understanding sitemap 🚧: /understanding-sitemap/-/planning
+- Understanding sitemap 🚧: /understanding-sitemap/-/planning/
   document: /expander/ds/understanding-sitemap.ftd
-- Using images in documents: /using-images/-/planning
+- Using images in documents: /using-images/-/planning/
   document: /expander/imagemodule/index.ftd
 - Holy grail layout: /holy-grail/-/planning/
   document: /expander/layout/index.ftd
