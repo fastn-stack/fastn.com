@@ -397,6 +397,8 @@ favicon: /-/fastn.com/images/favicon.svg
 # Blog: /trizwitlabs/
   document: blog/trizwitlabs.ftd
 
+- Optimize your website 🚧: /website-optimization/
+  document: blog/seo-blog.ftd
 - trizwitlabs web event: /trizwitlabs/
   document: blog/trizwitlabs.ftd
 - `fastn` goes to Philippines: /namaste-philippines/
