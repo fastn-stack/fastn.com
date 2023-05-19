@@ -1,14 +1,14 @@
 -- import: fastn/processors as pr
 -- import: fastn.com/expander/lib
 
--- my-ds.page: Understanding Sitemap
+-- my-ds.page: SEO
 
--- lib.video-audience: Understanding Sitemap
+-- lib.video-audience: How to optimize your website
 if: { source == "planning" }
 owner: Ajit
 aud: Common
 
-Helps learners to understand how to structure their websites
+Helps learners to optimize their websites
 
 
 -- ds.h1: Search Engine Optimization (SEO)
