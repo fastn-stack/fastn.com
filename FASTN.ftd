@@ -433,6 +433,8 @@ favicon: /-/fastn.com/images/favicon.svg
   source: planning
 
 - Overview: /planning/
+- SEO: /seo/-/planning/
+  document: expander/ds/seo.ftd
 - Understanding sitemap: /understanding-sitemap/-/planning/
   document: /expander/ds/understanding-sitemap.ftd
 - Using images in documents: /using-images/-/planning/
