@@ -114,7 +114,7 @@ which can help increase your brand visibility through search.
 -- ds.h3: Example
 
 -- ftd.image: 
-src: $fastn-assets.files.expander.ds.img.example-seo-blog.png
+src: $fastn-assets.files.expander.ds.img.amitu-fb.png
 border-width.px: 2
 width: fill-container
 border-color: $inherited.colors.border
@@ -142,7 +142,6 @@ data using properties like `document-title`, `document-description` and
 
 You can learn [`How to do SEO`](/seo/) and improve your website's search 
 ranking and traffic through social media.
-
 
 
 
