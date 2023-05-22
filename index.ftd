@@ -149,7 +149,7 @@ optional ftd.raw-image-src seo-image:
 -- ds.page:
 site-logo: $fastn-assets.files.images.fastn.svg
 colors: $dark-flame-cs.main
-$widthfill: true
+full-width: true
 types: $doc-typo.types
 document-title: $home-page.seo-title
 document-description: $home-page.seo-description
@@ -806,13 +806,16 @@ color: $inherited.colors.text
 margin-bottom.em if { ftd.device == "desktop" }: 4
 margin-bottom.em: 1.5
 
--- code:
-lang: $install.code-lang
-width: hug-content
-width if { ftd.device == "mobile" }: fill-container
+-- ftd.column:
+align-content: center
 role: $inherited.types.copy-large
 
+-- ds.code:
+lang: $install.code-lang
+
 $install.code
+
+-- end: ftd.column
 
 -- ftd.text: $install.cta-text
 link: $install.cta-link
