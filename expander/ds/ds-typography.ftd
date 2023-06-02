@@ -96,7 +96,7 @@ lang: ftd
 - **Use the property `types` of the doc-site's page component**
 
 
-  We have created the custom component page in the`my-ds` document in the
+  We have created the custom component page in the `my-ds` document in the
   previous video. 
 
   Just to highlight the benefit of this is, that we need not to add the
