@@ -20,6 +20,21 @@ aud: Website Builders
 Learners will understand how to add or change a typography in doc-site.
 
 
+-- ds.h1: Straight to the point
+if: { show-planning }
+
+1. Select a typography
+2. Add the package in your fastn project
+3. Use the property `types` in the component page
+
+
+Good typography enhances content legibility, guides users through the site,
+establishes a visual identity, highlights important information, ensures
+accessibility, and creates a cohesive and professional appearance. In summary,
+typography is crucial in creating a visually pleasing and user-friendly
+website.
+
+
 -- ds.h1: Introduction
 if: { show-planning }
 
@@ -28,121 +43,104 @@ Welcome to the video.
 Today we learn how to add or change the typography in doc-site
 
 
-
--- ds.h1: Straight to the point
-if: { show-planning }
-
-1. Select a typography
-2. Add the package in your fastn project
-3. Use the property `colors` in the component page
-
-
-This is the component page of doc-site. To add a typography, first add the 
-package by adding it as a dependancy in `FASTN.ftd` and importing in the 
-`.ftd` document or documents where ever you want to use the typography.
-
-
-
 -- ds.h1: Introduction
 if: { !show-planning }
 
-;; final doc Intro
+
+Typography refers to the art of arranging and styling typefaces to make written
+language readable and visually appealing. In the context of website creation,
+typography plays a crucial role in shaping the overall design and user
+experience.
+
+It involves selecting appropriate fonts, sizes, spacing, and other typographic
+elements to enhance the readability, convey the intended message, and establish
+a visual hierarchy.
+
+Typography is added through a property of page component of `doc-site`.
 
 
-
-
-/-- ds.h1: Adding Color-scheme in a document
+-- ds.h1: Adding Typography
 $on-global-key[alt-p]$: $ftd.toggle($a = $show-planning)
 
 The three steps to adding a typography are:
 
-- Go to `featured page` and select the typography.
+- **Select the typography of your choice.** 
+
+  You can create your own typography or
+  you can select it from the [`featured page`](/featured/fonts-typography/).
+
+  *Note:* For explanation, we have selected 
+  [`lobster-typography`](https://fastn-community.github.io/lobster-typography/)
 
 /-- ds.image:
 if: { show-planning }
 src: $fastn-assets.files.expander.ds.img.
 
-- Add the package in your project
+-- ds.markdown:
 
-**A:** Add it as a dependency in `FASTN.ftd` document.
+- **Add the package in your project**
 
--- ds.code: Add as dependency
+-- ds.code: **A:** Add it as a dependency in `FASTN.ftd` document
 lang: ftd
 
-\-- fastn.dependency: fastn-community.github.io/<cs>
+\-- fastn.dependency: fastn-community.github.io/lobster-typography as my-types
+
+
+-- ds.code: **B:** Import the `my-types`
+lang: ftd
+
+\-- import: my-types
 
 -- ds.markdown:
 
-**B:**  Then, import the `doc-site` package in your `.ftd` documents
+- **Use the property `types` of the doc-site's page component**
 
--- ds.code: Importing doc-site
+
+  We have created the custom component page in the`my-ds` document in the
+  previous video. 
+
+  Just to highlight the benefit of this is, that we need not to add the
+  typography individually in each and every page, instead adding the typography
+  once and using the my-ds.page, we will have this typography in all the pages
+  where we are using `my-ds.page`.
+
+  And if one decides to go for another typography, then changing it once in
+  my-ds document will reflect the new typography across the website.
+
+-- ds.code: `types` property
 lang: ftd
 
-\-- import: fastn-community.github.io/<cs>
+\-- component page:
+optional caption title:
+optional body body:
+children wrapper:
 
--- ds.markdown:
+\-- ds.page: $page.title
+body: $page.body
+wrapper: $page.wrapper
+types: $my-types.types		;; <hl>
 
-- Use the property `colors` of the doc-site's page component.
+\;; content goes here
 
+\-- end: ds.page
 
--- ds.h1: Adding typography in `my-ds`
+\-- end: page
 
-We have created the custom component page in the`my-ds` document in the 
-previous video. 
+-- ds.h1: Change the Typography
 
-Just to highlight the benefit of this is, that we need not to add the 
-typography individually in each and every page, instead adding the 
-typography once and using the my-ds.page, we will have this typography in 
-all the pages where we are using `my-ds.page`.
+To change the typography,
 
-And if one decides to go for another typography, then changing it once in 
-my-ds document will reflect the new typography across the website.
+- Select the typography
+- Replace the old typography with new one as dependency
 
+-- ds.markdown: 
 
-
-;; =================== 
-;; Code block Template
-;; ===================
-
-
-/-- ds.code: Syntax
-lang: ftd
-
+In conclusion, typography is a fundamental element in website creation that 
+goes beyond mere aesthetics. It influences readability, visual hierarchy, 
+brand identity, user engagement, accessibility, and overall user experience.
 
 
-
-;; ============== 
-;; Image Template
-;; ==============
-
-/-- ds.image:
-if: { show-planning }
-src: $fastn-assets.files.expander.ds.img.
-
-
-
-;; =================  
-;; Rendered Template
-;; =================
-
-
-/-- ds.rendered: Turning a URL into a link
-
-/-- ds.rendered.input:
-
-
-/-- ds.rendered.output:
-
-
-/-- end: ds.rendered.output
-
-/-- end: ds.rendered
-
-
-
-
-
--- ds.h1: Closing Remarks 
+-- ds.h1: Closing Remarks
 if: { show-planning }
 
 Thank you guys, keep watching these videos to learn more about fastn. Checkout
