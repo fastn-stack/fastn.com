@@ -25,7 +25,6 @@ favicon: /-/fastn.com/images/favicon.svg
 -- fastn.dependency: fastn-stack.github.io/fastn-js
 -- fastn.dependency: fastn-stack.github.io/ftd-web-component-example
 -- fastn.dependency: gargajit.github.io/expander
--- fastn.dependency: gargajit.github.io/expander
 
 -- fastn.auto-import: ds
 -- fastn.auto-import: fastn.com/FASTN/my-ds as my-ds
