@@ -20,6 +20,8 @@
 document-title: fastn | The Beginner-Friendly Full-Stack Framework
 document-description: Design, develop, and deploy stunning websites and web apps effortlessly. Easy-to-learn full-stack framework. No coding knowledge required. Start now!
 document-image: https://fastn.com/-/fastn.com/images/fastn-dot-com-og-image.jpg
+full-width: true
+sidebar: false
 
 -- ds.page.footer:
 
