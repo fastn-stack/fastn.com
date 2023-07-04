@@ -85,6 +85,19 @@ wip: true
 It provides out-of-the-box documentation features that can be used to create any
 kind of site(personal website, blog, etc).
 
+
+-- ft-ui.template: Midnight Rush (AmitU)'s
+template-url: featured/ds/mr-ds/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-rush.jpg
+licence-url: https://github.com/fastn-community/midnight-rush/blob/main/LICENSE
+github-url: https://github.com/fastn-community/midnight-rush
+wip: true
+
+⚡️ Midnight Rush will help you create a beautiful documentation site in no time.
+
+It provides out-of-the-box documentation features that can be used to create any
+kind of site(personal website, blog, etc).
+
 -- ft-ui.template: Set 2 DS
 template-url: featured/ds/set-2-ds/
 screenshot: $fastn-assets.files.images.featured.doc-sites.set-2-ds.jpg
