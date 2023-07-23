@@ -1,0 +1,151 @@
+-- import: fastn.com/rfcs/lib
+
+-- lib.rfc: RFC: enums
+id: <unique-rfc-id>
+status: wip-rfc
+
+This RFC define a new kind of type, `enum`. This type can be used when one wants
+to limits the possible values of another type to a small set.
+
+-- lib.motivation:
+
+Consider logo for a website, if your website has more than one logos, and you
+want different pages to be able to pick from one or more of the logos, we have
+to use a type to store the actual logo. It can be a string:
+
+-- ds.code:
+lang: ftd
+
+\-- string logo: /logo.png
+\-- string new-year-logo: /logo-new-year.png
+
+\-- some-component:
+logo: $logo
+
+\-- component some-component:
+string logo: ;; <hl>
+
+\;; body omitted
+
+\-- end: some-component
+
+-- ds.markdown:
+
+If the type `logo` of `some-component` was declared as `string`, any possible
+value can be passed, but we want to limit to only two possible values.
+
+One way to do this in current system is to use [`or-type`](/or-type/):
+
+-- ds.code:
+lang: ftd
+
+\-- or-type logo:
+\-- constant string main: /logo.png
+\-- constant string new-year-logo: /logo-new-year.png
+\-- end: logo
+
+\-- some-component:
+logo: main ;; <hl>
+
+\-- component some-component:
+logo logo:
+
+;; body omitted
+
+\-- end: some-component
+
+
+-- ds.markdown:
+
+With this you achieve the caller side. But `some-component`'s job is harder, it
+has to extract the `string` value out of `logo` to pass to, e.g. `ftd.image`.
+
+-- ds.code:
+lang: ftd
+
+\-- component some-component:
+logo logo:
+
+\-- ftd.image:
+src: logo_to_src($some-component.logo) ;; <hl>
+
+\-- end: some-component
+
+-- ds.markdown:
+
+The detail of `logo_to_src()` is omitted.
+
+The important thing is this boilerplate code has to be written. We can not
+update the semantics of `or-type` to directly pluck the `string` constant value
+out of the two constant strings defined there, because in future other non
+string constants or non constant values could be added to `or-type`, and a
+function to convert `or-type` to `string` would be only option.
+
+To make this easier we propose:
+
+-- ds.code:
+lang: ftd
+
+\-- string enum logo:
+\-- main: /logo.png
+\-- new-year-logo: /logo-new-year.png
+\-- end: logo
+
+\-- some-component:
+logo: main                            ;; <hl>
+
+-- ds.markdown:
+
+We have defined `logo` as `string enum` here. The two possible variants of the
+`logo` are `main` and `new-year-logo`, and they have corresponding `string`
+values.
+
+When constructing an instance of the `logo`, we can use either variant.
+
+When defined like this, using the `logo` is trivial:
+
+-- ds.code:
+lang: ftd
+
+\-- component some-component:
+logo logo:
+
+\-- ftd.image:
+src: $some-component.logo              ;; <hl>
+
+\-- end: some-component
+
+-- ds.markdown:
+
+Notice how we do not need any converted from `logo` to `string`, `logo` is a
+`string enum` so anything that expects either `string` or `logo` can accept a
+`string enum`.
+
+-- end: lib.motivation
+
+
+-- lib.detailed-design:
+
+Describe your proposal in detail.
+
+-- end: lib.detailed-design
+
+
+-- lib.alternatives:
+
+Did you consider any alternatives to what you propose in detailed-design, if so
+mention them here, along with discussion on why you consider the proposal better.
+
+-- end: lib.alternatives
+
+
+
+-- lib.unresolved-questions:
+
+List unresolved questions here.
+
+-- end: lib.unresolved-questions
+
+-- end: lib.rfc
+
+
