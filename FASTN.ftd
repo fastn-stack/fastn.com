@@ -354,16 +354,24 @@ favicon: /-/fastn.com/images/favicon.svg
   skip: true
 - Dynamic URLs: /dynamic-urls/
   document: backend/dynamic-urls.ftd
-- `http` processor: /http/
-  document: ftd-host/http.ftd
+- `processors`: /processor/-/backend/
+  document: ftd-host/processor.ftd
+  - Getting Request Data: /request-data/
+    document: ftd-host/request-data.ftd
+  - Fetching Data Using `http`: /http/
+    document: ftd-host/http.ftd
+  - Querying PostgreSQL: /sql/
+    document: ftd-host/pg.ftd
+  - Querying SQLite: /sqlite/
+    document: ftd-host/package-query.ftd
+  - Reading JSON: /get-data/
+    document: ftd-host/get-data.ftd
 - Custom URLs: /custom-url/
   document: backend/custom-urls.ftd
-- Request Data Processor: /request-data/
-  document: ftd-host/request-data.ftd
-- SQL Processor: /sql/
-  document: ftd-host/package-query.ftd
-- Reading JSON: /get-data/
-  document: ftd-host/get-data.ftd
+- Redirects: /redirects/-/backend/
+  document: backend/redirects.ftd
+- Dynamic Redirect: /ftd/redirect/
+  document: backend/ftd-redirect.ftd
 
 
 # Create Website: /install/-/build/
@@ -471,6 +479,10 @@ favicon: /-/fastn.com/images/favicon.svg
 - Overview: /d/
 - Maintenance: /d/m/
 - Next Edition: /d/next-edition/
+- RFCs: /rfcs/
+  - RFC-1: The RFC Process
+    url: /rfcs/rfc-process/
+    document: rfcs/0001-rfc-process.ftd
 - Architecture: /architecture/
   document: d/architecture.ftd
   - `ftd` crate 🚧: /ftd-crate/
