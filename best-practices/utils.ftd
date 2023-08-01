@@ -1,0 +1,179 @@
+-- ds.page:
+
+This page will contain some components which would be useful probably.
+
+
+-- letter-stack:
+height.fixed.px: 800
+contents-a: $letter-contents-a
+contents-f: $letter-contents-f
+
+
+-- end: ds.page
+
+-- ftd.color hover-c: coral
+
+
+-- integer letter-list-length(a):
+letter-data list a:
+
+len(a)
+
+
+
+
+-- record letter-data:
+caption name:
+optional string link:
+
+
+
+-- record letter-category:
+caption title:
+optional string link:
+letter-data list sub-categories:
+
+
+
+
+
+-- component letter:
+caption letter-name:
+optional string link:
+ftd.color hover-color: $hover-c
+boolean $is-hovered: false
+
+-- ftd.text: $letter.letter-name
+link if { letter.link != NULL }: $letter.link
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+color if { letter.is-hovered }: $letter.hover-color
+/style if { letter.is-hovered }: bold, underline
+cursor if { letter.is-hovered }: pointer
+$on-mouse-enter$: $ftd.set-bool($a = $letter.is-hovered, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $letter.is-hovered, v = false)
+
+-- end: letter
+
+
+
+
+
+
+
+
+
+-- component letter-category:
+ftd.resizing width: fill-container
+caption letter-name:
+letter-data list letter-items:
+
+-- ftd.column:
+if: { len(letter-category.letter-items) != 0 }
+width: $letter-category.width
+spacing.fixed.px: 10
+wrap: true
+
+-- ftd.text: $letter-category.letter-name
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.column:
+spacing.fixed.px: 5
+wrap: true
+
+-- letter: $item.name
+$loop$: $letter-category.letter-items as $item
+link: $item.link
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: letter-category
+
+
+
+
+
+
+
+
+
+
+
+-- component letter-stack:
+optional caption title:
+optional ftd.resizing height:
+letter-category list contents-a: []
+letter-category list contents-f: []
+
+
+-- ftd.column:
+wrap: true
+width: fill-container
+height: $letter-stack.height
+spacing.fixed.px: 10
+
+-- letter-category: $item.title
+$loop$: $letter-stack.contents-a as $item
+width.fixed.percent if { ftd.device != "mobile" }: 25
+width: fill-container
+letter-items: $item.sub-categories
+
+
+-- letter-category: $item.title
+$loop$: $letter-stack.contents-f as $item
+width.fixed.percent if { ftd.device != "mobile" }: 25
+width: fill-container
+letter-items: $item.sub-categories
+
+
+-- end: ftd.column
+
+-- end: letter-stack
+
+
+
+
+
+/-- letter-data list sub-categories-1:
+
+
+/-- end: sub-categories-1
+
+
+-- letter-data list sub-categories-2:
+
+-- letter-data: 80 character in text editor
+link: /formatting#80-char
+
+-- letter-data: Consistent markdown list indentation while wrapping
+link: /formatting#list-indentation
+
+-- letter-data: One line space between two sections
+link: /formatting#section-gap
+
+
+-- end: sub-categories-2
+
+-- letter-category list letter-contents-a:
+
+-- letter-category: Auto Import
+link: /auto-import/
+sub-categories: []
+
+
+-- end: letter-contents-a
+
+
+
+-- letter-category list letter-contents-f:
+
+-- letter-category: Formatting
+link: /formatting/
+sub-categories: $sub-categories-2
+
+-- end: letter-contents-f
+
+
