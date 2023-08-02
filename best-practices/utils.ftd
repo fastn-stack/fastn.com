@@ -48,7 +48,6 @@ link if { letter.link != NULL }: $letter.link
 role: $inherited.types.copy-regular
 color: $inherited.colors.text
 color if { letter.is-hovered }: $letter.hover-color
-/style if { letter.is-hovered }: bold, underline
 cursor if { letter.is-hovered }: pointer
 $on-mouse-enter$: $ftd.set-bool($a = $letter.is-hovered, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $letter.is-hovered, v = false)
@@ -63,34 +62,36 @@ $on-mouse-leave$: $ftd.set-bool($a = $letter.is-hovered, v = false)
 
 
 
--- component letter-category:
+-- component letter-category-display:
 ftd.resizing width: fill-container
-caption letter-name:
+caption letter-title:
 letter-data list letter-items:
+optional string title-link:
 
 -- ftd.column:
-if: { len(letter-category.letter-items) != 0 }
-width: $letter-category.width
+/if: { len(letter-category-display.letter-items) != 0 }
+width: $letter-category-display.width
 spacing.fixed.px: 10
 wrap: true
 
--- ftd.text: $letter-category.letter-name
+-- ftd.text: $letter-category-display.letter-title
 color: $inherited.colors.text
-role: $inherited.types.heading-large
+role: $inherited.types.heading-medium
+link: $letter-category-display.title-link
 
 -- ftd.column:
 spacing.fixed.px: 5
 wrap: true
 
 -- letter: $item.name
-$loop$: $letter-category.letter-items as $item
+$loop$: $letter-category-display.letter-items as $item
 link: $item.link
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: letter-category
+-- end: letter-category-display
 
 
 
@@ -105,8 +106,8 @@ link: $item.link
 -- component letter-stack:
 optional caption title:
 optional ftd.resizing height:
-letter-category list contents-a: []
-letter-category list contents-f: []
+letter-category list contents-a:
+letter-category list contents-f:
 
 
 -- ftd.column:
@@ -115,19 +116,17 @@ width: fill-container
 height: $letter-stack.height
 spacing.fixed.px: 10
 
--- letter-category: $item.title
-$loop$: $letter-stack.contents-a as $item
-width.fixed.percent if { ftd.device != "mobile" }: 25
+-- letter-category-display: $obj.title
+$loop$: $letter-stack.contents-a as $obj
 width: fill-container
-letter-items: $item.sub-categories
+title-link: $obj.link
+letter-items: $obj.sub-categories
 
-
--- letter-category: $item.title
-$loop$: $letter-stack.contents-f as $item
-width.fixed.percent if { ftd.device != "mobile" }: 25
+-- letter-category-display: $obj.title
+$loop$: $letter-stack.contents-f as $obj
 width: fill-container
-letter-items: $item.sub-categories
-
+title-link: $obj.link
+letter-items: $obj.sub-categories
 
 -- end: ftd.column
 
@@ -137,10 +136,10 @@ letter-items: $item.sub-categories
 
 
 
-/-- letter-data list sub-categories-1:
+-- letter-data list sub-categories-1:
 
 
-/-- end: sub-categories-1
+-- end: sub-categories-1
 
 
 -- letter-data list sub-categories-2:
@@ -154,15 +153,13 @@ link: /formatting#list-indentation
 -- letter-data: One line space between two sections
 link: /formatting#section-gap
 
-
 -- end: sub-categories-2
 
 -- letter-category list letter-contents-a:
 
 -- letter-category: Auto Import
 link: /auto-import/
-sub-categories: []
-
+sub-categories: $sub-categories-1
 
 -- end: letter-contents-a
 
