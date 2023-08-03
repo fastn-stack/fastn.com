@@ -1,0 +1,112 @@
+-- import: fastn.com/rfcs/lib
+
+-- lib.rfc: RFC-5: Introducing `ftd.space` and `ftd.empty` Variables to `ftd`
+id: 0005-ftd-space
+status: pending
+
+The purpose of this RFC is to propose the introduction of two new variables,
+`ftd.space` and `ftd.empty`, to the `ftd` library. These variables will
+facilitate the insertion of space characters and empty strings.
+
+
+-- lib.motivation:
+
+The addition of `ftd.space` and `ftd.empty` variables simplifies the process of
+adding space character and empty space. By providing these predefined variables
+for common formatting needs, makes `ftd` becomes more user-friendly when working
+with spacing and empty content.
+
+The `ftd.empty` can be used as default value of string type variable. This
+variable can later on append other strings on some events.
+
+-- end: lib.motivation
+
+
+
+-- lib.detailed-design:
+
+`ftd` will now contains two predefined variables. These will be included in
+`default bag` in interpreter.
+
+-- ds.h2: Variables Definition
+
+-- ds.h3: `ftd.space`
+
+The `ftd.space` variable is defined to return a space character as a string.
+
+-- ds.h3: `ftd.empty`
+
+The `ftd.empty` variable is defined to return an empty string.
+
+-- ds.h2: Usage
+
+The `ftd.space` variable can be used as the text for `ftd.text` element to
+insert a space character and the `ftd.empty` variable can be used to insert an
+empty string into the output. Here's an example of its usage:
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.text: $ftd.space
+\-- ftd.text: $ftd.empty
+
+-- end: lib.detailed-design
+
+
+
+
+-- lib.alternatives:
+
+-- ds.h2: Rejected: Adding the `ftd.space` function to `ftd`
+
+The earlier proposal was the addition of the `ftd.space` function to the `ftd`
+library. This function aims to generate strings containing a specified number of
+space characters.
+
+-- ds.code:
+lang: js
+
+ftd.space = function(arg) {
+    let __arg__ = {
+        a: 0,
+        ...arg
+    };
+    if (__arg__.a <= 0) {
+        return '';
+    }
+
+    return ' '.repeat(__arg__.a);
+}
+
+-- ds.markdown:
+
+We rejected this because this has barely any use besides for the above two
+mentioned cases. There's hardly any chance to use it for adding more than one
+space.
+
+
+-- end: lib.alternatives
+
+
+
+
+-- lib.teaching-notes:
+
+The introduction of `ftd.space` and `ftd.empty` variables can be effectively
+integrated into educational material for `ftd` users.
+
+-- end: lib.teaching-notes
+
+
+
+
+-- lib.unresolved-questions:
+
+As of now, there are no unresolved questions or issues related to the proposal
+of introducing `ftd.space` and `ftd.empty` variables to the ftd library.
+
+-- end: lib.unresolved-questions
+
+
+
+-- end: lib.rfc
