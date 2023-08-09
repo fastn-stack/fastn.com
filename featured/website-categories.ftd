@@ -15,7 +15,7 @@
 
 
 
--- ds.page: Documentation Sites
+-- ds.page: Website Categories
 show-footer: true
 site-logo: $fastn-assets.files.images.fastn.svg
 site-name: NULL
@@ -39,29 +39,29 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: ds.page.footer
 
--- ft-ui.grid-view: Documentation Sites A
+-- ft-ui.grid-view: Documentation Sites
 if: { show-grid }
 templates: $doc-sites
 more-link-text: View all 
-more-link: /featured/ds/doc-sites-a/
+more-link: /featured/doc-sites/
 
--- ft-ui.grid-view: Documentation Sites B
+-- ft-ui.grid-view: SPA / Landing pages
 if: { show-grid }
 templates: $landing
 more-link-text: View all 
-more-link: /featured/ds/doc-sites-b/
+more-link: /featured/blog-templates/
 
--- ft-ui.grid-view: Documentation Sites C
+-- ft-ui.grid-view: Blogs
 if: { show-grid }
 templates: $blogs
 more-link-text: View all 
-more-link: /featured/ds/doc-sites-c/
+more-link: /featured/blog-templates/
 
--- ft-ui.grid-view: Documentation Sites D
+-- ft-ui.grid-view: Portfolios / Personal Sites
 if: { show-grid }
 templates: $portfolios
 more-link-text: View all 
-more-link: /featured/ds/doc-sites-d/
+more-link: /featured/blog-templates/
 
 -- end: ds.page
 

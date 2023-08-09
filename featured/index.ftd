@@ -33,23 +33,12 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: ds.page.footer
 
--- ds.page.body:
-
-We have designed and developed below templates using `fastn`. 
-
-These templates can be used inside your personal web sites or organizational
-static web sites developed using `fastn` package.
 
 -- grid-view: Documentation Sites
 if: { show-grid }
 templates: $doc-sites
 more-link-text: View all
 more-link: /featured/doc-sites/
-
-`doc-sites` will help you create a beautiful documentation site in no time. 
-
-It provides out-of-the-box documentation features that can be used to create any
-kind of site(personal website, blog, etc).
 
 
 -- grid-view: SPA / Landing Pages
@@ -58,18 +47,12 @@ templates: $landing-pages
 more-link-text: View all
 more-link: /featured/landing-pages/
 
-We have designed and developed below landing pages site themes. You can use them
-for creating SPA(Single Page Application or websites) etc. 
-
 
 -- grid-view: Blog Templates
 if: { show-grid }
 templates: $blog-sites
 more-link-text: View all
 more-link: /featured/blog-templates/
-
-We have designed and developed below landing pages site themes. You can use them
-for creating SPA(Single Page Application or websites) etc. 
 
 
 -- grid-view: Section Library
@@ -78,8 +61,6 @@ templates: $sections
 more-link-text: View all
 more-link: /featured/sections/
 
-We have designed and developed below sections. You can use them for inside you
-fastn projects.
 
 /-- grid-view: Resumes:
 if: { show-grid }
@@ -92,9 +73,6 @@ templates: $bling
 more-link-text: View all
 more-link: /featured/components-library/
 
-Fastn components library is typically includes a variety of components such as
-buttons, input fields, dropdown menus, modals, tabs, and more, each with their
-own styles, behavior, and functionality. 
 
 -- grid-view: Color Schemes
 if: { show-grid }
@@ -102,18 +80,12 @@ templates: $schemes
 more-link-text: View all
 more-link: /featured/cs/
 
-Add warmth and energy to your fastn web site designs with our fastn Color
-Schemes.
-
 
 -- grid-view: Font Typographies
 if: { show-grid }
 templates: $fonts
 more-link-text: View all 
 more-link: /featured/fonts-typography/
-
-We have converted few Google Fonts to fastn typography packages, which are ready
-to use as our fastn default inherited-types for your fastn web projects.
 
 -- end: ds.page
 

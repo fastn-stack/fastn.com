@@ -424,8 +424,16 @@ favicon: /-/fastn.com/images/favicon.svg
 
 ## Featured Templates: /featured/
 
-- Website Categories: /featured/doc-sites/
+- Website Categories: /featured/website-categories/
   - Documentation Sites: /featured/doc-sites/
+    - Documentation Sites A: /featured/ds/doc-sites-a/
+    skip: true
+    - Documentation Sites B: /featured/ds/doc-sites-b/
+    skip: true
+    - Documentation Sites C: /featured/ds/doc-sites-c/
+    skip: true
+    - Documentation Sites D: /featured/ds/doc-sites-d/
+    skip: true
     - Doc Site: /featured/ds/doc-site/
     skip: true
     - Midnight Rush: /featured/ds/mr-ds/
