@@ -103,7 +103,11 @@ src: $assets.files.images.linkedin.svg
 -- common.owner list owner-fastn:
 
 -- common.owner: Muskan Verma
-profile: featured/designers/muskan-verma/
+profile: featured/contributors/designers/muskan-verma/
 avatar: $assets.files.images.featured.doc-sites.doc-sites-a.muskan-verma.jpg
+
+-- common.owner: John Doe
+profile: featured/contributors/developers/john-doe/
+avatar: $assets.files.images.avatar.jpg
 
 -- end: owner-fastn
