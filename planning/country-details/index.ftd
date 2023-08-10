@@ -44,6 +44,47 @@ country-name and capital.
 \;; api (json) -> records(concept) ftd file, data display
 
 
+
+-- ds.code:
+
+
+
+-- ds.code:
+
+/-- import: fastn/processors as pr
+
+-- country-detail: $country
+for: $country in $countries
+
+-- record country-data:
+string name:
+string capital:
+
+-- country-data list countries:
+$processor$: pr.http
+url: https://famous-loincloth-ox.cyclic.app/
+
+-- component country-detail:
+caption country-data country:
+
+-- ftd.row:
+width.fixed.percent: 20
+
+-- ftd.text: $country-detail.country.name
+role: $inherited.types.copy-regular
+style: bold
+width.fixed.percent: 50
+
+-- ftd.text: $country-detail.country.capital
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+
+-- end: country-detail
+
+
+
 -- ds.h1: Nested Model System
 
 **VIDEO 2: (explanation of nested model system)**
