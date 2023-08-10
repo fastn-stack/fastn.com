@@ -1,3 +1,5 @@
+-- 
+
 -- ds.page: 
 sidebar: false
 full-width: true
@@ -8,6 +10,8 @@ list-of-files: $list-of-files -
 
 -- exercise.examples-toc:
 
+-- ds.markdown:
+
 1. List should be of 3 level
 	a. Example
 	b. Folder
@@ -17,6 +21,8 @@ list-of-files: $list-of-files -
 
 
 -- exercise.code-panel:
+
+-- ds.markdown:
 
 body is code
 
