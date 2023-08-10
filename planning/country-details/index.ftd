@@ -1,13 +1,16 @@
 -- ds.page: A hands-on guide to Dynamic UI using REST API
 
+
 This guide provides step-by-step instructions to deploy the `country-details-ui`
 project, which consists of two packages, `country-details-http`
 (backend) and "country-details-ui" (UI). The deployment will be on Heroku using
 the fastn buildpack, which requires the fastn 2023 edition for building the
 project.
 
+
 We are going to create a project in `fastn` that will create a Dynamic UI to 
 display the countries along with their Population, Region and Capital.
+
 
 
 
@@ -20,6 +23,7 @@ display the countries along with their Population, Region and Capital.
 
 
 -- ds.h1: Basics of http and Data modelling
+
 
 Before that, let's take another example where the json data will only have 
 country-name and capital.
@@ -58,8 +62,6 @@ country-name and capital.
 -- ds.h1: Deploying on Heroku
 
 **VIDEO 4: HEROKU deployment**
-
-
 
 
 
