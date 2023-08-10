@@ -1,44 +1,13 @@
--- 
+-- import: fastn/processors as pr
+-- import: fastn.com/examples/assets
+
 
 -- ds.page: 
 sidebar: false
 full-width: true
 
-
 -- exercise:
-list-of-files: $list-of-files - 
-
--- exercise.examples-toc:
-
--- ds.markdown:
-
-1. List should be of 3 level
-	a. Example
-	b. Folder
-	c. File
-
--- end: exercise.examples-toc
-
-
--- exercise.code-panel:
-
--- ds.markdown:
-
-body is code
-
--- end: exercise.code-panel
-
-
-
--- exercise.output:
-
--- end: exercise.output
-
-
-
--- end: exercise
-
-
+list-of-files: $files-list
 
 -- end: ds.page
 
@@ -48,13 +17,191 @@ body is code
 
 
 -- component exercise:
-pr.toc-item list list-of-files:
-children examples-toc:
-ftd.ui-list code-panel:
-ftd.ui-list output:
+files list list-of-files:
+ftd.ui list examples-toc:
+ftd.ui list code-panel:
+ftd.ui list output:
 
+-- ftd.row:
+border-top-width.px: 1
+border-color: $inherited.colors.border
+width: fill-container
+
+-- ftd.column:
+padding-vertical.px: 24
+width.fixed.px: 390
+spacing.fixed.px: 24
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+border-bottom-width.px: 1
+border-color: $inherited.colors.border
+
+-- ftd.text: EXAMPLES
+role: $inherited.types.label-large
+color: $inherited.colors. text-strong
+
+/-- ftd.image:
+src: $assets.files.assets.arrow.svg
+width: auto
+
+-- end: ftd.row
+
+-- files-details:
+$loop$: $exercise.list-of-files as $obj
+title: $obj.title
+link: $obj.link
+example-wrapper: $exercise.examples-toc
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.px: 524
+spacing.fixed.px: 24
+border-right-width.px: 1
+border-left-width.px: 1
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.border-strong
+height.fixed.vh: 100
+
+-- code-block:
+info: File-1.ftd
+code-wrapper: $exercise.code-panel
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.px: 526
+spacing.fixed.px: 16
+
+-- output-block:
+output-wrapper: $exercise.output
+
+-- end: ftd.column
+
+-- end: ftd.row
 
 -- end: exercise
+
+
+
+
+
+
+
+
+
+
+-- component files-details:
+caption title:
+string link:
+ftd.ui list example-wrapper:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.text: $files-details.title
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+link: $files-details.link
+
+-- ftd.column:
+children: $files-details.example-wrapper
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: files-details
+
+
+
+
+
+
+-- component code-block:
+string info:
+ftd.ui list code-wrapper:
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 10
+padding-vertical.px: 10
+
+-- ftd.text: $code-block.info
+
+-- ds.code:
+lang: ftd
+
+1. from discord.ext import commands
+2. bot = commands.Bot(">")
+3. @bot.command("ping")
+4. async def ping(ctx: commands.Context):
+5. await ctx.
+6. bot.run("TOKEN")
+
+-- ftd.column:
+children: $code-block.code-wrapper
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: code-block
+
+
+
+
+
+
+
+
+-- component output-block:
+ftd.ui list output-wrapper:
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 10
+
+-- ds.code:
+lang: ftd
+
+fastn.com/featured
+
+-- ftd.column:
+children: $output-block.output-wrapper
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: output-block
+
+
+
+
+
+
+
+
+
+
+-- record files:
+caption title:
+string link:
+
+-- files list files-list:
+
+-- files: Heading 1
+link: /
+
+-- files: Heading 1
+link: /
+
+-- end: files-list
+
+
 
 
 

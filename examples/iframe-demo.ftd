@@ -11,3 +11,68 @@ width.fixed.px: 600
 
 
 -- end: ds.page
+
+
+
+
+-- ds.page: 
+sidebar: false
+full-width: true
+
+
+-- exercise:
+list-of-files: $list-of-files - 
+
+-- exercise.examples-toc:
+
+-- ds.markdown:
+
+1. List should be of 3 level
+	a. Example
+	b. Folder
+	c. File
+
+-- end: exercise.examples-toc
+
+
+-- exercise.code-panel:
+
+-- ds.markdown:
+
+body is code
+
+-- end: exercise.code-panel
+
+
+
+-- exercise.output:
+
+-- end: exercise.output
+
+
+
+-- end: exercise
+
+
+
+-- end: ds.page
+
+
+
+
+
+
+-- component exercise:
+pr.toc-item list list-of-files:
+children examples-toc:
+ftd.ui-list code-panel:
+ftd.ui-list output:
+
+
+-- end: exercise
+
+
+
+
+
+
