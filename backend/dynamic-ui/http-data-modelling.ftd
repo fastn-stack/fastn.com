@@ -102,6 +102,7 @@ url: https://famous-loincloth-ox.cyclic.app/
 
 
 -- ds.h3: **Step 4:** Data is ready, lets show it in the UI
+Now that we have download the data from the `url` and stored it in `countries`, we want to show it to user. To do that let's create a component called `country-detail`. 
 
 
 -- ds.code: Create component `country-detail`
