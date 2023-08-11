@@ -56,7 +56,7 @@ string capital:
 
 Let's implement the theory and build the project. 
 
--- ds.h3: **Step 1:** Import `fastn` processor
+-- ds.h3: **Step 1:** Import `fastn/processors`
 
 Copy the import line and paste it at the top of the `index.ftd` document
 
