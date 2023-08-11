@@ -397,7 +397,7 @@ favicon: /-/fastn.com/images/favicon.svg
   document: backend/ftd-redirect.ftd
 
 ## Learn: /backend/learn/
-  document: /backend/dynamic-ui/index.ftd
+  document: /backend/country-details/index.ftd
 
 - Country Details: /country-details/
   document: /backend/country-details/index.ftd
