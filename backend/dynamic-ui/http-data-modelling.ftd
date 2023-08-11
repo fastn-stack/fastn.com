@@ -126,7 +126,7 @@ caption country-data country:  ;; <hl>
 
 -- ds.markdown:
 
-Let's first pull the data of country and display in the browser
+Let's show the country name.
 
 -- ds.code:
 
