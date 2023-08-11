@@ -1,6 +1,5 @@
 -- import: fastn/processors as pr
--- import: fastn.com/examples/assets
-
+-- import: fastn.com/assets
 
 -- ds.page: 
 sidebar: false
@@ -77,6 +76,7 @@ spacing.fixed.px: 16
 
 -- output-block:
 output-wrapper: $exercise.output
+responsive: $assets.files.examples.assets.responsive.svg
 
 -- end: ftd.column
 
@@ -158,9 +158,10 @@ children: $code-block.code-wrapper
 
 
 -- component output-block:
+ftd.image-src responsive:
 ftd.ui list output-wrapper:
 
--- ftd.column:
+-- ftd.row:
 width: fill-container
 padding-horizontal.px: 10
 
@@ -169,12 +170,16 @@ lang: ftd
 
 fastn.com/featured
 
+-- ftd.image:
+src: $output-block.responsive
+width: auto
+
 -- ftd.column:
 children: $output-block.output-wrapper
 
 -- end: ftd.column
 
--- end: ftd.column
+-- end: ftd.row
 
 -- end: output-block
 
