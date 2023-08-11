@@ -9,6 +9,10 @@ To facilitate your learning journey, we will take a pratical scenario involving
 an array of records. Each record has two key attributes: the **country-name** 
 and it's corresponding **capital**, in the form of JSON data.
 
+We will create an array of records. Each record has two key attributes:
+the **country-name** and it's corresponding **capital**, in the form of JSON
+data.
+
 -- ftd.text: Click to see the JSON data
 link: https://famous-loincloth-ox.cyclic.app/
 open-in-new-tab: true
@@ -36,7 +40,10 @@ The syntax of using `http` processor is as follows:
 
 -- ds.code:
 
-\$processor$: pr.http
+\-- import: fastn/processors as pr  ;; <hl>
+
+\-- record r:
+\$processor$: pr.http   ;; <hl>
 
 
 -- ds.h2: Data modelling: `record`
@@ -89,9 +96,8 @@ therefore, we will create a list and use the `country-data` record as the type.
 
 -- ds.markdown:
 
-This list will be created when we do the `http` calling with the `http`
-processor. Also, we will provide the endpoint i.e. the address where the data
-is present as the `url`.
+`$processor$: pr.http` will initialise `countries` with the data returned
+by the `url`. 
 
 -- ds.code: 
 
@@ -100,9 +106,45 @@ $processor$: pr.http
 url: https://famous-loincloth-ox.cyclic.app/
 
 
+-- ds.markdown: The JSON data looks like this:
+
+-- ds.code:
+lang: json
+copy: false
+
+[
+  {
+    "name": "India",
+    "capital": "New Delhi"
+  },
+  {
+    "name": "Sri Lanka",
+    "capital": "Colombo"
+  },
+  {
+    "name": "Nepal",
+    "capital": "Kathmandu"
+  },
+  {
+    "name": "Bangladesh",
+    "capital": "Dhaka"
+  },
+  {
+    "name": "Indonesia",
+    "capital": "Jakarta"
+  },
+  {
+    "name": "Maldives",
+    "capital": "Mali"
+  }
+]
+
 
 -- ds.h3: **Step 4:** Data is ready, lets show it in the UI
-Now that we have download the data from the `url` and stored it in `countries`, we want to show it to user. To do that let's create a component called `country-detail`. 
+
+Now that we have download the data from the `url` and stored it in `countries`,
+we want to show it to user. To do that let's create a component called
+`country-detail`. 
 
 
 -- ds.code: Create component `country-detail`
@@ -115,8 +157,8 @@ Now that we have download the data from the `url` and stored it in `countries`, 
 
 -- ds.markdown: 
 
-This component will have a property `country`. We will mark it as `caption` to make easy for users of this
-component. 
+This component will have a property `country`. We will mark it as `caption` to
+make easy for users of this component. 
 
 -- ds.code:
 
@@ -145,7 +187,7 @@ caption country-data country:
 
 Till now, we have just defined the component but to display the list of country
 names we need call the component. Therefore, after closing the component we 
-can call the component and create a `for` loop. 
+can call the component and use a `for` loop. 
 
 
 -- ds.code:
@@ -155,7 +197,7 @@ for: $country in $countries
 
 -- ds.markdown:
 
-Now wrap the two texts for country-name and capital in `row` container
+Now wrap the two texts for country name and capital in `row` container
 
 -- ds.code: 
 
@@ -176,10 +218,10 @@ external website using the `http` processor and one of the data modelling type,
 
 -- ds.h3: Improved UI
 
-You can use various CSS properties to improve the UI to display the data, let's 
-say in the form of a table.
+You can use various `fastn` properties to improve the UI to display the data,
+let's say in the form of a table.
 
--- ds.code: css properties added
+-- ds.code: properties added
 
 \-- import: fastn/processors as pr
 

@@ -6,9 +6,6 @@ project.
 
 -- ds.h1: REST API
 
-Application Programming Interface or API is like a set of rules and protocols
-that allow different software applications to talk to each other and share data
-or perform actions.
 
 REST stands for `Representational State Transfer`. REST APIs use standard HTTP 
 methods (GET, POST, PUT, DELETE) to interact. 
