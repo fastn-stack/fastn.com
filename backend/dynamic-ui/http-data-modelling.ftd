@@ -82,7 +82,7 @@ string capital:
 Since the JSON data has a list of countries and their respective captials, 
 therefore, we will create a list and use the `country-data` record as the type.
 
--- ds.code: list countries of country type
+-- ds.code: `countries` is a `list` of `country-data`
 
 \-- country-data list countries:
 
