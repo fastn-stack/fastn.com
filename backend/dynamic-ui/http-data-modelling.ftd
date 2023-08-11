@@ -101,7 +101,7 @@ url: https://famous-loincloth-ox.cyclic.app/
 
 
 
--- ds.h3: **Step 4:** Create a component definition
+-- ds.h3: **Step 4:** Data is ready, lets show it in the UI
 
 
 -- ds.code: Create component `country-detail`
