@@ -42,7 +42,7 @@ The syntax of using `http` processor is as follows:
 -- ds.h2: Data modelling: `record`
 
 For this example, we will use `record` feature of `fastn`'s.
-`Record` is a user defined type that can be used to hold the country data.
+`record` can be used to create a user defined data type. 
 
 Here we are creating a new record called `country-data`.
 
