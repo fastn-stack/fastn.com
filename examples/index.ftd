@@ -27,22 +27,24 @@ border-color: $inherited.colors.border
 width: fill-container
 
 -- ftd.column:
-padding-vertical.px: 24
 width.fixed.px: 390
 spacing.fixed.px: 24
 
 -- ftd.row:
+padding-vertical.px: 8
+padding-right.px: 8
 width: fill-container
 spacing: space-between
 border-bottom-width.px: 1
 border-color: $inherited.colors.border
+align-content: center
 
 -- ftd.text: EXAMPLES
 role: $inherited.types.label-large
 color: $inherited.colors. text-strong
 
-/-- ftd.image:
-src: $assets.files.assets.arrow.svg
+-- ftd.image:
+src: $assets.files.examples.assets.arrow.svg
 width: auto
 
 -- end: ftd.row
@@ -161,9 +163,16 @@ children: $code-block.code-wrapper
 ftd.image-src responsive:
 ftd.ui list output-wrapper:
 
+-- ftd.column:
+width: fill-container
+
 -- ftd.row:
 width: fill-container
 padding-horizontal.px: 10
+align-content: center
+spacing.fixed.px: 24
+border-bottom-width.px: 1
+border-color: $inherited.colors.border
 
 -- ds.code:
 lang: ftd
@@ -174,12 +183,14 @@ fastn.com/featured
 src: $output-block.responsive
 width: auto
 
+-- end: ftd.row
+
 -- ftd.column:
 children: $output-block.output-wrapper
 
 -- end: ftd.column
 
--- end: ftd.row
+-- end: ftd.column
 
 -- end: output-block
 
