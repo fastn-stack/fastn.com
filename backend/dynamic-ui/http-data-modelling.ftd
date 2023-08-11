@@ -115,7 +115,8 @@ Now that we have download the data from the `url` and stored it in `countries`, 
 
 -- ds.markdown: 
 
-Create a header property `country` of type **country-data** as caption
+This component will have a property `country`. We will mark it as `caption` to make easy for users of this
+component. 
 
 -- ds.code:
 
