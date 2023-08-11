@@ -398,11 +398,10 @@ favicon: /-/fastn.com/images/favicon.svg
 
 ## Learn: /backend/learn/
   document: /backend/dynamic-ui/index.ftd
-  ;; skip: true
 
 - Creating Dynamic UI: /country-details/
   document: /backend/dynamic-ui/index.ftd
-  - Basic of `http`, `data modeling`: /country-details/basics/
+  - Basic of `http`, `data modelling`: /country-details/basics/
     document: /backend/dynamic-ui/http-data-modelling.ftd
 
 # Create Website: /create-website/

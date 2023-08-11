@@ -1,9 +1,9 @@
 -- import: fifthtry.github.io/admonitions as cbox
 
--- ds.page: Basics of `http` processor and `data modeling`
+-- ds.page: Basics of `http` processor and `data modelling`
 
 In this part, we will delve into essential concepts like the `http` processor
-and `data modeling` through a concise yet illuminating example.
+and `data modelling` through a concise yet illuminating example.
 
 To facilitate your learning journey, we will take a pratical scenario involving 
 an array of records. Each record has two key attributes: the **country-name** 
@@ -22,7 +22,6 @@ The first step is to create a `fastn package`.
 
 -- cbox.info: What is `fastn` package?
 
-
 `fastn` package is a folder that requires atleast two files
 
 - FASTN.ftd
@@ -40,7 +39,7 @@ The syntax of using `http` processor is as follows:
 \$processor$: pr.http
 
 
--- ds.h2: Data modeling: `record`
+-- ds.h2: Data modelling: `record`
 
 For this example, we are going to use `fastn`'s native type called `record`.
 `Record` is a user defined type that can be used to hold the country data.
@@ -170,7 +169,7 @@ width.fixed.percent: 20
 -- ds.markdown:
 
 So you have successfully fetched and displayed the values of JSON data from the
-external website using the `http` processor and one of the data modeling type, 
+external website using the `http` processor and one of the data modelling type, 
 `record`.
 
 -- ds.h3: Improved UI
