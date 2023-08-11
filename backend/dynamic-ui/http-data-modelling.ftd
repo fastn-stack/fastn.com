@@ -2,7 +2,7 @@
 
 -- ds.page: Basics of `http` processor and `data modelling`
 
-In this part, we will delve into essential concepts like the `http` processor
+In this part, we will delve into concepts like the `http` processor
 and `data modelling` using a simple example.
 
 To facilitate your learning journey, we will take a pratical scenario involving 
