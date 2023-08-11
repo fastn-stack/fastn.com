@@ -46,7 +46,7 @@ For this example, we will use `record` feature of `fastn`'s.
 
 Here we are creating a new record called `country-data`.
 
--- ds.code: Declaring a country record
+-- ds.code: Declaring the `country-record`
 
 \-- record country-data:
 string name:
