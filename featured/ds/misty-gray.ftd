@@ -40,7 +40,7 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 -- ds.distributors: Misty Gray
 owners: $owner-fastn
 license-url: https://github.com/fastn-community/misty-gray/blob/main/LICENSE
-license: Creative Commons
+license: CC BY
 published-date: 20-June-2023
 
 -- end: ds.page.abstract-bar
@@ -64,7 +64,7 @@ github-url: https://github.com/fastn-community/misty-gray
 cta-2-url: https://fastn-community.github.io/misty-gray/
 cta-2-text: User Manual
 cta-3-url: https://github.com/fastn-community/misty-gray-template/generate
-cta-3-text: Use this templates
+cta-3-text: Use this template
 
 -- end: ds.page
 
@@ -93,7 +93,7 @@ role: Developer
 
 -- ft-ui.template list doc-sites:
 
--- ft-ui.template: Doc-site
+-- ft-ui.template: Simple Site
 template-url: featured/ds/doc-site/
 screenshot: $fastn-assets.files.images.featured.doc-site.jpg
 

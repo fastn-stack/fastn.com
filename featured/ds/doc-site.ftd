@@ -41,7 +41,7 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 -- ds.distributors: Simple Site
 owners: $owner-fastn
 license-url: https://github.com/fastn-community/doc-site/blob/main/LICENSE
-license: Creative Commons
+license: CC BY
 published-date: 24-May-2023
 
 -- end: ds.page.abstract-bar
@@ -62,7 +62,7 @@ cta-url: https://gsalunke.github.io/doc-site-demo/
 cta-text: Demo
 github-url: https://github.com/fastn-community/doc-site
 cta-3-url: https://github.com/fastn-stack/fastn-template/generate
-cta-3-text: Use this templates
+cta-3-text: Use this template
 cta-2-url: https://fastn-community.github.io/doc-site/
 cta-2-text: User Manual
 
