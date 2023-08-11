@@ -44,7 +44,7 @@ The syntax of using `http` processor is as follows:
 For this example, we are going to use `fastn`'s native type called `record`.
 `Record` is a user defined type that can be used to hold the country data.
 
-The syntax of record is as follows:
+Here we are creating a new record called `country-data`.
 
 -- ds.code: Declaring a country record
 
