@@ -32,11 +32,14 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: ds.page.footer
 
--- ds.contributor: Ganesh Salunke
-avatar: $fastn-assets.files.featured.contributors.developers.ganesh-salunke.ganeshs.jpg
-profile: Developer
-owners: $owner-ganesh
-connect: $social-links
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- profile: Ganesh Salunke
+
+-- end: ftd.column
+
 
 -- ft-ui.grid-view: Documentation Sites
 templates: $doc-sites
@@ -57,9 +60,40 @@ show-large: true
 
 
 
+-- component profile:
+caption title: 
+optional string link:
+
+-- ftd.column:
+
+-- ftd.column:
+align-content: center
+link: $profile.link
+
+-- ds.contributor: $profile.title
+avatar: $fastn-assets.files.featured.contributors.developers.ganesh-salunke.ganeshs.jpg
+profile: Developer
+owners: $owner-ganesh
+connect: $social-links
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: profile
+
+
+
+
+
+
+
+
+
+
 -- ft-ui.template list doc-sites:
 
--- ft-ui.template: Doc-site
+-- ft-ui.template: Simple Site
 template-url: featured/ds/doc-site/
 screenshot: $fastn-assets.files.images.featured.doc-site.jpg
 
