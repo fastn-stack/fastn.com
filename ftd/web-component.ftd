@@ -51,7 +51,7 @@ js: web-component.js
 
 -- ds.markdown:
 
-In above code we have create a web component `hello-world` in
+In above code we have created a web component `hello-world` in
 `web-component.js`. Then, we've included the web component in the `fastn` using
 the `web-component` , and used it in the `fastn` component tree using the
 hello-world element. used it in `index.ftd`.
