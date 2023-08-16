@@ -77,5 +77,9 @@ more-link: /featured/resumes/
 template-url: featured/resumes/caffiene/
 screenshot: $fastn-assets.files.images.featured.resumes.caffiene.png
 
+-- ft-ui.template: Resume 10
+template-url: featured/resumes/resume-10/
+screenshot: $fastn-assets.files.images.featured.resumes.resume-10.png
+
 -- end: resumes
 

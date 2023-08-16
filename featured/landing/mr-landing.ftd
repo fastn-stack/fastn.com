@@ -60,11 +60,9 @@ show-large: true
 image: $fastn-assets.files.images.featured.landing.midnight-rush-landing.jpg
 cta-url: https://fastn-community.github.io/midnight-rush/landing/
 cta-text: Demo
-github-url: https://github.com/fastn-community/midnight-rush
+github-url: https://github.com/fastn-community/midnight-rush-template/
 cta-2-url: https://fastn-community.github.io/midnight-rush/
 cta-2-text: User Manual
-cta-3-text: Use this template
-cta-3-url: https://github.com/fastn-community/midnight-rush-template/generate
 
 -- end: ds.page
 
@@ -75,7 +73,7 @@ cta-3-url: https://github.com/fastn-community/midnight-rush-template/generate
 
 -- ft-ui.template: Midnight Storm
 template-url: featured/landing/midnight-storm-landing/
-screenshot: $fastn-assets.files.images.featured.landing.midnight-storm-landing.jpg
+screenshot: $fastn-assets.files.images.featured.landing.ms-landing-demo.png
 
 -- ft-ui.template: Misty Gray
 template-url: featured/landing/misty-gray-landing/

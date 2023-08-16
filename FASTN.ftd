@@ -83,18 +83,21 @@ favicon: /-/fastn.com/images/favicon.svg
   skip: true
 - Champion Program: /champion-program/
   document: /student-programs/champion.ftd
-  skip: true
-  - Champions: /student-programs/champions/all-champions/
+  - Champions: /champions/
+    document: /student-programs/champions/all-champions.ftd
+    - Ajit Garg: /champions/ajit-garg/
+    document: /student-programs/champions/ajit-garg.ftd
     skip: true
-    - Ajit Garg: /student-programs/champions/ajit-garg/
-      skip: true
+    - Ayush Soni: /champions/ayush-soni/
+    document: /student-programs/champions/ayush-soni.ftd
+    skip: true
 - Ambassador Program: /ambassador-program/
   document: /student-programs/ambassador.ftd
-  skip: true
-  - Ambassadors: /student-programs/ambassadors/all-ambassadors/
+  - Ambassadors: /ambassadors/
+  document: /student-programs/ambassadors/all-ambassadors.ftd
+    - Ayush Soni: /ambassadors/ayush-soni/
+    document: /student-programs/ambassadors/ayush-soni.ftd
     skip: true
-    - Ayush Soni: /student-programs/ambassadors/ayush-soni/
-      skip: true
   
 ## Features: /features/
 
@@ -434,16 +437,18 @@ favicon: /-/fastn.com/images/favicon.svg
   document: backend/redirects.ftd
 
 ## Featured Templates: /featured/
-- Designer: /featured/designers/
+- Designers: /featured/contributors/designers/
 skip: true
-document: /featured/contributors/designers/muskan-verma/index.ftd
   - Muskan Verma: /featured/contributors/designers/muskan-verma/
   skip: true
   - Jay Kumar: /featured/contributors/designers/jay-kumar/
   skip: true
-- Developer: /featured/developers/
+  - Govindaraman S: /featured/contributors/designers/govindaraman-s/
+  skip: true
+  - Yashveer Mehra: /featured/contributors/designers/yashveer-mehra/
+  skip: true
+- Developers: /featured/contributors/developers/
 skip: true
-document: /featured/contributors/developers/ganesh-salunke/index.ftd
   - Arpita Jaiswal: /featured/contributors/developers/arpita-jaiswal/
   skip: true
   - Ganesh Salunke: /featured/contributors/developers/ganesh-salunke/
@@ -455,6 +460,8 @@ document: /featured/contributors/developers/ganesh-salunke/index.ftd
   - Saurabh Lohiya: /featured/contributors/developers/saurabh-lohiya/
   skip: true
   - Saurabh Garg: /featured/contributors/developers/saurabh-garg/
+  skip: true
+  - Shaheen Senpai: /featured/contributors/developers/shaheen-senpai/
   skip: true
 - Website Categories: /featured/website-categories/
   - Documentation Sites: /featured/doc-sites/
@@ -496,9 +503,7 @@ document: /featured/contributors/developers/ganesh-salunke/index.ftd
     - Studious Couscous: /featured/landing/studious-couscous/
     skip: true
   - Blogs: /featured/blog-templates/
-    - Doc Site: /featured/blogs/doc-site/
-    skip: true  
-    - Midnight Rush: /featured/blogs/mr-blog/
+    - Simple Site: /featured/blogs/doc-site/
     skip: true  
     - Midnight Rush: /featured/blogs/mr-blog/
     skip: true  
@@ -540,6 +545,8 @@ document: /featured/contributors/developers/ganesh-salunke/index.ftd
     skip: true  
     - Resume 1: /featured/resumes/resume-1/
     skip: true  
+    - Resume 10: /featured/resumes/resume-10/
+    skip: true  
   - Workshop Pages: /featured/workshops/
     - Workshop 1: /featured/workshops/workshop-1/
     skip: true
@@ -558,22 +565,23 @@ document: /featured/contributors/developers/ganesh-salunke/index.ftd
   - Hero Components: /featured/sections/heros/
     - Hero with two CTA: /featured/sections/heros/hero-with-2-cta/
     skip: true
-    - Hero 1: /featured/sections/heros/hero-1/
-    skip: true  
-    - Hero 2: /featured/sections/heros/hero-2/
-    skip: true  
-    - Hero 3: /featured/sections/heros/hero-3/
-    skip: true  
-    - Hero 5: /featured/sections/heros/hero-5/
-    skip: true  
+      - Hero with two CTA - Design 1: /featured/sections/heros/hero-1/
+      skip: true  
+      - Hero with two CTA - Design 2: /featured/sections/heros/hero-2/
+      skip: true  
+      - Hero with two CTA - Design 3: /featured/sections/heros/hero-3/
+      skip: true  
+      - Hero with two CTA - Design 4: /featured/sections/heros/hero-5/
+      skip: true
+      - Hero with two CTA - Design 5: /featured/sections/heros/hero-with-2-cta/hero-with-2-cta-5/  
     - Hero with Search: /featured/sections/heros/hero-with-search/
     skip: true
-    - Hero 4: /featured/sections/heros/hero-4/
-    skip: true  
+      - Hero with search - Design 1: /featured/sections/heros/hero-4/
+      skip: true  
     - Hero with social icons: /featured/sections/heros/hero-with-social/
     skip: true
-    - Hero 6: /featured/sections/heros/hero-6/
-    skip: true  
+      - Hero with social - Design 1: /featured/sections/heros/hero-6/
+      skip: true  
   - Key Value Tables: /featured/sections/kvt/
     - Key Value Table 1: /featured/sections/kvt/kvt-1/
       skip: true
@@ -817,3 +825,9 @@ document: /featured/contributors/developers/ganesh-salunke/index.ftd
 /rfcs/rfc-process/: /rfc/rfc-process/
 /rfcs/fastn-update/: /rfc/fastn-update/
 /rfcs/variable-interpolation/: /rfc/variable-interpolation/
+/student-programs/champion-program/: /champion-program/
+/student-programs/ambassador-program/: /ambassador-program/
+/student-programs/champion-program/champions/ajit-garg/: /champions/ajit-garg/
+/student-programs/champion-program/champions/ayush-soni/: /champions/ayush-soni/
+/student-programs/ambassador-program/ambassadors/ayush-soni/: /ambassadors/ayush-soni/
+
