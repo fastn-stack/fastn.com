@@ -77,7 +77,7 @@ we will look later in this document.
 The document that is being imported may have `foreign variables` and `foreign
 functions`, it is the job of the `fastn host` to manage these, and inform
 `fastn` that the document contains these, so `fastn` can type check things, and
-yeild control back to host when the foreign variables or functions are
+yield control back to host when the foreign variables or functions are
 evaluated. The list of foreign variables and functions are also passed to
 `Interpreter::continue_after_import()`.
 
