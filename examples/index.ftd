@@ -309,7 +309,7 @@ width.fixed.px: 12
 
 -- ftd.column:
 if: { render-files-children.open && !ftd.is_empty(render-files-children.children) }
-border-left-width.px:1
+border-left-width.px: 1
 margin-left.px: 21
 padding-left.px: 12
 border-color: $inherited.colors.border-strong
