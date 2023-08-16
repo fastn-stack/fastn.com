@@ -41,6 +41,9 @@ favicon: /-/fastn.com/images/favicon.svg
 
 -- fastn.sitemap:
 
+# Examples: /examples/
+  skip: true
+  
 # Overview: /home/
 
 ## Overview: /home/
@@ -84,7 +87,7 @@ favicon: /-/fastn.com/images/favicon.svg
 - Champion Program: /champions-program/
   document: /student-programs/champion.ftd
   skip: true
-  
+
 ## Features: /features/
 
 - Overview: /features/
