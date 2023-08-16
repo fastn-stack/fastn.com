@@ -12,7 +12,7 @@ editor to write your code. We recommend using
 [SublimeText](https://www.sublimetext.com/3), a lightweight editor.
 
 Once you've finished installing these applications, you need to create a new
-[`fastn` package](create-fastn-package/) and start using [`fastn`](ftd/). Read
+[`fastn` package](create-fastn-package/) and start using [`fastn` language](ftd/). Read
 [Create `fastn` package](create-fastn-package/) page to learn how to create a
 `fastn` package.
 
