@@ -4,11 +4,7 @@
 -- import: fastn-community.github.io/dark-flame-cs
 -- import: fifthtry.github.io/fastn-io-typography as typo
 -- import: fastn.com/featured as ft-ui
--- import: fastn.com/assets
 
-
--- boolean show-grid: true
--- boolean show-list: false
 
 
 
@@ -24,7 +20,8 @@ types: $typo.types
 github-icon: true
 github-url: https://github.com/fastn-stack/fastn
 full-width: true
-show-layout-bar: true
+distribution-bar: true
+full-width-bar: true
 
 -- ds.page.footer:
 
@@ -38,29 +35,34 @@ copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
 
 -- end: ds.page.footer
 
--- ds.page.layout-bar:
+-- ds.page.abstract-bar:
 
--- ds.layout: SPA / Landing Pages - Midnight Storm 
-cta-text: Use this template
-cta-url: https://github.com/fastn-community/midnight-storm-template/generate
-previous-url: /featured/landing-pages/
-github-url: https://github.com/fastn-community/midnight-storm
-cta-url-1: https://fastn-community.github.io/midnight-storm/
-cta-text-1: User Manual
+-- ds.distributors: Midnight Storm
+owners: $owner-fastn
+license-url: https://github.com/fastn-community/midnight-storm/blob/main/LICENSE
+license: Creative Commons
+published-date: 21-May-2023
+
+-- end: ds.page.abstract-bar
 
 
--- end: ds.page.layout-bar
-
--- ds.preview-card:
-image: $fastn-assets.files.images.featured.landing.midnight-storm-landing.jpg
-cta-url: https://fastn-community.github.io/midnight-storm/landing/
-cta-text: Demo
+-- ds.page.full-width-wrap:
 
 -- ft-ui.grid-view: Featured SPA / Landing Pages
-if: { show-grid }
 templates: $landing
 more-link-text: View more
 more-link: /featured/landing-pages/
+show-large: true
+
+-- end: ds.page.full-width-wrap
+
+-- ds.preview-card:
+image: $fastn-assets.files.images.featured.landing.ms-landing-demo.png
+cta-url: https://gsalunke.github.io/ms-landing-demo/
+cta-text: Demo
+github-url: https://github.com/fastn-community/ms-landing-template/
+cta-2-url: https://fastn-community.github.io/midnight-storm/components/
+cta-2-text: User Manual
 
 -- end: ds.page
 
@@ -86,3 +88,16 @@ wip: true
 
 -- end: landing
 
+-- common.owner list owner-fastn:
+
+-- common.owner: Muskan Verma
+profile: featured/contributors/designers/muskan-verma/
+avatar: $fastn-assets.files.featured.contributors.designers.muskan-verma.muskan-verma.jpg
+role: Designer
+
+-- common.owner: Meenu Kumari
+profile: featured/contributors/developers/meenu-kumari/
+avatar: $fastn-assets.files.featured.contributors.developers.meenu-kumari.meenu.jpg
+role: Developer
+
+-- end: owner-fastn
