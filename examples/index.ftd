@@ -73,7 +73,7 @@ $on-click$: $ftd.toggle($a = $exercise.sidebar)
 -- end: ftd.row
 
 -- ftd.column:
-if:{ !exercise.sidebar }
+if: { !exercise.sidebar }
 padding-vertical.px: 9
 padding-horizontal.px: 16
 width: fill-container
@@ -119,12 +119,8 @@ width.fixed.percent if { exercise.sidebar && !exercise.responsive }: 48
 width.fixed.percent if { exercise.sidebar && exercise.responsive }: 96
 spacing.fixed.px: 16
 
-
--- ftd.column:
-width: fill-container
-
 -- ftd.row:
-if:{ ! exercise.responsive } 
+if: { ! exercise.responsive } 
 width: fill-container
 padding-left.px: 10
 padding-right.px: 24
@@ -209,8 +205,6 @@ width: fill-container
 
 -- end: ftd.column
 
--- end: ftd.column
-
 -- end: ftd.row
 
 -- end: exercise
@@ -288,13 +282,9 @@ border-radius.px: 2
 
 -- end: ftd.row
 
--- ftd.row:
-if: { ftd.is_empty(render-files-children.children) }
-
 -- ftd.image:
 src: $assets.files.examples.assets.file.svg
-
--- end: ftd.row
+if: { ftd.is_empty(render-files-children.children) }
 
 -- ftd.text: $render-files-children.title
 role: $inherited.types.copy-small
@@ -380,7 +370,7 @@ $on-click$: $ftd.toggle($a = $file-1)
 $on-click$: $ftd.toggle($a = $file-2)
 
 -- ftd.column:
-if : { !ftd.is_empty(render-files-children-toc.children) }
+if: { !ftd.is_empty(render-files-children-toc.children) }
 align-content: right
 width: fill-container
 
@@ -440,18 +430,21 @@ color: $inherited.colors.text
 -- ds.code:
 lang: ftd
 
-1. from discord.ext import commands
-2. bot = commands.Bot(">")
-3. @bot.command("ping")
-4. async def ping(ctx: commands.Context):
-5. await ctx.
-6. bot.run("TOKEN")
-7. from discord.ext import commands
-8. bot = commands.Bot(">")
-9. @bot.command("ping")
-10. async def ping(ctx: commands.Context):
-11. await ctx.
-12. bot.run("TOKEN")
+1. -- ftd.text: Hello World
+2. role: $inherited.types.copy-regular
+3. color: $inherited.colors.text-strong
+4. width: fill-container
+5.
+6. -- ftd.column:
+7. width: fill-container
+8.
+9. -- ftd.text: Hello World
+8. role: $inherited.types.copy-regular
+9. color: $inherited.colors.text-strong
+10. width: fill-container
+11.
+12. end: ftd.column
+
 
 -- ftd.column:
 children: $code-block.code-wrapper
