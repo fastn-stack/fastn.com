@@ -46,7 +46,8 @@ favicon: /-/fastn.com/images/favicon.svg
 ## Overview: /home/
 
 - `fastn` Overview: /home/
-- The `fastn` Language: /ftd/
+- The `fastn` Language: /lang/
+  document: /ftd/index.ftd
 - Why?:
   - `fastn` is Easy To Learn: /easy/
     document: why/easy.ftd
@@ -790,6 +791,7 @@ skip: true
 
 -- fastn.redirects:
 
+/ftd/: /lang/
 /ftd/kernel/: /kernel/
 /ftd/list/: /list/
 /discord/: https://discord.gg/eNXVBMq4xt
@@ -830,4 +832,5 @@ skip: true
 /student-programs/champion-program/champions/ajit-garg/: /champions/ajit-garg/
 /student-programs/champion-program/champions/ayush-soni/: /champions/ayush-soni/
 /student-programs/ambassador-program/ambassadors/ayush-soni/: /ambassadors/ayush-soni/
+
 
