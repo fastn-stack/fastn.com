@@ -168,7 +168,7 @@ For each field in `person` record, we have a corresponding field in our `Person`
 Note that we used `age` as i32, but it could have been any type that can be
 deserialised from 
 [JSON Number](https://docs.serde.rs/serde_json/struct.Number.html) since 
-`fastn` `integer` is converted to `JSON Number`.
+`fastn` integer is converted to `JSON Number`.
 
 ;; Todo:
 /-- ds.h2: Getting Data From `.ftd` File
