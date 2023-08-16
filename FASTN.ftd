@@ -282,7 +282,7 @@ favicon: /-/fastn.com/images/favicon.svg
 
 ## Book 🚧: /book/
 
-- The Book Of `fastn` and `ftd`: /book/
+- The Book Of `fastn`: /book/
 - `i` Foreword 🚧: /book/foreword/
   document: book/1-foreword.ftd
 - `ii` Preface: /book/preface/
