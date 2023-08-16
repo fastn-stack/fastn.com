@@ -306,7 +306,7 @@ has a level 1 heading of "Hello World".
 
 -- ds.h2: Data Modelling
 
-`fastn` is also a good first class data language. You can define and use 
+`fastn` language is also a good first class data language. You can define and use 
 records:
 
 -- ds.code: Data Modelling in `fastn`
