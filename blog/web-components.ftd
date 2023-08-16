@@ -110,7 +110,7 @@ have been rendered, and have web-component respond to those changes.
 
 All this are possible, the way to think about it is that data that you want to
 share between the two worlds is "managed" / "owned" by fastn, and from your JS
-you use `fastn` APIs to mutate the ftd owned data.
+you use `fastn` APIs to mutate the fastn owned data.
 
 Let's take a look at the web component of this demo:
 
