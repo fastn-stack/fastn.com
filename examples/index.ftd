@@ -46,7 +46,7 @@ min-height.fixed.vh: 90
 
 -- ftd.column:
 width.fixed.percent: 22
-width.fixed.percent if {exercise.sidebar}: 4
+width.fixed.percent if { exercise.sidebar }: 4
 color: $inherited.colors.text
 height.fixed.vh: 90
 max-height.fixed.vh: 90
@@ -67,7 +67,7 @@ role: $inherited.types.label-large
 
 -- ftd.image:
 src: $assets.files.examples.assets.collapse-sidebar.svg
-src if { exercise.sidebar}:$assets.files.examples.assets.open-sidebar.svg
+src if { exercise.sidebar }:$assets.files.examples.assets.open-sidebar.svg
 $on-click$: $ftd.toggle($a = $exercise.sidebar)
 
 -- end: ftd.row
@@ -90,7 +90,7 @@ children: $obj.children
 
 -- ftd.column:
 width.fixed.percent: 0
-width.fixed.percent if { !exercise.responsive && !exercise.sidebar}: 39
+width.fixed.percent if { !exercise.responsive && !exercise.sidebar }: 39
 width.fixed.percent if { exercise.sidebar && !exercise.responsive }: 48
 spacing.fixed.px: 24
 border-right-width.px: 1
@@ -102,11 +102,11 @@ overflow: hidden
 max-height.fixed.vh: 90
 
 -- code-block:
-if:{ file-1}
+if:{ file-1 }
 info: File-1.ftd
 
 -- code-block:
-if:{ !file-1 && file-2}
+if:{ !file-1 && file-2 }
 info: File-2.ftd
 
 
@@ -114,9 +114,9 @@ info: File-2.ftd
 
 -- ftd.column:
 width.fixed.percent: 39
-width.fixed.percent if { exercise.responsive && !exercise.sidebar}: 78
-width.fixed.percent if { exercise.sidebar && !exercise.responsive}: 48
-width.fixed.percent if { exercise.sidebar && exercise.responsive}: 96
+width.fixed.percent if { exercise.responsive && !exercise.sidebar }: 78
+width.fixed.percent if { exercise.sidebar && !exercise.responsive }: 48
+width.fixed.percent if { exercise.sidebar && exercise.responsive }: 96
 spacing.fixed.px: 16
 
 
@@ -174,13 +174,13 @@ width: fill-container
 
 -- ftd.image:
 src: $assets.files.examples.assets.desktop-active.svg
-src if { exercise.mobile} : $assets.files.examples.assets.desktop-inactive.svg
+src if { exercise.mobile } : $assets.files.examples.assets.desktop-inactive.svg
 $on-click$: $ftd.set-bool($a = $exercise.desktop, v = true)
 $on-click$: $ftd.set-bool($a = $exercise.mobile, v = false)
 
 -- ftd.image:
 src: $assets.files.examples.assets.mobile-active.svg
-src if { exercise.desktop} : $assets.files.examples.assets.mobile-inactive.svg
+src if { exercise.desktop } : $assets.files.examples.assets.mobile-inactive.svg
 $on-click$: $ftd.set-bool($a = $exercise.mobile, v = true)
 $on-click$: $ftd.set-bool($a = $exercise.desktop, v = false)
 
@@ -196,7 +196,7 @@ align-self: center
 
 -- ftd.column:
 width.fixed.percent: 100
-width.fixed.px if {exercise.mobile} : 352
+width.fixed.px if { exercise.mobile } : 352
 align-self: center
 
 -- ftd.iframe:
@@ -275,7 +275,7 @@ spacing.fixed.px: 8
 
 -- ftd.row:
 width: fill-container
-background.solid if {render-files-children.open}: $inherited.colors.background.step-2
+background.solid if {render-files-children.open }: $inherited.colors.background.step-2
 padding.px: 8
 border-radius.px:2
 align-content: center
@@ -359,7 +359,7 @@ width: fill-container
 spacing.fixed.px: 8
 
 -- ftd.row:
-background.solid if {render-files-children-toc.open || render-files-children-toc.active }: $inherited.colors.background.step-2
+background.solid if { render-files-children-toc.open || render-files-children-toc.active }: $inherited.colors.background.step-2
 padding.px: 5
 border-radius.px:2
 align-content: center
@@ -367,7 +367,7 @@ width: fill-container
 
 -- ftd.image:
 src: $assets.files.examples.assets.file.svg
-src if { !ftd.is_empty(render-files-children-toc.children) }:$assets.files.examples.assets.folder.svg
+src if { !ftd.is_empty(render-files-children-toc.children) }: $assets.files.examples.assets.folder.svg
 width.fixed.px: 12
 
 -- ftd.text: $render-files-children-toc.title
