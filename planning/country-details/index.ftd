@@ -109,7 +109,7 @@ role: $inherited.types.copy-regular
 
 -- ds.h1: SCRIPT
 
-Script for all the videos
+Script for all the videos:
 
 -- ds.h2: Basics of http and Data modelling
 
@@ -156,7 +156,7 @@ name to it.
 
 -- ds.markdown: 
 
-In this example, we are going to fetch a JSON data hosted in this link:
+In this example, we are going to fetch a JSON data from this URL:
 
 ```
 https://famous-loincloth-ox.cyclic.app/
@@ -243,6 +243,8 @@ caption country-data country:  ;; <hl>
 
 Let's show the country name.
 
+-- ds.code:
+
 \-- component country-detail:
 caption country-data country:  
 
@@ -296,47 +298,52 @@ padding.px: 40
 align-content: center
 
 \-- ftd.row:
-width.fixed.percent: 30
+width.fixed.percent: 40
+role: $inherited.types.copy-regular
+border-bottom-width.px: 1
+background.solid: $inherited.colors.background.base
 
 \-- ftd.text: Country
-role: $inherited.types.copy-regular
 style: bold
-border-bottom-width.px: 1
+width.fixed.percent: 50
 border-style-horizontal: dashed
-background.solid: $inherited.colors.background.base
+padding-left.px: 10
+border-width.px: 1
 
 \-- ftd.text: Capital
-role: $inherited.types.copy-regular
 style: bold
-border-bottom-width.px: 1
+width.fixed.percent: 50
 border-style-horizontal: dashed
-background.solid: $inherited.colors.background.base
+padding-left.px: 10
+border-width.px: 1
+
+\-- end: ftd.row
 
 \-- end: ftd.column
 
 -- ds.code:
 
 \-- ftd.row:
-width.fixed.percent: 20
+width.fixed.percent: 40
+role: $inherited.types.copy-regular
 
 \-- ftd.text: $country-detail.country.name
-role: $inherited.types.copy-regular
-padding-left.px: 10
-width.fixed.percent: 40
+width.fixed.percent: 50
 border-width.px: 1
 border-style-horizontal: dashed
+padding-left.px: 10
 
 \-- ftd.text: $country-detail.country.capital
-role: $inherited.types.copy-regular
-padding-left.px: 10
-width.fixed.percent: 40
+width.fixed.percent: 50
 border-width.px: 1
 border-style-horizontal: dashed
+padding-left.px: 10
 
 \-- end: ftd.row
 
+-- ds.markdown:
 
-We have the data in the tabular form. There you go, we have polished the UI. 
+There you go, we have the data in the tabular form.
 
 
 -- ds.h2: Closing remarks
