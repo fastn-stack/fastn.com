@@ -79,8 +79,8 @@ The syntax of using `http` processor is as follows:
 
 -- ds.h2: Data modelling: `record`
 
-For this example, we will use `record` feature of `fastn`'s.
-`record` can be used to create a user defined data type. 
+For this example, we will use `record` feature of `fastn`'s. `record` can be
+used to create a user defined data type. 
 
 Here we are creating a new record called `country-data`.
 
@@ -105,7 +105,7 @@ Copy the import line and paste it at the top of the `index.ftd` document
 
 -- ds.h3: **Step 2:** Declare a `record` 
 
-Before a record can be used it must be declared
+Before a record can be used it must be declared.
 
 
 -- ds.code: Declaring `country-data` record
