@@ -121,6 +121,9 @@ src: $fastn-assets.files.images.backend.pr-http.png
 Hi Guys, welcome to the video. In this video I will help you understand how 
 using `fastn`, REST APIs can seemlessly connect the backend with the frontend.
 
+-- ds.image:
+src: $fastn-assets.files.images.backend.sketch-ppt.png
+
 `fastn` has its own `http processor` which we will use to get the data and use 
 the concepts of data modelling to store the data in form of records. Then we 
 will display the data in a tabular form.
