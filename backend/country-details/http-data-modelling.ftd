@@ -50,6 +50,9 @@ open-in-new-tab: true
 We will call this data through `http processor`, save the data as a `record` by
 using `for loop` and display it in a tabular form.
 
+-- ds.image:
+src: $fastn-assets.files.images.backend.sketch.svg
+
 By the end of this part, you will have gained insights into how using `fastn`,
 REST APIs can seemlessly connect the backend with the frontend.
 
@@ -117,7 +120,7 @@ string capital:
 
 -- ds.h3: **Step 3:** Create a list
 
-Since the JSON data has a list of countries and their respective captials, 
+Since the JSON data has a list of countries and their respective capitals, 
 therefore, we will create a list and use the `country-data` record as the type.
 
 -- ds.code: `countries` is a `list` of `country-data`
@@ -187,7 +190,7 @@ caption country-data country:
 
 Till now, we have just defined the component but to display the list of country
 names we need call the component. Therefore, after closing the component we 
-can call the component and use a `for` loop. 
+can call the component and use a `for` loop.
 
 
 -- ds.code:
