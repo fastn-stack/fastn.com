@@ -2,25 +2,56 @@
 
 -- ds.page: Basics of `http` processor and `data modelling`
 
-In this part, we will delve into concepts like the `http` processor
-and `data modelling` using a simple example.
+In this part, we will delve into concepts like `http` processor and `data
+modelling` using a simple example.
 
-To facilitate your learning journey, we will take a pratical scenario involving 
-an array of records. Each record has two key attributes: the **country-name** 
-and it's corresponding **capital**, in the form of JSON data.
+We have created an array of records for group of countries. Each record has two
+key attributes: **name** and **capital**, in the form of JSON data.
 
-We will create an array of records. Each record has two key attributes:
-the **country-name** and it's corresponding **capital**, in the form of JSON
-data.
+-- ds.markdown: The JSON data looks like this:
 
--- ftd.text: Click to see the JSON data
+-- ds.code:
+lang: json
+copy: false
+
+[
+  {
+    "name": "India",
+    "capital": "New Delhi"
+  },
+  {
+    "name": "Sri Lanka",
+    "capital": "Sri Jayawardenepura Kotte"
+  },
+  {
+    "name": "Nepal",
+    "capital": "Kathmandu"
+  },
+  {
+    "name": "Bangladesh",
+    "capital": "Dhaka"
+  },
+  {
+    "name": "Indonesia",
+    "capital": "Jakarta"
+  },
+  {
+    "name": "Maldives",
+    "capital": "Malé"
+  }
+]
+
+-- ftd.text: Click to see the JSON data in browser
 link: https://famous-loincloth-ox.cyclic.app/
 open-in-new-tab: true
 
 -- ds.markdown:
 
-By the end of this part, you will have gained insights into how REST APIs can 
-seemlessly connect the backend with the frontend.
+We will call this data through `http processor`, save the data as a `record` by
+using `for loop` and display it in a tabular form.
+
+By the end of this part, you will have gained insights into how using `fastn`,
+REST APIs can seemlessly connect the backend with the frontend.
 
 The first step is to create a `fastn package`.
 
@@ -106,38 +137,7 @@ $processor$: pr.http
 url: https://famous-loincloth-ox.cyclic.app/
 
 
--- ds.markdown: The JSON data looks like this:
 
--- ds.code:
-lang: json
-copy: false
-
-[
-  {
-    "name": "India",
-    "capital": "New Delhi"
-  },
-  {
-    "name": "Sri Lanka",
-    "capital": "Colombo"
-  },
-  {
-    "name": "Nepal",
-    "capital": "Kathmandu"
-  },
-  {
-    "name": "Bangladesh",
-    "capital": "Dhaka"
-  },
-  {
-    "name": "Indonesia",
-    "capital": "Jakarta"
-  },
-  {
-    "name": "Maldives",
-    "capital": "Mali"
-  }
-]
 
 
 -- ds.h3: **Step 4:** Data is ready, lets show it in the UI
