@@ -1,6 +1,6 @@
 -- import: fastn.com/ftd as ftd-index
 -- import: fastn-community.github.io/bling/chat
-
+-- import: fastn.com/utils
 
 -- ds.page: Tales from ACME's Developer - Case Study
 
@@ -69,7 +69,7 @@ width.fixed.percent: 95
 
 ;; -- ds.output:
 
-;; -- on-mouse-leave-event:
+-- utils.on-mouse-leave-event: Mouse over me to see after effect
 
 ;; -- end: ds.output
 
@@ -292,56 +292,4 @@ implement changes and cater to the ever-evolving needs of a startup.
 
 Stay tuned for more tales from ACME Inc. 
 
-
-
-
 -- end: ds.page
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- component on-mouse-leave-event:
-boolean $show: false
-
--- ftd.column:
-color: $inherited.colors.text
-
--- ds.image: Before
-src: $fastn-assets.files.images.blog.old-layout.png
-$on-mouse-enter$: $ftd.set-bool($a = $on-mouse-leave-event.show, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $on-mouse-leave-event.show, v = false)
-
--- ds.image: After
-src: $fastn-assets.files.images.blog.new-layout.png
-if: { on-mouse-leave-event.show }
-
--- end: ftd.column
-
--- end: on-mouse-leave-event
-
-
-
-
-
-
-
-
-
-

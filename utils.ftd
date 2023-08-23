@@ -813,3 +813,56 @@ role: $inherited.types.copy-small
 
 
 -- integer width: 1220
+
+
+
+
+
+
+
+
+
+
+-- component on-mouse-leave-event:
+optional caption title: 
+boolean $show: false
+
+-- ftd.column:
+color: $inherited.colors.text
+$on-mouse-enter$: $ftd.set-bool($a = $on-mouse-leave-event.show, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $on-mouse-leave-event.show, v = false)
+
+
+-- ftd.column:
+if: { !on-mouse-leave-event.show }
+width: fill-container
+
+-- ftd.text: $on-mouse-leave-event.title
+if: { on-mouse-leave-event.title != NULL}
+role: $inherited.types.heading-small
+color: white
+if: { !on-mouse-leave-event.show }
+anchor: parent
+top.percent: 50
+align-self: center
+background.solid: rgba(0,0, 0, 0.63)
+padding-vertical.px: 8
+padding-horizontal.px: 16
+border-radius.px: 4
+
+-- ds.image: Before
+src: $fastn-assets.files.images.blog.old-layout.png
+
+-- end: ftd.column
+
+-- ftd.column:
+if: { on-mouse-leave-event.show }
+
+-- ds.image: After
+src: $fastn-assets.files.images.blog.new-layout.png
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: on-mouse-leave-event
