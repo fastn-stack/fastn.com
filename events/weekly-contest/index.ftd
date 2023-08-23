@@ -1,5 +1,9 @@
--- ds.page: `fastn` Weekly Contests
+-- import: fastn-community.github.io/bling/collapse
+-- import: fifthtry.github.io/button
+-- import: fastn-community.github.io/bling/note
 
+
+-- ds.page: `fastn` Weekly Contest
 
 At `fastn`, we're always keen to know how our community is growing. We want to 
 know how comfortable our users are with our platform, and how `fastn` is helping 
@@ -11,7 +15,58 @@ track, and how you fare compared to your brethren in the community.
 
 Every week, we will throw a simple challenge, that you have to develop for over 
 the course of a week. The top entries from across the participants will be 
-short-listed for judging, and subsequent awards.
+short-listed for judging, and subsequent awards.  
+
+-- ds.h1: Contest Prizes
+
+1 winner stands to win 
+
+
+
+-- ds.h1: How to participate?
+
+Simply head over to the contest for this week. You will find the details for 
+the challenge for this week. [Add Weekly Contest Details link here]
+
+You will find all the relevant resources you need to replicate the tasks at hand.
+All you need to do is to either come up with a newer design or partner with a 
+designer to create and develop your own entry for the contest.
+
+
+
+-- ds.h1: Contest Judging Criteria?
+
+Each contest will have an external judge reviewing the work of all participants.
+
+The final judgments will be depend on their own individual evaluation. However, 
+to broadly put it, each submission would have to hit certain benchmarks along 
+the following criteria:
+
+- **Design Concept**: How well designed & structured is your submission.
+
+- **Code Correctness**: How well all `fastn` basics and best-practises been 
+applied.
+
+- **Uniqueness**: How does your submission stand out compared to others.
+
+- **Complexity Involved**: How advanced is your use of fastn platform in the 
+implementation.
+
+
+The decisions made by the judges will be final and standing. 
+
+
+
+-- ds.h1: How do I submit my entries?
+
+Once completed, simply share your submission under the weekly contest submission 
+channel, with the relevant files as requested under the campaign. 
+
+The team will compile the submissions and then share it with the judges for the
+final evaluation.
+
+
+- **
 
 
 
