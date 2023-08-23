@@ -839,6 +839,13 @@ skip: true
 - Rive Video: /planning/rive/
 - Developer Course: /planning/developer-course/
 
+# Contests: /events/weekly-contest/
+- Overview: /events/weekly-contest/
+- Week 1 Quote: /events/weekly-contest/week-1-quote/
+- Week 2 Code: /events/weekly-contest/week-2-code/
+- Week 3 Hero: /events/weekly-contest/week-3-hero/
+- Week 4 CTA Card: /events/weekly-contest/week-4-cta/
+
 
 -- fastn.redirects:
 
