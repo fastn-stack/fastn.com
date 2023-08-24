@@ -5,69 +5,78 @@
 
 -- ds.page: `fastn` Weekly Contest
 
-At `fastn`, we're always keen to know how our community is growing. We want to 
-know how comfortable our users are with our platform, and how `fastn` is helping 
-in your journey as developers and creators.
+At `fastn`, we’re always keen to witness the growth of our community. We're 
+eager to understand the level of ease our users experience with our platform 
+and how `fastn` contributes to your journey as developers and creators.
 
-To keep this journey of learning, exciting and fast-paced, we are launching 
-`fastn' Weekly Contests. A quick check into how far you are on the learning 
-track, and how you fare compared to your brethren in the community. 
+To infuse this learning journey with excitement and momentum, we're introducing 
+the `fastn Weekly Contests`. It's a rapid assessment of your progress on the 
+learning curve and a friendly competition to see how your skills measure up 
+within the community.
 
-Every week, we will throw a simple challenge, that you have to develop for over 
-the course of a week. The top entries from across the participants will be 
-short-listed for judging, and subsequent awards.  
+-- ds.h1: What's in Store
+
+Every week, we present a simple challenge that you can conquer within a week. 
+It's a chance to put your skills to the test and benchmark your achievements 
+within the community.
+
+The most impressive entries will undergo a thorough evaluation by our experts 
+and community voting, leading to recognition and rewards.
+
+
 
 -- ds.h1: Contest Prizes
 
-1 winner stands to win 
+Every week, we'll crown two winners:
+
+- **Judge's Choice**: Selected by our external expert judge.
+
+- **Community's Favorite**: Voted by your peers in the community.
+
+-- ds.h1: Participation is effortless
+
+- Visit the contest page for the current week.
+
+- Access all necessary resources for the challenge.
+
+- Engage your imagination to craft a unique design or collaborate with a 
+designer to bring your vision to life.
 
 
 
--- ds.h1: How to participate?
+-- ds.h1: How We Judge
 
-Simply head over to the contest for this week. You will find the details for 
-the challenge for this week. [Add Weekly Contest Details link here]
+Each contest will be reviewed by an external judge. The evaluation process 
+is holistic, taking into account:
 
-You will find all the relevant resources you need to replicate the tasks at hand.
-All you need to do is to either come up with a newer design or partner with a 
-designer to create and develop your own entry for the contest.
+- **Design Excellence**: How well designed and structured is your submission?
 
+- **Code Proficiency**: Are you adhering to fastn's fundamentals and best practices?
 
+- **Distinctiveness**: How does your entry stand out in comparison to others?
 
--- ds.h1: Contest Judging Criteria?
+- **Level of Complexity**: How advanced is your use of fastn platform in the 
+implementation?
 
-Each contest will have an external judge reviewing the work of all participants.
+Based on the above criteria, the Judge's Choice Winner will be announced.
 
-The final judgments will be depend on their own individual evaluation. However, 
-to broadly put it, each submission would have to hit certain benchmarks along 
-the following criteria:
-
-- **Design Concept**: How well designed & structured is your submission.
-
-- **Code Correctness**: How well all `fastn` basics and best-practises been 
-applied.
-
-- **Uniqueness**: How does your submission stand out compared to others.
-
-- **Complexity Involved**: How advanced is your use of fastn platform in the 
-implementation.
-
-
-The decisions made by the judges will be final and standing. 
+Additionally, all submissions will undergo voting by the fastn Community on 
+our Discord Channel. 
+The entry with the most votes will be evaluated by the internal fastn team. 
+Based on the final decision by the team, the Community's Favorite Winner 
+will be announced.
 
 
 
--- ds.h1: How do I submit my entries?
+-- ds.h1: Submission Process
 
-Once completed, simply share your submission under the weekly contest submission 
-channel, with the relevant files as requested under the campaign. 
+Once your creation is ready, share it in the designated weekly contest 
+submission channel, along with the requisite files outlined in the challenge 
+description. Your submissions will be collated and presented to the judges for 
+their evaluation.
 
-The team will compile the submissions and then share it with the judges for the
-final evaluation.
 
-
-- **
-
+Get ready to make your mark in the fastn Weekly Contest. 
 
 
 -- end: ds.page
