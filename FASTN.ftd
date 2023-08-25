@@ -742,8 +742,10 @@ skip: true
 
 
 # Blog: /blog/
-  document: blog/writer-journey.ftd
+  document: /events/weekly-contest/week-1-quote.ftd
 
+- Quote contest :/quote-contest/
+  document: /events/weekly-contest/week-1-quote.ftd
 - A Content Writer’s Journey with fastn: /blog/writer-journey/
   document: blog/writer-journey.ftd
 - fastn might prove you wrong: /blog/prove-you-wrong/
@@ -838,13 +840,6 @@ skip: true
 - Button Video: /planning/button/
 - Rive Video: /planning/rive/
 - Developer Course: /planning/developer-course/
-
-# Contests: /events/weekly-contest/
-- Overview: /events/weekly-contest/
-- Week 1 Quote: /events/weekly-contest/week-1-quote/
-- Week 2 Code: /events/weekly-contest/week-2-code/
-- Week 3 Hero: /events/weekly-contest/week-3-hero/
-- Week 4 CTA Card: /events/weekly-contest/week-4-cta/
 
 
 -- fastn.redirects:
