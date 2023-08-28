@@ -52,6 +52,8 @@ favicon: /-/fastn.com/images/favicon.svg
 - The `fastn` Language: /lang/
   document: /ftd/index.ftd
 - Why?:
+  - `fastn` for geeks: /geeks/
+    document: why/geeks.ftd
   - `fastn` is Easy To Learn: /easy/
     document: why/easy.ftd
     skip: true

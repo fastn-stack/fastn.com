@@ -1,0 +1,82 @@
+-- ds.page: `fastn` for geeks
+
+`fastn` is a programming language designed for non programmers, to help people
+create web sites.
+
+-- ds.h1: What is `fastn`?
+
+`fastn` is a bit like Markdown, it allows you to author web content, and `fastn`
+CLI can let you convert `fastn` files (they have `.ftd` extension, `FasTn
+Document`) to HTML/CSS/JavaScript files. Actually the language was part of a
+startup called `FifthTry`, and it was `FifthTry Document`, and originally
+called "ftd language", but since we have extracted it out as an independent
+open source project.
+
+`fastn` cli can work as a server, `fastn serve`, which starts a HTTP server, and
+you can deploy `fastn` server on your Linux machine. `fastn` cli can also work
+as a "static site generator", `fastn build`, which creates a folder `.build`
+that you can deploy on any static host.
+
+We will talk about when to deploy using `fastn serve` and when to prefer `fastn
+build` later on.
+
+-- ds.h1: `fastn` Is Designed For Non Programmers
+
+`fastn` is designed with absolutely minimal syntax so people who have never
+programmed can easily pick it up.
+
+Consider the hello world for example:
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.text: Hello, World!
+
+-- ds.markdown:
+
+In this example we are using a component called `ftd.text` to show some text.
+Notice we have no double quotes aroune `Hello, World!`. If you have to write
+longer text, you can use:
+
+-- ds.code: Multiline Text
+lang: ftd
+
+\-- ftd.text:
+
+Hello, World! This is a longer text, which spans multiple lines.
+
+See how easy this is.
+
+-- ds.markdown:
+
+We actually handle this by creating type called `caption` and `body`, and a type
+called `caption or body`.
+
+We will talk about types in more detail later.
+
+Similarly look at this example:
+
+-- ds.code:
+lang: ftd
+
+\-- import: foo
+
+\-- foo.button: Hello
+
+-- ds.markdown:
+
+Here we are `import`ing a module `foo`, and notice how the syntax to import,
+and syntax to call a component is very similar. We use
+`-- <something>: <optional caption>` for virtually everything, other than the
+body of functions.
+
+-- ds.h1: Markdown ++
+
+Markdown is great, but it is only good for "body" of the page. You can not
+create full page layouts with markdown. Markdown generated content is wrapped
+around a page template, which provides header, footer, sidebar etc, and markdown
+itself can not create these kind of page layout stuff.
+
+This means what you can do with `markdown` is quite limited, and if you want
+
+-- end: ds.page
