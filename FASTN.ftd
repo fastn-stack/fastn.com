@@ -851,7 +851,7 @@ skip: true
 - Create website planning: /create-website-planning/
   document: /users/index.ftd
 - Orientation video planning: /orientation-planning/
-  document: /planning/orientation-planning-video.ftd
+  document: /planning/orientation-video-planning.ftd
 - Documentation Systems: /documentation/
   document: /planning/documentation-systems.ftd
 - Adding color-scheme: /color-scheme/-/planning/
