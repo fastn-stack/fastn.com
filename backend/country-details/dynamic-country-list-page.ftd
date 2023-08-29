@@ -235,6 +235,7 @@ for: $country in $countries
 -- ftd.image: $fastn-assets.files.images.backend.country-list-output.png
 width: fill-container
 
+
 -- ds.markdown:
 
 There you go, the country list page is ready and you can see all the country 
