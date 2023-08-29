@@ -6,7 +6,6 @@
 fastn is a no-fuss alternative to the complexities of React, Angular, and 
 JavaScript. Here is a quick glance.
 
-
 -- cl.very-easy-syntax:
 
 -- cl.readymade-components:
@@ -20,6 +19,5 @@ JavaScript. Here is a quick glance.
 -- cl.visualize-with-vercel:
 
 -- cl.fastn-best-choice-for-startup:
-
 
 -- end: ds.page-with-get-started-and-no-right-sidebar

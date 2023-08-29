@@ -1,0 +1,815 @@
+-- import: fastn.com/content-library/compare as cl
+
+
+-- ds.page:
+sidebar: false
+full-width: true
+
+-- fullstack-framework:
+
+-- design-system:
+
+-- seo:
+
+-- visualize-with-vercel:
+
+-- fastn-best-choice-for-startup:
+
+-- end: ds.page
+
+
+
+
+
+
+
+-- component fullstack-framework:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Full stack framework
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+Along with [building frontends](https://fastn.com/frontend/), `fastn` can be
+used for building data driven websites and dashboards.
+
+-- end: ftd.column
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.h2: Seamless API Integration
+
+You can interact with backend APIs, and use the API responses to
+- Create dynamic web pages,
+- Display and render the response data
+- Conditional Rendering. etc.
+
+Checkout the [http processor](https://fastn.com/http/) to know more.
+
+-- ds.code: fetching data from API
+lang: ftd
+
+\-- import: fastn/processors as pr
+
+\-- result r:
+$processor$: pr.http
+url: https://api.github.com/search/repositories
+sort: stars
+order: desc
+q: language:python
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.h2: Effortless SQL Interaction
+
+Query data from SQLite databases to create dynamic websites.
+Our [package query processor](https://fastn.com/package-query/) makes it a
+breeze.
+
+-- ds.code: Working With SQL Is Breeze
+lang: ftd
+
+\-- import: fastn/processors as pr
+
+\-- people:
+$processor$: pr.package-query
+db: db.sqlite
+
+SELECT * FROM user;
+
+\-- show-person: $p
+$loop$: $people as $p
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 28
+margin-vertical.px: 34
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Full stack framework
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+text-align: center
+
+Along with [building frontends](https://fastn.com/frontend/), `fastn` can be
+used for building data driven websites and dashboards.
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.h2: Seamless API Integration
+
+You can interact with backend APIs, and use the API responses to
+- Create dynamic web pages,
+- Display and render the response data
+- Conditional Rendering. etc.
+
+Checkout the [http processor](https://fastn.com/http/) to know more.
+
+-- ds.code: fetching data from API
+lang: ftd
+
+\-- import: fastn/processors as pr
+
+\-- result r:
+$processor$: pr.http
+url: https://api.github.com/search/repositories
+sort: stars
+order: desc
+q: language:python
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.h2: Effortless SQL Interaction
+
+Query data from SQLite databases to create dynamic websites.
+Our [package query processor](https://fastn.com/package-query/) makes it a
+breeze.
+
+-- ds.code: Working With SQL Is Breeze
+lang: ftd
+
+\-- import: fastn/processors as pr
+
+\-- people:
+$processor$: pr.package-query
+db: db.sqlite
+
+SELECT * FROM user;
+
+\-- show-person: $p
+$loop$: $people as $p
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: fullstack-framework
+
+
+
+
+
+
+
+-- component design-system:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Opinionated Design System
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+fastn comes with integrated design system. We've many pre-made design choices
+so you can build your website quickly.
+
+-- end: ftd.column
+
+-- ds.h2: Unified Color and Typography
+
+A lot of [color scheme](/featured/cs/) and
+[typography](featured/fonts-typography/) packages are available, which you can
+import and change the entire typography or color scheme in a few lines of code.
+
+You can manage color palettes and typography centrally to save time and ensure
+consistent usage across your website.
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.image: fastn Colour Schemes
+src: $fastn-assets.files.compare.cs.png
+width.fixed.percent: 95
+link: https://fastn.com/featured/cs/
+
+-- ds.image: fastn Typography
+src: $fastn-assets.files.compare.ty.png
+width.fixed.percent: 95
+link: https://fastn.com/featured/fonts-typography/
+
+-- end: ftd.row
+
+-- ds.h2: Seamless Figma Integration
+
+Integrate Figma tokens with **`fastn`**'s color scheme or create your own scheme
+from Figma JSON.
+
+-- ds.image: Using Figma tokens with fastn colour scheme
+src: $fastn-assets.files.images.figma.b1.select-forest-cs.png
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+
+-- ftd.column:
+spacing.fixed.px: 12
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Responsive Ready
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+fastn has built in support for responsive design. Your creations automatically
+adapt to the perfect size, whether your users are on mobile or desktop
+devices.
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 12
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Built-in Dark and Light Modes
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+With fastn, you don't have to worry about crafting these modes from scratch –
+they're included out of the box, enhancing both user accessibility and the
+aesthetics of your online presence.
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 28
+margin-vertical.px: 34
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Opinionated Design System
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+text-align: center
+
+fastn comes with integrated design system. We've many pre-made design choices
+so you can build your website quickly.
+
+-- end: ftd.column
+
+-- ds.h3: Unified Color and Typography
+
+A lot of [color scheme](/featured/cs/) and
+[typography](featured/fonts-typography/) packages are available, which you can
+import and change the entire typography or color scheme in a few lines of code.
+
+You can manage color palettes and typography centrally to save time and ensure
+consistent usage across your website.
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.image: fastn Colour Schemes
+src: $fastn-assets.files.compare.cs.png
+width.fixed.percent: 95
+
+-- ds.image: fastn Typography
+src: $fastn-assets.files.compare.ty.png
+width.fixed.percent: 95
+
+-- end: ftd.column
+
+-- ds.h2: Seamless Figma Integration
+
+Integrate Figma tokens with **`fastn`**'s color scheme or create your own scheme
+from Figma JSON.
+
+-- ds.image: Using Figma tokens with fastn colour scheme
+src: $fastn-assets.files.images.figma.b1.select-forest-cs.png
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+wrap: true
+
+-- ftd.column:
+spacing.fixed.px: 12
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Responsive Ready
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+fastn has built in support for responsive design. Your creations automatically
+adapt to the perfect size, whether your users are on mobile or desktop
+devices.
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 12
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Built-in Dark and Light Modes
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+With fastn, you don't have to worry about crafting these modes from scratch –
+they're included out of the box, enhancing both user accessibility and the
+aesthetics of your online presence.
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: design-system
+
+
+
+
+
+
+
+
+
+
+-- component seo:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+
+-- ftd.text: Search Engine Optimization
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+width: fill-container
+
+-- ds.h2: Custom and Clean URLs
+
+fastn allows you to map documents to any URL you like, allowing you to make all
+your URLs clean, and folders organised! You can also create dynamic URLs in
+fastn.
+
+-- ds.h2: Optimized Meta Information
+
+Easily manage meta tags and descriptions with fastn. You can fine-tune
+how your web pages appear in search engine results and increase your site's
+discoverability. You can also add OG-Image to your page and control the
+preview of your page link when shared across social platforms.
+
+-- ds.code: Adding meta title, description and image
+lang: ftd
+copy: false
+
+\-- ds.page: This is page title
+document-title: Welcome!
+document-description: Learn how to do SEO! document-image: https://gargajit.github.io/optimization/images/seo-meta.png ;; <hl>
+
+-- ds.h2: URL Redirection
+
+Effortlessly create URL redirections to improve navigation and link consistency,
+ensuring that your users always find the right content, even when URLs change.
+
+-- ds.code: URL Redirection: `FASTN.ftd` example that uses `fastn.redirects`
+lang: ftd
+copy: false
+
+\-- import: fastn
+
+\-- fastn.package: redirect-example
+
+\-- fastn.redirects: ;; <hl>
+
+/ftd/kernel/: /kernel/
+/discord/: https://discord.gg/eNXVBMa4xt
+
+-- end: ftd.column
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 28
+margin-vertical.px: 34
+
+-- ftd.text: Search Engine Optimization
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+text-align: center
+width: fill-container
+
+-- ds.h2: Custom and Clean URLs
+
+fastn allows you to map documents to any URL you like, allowing you to make all
+your URLs clean, and folders organised! You can also create dynamic URLs in
+fastn.
+
+-- ds.h2: Optimized Meta Information
+
+Easily manage meta tags and descriptions with fastn. You can fine-tune
+how your web pages appear in search engine results and increase your site's
+discoverability. You can also add OG-Image to your page and control the
+preview of your page link when shared across social platforms.
+
+-- ds.code: Adding meta title, description and image
+lang: ftd
+copy: false
+
+\-- ds.page: This is page title
+document-title: Welcome!
+document-description: Learn how to do SEO! document-image: https://gargajit.github.io/optimization/images/seo-meta.png ;; <hl>
+
+-- ds.h2: URL Redirection
+
+Effortlessly create URL redirections to improve navigation and link consistency,
+ensuring that your users always find the right content, even when URLs change.
+
+-- ds.code: URL Redirection: `FASTN.ftd` example that uses `fastn.redirects`
+lang: ftd
+copy: false
+
+\-- import: fastn
+
+\-- fastn.package: redirect-example
+
+\-- fastn.redirects: ;; <hl>
+
+/ftd/kernel/: /kernel/
+/discord/: https://discord.gg/eNXVBMa4xt
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: seo
+
+
+
+
+
+
+
+
+
+
+-- component visualize-with-vercel:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+spacing.fixed.px if { ftd.device == "mobile" }: 28
+margin-vertical.px if { ftd.device == "mobile" }: 34
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Visualize with Vercel
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+Preview and test your website's appearance and functionality before deployment.
+
+-- end: ftd.column
+
+-- ds.image: Preview your page before deployment
+src: $fastn-assets.files.compare.vercel.png
+width.fixed.percent: 95
+
+-- end: ftd.column
+
+-- end: visualize-with-vercel
+
+
+
+
+
+
+
+
+
+
+-- component fastn-best-choice-for-startup:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+spacing.fixed.px if { ftd.device == "mobile" }: 28
+margin-vertical.px if { ftd.device == "mobile" }: 34
+align-content: center
+
+-- ftd.text: Why fastn is the best choice for your startup
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+wrap: true
+
+-- ftd.column:
+width.fixed.px: 624
+min-height.fixed.px: 200
+spacing.fixed.px: 16
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Ecosystem Compatibility
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+Unlike traditional languages that often lock you into specific ecosystems, fastn
+is versatile and works well with various backend technologies and frameworks.
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.px: 624
+min-height.fixed.px: 200
+spacing.fixed.px: 16
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Architectural Decisions Made for you
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+With fastn, architectural decisions are simplified. We've pre-made many design
+choices for you, from color schemes to typography roles, allowing you to focus
+on building your project.
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.px: 624
+min-height.fixed.px: 200
+spacing.fixed.px: 16
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Cost-Efficiency
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+fastn enables novice developers to make meaningful contributions. This way, you
+can save on hiring and training costs by utilizing a technology that's easy to
+learn, helping your startup achieve more with less.
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.px: 624
+min-height.fixed.px: 200
+spacing.fixed.px: 16
+border-width.px: 1
+padding-vertical.px: 16
+padding-horizontal.px: 24
+border-radius.px: 8
+border-color: $inherited.colors.border
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.row:
+spacing.fixed.px: 8
+align-content: center
+
+-- ftd.image:
+src: $fastn-assets.files.compare.tick.svg
+
+-- ftd.text: Stability Guarantee
+role: $inherited.types.copy-large
+color: $inherited.colors.text-strong
+style: semi-bold
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+React, JavaScript often undergo rapid changes which leads to constant relearning
+and updates. fastn's stability guarantees a consistent development environment,
+saving startups from the constant disruptions of rapidly changing
+technologies.
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: fastn-best-choice-for-startup
