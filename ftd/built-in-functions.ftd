@@ -344,7 +344,7 @@ This is FScript as well as a standard `fastn` function. This function enables
 copy content in clipboard.
 
 -- ds.rendered: Sample code using `copy-to-clipboard()`
-
+x
 -- ds.rendered.input:
 
 \-- ftd.text: Click to Copy ⭐️
@@ -1139,8 +1139,6 @@ $on-click$: $ftd.enable-system-mode()
 
 
 
-
--- integer $x: 10
 
 -- component copy-clipboard-sample:
 
