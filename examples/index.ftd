@@ -31,7 +31,7 @@ list-of-files: $toc
 
 -- component exercise:
 pr.toc-item list list-of-files:
-string $src: https://fastn.com/
+string $src: https://fastn.com/home/
 boolean $responsive: false
 boolean $mobile: false
 boolean $desktop: false
@@ -117,7 +117,8 @@ width.fixed.percent: 39
 width.fixed.percent if { exercise.responsive && !exercise.sidebar }: 78
 width.fixed.percent if { exercise.sidebar && !exercise.responsive }: 48
 width.fixed.percent if { exercise.sidebar && exercise.responsive }: 96
-spacing.fixed.px: 16
+background.solid: $inherited.colors.background.step-1
+min-height.fixed.vh: 90
 
 -- ftd.row:
 if: { ! exercise.responsive } 
@@ -196,8 +197,8 @@ width.fixed.px if { exercise.mobile } : 352
 align-self: center
 
 -- ftd.iframe:
-min-height.fixed.vh: 83
-max-height.fixed.vh: 83
+min-height.fixed.vh: 84
+max-height.fixed.vh: 84
 src: $exercise.src
 width: fill-container
 
@@ -313,7 +314,7 @@ border-left-width.px: 1
 margin-left.px: 21
 padding-left.px: 12
 border-color: $inherited.colors.border-strong
-width.fixed.percent: 93
+width.fixed.percent: 91
 spacing.fixed.px: 8
 
 -- render-files-children-toc:
