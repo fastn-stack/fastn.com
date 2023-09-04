@@ -1,9 +1,14 @@
--- import: fastn.com/content-library/compare as cl
-
+-- import: fastn.com/ftd as ftd-index
+-- import: fastn-community.github.io/bling/quote
+-- import: fastn-community.github.io/bling/modal-cover
 
 -- ds.page:
 sidebar: false
 full-width: true
+
+-- very-easy-syntax:
+
+;;-- cl.readymade-components:
 
 -- fullstack-framework:
 
@@ -16,6 +21,163 @@ full-width: true
 -- fastn-best-choice-for-startup:
 
 -- end: ds.page
+
+
+
+
+
+
+
+
+
+
+
+-- component very-easy-syntax:
+boolean $show-modal: false
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.desktop:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Very Easy Syntax
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+fastn simplifies programming making it accessible to everyone.
+Developers, designers, and non-programmers alike can easily learn fastn to build
+stunning web projects.
+
+Its **user-friendly interface and minimal syntax** allow even those with no
+prior programming experience to grasp its functionalities swiftly.
+
+Take the below examples for instance.
+
+-- end: ftd.column
+
+-- ds.h2: Example 1
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.code:
+lang: ftd
+
+\-- chat-female-avatar: Hello World! 😀
+
+\-- chat-female-avatar:
+
+I'm Nandhini, a freelance content writer.
+
+\-- chat-female-avatar:
+
+Fun fact: I also built this entire page with fastn! 🚀
+It's that easy!
+
+-- ftd.column:
+spacing.fixed.px: 24
+
+-- ftd-index.chat-female-avatar: Hello World! 😀
+
+-- ftd-index.chat-female-avatar:
+
+I'm Nandhini, a freelance content writer.
+
+-- ftd-index.chat-female-avatar:
+
+Fun fact: I built this entire page with fastn! 🚀
+
+It's that easy!
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ds.h2: Example 2
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.code:
+lang: ftd
+
+\-- quote.rustic: Nandhini
+
+It's liberating to control the outcome as the creator. I can swiftly bring
+changes to life without delay or intermediaries.
+
+-- ds.h3: Output
+
+-- quote.rustic: Nandhini
+
+It's liberating to control the outcome as the creator. I can swiftly bring
+changes to life without delay or intermediaries.
+
+-- end: ftd.row
+
+-- ds.h2: Example 3
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 18
+
+-- ds.code:
+lang: ftd
+
+\-- boolean $show-modal: false
+
+\-- modal-cover.button: Click to Open
+$on-click$: $ftd.toggle($a = $show-modal)
+disable-link: true
+
+\-- modal-cover.modal-cover: fastn fun-fact
+$open: $show-modal
+
+**`If you can type, you can code!`**
+
+-- ds.h3: Output
+
+-- modal-cover.button: Click to Open
+$on-click$: $ftd.toggle($a = $very-easy-syntax.show-modal)
+disable-link: true
+
+-- modal-cover.modal-cover: fastn fun-fact
+$open: $very-easy-syntax.show-modal
+
+**`If you can type, you can code!`**
+
+-- end: ftd.row
+
+-- ds.markdown:
+
+As evident, the language is effortlessly comprehensible to everyone. This
+fosters smooth collaboration among developers, designers, and content creators,
+ultimately boosting the efficiency of the entire project.
+
+-- end: ftd.column
+
+-- end: ftd.desktop
+
+-- end: ftd.column
+
+-- end: very-easy-syntax
+
 
 
 
