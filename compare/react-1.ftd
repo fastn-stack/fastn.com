@@ -8,7 +8,7 @@ full-width: true
 
 -- very-easy-syntax:
 
-;;-- cl.readymade-components:
+-- readymade-components:
 
 -- fullstack-framework:
 
@@ -57,10 +57,11 @@ color: $inherited.colors.text-strong
 -- ftd.text:
 role: $inherited.types.copy-small
 color: $inherited.colors.text
+text-align: center
 
-fastn simplifies programming making it accessible to everyone.
-Developers, designers, and non-programmers alike can easily learn fastn to build
-stunning web projects.
+fastn simplifies programming making it accessible to everyone. Developers,
+designers, and non-programmers alike can easily learn fastn to build stunning
+web projects.
 
 Its **user-friendly interface and minimal syntax** allow even those with no
 prior programming experience to grasp its functionalities swiftly.
@@ -69,7 +70,13 @@ Take the below examples for instance.
 
 -- end: ftd.column
 
--- ds.h2: Example 1
+-- ftd.column:
+spacing.fixed.px: 24
+width: fill-container
+
+-- ftd.text: Chat Message
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 width: fill-container
@@ -90,7 +97,12 @@ Fun fact: I also built this entire page with fastn! 🚀
 It's that easy!
 
 -- ftd.column:
-spacing.fixed.px: 24
+width: fill-container
+height.fixed.px: 289
+border-radius.px: 8
+margin-top.px: 12
+padding.px: 18
+background.solid: $inherited.colors.background.step-1
 
 -- ftd-index.chat-female-avatar: Hello World! 😀
 
@@ -108,11 +120,27 @@ It's that easy!
 
 -- end: ftd.row
 
--- ds.h2: Example 2
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 24
+width: fill-container
+
+-- ftd.text: Quote
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 width: fill-container
 spacing.fixed.px: 18
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 289
+border-radius.px: 8
+margin-top.px: 12
+padding.px: 18
+background.solid: $inherited.colors.background.code
 
 -- ds.code:
 lang: ftd
@@ -122,16 +150,34 @@ lang: ftd
 It's liberating to control the outcome as the creator. I can swiftly bring
 changes to life without delay or intermediaries.
 
--- ds.h3: Output
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+height.fixed.px: 289
+border-radius.px: 8
+margin-top.px: 12
+padding.px: 18
+background.solid: $inherited.colors.background.step-1
 
 -- quote.rustic: Nandhini
 
 It's liberating to control the outcome as the creator. I can swiftly bring
 changes to life without delay or intermediaries.
 
+-- end: ftd.column
+
 -- end: ftd.row
 
--- ds.h2: Example 3
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 24
+width: fill-container
+
+-- ftd.text: Modal Cover
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
 
 -- ftd.row:
 width: fill-container
@@ -151,7 +197,14 @@ $open: $show-modal
 
 **`If you can type, you can code!`**
 
--- ds.h3: Output
+-- ftd.column:
+width: fill-container
+height.fixed.px: 289
+border-radius.px: 8
+margin-top.px: 12
+align-content: center
+padding.px: 18
+background.solid: $inherited.colors.background.step-1
 
 -- modal-cover.button: Click to Open
 $on-click$: $ftd.toggle($a = $very-easy-syntax.show-modal)
@@ -162,21 +215,350 @@ $open: $very-easy-syntax.show-modal
 
 **`If you can type, you can code!`**
 
+-- end: ftd.column
+
 -- end: ftd.row
 
--- ds.markdown:
-
-As evident, the language is effortlessly comprehensible to everyone. This
-fosters smooth collaboration among developers, designers, and content creators,
-ultimately boosting the efficiency of the entire project.
+-- end: ftd.column
 
 -- end: ftd.column
 
 -- end: ftd.desktop
 
+-- ftd.mobile:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 48
+margin-vertical.px: 42
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 16
+align-content: center
+
+-- ftd.text: Very Easy Syntax
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+text-align: center
+
+fastn simplifies programming making it accessible to everyone. Developers,
+designers, and non-programmers alike can easily learn fastn to build stunning
+web projects.
+
+Its **user-friendly interface and minimal syntax** allow even those with no
+prior programming experience to grasp its functionalities swiftly.
+
+Take the below examples for instance.
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 24
+width: fill-container
+
+-- ftd.text: Chat Message
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- ds.code:
+lang: ftd
+
+\-- chat-female-avatar: Hello World! 😀
+
+\-- chat-female-avatar:
+
+I'm Nandhini, a freelance content writer.
+
+\-- chat-female-avatar:
+
+Fun fact: I also built this entire page with fastn! 🚀
+It's that easy!
+
+-- ftd.column:
+width: fill-container
+border-radius.px: 8
+margin-top.px: 12
+padding.px: 18
+background.solid: $inherited.colors.background.step-1
+
+-- ftd-index.chat-female-avatar: Hello World! 😀
+
+-- ftd-index.chat-female-avatar:
+
+I'm Nandhini, a freelance content writer.
+
+-- ftd-index.chat-female-avatar:
+
+Fun fact: I built this entire page with fastn! 🚀
+
+It's that easy!
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 24
+width: fill-container
+
+-- ftd.text: Quote
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- ftd.column:
+width: fill-container
+border-radius.px: 8
+margin-top.px: 12
+padding.px: 18
+background.solid: $inherited.colors.background.code
+
+-- ds.code:
+lang: ftd
+
+\-- quote.rustic: Nandhini
+
+It's liberating to control the outcome as the creator. I can swiftly bring
+changes to life without delay or intermediaries.
+
+-- end: ftd.column
+
+-- ftd.column:
+width: fill-container
+border-radius.px: 8
+margin-top.px: 12
+padding.px: 18
+background.solid: $inherited.colors.background.step-1
+
+-- quote.rustic: Nandhini
+
+It's liberating to control the outcome as the creator. I can swiftly bring
+changes to life without delay or intermediaries.
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 24
+width: fill-container
+
+-- ftd.text: Modal Cover
+role: $inherited.types.heading-small
+color: $inherited.colors.text-strong
+
+-- ds.code:
+lang: ftd
+
+\-- boolean $show-modal: false
+
+\-- modal-cover.button: Click to Open
+$on-click$: $ftd.toggle($a = $show-modal)
+disable-link: true
+
+\-- modal-cover.modal-cover: fastn fun-fact
+$open: $show-modal
+
+**`If you can type, you can code!`**
+
+-- ftd.column:
+width: fill-container
+border-radius.px: 8
+margin-top.px: 12
+align-content: center
+padding.px: 18
+background.solid: $inherited.colors.background.step-1
+
+-- modal-cover.button: Click to Open
+$on-click$: $ftd.toggle($a = $very-easy-syntax.show-modal)
+disable-link: true
+
+-- modal-cover.modal-cover: fastn fun-fact
+$open: $very-easy-syntax.show-modal
+
+**`If you can type, you can code!`**
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
 -- end: ftd.column
 
 -- end: very-easy-syntax
+
+
+
+
+
+
+
+
+
+
+-- component readymade-components:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.em: 0.8
+
+-- ds.h1: Rich collection of readymade components
+
+fastn's versatility accommodates a wide range of projects, from landing pages to
+complex web applications, giving startups the agility they need to adapt and
+evolve.
+
+You can choose from numerous components that suit your needs.
+There are [doc-sites](https://fastn.com/featured/doc-sites/),
+[blogs](https://fastn.com/featured/blog-templates/),
+[landing pages](https://fastn.com/featured/landing-pages/)
+to individual component library like [bling](https://fastn-community.github.io/bling/),
+[hero sections](https://fastn.com/featured/sections/heros/), and more.
+
+The best part? All components in the ecosystem adhere to a unified design
+system. This ensures that every component blends seamlessly with others,
+creating a cohesive look and feel across your entire site.
+
+-- ds.h2: Create your own custom component
+
+From buttons that seamlessly blend with your design to interactive elements that
+engage users, fastn makes component creation intuitive and efficient.
+
+-- ds.code: Creating a custom component
+lang: ftd
+
+\-- toggle-text: fastn is cool!
+
+
+\-- component toggle-text:
+boolean $current: false
+caption title:
+
+\-- ftd.text: $toggle-text.title
+align-self: center
+color if { toggle-text.current }: $inherited.colors.cta-primary.disabled
+color: $inherited.colors.cta-primary.text
+role: $inherited.types.heading-tiny
+background.solid: $inherited.colors.cta-primary.base
+padding.px: 20
+border-radius.px: 5
+$on-click$: $ftd.toggle($a = $toggle-text.current)
+
+\-- end: toggle-text
+
+-- ds.output:
+
+-- ftd-index.toggle-text: fastn is cool!
+
+-- end: ds.output
+
+
+-- ds.h2: Content Components
+
+In fastn, you can create custom content components for recurring information.
+This ensures a consistent user experience throughout your website while saving
+your time.
+
+-- ds.h2: Functional Components
+
+fastn's dynamic features lets you create engaging user experiences that capture
+and retain customer interest.
+
+-- ds.h3: Event Handling Made Simple
+
+We've got a range of built-in events in fastn. Handle clicks, mouse actions,
+and more. fastn’s event handling capabilities can be used to create fully
+functional frontend applications.
+
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- boolean $show: true
+
+\-- ftd.text: Enter mouse cursor over me
+$on-mouse-enter$: $ftd.set-bool($a = $show, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $show, v = false)
+
+\-- ftd.text: Hide and Seek
+if: { show }
+
+-- ds.rendered.output:
+
+-- on-mouse-leave-event:
+
+-- end: ds.rendered.output
+
+-- ds.h3: Built-in Rive
+
+Elevate your website's visual appeal with built-in Rive animations. Easily embed
+animations into your fastn documents for engaging user experiences.
+
+
+-- ds.rendered:
+
+-- ds.rendered.input:
+
+\-- string $idle: Unknown Idle State
+
+\-- ftd.text: $idle
+
+\-- ftd.rive:
+id: vehicle
+src: https://cdn.rive.app/animations/vehicles.riv
+autoplay: false
+artboard: Jeep
+$on-rive-play[idle]$: $ftd.set-string($a = $idle, v = Playing Idle)
+$on-rive-pause[idle]$: $ftd.set-string($a = $idle, v = Pausing Idle)
+
+\-- ftd.text: Idle/Run
+$on-click$: $ftd.toggle-play-rive(rive = vehicle, input = idle)
+
+-- ds.rendered.output:
+
+-- on-rive-play-pause-event:
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ftd.column
+
+-- end: readymade-components
+
+
+
+
+
+
+
+
+
+
+-- component on-mouse-leave-event:
+boolean $show: false
+
+-- ftd.column:
+color: $inherited.colors.text
+
+-- ftd.text: Enter mouse cursor over me
+$on-mouse-enter$: $ftd.set-bool($a = $on-mouse-leave-event.show, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $on-mouse-leave-event.show, v = false)
+
+-- ftd.text: Hide and Seek
+if: { on-mouse-leave-event.show }
+
+-- end: ftd.column
+
+-- end: on-mouse-leave-event
 
 
 
