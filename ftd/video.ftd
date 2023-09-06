@@ -2,7 +2,7 @@
 
 -- ds.page: `ftd.video`
 
-`ftd.video` is the kernel element used to embedding video content in `ftd`.
+`ftd.video` is the kernel element used to embed video content in `ftd`.
 
 -- ds.rendered: Usage
 
