@@ -10,6 +10,7 @@
 
 \-- ftd.video:
 src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+controls: true
 width.fixed.px: 400
 height.fixed.px: 300
 
