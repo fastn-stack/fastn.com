@@ -48,6 +48,8 @@ lang: ftd
 \-- ftd.video:
 src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 ;; <hl>
 controls: true
+src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 ;; <hl>
+controls: true
 width.fixed.px: 400
 height.fixed.px: 300
 fit: contain
@@ -81,6 +83,8 @@ lang: ftd
 \-- ftd.video:
 src: $assets.files.videos.bunny.mp4 ;; <hl>
 controls: true
+src: $assets.files.videos.bunny.mp4 ;; <hl>
+controls: true
 width.fixed.px: 400
 height.fixed.px: 300
 fit: contain
@@ -101,7 +105,9 @@ Type: `optional` [`boolean`](ftd/built-in-types/#boolean)
 Required: False
 
 If this attribute value is set to `true`, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
+If this attribute value is set to `true`, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
 
+In the first example below, the controls attribute has been set to true, which is why the controls are being shown. However, in the second example below, the controls attribute has been set to false, which is why the controls are not being shown on that video.
 In the first example below, the controls attribute has been set to true, which is why the controls are being shown. However, in the second example below, the controls attribute has been set to false, which is why the controls are not being shown on that video.
 
 -- ds.rendered: Sample code using `controls`
@@ -154,6 +160,7 @@ Type: `optional` [`boolean`](ftd/built-in-types/#boolean)
 Required: False
 
 A Boolean attribute that indicates the default setting of the audio contained in the video. If set to `true`, the audio will be initially silenced.
+A Boolean attribute that indicates the default setting of the audio contained in the video. If set to `true`, the audio will be initially silenced.
 
 -- ds.rendered: Sample code using `muted`
 
@@ -161,7 +168,9 @@ A Boolean attribute that indicates the default setting of the audio contained in
 
 \-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 muted: true ;; <hl>
+muted: true ;; <hl>
 controls: true
+autoplay: true
 autoplay: true
 width.fixed.px: 400
 height.fixed.px: 300
@@ -192,6 +201,7 @@ Type: `optional` [`boolean`](ftd/built-in-types/#boolean)
 Required: False
 
 A Boolean attribute; if set to `true`, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
+A Boolean attribute; if set to `true`, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.
 
 -- ds.markdown:
 
@@ -202,6 +212,7 @@ A Boolean attribute; if set to `true`, the video automatically begins to play ba
 -- ds.rendered.input:
 
 \-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+autoplay: true ;; <hl>
 autoplay: true ;; <hl>
 muted: true
 width.fixed.px: 400
