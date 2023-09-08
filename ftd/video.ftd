@@ -13,6 +13,7 @@ src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 controls: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.rendered.output:
 
@@ -20,6 +21,7 @@ height.fixed.px: 300
 src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 controls: true
 
 -- end: ds.rendered.output
@@ -48,6 +50,7 @@ src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 ;;
 controls: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.output: Output: Video
 
@@ -56,6 +59,7 @@ src: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 width.fixed.px: 400
 height.fixed.px: 300
 controls: true
+fit: contain
 
 -- end: ds.output
 
@@ -79,6 +83,7 @@ src: $assets.files.videos.bunny.mp4 ;; <hl>
 controls: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.markdown:
 
@@ -107,6 +112,7 @@ In the first example below, the controls attribute has been set to true, which i
 controls: true ;; <hl>
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 \-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 controls: false ;; <hl>
@@ -114,6 +120,7 @@ muted: true
 autoplay: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.rendered.output:
 
@@ -121,6 +128,7 @@ height.fixed.px: 300
 controls: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 controls: false
@@ -128,6 +136,7 @@ muted: true
 autoplay: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- end: ds.rendered.output
 
@@ -156,6 +165,7 @@ controls: true
 autoplay: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.rendered.output:
 
@@ -165,6 +175,7 @@ controls: true
 autoplay: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- end: ds.rendered.output
 
@@ -195,6 +206,7 @@ autoplay: true ;; <hl>
 muted: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.rendered.output:
 
@@ -203,6 +215,45 @@ muted: true
 autoplay: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+-- ds.h2: `loop`
+
+Type: `optional` [`boolean`](ftd/built-in-types/#boolean)
+
+Required: False
+
+A Boolean attribute; if set to `true`, the video will play in a loop.
+
+-- ds.rendered: Sample code using `loop`
+
+-- ds.rendered.input:
+
+\-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+loop: true ;; <hl>
+autoplay: true
+muted: true
+width.fixed.px: 400
+height.fixed.px: 300
+fit: contain
+
+-- ds.rendered.output:
+
+-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+loop: true
+muted: true
+autoplay: true
+width.fixed.px: 400
+height.fixed.px: 300
+fit: contain
 
 -- end: ds.rendered.output
 
@@ -230,6 +281,7 @@ poster: https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBu
 controls: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
 
 -- ds.rendered.output:
 
@@ -238,6 +290,46 @@ poster: https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBu
 controls: true
 width.fixed.px: 400
 height.fixed.px: 300
+fit: contain
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+
+
+
+
+
+-- ds.h2: `fit`
+
+Type: `optional` `string`
+
+Required: False
+
+The `fit` property determines how a `ftd.video` element should be adjusted to match its container size. It is similar to the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) CSS property.
+
+This property offers various options for the content to adapt to the container, such as "maintaining the aspect ratio" or "expanding to occupy the available space fully."
+
+-- ds.rendered: Sample code using `fit`
+
+-- ds.rendered.input:
+
+\-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+poster: https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg ;; <hl>
+controls: true
+width.fixed.px: 400
+height.fixed.px: 300
+fit: contain ;; <hl>
+
+-- ds.rendered.output:
+
+-- ftd.video: https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+poster: https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg
+controls: true
+width.fixed.px: 400
+height.fixed.px: 300
+fit: contain
 
 -- end: ds.rendered.output
 
