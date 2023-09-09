@@ -1,4 +1,261 @@
+-- import: fastn.com/ftd as ftd-index
+-- import: fastn.com/assets
+
 -- ds.page: `fastn` for geeks
+
+Hello there! I am Amit Upadhyay, and I have built a programming language called
+`fastn`. The `fastn` language is designed for people who are new to programming,
+or people who do not know programming, a really simple programming language, to
+make programming accessible to everyone.
+
+-- ds.code:
+lang: ftd
+
+\-- import: amitu.com/lib
+
+
+\-- lib.amitu: Hello World! 😀
+
+\-- lib.amitu:
+
+you can also write multiline messages easily!
+
+no quotes. and **markdown** is *supported*.
+
+-- ds.markdown:
+
+Which produces:
+
+-- ftd-index.amitu: Hello World! 😀
+
+-- ftd-index.amitu:
+
+you can also write multiline messages easily!
+
+no quotes. and **markdown** is *supported*.
+
+-- ds.markdown:
+
+As you can see this is a language with really simple syntax. It almost looks
+like plain text, with some tiny amount of markup, and the `-- <something>:` etc.
+
+-- ds.h1: Minimal Syntax
+
+As you can see in the above example, the syntax to import a library, and the
+syntax to instantiate a component defined in the library is really the same.
+
+This is a very concious decision, we want people to learn as little syntax, and
+keep the semantics as minimal as possible.
+
+If this was [`mdx`](https://mdxjs.com), it would have looked something like
+this:
+
+-- ds.code:
+lang: js
+
+import {amitu} from './lib.js'
+
+<amitu>Hello World! 😀</amitu>
+
+<amitu>
+
+  you can also write multiline messages easily!
+
+  no quotes. and **markdown** is *supported*.
+
+</amitu>
+
+
+-- ds.markdown:
+
+As you can see this is a lot of syntax. Notice the import syntax is rather
+cumbersome, expecially for someone new to programming. And also notice how the
+syntax for creating a component vs importing the component is wildly different.
+
+And there lies the problem. Today we have to learn a lot to create a simple
+webpage. HTML, CSS and JavaScript at least, and then Markdown, and possibly JSX.
+
+This is if you chose to use `mdx`. The source of most web pages are written by
+developers and is much more complex than I have shown in these examples.
+
+Compare that with the [source
+code](https://github.com/fastn-community/acme-inc/blob/main/index.ftd) of `fastn`
+powered [`acme.fastn.com`](https://acme.fastn.com/) for example:
+
+-- ds.code: `index.ftd` of `acme.fastn.com`
+lang: ftd
+
+\-- ws.page:
+
+\-- ws.hero-with-image: We transform ideas into digital outcomes.
+cta-primary: Learn More
+cta-primary-link: #about
+image: $assets.files.assets.landing.png
+
+We are an award-winning strategic design company that provides consultancy
+services and help you create outstanding digital products.
+
+... rest of code omitted ...
+
+\-- end: ws.page
+
+-- ds.image:
+src: $assets.files.images.acme.png
+
+-- ds.markdown:
+
+As you see the code that is written matches really one on one with the UI that
+is produced.
+
+-- ds.h2: Auto Imports
+
+You may be wondering where does `ws` come from? We have a feature called
+`auto-import`. Let's take a look at [`FASTN.ftd` for the `acme`
+project](https://github.com/fastn-community/acme-inc/blob/main/FASTN.ftd):
+
+-- ds.code: `FASTN.ftd`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: acme.fastn.com
+favicon: /-/acme.fastn.com/favicon.ico
+
+\-- fastn.dependency: fastn-community.github.io/midnight-storm as theme
+
+.. other dependencies snipped ..
+
+\-- fastn.auto-import: acme.fastn.com/FASTN/ws ;; <hl>
+
+.. rest of file omitted ..
+
+-- ds.markdown:
+
+We are using `fastn.auto-import` to tell `fastn` that the module,
+`acme.fastn.com/FASTN/ws` is auto imported in all files (`fastn module` to be
+technically precise).
+
+Tiny feature to remove boilerplate that bit.
+
+-- ds.h2: Caption And Body
+
+Let's look at how a component is defined in `fastn`. BTW this is another thing
+we have done, when using say `mdx`, the syntax you use to a component is very
+different from the syntax you use to create the component. Similarly if you are
+using [markdoc](https://markdoc.dev) by Stripe, if you want to [create your own
+"custom tag"](https://markdoc.dev/docs/tags#create-a-custom-tag), you have to
+jump to JavaScript world. But we will get to it later on, bottom line you can
+create components and use them in same file (if you want, we recommend putting
+component definitions in separate file of course), with the similar looking
+syntax.
+
+Let's see how a component is defined:
+
+-- ds.code:
+lang: ftd
+
+;; here we are using a component called foo
+\-- foo:
+
+;; this is the definition of the component
+\-- component foo:
+
+.. body omitted ..
+
+\-- end: foo
+
+-- ds.markdown:
+
+As you see you use very similar syntax for both using and creating components.
+
+So components are not too great if they do not take arguments or properties, so
+let's see how we do that:
+
+-- ds.code: our component has a title now!
+lang: ftd
+
+;; here we are using a component called foo
+\-- foo:
+title: hello ;; <hl>
+
+;; this is the definition of the component
+\-- component foo:
+string title: ;; <hl>
+
+.. body omitted ..
+
+\-- end: foo
+
+-- ds.markdown:
+
+`fastn` is strongly typed language, so you have to decide what is the type of
+variables. Here we have declared a variable `title` or type `string` (read about
+all the [built in types](http://fastn.com/built-in-types/) we support), which is
+a component variable, or component argument. We also see how it is passed.
+
+Now I do not quite like this. Instead of writing:
+
+-- ds.code:
+lang: ftd
+
+\-- foo:
+title: hello
+
+-- ds.markdown:
+
+What if we can write:
+
+-- ds.code:
+lang: ftd
+
+\-- foo: hello
+
+-- ds.markdown:
+
+One less line! So how do we do it? We call this location, the part that comes
+after `:` in the "section line" (section is what starts with `-- `), the
+`caption` of the section.
+
+-- ds.code:
+lang: ftd
+
+\-- component foo:
+caption title: ;; <hl>
+
+.. body omitted ..
+
+\-- end: foo
+
+-- ds.markdown:
+
+Yes, we have a type called [`caption`](https://fastn.com/built-in-types/#caption).
+With that type both of the following are allowed:
+
+-- ds.code:
+lang: ftd
+
+\-- foo:
+title: hello
+
+\-- foo: hello
+
+-- ds.markdown:
+
+Of course you will probably prefer the later one. You can only have one argument
+of type `caption`, you should use it wisely, it should aid in the readability,
+it almost feels like the name of the section, so it should be used as such.
+
+Let me give you another example:
+
+-- ds.code:
+lang: ftd
+
+
+
+
+------
+
+
 
 `fastn` is a programming language designed for non programmers, to help people
 create web sites.
