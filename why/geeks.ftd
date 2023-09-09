@@ -385,8 +385,26 @@ technically precise).
 Tiny feature to remove boilerplate that bit.
 
 
+-- ds.h1: Variables, Mutability and Bindings
+
+So we have done some work on making the syntax easy on eyes. The other notable
+thing we are trying to do is making data flows managed by the compiler. Let's
+take an example:
+
+-- ds.code:
+lang: ftd
+
+\-- integer x: 10
+
+\-- ftd.integer: $x
 
 
+-- ds.markdown:
+
+In this example we have created a new variable `x` or type
+[`integer`](/built-in-types/#integer), with the value `10`. We have then used
+[`ftd.integer`](/integer/), a ["kernel component"](/kernel/), to display it's
+value in the document.
 
 
 
