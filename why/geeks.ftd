@@ -107,44 +107,18 @@ src: $assets.files.images.acme.png
 As you see the code that is written matches really one on one with the UI that
 is produced.
 
--- ds.h2: Auto Imports
 
-You may be wondering where does `ws` come from? We have a feature called
-`auto-import`. Let's take a look at [`FASTN.ftd` for the `acme`
-project](https://github.com/fastn-community/acme-inc/blob/main/FASTN.ftd):
 
--- ds.code: `FASTN.ftd`
-lang: ftd
 
-\-- import: fastn
 
-\-- fastn.package: acme.fastn.com
-favicon: /-/acme.fastn.com/favicon.ico
-
-\-- fastn.dependency: fastn-community.github.io/midnight-storm as theme
-
-.. other dependencies snipped ..
-
-\-- fastn.auto-import: acme.fastn.com/FASTN/ws ;; <hl>
-
-.. rest of file omitted ..
-
--- ds.markdown:
-
-We are using `fastn.auto-import` to tell `fastn` that the module,
-`acme.fastn.com/FASTN/ws` is auto imported in all files (`fastn module` to be
-technically precise).
-
-Tiny feature to remove boilerplate that bit.
-
--- ds.h2: Caption And Body
+-- ds.h2: `caption` And `body`
 
 Let's look at how a component is defined in `fastn`. BTW this is another thing
-we have done, when using say `mdx`, the syntax you use to a component is very
-different from the syntax you use to create the component. Similarly if you are
-using [markdoc](https://markdoc.dev) by Stripe, if you want to [create your own
-"custom tag"](https://markdoc.dev/docs/tags#create-a-custom-tag), you have to
-jump to JavaScript world. But we will get to it later on, bottom line you can
+we have done, when using say `mdx`, the language to *use* a component is
+different from the syntax you use to *define* the component. Similarly if you
+are using [markdoc](https://markdoc.dev) by Stripe, if you want to [create your
+own "custom tag"](https://markdoc.dev/docs/tags#create-a-custom-tag), you have
+to jump to JavaScript world. But we will get to it later on, bottom line you can
 create components and use them in same file (if you want, we recommend putting
 component definitions in separate file of course), with the similar looking
 syntax.
@@ -228,8 +202,9 @@ caption title: ;; <hl>
 
 -- ds.markdown:
 
-Yes, we have a type called [`caption`](https://fastn.com/built-in-types/#caption).
-With that type both of the following are allowed:
+Yes, we have a type called [`caption`](https://fastn.com/built-in-types/#caption)
+(check out the [section grammar](/p1-grammar/) here). With that type both of
+the following are allowed:
 
 -- ds.code:
 lang: ftd
@@ -249,6 +224,175 @@ Let me give you another example:
 
 -- ds.code:
 lang: ftd
+
+\-- record person:
+caption name:
+string location:
+optional body bio:
+
+-- ds.markdown:
+
+We are declaring a new [`record`](/record/), which is like a struct or a class,
+with three fields, `name`, which is a `caption`, `location`, which is a
+`string`, and `bio`, which is an `optional body`.
+
+Now let's create a variable of type `person`:
+
+-- ds.code:
+lang: ftd
+
+\-- person amitu: Amit Upadhyay
+location: Bangalore, India
+
+Amit is the founder and CEO of FifthTry.
+
+He loves to code, and is pursuing his childhood goal of
+becoming a professional starer of the trees.
+
+-- ds.markdown:
+
+We are creating a new variable named `amitu`. As you see `caption` and `body`
+types help in the readablity and cleanliness of syntax.
+
+
+-- ds.h2: Context Dependent `end`
+
+Some component may have "children", they are delcared with the type `children`:
+
+-- ds.code:
+lang: ftd
+
+\-- component bar:
+children c: ;; <hl>
+
+.. body omitted ..
+
+\-- end: bar
+
+-- ds.markdown:
+
+To call such a component we have to use an `end` statement as well:
+
+-- ds.code:
+lang: ftd
+
+\-- bar:
+
+\-- foo: hello
+
+this is the "body of foo"
+
+\-- end: bar
+
+
+
+-- ds.markdown:
+
+
+Since `bar` accepts `children`, `bar` needs an `end` statement clause. A
+component can accept both `body` and `children`.
+
+
+-- ds.code:
+lang: ftd
+
+\-- component page:
+optional body b:
+children c:
+
+.. body omitted ..
+
+\-- end: bar
+
+\-- page:
+
+this is the "body of page"
+
+\;; children of page
+\-- foo: hello
+
+this is the "body of foo"
+
+\-- end: page
+
+-- ds.markdown:
+
+We will usually have the definition of `page` in another file, so end user would
+write something like:
+
+-- ds.code:
+lang: ftd
+
+\-- import: lib
+exposing: pricing-page, pricing-card
+
+\-- pricing-page: Our Startup Offers Excellent Prices
+annual-discout: 10%
+
+Thousands of customers trust us for their daily image
+manipulation needs, you can join them by selecting one
+of the plans we offer.
+
+\-- pricing-plan: Free Plan
+price: 0
+
+You can use free plan forever, but there would be a
+water mark.
+
+\-- pricing-plan: Pro Plan
+price: 10
+
+Pro plan offers you a water mark free version.
+
+\-- end: pricing-page
+
+-- ds.markdown:
+
+We can even get rid of the `import` statement from top if you so like.
+
+-- ds.h2: Auto Imports
+
+If you look back at the `index.ftd` listed a bit above, you may be wondering
+where does `ws` come from? We have no import statements in the `index.ftd`
+after all.
+
+We have a feature called [`auto-import`](/auto-import/). Let's take a look at
+[`FASTN.ftd` for the `acme`
+project](https://github.com/fastn-community/acme-inc/blob/main/FASTN.ftd):
+
+-- ds.code: `FASTN.ftd`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: acme.fastn.com
+favicon: /-/acme.fastn.com/favicon.ico
+
+\-- fastn.dependency: fastn-community.github.io/midnight-storm as theme
+
+.. other dependencies snipped ..
+
+\-- fastn.auto-import: acme.fastn.com/FASTN/ws ;; <hl>
+
+.. rest of file omitted ..
+
+-- ds.markdown:
+
+We are using `fastn.auto-import` to tell `fastn` that the module,
+`acme.fastn.com/FASTN/ws` is auto imported in all files (`fastn module` to be
+technically precise).
+
+Tiny feature to remove boilerplate that bit.
+
+
+
+
+
+
+
+
+
+
 
 
 
