@@ -13,7 +13,7 @@ templates: $doc-sites
 more-link-text: View more
 more-link: /featured/doc-sites/
 
--- ft-ui.grid-view: SPA / Landing Pages
+-- ft-ui.grid-view: Landing Pages
 templates: $landing-pages
 more-link-text: View more
 more-link: /featured/landing-pages/
@@ -32,11 +32,6 @@ more-link: /featured/portfolios/
 templates: $resumes
 more-link-text: View more
 more-link: /featured/resumes/
-
--- ft-ui.grid-view: Workshop Pages
-templates: $workshops
-more-link-text: View more
-more-link: /featured/workshops/
 
 -- end: ds.page
 
@@ -172,19 +167,3 @@ template-url: featured/resumes/resume-1/
 screenshot: $fastn-assets.files.images.featured.resumes.resume-1.png
 
 -- end: resumes
-
-
-
-
-
--- ft-ui.template list workshops:
-
--- ft-ui.template: Workshop 1
-template-url: featured/workshops/workshop-1/
-screenshot: $fastn-assets.files.images.featured.workshops.workshop-1.png
-
--- ft-ui.template: Event 1
-template-url: featured/workshops/event-1/
-screenshot: $fastn-assets.files.images.featured.workshops.event-1.png
-
--- end: workshops
