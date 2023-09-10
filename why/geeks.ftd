@@ -487,12 +487,29 @@ is because `lib.rfc`
 lang: ftd
 
 \-- lib.rfc: RFC-4: Incremental Build
+id: 0004-incremental-build
+status: accepted
+
+In this RFC we propose persisting build metadata on every
+`fastn build`. This will enable as to only rebuild only
+the minimum number of files needed in the output directory,
+and will significantly cut down build time.
+
 
 -- ds.markdown:
 
 Is not just a symantically clearer replacement for `#`, [`lib.rfc` is a
-component](https://github.com/fastn-stack/fastn.com/blob/main/rfcs/lib.ftd#L3-L52):
+component](https://github.com/fastn-stack/fastn.com/blob/main/rfcs/lib.ftd#L3-L52).
 
+This is how it looks when rendered:
+
+-- ds.image:
+src: $assets.files.images.rfc.png
+
+-- ds.markdown:
+
+Notice how the "This is a RFC document" note is not in the source listed above,
+it is added by the "component":
 
 -- ds.code:
 lang: ftd
@@ -553,7 +570,27 @@ made components, eg `ds.page`, `ds.h2`, `note.note` etc.
 
 This is really powerful, and we believe non developers can learn to write such
 components with a short amount of training, and create really rich, domain
-driven documents.
+driven documents. If you would have used most other tools it would have required
+intervention from developers. Using the same (and a really easy) language to
+author content and create components makes this possible for non developers to
+do it themselves.
+
+-- ds.h2: Indentation?
+
+One of the things we have tried to do is to make sure syntax is such that most
+of the documents do not require indentation. Programming is hard enough, but
+trying to program on an editor that is not designed for programming, an
+indentation aware editor, is almost complete torture.
+
+We are on a mission to make programming accessible to billions of people, and
+we see liberal use of indentation as a hurdle.
+
+A note: fastn language has two "modes", p-script and f-script, what you have
+seen so far is `p-script`, and `f-script` is used in function bodies. We have
+not seen user defined functions yet. Trivial `f-script` too you can write
+without indentation, but inside `if` blocks etc, indentation is un-avoidable,
+and is allowed, rather recommended.
+
 
 -- ds.h1: Variables, Mutability and Bindings
 
@@ -561,7 +598,7 @@ So we have done some work on making the syntax easy on eyes. The other notable
 thing we are trying to do is making data flows managed by the compiler. Let's
 take an example:
 
--- ds.code:
+-- ds.code: `foo.ftd`
 lang: ftd
 
 \-- integer x: 10
@@ -576,10 +613,94 @@ In this example we have created a new variable `x` or type
 [`ftd.integer`](/integer/), a ["kernel component"](/kernel/), to display it's
 value in the document.
 
+The variable `x` is a module global variable. Module is a single `ftd` file.
+You can access this variable in current module using `$x` syntax. You can access
+this variable from other modules by importing this module and using
+`$<module-alias>.x` syntax.
+
+-- ds.h2: Variables Are Only "Created" If Accessed
+
+In most languages if you define a variable, it is always created. In `fastn` we
+do an analysis of the program and create a variable only when it is accessed
+somewhere by the UI.
+
+-- ds.h2: The "main" Module
+
+The `ftd.integer` is a UI component, and it is being created in module context.
+
+At any time one of the modules is being rendered, and that module is considered
+the "main module".
+
+If we are rendering `foo.ftd`, e.g. by accessing `/foo/` we do folder based
+routing (we also do [dynamic routing](/dynamic-urls/) and [custom
+routes](/custom-url/) etc btw), the "module level UI" `ftd.integer` would be
+constructed, and since that is the only module level UI, that is only UI user
+will see on `/foo/`.
+
+If we import `foo` from another module, say `bar.ftd`, the `ftd.integer` being
+a module level UI would not be visible (we will not evaluate it at all), and
+`foo.x` may or may not be created, depending if module level UI of `bar` used
+`foo.x` or not.
+
+-- ds.code: `bar`
+lang: ftd
+
+\-- import: <package-name>/foo
+
+\-- ftd.text: hello world
+padding.px: $foo.x ;; <hl>
+
+-- ds.markdown:
+
+In this example we have used `foo.x` so `foo.x` would be constructed. If
+we comment out the highlighted line, `foo.x` would not be.
+
+Also since `foo` is not the "main module", the module level UI, `ftd.integer` in
+line number 3 of `foo.ftd` would also not be constructed.
+
+-- ds.h2: Mutable Variables
+
+All variables in `fastn` are "static" variables by default, they can not be
+changed.
+
+But a prelude on lifecycle of a page first.
+
+-- ds.h2: Lifecycle Of A Page
+
+`fastn` runs in either dynamic mode, where you run `fastn serve` on your server,
+or your laptop, which is usually what you will do during development, in this
+mode, every time a route is accessed, it will be rendered. We can also use
+`fastn` in static mode, we run `fastn build` and it generates a folder `.build`
+containing HTML/CSS/JS files you can deploy on any static hosting service.
+
+You are recommended to use static mode if your application allows as it is
+usually faster, requires lesser maintenance, is cheaper to host etc. But if
+you are [fetching dynamic data from external APIs](/http/), [database](/sql/)
+etc when rendering the page, you will want to host in dynamic mode.
+
+Anyways, coming back to lifecycle, in either mode, HTML/CSS/JS is prepared from
+`ftd` files, and handed over to browser, and once a page is loaded, event
+handlers are registered, and users can start interacting with the document, and
+those event handlers can modify the module variables.
+
+But they can not mutate a varible unless the variable is defined as mutable.
+
+-- ds.h2: Declaring a mutable variable
+
+-- ds.code:
+lang: ftd
+
+\;; non mutable variable
+\-- integer x: 10
+
+\;; mutable variable: $ prefix in declaration =>  mutable
+\-- integer $y: 20
+
+-- ds.markdown:
 
 
 
-
+asd
 
 
 
