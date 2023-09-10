@@ -9,14 +9,11 @@ will enable as to only rebuild only the minimum number of files needed in the
 output directory, and will significantly cut down build time.
 
 
-
 -- lib.motivation:
 
 Current we rebuild every document present in current package, and recreate
 entire `.build` folder. If we have cache metadata about the previous, we can do
 incremental build, and achieve much faster builds.
-
--- end: lib.motivation
 
 
 
@@ -87,7 +84,6 @@ the content of the `.build` folder, later being much bigger.
 
 
 
-
 -- lib.teaching-notes:
 
 The feature itself requires no training as this is an internal optimisation.
@@ -97,16 +93,11 @@ be updating our fastn-template Github Action to include build caching. We will
 also have to write blog post on how to enable build caching on Vercel, and other
 hosting providers who give caching.
 
--- end: lib.teaching-notes
-
-
 
 
 -- lib.unresolved-questions:
 
-List unresolved questions here.
-
--- end: lib.unresolved-questions
+There are no known unresolved questions right now.
 
 
 

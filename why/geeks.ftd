@@ -384,6 +384,176 @@ technically precise).
 
 Tiny feature to remove boilerplate that bit.
 
+-- ds.h2: Domain Drive Documentation
+
+One of the dificiencies of using markdown is over reliance on headings to
+structure the document. Everything is a blob of text, where heading levels
+function only as visual cues. There is no semantics to `h1`, `h2` etc, beyond
+`h1` is usually displayed larger than `h2`, or h2 is meant to be child of `h1`.
+
+We have given up on `#` to represent `h1`, `##` for `h2` and so on. We are
+markdown without `heading`, and we instead recommend the `-- h1:` syntax. Why?
+So people have to learn one less syntax, but more importantly that you start
+considering using more meaningful symbols when needed.
+
+Consider our [RFCs documents](/rfcs/), let's look at the source one of our RFCs:
+
+-- ds.code:
+lang: ftd
+
+\-- import: fastn.com/rfcs/lib
+
+\-- lib.rfc: RFC-4: Incremental Build
+id: 0004-incremental-build
+status: accepted
+
+In this RFC we propose persisting build metadata on every
+`fastn build`. This will enable as to only rebuild only
+the minimum number of files needed in the output directory,
+and will significantly cut down build time.
+
+
+\-- lib.motivation:
+
+Current we rebuild every document present in current package,
+and recreate entire `.build` folder. If we have cache metadata
+about the previous, we can do incremental build, and achieve
+much faster builds.
+
+
+\-- lib.detailed-design:
+
+We will create a new cache data, `build-cache.json`, which will
+contain the following information:
+
+.. rest of detailed design omitted ..
+
+\-- lib.teaching-notes:
+
+The feature itself requires no training as this is an internal
+optimisation.
+
+Confiruing CI systems to preserve build cache across builds is
+required. We will be updating our fastn-template Github Action
+to include build caching. We will also have to write blog post
+on how to enable build caching on Vercel, and other hosting
+providers who give caching.
+
+
+\-- lib.unresolved-questions:
+
+There are no known unresolved questions right now.
+
+
+\-- end: lib.rfc
+
+-- ds.markdown:
+
+If you see a similar RFC in Rust, say [default private
+visibility](https://raw.githubusercontent.com/rust-lang/rfcs/master/text/0001-private-fields.md),
+
+-- ds.code:
+lang: md
+
+- Start Date: 2014-03-11
+- RFC PR: [rust-lang/rfcs#1](https://github.com/rust-lang/rfcs/pull/1)
+- Rust Issue: [rust-lang/rust#8122](https://github.com/rust-lang/rust/issues/8122)
+
+# Summary
+
+This is an RFC to make all struct fields private by default.
+This includes both tuple structs and structural structs.
+
+# Motivation
+
+Reasons for default private visibility..
+
+-- ds.markdown:
+
+Everything is a heading.
+
+It is rather hard to extract information out of markdown, you will have to write
+code to make sense of the headings, you will have to hope people are using the
+headings correctly etc.
+
+When using `fastn` you can create components eg `lib.motivation`, and you know
+that this must be the motivation.
+
+Further if you look at [rendered version of RFC](/rfc/incremental-build/) you
+will see it contains more text than what is written in the rfc source code, this
+is because `lib.rfc`
+
+-- ds.code:
+lang: ftd
+
+\-- lib.rfc: RFC-4: Incremental Build
+
+-- ds.markdown:
+
+Is not just a symantically clearer replacement for `#`, [`lib.rfc` is a
+component](https://github.com/fastn-stack/fastn.com/blob/main/rfcs/lib.ftd#L3-L52):
+
+
+-- ds.code:
+lang: ftd
+
+\-- component rfc:
+\;; the title of the RFC
+caption title:
+\;; each rfc should have a unique slug
+string id:
+\;; short summary of the RFC
+body short:
+\;; possible values: proposal, accepted, rejected and
+\;; open-questions. `open-questions` means RFC has been
+\;; reviewed, but some open questions have been found
+\;; and RFC has to be updated. Once RFC has been updated
+\;; it can go back to `proposal` state.
+string status: proposal
+children c:
+
+\-- ds.page: $rfc.title
+
+$rfc.short
+
+\-- note.note: This is a RFC document
+
+This document exists to describe a proposal for enhancing the
+`fastn` language. This is a Request For Comment. Please share
+your comments by posting them in the pull request for this RFC
+if this RFC is not merged yet. If the RFC is merged, you can
+post comment on our [official
+Discord](https://fastn.com/discord/), or open a [discussion on
+Github](https://github.com/orgs/fastn-stack/discussions).
+
+.. snip ..
+
+\-- ds.h2: Status
+
+$rfc.status
+
+
+
+\-- ftd.column:
+width: fill-container
+children: $rfc.c
+
+\-- end: ftd.column
+
+\-- end: ds.page
+
+\-- end: rfc
+
+
+-- ds.markdown:
+
+This allowed us to show the information in a better way than what markdown would
+have allowed. As you can see we have created a component and used other ready
+made components, eg `ds.page`, `ds.h2`, `note.note` etc.
+
+This is really powerful, and we believe non developers can learn to write such
+components with a short amount of training, and create really rich, domain
+driven documents.
 
 -- ds.h1: Variables, Mutability and Bindings
 
