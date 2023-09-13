@@ -87,7 +87,7 @@ update_path() {
     if ! grep -qF "export PATH=\"\$PATH:${DESTINATION_PATH}\"" "$shell_config_file"; then
         if [ -w "$shell_config_file" ]; then
             # Add the destination path to the PATH variable in the shell config file
-            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file"
+            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file" &&
             log_message "✔ Updated the PATH variable in $shell_config_file"
         else
             # Display an error message if the shell config file is not writable
