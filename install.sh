@@ -89,19 +89,19 @@ update_path() {
     if ! grep -qF "export PATH=\"\$PATH:${DESTINATION_PATH}\"" "$shell_config_file"; then
         if [ -w "$shell_config_file" ]; then
             # Add the destination path to the PATH variable in the shell config file
-            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file"
-             # Check if 'fastn' command exists
-            if ! command_exists fastn; then
-                log_error "Failed to add '${DESTINATION_PATH}' to PATH."
-                return 1
-            fi
+            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file" &&
             log_message "✔ Updated the PATH variable in $shell_config_file"
-            return 0
         else
             # Display an error message if the shell config file is not writable
             log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
-            return 1
         fi
+    fi
+
+    # Check if 'fastn' command exists
+    if ! command_exists fastn; then
+        return 1
+    else 
+        return 0
     fi
 }
 
@@ -165,7 +165,7 @@ setup() {
         chmod +x "${DESTINATION_PATH}/fastn"*
 
         log_message "✔ Successfully moved binaries to destination $DESTINATION_PATH"
-    
+
         if update_path; then
             log_message "╭────────────────────────────────────────╮"
             log_message "│                                        │"
