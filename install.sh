@@ -83,23 +83,25 @@ update_path() {
         shell_config_file="${HOME}/.profile"
     fi
 
+    echo ""
+
     # Check if the path is already added to the shell config file
     if ! grep -qF "export PATH=\"\$PATH:${DESTINATION_PATH}\"" "$shell_config_file"; then
         if [ -w "$shell_config_file" ]; then
             # Add the destination path to the PATH variable in the shell config file
-            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file" &&
+            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file"
+             # Check if 'fastn' command exists
+            if ! command_exists fastn; then
+                log_error "Failed to add '${DESTINATION_PATH}' to PATH."
+                return 0
+            fi
             log_message "✔ Updated the PATH variable in $shell_config_file"
+            return 1
         else
             # Display an error message if the shell config file is not writable
             log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
             return 1
         fi
-    fi
-
-    # Check if 'fastn' command exists
-    if ! command_exists fastn; then
-        log_error "fastn could not be installed."
-        return 1
     fi
 }
 
