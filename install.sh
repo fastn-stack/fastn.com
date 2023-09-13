@@ -59,6 +59,20 @@ print_fastn_logo() {
     echo "    ......         .:^~~^:.   .....         .:^~!!~^:.             .:^~~^..   ......        ......  ${FMT_RESET}"
 }
 
+# Function for logging informational messages
+log_message() {
+    echo "${FMT_GREEN}$1${FMT_RESET}"
+}
+
+# Function for logging error messages
+log_error() {
+    echo "${FMT_RED}ERROR:${FMT_RESET} $1"
+}
+
+command_exists() {
+  command -v "$@" >/dev/null 2>&1
+}
+
 update_path() {
     local shell_config_file
     if [ -n "$ZSH_VERSION" ]; then
@@ -71,14 +85,22 @@ update_path() {
 
     # Check if the path is already added to the shell config file
     if ! grep -qF "export PATH=\"\$PATH:${DESTINATION_PATH}\"" "$shell_config_file"; then
-        echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file"
-        echo "Updated the PATH variable in $shell_config_file"
-        echo "Please restart your terminal session to start using fastn."
+        if [ -w "$shell_config_file" ]; then
+            # Add the destination path to the PATH variable in the shell config file
+            echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file"
+            log_message "✔ Updated the PATH variable in $shell_config_file"
+        else
+            # Display an error message if the shell config file is not writable
+            log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
+            return 1
+        fi
     fi
-}
 
-command_exists() {
-  command -v "$@" >/dev/null 2>&1
+    # Check if 'fastn' command exists
+    if ! command_exists fastn; then
+        log_error "'fastn' is not installed or not in PATH. Please install 'fastn' first."
+        return 1
+    fi
 }
 
 setup() {
@@ -88,27 +110,38 @@ setup() {
     while [ $# -gt 0 ]; do
         case $1 in
             --pre-release) PRE_RELEASE=true ;;
-            --controller) CONTROLLER=true;;
+            --controller) CONTROLLER=true ;;
         esac
     shift
     done
 
+    echo ""
+
     if [[ $PRE_RELEASE ]]; then
         URL="https://api.github.com/repos/fastn-stack/fastn/releases"
-        echo "Downloading the latest pre-release binaries"
+        log_message "Downloading the latest pre-release binaries"
     else
         URL="https://api.github.com/repos/fastn-stack/fastn/releases/latest"
-        echo "Downloading the latest production ready binaries"
+        log_message "Downloading the latest production ready binaries"
     fi
 
     DESTINATION_PATH="/usr/local/bin"
 
-    if [ -d "$DESTINATION_PATH" ]; then
+    if [ -d "$DESTINATION_PATH" ] && [ -w "$DESTINATION_PATH" ]; then
         DESTINATION_PATH=$DESTINATION_PATH
     else
         DESTINATION_PATH="${HOME}/.fastn/bin"
         mkdir -p $DESTINATION_PATH
     fi
+
+    # remove temporary files from previous install attempts
+    rm -f fastn_macos_x86_64 fastn_linux_musl_x86_64 fastn_controller_linux_musl_x86_64
+
+    echo ""
+
+    log_message "✔ Removed temporary files"
+
+    echo ""
 
     if [[ $CONTROLLER ]]; then 
         curl -# -L "$URL" | grep ".*\/releases\/download\/.*\/fastn_controller_linux.*" | head -2 | cut -d : -f 2,3 | tee /dev/tty | xargs -I % curl -# -O -J -L % > /dev/null
@@ -123,25 +156,30 @@ setup() {
         mv fastn_linux_musl_x86_64.d "${DESTINATION_PATH}/fastn.d"
     fi
 
-
     echo ""
 
-    chmod +x "${DESTINATION_PATH}/fastn"*
+    # Check if the destination files are moved successfully before setting permissions
+    if [[ -e "${DESTINATION_PATH}/fastn" ]]; then
+        chmod +x "${DESTINATION_PATH}/fastn"*
 
-    # Add fastn to PATH if not already done
-    update_path
-
-    echo "${FMT_GREEN}╭────────────────────────────────────────╮"
-    echo "│                                        │"
-    echo "│   fastn installation completed         │"
-    echo "│                                        │"
-    echo "│   Restart your terminal to apply       │"
-    echo "│   the changes.                         │"
-    echo "│                                        │"
-    echo "│   Get started with fastn at:           │"
-    echo "│   ${FMT_BLUE}https://fastn.com${FMT_RESET}${FMT_GREEN}                    │"
-    echo "│                                        │"
-    echo "╰────────────────────────────────────────╯${FMT_RESET}"
+        log_message "✔ Successfully moved binaries to destination $DESTINATION_PATH"
+    
+        if update_path; then
+            log_message "╭────────────────────────────────────────╮"
+            log_message "│                                        │"
+            log_message "│   fastn installation completed         │"
+            log_message "│                                        │"
+            log_message "│   Restart your terminal to apply       │"
+            log_message "│   the changes.                         │"
+            log_message "│                                        │"
+            log_message "│   Get started with fastn at:           │"
+            log_message "│   ${FMT_BLUE}https://fastn.com${FMT_RESET}                    │"
+            log_message "│                                        │"
+            log_message "╰────────────────────────────────────────╯"
+        fi
+    else
+        log_error "Installation failed. Please check if you have sufficient permissions to install in $DESTINATION_PATH."
+    fi
 }
 
 main() {
