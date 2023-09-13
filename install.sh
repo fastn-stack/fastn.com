@@ -172,7 +172,7 @@ setup() {
             log_message "│   ${FMT_BLUE}https://fastn.com${FMT_RESET}                    │"
             log_message "│                                        │"
             log_message "╰────────────────────────────────────────╯"
-        else
+        fi
     else
         log_error "Installation failed. Please check if you have sufficient permissions to install in $DESTINATION_PATH."
     fi
