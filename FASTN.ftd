@@ -504,6 +504,10 @@ favicon: /-/fastn.com/images/favicon.svg
 - Redirects: /redirects/
   document: backend/redirects.ftd
 
+## Sections: /sections/
+document: /featured/new-sections.ftd
+skip: true
+
 ## Featured Templates: /featured/
 - Designers: /featured/contributors/designers/
 skip: true
