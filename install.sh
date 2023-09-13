@@ -91,18 +91,11 @@ update_path() {
             # Add the destination path to the PATH variable in the shell config file
             echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file" &&
             log_message "✔ Updated the PATH variable in $shell_config_file"
+            return 0
         else
             log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
             return 1
         fi
-    fi
-
-    # Check if 'fastn' command exists
-    if ! command_exists fastn; then
-        log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
-        return 1
-    else 
-        return 0
     fi
 }
 
@@ -167,7 +160,9 @@ setup() {
 
         log_message "✔ Successfully moved binaries to destination $DESTINATION_PATH"
 
-        if update_path; then
+        update_path
+
+        if command_exists fastn; then
             log_message "╭────────────────────────────────────────╮"
             log_message "│                                        │"
             log_message "│   fastn installation completed         │"
@@ -179,6 +174,8 @@ setup() {
             log_message "│   ${FMT_BLUE}https://fastn.com${FMT_RESET}                    │"
             log_message "│                                        │"
             log_message "╰────────────────────────────────────────╯"
+        else
+            log_error "Installation failed."
         fi
     else
         log_error "Installation failed. Please check if you have sufficient permissions to install in $DESTINATION_PATH."
