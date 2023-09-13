@@ -160,9 +160,7 @@ setup() {
 
         log_message "✔ Successfully moved binaries to destination $DESTINATION_PATH"
 
-        update_path
-
-        if command_exists fastn; then
+        if update_path; then
             log_message "╭────────────────────────────────────────╮"
             log_message "│                                        │"
             log_message "│   fastn installation completed         │"
@@ -175,8 +173,6 @@ setup() {
             log_message "│                                        │"
             log_message "╰────────────────────────────────────────╯"
         else
-            log_error "Installation failed."
-        fi
     else
         log_error "Installation failed. Please check if you have sufficient permissions to install in $DESTINATION_PATH."
     fi
