@@ -99,7 +99,7 @@ update_path() {
 
     # Check if 'fastn' command exists
     if ! command_exists fastn; then
-        log_error "Failed to add '${DESTINATION_PATH}' to PATH."
+        log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
         return 1
     else 
         return 0
