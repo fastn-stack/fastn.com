@@ -92,13 +92,14 @@ update_path() {
             echo "export PATH=\"\$PATH:${DESTINATION_PATH}\"" >> "$shell_config_file" &&
             log_message "✔ Updated the PATH variable in $shell_config_file"
         else
-            # Display an error message if the shell config file is not writable
             log_error "Failed to add '${DESTINATION_PATH}' to PATH. Insufficient permissions for '$shell_config_file'."
+            return 1
         fi
     fi
 
     # Check if 'fastn' command exists
     if ! command_exists fastn; then
+        log_error "Failed to add '${DESTINATION_PATH}' to PATH."
         return 1
     else 
         return 0
