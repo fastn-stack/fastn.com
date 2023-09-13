@@ -98,7 +98,7 @@ update_path() {
 
     # Check if 'fastn' command exists
     if ! command_exists fastn; then
-        log_error "'fastn' is not installed or not in PATH. Please install 'fastn' first."
+        log_error "fastn could not be installed."
         return 1
     fi
 }
