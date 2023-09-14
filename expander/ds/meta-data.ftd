@@ -161,7 +161,7 @@ tags `og-title` and `twitter-title` as well as the `<title>` tag.
 lang: ftd
 
 \-- ds.page: This is page title
-document-title: Welcome!	 		;;<hl>
+document-title: Welcome!	 		;; <hl>
 
 
 -- ds.markdown:
