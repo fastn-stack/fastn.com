@@ -41,11 +41,11 @@ screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm.jpg
 
 -- ft-ui.template: Midnight-rush-logo
 template-url: https://fastn-community.github.io/midnight-rush-logo/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-logo.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-logo.png
 
 -- ft-ui.template: Midnight-storm-logo
 template-url: https://fastn-community.github.io/midnight-storm-logo/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-logo.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-logo.png
 
 -- end: logos
 
@@ -55,11 +55,11 @@ screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-logo
 
 -- ft-ui.template: Midnight-rush-testimonial
 template-url: https://fastn-community.github.io/midnight-rush-testimonial/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-testimonial.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-testimonial.png
 
 -- ft-ui.template: Midnight-storm-testimonial
 template-url: https://fastn-community.github.io/midnight-storm-testimonial/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-testimonial.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-testimonial.png
 
 -- end: testimonials
 
@@ -68,11 +68,11 @@ screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-test
 
 -- ft-ui.template: Midnight-rush-features
 template-url: https://fastn-community.github.io/midnight-rush-features/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-features.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-features.png
 
 -- ft-ui.template: Midnight-storm-features
 template-url: https://fastn-community.github.io/midnight-storm-features/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-features.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-features.png
 
 -- end: features
 
@@ -81,10 +81,10 @@ screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-feat
 
 -- ft-ui.template: Midnight-rush-faqs
 template-url: https://fastn-community.github.io/midnight-rush-faqs/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-faqs.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-rush-faqs.png
 
 -- ft-ui.template: Midnight-storm-faqs
 template-url: https://fastn-community.github.io/midnight-storm-faqs/
-screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-faqs.jpg
+screenshot: $fastn-assets.files.images.featured.new-sections.midnight-storm-faqs.png
 
 -- end: faqs
