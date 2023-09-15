@@ -11,7 +11,7 @@ templates: $heros
 templates: $logos
 
 -- ft-ui.grid-view: Testimonials
-templates: testimonials
+templates: $testimonials
 
 -- ft-ui.grid-view: Features
 templates: $features
