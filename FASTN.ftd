@@ -906,6 +906,9 @@ skip: true
   - 4: Incremental Build
     url: /rfc/incremental-build/
     document: rfcs/0004-incremental-build.ftd
+  - 5: `ftd.space` and `ftd.empty`
+    url: /rfc/ftd-space/
+    document: rfcs/0005-ftd-space.ftd
 - Architecture: /architecture/
   document: d/architecture.ftd
   - `ftd` crate 🚧: /ftd-crate/
