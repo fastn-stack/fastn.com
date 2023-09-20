@@ -883,7 +883,7 @@ lang: ftd
 \-- boolean $show: false
 
 \-- ftd.text: hello
-if: $show
+if: { show }
 
 .. some other UI that toggles `show`
 
