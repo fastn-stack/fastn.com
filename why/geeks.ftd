@@ -915,7 +915,7 @@ lang: ftd
 \-- show-person: $p
 for: p in $people
 
-.. some UI that mutates $peope
+.. some UI that mutates $people
 
 -- ds.markdown:
 
