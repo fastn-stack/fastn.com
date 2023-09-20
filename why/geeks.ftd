@@ -859,8 +859,8 @@ updates), and every bit of UI dependent on `y` is updated.
 join us in fixing them).
 
 If you try to mutate a non mutable variable, or a formula you get a compiler
-error. Otherwise the variable get's mutated and UI get's auto updated, doing
-the minimum (hopefull, wip, etc) amount of DOM modifications as possible.
+error. Otherwise the variable gets mutated and UI gets auto updated, doing
+the minimum (hopefully, wip, etc) amount of DOM modifications as possible.
 
 
 -- ds.h2: It's Only Variables
@@ -1435,7 +1435,7 @@ theme: implementer
 
 Now we are using our implementer of the module interface, and passing the module
 itself as a parameter to `foo`. Now when `foo` calls `foo.theme.yo`, the
-`implementer.yo` get's called.
+`implementer.yo` gets called.
 
 If two modules implement same module interface, they are interchangable. And
 this is the last trick to achieve the drastic design change without modifying
