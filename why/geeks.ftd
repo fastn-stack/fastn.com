@@ -920,7 +920,7 @@ for: p in $people
 -- ds.markdown:
 
 Here too we will auto update the DOM if `$people` changes, if an element is
-added or remove, it's corresponding DOM will be added or removed.
+added or removed, it's corresponding DOM will be added or removed.
 
 
 -- ds.h2: Processors
