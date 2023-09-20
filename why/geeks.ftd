@@ -1246,7 +1246,7 @@ role: $inherited.types.heading-medium
 -- ds.markdown:
 
 We are using the `heading-medium` "role" for our `ftd.integer` type, and this
-is "plucked" from "inherited" properties. Inerited stuff are inherited from
+is "plucked" from "inherited" properties. Inherited stuff are inherited from
 parent to child, a bit like CSS inheritance. At near the top level of your DOM
 tree you set the `ftd.type-data` for your application, or you can even do it for
 a branch in your UI tree, and you do not have to pass the property around, and
