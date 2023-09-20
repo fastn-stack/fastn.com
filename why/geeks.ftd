@@ -889,8 +889,8 @@ if: { show }
 
 -- ds.markdown:
 
-`fastn` will watch for when the condition, and when it changes the `ftd.text`
-node will added or removed from the DOM. Similarly if we have a list:
+`fastn` will watch for when the condition gets changed, and when it changes the
+`ftd.text` node will added or removed from the DOM. Similarly if we have a list:
 
 -- ds.code:
 lang: ftd
