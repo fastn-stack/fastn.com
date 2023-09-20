@@ -913,7 +913,7 @@ We can loop over this loop using:
 lang: ftd
 
 \-- show-person: $p
-for: $people as $p
+for: p in $people
 
 .. some UI that mutates $peope
 
