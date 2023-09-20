@@ -1360,7 +1360,7 @@ components themselves, with just three lines of code change.
 
 -- ds.h2: Module Interface
 
-The color and typgraphy change happened because well they are using our
+The color and typography change happened because well they are using our
 universal design system. But how did the component layout etc change?
 
 This is achievable by CSS to some extent, but at one time [CSS Zen
