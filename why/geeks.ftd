@@ -684,7 +684,7 @@ and once a page is loaded, event handlers are registered (they "hydration"
 phase), and then users can start interacting with the document, and those event
 handlers can modify variables.
 
-But they can not mutate a varible unless the variable is defined as mutable.
+But they can not mutate a variable unless the variable is defined as mutable.
 
 -- ds.h2: Declaring a mutable variable
 
