@@ -725,7 +725,7 @@ was static, we do not need it's value as the value would have been used in the
 server rendered HTML already. Along with value we also send the component
 definitions. Say a variable is a list, and for every element of the list a
 component is invoked, we have to send the definition of the component to browser
-only if the list is not static, for static list the HTML is suffecient.
+only if the list is not static, for static list the HTML is sufficient.
 
 Please note that some of we are saying here is work in progress, this is more of
 how we want the language to be in `1.0`, and not necessarily how it is in
