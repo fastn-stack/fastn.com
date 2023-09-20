@@ -867,9 +867,9 @@ the minimum (hopefully, wip, etc) amount of DOM modifications as possible.
 
 It is not possible in `fastn` to query or access UI in any way. Document
 contains variables. Components also contains variables. You can mutate or read
-variables, but not UI. UI just exits and responds to data in variables.
+variables, but not UI. UI just exists and responds to data in variables.
 
-In future we will make data about the components heirarchy queryable, e.g. how
+In future we will make data about the components hierarchy queryable, e.g. how
 many instances of component `foo` exists in current page, or in a given DOM tree
 branch etc. For now we are thinking about it, not yet sure if it is a good idea.
 
