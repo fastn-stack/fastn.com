@@ -1447,7 +1447,7 @@ Everything we discussed so far makes `fastn` a decent alternative for static
 websites, your non tech team can easily update the website unlike if it was
 built with React etc, you do not have to worry about CMS or tweak things in
 WYSWYG editors like Webflow/Wix. If you use `fastn` you can use Github (or
-whatever you prefer) to colaborate with your team, use your favorite editor,
+whatever you prefer) to collaborate with your team, use your favorite editor,
 use your favorite hosting provider, use CI, etc etc.
 
 But from day one we have wanted to make `fastn` a full stack application server.
@@ -1470,7 +1470,7 @@ on. But say if you are building your own Twitter, now X, you would want URLs
 like `https://twitter.com/amitu`, which follows the pattern
 `twitter.com/<username>` to all be handled by same logic.
 
-You can do something like this by using `fastn`'s [`dynmaic-url`](/dynamic-urls/)
+You can do something like this by using `fastn`'s [`dynamic-url`](/dynamic-urls/)
 feature.
 
 In your `FASTN.ftd` you add something like this:
