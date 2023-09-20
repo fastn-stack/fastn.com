@@ -694,7 +694,7 @@ lang: ftd
 \;; non mutable variable
 \-- integer x: 10
 
-\;; mutable variable: $ prefix in declaration =>  mutable
+\;; mutable variable: $ prefix in declaration => mutable
 \-- integer $y: 20
 
 -- ds.markdown:
