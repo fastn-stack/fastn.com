@@ -1,66 +1,18 @@
--- import: fastn-community.github.io/spectrum-ds as ds
--- import: fastn-community.github.io/spectrum-ds/common
--- import: fastn-community.github.io/footer
--- import: fastn-community.github.io/dark-flame-cs
--- import: fifthtry.github.io/fastn-io-typography as typo
+-- import: fastn.com/u/jay-kumar
+-- import: fastn.com/u/ganesh-salunke
 -- import: fastn.com/featured as ft-ui
 
-
-
-
--- ds.page:
-show-footer: true
-site-logo: $fastn-assets.files.images.fastn.svg
-site-name: NULL
-logo-height: 38
-logo-width: 120
-colors: $dark-flame-cs.main
-types: $typo.types
-github-icon: true
-github-url: https://github.com/fastn-stack/fastn
-full-width: true
-distribution-bar: true
-full-width-bar: true
-
--- ds.page.footer:
-
--- footer.social-sideline-footer:
-social: true
-site-logo: $fastn-assets.files.images.fastn.svg
-site-url: /
-twitter-url: https://twitter.com/FifthTryHQ
-discord-url: https://discord.gg/bucrdvptYd
-copyright: Copyright © 2023 - [FifthTry.com](https://www.fifthtry.com/)
-
--- end: ds.page.footer
-
--- ds.page.abstract-bar:
-
--- ds.distributors: Simple Blog
-owners: $owner-fastn
+-- ds.featured-category: Simple Blog
+featured-link: /featured/blogs/
+category: Blogs
+image: $fastn-assets.files.images.featured.blog.simple-blog.png
+owners: [$jay-kumar.info, $ganesh-salunke.info]
 license-url: https://github.com/FifthTry/dash-dash-ds/blob/main/LICENSE
 license: Creative Commons
 published-date: 24-Jun-2022
-
--- end: ds.page.abstract-bar
-
--- ds.page.full-width-wrap:
-
--- ft-ui.grid-view: Featured Blog Templates
-templates: $blog-sites
-more-link-text: View more
-more-link: /featured/blog-templates/
-show-large: true
-
--- end: ds.page.full-width-wrap
-
--- ds.preview-card:
-image: $fastn-assets.files.images.featured.blog.simple-blog.png
-cta-url: https://fifthtry.github.io/simple-blog/posts/
-cta-text: Demo
-github-url: https://github.com/FifthTry/simple-blog
-
--- end: ds.page
+cards: $blog-sites
+github-url: https://github.com/FifthTry/simple-blog/
+demo-link: https://fifthtry.github.io/simple-blog/posts/
 
 
 
@@ -68,9 +20,9 @@ github-url: https://github.com/FifthTry/simple-blog
 
 -- ft-ui.template list blog-sites:
 
--- ft-ui.template: Simple Site
-template-url: featured/blogs/doc-site/
-screenshot: $fastn-assets.files.images.featured.blog.doc-site-blog.png
+-- ft-ui.template: Midnight Storm
+template-url: featured/blogs/ms-blog/
+screenshot: $fastn-assets.files.images.featured.blog.midnight-storm.jpg
 
 -- ft-ui.template: Midnight Rush
 template-url: featured/blogs/mr-blog/
@@ -80,19 +32,8 @@ screenshot: $fastn-assets.files.images.featured.blog.midnight-rush-blog.jpg
 template-url: featured/blogs/mg-blog/
 screenshot: $fastn-assets.files.images.featured.blog.misty-gray.jpg
 
+-- ft-ui.template: Rocky
+template-url: featured/blogs/rocky/
+screenshot: $fastn-assets.files.images.featured.blog.rocky.png
+
 -- end: blog-sites
-
-
-
--- common.owner list owner-fastn:
-
--- common.owner: Jay Kumar
-profile: featured/contributors/designers/jay-kumar/
-role: Designer
-
--- common.owner: Ganesh Salunke
-profile: featured/contributors/developers/ganesh-salunke/
-avatar: $fastn-assets.files.featured.contributors.developers.ganesh-salunke.ganeshs.jpg
-role: Developer
-
--- end: owner-fastn
