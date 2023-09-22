@@ -43,7 +43,7 @@ spacing.fixed.px: 18
 
 -- ds.h3: `fastn` is the Gold Sponsor
 
--- ftd.image:
+/-- ftd.image:
 src: $assets.files.images.events.fastn-as-sponsor.png
 width.fixed.percent: 60
 border-radius.px: 15
