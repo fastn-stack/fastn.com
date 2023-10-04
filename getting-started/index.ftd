@@ -1,0 +1,239 @@
+-- ds.page:
+full-width: true
+sidebar: false
+
+-- featured-template: What do you want to build?
+cta-text: Build from Scratch
+cta-link: /
+templates: $templates
+
+Choose your use case, explore our readymade templates, and start building your
+product.
+
+-- specific: Need something specific?
+cta-text: Request a design
+cta-link: /
+
+ If you can't find the category you're looking for in the list, please request
+ it here.
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+-- component featured-template:
+caption title:
+body body:
+string cta-text:
+string cta-link:
+boolean $mouse-in: false
+template-image list templates:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 32
+border-bottom-width.px: 1
+padding-bottom.px: 32
+border-color: $inherited.colors.border
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 278
+padding-top.px: 37
+
+-- ftd.column:
+spacing.fixed.px: 4
+padding-bottom.px: 48
+
+-- ftd.text: $featured-template.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$featured-template.body
+
+-- end: ftd.column
+
+-- ftd.row:
+align-content: center
+background.solid: $inherited.colors.background.step-1
+background.solid if { featured-template.mouse-in }: $inherited.colors.hover
+$on-mouse-leave$: $ftd.set-bool($a = $featured-template.mouse-in, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $featured-template.mouse-in, v = true)
+padding-vertical.px: 12
+padding-horizontal.px: 24
+border-radius.px: 58
+spacing.fixed.px: 4
+link: $featured-template.cta-link
+color: $inherited.colors.text-strong
+role: $inherited.types.button-medium
+
+-- ftd.text: $featured-template.cta-text
+
+-- ftd.image:
+src: $fastn-assets.files.images.landing.arrow-icon.svg
+width.fixed.px: 18
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 32
+wrap: true
+
+-- template-image-list: $obj.title
+$loop$: $featured-template.templates as $obj
+src: $obj.src
+link: $obj.link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: featured-template
+
+
+
+
+
+
+
+
+-- component template-image-list: 
+caption title:
+ftd.image-src src:
+string link:
+
+-- ftd.column:
+width.fixed.px: 352
+spacing.fixed.px: 12
+cursor: pointer
+
+-- ftd.image:
+src: $template-image-list.src
+width.fixed.px: 350
+height.fixed.px: 215
+link: $template-image-list.link
+
+-- ftd.text: $template-image-list.title
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+
+-- end: ftd.column
+
+-- end: template-image-list
+
+
+
+
+
+
+
+
+
+
+
+-- component specific:
+caption title:
+body body:
+string cta-text:
+string cta-link:
+boolean $mouse-in: false
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 24
+padding-vertical.px: 32
+
+-- ftd.column:
+spacing.fixed.px: 4
+
+-- ftd.text: $specific.title
+role: $inherited.types.heading-medium
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$specific.body
+
+-- end: ftd.column
+
+-- ftd.row:
+align-content: center
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { specific.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-leave$: $ftd.set-bool($a = $specific.mouse-in, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $specific.mouse-in, v = true)
+padding-vertical.px: 12
+padding-horizontal.px: 24
+border-radius.px: 58
+spacing.fixed.px: 4
+link: $specific.cta-link
+color: $inherited.colors.text-strong
+role: $inherited.types.button-medium
+
+-- ftd.text: $specific.cta-text
+
+-- ftd.image:
+src: $fastn-assets.files.images.landing.arrow-icon.svg
+width.fixed.px: 18
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: specific
+
+
+
+
+
+
+
+
+
+
+
+
+-- record template-image:
+caption title:
+ftd.image-src src:
+string link: /
+
+-- template-image list templates:
+
+-- template-image: Documentation site
+link: /
+src: $fastn-assets.files.images.get-started.doc.png
+
+-- template-image: Blog Page
+link: getting-started/blog-page/
+src: $fastn-assets.files.images.get-started.blog.png
+
+-- template-image: Landing Page
+link: /
+src: $fastn-assets.files.images.get-started.landing.png
+
+-- template-image: Portfolio Site
+link: /
+src: $fastn-assets.files.images.get-started.portfolio.png
+
+-- template-image: Resume Page
+link: /
+src: $fastn-assets.files.images.get-started.resume.png
+
+-- end: templates

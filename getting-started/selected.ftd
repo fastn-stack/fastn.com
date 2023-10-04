@@ -1,0 +1,190 @@
+-- import: fastn.com/getting-started as lib
+
+-- ds.page:
+full-width: true
+sidebar: false
+
+-- selected-template: Selected Designs
+selected-templates: $selected-templates
+
+Choose your use case, explore our readymade templates, and start building your
+product.
+
+-- lib.featured-template: What do you want to build?
+cta-text: Build from Scratch
+cta-link: /
+templates: $lib.templates
+
+Choose your use case, explore our readymade templates, and start building your
+product.
+
+-- lib.specific: Need something specific?
+cta-text: Request a design
+cta-link: /
+
+ If you can't find the category you're looking for in the list, please request
+ it here.
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+-- component selected-template:
+caption title:
+body body:
+selected-template-image list selected-templates:
+
+-- ftd.column:
+width: fill-container
+spacing.fixed.px: 40
+border-bottom-width.px: 1
+padding-bottom.px: 40
+border-color: $inherited.colors.border
+
+-- ftd.column:
+spacing.fixed.px: 4
+
+-- ftd.text: $selected-template.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$selected-template.body
+
+-- end: ftd.column
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 48
+wrap: true
+
+-- selected-template-list: $obj.title
+$loop$: $selected-template.selected-templates as $obj
+src: $obj.src
+sub-title: $obj.sub-title
+link: $obj.link
+cta-text: $obj.cta-text
+cta-link: $obj.cta-link
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: selected-template
+
+
+
+
+
+
+
+
+-- component selected-template-list: 
+caption title:
+string sub-title:
+ftd.image-src src:
+string link:
+string cta-text:
+string cta-link:
+boolean $mouse-in: false
+
+-- ftd.column:
+width.fixed.px: 352
+spacing.fixed.px: 12
+cursor: pointer
+
+-- ftd.image:
+src: $selected-template-list.src
+width.fixed.px: 350
+height.fixed.px: 215
+link: $selected-template-list.link
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.column:
+spacing.fixed.px: 2
+
+-- ftd.text: $selected-template-list.title
+role: $inherited.types.button-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: $selected-template-list.sub-title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- ftd.row:
+align-content: center
+background.solid: $inherited.colors.background.step-1
+background.solid if { selected-template-list.mouse-in }: $inherited.colors.hover
+$on-mouse-leave$: $ftd.set-bool($a = $selected-template-list.mouse-in, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $selected-template-list.mouse-in, v = true)
+padding-vertical.px: 4
+padding-horizontal.px: 16
+border-radius.px: 58
+spacing.fixed.px: 4
+link: $selected-template-list.cta-link
+color: $inherited.colors.text-strong
+role: $inherited.types.button-medium
+
+-- ftd.text: $selected-template-list.cta-text
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: selected-template-list
+
+
+
+
+
+
+
+
+-- record selected-template-image:
+caption title:
+string sub-title:
+ftd.image-src src:
+string link: /
+string cta-text:
+string cta-link:
+
+-- selected-template-image list selected-templates:
+
+-- selected-template-image: Midnight rush blog
+sub-title: Documentation site
+link: /
+src: $fastn-assets.files.images.get-started.blog-temp.png
+cta-text: Remove
+cta-link: /
+
+-- selected-template-image: Midnight rush blog
+sub-title: Documentation site
+link: /
+src: $fastn-assets.files.images.get-started.blog-temp.png
+cta-text: Remove
+cta-link: /
+
+-- selected-template-image: Midnight rush blog
+sub-title: Documentation site
+link: /
+src: $fastn-assets.files.images.get-started.blog-temp.png
+cta-text: Remove
+cta-link: /
+
+-- end: selected-templates

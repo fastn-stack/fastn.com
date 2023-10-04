@@ -1,0 +1,365 @@
+-- import: fastn.com/featured as ft-ui
+
+-- ds.page:
+document-title: fastn | The Beginner-Friendly Full-Stack Framework
+document-description: Design, develop, and deploy stunning websites and web apps effortlessly. Easy-to-learn full-stack framework. No coding knowledge required. Start now!
+document-image: https://fastn.com/-/fastn.com/images/fastn-dot-com-og-image.jpg
+full-width: true
+sidebar: false
+
+-- ds.page.fluid-wrap:
+
+-- hero-section: Blog post page
+cta-text: View all designs
+cta-link: /
+image: $fastn-assets.files.images.get-started.simple-blog.png
+
+Fastn provides exhaustive frameworks to set up and  scale your project in
+minutes. Fastn provides exhaustive frameworks to set up and  scale your project
+in minutes.
+
+-- featured-design:
+
+-- business-card: Create and customize Business card in minutes
+icon: $fastn-assets.files.images.get-started.icon.svg
+image: $fastn-assets.files.images.get-started.card.png
+cta-text: View all designs
+cta-link: /
+
+Connect your TikTok, Instagram, Twitter, website, store, videos, music, podcast,
+events and more. It all comes together in a link in bio landing page designed
+to convert.
+
+-- template-cards:
+title-1: Simple
+sub-title-1: Start with one of dozens of templates (or a blank canvas) and make it your own
+image-1: $fastn-assets.files.images.get-started.template-1.png
+title-2: Free
+sub-title-2: Build up to three sites per account and use all of Carrd's core features – for free!
+image-2: $fastn-assets.files.images.get-started.template-1.png
+title-3: Light and dark theme
+sub-title-3: Connect your TikTok, Instagram, Twitter, website, store, videos, music,
+image-3: $fastn-assets.files.images.get-started.template-2.png
+
+-- end: ds.page.fluid-wrap
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+-- component hero-section:
+caption title:
+body body:
+string cta-text:
+string cta-link:
+ftd.image-src image:
+boolean $mouse-in: false
+
+-- ftd.row:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+align-content: center
+spacing: space-between
+
+-- ftd.column:
+width.fixed.percent: 50
+spacing.fixed.px: 24
+padding.px: 70
+
+-- ftd.column:
+spacing.fixed.px: 16
+
+-- ftd.text: $hero-section.title
+role: $inherited.types.heading-hero
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+$hero-section.body
+
+-- end: ftd.column
+
+-- ftd.row:
+align-content: center
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { hero-section.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-leave$: $ftd.set-bool($a = $hero-section.mouse-in, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $hero-section.mouse-in, v = true)
+padding-vertical.px: 12
+padding-horizontal.px: 24
+border-radius.px: 58
+spacing.fixed.px: 4
+link: $hero-section.cta-link
+color: $inherited.colors.text-strong
+role: $inherited.types.button-medium
+
+-- ftd.text: $hero-section.cta-text
+
+-- ftd.image:
+src: $fastn-assets.files.images.landing.arrow-icon.svg
+width.fixed.px: 18
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero-section.image
+height.fixed.px: 496
+fit: contain
+
+-- end: ftd.row
+
+-- end: hero-section
+
+
+
+
+
+
+
+
+
+-- component featured-design:
+
+-- ftd.column:
+width: fill-container
+;;align-content: center
+min-width.fixed.px: 1300
+padding-vertical.px: 112
+padding-horizontal.px: 70
+
+-- ft-ui.grid-view: Portfolio / Personal Sites
+templates: $portfolios
+more-link-text: View all 
+more-link: /featured/fonts/
+show-large: true
+
+-- end: ftd.column
+
+-- end: featured-design
+
+
+
+
+
+
+
+
+-- component business-card:
+caption title:
+body body:
+string cta-text:
+string cta-link:
+ftd.image-src icon:
+ftd.image-src image:
+boolean $mouse-in: false
+
+-- ftd.row:
+width: fill-container
+background.solid: $inherited.colors.custom.two
+align-content: center
+spacing.fixed.px: 74
+padding-vertical.px: 80
+
+-- ftd.image:
+src: $business-card.image
+height.fixed.px: 387
+fit: contain
+
+-- ftd.column:
+padding-right.px: 140
+width.fixed.px: 573
+spacing.fixed.px: 32
+
+-- ftd.image:
+src: $business-card.icon
+height.fixed.px: 67
+
+-- ftd.text: $business-card.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text:
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+$business-card.body
+
+-- ftd.row:
+align-content: center
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { business-card.mouse-in }: $inherited.colors.cta-primary.hover
+$on-mouse-leave$: $ftd.set-bool($a = $business-card.mouse-in, v = false)
+$on-mouse-enter$: $ftd.set-bool($a = $business-card.mouse-in, v = true)
+padding-vertical.px: 12
+padding-horizontal.px: 24
+border-radius.px: 58
+spacing.fixed.px: 4
+link: $business-card.cta-link
+color: $inherited.colors.text-strong
+role: $inherited.types.button-medium
+
+-- ftd.text: $business-card.cta-text
+
+-- ftd.image:
+src: $fastn-assets.files.images.landing.arrow-icon.svg
+width.fixed.px: 18
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: business-card
+
+
+
+
+
+
+
+
+
+
+-- component template-cards:
+string title-1:
+string title-2:
+string title-3:
+string sub-title-1:
+string sub-title-2:
+string sub-title-3:
+ftd.image-src image-1:
+ftd.image-src image-2:
+ftd.image-src image-3:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 128
+padding-horizontal.px: 140
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.image:
+src: $template-cards.image-1
+width.fixed.px: 580
+height.fixed.px: 433
+
+-- ftd.column:
+spacing.fixed.px: 32
+width.fixed.px: 580
+height.fixed.px: 433
+background.solid: $inherited.colors.background.step-1
+align-content: center
+padding-horizontal.px: 34
+
+-- ftd.text: $template-cards.title-1
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: $template-cards.sub-title-1
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.column:
+spacing.fixed.px: 32
+width.fixed.px: 580
+height.fixed.px: 433
+background.solid: $inherited.colors.background.step-1
+align-content: center
+padding-horizontal.px: 34
+
+-- ftd.text: $template-cards.title-2
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: $template-cards.sub-title-2
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $template-cards.image-2
+width.fixed.px: 580
+height.fixed.px: 433
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.image:
+src: $template-cards.image-3
+width.fixed.px: 580
+height.fixed.px: 433
+
+-- ftd.column:
+spacing.fixed.px: 32
+width.fixed.px: 580
+height.fixed.px: 433
+background.solid: $inherited.colors.background.step-1
+align-content: center
+padding-horizontal.px: 34
+
+-- ftd.text: $template-cards.title-3
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+
+-- ftd.text: $template-cards.sub-title-3
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+text-align: center
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+-- end: ftd.column
+
+-- end: template-cards
+
+
+
+
+
+
+
+
+
+
+-- ft-ui.template list portfolios:
+
+-- ft-ui.template: Name of the template goes here
+template-url: featured/portfolios/texty-ps/
+screenshot: $fastn-assets.files.images.get-started.img1.png
+
+-- ft-ui.template: Name of the template goes here
+template-url: featured/portfolios/johny-ps/
+screenshot: $fastn-assets.files.images.get-started.img2.png
+
+-- ft-ui.template: Name of the template goes here
+template-url: featured/portfolios/portfolio/
+screenshot: $fastn-assets.files.images.get-started.img3.png
+
+-- end: portfolios
