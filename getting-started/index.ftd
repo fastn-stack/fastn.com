@@ -4,7 +4,7 @@ sidebar: false
 
 -- featured-template: What do you want to build?
 cta-text: Build from Scratch
-cta-link: /
+cta-link: https://github.com/fastn-stack/fastn-template
 templates: $templates
 
 Choose your use case, explore our readymade templates, and start building your
@@ -115,11 +115,14 @@ link: $obj.link
 caption title:
 ftd.image-src src:
 string link:
+boolean $mouse-in:
 
 -- ftd.column:
 width.fixed.px: 352
 spacing.fixed.px: 12
 cursor: pointer
+$on-mouse-enter$: $ftd.set-bool($a=$template-image-list.mouse-in, v = true)
+$on-mouse-leave$: $ftd.set-bool($a=$template-image-list.mouse-in, v = false)
 
 -- ftd.image:
 src: $template-image-list.src

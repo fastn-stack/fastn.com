@@ -35,7 +35,7 @@ boolean show-banner: true
 optional ftd.raw-image-src favicon:
 boolean search: true
 optional string search-url: /search/
-optional string get-started-url: /get-started/
+optional string get-started-url: /getting-started/
 optional boolean right-section: true
 ftd.ui list fluid-wrap:
 
