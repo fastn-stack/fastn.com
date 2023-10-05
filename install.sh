@@ -142,7 +142,7 @@ setup() {
         log_message "Downloading the latest pre-release binaries"
     elif [ -n "$VERSION" ]; then
         URL="https://api.github.com/repos/fastn-stack/fastn/releases/tags/$VERSION"
-        log_message "Downloading the fastn $VERSION binaries"
+        log_message "Downloading fastn release $VERSION binaries"
     else
         URL="https://api.github.com/repos/fastn-stack/fastn/releases/latest"
         log_message "Downloading the latest production-ready binaries"
