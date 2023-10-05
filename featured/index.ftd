@@ -227,7 +227,7 @@ margin-top.px if { ftd.device == "mobile" }: 24
 -- ftd.text: $view-all.title
 if: { view-all.title != NULL }
 role: $inherited.types.heading-medium
-color: $inherited.colors.accent.primary
+color: $inherited.colors.text-strong
 width: fill-container
 
 -- end: ftd.desktop

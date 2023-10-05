@@ -16,11 +16,8 @@ demo-link: https://fastn-community.github.io/doc-site/
 quick-url: https://fastn-community.github.io/doc-site/
 manual: User Manual
 manual-url: https://fastn-community.github.io/doc-site/
-
-
-
-
-
+demo-text: Demo
+demo-url: https://fastn-community.github.io/doc-site/
 
 
 -- ft-ui.template list doc-sites:

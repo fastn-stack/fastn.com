@@ -11,7 +11,7 @@ sidebar: false
 
 -- hero-section: Blog post page
 cta-text: View all designs
-cta-link: /
+cta-link: getting-started/all-templates/
 image: $fastn-assets.files.images.get-started.simple-blog.png
 
 Fastn provides exhaustive frameworks to set up and  scale your project in

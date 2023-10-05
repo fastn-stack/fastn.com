@@ -4,7 +4,7 @@
 full-width: true
 sidebar: false
 
--- ft-ui.view-all: Documentation Sites
+-- ft-ui.view-all:
 templates: $doc-sites
 
 -- end: ds.page

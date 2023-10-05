@@ -63,6 +63,8 @@ string published-date:
 ft-ui.template list cards:
 string github-url:
 string demo-link:
+string demo-text:
+string demo-url:
 string quick-url:
 string manual-url:
 string manual:
@@ -125,6 +127,8 @@ show-large: true
 
 -- ds.preview-card:
 image: $featured-category.image
+demo-text: $featured-category.demo-text
+demo-url: $featured-category.demo-url
 
 -- end: ds.page
 

@@ -96,7 +96,8 @@ wrap: true
 -- template-image-list: $obj.title
 $loop$: $featured-template.templates as $obj
 src: $obj.src
-link: $obj.link
+cta-text: $obj.cta-text
+cta-link: $obj.cta-link
 
 -- end: ftd.row
 
@@ -114,8 +115,9 @@ link: $obj.link
 -- component template-image-list: 
 caption title:
 ftd.image-src src:
-string link:
-boolean $mouse-in:
+boolean $mouse-in: false
+string cta-text:
+string cta-link:
 
 -- ftd.column:
 width.fixed.px: 352
@@ -128,11 +130,27 @@ $on-mouse-leave$: $ftd.set-bool($a=$template-image-list.mouse-in, v = false)
 src: $template-image-list.src
 width.fixed.px: 350
 height.fixed.px: 215
-link: $template-image-list.link
 
 -- ftd.text: $template-image-list.title
 role: $inherited.types.button-large
 color: $inherited.colors.text-strong
+
+-- ftd.column:
+if: { template-image-list.mouse-in }
+width.fixed.px: 350
+height.fixed.px: 215
+border-radius.px: 6
+background.solid: $overlay-bg
+anchor: parent
+z-index: 1
+left.px: 0
+top.px: 0
+align-content: center
+
+-- cta-button: $template-image-list.cta-text
+link: $template-image-list.cta-link
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -209,34 +227,72 @@ width.fixed.px: 18
 
 
 
+-- component cta-button:
+caption title:
+optional string link:
+
+-- ftd.row:
+border-radius.px: 30
+padding-vertical.px: 12
+padding-horizontal.px: 24
+align-content: center
+background.solid: $inherited.colors.accent.primary
+
+-- ftd.text: $cta-button.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-small
+white-space: nowrap
+style: bold
+link: $cta-button.link
+
+-- end: ftd.row
+
+-- end: cta-button
+
+
+
+
 
 
 
 -- record template-image:
 caption title:
 ftd.image-src src:
-string link: /
+string cta-text:
+string cta-link:
 
 -- template-image list templates:
 
 -- template-image: Documentation site
-link: /
+cta-text: Start Project
+cta-link: getting-started/blog-page/
 src: $fastn-assets.files.images.get-started.doc.png
 
 -- template-image: Blog Page
-link: getting-started/blog-page/
+cta-text: Start Project
+cta-link: getting-started/blog-page/
 src: $fastn-assets.files.images.get-started.blog.png
 
 -- template-image: Landing Page
-link: /
+cta-text: Start Project
+cta-link: getting-started/blog-page/
 src: $fastn-assets.files.images.get-started.landing.png
 
 -- template-image: Portfolio Site
-link: /
+cta-text: Start Project
+cta-link: /
 src: $fastn-assets.files.images.get-started.portfolio.png
 
 -- template-image: Resume Page
-link: /
+cta-text: Start Project
+cta-link: getting-started/blog-page/
 src: $fastn-assets.files.images.get-started.resume.png
 
 -- end: templates
+
+
+
+
+-- ftd.color overlay-bg:
+light: #00000066
+dark:  #00000066
