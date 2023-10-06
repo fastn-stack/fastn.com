@@ -204,7 +204,7 @@ padding-horizontal.px: 24
 border-radius.px: 58
 spacing.fixed.px: 4
 link: $specific.cta-link
-color: $inherited.colors.text-strong
+color: $inherited.colors.cta-tertiary.text
 role: $inherited.types.button-medium
 
 -- ftd.text: $specific.cta-text
@@ -239,7 +239,7 @@ align-content: center
 background.solid: $inherited.colors.accent.primary
 
 -- ftd.text: $cta-button.title
-color: $inherited.colors.text-strong
+color: $inherited.colors.cta-tertiary.text
 role: $inherited.types.copy-small
 white-space: nowrap
 style: bold

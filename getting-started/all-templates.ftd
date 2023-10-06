@@ -38,7 +38,7 @@ show-large: true
 -- ft-ui.template: Misty Gray
 template-url: featured/ds/misty-gray/
 screenshot: $fastn-assets.files.images.featured.doc-sites.misty-gray.jpg
-two-fold: true
+show-large: true
 
 -- ft-ui.template: Dash Dash DS
 template-url: featured/ds/dash-dash-ds/
