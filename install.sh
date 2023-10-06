@@ -84,6 +84,12 @@ update_path() {
     fi
 
     echo ""
+    
+    # Create the shell config file if it doesn't exist
+    if [ ! -e "$shell_config_file" ]; then
+        log_message "✔ Created shell config file since it didn't already exist"
+        touch "$shell_config_file"
+    fi
 
     # Check if the path is already added to the shell config file
     if ! grep -qF "export PATH=\"\$PATH:${DESTINATION_PATH}\"" "$shell_config_file"; then
@@ -102,26 +108,41 @@ update_path() {
     fi
 }
 
+remove_temp_files() {
+    rm -f fastn_macos_x86_64 fastn_linux_musl_x86_64 fastn_controller_linux_musl_x86_64
+    log_message "✔ Removed temporary files"
+}
+
 setup() {
     print_fastn_logo
 
     PRE_RELEASE=""
     CONTROLLER=""
+    VERSION=""
 
     # Parse arguments
     while [ $# -gt 0 ]; do
         case $1 in
             --pre-release) PRE_RELEASE=true ;;
             --controller) CONTROLLER=true ;;
+            --version=*) VERSION="${1#*=}" ;;
+            *) echo "Unknown CLI argument: $1"; exit 1 ;;
         esac
     shift
     done
+
+    if [ -n "$VERSION" ]; then
+        echo "Installing fastn version: $VERSION"
+    fi
 
     echo ""
 
     if [ -n "$PRE_RELEASE" ]; then
         URL="https://api.github.com/repos/fastn-stack/fastn/releases"
         log_message "Downloading the latest pre-release binaries"
+    elif [ -n "$VERSION" ]; then
+        URL="https://api.github.com/repos/fastn-stack/fastn/releases/tags/$VERSION"
+        log_message "Downloading fastn release $VERSION binaries"
     else
         URL="https://api.github.com/repos/fastn-stack/fastn/releases/latest"
         log_message "Downloading the latest production-ready binaries"
@@ -136,12 +157,10 @@ setup() {
         mkdir -p "$DESTINATION_PATH"
     fi
 
-    # Remove temporary files from previous install attempts
-    rm -f fastn_macos_x86_64 fastn_linux_musl_x86_64 fastn_controller_linux_musl_x86_64
-
     echo ""
 
-    log_message "✔ Removed temporary files"
+    # Remove temporary files from previous install attempts
+    remove_temp_files
 
     echo ""
 
@@ -184,6 +203,13 @@ setup() {
     else
         log_error "Installation failed. Please check if you have sufficient permissions to install in $DESTINATION_PATH."
     fi
+
+    echo ""
+
+    # Remove temporary files from this install attempt
+    remove_temp_files
+
+    echo ""
 }
 
 main() {
