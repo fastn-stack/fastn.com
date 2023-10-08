@@ -41,7 +41,7 @@ integer call-count-notification: $count-notification(notifications = $display-no
 -- ftd.image:
 src: $fastn-assets.files.assets.notification.svg
 width.fixed.px: 30
-margin-left.px: 40
+margin-left.px: 10
 $on-click$: $ftd.set-boolean($a = $display-notifications.show, v = true)
 $on-click$: $set-notification-read(notifications = $display-notifications.notifications)
 
