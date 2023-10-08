@@ -26,9 +26,39 @@ function calculateDate(date) {
 
 function checkNotification(notification) {
     let notificationLength = notification.getLength();
-    let numberOfNotificationsRead = ftd.local_storage.get("number_of_notifications_read") ?? 0;
+    let numberOfNotificationsRead = parseInt(localStorage.getItem("fastn_com_number_of_notifications_read") ?? 0);
     if (numberOfNotificationsRead < notificationLength) {
         return notificationLength - numberOfNotificationsRead;
     }
-    return null;
+    return 0;
+}
+
+
+function setNotification(notification) {
+    // let notificationLength = notification.getLength();
+    // let numberOfNotificationsRead = ftd.local_storage.get("number_of_notifications_read") ?? 0;
+    // if (numberOfNotificationsRead < notificationLength) {
+    //     return notificationLength - numberOfNotificationsRead;
+    // }
+    // return null;
+    let notificationLength = notification.getLength();
+    localStorage.setItem("fastn_com_number_of_notifications_read", notificationLength);
+    window.document.getElementById("notification-number")?.remove();
+}
+
+// window.onload = () => {
+//     let g = window.document.getElementById("notification-number");
+//     console.log(g.innerText);
+// }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    removeNotificationNumber();
+});
+
+function removeNotificationNumber() {
+    let element = window.document.getElementById("notification-number");
+    if (element !== null && element.innerText === "0") {
+        element.remove()
+    }
 }

@@ -29,9 +29,10 @@ to make the most of it.
 
 
 -- component display-notifications:
-boolean $show: false
 notification-data list notifications: $notifications
-optional integer call-count-notification: $count-notification(notifications = $display-notifications.notifications)
+boolean $show: false
+boolean $show-number: true
+integer call-count-notification: $count-notification(notifications = $display-notifications.notifications)
 
 -- ftd.container:
 
@@ -42,9 +43,12 @@ src: $fastn-assets.files.assets.notification.svg
 width.fixed.px: 30
 margin-left.px: 40
 $on-click$: $ftd.set-boolean($a = $display-notifications.show, v = true)
+$on-click$: $set-notification-read(notifications = $display-notifications.notifications)
+
 
 -- ftd.integer: $display-notifications.call-count-notification
-if: { display-notifications.call-count-notification != NULL }
+;; if: { display-notifications.call-count-notification != 0 }
+id: notification-number
 color: $inherited.colors.cta-primary.text
 background.solid: $inherited.colors.cta-primary.base
 border-radius.percent: 50
@@ -171,8 +175,15 @@ calculateDate(date)
 
 
 
--- optional integer count-notification(notifications):
+-- integer count-notification(notifications):
 notification-data list notifications:
 js: $fastn-assets.files.notification.js
 
 checkNotification(notifications)
+
+
+-- void set-notification-read(notifications,show):
+notification-data list notifications:
+js: $fastn-assets.files.notification.js
+
+setNotification(notifications)
