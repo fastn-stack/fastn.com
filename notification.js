@@ -3,7 +3,7 @@ function calculateDate(date) {
     const currentDate = new Date();
     const givenDate = new Date(date);
     // Calculate the time difference in milliseconds
-    const timeDifference = givenDate.getTime() - currentDate.getTime();
+    const timeDifference = currentDate.getTime() - givenDate.getTime();
 
     // Check if the difference is within the same day (less than 24 hours)
     if (timeDifference < 0 && timeDifference * -1 < 86400000) {
@@ -19,7 +19,7 @@ function calculateDate(date) {
     } else {
         // Calculate the number of days
         const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        return `${daysDifference} hours ago`;
+        return `${daysDifference} days ago`;
     }
 }
 

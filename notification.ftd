@@ -1,6 +1,6 @@
 -- record notification-data:
 caption title:
-string link:
+optional string link:
 string published-on:
 optional body description:
 optional ftd.image-src image:
@@ -12,7 +12,7 @@ children uis:
 
 -- notification-data: Exploring the Search Feature in fastn.com
 link: /blog/search/
-published-on: 2023-10-01
+published-on: 2023-09-01
 
 With the vast amount of content available online, users can often find
 themselves lost in a sea of information. Without a search tool, finding what
@@ -123,7 +123,14 @@ border-bottom-width.px: 1
 border-color: $inherited.colors.border
 
 -- ftd.text: $display-notification.notification.title
+if: { display-notification.notification.link != NULL }
 link: $display-notification.notification.link
+style: underline
+role: $inherited.types.heading-small
+padding-bottom.rem: 0.75
+
+-- ftd.text: $display-notification.notification.title
+if: { display-notification.notification.link == NULL }
 style: underline
 role: $inherited.types.heading-small
 padding-bottom.rem: 0.75
