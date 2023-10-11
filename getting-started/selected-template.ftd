@@ -8,14 +8,13 @@
 image: $fastn-assets.files.images.featured.doc-sites.doc-site.jpg
 owners: [$ganesh-salunke.info, $muskan-verma.info]
 published-date: 24-May-2023
-;;github-url: https://github.com/fastn-stack/fastn-template/
+github-url: https://github.com/fastn-stack/fastn-template/
 demo-link: https://fastn-community.github.io/doc-site/
 quick-url: https://fastn-community.github.io/doc-site/
 manual: User Manual
 manual-url: https://fastn-community.github.io/doc-site/
-;;selected: true
 
--- lib.our-community: Create your project
+/-- lib.our-community: Create your project
 image: $fastn-assets.files.images.landing.discord-community.svg
 cta-primary-text: Clone Template
 cta-primary-url: /

@@ -1,4 +1,5 @@
 -- import: fastn.com/featured as ft-ui
+-- import: fastn.com/getting-started as gs
 
 -- ds.page:
 document-title: fastn | The Beginner-Friendly Full-Stack Framework
@@ -9,9 +10,9 @@ sidebar: false
 
 -- ds.page.fluid-wrap:
 
--- hero-section: Blog post page
+-- gs.hero-section: Landing page
 cta-text: View all designs
-cta-link: getting-started/all-templates/
+cta-link: getting-started/landing/all-templates/
 image: $fastn-assets.files.images.get-started.simple-blog.png
 
 Fastn provides exhaustive frameworks to set up and  scale your project in
@@ -20,7 +21,7 @@ in minutes.
 
 -- featured-design:
 
--- business-card: Create and customize Business card in minutes
+-- gs.business-card: Create and customize Business card in minutes
 icon: $fastn-assets.files.images.get-started.icon.svg
 image: $fastn-assets.files.images.get-started.card.png
 cta-text: View all designs
@@ -30,7 +31,7 @@ Connect your TikTok, Instagram, Twitter, website, store, videos, music, podcast,
 events and more. It all comes together in a link in bio landing page designed
 to convert.
 
--- template-cards:
+-- gs.template-cards:
 title-1: Simple
 sub-title-1: Start with one of dozens of templates (or a blank canvas) and make it your own
 image-1: $fastn-assets.files.images.get-started.template-1.png
@@ -53,6 +54,8 @@ image-3: $fastn-assets.files.images.get-started.template-2.png
 
 
 
+
+
 -- component featured-design:
 
 -- ftd.column:
@@ -62,8 +65,8 @@ min-width.fixed.px: 1300
 padding-vertical.px: 112
 padding-horizontal.px: 70
 
--- ft-ui.grid-view: Portfolio / Personal Sites
-templates: $portfolios
+-- ft-ui.grid-view: Featured Design
+templates: $landing
 more-link-text: View all 
 more-link: /featured/fonts/
 show-large: true
@@ -81,18 +84,21 @@ show-large: true
 
 
 
--- ft-ui.template list portfolios:
 
--- ft-ui.template: Name of the template goes here
-template-url: featured/portfolios/texty-ps/
-screenshot: $fastn-assets.files.images.get-started.img1.png
 
--- ft-ui.template: Name of the template goes here
-template-url: featured/portfolios/johny-ps/
-screenshot: $fastn-assets.files.images.get-started.img2.png
 
--- ft-ui.template: Name of the template goes here
-template-url: featured/portfolios/portfolio/
-screenshot: $fastn-assets.files.images.get-started.img3.png
+-- ft-ui.template list landing:
 
--- end: portfolios
+-- ft-ui.template: Midnight Storm
+template-url: featured/landing/midnight-storm-landing/
+screenshot: $fastn-assets.files.images.featured.landing.ms-landing-demo.png
+
+-- ft-ui.template: Misty Gray
+template-url: featured/landing/misty-gray-landing/
+screenshot: $fastn-assets.files.images.featured.landing.misty-gray-landing.png
+
+-- ft-ui.template: Midnight Rush
+template-url: featured/landing/mr-landing/
+screenshot: $fastn-assets.files.images.featured.landing.midnight-rush-landing.jpg
+
+-- end: landing

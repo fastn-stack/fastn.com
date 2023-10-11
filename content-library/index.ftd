@@ -2518,6 +2518,7 @@ boolean $mouse-in: false
 -- ftd.row: 
 link: $cta-primary-large.link
 width: fill-container
+min-width.fixed.px: 192
 role: $inherited.types.button-medium
 color: $inherited.colors.cta-tertiary.text
 background.solid: $inherited.colors.cta-primary.base
