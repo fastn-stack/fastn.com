@@ -1,0 +1,42 @@
+-- import: fastn.com/u/muskan-verma
+-- import: fastn.com/u/meenu-kumari
+-- import: fastn.com/featured as ft-ui
+
+-- ds.featured-category: Little Blue
+featured-link: /getting-started/all-templates/
+category: Blogs
+image: $fastn-assets.files.images.featured.blog.little-blue.png
+owners: [$muskan-verma.info, $meenu-kumari.info]
+license-url: https://github.com/meenukumari28/little-blue/
+license: Creative Commons
+published-date: 01-Aug-2023
+cards: $blog-sites
+github-url: https://github.com/meenukumari28/little-blue/
+demo-link: https://meenukumari28.github.io/little-blue/
+quick-url: https://meenukumari28.github.io/little-blue/
+manual: User Manual
+manual-url: https://meenukumari28.github.io/little-blue/
+demo-text: Demo
+demo-url: https://meenukumari28.github.io/little-blue/
+
+
+
+
+
+
+
+-- ft-ui.template list blog-sites:
+
+-- ft-ui.template: Simple Site
+template-url: getting-started/blog/doc-site/
+screenshot: $fastn-assets.files.images.featured.blog.doc-site-blog.png
+
+-- ft-ui.template: Midnight Rush
+template-url: getting-started/blog/mr-blog/
+screenshot: $fastn-assets.files.images.featured.blog.midnight-rush-blog.jpg
+
+-- ft-ui.template: Misty Gray
+template-url: getting-started/blog/mg-blog/
+screenshot: $fastn-assets.files.images.featured.blog.misty-gray.jpg
+
+-- end: blog-sites

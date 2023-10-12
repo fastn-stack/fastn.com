@@ -1,0 +1,39 @@
+-- import: fastn.com/u/muskan-verma
+-- import: fastn.com/u/priyanka-yadav
+-- import: fastn.com/featured as ft-ui
+
+-- ds.featured-category: Midnight Rush
+featured-link: /getting-started/all-templates/
+category: Blogs
+image: $fastn-assets.files.images.featured.blog.midnight-rush-blog.jpg
+owners: [$muskan-verma.info, $priyanka-yadav.info]
+license-url: https://github.com/fastn-community/midnight-rush/blob/main/LICENSE
+license: Creative Commons
+published-date: 21-May-2023
+cards: $blog-sites
+github-url: https://github.com/fastn-community/midnight-rush
+demo-link: https://fastn-community.github.io/midnight-rush/blog/
+quick-url: https://fastn-community.github.io/midnight-rush/blog/
+manual: User Manual
+manual-url: https://fastn-community.github.io/midnight-rush/blog/
+demo-text: Demo
+demo-url: https://fastn-community.github.io/midnight-rush/blog/
+
+
+
+
+-- ft-ui.template list blog-sites:
+
+-- ft-ui.template: Simple Site
+template-url: getting-started/blog/doc-site/
+screenshot: $fastn-assets.files.images.featured.blog.doc-site-blog.png
+
+-- ft-ui.template: Midnight Storm
+template-url: getting-started/blog/ms-blog/
+screenshot: $fastn-assets.files.images.featured.blog.midnight-storm.jpg
+
+-- ft-ui.template: Misty Gray
+template-url: getting-started/blog/mg-blog/
+screenshot: $fastn-assets.files.images.featured.blog.misty-gray.jpg
+
+-- end: blog-sites

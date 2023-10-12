@@ -3,7 +3,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Simple Blog
-featured-link: get-started/blog/all-templates
+featured-link: /getting-started/all-templates/
 category: Blogs
 image: $fastn-assets.files.images.featured.blog.simple-blog.png
 owners: [$jay-kumar.info, $ganesh-salunke.info]
@@ -13,11 +13,14 @@ published-date: 24-Jun-2022
 cards: $blog-sites
 github-url: https://github.com/FifthTry/simple-blog/
 demo-link: https://fifthtry.github.io/simple-blog/posts/
-quick-url: https://fastn-community.github.io/doc-site/
+quick-url: https://fifthtry.github.io/simple-blog/posts/
 manual: User Manual
-manual-url: https://fastn-community.github.io/doc-site/
+manual-url: https://fifthtry.github.io/simple-blog/posts/
 demo-text: Demo
-demo-url: https://fastn-community.github.io/doc-site/
+demo-url: https://fifthtry.github.io/simple-blog/posts/
+
+
+
 
 
 
@@ -25,15 +28,15 @@ demo-url: https://fastn-community.github.io/doc-site/
 -- ft-ui.template list blog-sites:
 
 -- ft-ui.template: Midnight Storm
-template-url: featured/blogs/ms-blog/
+template-url: getting-started/blog/ms-blog/
 screenshot: $fastn-assets.files.images.featured.blog.midnight-storm.jpg
 
 -- ft-ui.template: Midnight Rush
-template-url: featured/blogs/mr-blog/
+template-url: getting-started/blog/mr-blog/
 screenshot: $fastn-assets.files.images.featured.blog.midnight-rush-blog.jpg
 
 -- ft-ui.template: Misty Gray
-template-url: featured/blogs/mg-blog/
+template-url: getting-started/blog/mg-blog/
 screenshot: $fastn-assets.files.images.featured.blog.misty-gray.jpg
 
 -- end: blog-sites
