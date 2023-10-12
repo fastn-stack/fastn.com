@@ -3,7 +3,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Navy Nebula
-featured-link: /getting-started/all-templates/
+featured-link: getting-started/blog/all-templates/
 category: Blogs
 image: $fastn-assets.files.images.featured.blog.navy-nebula.png
 owners: [$yashveer-mehra.info, $priyanka-yadav.info]

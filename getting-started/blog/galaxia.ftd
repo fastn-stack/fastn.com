@@ -3,7 +3,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Galaxia
-featured-link: /getting-started/all-templates/
+featured-link: getting-started/blog/all-templates/
 category: Blogs
 image: $fastn-assets.files.images.featured.blog.galaxia.png
 owners: [$muskan-verma.info, $meenu-kumari.info]

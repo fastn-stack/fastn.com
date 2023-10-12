@@ -4,7 +4,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Simple Site
-featured-link: /getting-started/all-templates/
+featured-link: getting-started/blog/all-templates/
 category: Blogs
 image: $fastn-assets.files.images.featured.blog.doc-site-blog.png
 owners: [$muskan-verma.info, $ganesh-salunke.info, $priyanka-yadav.info]

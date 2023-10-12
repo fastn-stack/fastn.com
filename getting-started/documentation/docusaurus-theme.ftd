@@ -1,0 +1,40 @@
+-- import: fastn.com/u/ganesh-salunke
+-- import: fastn.com/u/saurabh-garg
+-- import: fastn.com/featured as ft-ui
+
+-- ds.featured-category: Docusaurus Theme
+featured-link: /getting-started/documentation/all-templates/
+category: Documentation Sites
+image: $fastn-assets.files.images.featured.doc-sites.docusaurus-theme.png
+owners: [$saurabh-garg.info, $ganesh-salunke.info]
+license-url: https://github.com/FifthTry/Docusaurus-theme/blob/main/LICENSE
+license: Creative Commons
+published-date: 30-Dec-2021
+cards: $doc-sites
+github-url: https://github.com/FifthTry/Docusaurus-theme
+demo-link: https://fifthtry.github.io/Docusaurus-theme/
+quick-url: https://fifthtry.github.io/Docusaurus-theme/
+manual: User Manual
+manual-url: https://fifthtry.github.io/Docusaurus-theme/
+demo-text: Demo
+demo-url: https://fifthtry.github.io/Docusaurus-theme/
+
+
+
+
+
+-- ft-ui.template list doc-sites:
+
+-- ft-ui.template: Simple Site
+template-url: getting-started/documentation/doc-site/
+screenshot: $fastn-assets.files.images.featured.doc-site.jpg
+
+-- ft-ui.template: Midnight Rush
+template-url: getting-started/documentation/mr-ds/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-rush.jpg
+
+-- ft-ui.template: Midnight Storm
+template-url: getting-started/documentation/midnight-storm/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-storm.jpg
+
+-- end: doc-sites

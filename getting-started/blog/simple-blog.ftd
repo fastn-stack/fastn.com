@@ -3,7 +3,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Simple Blog
-featured-link: /getting-started/all-templates/
+featured-link: getting-started/blog/all-templates/
 category: Blogs
 image: $fastn-assets.files.images.featured.blog.simple-blog.png
 owners: [$jay-kumar.info, $ganesh-salunke.info]

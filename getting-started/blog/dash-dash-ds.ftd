@@ -3,7 +3,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Dash Dash DS
-featured-link: /getting-started/all-templates/
+featured-link: getting-started/blog/all-templates/
 category: Blogs
 image: $fastn-assets.files.images.featured.blog.dash-dash-ds.png
 owners: [$jay-kumar.info, $ganesh-salunke.info]

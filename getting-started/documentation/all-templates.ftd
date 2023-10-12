@@ -21,63 +21,63 @@ templates: $doc-sites
 -- ft-ui.template list doc-sites:
 
 -- ft-ui.template: Simple Site
-template-url: getting-started/documentation/doc-site-temp/
+template-url: getting-started/documentation/doc-site/
 screenshot: $fastn-assets.files.images.featured.doc-site.jpg
 show-large: true
 
 -- ft-ui.template: Midnight Rush
-template-url: featured/ds/mr-ds/
+template-url: getting-started/documentation/mr-ds/
 screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-rush.jpg
 show-large: true
 
 -- ft-ui.template: Midnight Storm
-template-url: featured/ds/midnight-storm/
+template-url: getting-started/documentation/midnight-storm/
 screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-storm.jpg
 show-large: true
 
 -- ft-ui.template: Misty Gray
-template-url: featured/ds/misty-gray/
+template-url: getting-started/documentation/misty-gray/
 screenshot: $fastn-assets.files.images.featured.doc-sites.misty-gray.jpg
 show-large: true
 
 -- ft-ui.template: Dash Dash DS
-template-url: featured/ds/dash-dash-ds/
+template-url: getting-started/documentation/dash-dash-ds/
 screenshot: $fastn-assets.files.images.featured.doc-sites.dash-dash-ds.png
 show-large: true
 wip: true
 
 -- ft-ui.template: API DS
-template-url: featured/ds/api-ds/
+template-url: getting-started/documentation/api-ds/
 screenshot: $fastn-assets.files.images.featured.doc-sites.api-ds.png
 show-large: true
 wip: true
 
 -- ft-ui.template: Framework DS
-template-url: featured/ds/framework/
+template-url: getting-started/documentation/framework/
 screenshot: $fastn-assets.files.images.featured.doc-sites.ds-framework.png
 show-large: true
 wip: true
 
 -- ft-ui.template: Blue Sapphire Template
-template-url: featured/ds/blue-sapphire-template/
+template-url: getting-started/documentation/blue-sapphire-template/
 screenshot: $fastn-assets.files.images.featured.doc-sites.blue-sapphire-template.png
 show-large: true
 wip: true
 
 -- ft-ui.template: Forest Template
-template-url: featured/ds/forest-template/
+template-url: getting-started/documentation/forest-template/
 screenshot: $fastn-assets.files.images.featured.doc-sites.forest-template.png
 show-large: true
 wip: true
 
 -- ft-ui.template: Docusaurus Theme
-template-url: featured/ds/docusaurus-theme/
+template-url: getting-started/documentation/docusaurus-theme/
 screenshot: $fastn-assets.files.images.featured.doc-sites.docusaurus-theme.png
 show-large: true
 wip: true
 
 -- ft-ui.template: Spider Book DS
-template-url: featured/ds/spider-book-ds/
+template-url: getting-started/documentation/spider-book-ds/
 screenshot: $fastn-assets.files.images.featured.doc-sites.spider-book-ds.png
 show-large: true
 wip: true
