@@ -3,6 +3,8 @@
 
 -- ds.page:
 sidebar: false
+full-width: true
+
 
 -- ft-ui.view-all: Key Value Tables
 templates: $kvt

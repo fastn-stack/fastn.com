@@ -6,6 +6,7 @@
 
 -- ds.page: 
 sidebar: false
+full-width: true
 
 -- grid-view: Documentation Sites
 if: { show-grid }
