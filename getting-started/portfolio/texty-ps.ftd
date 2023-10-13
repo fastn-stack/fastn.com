@@ -1,0 +1,42 @@
+-- import: fastn.com/u/priyanka-yadav
+-- import: fastn.com/u/meenu-kumari
+-- import: fastn.com/u/ganesh-salunke
+-- import: fastn.com/featured as ft-ui
+
+-- ds.featured-category: Texty PS
+featured-link: getting-started/portfolio/all-templates/
+category: Featured Portfolio / Personal Sites
+image: $fastn-assets.files.images.featured.portfolios.texty-ps.png
+owners: [$ganesh-salunke.info, $priyanka-yadav.info, $meenu-kumari.info]
+license-url: https://github.com/FifthTry/texty-ps/blob/main/LICENSE
+license: Creative Commons
+published-date: 21-Dec-2022
+cards: $text-ps
+github-url: https://github.com/FifthTry/texty-ps
+demo-link: https://fifthtry.github.io/texty-ps/
+quick-url: https://fifthtry.github.io/texty-ps/
+manual: User Manual
+manual-url: https://fifthtry.github.io/texty-ps/
+demo-text: Demo
+demo-url: https://fifthtry.github.io/texty-ps/
+
+
+
+
+
+
+
+
+
+
+-- ft-ui.template list text-ps:
+
+-- ft-ui.template: Johny PS
+template-url: getting-started/portfolio/johny-ps/
+screenshot: $fastn-assets.files.images.featured.portfolios.johny-ps.png
+
+-- ft-ui.template: Portfolio
+template-url: getting-started/portfolio/portfolio/
+screenshot: $fastn-assets.files.images.featured.portfolios.portfolio.png
+
+-- end: text-ps

@@ -68,7 +68,7 @@ padding-horizontal.px: 70
 -- ft-ui.grid-view: Featured Design
 templates: $resumes
 more-link-text: View all 
-more-link: /featured/fonts/
+more-link: getting-started/resume/all-templates/
 show-large: true
 
 -- end: ftd.column
@@ -90,15 +90,15 @@ show-large: true
 -- ft-ui.template list resumes:
 
 -- ft-ui.template: Caffeine
-template-url: featured/resumes/caffiene/
+template-url:  getting-started/resume/caffiene/
 screenshot: $fastn-assets.files.images.featured.resumes.caffiene.png
 
 -- ft-ui.template: Resume 1
-template-url: featured/resumes/resume-1/
+template-url:  getting-started/resume/resume-1/
 screenshot: $fastn-assets.files.images.featured.resumes.resume-1.png
 
 -- ft-ui.template: Resume 10
-template-url: featured/resumes/resume-10/
+template-url:  getting-started/resume/resume-10/
 screenshot: $fastn-assets.files.images.featured.resumes.resume-10.png
 
 -- end: resumes
