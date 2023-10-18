@@ -1,7 +1,7 @@
 -- ds.page-with-no-right-sidebar: Learning Resources
 
 Discover a wealth of resources to help you master `fastn` web development, from
-creating websites to building dynamic apps.
+creating websites to building full-stack web applications.
 
 These learning resources will help you to ace the challenges of the
 [`fastn` Champion Program](/champion-program/) which is a part of the students
@@ -44,6 +44,17 @@ The resources are distributed in the following categories.
 - **Markdown Guide:** Learn using [markdown](/markdown/-/frontend/) in `fastn`.
 - **Workshop** to [create website.](https://github.com/fastn-stack/workshop)
 
+
+-- ds.h1: Get Help
+
+Join 3000+ developers learning `fastn` on 
+[our Discord server](https://fastn.com/discord/), since we are a new language 
+and there is not much material on Google/StackOverflow, our Discord is the best 
+place to ask questions, get help etc.  
+
+You can also join 
+[`fastn` WhatsApp channel](https://whatsapp.com/channel/0029Va6XNHZ9WtCCkv3KvC0X) 
+to stay up to date about fastn. 
 
 
 -- end: ds.page-with-no-right-sidebar
