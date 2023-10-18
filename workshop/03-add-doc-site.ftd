@@ -1,6 +1,6 @@
 -- import: fifthtry.github.io/admonitions as cbox
 
--- ds.page: Add doc-site - `fastn` Hands-On Workshop
+-- ds.page: Add doc-site - `fastn` Workshop
 
 In the [second step](/workshop/add-quote/), we added a component. Now, in the
 third step, we will add a documentation site i.e., `doc-site`.
@@ -8,7 +8,7 @@ third step, we will add a documentation site i.e., `doc-site`.
 -- cbox.info: Take a note
 
 Before we start with the second step. Make sure to close the server created for 
-`01-hello-world` then restart the new server for `03-add-doc-site`.
+`02-hello-world` then restart the new server for `03-add-doc-site`.
 
 - Close the server by using `Ctrl + c`
 - Change the directory to `03-add-doc-site` path
@@ -36,7 +36,7 @@ file:
 
 \-- fastn.dependency: fastn-community.github.io/doc-site
 
--- ds.h1: Import `doc-site`
+-- ds.h1: Auto-Import `doc-site`
 
 To make use of the `doc-site` dependency, we need to import it into our
 [`index.ftd`](https://github.com/fastn-stack/workshop/blob/main/03-add-doc-site/index.ftd)
