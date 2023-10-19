@@ -146,4 +146,3 @@ integer list $c:
 integer index:
 
 ftd.delete_at(c, index)
-
