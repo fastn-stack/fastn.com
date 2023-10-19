@@ -2,7 +2,7 @@
 
 -- ds.page: Add doc-site - `fastn` Workshop
 
-In the [second step](/workshop/add-quote/), we added a component. Now, in the
+In the [second part](/workshop/add-quote/), we added a component. Now, in the
 third step, we will add a documentation site i.e., `doc-site`.
 
 -- cbox.info: Take a note
@@ -99,7 +99,7 @@ If you miss out any step, checkout the whole source code below:
 \-- fastn.package: hello
 
 \-- fastn.dependency: fastn-community.github.io/bling
-\-- fastn.dependency: fastn-community.github.io/doc-site  ;;<hl>
+\-- fastn.dependency: fastn-community.github.io/doc-site  ;; <hl>
 
 
 
@@ -108,8 +108,8 @@ If you miss out any step, checkout the whole source code below:
 \-- import: fastn-community.github.io/bling/quote
 \-- import: fastn-community.github.io/doc-site as ds
 
-\-- ds.page: Page Title    ;;<hl>
-site-name: My Site         ;;<hl>
+\-- ds.page: Page Title    ;; <hl>
+site-name: My Site         ;; <hl>
 
 \-- quote.chalice: Nelson Mandela
 

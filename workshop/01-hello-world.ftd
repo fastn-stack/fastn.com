@@ -1,6 +1,6 @@
 -- import: fifthtry.github.io/admonitions as cbox
 
--- ds.page: Hello World - `fastn` Hands-On Workshop
+-- ds.page: Hello World - `fastn` Workshop
 
 This is first step in the [`fastn` Hands On Workshop](/workshop/). In this we
 will install `fastn` on your machine, and run `fastn`.
@@ -63,9 +63,10 @@ git clone https://github.com/fastn-stack/workshop.git
 
 -- ds.markdown:
 
-Now, change the directory to the first folder `01-hello-world` through terminal.
+Now, change the directory to the first folder `01-hello-world` through
+cmd/terminal.
 
-Run the following command to run a local server:
+Run the following command to create a local server:
 
 -- ds.code:
 
