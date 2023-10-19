@@ -1,0 +1,109 @@
+-- import: fastn.com/featured as ft-ui
+
+-- ds.page: 
+full-width: true
+sidebar: false
+
+-- ft-ui.view-all:
+templates: $blog
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+-- ft-ui.template list blog:
+
+-- ft-ui.template: Simple Site Blog
+template-url: getting-started/blog/doc-site/
+screenshot: $fastn-assets.files.images.featured.blog.doc-site-blog.png
+show-large: true
+
+-- ft-ui.template: Midnight Rush
+template-url: getting-started/blog/mr-blog/
+screenshot: $fastn-assets.files.images.featured.blog.midnight-rush-blog.jpg
+show-large: true
+
+-- ft-ui.template: Midnight Storm
+template-url: getting-started/blog/ms-blog/
+screenshot: $fastn-assets.files.images.featured.blog.midnight-storm.jpg
+show-large: true
+
+-- ft-ui.template: Misty Gray
+template-url: getting-started/blog/mg-blog/
+screenshot: $fastn-assets.files.images.featured.blog.misty-gray.jpg
+show-large: true
+
+-- ft-ui.template: Dash Dash DS
+template-url: getting-started/blog/dash-dash-ds/
+screenshot: $fastn-assets.files.images.featured.blog.dash-dash-ds.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Pink Tree
+template-url: getting-started/blog/pink-tree/
+screenshot: $fastn-assets.files.images.featured.blog.pink-tree.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Rocky
+template-url: getting-started/blog/rocky/
+screenshot: $fastn-assets.files.images.featured.blog.rocky.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Simple Blog
+template-url: getting-started/blog/simple-blog/
+screenshot: $fastn-assets.files.images.featured.blog.simple-blog.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Yellow Lily
+template-url: getting-started/blog/yellow-lily/
+screenshot: $fastn-assets.files.images.featured.blog.yellow-lily.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Blue Wave
+template-url: getting-started/blog/blue-wave/
+screenshot: $fastn-assets.files.images.featured.blog.blue-wave.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Blog Components
+template-url: getting-started/blog/blog-components/
+screenshot: $fastn-assets.files.images.featured.blog.blog-components.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Navy Nebula
+template-url: getting-started/blog/navy-nebula/
+screenshot: $fastn-assets.files.images.featured.blog.navy-nebula.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Blog Template 1
+template-url: getting-started/blog/blog-template-1/
+screenshot: $fastn-assets.files.images.featured.blog.blog-template-1.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Galaxia
+template-url: getting-started/blog/galaxia/
+screenshot: $fastn-assets.files.images.featured.blog.galaxia.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Little Blue
+template-url: getting-started/blog/little-blue/
+screenshot: $fastn-assets.files.images.featured.blog.little-blue.png
+show-large: true
+wip: true
+
+-- end: blog

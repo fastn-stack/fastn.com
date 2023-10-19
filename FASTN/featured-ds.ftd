@@ -63,9 +63,14 @@ string published-date:
 ft-ui.template list cards:
 string github-url:
 string demo-link:
-
+string demo-text:
+string demo-url:
+string quick-url:
+string manual-url:
+string manual:
 
 -- ds.page:
+title: $featured-category.title
 show-footer: true
 site-logo: $fastn-assets.files.images.fastn.svg
 site-name: NULL
@@ -101,6 +106,12 @@ owners: $featured-category.owners
 license-url: $featured-category.license-url
 license: $featured-category.license
 published-date: $featured-category.published-date
+cta-url: $featured-category.demo-link
+cta-text: Demo
+github-url: $featured-category.github-url
+quick-url: $featured-category.quick-url
+manual-url: $featured-category.manual-url
+manual: $featured-category.manual
 
 -- end: ds.page.abstract-bar
 
@@ -108,7 +119,7 @@ published-date: $featured-category.published-date
 
 -- ft-ui.grid-view: $featured-category.category
 templates: $featured-category.cards
-more-link-text: View more
+;;more-link-text: View more
 more-link: $featured-category.featured-link
 show-large: true
 
@@ -116,9 +127,8 @@ show-large: true
 
 -- ds.preview-card:
 image: $featured-category.image
-cta-url: $featured-category.demo-link
-cta-text: Demo
-github-url: $featured-category.github-url
+demo-text: $featured-category.demo-text
+demo-url: $featured-category.demo-url
 
 -- end: ds.page
 

@@ -1,0 +1,41 @@
+-- import: fastn.com/u/muskan-verma
+-- import: fastn.com/u/meenu-kumari
+-- import: fastn.com/featured as ft-ui
+
+-- ds.featured-category: Blug Wave
+featured-link: getting-started/blog/all-templates/
+category: Blogs
+image: $fastn-assets.files.images.featured.blog.blue-wave.png
+owners: [$muskan-verma.info, $meenu-kumari.info]
+license-url: https://github.com/MeenuKumari28/blue-wave/
+license: Creative Commons
+published-date: 12-Jul-2023
+cards: $blog-sites
+github-url: https://github.com/MeenuKumari28/blue-wave
+demo-link: https://meenukumari28.github.io/blue-wave/
+quick-url: https://meenukumari28.github.io/blue-wave/
+manual: User Manual
+manual-url: https://meenukumari28.github.io/blue-wave/
+demo-text: Demo
+demo-url: https://meenukumari28.github.io/blue-wave/
+
+
+
+
+
+
+-- ft-ui.template list blog-sites:
+
+-- ft-ui.template: Simple Site
+template-url: getting-started/blog/doc-site/
+screenshot: $fastn-assets.files.images.featured.blog.doc-site-blog.png
+
+-- ft-ui.template: Midnight Rush
+template-url: getting-started/blog/mr-blog/
+screenshot: $fastn-assets.files.images.featured.blog.midnight-rush-blog.jpg
+
+-- ft-ui.template: Misty Gray
+template-url: getting-started/blog/mg-blog/
+screenshot: $fastn-assets.files.images.featured.blog.misty-gray.jpg
+
+-- end: blog-sites

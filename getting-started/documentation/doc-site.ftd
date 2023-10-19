@@ -3,7 +3,7 @@
 -- import: fastn.com/featured as ft-ui
 
 -- ds.featured-category: Simple Site
-featured-link: /featured/doc-sites/
+featured-link: /getting-started/documentation/all-templates/
 category: Documentation Sites
 image: $fastn-assets.files.images.featured.doc-sites.doc-site.jpg
 owners: [$ganesh-salunke.info, $muskan-verma.info]
@@ -16,7 +16,8 @@ demo-link: https://fastn-community.github.io/doc-site/
 quick-url: https://fastn-community.github.io/doc-site/
 manual: User Manual
 manual-url: https://fastn-community.github.io/doc-site/
-
+demo-text: Demo
+demo-url: https://fastn-community.github.io/doc-site/
 
 
 
@@ -26,21 +27,16 @@ manual-url: https://fastn-community.github.io/doc-site/
 -- ft-ui.template list doc-sites:
 
 -- ft-ui.template: Midnight Rush
-template-url: featured/ds/mr-ds/
+template-url: getting-started/documentation/mr-ds/
 screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-rush.jpg
 
 -- ft-ui.template: Midnight Storm
-template-url: featured/ds/midnight-storm/
+template-url: getting-started/documentation/midnight-storm/
 screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-storm.jpg
 
 -- ft-ui.template: Misty Gray
-template-url: featured/ds/misty-gray/
+template-url: getting-started/documentation/misty-gray/
 screenshot: $fastn-assets.files.images.featured.doc-sites.misty-gray.jpg
-
--- ft-ui.template: Dash Dash DS
-template-url: featured/ds/dash-dash-ds/
-screenshot: $fastn-assets.files.images.featured.doc-sites.dash-dash-ds.png
-wip: true
 
 -- end: doc-sites
 

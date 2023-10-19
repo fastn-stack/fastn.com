@@ -1,0 +1,104 @@
+-- import: fastn.com/featured as ft-ui
+-- import: fastn.com/getting-started as gs
+
+-- ds.page:
+document-title: fastn | The Beginner-Friendly Full-Stack Framework
+document-description: Design, develop, and deploy stunning websites and web apps effortlessly. Easy-to-learn full-stack framework. No coding knowledge required. Start now!
+document-image: https://fastn.com/-/fastn.com/images/fastn-dot-com-og-image.jpg
+full-width: true
+sidebar: false
+
+-- ds.page.fluid-wrap:
+
+-- gs.hero-section: Documentation site
+cta-text: View all designs
+cta-link: getting-started/documentation/all-templates/
+image: $fastn-assets.files.images.get-started.simple-blog.png
+
+Fastn provides exhaustive frameworks to set up and  scale your project in
+minutes. Fastn provides exhaustive frameworks to set up and  scale your project
+in minutes.
+
+-- featured-design:
+
+-- gs.business-card: Create and customize Business card in minutes
+icon: $fastn-assets.files.images.get-started.icon.svg
+image: $fastn-assets.files.images.get-started.card.png
+cta-text: View all designs
+cta-link: /
+
+Connect your TikTok, Instagram, Twitter, website, store, videos, music, podcast,
+events and more. It all comes together in a link in bio landing page designed
+to convert.
+
+-- gs.template-cards:
+title-1: Simple
+sub-title-1: Start with one of dozens of templates (or a blank canvas) and make it your own
+image-1: $fastn-assets.files.images.get-started.template-1.png
+title-2: Free
+sub-title-2: Build up to three sites per account and use all of Carrd's core features – for free!
+image-2: $fastn-assets.files.images.get-started.template-1.png
+title-3: Light and dark theme
+sub-title-3: Connect your TikTok, Instagram, Twitter, website, store, videos, music,
+image-3: $fastn-assets.files.images.get-started.template-2.png
+
+-- end: ds.page.fluid-wrap
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+
+-- component featured-design:
+
+-- ftd.column:
+width: fill-container
+;;align-content: center
+min-width.fixed.px: 1300
+padding-vertical.px: 112
+padding-horizontal.px: 70
+
+-- ft-ui.grid-view: Documentation Sites
+templates: $doc
+more-link-text: View all 
+more-link: /featured/fonts/
+show-large: true
+
+-- end: ftd.column
+
+-- end: featured-design
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ft-ui.template list doc:
+
+-- ft-ui.template: Midnight Rush
+template-url: featured/ds/mr-ds/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-rush.jpg
+
+-- ft-ui.template: Midnight Storm
+template-url: featured/ds/midnight-storm/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-storm.jpg
+
+-- ft-ui.template: Misty Gray
+template-url: featured/ds/misty-gray/
+screenshot: $fastn-assets.files.images.featured.doc-sites.misty-gray.jpg
+
+-- end: doc

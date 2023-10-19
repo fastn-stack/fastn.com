@@ -74,7 +74,7 @@ more-link: /featured/fonts/
 -- component grid-view:
 optional caption title:
 template list templates:
-optional string more-link: 
+optional string more-link:
 optional string more-link-text: 
 boolean $hover: false
 optional body body:
@@ -88,6 +88,7 @@ spacing.fixed.px if { ftd.device == "mobile" }: 24
 margin-top.px if { grid-view.push-top }: -90
 max-width.fixed.px if { !grid-view.show-large } : 980
 max-width.fixed.px if { grid-view.show-large } : 1340
+padding-horizontal.px if { grid-view.show-large }: 24
 
 -- ftd.row:
 width: fill-container
@@ -153,7 +154,7 @@ $grid-view.body
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 32
+spacing.fixed.px: 28
 overflow-x: auto
 margin-vertical.px: 40
 
@@ -227,7 +228,7 @@ margin-top.px if { ftd.device == "mobile" }: 24
 -- ftd.text: $view-all.title
 if: { view-all.title != NULL }
 role: $inherited.types.heading-medium
-color: $inherited.colors.accent.primary
+color: $inherited.colors.text-strong
 width: fill-container
 
 -- end: ftd.desktop
@@ -272,6 +273,7 @@ body: $obj.body
 is-last: $obj.is-last
 wip: $obj.wip
 two-fold: $obj.two-fold
+show-large: $obj.show-large
 
 -- end: ftd.row
 
@@ -293,6 +295,7 @@ body: $obj.body
 is-last: $obj.is-last
 wip: $obj.wip
 two-fold: $obj.two-fold
+show-large: $obj.show-large
 
 -- end: ftd.column
 
@@ -329,11 +332,14 @@ width if { ftd.device == "mobile" }: fill-container
 spacing.fixed.px: 16
 min-width.fixed.px: 302
 width.fixed.px: 302
+min-width.fixed.px if { grid-of-items.show-large }: 412
+width.fixed.px if { grid-of-items.show-large }: 412
 classes if { grid-of-items.two-fold }: two-folded
 $on-mouse-enter$: $ftd.set-bool($a = $grid-of-items.mouse-in, v = true)
 $on-mouse-leave$: $ftd.set-bool($a = $grid-of-items.mouse-in, v = false)
-height.fixed.px if { !grid-of-items.two-fold }: 224
-height.fixed.px if { grid-of-items.two-fold }: 520
+height.fixed.px if { grid-of-items.show-large }: 317
+height.fixed.px if { grid-of-items.two-fold }: 317
+width.fixed.px if { grid-of-items.two-fold }: 856
 align-content: center
 border-color: $inherited.colors.border
 border-width.px: 1
@@ -437,9 +443,11 @@ if: { $grid-of-items.screenshot != NULL }
 src: $grid-of-items.screenshot
 $on-mouse-enter$: $ftd.set-bool($a=$grid-of-items.github-hover, v = true)
 $on-mouse-leave$: $ftd.set-bool($a=$grid-of-items.github-hover, v = false)
-fit: contain
+fit: cover
 width: fill-container
 height.fixed.px: 224
+height.fixed.px if { grid-of-items.show-large || grid-of-items.two-fold }: 317
+width.fixed.px if { grid-of-items.two-fold }: 856
 
 /-- ftd.image:
 if: { $grid-of-items.screenshot != NULL }
@@ -515,6 +523,7 @@ optional body body:
 boolean is-last: false
 boolean wip: false
 boolean two-fold: false
+boolean show-large: false
 
 -- template list doc-sites:
 

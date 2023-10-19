@@ -1,0 +1,62 @@
+-- import: fastn.com/featured as ft-ui
+
+-- ds.page: 
+full-width: true
+sidebar: false
+
+-- ft-ui.view-all:
+templates: $landing
+
+-- end: ds.page
+
+
+
+
+
+
+
+
+
+
+-- ft-ui.template list landing:
+
+-- ft-ui.template: Midnight Rush
+template-url: getting-started/landing/mr-landing/
+screenshot: $fastn-assets.files.images.featured.landing.midnight-rush-landing.jpg
+show-large: true
+
+-- ft-ui.template: Midnight Storm
+template-url: getting-started/landing/midnight-storm-landing/
+screenshot: $fastn-assets.files.images.featured.landing.ms-landing-demo.png
+show-large: true
+
+-- ft-ui.template: Misty Gray
+template-url: getting-started/landing/misty-gray-landing/
+screenshot: $fastn-assets.files.images.featured.landing.misty-gray-landing.png
+show-large: true
+
+-- ft-ui.template: Studious Couscous
+template-url: getting-started/landing/studious-couscous/
+screenshot: $fastn-assets.files.images.featured.landing.studious-couscous.png
+show-large: true
+wip: true
+
+-- ft-ui.template: CT Landing Page
+template-url: getting-started/landing/ct-landing/
+screenshot: $fastn-assets.files.images.featured.landing.ct-landing-page.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Docusaurus Theme
+template-url: getting-started/landing/docusaurus-theme/
+screenshot: $fastn-assets.files.images.featured.landing.docusaurus-theme.png
+show-large: true
+wip: true
+
+-- ft-ui.template: Forest FOSS Template
+template-url: getting-started/landing/forest-foss-template/
+screenshot: $fastn-assets.files.images.featured.landing.forest-foss-template.png
+show-large: true
+wip: true
+
+-- end: landing

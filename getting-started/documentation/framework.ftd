@@ -1,0 +1,48 @@
+-- import: fastn.com/u/ganesh-salunke
+-- import: fastn.com/u/priyanka-yadav
+-- import: fastn.com/u/arpita-jaiswal
+-- import: fastn.com/featured as ft-ui
+
+-- ds.featured-category: Framework DS
+featured-link: /getting-started/documentation/all-templates/
+category: Documentation Sites
+image: $fastn-assets.files.images.featured.doc-sites.ds-framework.png
+owners: [$arpita-jaiswal.info, $priyanka-yadav.info, $ganesh-salunke.info]
+license-url: https://github.com/FifthTry/df/blob/main/LICENSE
+license: Creative Commons
+published-date: 27-April-2022
+cards: $doc-sites
+github-url: https://github.com/FifthTry/df
+demo-link: https://fifthtry.github.io/df/
+quick-url: https://fifthtry.github.io/df/
+manual: User Manual
+manual-url: https://fifthtry.github.io/df/
+demo-text: Demo
+demo-url: https://fifthtry.github.io/df/
+
+
+
+
+
+
+
+
+
+
+
+
+-- ft-ui.template list doc-sites:
+
+-- ft-ui.template: Simple Site
+template-url: getting-started/documentation/doc-site/
+screenshot: $fastn-assets.files.images.featured.doc-site.jpg
+
+-- ft-ui.template: Midnight Rush
+template-url: getting-started/documentation/mr-ds/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-rush.jpg
+
+-- ft-ui.template: Midnight Storm
+template-url: getting-started/documentation/midnight-storm/
+screenshot: $fastn-assets.files.images.featured.doc-sites.midnight-storm.jpg
+
+-- end: doc-sites
