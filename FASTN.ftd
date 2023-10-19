@@ -855,13 +855,10 @@ skip: true
   document: workshop/04-publish-on-github.ftd
 - Basics Of text: /workshop/basics-of-text/
   document: workshop/05-basics-of-text.ftd
-  skip: true
 - Add an image, youtube video: /workshop/add-image-and-video/
   document: workshop/06-add-image-and-video.ftd
-  skip: true
 - Create A New Page: /workshop/add-new-page/
   document: workshop/07-create-new-page.ftd
-  skip: true
 - Creating `ds.ftd`: /workshop/ds/
   document: workshop/08-creating-ds.ftd
   skip: true

@@ -45,7 +45,7 @@ Uncomment the line where the package is added as dependency in the
 src: $fastn-assets.files.images.workshop.02-FASTN.png
 width: fill-container
 
--- ds.h1: Import the package 
+-- ds.h2: Import the package 
 
 In the `index.ftd` document we import the `quote` component from bling package.
 
