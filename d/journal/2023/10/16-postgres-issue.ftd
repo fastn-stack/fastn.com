@@ -1,0 +1,127 @@
+-- ds.page: PostgreSQL Issue On Heroku
+
+Harsh has written a todo application using our [PostgreSQL processor](/sql/).
+The application is deployed on Heroku, and was using Supabase database.
+
+The server would keep going down. Virtually everytime I open the URL to show the
+demo the server would be down with an ugly error. The ugly error was coming from
+Heroku itself, and is shown in misconfigured application scenario.
+
+-- ds.h1: Cause Of Error
+
+Supabase free plan shuts down the database after some time.
+
+-- ds.h1: Moving To Heroku PosgreSQL
+
+Heroku also provides PostgreSQL server, and it also shuts down on inactivity,
+but when a new HTTP request comes it starts both our dyno and our PostgreSQL
+server, so we always see a running application.
+
+Since the first request can take time, it waits for dyno and server to start,
+it is called cold start problem. Just FYI.
+
+-- ds.h1: Heroku Only Uses Encrypted SSL
+
+Supabase allowed us to connect to their PostgreSQL server either without
+encryption (think HTTP equivalent) or with encryption (HTTPS equivalent), and
+`fastn` so far only supported encrypted connection.
+
+The support for encrypted connection was never tested. When using encryption
+connection then also there are details, like do we also verify the SSL certifcate
+or not.
+
+-- ds.h1: Heroku SSL Root Certificate Verification Is Failing
+
+I tried with both Heroku and Supabase, and I can not get the certificate by
+them verified.
+
+The way I get certificate from Heroku, I am not sure if this is the right thing,
+as they give us the root certificate chain. Supabase lets us download the exact
+server certificate. I think heroku is going for verify the certificate authority
+and asks you to accept any certificate that is signed by the certificate
+authority, and Heroku uses custom certificate authority, so they give us the
+certificate of the certificate authority, which we are supposed to add to our
+root certificate. Which is what we are actually doing:
+
+-- ds.code:
+lang: rs
+
+if let Ok(cert) = std::env::var("FASTN_PG_CERTIFICATE") {
+    let cert = tokio::fs::read(cert).await.unwrap();
+    let cert = native_tls::Certificate::from_pem(&cert).unwrap();
+    connector.add_root_certificate(cert);
+}
+
+-- ds.markdown:
+
+We are using "add_root_certificate()".
+
+Anyways it does not work.
+
+-- ds.h1: Supabase Certificate
+
+Supbase creates a certificate for each PostgreSQL server, and gives you the
+server certificate (which is different from root certificate approach). We are
+supposed to download the PostgreSQL server certificate and use it.
+
+If I use that using the `FASTN_PG_CERTIFICATE`, then too it is failing.
+
+-- ds.h1: `FASTN_PG_DANGER_ALLOW_UNVERIFIED_CERTIFICATE`
+
+Since both were failing, and also since the guy who maintains `rust-postgres`
+that we are using [says](https://github.com/sfackler/rust-postgres/issues/297#issuecomment-335862455):
+
+> Heroku's Postgres instances use a self signed certificate that your server
+> isn't going to trust by default. Last time I checked in on this, there wasn't
+> really a better option than disabling certificate validation unfortunately 😢 .
+
+So till someone comments otherwise we are going to assume that Heroku PostgreSQL
+can only be connected if we accept invalid certificate. To test this out I
+added the `FASTN_PG_DANGER_ALLOW_UNVERIFIED_CERTIFICATE` environment variable,
+which then worked and I was able to connect to Heroku database.
+
+-- ds.h1: Connection Reset On Panic
+
+Which brought me to the next issue, why was Heroku showing the ugly error
+message instead of a error message saying database is down or certificate can
+not be verified. THis would have made debugging much better.
+
+I was getting the error message in the logs, and we could have left it at that
+but I was still trying to add support for showing error message.
+
+This is not just a ease of debugging concern. If a server closes connection, the
+ugly error message shows up. Server should instead return a 500 server error. We
+are not returning 500 server error on panics.
+
+The [Actix team was adamant that we must not allow custom handling of panics in
+request handlers](https://github.com/actix/actix-web/issues/1501). They are
+insisting one must use Result instead of panics (.unwrap() etc lead to panic),
+as that is the right way to do things in Rust.
+
+And we should remove panics, their advice is correct, code is better etc if we
+use Result. But as a framework we must handle panic.
+
+Now in case of panics, actix does not bring the server down, only closes the
+connection, but this is not a good behaviour at all. Because nginx, AWS load
+balancer etc assume if a connection is getting closed, the server is un-healthy
+and will remove it from the pool.
+
+Which means if some attacker can find one panic in our code, they can do denial
+of service against our server, force AWS ELB to expunge all the servers,
+bringing the entire site down.
+
+So I added panic handler. I used their recommended https://docs.rs/actix-web-lab/latest/actix_web_lab/middleware/struct.CatchPanic.html,
+but it returns a empty string as 500 response body. This is not great, it solves
+the DOS issue, but it is not great developer experience, developers would like
+to get server error, maybe formatted in company logo, maybe with some way to
+contact the server administrators etc. Emtpy response for 500 is not good.
+
+So we are moving the code of CatchPanic to our repo.
+
+
+-- ds.h1: Conclusion
+
+We do not know how to properly connect to PostgreSQL securely, and this has to
+be investigated more.
+
+-- end: ds.page
