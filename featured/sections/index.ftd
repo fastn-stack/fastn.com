@@ -3,6 +3,7 @@
 
 -- ds.page:
 sidebar: false
+full-width: true
 
 -- ft-ui.grid-view: Cards
 templates: $cards

@@ -3,6 +3,7 @@
 
 -- ds.page:
 sidebar: false
+full-width: true
 
 -- ft-ui.grid-view: Shades Of Red
 templates: $red-scheme

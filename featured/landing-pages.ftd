@@ -3,6 +3,7 @@
 
 -- ds.page:
 sidebar: false
+full-width: true
 
 -- ft-ui.view-all: Landing pages
 templates: $landing
