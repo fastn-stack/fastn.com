@@ -43,11 +43,11 @@ width: fill-container
 
 -- ds.h2: Image using `assets` [Preferred way]
 
-The benefit of adding images using `assets` is that:
+The benefit of adding images using **`assets`** is that:
 
 - URL for various reasons can cease to exist but the package will always have
   the image.
-- `assets` support `light` and `dark` mode images.
+- **`assets`** support `light` and `dark` mode images.
 
 If you open the [sixth part](https://github.com/fastn-stack/workshop/tree/main/a-website/06-add-image-and-video) you will notice we have added all the 
 images in the `static` folder.
@@ -55,16 +55,47 @@ images in the `static` folder.
 You can define images for both *light* and *dark* modes, and the assets
 reference returns a `ftd.image-src` type for them.
 
+If you open the `static` folder you will see two different files **img.jpg** and
+**img-dark.jpg**. The **img.jpg** image will be displayed when the page is
+  viewed in the `light` mode whereas if you switch to the `dark`
+  mode, **img-dark.jpg** image will be rendered.
+
+Uncomment [line 55.](https://github.com/fastn-stack/workshop/blob/main/a-website/06-add-image-and-video/index.ftd#L55)
+
+-- ds.code: Adding image using assets
+
+\-- ds.image:
+src: $assets.files.static.img.jpg
+width: fill-container
 
 
+-- ds.markdown:
 
-
-
-
+Now try to switch your mode and you can see the image changing.
 
 
 -- ds.h1: Embed YouTube video
 
 Now, let's see how to embed the YouTube videos.
+
+To embed the YouTube video you need to have the **Video ID** and pass it to the 
+header property `v` of `-- ds.youtube:`. 
+(Video ID is highlighted in the below image)
+
+-- ds.image:  
+src: $fastn-assets.files.images.workshop.06-video-id.png 
+
+-- ds.markdown:
+
+Uncomment [line 70](https://github.com/fastn-stack/workshop/blob/main/a-website/06-add-image-and-video/index.ftd#L70)
+
+-- ds.code: 
+
+\-- ds.youtube:
+v: _yM7y_Suaio
+
+-- ds.markdown:
+
+Go to the [seventh part](/workshop/add-new-page/).
 
 -- end: ds.page
