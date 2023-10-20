@@ -2,7 +2,7 @@
 
 -- ds.page: Hello World - `fastn` Workshop
 
-This is first step in the [`fastn` Hands On Workshop](/workshop/). In this we
+This is first part of the [`fastn` Hands On Workshop](/workshop/). In this we
 will install `fastn` on your machine, and run `fastn`.
 
 -- ds.h1: Install `fastn`

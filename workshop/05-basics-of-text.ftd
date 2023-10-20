@@ -54,4 +54,8 @@ ordered. Here's an example of an unordered list:
 - I am unordered list A
 - I am unordered list B
 
+-- ds.markdown:
+
+Go to the [sixth part](/workshop/add-image-and-video/).
+
 -- end: ds.page
