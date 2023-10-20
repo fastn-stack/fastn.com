@@ -1065,3 +1065,5 @@ skip: true
 /linkedin/ -> https://www.linkedin.com/company/fastn-stack/
 /r/counter/ -> https://replit.com/@ajit6/counter/
 /r/acme/ -> https://replit.com/@ayushipujaa/acme/
+/r/workshop/a/01/ -> https://replit.com/@ayushipujaa/a-website01-hello-world/?embed=true
+/r/final/workshop/a/01/ -> https://replit.com/@ayushipujaa/a-website01-hello-worldfinal/?embed=true
