@@ -88,6 +88,8 @@ skip: true
     document: expander/ds/ds-cs.ftd
   - Change Typography: /typography/
     document: expander/ds/ds-typography.ftd
+  - Using images in documents: /using-images/
+    document: /expander/imagemodule/index.ftd
   - Change Theme: /theme/
     document: get-started/theme.ftd
     skip: true
@@ -103,8 +105,10 @@ skip: true
       document: expander/sitemap-document.ftd
 
 
-## Learn: /install/
-  document: author/how-to/install.ftd
+## Learn: /learn/
+  document: /workshop/learn.ftd
+- Learning Resources: /learn/
+  document: /workshop/learn.ftd
 - Setup: /install/
   document: author/how-to/install.ftd
   - Install fastn: /install/
@@ -115,6 +119,9 @@ skip: true
   - On Windows: /windows/
     document: author/setup/windows.ftd
     description: Install on Windows
+  - Uninstall fastn: /uninstall/
+    document: author/setup/uninstall.ftd
+    decription: Uninstall fastn
   - Install GitHub: /github/
     document: /get-started/github.ftd
     skip: true
@@ -131,9 +138,12 @@ skip: true
   - Part 4. Event Handling: /expander/events/
   - Part 5. Publish a package: /expander/publish/
   - Part 6. Polishing UI: /expander/polish/
-- Learning Resources: /learn/
-  document: /workshop/learn.ftd
-  skip: true
+- Create button with shadow: /button/
+  document: /expander/button.ftd
+- Create rounded border: /rounded-border/
+  document: /expander/border-radius.ftd
+- Create holy-grail layout: /holy-grail/
+  document: /expander/layout/index.ftd
 
 
 ## Sections: /sections/
@@ -1045,13 +1055,17 @@ skip: true
 /blog/writer-journey/ -> /writer/
 /blog/prove-you-wrong/ -> /prove/
 /blog/intimidation-of-programming/ -> /intimidation/
-/twitter/ -> https://twitter.com/fastn_stack
-/instagram/ -> https://www.instagram.com/fastn_stack/
-/discord/ -> https://discord.gg/eNXVBMq4xt
-/linkedin/ -> https://www.linkedin.com/company/fastn-stack/
 /overview/ -> /home/
 /events/weekly-contest/ -> /weekly-contest/
 /setup.exe -> https://github.com/fastn-stack/fastn/releases/latest/download/fastn_setup.exe
 /clean-urls/-/build/ -> /clean-urls/
 /cet/ -> https://chat.whatsapp.com/Iiv1klM3c2G3e6eb8kCDhJ
 /aieee-vizag/ -> https://chat.whatsapp.com/HigWcqIijQj63xCNAWJmLS
+/github/ -> https://github.com/fastn-stack/
+/whatsapp/ -> https://www.whatsapp.com/channel/0029Va6XNHZ9WtCCkv3KvC0X/
+/twitter/ -> https://twitter.com/fastn_stack/
+/instagram/ -> https://www.instagram.com/fastn_stack/
+/discord/ -> https://discord.gg/eNXVBMq4xt/
+/linkedin/ -> https://www.linkedin.com/company/fastn-stack/
+/r/counter/ -> https://replit.com/@ajit6/counter/
+/r/acme/ -> https://replit.com/@ayushipujaa/acme/
