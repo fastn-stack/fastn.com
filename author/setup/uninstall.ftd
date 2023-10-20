@@ -1,0 +1,19 @@
+-- ds.page: Uninstall `fastn`
+
+Uninstalling `fastn` is as easy as installation. When you download the
+executable file to install, it comes with `uninstall.exe` executable file.
+
+-- ftd.image:
+src: $fastn-assets.files.images.setup.uninstall-1.png
+border-width.px: 1
+border-radius.px: 5
+border-color: $inherited.colors.border
+
+-- ds.h1: Steps to Uninstall `fastn`
+
+- Open the `fastn` folder, which you will find in the Program Files in C drive
+
+
+
+
+-- end: ds.page
