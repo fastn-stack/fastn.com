@@ -45,5 +45,7 @@ function showNotificationAndGetLastPublish(notification) {
 
 
 function setLastPublished(lastPublished) {
-    localStorage.setItem("fastn_com_last_notification_read_time", lastPublished);
+    if (!!lastPublished) {
+        localStorage.setItem("fastn_com_last_notification_read_time", lastPublished);
+    }
 }
