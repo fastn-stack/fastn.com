@@ -1,0 +1,73 @@
+-- import: fastn.com/d/m/dependency-model as dm
+
+-- dm.dependency-data list dependencies:
+
+-- dm.dependency-data: $marked
+
+-- end: dependencies
+
+
+
+-- dm.dependency-data marked: Marked.js
+current-version: 9.1.4
+available-version: 9.1.5
+github-url: https://github.com/markedjs/marked/
+doc-url: https://marked.js.org/
+reference-url: https://cdnjs.com/libraries/marked
+updates: $marked-updates
+
+
+-- dm.update list marked-updates:
+
+-- dm.update: $arpita
+updated-on: 31-10-2023
+version: 9.1.4
+version-release-date: 31-10-2023
+pr-link: https://github.com/fastn-stack/fastn/pull/1440
+version-link: https://github.com/markedjs/marked/releases/tag/v9.1.4
+
+Using latest version marked 9.1.4, instead of 5.1.1.
+
+**Known Problems:**
+The problem with this version is that the heading gets converted into
+appropriate heading tag but it doesn't contain the id attribute. Consider the
+code below
+
+`# Heading 1`
+
+The above code gets converted into the following html
+`<h1>Heading 1</h1>`
+
+Instead of
+`<h1 id="heading-1">Heading 1</h1>`
+
+Checkout the [github issue](https://github.com/markedjs/marked/issues/3067)
+raised in the marked.
+
+**Solution:**
+
+Since we never encourage `fastn` users to ever use markdown headings but to use
+heading components provided by typography or doc site packages. This takes care
+of the problem above.
+
+So we can go ahead with this PR.
+
+
+-- end: marked-updates
+
+
+
+
+
+
+
+
+
+
+
+
+-- dm.person arpita: Arpita
+github-url: https://github.com/Arpita-Jaiswal
+linkedin: https://www.linkedin.com/in/arpita-jaiswal-661a8b144/
+
+I am creating `fastn`!

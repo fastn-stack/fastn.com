@@ -16,6 +16,13 @@ To create a release do the following:
 
 -- ds.h1: Monthly Cleanups
 
-1. Run `cargo update`.
+Monthly dependency updates are a must! We've set up a dedicated page to ensure
+we stay on track with this practice.
+
+Currently we have following dependencies and tracks:
+
+1. Marked.js: Parse markdown to HTML
+2. Prism.js: Code highlighter
+3. `cargo update`: Updates all rust dependencies
 
 -- end: ds.page
