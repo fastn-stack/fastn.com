@@ -1,0 +1,106 @@
+-- import: fastn-community.github.io/bling/chat
+-- import: fastn.com/blog/authors
+-- import: fastn-community.github.io/doc-site/common
+-- import: fastn.com/utils
+-- import: fastn.com/content-library as lib
+
+-- common.post-meta index-meta: Using Custom Breakpoints
+published-on: November 3, 2023 at 10:40 am
+post-url: /custom-breakpoints/
+author: $authors.rithik
+
+Browser breakpoint widths are used in web design to define how a
+webpage should be displayed and styled based on the width of the
+user's browser window or device screen. These breakpoints help create
+responsive web designs that adapt to different screen sizes and
+orientations, making websites more accessible and user-friendly
+on a variety of devices, such as desktop computers, smartphones etc.
+Breakpoints are a fundamental concept in responsive
+web design. Here's a brief overview about the areas covered:
+
+- How to define a custom breakpoint
+- Defining custom breakpoint
+- Benefits of using custom breakpoint
+
+-- common.post-meta meta: Using Custom Breakpoints
+published-on: November 3, 2023 at 10:27 am
+post-url: /external-css/
+author: $authors.rithik
+
+Browser breakpoint widths are used in web design to define how a
+webpage should be displayed and styled based on the width of the
+user's browser window or device screen. These breakpoints help create
+responsive web designs that adapt to different screen sizes and
+orientations, making websites more accessible and user-friendly
+on a variety of devices, such as desktop computers, smartphones etc.
+Breakpoints are a fundamental concept in responsive
+web design. Here we will see how we can define our custom breakpoints for our
+webpages.
+
+-- ds.blog-page:
+meta: $meta
+
+-- ds.h1: How to Define Custom Breakpoint
+
+To define a custom breakpoint, you will need to define the breakpoint attribute
+of ftd.document to specify your custom breakpoint width beyond/below which the browser
+will render the contents in desktop/mobile mode.
+
+-- ds.h1: Defining Custom Breakpoint
+
+By default, fastn defines the breakpoint width to 768px in case of
+no user-defined breakpoint. Let's say you want to define a
+custom breakpoint (800px) for your page. You can do this using
+the breakpoint attribute of ftd.document. Here is how we define it .
+
+-- ds.code:
+lang: ftd
+
+\-- ftd.document:
+breakpoint: 800
+
+\-- ftd.text:
+color: blue
+text if { ftd.device == "mobile" }: Mobile text
+text if { ftd.device == "desktop" }: Desktop text
+
+\-- end: ftd.document
+
+-- ds.markdown:
+
+In the above example, the browser will show "Mobile text" when the browser width
+is below 800px and show "Desktop text" when the browser width is above 800px.
+
+-- ds.h1: Benefits of using custom breakpoints
+
+- Tailored Design: Custom breakpoints allow you to design
+and optimize your website for specific screen sizes or devices
+that are relevant to your target audience.
+
+- Improved User Experience: By setting custom breakpoints, you can fine-tune
+the layout and styling of your website to ensure an optimal user experience
+at different screen sizes. This can lead to better readability,
+usability, and overall satisfaction for your site visitors.
+
+- Brand Consistency: Custom breakpoints enable you to maintain a consistent
+brand identity and design aesthetic across various screen sizes.
+
+- Design Flexibility: You have the flexibility to create unique designs
+for specific screen sizes or device orientations. Custom breakpoints
+allow for creative and functional design decisions, enabling you to
+experiment with different layouts and interactions.
+
+- Competitive Advantage: A website that is finely tuned for specific
+screen sizes and devices can provide a competitive advantage by offering
+a superior user experience and setting your site apart from competitors
+with generic responsive designs.
+
+-- ds.h1: Conclusion
+
+In conclusion, breakpoint widths are essential in responsive web design,
+enabling websites to adapt their layout and styles to different devices
+and screen sizes. This approach ensures a better user experience
+and broader accessibility, making it a crucial aspect
+of modern web development.
+
+-- end: ds.blog-page
