@@ -1,3 +1,6 @@
+-- import: fastn.com/u
+
+
 -- record dependency-data:
 caption name:
 string current-version:
@@ -9,18 +12,13 @@ optional string other-url:
 update list updates:
 
 
+
+
 -- record update:
-caption person updater:
+caption u.user-data updater:
 string updated-on:
 string version:
 string version-release-date:
 string pr-link:
 optional string version-link:
 optional body about:
-
-
--- record person:
-caption name:
-optional body description:
-optional string github-url:
-optional string linkedin:

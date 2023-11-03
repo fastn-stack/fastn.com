@@ -1,5 +1,18 @@
 -- import: fastn-community.github.io/spectrum-ds/common
 -- import: fastn.com/featured as ft-ui
+-- import: fastn.com/u/model
+
+
+-- model.user-data arpita: Arpita Jaiswal
+avatar: $fastn-assets.files.images.u.arpita.jpg
+profile: Lead Engineer
+github-url: https://github.com/Arpita-Jaiswal
+linkedin: https://www.linkedin.com/in/arpita-jaiswal-661a8b144/
+discord: https://discord.gg/arpita_j
+
+I believe that we are trying to cater the need of world with `fastn` technology.
+
+
 
 -- ds.user-info: Arpita Jaiswal
 avatar: $fastn-assets.files.images.u.arpita.jpg

@@ -1,10 +1,17 @@
 -- import: fastn.com/d/m/dependency-model as dm
+-- import: fastn.com/u
+
+
 
 -- dm.dependency-data list dependencies:
 
 -- dm.dependency-data: $marked
 
 -- end: dependencies
+
+
+
+
 
 
 
@@ -17,9 +24,15 @@ reference-url: https://cdnjs.com/libraries/marked
 updates: $marked-updates
 
 
+
+
+
+
+
+
 -- dm.update list marked-updates:
 
--- dm.update: $arpita
+-- dm.update: $u.arpita
 updated-on: 31-10-2023
 version: 9.1.4
 version-release-date: 31-10-2023
@@ -54,20 +67,3 @@ So we can go ahead with this PR.
 
 
 -- end: marked-updates
-
-
-
-
-
-
-
-
-
-
-
-
--- dm.person arpita: Arpita
-github-url: https://github.com/Arpita-Jaiswal
-linkedin: https://www.linkedin.com/in/arpita-jaiswal-661a8b144/
-
-I am creating `fastn`!
