@@ -1,0 +1,8 @@
+-- record user-data:
+caption name:
+optional ftd.image-src avatar:
+optional string profile:
+optional body description:
+optional string github-url:
+optional string linkedin:
+optional string discord:

@@ -3,7 +3,7 @@
 -- ds.h1: Version Policy
 
 Since we are a binary crate, and our library crates are only largely meant to be
-used by our binary crate, we are targetting the latest Rust version. Whenever a
+used by our binary crate, we are targeting the latest Rust version. Whenever a
 new version is released we always switch to it.
 
 -- ds.h1: Release Management
@@ -16,6 +16,13 @@ To create a release do the following:
 
 -- ds.h1: Monthly Cleanups
 
-1. Run `cargo update`.
+Monthly dependency updates are a must! We've set up a dedicated page to ensure
+we stay on track with this practice.
+
+Currently we have following dependencies and tracks:
+
+1. Marked.js: Parse markdown to HTML
+2. Prism.js: Code highlighter
+3. `cargo update`: Updates all rust dependencies
 
 -- end: ds.page
