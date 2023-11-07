@@ -12,8 +12,8 @@ author: $authors.rithik
 In this blog, we have covered all the necessary details we
 need to know before using external CSS properties in fastn.
 
-- When external CSS should be used?
-- When we should avoid using it?
+- When should external CSS be used?
+- When should we avoid using it?
 - How to use External CSS
     - Attaching CSS file
     - Inline CSS
@@ -31,16 +31,16 @@ need to know before using external CSS properties in fastn.
 -- ds.blog-page:
 meta: $meta
 
--- ds.h3: When external CSS should be used?
+-- ds.h3: When should external CSS be used?
 
 In cases, when we want to use any properties which are not yet supported
 by fastn or maybe we wish to use certain experimental properties
 which are recently released to test it out with fastn. In such cases,
 the use of external CSS would be a viable choice.
 
--- ds.h3:  When we should avoid using it?
+-- ds.h3:  When should we avoid using it?
 
-Unless fastn supports the properties you need, using external CSS is not recommended
+If `fastn` supports the properties you need, using external CSS is not recommended
 Since there is a downside that the styles that are applied on the elements
 using external CSS wont support any native fastn events. So it is
 not recommended to use external CSS if you have to involve event handling
@@ -123,6 +123,14 @@ below mentioned CLI flag with fastn serve/build commands.
 - `--external-css=<FILE-PATH>`: Using this flag, we can attach an CSS
 file by providing its file path
 
+-- ds.code: Sample usage
+lang: sh
+
+fastn serve --external-css=my-style.css
+
+# We can also use it with fastn build command
+# fastn build --external-css=my-style.css
+
 -- ds.h3: Inline CSS
 
 There is a CLI flag which can be used to include inline CSS from a CSS file
@@ -130,6 +138,14 @@ instead of attaching it using script tags.
 
 - `--css=<FILE-PATH>`: Using this flag, we can include any CSS as inline
 CSS from the CSS file specified.
+
+-- ds.code: Sample usage
+lang: sh
+
+fastn serve --css=my-style.css
+
+# We can also use it with fastn build command
+# fastn build --css=my-style.css
 
 -- ds.h1: Specifying CSS class on elements
 
