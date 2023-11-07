@@ -31,14 +31,14 @@ need to know before using external CSS properties in fastn.
 -- ds.blog-page:
 meta: $meta
 
--- ds.h3: **When external CSS should be used?**
+-- ds.h3: When external CSS should be used?
 
 In cases, when we want to use any properties which are not yet supported
 by fastn or maybe we wish to use certain experimental properties
 which are recently released to test it out with fastn. In such cases,
 the use of external CSS would be a viable choice.
 
--- ds.h3:  **When we should avoid using it?**
+-- ds.h3:  When we should avoid using it?
 
 Unless fastn supports the properties you need, using external CSS is not recommended
 Since there is a downside that the styles that are applied on the elements
