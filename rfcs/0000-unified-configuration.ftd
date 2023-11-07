@@ -11,12 +11,12 @@ TODO: Write a brief summary of the RFC here.
 -- lib.motivation:
 
 ;; TODO: add links to the following paragraph
-Currently, `fastn` supports configuration through environment variables, and in
-some way, through the `FASTN.ftd` file. Environment variables are good to
-change the behaviour of the cli or to pass secret information but it's not
-ideal for defining complex configuration for a framework like `fastn` that
-provides various configurable features like processors, oauth authentication
-and, apps.
+Currently, `fastn` supports configuration through environment variables, cli
+arguments, and in some way, through the `FASTN.ftd` file. Environment variables
+are good to change the behaviour of the cli or to pass secret information but
+it's not ideal for defining complex configuration for a framework like `fastn`
+which provides various configurable features like processors, oauth
+authentication and, apps.
 
 ;; TODO: I can do better than this
 This RFC proposes a way of dealing with configuration that is centralised and
@@ -82,8 +82,9 @@ lang: ftd
 
 - While adding dependency, users can modify any variable defined in the
   `FASTN.ftd` file of the said dependency. Any variable that is not defined
-  there is simply ignored
+  there is simply ignored.
 
+;; TODO: rephrase this! ambiguous statement
 - Variables defined in `FASTN.ftd` are also considered by the framework
   features. Example: Github OAuth feature (this is a processor) can specify
   that it needs `gh-oauth` variable of type `github` defined in user's
@@ -91,12 +92,15 @@ lang: ftd
   (the error handling when `gh-oauth` is not available depends on the
   implementation).
 
-- Variables created using types from `fastn/congi` (as well as primitive types)
+- Variables created using types from `fastn/config` (as well as primitive types)
   are normal variables that can be defined in any `.ftd` file.
 
+;; TODO: rephrase this: what I mean is that variables in `*.ftd` will not be
+;; considered, only `FASTN.ftd` will be considered when accessing variables using
+;; `fastn/config`
 - Only the variables defined in `FASTN.ftd` will be available for access from
   `fastn/config` module. See this example to see how one would use a config
-  variable creatd elsewhere ;; TODO: add example
+  variable created elsewhere ;; TODO: add example
 
 Q. Why do we allow defining config variables outside of `FASTN.ftd`?
 
