@@ -42,10 +42,9 @@ link) module.
   modify the behaviour of a dependency by passing variables when they're added.
   Example:
 
--- ds.code:
+-- ds.code: `FASTN.ftd` of test-todos
 lang: ftd
 
-;; FASTN.ftd of test-todos
 \-- import: fastn
 
 \-- fastn.package: test-todos
@@ -65,10 +64,9 @@ are in its `FASTN.ftd` file.
 
 The `FASTN.ftd` of `amitu.com/todos` will look like this:
 
--- ds.code:
+-- ds.code: FASTN.ftd of amitu.com/todos
 lang: ftd
 
-;; FASTN.ftd of amitu.com/todos
 \-- import: fastn
 
 \-- fastn.package: amitu.com/todos
@@ -111,10 +109,9 @@ users option to define configuration that are scoped for a single use.
 
 Consider the following example that uses the [pg processor]():
 
--- ds.code:
+-- ds.code: `sample.ftd`
 lang: ftd
 
-\;; sample.ftd
 \-- import: fastn/processors as pr
 \-- import: fastn/config
 
@@ -131,7 +128,7 @@ use: $temp
 SELECT * FROM users;
 
 
--- note.note:
+-- note.note: Sidenote
 
 If the use of pg processor doesn't specify database connections information
 through the `use` header, the implementation of `pg` can choose to look for a
