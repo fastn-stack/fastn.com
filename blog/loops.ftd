@@ -1,0 +1,89 @@
+-- import: fastn-community.github.io/bling/chat
+-- import: fastn.com/blog/authors
+-- import: fastn-community.github.io/doc-site/common
+-- import: fastn.com/utils
+-- import: fastn.com/content-library as lib
+
+-- common.post-meta index-meta: Understanding Loops in fastn
+published-on: November 8, 2023 at 3:29 pm
+post-url: /loops/
+author: $authors.rithik
+
+In this blog, we will be exploring on how `fastn` uses loops and
+what cool stuff you can do with them. Let's kick things
+off by using some lists. We'll explore and learn about
+different interesting aspects while working with them.
+
+-- common.post-meta meta: Understanding Loops
+published-on: November 8, 2023 at 3:29 pm
+post-url: /loops/
+author: $authors.rithik
+read-time: 5-10 mins
+
+In this blog, we will be exploring on how `fastn` uses loops and
+what cool stuff you can do with them. Let's kick things
+off by using some lists. We'll explore and learn about
+different interesting aspects while working with them.
+
+-- ds.blog-page:
+meta: $meta
+
+-- ds.h1: Sample Data
+
+Intuitively speaking, when we talk about looping, the first thing that comes to mind
+is where are we gonna loop. So to understand looping, we will need some lists.
+So for that, I'll be using these below mentioned lists to understand
+further sections.
+
+-- ds.code: Sample lists
+lang: ftd
+line-numbers: true
+
+\-- record person:
+caption name:
+integer age:
+
+\-- string list places: Bangalore, Mumbai, Chennai, Kolkata ;; <hl>
+\-- integer list odd-numbers: 1, 3, 5, 7, 9, 11 ;; <hl>
+
+\-- person list candidates: ;; <hl>
+\;; <hl>
+\-- person: John Doe ;; <hl>
+age: 28 ;; <hl>
+\;; <hl>
+\-- person: Sam Wan ;; <hl>
+age: 24 ;; <hl>
+\;; <hl>
+\-- person: Sam Ather ;; <hl>
+age: 30 ;; <hl>
+\;; <hl>
+\-- end: candidates ;; <hl>
+
+-- ds.h1: Let's start looping
+
+In fastn, there are currently two looping syntax that we can use to loop
+over lists. We can use either of them but its recommended to use the `for` syntax
+since the other one will be deprecated soon.
+
+- [Using for loop syntax](/loops#looping-using-for-loop-syntax)
+- [Using $loop$ syntax](/loops#looping-using-loop-syntax)
+
+-- ds.h2: Looping using for loop syntax
+
+Using for syntax is recommended for looping and has the following
+general syntax that we should keep in mind before using it.
+
+`for: <LIST-ITEM-NAME>, [<LOOP-INDEX>] in <LIST-NAME>`
+
+;; Add Examples with outputs
+
+-- ds.h2: Looping using the $loop$ syntax
+
+This syntax will soon be deprecated but you can still use it. It has the
+following general syntax that we can find below.
+
+`$loop$: <LIST-ITEM-NAME> as <LIST-NAME>`
+
+;; Add Examples with outputs
+
+-- end: ds.blog-page
