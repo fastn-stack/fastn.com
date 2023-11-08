@@ -4,7 +4,7 @@
 -- import: fastn.com/utils
 -- import: fastn.com/content-library as lib
 
--- common.post-meta index-meta: Understanding Loops in fastn
+-- common.post-meta index-meta: Understanding Loops
 published-on: November 8, 2023 at 3:29 pm
 post-url: /loops/
 author: $authors.rithik
@@ -13,6 +13,9 @@ In this blog, we will be exploring on how `fastn` uses loops and
 what cool stuff you can do with them. Let's kick things
 off by using some lists. We'll explore and learn about
 different interesting aspects while working with them.
+
+- Looping using for loop syntax
+- Looping using $loop$ syntax
 
 -- common.post-meta meta: Understanding Loops
 published-on: November 8, 2023 at 3:29 pm

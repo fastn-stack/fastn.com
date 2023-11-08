@@ -933,7 +933,8 @@ skip: true
   document: blog/external-css.ftd
 - Using Custom Breakpoints: /breakpoint/
   document: blog/breakpoint.ftd
- 
+- Understanding Loops: /loops/
+  document: blog/loops.ftd
   
 
 # dev: /d/

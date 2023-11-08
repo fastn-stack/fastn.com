@@ -1,5 +1,6 @@
 -- import: fastn.com/blog/external-css as blog-1
 -- import: fastn.com/blog/breakpoint as blog-2
+-- import: fastn.com/blog/loops as blog-3
 
 -- record notification-data:
 caption title:
@@ -12,6 +13,12 @@ children uis:
 
 
 -- notification-data list notifications:
+
+-- notification-data: $blog-3.index-meta.title
+link: $blog-3.index-meta.post-url
+published-on: 2023-11-08
+
+$blog-3.index-meta.body
 
 -- notification-data: $blog-2.index-meta.title
 link: $blog-2.index-meta.post-url
