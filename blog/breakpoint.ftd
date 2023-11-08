@@ -11,8 +11,8 @@ author: $authors.rithik
 
 Today, in this blog we will see how fastn allows the use of user-defined
 custom breakpoints. Although currently we can only modify the
-default breakpoint when using ftd.document. We will cover the mentioned
-points.
+default breakpoint when using [`ftd.document`](/document/).
+We have covered the below mentioned points.
 
 - How to define a custom breakpoint
 - Defining custom breakpoint
@@ -25,7 +25,7 @@ read-time: 2 mins
 
 Today, in this blog we will see how fastn allows the use of user-defined
 custom breakpoints. Although currently we can only modify the
-default breakpoint when using [ftd.document](/document/).
+default breakpoint when using [`ftd.document`](/document/).
 
 -- ds.blog-page:
 meta: $meta
@@ -33,7 +33,7 @@ meta: $meta
 -- ds.h2: How to Define a Custom Breakpoint?
 
 To define a custom breakpoint, you will need to define the
-[breakpoint](/document#breakpoint-optional-ftd-breakpoint-width-data) attribute
+[`breakpoint`](/document#breakpoint-optional-ftd-breakpoint-width-data) attribute
 of ftd.document to specify your custom breakpoint width beyond/below
 which the browser will render the contents in desktop/mobile mode.
 
@@ -42,7 +42,7 @@ which the browser will render the contents in desktop/mobile mode.
 By default, fastn defines the breakpoint width to 768px in case
 no user-defined breakpoint is specified. Let's say you want to define a
 custom breakpoint (let's say 800px) for your page. You can do this using
-the [breakpoint](/document/#breakpoint-optional-ftd-breakpoint-width-data)
+the [`breakpoint`](/document#breakpoint-optional-ftd-breakpoint-width-data)
 attribute of ftd.document. Here is how we can define it.
 
 -- ds.code: Sample Usage
