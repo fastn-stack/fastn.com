@@ -524,6 +524,8 @@ skip: true
     document: ftd/or-type.ftd
   - `list`: /list/
     document: ftd/list.ftd
+- Understanding Loops: /loop/
+  document: ftd/loop.ftd
 - `component`: /components/
   document: ftd/components.ftd
 - Headers: /headers/
@@ -933,8 +935,6 @@ skip: true
   document: blog/external-css.ftd
 - Using Custom Breakpoints: /breakpoint/
   document: blog/breakpoint.ftd
-- Understanding Loops: /loops/
-  document: blog/loops.ftd
   
 
 # dev: /d/
@@ -1078,3 +1078,4 @@ skip: true
 /r/counter/ -> https://replit.com/@ajit6/counter/
 /r/acme/ -> https://replit.com/@ayushipujaa/acme/
 /custom-url/ -> /custom-urls/
+/loops/ -> /loop/
