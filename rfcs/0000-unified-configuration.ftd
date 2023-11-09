@@ -8,7 +8,7 @@ status: proposal
 A configuration system streamlining complex settings for processors, fastn
 packages. It introduces:
 
-- Special Configuration types in the `fastn` namespace.
+- Access to environment variables in `FASTN.ftd`
 - A virtual module for configuration access in userland.
 - Package level configuration.
 
@@ -27,50 +27,12 @@ variables.
 
 -- end: lib.motivation
 
-
 -- lib.detailed-design:
 
--- ds.h2: Configuration types in `fastn.*`
+-- ds.h2: Access to environment variables
 
-This contains all special configuration types defined by the fastn framework.
-
-Any configuration required by the framework will be present as a type under the
-`fastn` namespace.
-
-For example, `db-conn` that represents database connection information is a type
-under `fastn` which can be used to create variables like:
-
--- ds.code: variable in `FASTN.ftd` of `my-package`
-lang: ftd
-
-\-- import: fastn
-
-\-- fastn.package: my-package
-
-\-- fastn.db-conn my-db:
-db-host: <some-ip>
-db-user: user
-db-password: config.DB_PASSWORD ;; this is an environment variable
-db-name: user_db
-
--- ds.markdown:
-
-A corresponding struct for `db-conn` on rust side would look like:
-
--- ds.code: `db-conn` in rust
-lang: rust
-
-struct DatabaseConnInfo {
-    db_host: String,
-    db_user: String,
-    db_password: String,
-    db_name: String,
-}
-
--- ds.markdown:
-
-The `fastn` namespace will also allow access to environment variables using
-`fast.env` function.
+The `fastn` namespace will have a function, `fastn.env()` to access environment
+variables.
 
 -- ds.code: A variable that reads environment variable using `fastn.env()`
 lang: ftd
@@ -79,15 +41,11 @@ lang: ftd
 
 \-- fastn.package: my-package
 
-\-- fastn.db-conn my-db:
-db-host: <some-ip>
-db-user: user
-db-password: fastn.env(DB_PASSWORD) \;; suggested syntax
-db-name: user_db
+\-- string my-db-url: $fastn.env(DB_URL)
 
 -- note.note: `fastn.env()`
 
-It is a foreign function. A default value can be provided in case `DB_PASSWORD` doesn't exist: `fastn.env(DB_PASSWORD, default=admin)`.
+It is a foreign function. A default value can be provided in case `DB_URL` doesn't exist: `fastn.env(DB_URL, default=postgres://0:5432/maindb)`.
 
 -- ds.markdown:
 
@@ -95,9 +53,6 @@ It is a foreign function. A default value can be provided in case `DB_PASSWORD` 
   required by the framework. Example: The implementation of [`pg`
   processor](/sql/) may require the user of this processor to define a variable
   name `db` in their package's `FASTN.ftd` file.
-
-- Variables created using types from `fastn.*` (as well as primitive types)
-  are normal variables that can be defined in any `.ftd` file.
 
 The virtual module (`<pkg-name>/-/config`) will handle access of variables
 defined in `FASTN.ftd`.
@@ -118,7 +73,7 @@ lang: ftd
 
 \-- person list people:
 $processor$: pr.pg
-use: $config.my-db \;; defined in my-package's FASTN.ftd
+use: $config.my-db-url \;; defined in my-package's FASTN.ftd
 
 SELECT * FROM users;
 
@@ -181,7 +136,7 @@ lang: ftd
 \-- fastn.package: amitu.com/todos
 db: $my-db-for-dev \;; this value for db is available only when it's not used as a dependency
 
-\-- fastn.db-conn db:  \;; this has no value so this will be required
+\-- string db:  \;; this has no value so this will be required
 
 \-- integer max-todos: 30 \;; this has a default value so this is optional
 
@@ -205,55 +160,6 @@ lang: ftd
 \-- fastn.dependency: amitu.com/todos
 db: $my-db \;; this is required otherwise an error will be thrown
 \;; max-todos is optional so we ignore this
-
-
--- ds.h3: Q. Why do we allow defining config variables outside of `FASTN.ftd`?
-
-<start of answer>
-
-Configurations are meant to modify the behaviour of the framework or an
-external fastn package. Even though this change in behaviour or modification in
-configuration of a package should happen in `FASTN.ftd` file, we should give
-users option to define configuration that are scoped for a single use.
-
-Consider the following example that uses the [`pg` processor](/sql/):
-
--- ds.code: `sample.ftd`
-lang: ftd
-
-\-- import: fastn/processors as pr
-\-- import: fastn/config
-
-\-- config.db-conn temp:
-db_host: <some_ip>
-db_user: user
-db_password: config.DB_PASSWORD ;; this is an environment variable
-db_name: user_db
-
-\-- person list people:
-$processor$: pr.pg
-use: $temp
-
-SELECT * FROM users;
-
-
--- note.note: Side note
-
-If the use of pg processor doesn't specify database connections information
-through the `use` header, the implementation of `pg` can choose to look for a
-default variable (say `db`) in `FASTN.ftd`. Looking into arbitrary `.ftd` file
-is not supported. Any rust implementation will only be able to access variables
-defined in `FASTN.ftd` for configuration stuff.
-
-
--- ds.markdown:
-
-In summary, a processor like `pg` would say: "Pass connection information
-through the `use` header or it'll pick `db` variable of type `config.db-conn`
-from your `FASTN.ftd` file.
-
-<end of answer>
-
 
 -- end: lib.detailed-design
 
