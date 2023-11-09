@@ -1078,4 +1078,4 @@ skip: true
 /r/acme/ -> https://replit.com/@ayushipujaa/acme/
 /custom-url/ -> /custom-urls/
 /use-js/ -> /use-js-css/
-/use-css/ -> /use-js-css/
+/use-css/ -> /external-css/
