@@ -48,10 +48,10 @@ lang: ftd
 \-- fastn.package: my-package
 
 \-- fastn.db-conn my-db:
-db_host: <some_ip>
-db_user: user
-db_password: config.DB_PASSWORD ;; this is an environment variable
-db_name: user_db
+db-host: <some-ip>
+db-user: user
+db-password: config.DB_PASSWORD ;; this is an environment variable
+db-name: user_db
 
 -- ds.markdown:
 
@@ -80,10 +80,10 @@ lang: ftd
 \-- fastn.package: my-package
 
 \-- fastn.db-conn my-db:
-db_host: <some_ip>
-db_user: user
-db_password: fastn.env(DB_PASSWORD) \;; suggested syntax
-db_name: user_db
+db-host: <some-ip>
+db-user: user
+db-password: fastn.env(DB_PASSWORD) \;; suggested syntax
+db-name: user_db
 
 -- note.note: `fastn.env()`
 
