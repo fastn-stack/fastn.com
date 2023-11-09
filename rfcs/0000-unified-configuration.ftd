@@ -5,22 +5,24 @@
 id: unified-config
 status: proposal
 
-TODO: Write a brief summary of the RFC here.
+A configuration system streamlining complex settings for processors, fastn
+packages. It introduces:
 
+- Special Configuration types in the `fastn` namespace.
+- A virtual module for configuration access in userland.
+- Package level configuration.
 
 -- lib.motivation:
 
-;; TODO: add links to the following paragraph
-Currently, `fastn` supports configuration through environment variables, cli
-arguments, and in some way, through the `FASTN.ftd` file. Environment variables
-are good to change the behaviour of the cli or to pass secret information but
-it's not ideal for defining complex configuration for a framework like `fastn`
-which provides various configurable features like processors, oauth
-authentication and, apps.
+Currently, `fastn` supports configuration through [environment
+variables](/env/), cli arguments, and in some way, through the `FASTN.ftd`
+file. Environment variables are good to change the behaviour of the cli or to
+pass secret information but it's not ideal for defining complex configuration
+for a framework like `fastn` which provides various configurable features like
+[processors](/processor/-/backend/), oauth authentication and, apps.
 
-;; TODO: I can do better than this
-This RFC proposes a way of dealing with configuration that is centralised and
-leveraged the existing ability of the `fastn` cli to read environment
+This RFC proposes a way of dealing with configuration that is centralized and
+leverages the existing ability of the `fastn` cli to read environment
 variables.
 
 -- end: lib.motivation
@@ -28,19 +30,103 @@ variables.
 
 -- lib.detailed-design:
 
--- ds.h2: `fastn/config` - A virtual module to assist configuration definition.
+-- ds.h2: Configuration types in `fastn.*`
 
-Add a virtual module (`fastn/config`) similar to existing [assets](TODO: add
-link) module.
+This contains all special configuration types defined by the fastn framework.
 
-;; TODO add footer section for explanors like foreign variables and virtual module
-- This module contains all special configuration types defined by the fastn
-  framework. This module also provides safe access to environment variables
-  through foreign variables.
+Any configuration required by the framework will be present as a type under the
+`fastn` namespace.
 
-- `FASTN.ftd` file will be central to the whole configuration system. Users can
-  modify the behaviour of a dependency by passing variables when they're added.
-  Example:
+For example, `db-conn` that represents database connection information is a type
+under `fastn` which can be used to create variables like:
+
+-- ds.code: variable in `FASTN.ftd` of `my-package`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: my-package
+
+\-- fastn.db-conn my-db:
+db_host: <some_ip>
+db_user: user
+db_password: config.DB_PASSWORD ;; this is an environment variable
+db_name: user_db
+
+-- ds.markdown:
+
+A corresponding struct for `db-conn` on rust side would look like:
+
+-- ds.code: `db-conn` in rust
+lang: rust
+
+struct DatabaseConnInfo {
+    db_host: String,
+    db_user: String,
+    db_password: String,
+    db_name: String,
+}
+
+-- ds.markdown:
+
+The `fastn` namespace will also allow access to environment variables using
+`fast.env` function.
+
+-- ds.code: A variable that reads environment variable using `fastn.env()`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: my-package
+
+\-- fastn.db-conn my-db:
+db_host: <some_ip>
+db_user: user
+db_password: fastn.env(DB_PASSWORD) \;; suggested syntax
+db_name: user_db
+
+-- note.note: `fastn.env()`
+
+It is a foreign function. A default value can be provided in case `DB_PASSWORD` doesn't exist: `fastn.env(DB_PASSWORD, default=admin)`.
+
+-- ds.markdown:
+
+- Some special variable names may be defined in `FASTN.ftd` file that are
+  required by the framework. Example: The implementation of [`pg`
+  processor](/sql/) may require the user of this processor to define a variable
+  name `db` in their package's `FASTN.ftd` file.
+
+- Variables created using types from `fastn.*` (as well as primitive types)
+  are normal variables that can be defined in any `.ftd` file.
+
+The virtual module (`<pkg-name>/-/config`) will handle access of variables
+defined in `FASTN.ftd`.
+
+-- ds.h2: `<pkg-name>/-/config` - A virtual module to assist configuration access.
+
+Add a virtual module (`<pkg-name>/-/config`) similar to existing
+[assets](https://fastn.com/assets) module. 
+
+This module will allow access to variables defined in `FASTN.ftd` file.
+
+-- ds.code: Example
+lang: ftd
+
+\-- import: my-package/-/config \;; This is new!
+
+\-- import: fastn/processors as pr
+
+\-- person list people:
+$processor$: pr.pg
+use: $config.my-db \;; defined in my-package's FASTN.ftd
+
+SELECT * FROM users;
+
+-- ds.h2: Configuring dependencies and apps
+
+`FASTN.ftd` file will be central to the whole configuration system. Users can
+modify the behaviour of a dependency by passing variables when they're added.
+Example:
 
 -- ds.code: `FASTN.ftd` of test-todos
 lang: ftd
@@ -52,10 +138,8 @@ lang: ftd
 \;; fastn.app works in similar way
 \-- fastn.dependency: amitu.com/todos
 max-todo-per-page: 30
-ignore-value: test \;; amitu.com/todos doesn't have this variable so we ignore this
 
 -- end: ds.code
-
 
 -- ds.markdown:
 
@@ -77,32 +161,53 @@ lang: ftd
 
 -- end: ds.code
 
-
 -- ds.markdown:
 
 - While adding dependency, users can modify any variable defined in the
-  `FASTN.ftd` file of the said dependency. Any variable that is not defined
-  there is simply ignored.
+  `FASTN.ftd` file of the said dependency.
 
-;; TODO: rephrase this! ambiguous statement
-- Variables defined in `FASTN.ftd` are also considered by the framework
-  features. Example: Github OAuth feature (this is a processor) can specify
-  that it needs `gh-oauth` variable of type `github` defined in user's
-  `FASTN.ftd` file for it to work in user's `FASTN.ftd` file for it to work
-  (the error handling when `gh-oauth` is not available depends on the
-  implementation).
+- Any extra header value passed to `fastn.dependency` will result in an error.
 
-- Variables created using types from `fastn/config` (as well as primitive types)
-  are normal variables that can be defined in any `.ftd` file.
+-- ds.h2: Optional vs. Required dependency configuration
 
-;; TODO: rephrase this: what I mean is that variables in `*.ftd` will not be
-;; considered, only `FASTN.ftd` will be considered when accessing variables using
-;; `fastn/config`
-- Only the variables defined in `FASTN.ftd` will be available for access from
-  `fastn/config` module. See this example to see how one would use a config
-  variable created elsewhere ;; TODO: add example
+A package can create variables in `FASTN.ftd` in different ways which will
+dictate if they're required or optional. See the example below:
 
-Q. Why do we allow defining config variables outside of `FASTN.ftd`?
+-- ds.code: `FASTN.ftd` of `amitu.com/todos`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: amitu.com/todos
+db: $my-db-for-dev \;; this value for db is available only when it's not used as a dependency
+
+\-- fastn.db-conn db:  \;; this has no value so this will be required
+
+\-- integer max-todos: 30 \;; this has a default value so this is optional
+
+-- ds.markdown:
+
+- `db` must be defined when the package is being used, and fastn.package is one
+  such usage! This allows for easy testing, say if I am building
+  amitu.com/todos, I do not have to create a test app, and I can work directly
+  in amitu.com/todos package, and my test values would be passed there.
+
+- `max-todos` is defined with a value so this doesn't have to be passed as a
+  header when using `amitu.com/todos` as a dependency.
+
+-- ds.code: Example use of `amitu.com/todos` in `my-website`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: my-website
+
+\-- fastn.dependency: amitu.com/todos
+db: $my-db \;; this is required otherwise an error will be thrown
+\;; max-todos is optional so we ignore this
+
+
+-- ds.h3: Q. Why do we allow defining config variables outside of `FASTN.ftd`?
 
 <start of answer>
 
@@ -111,7 +216,7 @@ external fastn package. Even though this change in behaviour or modification in
 configuration of a package should happen in `FASTN.ftd` file, we should give
 users option to define configuration that are scoped for a single use.
 
-Consider the following example that uses the [pg processor]():
+Consider the following example that uses the [`pg` processor](/sql/):
 
 -- ds.code: `sample.ftd`
 lang: ftd
@@ -132,11 +237,11 @@ use: $temp
 SELECT * FROM users;
 
 
--- note.note: Sidenote
+-- note.note: Side note
 
 If the use of pg processor doesn't specify database connections information
 through the `use` header, the implementation of `pg` can choose to look for a
-default variable (say `db`) in `FASTN.ftd`. Looking into arbitray `.ftd` file
+default variable (say `db`) in `FASTN.ftd`. Looking into arbitrary `.ftd` file
 is not supported. Any rust implementation will only be able to access variables
 defined in `FASTN.ftd` for configuration stuff.
 
@@ -150,40 +255,58 @@ from your `FASTN.ftd` file.
 <end of answer>
 
 
--- ds.h2: TODO
-
-- Write implementation details.
-
-
 -- end: lib.detailed-design
 
 
 -- lib.alternatives:
 
-Did you consider any alternatives to what you propose in detailed-design, if so
-mention them here, along with discussion on why you consider the proposal better.
+Another way is to stick with how fastn currently reads environment variables.
+It's good because it keeps secret info safe in source files. But there are some
+downsides:
+
+- We still need a way to share settings between packages (like dependencies and
+  apps).
+
+- People don't have a straightforward system to make their packages adjustable
+  by the outside world.
 
 -- end: lib.alternatives
 
 
-
-
 -- lib.teaching-notes:
 
-How hard would it be to teach this feature?
+- At a minimum, framework features might require users to define a variable
+  in their FASTN.ftd file, and this process is quite straightforward to
+  explain.
+
+- Likewise, when incorporating dependencies into FASTN.ftd, it's preferable for
+  the documentation of the dependency to document all potential configurations.
+
+- Power users and library authors can choose to dive deep in the docs and
+  explore how they can use the `<pkg-name>/-/config` virtual module to access
+  variables defined in their package's `FASTN.ftd`.
 
 -- end: lib.teaching-notes
 
-
-
 -- lib.unresolved-questions:
 
-List unresolved questions here.
+This RFC doesn't address the security concerns around this feature. Some points to consider here:
+
+- Environment variables accessed using `fastn.env()` could be leaked in client code. Example:
+
+-- ds.code: Client can print environment variables
+lang: ftd
+
+\-- import: fastn
+
+\-- ftd.text: $fastn.env(DB_PASSWORD) ;; this is bad
+
+-- ds.markdown:
+
+- We need some way to limit access of environment variables.
+
 
 -- end: lib.unresolved-questions
 
-
-
 -- end: lib.rfc
-
 
