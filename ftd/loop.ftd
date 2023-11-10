@@ -131,7 +131,7 @@ color: $inherited.colors.text
 
 
 
--- ds.h2: Looping using the `$loop$` syntax
+-- ds.h2: Looping using the `$loop$` syntax (Deprecated Syntax)
 
 This syntax will soon be deprecated but we can still use it. It has the
 following general syntax that we can find below.
