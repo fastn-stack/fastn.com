@@ -613,6 +613,8 @@ skip: true
 - Rive Events: /rive-events/
   document: ftd/rive-events.ftd
   decription: animation, on-rive-play, on-rive-pause, on-rive-state-change
+- How to create color-scheme: /create-cs/
+  document: cs/create-cs.ftd
 - Use color scheme package: /use-cs/
   document: cs/use-color-package.ftd
 - `processor`: /processor/
