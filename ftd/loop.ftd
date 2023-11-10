@@ -78,7 +78,7 @@ since the other one will be deprecated soon.
 Using for syntax is recommended for looping and has the following
 general syntax that we should keep in mind before using it.
 
-`for: <LIST-ITEM-NAME>, [<LOOP-INDEX>] in <LIST-NAME>`
+**General Syntax** - `for: <LIST-ITEM-NAME>, [<LOOP-INDEX>] in <LIST-NAME>`
 
 -- cbox.info: Note
 
@@ -133,10 +133,10 @@ color: $inherited.colors.text
 
 -- ds.h2: Looping using the `$loop$` syntax
 
-This syntax will soon be deprecated but you can still use it. It has the
+This syntax will soon be deprecated but we can still use it. It has the
 following general syntax that we can find below.
 
-`$loop$: <LIST-NAME> as <LIST-ITEM-NAME>`
+**General Syntax** - `$loop$: <LIST-NAME> as <LIST-ITEM-NAME>`
 
 -- ds.rendered: Sample usage (using `$loop$` syntax)
 copy: true
@@ -156,9 +156,13 @@ color: $inherited.colors.text
 
 -- ds.rendered.output:
 
--- ftd.text: TODO HERE
+-- ftd.text: $place
+$loop$: $places as $place
 color: $inherited.colors.text
-;; This will print all the items from list places
+
+-- ftd.integer: $number
+$loop$: $odd-numbers as $number
+color: $inherited.colors.text
 
 ;; This will print all the numbers from list odd-numbers
 
@@ -166,14 +170,38 @@ color: $inherited.colors.text
 
 -- end: ds.rendered
 
-;; Todo: Fix $loop$ inside ftd.ui list
--- ftd.text: $p
-$loop$: $places as $p
+
+
+;; TODO: Conditional loops not working inside ftd.lists (needs fix)
+;; After proper fix this will be uncommented
+/-- ds.h1: Conditional Looping
+
+Let's say we dont want to use all values from the list but some of them
+based on certain condition. In that case, we can use the if header to specify
+a condition which the list item should satisfy.
+
+Consider the case where we have a list of persons (each having name and age)
+and we only want to print those persons whose age is below 25. This is how we
+will do it.
+
+/-- ds.rendered: Printing only persons with age < 25
+
+-- ds.rendered.input:
+
+\-- ftd.text: $person.name
+if: { person.age < 25 } ;; <hl>
+for: person in $persons
 color: $inherited.colors.text
 
--- ftd.integer: $number
-$loop$: $odd-numbers as $number
+-- ds.rendered.output:
+
+-- ftd.text: $person.name
+$loop$: $persons as $person
 color: $inherited.colors.text
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
 
 -- end: ds.page
 
