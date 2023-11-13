@@ -1,3 +1,5 @@
+-- import: fastn.com/cs/sample-codes/create-cs as sample-code
+
 -- ds.page: How to create your own fastn color-scheme
 
 Here, we will see how we can create our own fastn color scheme
@@ -41,7 +43,7 @@ For example, something like this
 
 -- ds.markdown:
 
-After filling all the details, click on the Create repository button.
+After filling all the details, click on the `Create repository` button.
 Once you do this, we will need to wait a bit for the repository to be
 created. After you have successfully created your repository, you will see
 something like this.
@@ -58,20 +60,24 @@ the `colors.ftd` file.
 -- ds.markdown:
 
 This file holds the colors of this color-scheme repository
-so modifying this file will change this color-scheme repository. The colors.ftd
+so modifying this file will change this color-scheme repository. This `colors.ftd`
 file will look something like this at first. You will see a lot of
 pre-defined default colors which are provided by fastn.
 
--- tutorial-image: $fastn-assets.files.images.cs.how-to-create-cs.7.png
+-- ds.code: Initial pre-defined colors
+lang: ftd
+max-height.fixed.px: 300
+download: colors.ftd
+copy: true
+
+$sample-code.initial-colors-code
 
 -- ds.markdown:
 
 Ideally, we should change all the colors inside `colors.ftd` file based on
 our requirements of our custom color-scheme. But for demonstration purpose,
 we will modify only text color for now. Let's say we change the text color
-to yellow (#FFFF00) for dark mode.
-
-**Proposed change**: Current text color (for dark mode) -> #FFFF00 (yellow)
+to `#FFFF00` (yellow) for dark mode.
 
 To edit this file, click on the edit button
 which you can find at the top-right of this page.
@@ -82,7 +88,7 @@ which you can find at the top-right of this page.
 
 After clicking on the edit button, we can make changes to this `colors.ftd` file.
 Navigate to the text color variable and change its dark mode color
-to #FFFF00 (yellow). After doing that commit the changes.
+to `#FFFF00` (yellow). After doing that commit the changes.
 
 -- tutorial-image: $fastn-assets.files.images.cs.how-to-create-cs.9.png
 
@@ -91,7 +97,13 @@ to #FFFF00 (yellow). After doing that commit the changes.
 Before we start using our colors, we need to configure some details
 defined inside `index.ftd`. Initially, the `index.ftd` will look like this.
 
--- tutorial-image: $fastn-assets.files.images.cs.how-to-create-cs.10.png
+-- ds.code: Initial index.ftd
+lang: ftd
+max-height.fixed.px: 300
+download: colors.ftd
+copy: true
+
+$sample-code.initial-index-code
 
 -- ds.markdown:
 
@@ -111,21 +123,21 @@ on the top-right. After clicking on the edit button, you can edit this file
 
 -- ds.markdown:
 
-After modifying index.ftd, we will see the contents like this.
+After modifying `index.ftd`, we will see the contents like this.
 
 -- tutorial-image: $fastn-assets.files.images.cs.how-to-create-cs.13.png
 
 -- ds.h1: Let's make our repository live
 
 After going through all the above steps, all you need to do is deploy this
-repository using Github Pages. To do this, go to Settings -> Pages.
+repository using `Github Pages`. To do this, go to `Settings -> Pages`.
 You will see this page as shown below.
 
 -- tutorial-image: $fastn-assets.files.images.cs.how-to-create-cs.14.png
 
 -- ds.markdown:
 
-Under Build and Deployment -> Branch. Select `gh-pages` and hit Save.
+Under `Build and Deployment -> Branch`. Select `gh-pages` and hit Save.
 Doing this, will start the deployment process. We can check the deployment
 process under `Actions` tab. We just have to wait till the
 `pages build and deployment` workflow is finished.
@@ -150,7 +162,7 @@ which says `Use your Github pages website`.
 
 -- ds.markdown:
 
-Then hit on Save changes button to save your website which will be shown in
+Then hit on `Save changes` button to save your website which will be shown in
 the About section.
 
 -- tutorial-image: $fastn-assets.files.images.cs.how-to-create-cs.19.png
