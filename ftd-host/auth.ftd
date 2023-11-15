@@ -4,7 +4,7 @@
 -- import: fastn.com/backend/env-vars
 -- import: fifthtry.github.io/admonitions as cbox
 
--- ds.page: Github User Details using the `user-details` processor
+-- ds.page: GitHub User Details using the `user-details` processor
 
 Let's look at how we can access basic user details of a user authenticated
 using GitHub.
@@ -69,7 +69,7 @@ lang: ftd
 \-- end: ftd.row
 
 \-- ftd.row:
-\if: { auth.is-login == true }
+\if: { auth.is-login }
 \-- ftd.text: User id:
 \margin-right.px: 4
 
@@ -77,7 +77,7 @@ lang: ftd
 \-- end: ftd.row
 
 \-- ftd.row:
-\if: { auth.is-login == true }
+\if: { auth.is-login }
 
 \-- ftd.text: $auth.user.name
 
@@ -97,7 +97,13 @@ lang: ftd
 
 -- ds.h2: Setup GitHub Authentication with fastn
 
-To setup GitHub Authentication, you need the following environment variables:
+- When configuring the [GitHub OAuth
+  app](https://github.com/settings/developers), ensure that the callback URL is
+  set to `yourdomain.com/-/auth/github/` (substitute "yourdomain.com" with your
+  specific URL).
+
+- Configure the following environment variables to let fastn know about your
+  GitHub OAuth app:
 
 -- env-vars.fastn-auth-variables:
 
