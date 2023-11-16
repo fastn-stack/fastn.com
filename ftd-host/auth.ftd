@@ -49,7 +49,7 @@ lang: ftd
 \-- import: fastn/processors as pr
 
 \-- status auth:
-\$processor$: pr.user-details
+$processor$: pr.user-details
 
 -- ds.markdown:
 
@@ -62,22 +62,22 @@ lang: ftd
 \-- ftd.column:
 
 \-- ftd.row:
-\if: { auth.is-login == false }
+if: { auth.is-login == false }
 
 \-- ftd.text: You're not logged in! Can't give you the details.
 
 \-- end: ftd.row
 
 \-- ftd.row:
-\if: { auth.is-login }
+if: { auth.is-login }
 \-- ftd.text: User id:
-\margin-right.px: 4
+margin-right.px: 4
 
 \-- ftd.integer: $auth.user.id
 \-- end: ftd.row
 
 \-- ftd.row:
-\if: { auth.is-login }
+if: { auth.is-login }
 
 \-- ftd.text: $auth.user.name
 
