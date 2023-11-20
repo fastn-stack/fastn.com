@@ -21,7 +21,7 @@ authenticated user. First, we need some data structures:
 lang: ftd
 
 \-- record status:
-boolean is-login:
+boolean is-logged-in:
 optional user-details user:
 
 \-- record user-details:
@@ -62,14 +62,14 @@ lang: ftd
 \-- ftd.column:
 
 \-- ftd.row:
-if: { auth.is-login == false }
+if: { auth.is-logged-in == false }
 
 \-- ftd.text: You're not logged in! Can't give you the details.
 
 \-- end: ftd.row
 
 \-- ftd.row:
-if: { auth.is-login }
+if: { auth.is-logged-in }
 \-- ftd.text: User id:
 margin-right.px: 4
 
@@ -77,7 +77,7 @@ margin-right.px: 4
 \-- end: ftd.row
 
 \-- ftd.row:
-if: { auth.is-login }
+if: { auth.is-logged-in }
 
 \-- ftd.text: $auth.user.name
 
@@ -87,7 +87,7 @@ if: { auth.is-login }
 
 -- ds.markdown:
 
-- We show a message when the user is not logged in (`auth.is-login == false`).
+- We show a message when the user is not logged in (`auth.is-logged-in == false`).
   You can also put a link for your users to login using GitHub:
 
 -- ds.code: Alternate text
