@@ -259,3 +259,40 @@ dark: https://fastn.com/-/fastn.com/images/cs/show-cs-1-dark.jpg
 
 
 -- ftd.image-src just-light: https://fastn.com/-/fastn.com/images/cs/show-cs-1.jpg
+
+-- ds.h2: `fetch priority`
+
+Type: `optional` `string`
+
+Required: False
+
+The `fetchPriority` property allows you to signal high or low priority image fetches.
+This can be useful when applied to <img> elements to signal images that are "important" to the user experience early in the loading process.
+
+-- ds.rendered: Sample code using `fetch priority`
+
+-- ds.rendered.input:
+
+\-- import: fastn.com/assets
+
+\-- ftd.image: $assets.files.images.cs.show-cs-1.jpg
+fetch-priority: high ;; <hl>
+width.fixed.px: 400
+height.fixed.px: 300
+color: $inherited.colors.text
+padding.px: 10
+
+-- ds.rendered.output:
+
+-- ftd.image: $assets.files.images.cs.show-cs-1.jpg
+fetch-priority: high
+width.fixed.px: 400
+height.fixed.px: 300
+color: $inherited.colors.text
+padding.px: 10
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
