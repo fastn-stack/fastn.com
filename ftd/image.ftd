@@ -249,18 +249,6 @@ padding.px: 10
 
 
 
-
-
-
--- ftd.image-src my-images:
-light: https://fastn.com/-/fastn.com/images/cs/show-cs-1.jpg
-dark: https://fastn.com/-/fastn.com/images/cs/show-cs-1-dark.jpg
-
-
-
--- ftd.image-src just-light: https://fastn.com/-/fastn.com/images/cs/show-cs-1.jpg
-
-
 -- ds.h2:  `fetchPriority`
 
 Type: `optional` `string`
@@ -298,3 +286,12 @@ padding.px: 10
 -- end: ds.rendered
 
 -- end: ds.page
+
+
+-- ftd.image-src my-images:
+light: https://fastn.com/-/fastn.com/images/cs/show-cs-1.jpg
+dark: https://fastn.com/-/fastn.com/images/cs/show-cs-1-dark.jpg
+
+
+
+-- ftd.image-src just-light: https://fastn.com/-/fastn.com/images/cs/show-cs-1.jpg
