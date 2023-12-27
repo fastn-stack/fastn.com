@@ -276,7 +276,6 @@ This can be useful when applied to <img> elements to signal images that are "imp
 \-- import: fastn.com/assets
 
 \-- ftd.image: $assets.files.images.cs.show-cs-1.jpg
-fetch-priority: high ;; <hl>
 width.fixed.px: 400
 height.fixed.px: 300
 color: $inherited.colors.text
@@ -284,8 +283,10 @@ padding.px: 10
 
 -- ds.rendered.output:
 
--- ftd.image: $assets.files.images.cs.show-cs-1.jpg
-fetch-priority: high
+-- ftd.text: Fetch Priority = Auto
+
+-- ftd.image: https://picsum.photos/536/354
+fetch-priority: auto
 width.fixed.px: 400
 height.fixed.px: 300
 color: $inherited.colors.text
