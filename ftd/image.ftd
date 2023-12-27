@@ -259,3 +259,42 @@ dark: https://fastn.com/-/fastn.com/images/cs/show-cs-1-dark.jpg
 
 
 -- ftd.image-src just-light: https://fastn.com/-/fastn.com/images/cs/show-cs-1.jpg
+
+
+-- ds.h2:  `fetchPriority`
+
+Type: `optional` `string`
+
+Required: False
+
+The `fetchPriority` property of the `HTMLImageElement` interface represents a hint
+given to the browser on how it should prioritize the fetch of the image relative
+to other images.
+
+-- ds.rendered: Sample code using `fetchPriority`
+
+-- ds.rendered.input:
+
+\-- import: fastn.com/assets
+
+\-- ftd.image: $assets.files.images.cs.show-cs-1.jpg
+fetch-priority: auto ;; <hl>
+width.fixed.px: 400
+height.fixed.px: 300
+color: $inherited.colors.text
+padding.px: 10
+
+-- ds.rendered.output:
+
+-- ftd.image: $assets.files.images.cs.show-cs-1.jpg
+fit: cover
+width.fixed.px: 400
+height.fixed.px: 300
+color: $inherited.colors.text
+padding.px: 10
+
+-- end: ds.rendered.output
+
+-- end: ds.rendered
+
+-- end: ds.page
