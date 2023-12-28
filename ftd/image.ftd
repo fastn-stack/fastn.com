@@ -256,9 +256,8 @@ Type: `optional` [`ftd.fetch-priority`](ftd/built-in-types/#ftd-fetch-priority)
 
 Required: False
 
-The `fetch-priority` property allows you to signal high or low priority image fetches.
-
-This can be useful when applied to `ftd.image` elements to prioritize images crucial for the early user experience.
+The `fetch-priority` property signals high or low priority for crucial `ftd.image` elements,
+optimizing early user experience.
 
 -- ds.rendered: Sample code using `fetch-priority`
 
