@@ -268,7 +268,7 @@ Required: False
 
 The `fetch-priority` property allows you to signal high or low priority image fetches.
 
-This can be useful when applied to `img` elements to prioritize images crucial for the early user experience.
+This can be useful when applied to `ftd.image` elements to prioritize images crucial for the early user experience.
 
 -- ds.rendered: Sample code using `fetch-priority`
 
