@@ -825,7 +825,7 @@ background image based on the specified x and y values.
 
 -- ds.h2: `ftd.fetch-priority`
 
-The `fetch-priority` property is used to specify the priority of the image.
+The `ftd.fetch-priority` property is used to specify the priority of the image.
 
 -- ds.code: `ftd.fetch-priority`
 lang: ftd
