@@ -825,7 +825,7 @@ background image based on the specified x and y values.
 
 --ds.h2: `ftd.fetch-priority`
 
-The `ftd.fetchPriority` property of the HTMLImageElement interface represents a hint given to the browser on
+The `ftd.fetch-priority` property of the HTMLImageElement interface represents a hint given to the browser on
 how it should prioritize the fetch of the image relative to other images.
 
 -- ds.code: `ftd.fetch-priority`
@@ -833,16 +833,14 @@ lang: ftd
 
 \-- or-type fetch-priority:
 
-\-- constant string auto: auto
 \-- constant string high: high
 \-- constant string low: low
+
+\-- end: fetch-priority
 
 -- ds.markdown
 
 As shown above, the `ftd.fetch-priority` has following variants
-
-- `auto`: Default mode, which indicates no preference for the fetch priority.
-The browser decides what is best for the user.
 
 - `high`: Fetch the image at a high priority relative to other images.
 
