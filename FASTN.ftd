@@ -34,7 +34,7 @@ favicon: /-/fastn.com/images/favicon.svg
 
 # Examples: /examples/
   skip: true
-  
+
 # Explore: /frontend/
 
 ## Features: /frontend/
@@ -517,7 +517,7 @@ skip: true
     document: ftd/variables.ftd
   - Built-in Types: /built-in-types/
     document: ftd/built-in-types.ftd
-    description: boolean, integer, decimal, string, caption, body, caption or body, ftd.ui, children, ftd.align-self, ftd.align, ftd.anchor, ftd.linear-gradient, ftd.linear-gradient-color, ftd.breakpoint-width-data, ftd.linear-gradient-directions, ftd.background-image, ftd.background-position, ftd.background-repeat, ftd.background-size, ftd.background, ftd.border-style, ftd.color, ftd.display, ftd.color-scheme, ftd.cursor, ftd.image-src, ftd.length, ftd.length-pair, ftd.loading, ftd.overflow, ftd.region, ftd.resize, ftd.resizing, ftd.responsive-type, ftd.shadow, ftd.spacing, ftd.text-align, ftd.text-input-type, ftd.text-style, ftd.text-transform, ftd.type, ftd.white-space, ftd.type-data
+    description: boolean, integer, decimal, string, caption, body, caption or body, ftd.ui, children, ftd.align-self, ftd.align, ftd.anchor, ftd.linear-gradient, ftd.linear-gradient-color, ftd.breakpoint-width-data, ftd.linear-gradient-directions, ftd.background-image, ftd.background-position, ftd.background-repeat, ftd.background-size, ftd.background, ftd.border-style, ftd.color, ftd.display, ftd.color-scheme, ftd.cursor, ftd.image-src, ftd.length, ftd.length-pair, ftd.loading, ftd.overflow, ftd.region, ftd.resize, ftd.resizing, ftd.responsive-type, ftd.shadow, ftd.spacing, ftd.text-align, ftd.text-input-type, ftd.text-style, ftd.text-transform, ftd.type, ftd.white-space, ftd.type-data, ftd.fetch-priority
   - `record`: /record/
     document: ftd/record.ftd
   - `or-type`: /or-type/
@@ -918,8 +918,8 @@ skip: true
 
 # Blog: /blog/
 
-- Building Your Personal Website with fastn: /blog/personal-website-1/
-  document: blog/personal-website-1.ftd 
+- Domain Components: /blog/domain-components/
+  document: blog/domain-components.ftd
 - Search Feature in fastn.com: /blog/search/
 - Quote contest: /quote-contest/
   document: events/weekly-contest/week-1-quote.ftd
@@ -928,7 +928,7 @@ skip: true
 - A Content Writer’s Journey with fastn: /writer/
   document: blog/writer-journey.ftd
 - fastn might prove you wrong: /prove/
-  document: blog/prove-you-wrong.ftd 
+  document: blog/prove-you-wrong.ftd
 - The Intimidation of Programming: /intimidation/
   document: blog/the-intimidation-of-programming.ftd
 - Optimize your website: /blog/seo-meta/
@@ -945,7 +945,7 @@ skip: true
   document: blog/show-cs.ftd
 - Using Custom Breakpoints: /breakpoint/
   document: blog/breakpoint.ftd
-  
+
 
 # dev: /d/
   skip: true

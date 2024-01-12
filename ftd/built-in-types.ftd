@@ -3,8 +3,8 @@
 -- ds.page: Built-in Types
 
 
-`fastn` comes with some built-in types. These can be used to define properties 
-of components or fields of [`record`](ftd/record/) and 
+`fastn` comes with some built-in types. These can be used to define properties
+of components or fields of [`record`](ftd/record/) and
 [`or-type`](ftd/or-type/).
 These types can be categorized into two main groups: **Primitive** and
 **Derived**.
@@ -67,6 +67,7 @@ These types can be categorized into two main groups: **Primitive** and
   - [`ftd.type`](/built-in-types#ftd-type)
   - [`ftd.white-space`](/built-in-types#ftd-white-space)
   - [`ftd.type-data`](/built-in-types#ftd-type-data)
+  - [`ftd.fetch-priority`](/built-in-types#ftd-fetch-priority)
 
 
 
@@ -163,12 +164,12 @@ of `shobhit` variable.
 By default `caption` is alias for `string` but if you want to pass
 types other than `string` you can do the following:
 
--- ds.code: record with caption as integer
-lang: ftd
-
-\-- record marks:
-caption integer number:
-
+	-- ds.code: record with caption as integer
+	lang: ftd
+	
+	\-- record marks:
+	caption integer number:
+	
 -- end: cbox.info
 
 
@@ -213,12 +214,12 @@ case of `amitu` var, or it can come as an explicit key, as in the declaration of
 By default `body` is alias for `string` but if you want to pass
 types other than `string` you can do the following:
 
--- ds.code: record with body as integer
-lang: ftd
-
-\-- record marks:
-body integer number:
-
+	-- ds.code: record with body as integer
+	lang: ftd
+	
+	\-- record marks:
+	body integer number:
+	
 -- end: cbox.info
 
 -- ds.h2: `caption or body`
@@ -259,18 +260,18 @@ the declaration of `shobhit` variable, or in "body" location, eg for `abrar`.
 By default `caption or body` is alias for `string` but if you want to pass
 types other than `string` you can do the following:
 
--- ds.code: record with body as integer
-lang: ftd
-
-\-- record marks:
-caption or body integer number:
-
+	-- ds.code: record with body as integer
+	lang: ftd
+	
+	\-- record marks:
+	caption or body integer number:
+	
 -- end: cbox.info
 
 
 -- ds.h2: `ftd.ui`
 
-`ftd.ui` is a data type in the `fastn` language that represents a user 
+`ftd.ui` is a data type in the `fastn` language that represents a user
 interface component.
 
 -- ds.code:
@@ -290,7 +291,7 @@ a single component of type `ftd.text` with text property value as `Hello`.
 `-- uis.0:` will display the first item in the `uis` list,
 
 -- ds.output:
--- uis.0:
+	-- uis.0:
 -- end: ds.output
 
 
@@ -817,6 +818,38 @@ within its container area without cropping or stretching the image.
 - `length`: This anonymous record value will set the dimensions of the
 background image based on the specified x and y values.
 
+
+
+
+
+
+-- ds.h2: `ftd.fetch-priority`
+
+The `ftd.fetch-priority` property is used to specify the priority of the image.
+
+-- ds.code: `ftd.fetch-priority`
+lang: ftd
+
+\-- or-type fetch-priority:
+
+\-- constant string high: high
+\-- constant string low: low
+
+\-- end: fetch-priority
+
+-- ds.markdown:
+
+As shown above, the `ftd.fetch-priority` has following variants
+
+- `high`: Fetch the image at a high priority relative to other images.
+
+- `low`: Fetch the image at a low priority relative to other images.
+
+
+
+
+
+
 -- ds.h2: `ftd.color`
 
 It is record type with the following fields.
@@ -891,9 +924,9 @@ wonder!
 
 -- ds.output:
 
--- ftd.text: Switch your device mode (light/dark)
-color: $red-orange
-
+	-- ftd.text: Switch your device mode (light/dark)
+	color: $red-orange
+	
 -- end: ds.output
 
 
@@ -1056,7 +1089,7 @@ min-width: hug-content
 In the above example, the `ftd.text` component has a `width` stretches to the
 width of its parent container, a `height` calculated and set by browser
 automatically based on its contents or other factors, `max-width` sets to be 300
-pixels and `min-width` dynamically resizes to be as small as possible while 
+pixels and `min-width` dynamically resizes to be as small as possible while
 still surrounding its contents.
 
 
@@ -1089,6 +1122,9 @@ lang: ftd
 \-- integer vw:
 \-- integer vmin:
 \-- integer vmax:
+\-- decimal dvh:
+\-- decimal lvh:
+\-- decimal svh:
 \-- decimal em:
 \-- decimal rem:
 \-- ftd.responsive-length responsive:
@@ -1122,11 +1158,20 @@ height.
 For example, `width.fixed.vw: 25` sets the width to be 25% of the viewport's
 width.
 
-- vmin: This variant sets the value relative to the smaller dimension between the width and height of the viewport.
+- `vmin`: This variant sets the value relative to the smaller dimension between the width and height of the viewport.
 For example, width.fixed.vmin: 25 sets the width to be 25% of the smaller dimension.
 
-- vmax: This variant sets the value relative to the larger dimension between the width and height of the viewport.
+- `vmax`: This variant sets the value relative to the larger dimension between the width and height of the viewport.
 For example, width.fixed.vmax: 25 sets the width to be 25% of the larger dimension.
+
+- `dvh`:  This variant sets the value relative to the dynamic viewport height , when the area of "web content" get changed.
+For example, width.fixed.dvh: 25 sets the height to be 25% of the dynmaically changing viewport height.
+
+- `lvh`:  This variant sets the value relative to the large viewport height.
+For example, width.fixed.lvh: 25 sets the height to be 25% of the larger viewport height.
+
+- `svh`:  This variant sets the value relative to the large viewport height.
+For example, width.fixed.svh: 25 sets the height to be 25% of the smaller viewport height.
 
 - `em`: This variant sets the value relative to the size of the parent
 element, in the case of typographical properties like `font-size`, and the font
@@ -1143,6 +1188,7 @@ which are `ftd.length` types. The `desktop` field specifies the value of the
 length on desktop devices, while the `mobile` field specifies the value on
 mobile devices.
 
+[Learn more about these length units based on viewport on MDN](https://developer.mozimlla.org/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
 For example,
 
@@ -1162,13 +1208,13 @@ border-color: $inherited.colors.border
 
 -- ds.output:
 
--- ftd.text: Hello
-padding.responsive: $p
-background.solid: $inherited.colors.background.step-1
-color: $inherited.colors.text
-border-width.px: 1
-border-color: $inherited.colors.border
-
+	-- ftd.text: Hello
+	padding.responsive: $p
+	background.solid: $inherited.colors.background.step-1
+	color: $inherited.colors.text
+	border-width.px: 1
+	border-color: $inherited.colors.border
+	
 -- end: ds.output
 
 
@@ -1359,10 +1405,10 @@ Check the below output in different devices.
 
 -- ds.output:
 
--- ftd.text: Hello World
-role: $rtype
-color: $inherited.colors.text
-
+	-- ftd.text: Hello World
+	role: $rtype
+	color: $inherited.colors.text
+	
 -- end: ds.output
 
 
@@ -2999,10 +3045,12 @@ style: italic
 - `vw <integer>`: Relative to 1% of the width of the viewport
 - `vmin <integer>`: Sets the value relative to the smaller dimension between the width and height of the viewport.
 - `vmax <integer>`: Sets the value relative to the larger dimension between the width and height of the viewport.
+- `dvh <decimal>`:  Sets the value relative to the dynamic changing viewport.
+- `lvh <decimal>`:  Sets the value relative to the large view port height.
+- `svh <decimal>`:  Sets the value relative to the small view port height.
 - `<integer>`: Gives <integer>px unit space.
 
 ;; Todo: Add all types from cheatsheet
-
 -- end: ds.page
 
 
