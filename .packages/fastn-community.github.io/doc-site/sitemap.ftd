@@ -1,0 +1,87 @@
+-- import: fastn.com/expander/ds/understanding-sitemap as ds-sitemap
+-- import: fastn-community.github.io/doc-site/components
+
+
+
+
+
+-- ds.page: 
+document-title: fastn Doc-Site Template. Build Your Own Website with Ease
+document-description: Simple, easy-to-use doc-site template to build your own documentation website, personal website, or blog. Change colours and typography effortlessly.
+document-image: https://fastn.com/-/fastn.com/images/fastn-logo.png
+sidebar: true
+
+-- ds.page.right-sidebar:
+
+-- components.sidebar-index:
+
+-- end: ds.page.right-sidebar
+
+-- ds-sitemap.show-sm:
+
+-- end: ds.page
+
+/-- ds.page: Understanding Sitemap
+
+The `doc-site` page component has an inbuilt header. Just using the `page`
+header will appear on your page.
+
+The header is built using [header](https://fastn-community.github.io/header) 
+component.
+Header uses `fastn.sitemap` which can be added inside your `FASTN.ftd` file. 
+
+-- ds.youtube:
+v: IIBk8zmspkA
+
+-- ds.markdown:
+
+To learn more how to implement `fastn.sitemap` go through this 
+[video tutorial](https://fastn.com/understanding-sitemap/).
+
+-- ds.h3: How to create clean URL using sitemap
+
+In sitemap, you can clean the URLs and give custom URLs by using the sitemap 
+feature: `document`.
+
+-- ds.youtube:
+v: 4ke75MpOEks
+
+-- ds.markdown:
+
+To learn more how to implement `fastn.sitemap` go through this 
+[video tutorial](https://fastn.com/clean-urls/).
+
+-- ds.h3: Sample `fastn.sitemap` code snippet
+
+Below is a set of simple sitemap links which you will see on the header and
+toc-sidebar in your `doc-site` project.
+
+Add the below code inside your `FASTN.ftd` file
+
+-- ds.code:
+lang: ftd
+
+\-- fastn.sitemap:
+
+# Home: index.html
+
+- Liking fastn lang?: https://fastn.com/clean-urls/-/build/
+- My First Article: /article-1/
+
+# Star us on GitHub
+  url: https://github.com/fastn-stack/fastn
+
+-- ds.markdown:
+
+In the above code snippet `Home` is the main section that will be active when you are
+on the homepage of your `doc-site` project. OnClick of `Home` link it will take 
+you to the `index.html` which is the homepage of your `doc-site` project.
+
+Another link `/article-1/` will go to the `article.ftd` file which you
+created inside the root folder of your `doc-site` project. And it will be seen
+inside the `toc-sidebar` as toc link to the `Home` section.
+
+`Star us on GitHub` will point to `https://github.com/fastn-stack/fastn` which
+is an external URL.
+
+-- end: ds.page
