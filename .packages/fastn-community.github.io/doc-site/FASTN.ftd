@@ -14,7 +14,7 @@ favicon: https://fastn-community.github.io/doc-site/-/fastn-community.github.io/
 -- fastn.dependency: fastn-community.github.io/dark-mode-switcher
 -- fastn.dependency: fastn-community.github.io/optimization
 -- fastn.dependency: fastn-community.github.io/dark-flame-cs
--- fastn.dependency: fastn.com
+/-- fastn.dependency: fastn.com
 
 -- fastn.auto-import: fastn
 -- fastn.auto-import: fastn-community.github.io/doc-site/assets

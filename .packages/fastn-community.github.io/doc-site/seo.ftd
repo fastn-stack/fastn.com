@@ -1,4 +1,4 @@
--- import: fastn.com/expander/ds/meta-data as ds-meta
+/-- import: fastn.com/expander/ds/meta-data as ds-meta
 -- import: fastn-community.github.io/doc-site/components
 
 
@@ -22,6 +22,21 @@ sidebar: true
 fastn SEO helps to boost your search engine optimization with its buit-in
  [`ftd.document`](https://fastn.com/document/) features.
 
--- ds-meta.show-md:
+/-- ds-meta.show-md:
+
+-- show-md:
 
 -- end: ds.page
+
+
+-- component show-md:
+
+-- ftd.column:
+spacing.fixed.em: 0.8
+width: fill-container
+
+	-- ds.h0: Add meta-data to `doc-site`
+
+-- end: ftd.column
+
+-- end: show-md
