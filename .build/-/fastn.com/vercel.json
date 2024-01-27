@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/404",
-      "destination": "/404.html"
-    }
-  ]
-}

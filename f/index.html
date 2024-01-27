@@ -15,9 +15,9 @@
     
                 <script src="markdown-24E09EFC0C2B9A11DEA9AC71888EB3A1E85864FA7D9C95A3EB5075A0E0F49A5F.js"></script>
                 <script src="prism-8FE3A42AD547E2DBBC9FE16BA059F8F1870D613AD0C5B0B013D6205B72A62BAF.js"></script>
-                <script src="default-ADBF3376A3CA9D42BEF9790BDAD56759E9D134A8FFEFAEB457FCA27FFDA71CA2.js"></script>
+                <script src="default-AD2298E28453BBC3232065364753B5D25573C4126C68E524DA751C3C50BAB298.js"></script>
                 <link rel="stylesheet" href="prism-73F718B9234C00C5C14AB6A11BF239A103F0B0F93B69CD55CB5C6530501182EB.css">
-                <script src="-/fastn.com/functions.js"></script><script src="-/fastn.com/notification-ui.js" type="module"></script><script src="-/fastn.com/search.js"></script><script src="-/fastn-stack.github.io/fastn-js/download.js"></script>
+                <script src="-/fastn-stack.github.io/fastn-js/download.js"></script><script src="-/fastn.com/search.js"></script><script src="-/fastn.com/notification-ui.js" type="module"></script><script src="-/fastn.com/functions.js"></script>
             
     
 
@@ -3484,7 +3484,7 @@ let fastn_community_github_io_doc_site__footer_list = function (parent, inherite
       fastn_dom.conditionalDom(root, [
         __args__.is_last
       ], function () {
-        return (!fastn_utils.getter(__args__.is_last));
+        return (!fastn_utils.getStaticValue(__args__.is_last));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingHorizontal, fastn_dom.Length.Px(1), inherited);
@@ -3525,7 +3525,7 @@ let fastn_community_github_io_doc_site__floater = function (parent, inherited, a
       fastn_dom.conditionalDom(root, [
         __args__.open
       ], function () {
-        return (!fastn_utils.getter(__args__.open));
+        return (!fastn_utils.getStaticValue(__args__.open));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
         rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.side_logo, inherited);
@@ -3544,7 +3544,7 @@ let fastn_community_github_io_doc_site__floater = function (parent, inherited, a
       fastn_dom.conditionalDom(root, [
         __args__.open
       ], function () {
-        return fastn_utils.getter(__args__.open);
+        return fastn_utils.getStaticValue(__args__.open);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Height, fastn_dom.Resizing.Fixed(fastn_dom.Length.Calc("100%")), inherited);
@@ -3738,7 +3738,7 @@ let fastn_community_github_io_app_switcher__myapp = function (parent, inherited,
     parenti0.setProperty(fastn_dom.PropertyKind.Height, fastn_dom.Resizing.Fixed(fastn_dom.Length.Px(140)), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.MarginRight, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "mobile");
+        return (fastn_utils.getStaticValue(ftd.device) == "mobile");
       }()) {
         return fastn_dom.Length.Px(28);
       }
@@ -3759,11 +3759,11 @@ let fastn_community_github_io_app_switcher__myapp = function (parent, inherited,
       __args__.index,
       __args__.is_active], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.current_app) == fastn_utils.getter(__args__.index));
+          return (fastn_utils.getStaticValue(__args__.current_app) == fastn_utils.getStaticValue(__args__.index));
         }()) {
           return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("cta_tertiary").get("base"));
         } else if (function () {
-          return fastn_utils.getter(__args__.is_active);
+          return fastn_utils.getStaticValue(__args__.is_active);
         }()) {
           return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("cta_tertiary").get("base"));
         } else {
@@ -3775,7 +3775,7 @@ let fastn_community_github_io_app_switcher__myapp = function (parent, inherited,
         fastn_dom.conditionalDom(root, [
           __args__.item.get("icon")
         ], function () {
-          return (fastn_utils.getter(__args__.item.get("icon")) !== null);
+          return (fastn_utils.getStaticValue(__args__.item.get("icon")) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
           rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.item.get("icon"), inherited);
@@ -3794,7 +3794,7 @@ let fastn_community_github_io_app_switcher__myapp = function (parent, inherited,
         fastn_dom.conditionalDom(root, [
           __args__.item.get("icon")
         ], function () {
-          return (fastn_utils.getter(__args__.item.get("icon")) == null);
+          return (fastn_utils.getStaticValue(__args__.item.get("icon")) == null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
           rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_community_github_io_app_switcher_assets__files.get("images").get("FTD").get("svg"), inherited);
@@ -3851,7 +3851,7 @@ let fastn_community_github_io_app_switcher__app_switcher = function (parent, inh
           return fastn_dom.conditionalDom(root, [
             __args__.is_open
           ], function () {
-            return fastn_utils.getter(__args__.is_open);
+            return fastn_utils.getStaticValue(__args__.is_open);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
             rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Window, inherited);
@@ -3869,7 +3869,7 @@ let fastn_community_github_io_app_switcher__app_switcher = function (parent, inh
                 fastn_dom.conditionalDom(root, [
                   __args__.is_open
                 ], function () {
-                  return fastn_utils.getter(__args__.is_open);
+                  return fastn_utils.getStaticValue(__args__.is_open);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
                   rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -3880,7 +3880,7 @@ let fastn_community_github_io_app_switcher__app_switcher = function (parent, inh
                     fastn_dom.conditionalDom(root, [
                       __args__.is_open
                     ], function () {
-                      return fastn_utils.getter(__args__.is_open);
+                      return fastn_utils.getStaticValue(__args__.is_open);
                     }, function (root) {
                       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
                       rooti0.addEventHandler(fastn_dom.Event.GlobalKeySeq(["Shift",
@@ -3999,7 +3999,7 @@ let fastn_community_github_io_app_switcher__app_switcher = function (parent, inh
             fastn_dom.conditionalDom(root, [
               __args__.is_open
             ], function () {
-              return fastn_utils.getter(__args__.is_open);
+              return fastn_utils.getStaticValue(__args__.is_open);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
               rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Window, inherited);
@@ -4156,7 +4156,7 @@ let fifthtry_github_io_product_switcher__brand_title = function (parent, inherit
       __args__.index,
       global.fifthtry_github_io_product_switcher__current_product
     ], function () {
-      return (fastn_utils.getter(__args__.index) == fastn_utils.getter(global.fifthtry_github_io_product_switcher__current_product));
+      return (fastn_utils.getStaticValue(__args__.index) == fastn_utils.getStaticValue(global.fifthtry_github_io_product_switcher__current_product));
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
       rooti0.setProperty(fastn_dom.PropertyKind.Spacing, fastn_dom.Spacing.Fixed(fastn_dom.Length.Px(4)), inherited);
@@ -4216,7 +4216,7 @@ let fifthtry_github_io_product_switcher__title_image = function (parent, inherit
       __args__.index,
       global.fifthtry_github_io_product_switcher__var_current_product], function () {
         if (function () {
-          return (fastn_utils.getter(global.fifthtry_github_io_product_switcher__var_current_product) == fastn_utils.getter(__args__.index));
+          return (fastn_utils.getStaticValue(global.fifthtry_github_io_product_switcher__var_current_product) == fastn_utils.getStaticValue(__args__.index));
         }()) {
           return inherited.get("colors").get("text_strong");
         } else {
@@ -4227,7 +4227,7 @@ let fifthtry_github_io_product_switcher__title_image = function (parent, inherit
       rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.index,
       global.fifthtry_github_io_product_switcher__var_current_product], function () {
         if (function () {
-          return (fastn_utils.getter(global.fifthtry_github_io_product_switcher__var_current_product) == fastn_utils.getter(__args__.index));
+          return (fastn_utils.getStaticValue(global.fifthtry_github_io_product_switcher__var_current_product) == fastn_utils.getStaticValue(__args__.index));
         }()) {
           return fastn_dom.BackgroundStyle.Solid(__args__.bg_color);
         }
@@ -4310,7 +4310,7 @@ let fifthtry_github_io_product_switcher__copy_list = function (parent, inherited
       __args__.index,
       global.fifthtry_github_io_product_switcher__var_current_product
     ], function () {
-      return (fastn_utils.getter(global.fifthtry_github_io_product_switcher__var_current_product) == fastn_utils.getter(__args__.index));
+      return (fastn_utils.getStaticValue(global.fifthtry_github_io_product_switcher__var_current_product) == fastn_utils.getStaticValue(__args__.index));
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
       rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -4441,11 +4441,11 @@ let fifthtry_github_io_product_switcher__switcher_desktop = function (parent, in
       rooti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn.formula([__args__.on_left,
       __args__.on_left], function () {
         if (function () {
-          return fastn_utils.getter(__args__.on_left);
+          return fastn_utils.getStaticValue(__args__.on_left);
         }()) {
           return fastn_dom.AlignContent.Left;
         } else if (function () {
-          return (!fastn_utils.getter(__args__.on_left));
+          return (!fastn_utils.getStaticValue(__args__.on_left));
         }()) {
           return fastn_dom.AlignContent.Right;
         }
@@ -4480,7 +4480,7 @@ let fifthtry_github_io_product_switcher__switcher_desktop = function (parent, in
           fastn_dom.conditionalDom(root, [
             __args__.mouse_events
           ], function () {
-            return fastn_utils.getter(__args__.mouse_events);
+            return fastn_utils.getStaticValue(__args__.mouse_events);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
             rooti0.addEventHandler(fastn_dom.Event.MouseEnter, function () {
@@ -4507,11 +4507,11 @@ let fifthtry_github_io_product_switcher__switcher_desktop = function (parent, in
             rooti0.setProperty(fastn_dom.PropertyKind.Top, fastn.formula([__args__.on_left,
             __args__.on_left], function () {
               if (function () {
-                return fastn_utils.getter(__args__.on_left);
+                return fastn_utils.getStaticValue(__args__.on_left);
               }()) {
                 return fastn_dom.Length.Px(25);
               } else if (function () {
-                return (!fastn_utils.getter(__args__.on_left));
+                return (!fastn_utils.getStaticValue(__args__.on_left));
               }()) {
                 return fastn_dom.Length.Px(40);
               }
@@ -4519,7 +4519,7 @@ let fifthtry_github_io_product_switcher__switcher_desktop = function (parent, in
             ), inherited);
             rooti0.setProperty(fastn_dom.PropertyKind.Left, fastn.formula([__args__.on_left], function () {
               if (function () {
-                return fastn_utils.getter(__args__.on_left);
+                return fastn_utils.getStaticValue(__args__.on_left);
               }()) {
                 return fastn_dom.Length.Px( - 96);
               }
@@ -4527,7 +4527,7 @@ let fifthtry_github_io_product_switcher__switcher_desktop = function (parent, in
             ), inherited);
             rooti0.setProperty(fastn_dom.PropertyKind.Right, fastn.formula([__args__.on_left], function () {
               if (function () {
-                return (!fastn_utils.getter(__args__.on_left));
+                return (!fastn_utils.getStaticValue(__args__.on_left));
               }()) {
                 return fastn_dom.Length.Px( - 3);
               }
@@ -4680,7 +4680,7 @@ let fifthtry_github_io_product_switcher__switcher_mobile = function (parent, inh
       fastn_dom.conditionalDom(root, [
         __args__.mouse_events
       ], function () {
-        return fastn_utils.getter(__args__.mouse_events);
+        return fastn_utils.getStaticValue(__args__.mouse_events);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Window, inherited);
@@ -4771,7 +4771,7 @@ let fifthtry_github_io_product_switcher__switcher = function (parent, inherited,
       });
       rooti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn.formula([__args__.on_left], function () {
         if (function () {
-          return (!fastn_utils.getter(__args__.on_left));
+          return (!fastn_utils.getStaticValue(__args__.on_left));
         }()) {
           return fastn_dom.AlignContent.Right;
         } else {
@@ -4847,7 +4847,7 @@ let fastn_community_github_io_header__links_mobile = function (parent, inherited
       fastn_dom.conditionalDom(root, [
         __args__.obj.get("url")
       ], function () {
-        return (fastn_utils.getter(__args__.obj.get("url")) !== null);
+        return (fastn_utils.getStaticValue(__args__.obj.get("url")) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -4862,7 +4862,7 @@ let fastn_community_github_io_header__links_mobile = function (parent, inherited
           inherited.get("colors").get("cta_primary").get("base"),
           __args__.obj.get("is_active")], function () {
             if (function () {
-              return fastn_utils.getter(__args__.obj.get("is_active"));
+              return fastn_utils.getStaticValue(__args__.obj.get("is_active"));
             }()) {
               return inherited.get("colors").get("cta_primary").get("base");
             } else {
@@ -4880,7 +4880,7 @@ let fastn_community_github_io_header__links_mobile = function (parent, inherited
       fastn_dom.conditionalDom(root, [
         __args__.obj.get("url")
       ], function () {
-        return (fastn_utils.getter(__args__.obj.get("url")) == null);
+        return (fastn_utils.getStaticValue(__args__.obj.get("url")) == null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -4983,7 +4983,7 @@ let fastn_community_github_io_header__header_item_mobile = function (parent, inh
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -5167,7 +5167,7 @@ let fastn_community_github_io_header__github_button = function (parent, inherite
     parenti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.MarginLeft, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "desktop");
+        return (fastn_utils.getStaticValue(ftd.device) == "desktop");
       }()) {
         return fastn_dom.Length.Px(20);
       }
@@ -5253,7 +5253,7 @@ let fastn_community_github_io_header__search_button = function (parent, inherite
     parenti0.setProperty(fastn_dom.PropertyKind.PaddingVertical, fastn_dom.Length.Px(10), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.MarginLeft, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "desktop");
+        return (fastn_utils.getStaticValue(ftd.device) == "desktop");
       }()) {
         return fastn_dom.Length.Px(20);
       }
@@ -5265,7 +5265,7 @@ let fastn_community_github_io_header__search_button = function (parent, inherite
     parenti0.setProperty(fastn_dom.PropertyKind.Color, inherited.get("colors").get("text_strong"), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.mouse_in], function () {
       if (function () {
-        return fastn_utils.getter(__args__.mouse_in);
+        return fastn_utils.getStaticValue(__args__.mouse_in);
       }()) {
         return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("cta_primary").get("hover"));
       } else {
@@ -5364,7 +5364,7 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
         fastn_dom.conditionalDom(root, [
           __args__.parent_brand
         ], function () {
-          return (!fastn_utils.getter(__args__.parent_brand));
+          return (!fastn_utils.getStaticValue(__args__.parent_brand));
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -5375,14 +5375,14 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
             fastn_dom.conditionalDom(root, [
               __args__.parent_brand
             ], function () {
-              return (!fastn_utils.getter(__args__.parent_brand));
+              return (!fastn_utils.getStaticValue(__args__.parent_brand));
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
               rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
                 fastn_dom.conditionalDom(root, [
                   __args__.brand_caption
                 ], function () {
-                  return (fastn_utils.getter(__args__.brand_caption) !== null);
+                  return (fastn_utils.getStaticValue(__args__.brand_caption) !== null);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                   rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("fine_print"), inherited);
@@ -5396,7 +5396,7 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
                 fastn_dom.conditionalDom(root, [
                   __args__.site_logo
                 ], function () {
-                  return (fastn_utils.getter(__args__.site_logo) !== null);
+                  return (fastn_utils.getStaticValue(__args__.site_logo) !== null);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
                   rooti0.setProperty(fastn_dom.PropertyKind.Height, fastn_dom.Resizing.Fixed(fastn_dom.Length.Px(38)), inherited);
@@ -5440,7 +5440,7 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingBottom, fastn_dom.Length.Px(24), inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.BorderBottomWidth, fastn.formula([__args__.login_button], function () {
           if (function () {
-            return fastn_utils.getter(__args__.login_button);
+            return fastn_utils.getStaticValue(__args__.login_button);
           }()) {
             return fastn_dom.Length.Px(1);
           }
@@ -5467,14 +5467,14 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
       fastn_dom.conditionalDom(root, [
         __args__.login_button
       ], function () {
-        return fastn_utils.getter(__args__.login_button);
+        return fastn_utils.getStaticValue(__args__.login_button);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingVertical, fastn_dom.Length.Px(24), inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.BorderBottomWidth, fastn.formula([__args__.parent_brand], function () {
           if (function () {
-            return (!fastn_utils.getter(__args__.parent_brand));
+            return (!fastn_utils.getStaticValue(__args__.parent_brand));
           }()) {
             return fastn_dom.Length.Px(1);
           }
@@ -5495,7 +5495,7 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
       fastn_dom.conditionalDom(root, [
         __args__.github_icon
       ], function () {
-        return fastn_utils.getter(__args__.github_icon);
+        return fastn_utils.getStaticValue(__args__.github_icon);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
@@ -5511,7 +5511,7 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
       fastn_dom.conditionalDom(root, [
         __args__.search
       ], function () {
-        return fastn_utils.getter(__args__.search);
+        return fastn_utils.getStaticValue(__args__.search);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingTop, fastn_dom.Length.Px(20), inherited);
@@ -5528,7 +5528,7 @@ let fastn_community_github_io_header__menu_mobile = function (parent, inherited,
       fastn_dom.conditionalDom(root, [
         __args__.parent_brand
       ], function () {
-        return (!fastn_utils.getter(__args__.parent_brand));
+        return (!fastn_utils.getStaticValue(__args__.parent_brand));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -5673,7 +5673,7 @@ let fastn_community_github_io_header__fallback_title = function (parent, inherit
       fastn_dom.conditionalDom(root, [
         __args__.site_name
       ], function () {
-        return (fastn_utils.getter(__args__.site_name) == null);
+        return (fastn_utils.getStaticValue(__args__.site_name) == null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_large"), inherited);
@@ -5718,7 +5718,7 @@ let fastn_community_github_io_header__header_item = function (parent, inherited,
       fastn_dom.conditionalDom(root, [
         __args__.title
       ], function () {
-        return (fastn_utils.getter(__args__.title) !== null);
+        return (fastn_utils.getStaticValue(__args__.title) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
@@ -5743,11 +5743,11 @@ let fastn_community_github_io_header__header_item = function (parent, inherited,
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.mouse_in);
+            return fastn_utils.getStaticValue(__args__.mouse_in);
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -5764,7 +5764,7 @@ let fastn_community_github_io_header__header_item = function (parent, inherited,
       fastn_dom.conditionalDom(root, [
         __args__.link
       ], function () {
-        return (fastn_utils.getter(__args__.link) == null);
+        return (fastn_utils.getStaticValue(__args__.link) == null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
@@ -5775,7 +5775,7 @@ let fastn_community_github_io_header__header_item = function (parent, inherited,
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -5829,7 +5829,7 @@ let fastn_community_github_io_header__get_started_button = function (parent, inh
     parenti0.setProperty(fastn_dom.PropertyKind.PaddingVertical, fastn_dom.Length.Px(12), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.MarginLeft, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "desktop");
+        return (fastn_utils.getStaticValue(ftd.device) == "desktop");
       }()) {
         return fastn_dom.Length.Px(20);
       }
@@ -5839,7 +5839,7 @@ let fastn_community_github_io_header__get_started_button = function (parent, inh
     parenti0.setProperty(fastn_dom.PropertyKind.Color, inherited.get("colors").get("cta_tertiary").get("text"), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.mouse_in], function () {
       if (function () {
-        return fastn_utils.getter(__args__.mouse_in);
+        return fastn_utils.getStaticValue(__args__.mouse_in);
       }()) {
         return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("cta_primary").get("hover"));
       } else {
@@ -5882,7 +5882,7 @@ let fastn_community_github_io_header__childs = function (parent, inherited, args
     return fastn_dom.conditionalDom(parent, [
       __args__.item.get("is_open")
     ], function () {
-      return fastn_utils.getter(__args__.item.get("is_open"));
+      return fastn_utils.getStaticValue(__args__.item.get("is_open"));
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
       rooti0.setProperty(fastn_dom.PropertyKind.AlignContent, fastn_dom.AlignContent.Center, inherited);
@@ -5893,7 +5893,7 @@ let fastn_community_github_io_header__childs = function (parent, inherited, args
           __args__.item.get("title"),
           __args__.show_arrow
         ], function () {
-          return (fastn_utils.getter(__args__.item.get("title")) !== null && fastn_utils.getter(__args__.item.get("is_open")) && fastn_utils.getter(__args__.show_arrow));
+          return (fastn_utils.getStaticValue(__args__.item.get("title")) !== null && fastn_utils.getStaticValue(__args__.item.get("is_open")) && fastn_utils.getStaticValue(__args__.show_arrow));
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
           rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -5908,7 +5908,7 @@ let fastn_community_github_io_header__childs = function (parent, inherited, args
           __args__.item.get("is_open"),
           __args__.item.get("title")
         ], function () {
-          return (fastn_utils.getter(__args__.item.get("title")) !== null && fastn_utils.getter(__args__.item.get("is_open")));
+          return (fastn_utils.getStaticValue(__args__.item.get("title")) !== null && fastn_utils.getStaticValue(__args__.item.get("is_open")));
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
           rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -5917,7 +5917,7 @@ let fastn_community_github_io_header__childs = function (parent, inherited, args
           inherited.get("colors").get("cta_primary").get("base"),
           __args__.item.get("is_active")], function () {
             if (function () {
-              return fastn_utils.getter(__args__.item.get("is_active"));
+              return fastn_utils.getStaticValue(__args__.item.get("is_active"));
             }()) {
               return inherited.get("colors").get("cta_primary").get("base");
             } else {
@@ -5934,7 +5934,7 @@ let fastn_community_github_io_header__childs = function (parent, inherited, args
           return fastn_dom.conditionalDom(root, [
             __args__.item.get("is_open")
           ], function () {
-            return fastn_utils.getter(__args__.item.get("is_open"));
+            return fastn_utils.getStaticValue(__args__.item.get("is_open"));
           }, function (root) {
             let rooti0 = fastn_community_github_io_header__childs(root, inherited, {
               item: item
@@ -5999,7 +5999,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
         rooti0.setProperty(fastn_dom.PropertyKind.MaxWidth, fastn.formula([__args__.max_width,
         __args__.fluid_width], function () {
           if (function () {
-            return (!fastn_utils.getter(__args__.fluid_width));
+            return (!fastn_utils.getStaticValue(__args__.fluid_width));
           }()) {
             return __args__.max_width;
           }
@@ -6016,14 +6016,14 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
               fastn_dom.conditionalDom(root, [
                 __args__.parent_brand
               ], function () {
-                return (!fastn_utils.getter(__args__.parent_brand));
+                return (!fastn_utils.getStaticValue(__args__.parent_brand));
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
                 rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
                   fastn_dom.conditionalDom(root, [
                     __args__.brand_caption
                   ], function () {
-                    return (fastn_utils.getter(__args__.brand_caption) !== null);
+                    return (fastn_utils.getStaticValue(__args__.brand_caption) !== null);
                   }, function (root) {
                     let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                     rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("fine_print"), inherited);
@@ -6044,7 +6044,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                 fastn_dom.conditionalDom(root, [
                   __args__.site_logo
                 ], function () {
-                  return (fastn_utils.getter(__args__.site_logo) !== null);
+                  return (fastn_utils.getStaticValue(__args__.site_logo) !== null);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
                   rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.site_logo, inherited);
@@ -6057,7 +6057,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                 fastn_dom.conditionalDom(root, [
                   __args__.site_name
                 ], function () {
-                  return (fastn_utils.getter(__args__.site_name) !== null);
+                  return (fastn_utils.getStaticValue(__args__.site_name) !== null);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                   rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_large"), inherited);
@@ -6065,7 +6065,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                   rooti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
                   rooti0.setProperty(fastn_dom.PropertyKind.MarginLeft, fastn.formula([__args__.site_logo], function () {
                     if (function () {
-                      return (fastn_utils.getter(__args__.site_logo) !== null);
+                      return (fastn_utils.getStaticValue(__args__.site_logo) !== null);
                     }()) {
                       return fastn_dom.Length.Px(16);
                     }
@@ -6080,7 +6080,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                 fastn_dom.conditionalDom(root, [
                   __args__.site_logo
                 ], function () {
-                  return (fastn_utils.getter(__args__.site_logo) == null);
+                  return (fastn_utils.getStaticValue(__args__.site_logo) == null);
                 }, function (root) {
                   let rooti0 = fastn_community_github_io_header__fallback_title(root, inherited, {
                     site_name: __args__.site_name
@@ -6092,7 +6092,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                 fastn_dom.conditionalDom(root, [
                   __args__.right_section
                 ], function () {
-                  return fastn_utils.getter(__args__.right_section);
+                  return fastn_utils.getStaticValue(__args__.right_section);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
                   rooti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
@@ -6136,7 +6136,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
               fastn_dom.conditionalDom(root, [
                 __args__.right_section
               ], function () {
-                return (!fastn_utils.getter(__args__.right_section));
+                return (!fastn_utils.getStaticValue(__args__.right_section));
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
                 rooti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
@@ -6158,7 +6158,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
               fastn_dom.conditionalDom(root, [
                 __args__.login_button
               ], function () {
-                return fastn_utils.getter(__args__.login_button);
+                return fastn_utils.getStaticValue(__args__.login_button);
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
                 rooti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
@@ -6176,7 +6176,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
               fastn_dom.conditionalDom(root, [
                 __args__.github_icon
               ], function () {
-                return fastn_utils.getter(__args__.github_icon);
+                return fastn_utils.getStaticValue(__args__.github_icon);
               }, function (root) {
                 let rooti0 = fastn_community_github_io_header__github_button(root, inherited, {
                   github_url: __args__.github_url
@@ -6190,7 +6190,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
             fastn_dom.conditionalDom(root, [
               __args__.get_started_url
             ], function () {
-              return (fastn_utils.getter(__args__.get_started_url) !== null);
+              return (fastn_utils.getStaticValue(__args__.get_started_url) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
               rooti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
@@ -6205,7 +6205,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
             fastn_dom.conditionalDom(root, [
               __args__.search
             ], function () {
-              return fastn_utils.getter(__args__.search);
+              return fastn_utils.getStaticValue(__args__.search);
             }, function (root) {
               let rooti0 = fastn_community_github_io_header__search_button(root, inherited, {
                 search_url: __args__.search_url
@@ -6217,7 +6217,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
             fastn_dom.conditionalDom(root, [
               __args__.get_started_url
             ], function () {
-              return (fastn_utils.getter(__args__.get_started_url) !== null);
+              return (fastn_utils.getStaticValue(__args__.get_started_url) !== null);
             }, function (root) {
               let rooti0 = fastn_community_github_io_header__get_started_button(root, inherited, {
                 get_started_url: __args__.get_started_url
@@ -6240,7 +6240,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
       fastn_dom.conditionalDom(root, [
         __args__.current_section
       ], function () {
-        return (fastn_utils.getter(__args__.current_section) !== null);
+        return (fastn_utils.getStaticValue(__args__.current_section) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -6254,7 +6254,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
           rooti0.setProperty(fastn_dom.PropertyKind.MaxWidth, fastn.formula([__args__.max_width,
           __args__.fluid_width], function () {
             if (function () {
-              return (!fastn_utils.getter(__args__.fluid_width));
+              return (!fastn_utils.getStaticValue(__args__.fluid_width));
             }()) {
               return __args__.max_width;
             }
@@ -6271,7 +6271,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                 fastn_dom.conditionalDom(root, [
                   __args__.current_section.get("title")
                 ], function () {
-                  return (fastn_utils.getter(__args__.current_section.get("title")) !== null);
+                  return (fastn_utils.getStaticValue(__args__.current_section.get("title")) !== null);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                   rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
@@ -6289,7 +6289,7 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                   fastn_dom.conditionalDom(root, [
                     __args__.current_subsection
                   ], function () {
-                    return (fastn_utils.getter(__args__.current_subsection) !== null);
+                    return (fastn_utils.getStaticValue(__args__.current_subsection) !== null);
                   }, function (root) {
                     let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                     rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -6305,14 +6305,14 @@ let fastn_community_github_io_header__header_desktop = function (parent, inherit
                   fastn_dom.conditionalDom(root, [
                     __args__.current_subsection
                   ], function () {
-                    return (fastn_utils.getter(__args__.current_subsection) !== null);
+                    return (fastn_utils.getStaticValue(__args__.current_subsection) !== null);
                   }, function (root) {
                     let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
                     rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
                       fastn_dom.conditionalDom(root, [
                         __args__.current_page
                       ], function () {
-                        return (fastn_utils.getter(__args__.current_page) !== null);
+                        return (fastn_utils.getStaticValue(__args__.current_page) !== null);
                       }, function (root) {
                         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
                         rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
@@ -6409,7 +6409,7 @@ let fastn_community_github_io_header__header_item_mobile_view = function (parent
       fastn_dom.conditionalDom(root, [
         __args__.title
       ], function () {
-        return (fastn_utils.getter(__args__.title) !== null);
+        return (fastn_utils.getStaticValue(__args__.title) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("fine_print"), inherited);
@@ -6420,7 +6420,7 @@ let fastn_community_github_io_header__header_item_mobile_view = function (parent
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -6483,7 +6483,7 @@ let fastn_community_github_io_header__header_toc_item_mobile_view = function (pa
       fastn_dom.conditionalDom(root, [
         __args__.link
       ], function () {
-        return (fastn_utils.getter(__args__.link) !== null);
+        return (fastn_utils.getStaticValue(__args__.link) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -6491,7 +6491,7 @@ let fastn_community_github_io_header__header_toc_item_mobile_view = function (pa
           fastn_dom.conditionalDom(root, [
             __args__.link
           ], function () {
-            return (fastn_utils.getter(__args__.link) !== null);
+            return (fastn_utils.getStaticValue(__args__.link) !== null);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
             rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
@@ -6502,7 +6502,7 @@ let fastn_community_github_io_header__header_toc_item_mobile_view = function (pa
             inherited.get("colors").get("cta_primary").get("base"),
             __args__.is_active], function () {
               if (function () {
-                return fastn_utils.getter(__args__.is_active);
+                return fastn_utils.getStaticValue(__args__.is_active);
               }()) {
                 return inherited.get("colors").get("cta_primary").get("base");
               } else {
@@ -6523,7 +6523,7 @@ let fastn_community_github_io_header__header_toc_item_mobile_view = function (pa
       fastn_dom.conditionalDom(root, [
         __args__.link
       ], function () {
-        return (fastn_utils.getter(__args__.link) == null);
+        return (fastn_utils.getStaticValue(__args__.link) == null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -6531,7 +6531,7 @@ let fastn_community_github_io_header__header_toc_item_mobile_view = function (pa
           fastn_dom.conditionalDom(root, [
             __args__.link
           ], function () {
-            return (fastn_utils.getter(__args__.link) == null);
+            return (fastn_utils.getStaticValue(__args__.link) == null);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
             rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_small"), inherited);
@@ -6541,7 +6541,7 @@ let fastn_community_github_io_header__header_toc_item_mobile_view = function (pa
             inherited.get("colors").get("cta_primary").get("base"),
             __args__.is_active], function () {
               if (function () {
-                return fastn_utils.getter(__args__.is_active);
+                return fastn_utils.getStaticValue(__args__.is_active);
               }()) {
                 return inherited.get("colors").get("cta_primary").get("base");
               } else {
@@ -6654,7 +6654,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
             __args__.site_logo,
             __args__.site_name
           ], function () {
-            return (fastn_utils.getter(__args__.site_logo) !== null && fastn_utils.getter(__args__.site_name) == null);
+            return (fastn_utils.getStaticValue(__args__.site_logo) !== null && fastn_utils.getStaticValue(__args__.site_name) == null);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
             rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.site_logo, inherited);
@@ -6667,7 +6667,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
           fastn_dom.conditionalDom(root, [
             __args__.site_name
           ], function () {
-            return (fastn_utils.getter(__args__.site_name) !== null);
+            return (fastn_utils.getStaticValue(__args__.site_name) !== null);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
             rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_medium"), inherited);
@@ -6683,7 +6683,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
           fastn_dom.conditionalDom(root, [
             __args__.site_logo
           ], function () {
-            return (fastn_utils.getter(__args__.site_logo) == null);
+            return (fastn_utils.getStaticValue(__args__.site_logo) == null);
           }, function (root) {
             let rooti0 = fastn_community_github_io_header__fallback_title(root, inherited, {
               site_name: __args__.site_name
@@ -6695,7 +6695,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
           fastn_dom.conditionalDom(root, [
             __args__.parent_brand
           ], function () {
-            return (!fastn_utils.getter(__args__.parent_brand));
+            return (!fastn_utils.getStaticValue(__args__.parent_brand));
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
             rooti0.setProperty(fastn_dom.PropertyKind.Link, __args__.brand_site_url, inherited);
@@ -6704,7 +6704,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
               fastn_dom.conditionalDom(root, [
                 __args__.brand_site_logo
               ], function () {
-                return (fastn_utils.getter(__args__.brand_site_logo) !== null);
+                return (fastn_utils.getStaticValue(__args__.brand_site_logo) !== null);
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
                 rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.brand_site_logo, inherited);
@@ -6717,7 +6717,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
               fastn_dom.conditionalDom(root, [
                 __args__.brand_site_name
               ], function () {
-                return (fastn_utils.getter(__args__.brand_site_name) !== null);
+                return (fastn_utils.getStaticValue(__args__.brand_site_name) !== null);
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                 rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -6730,7 +6730,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
               fastn_dom.conditionalDom(root, [
                 __args__.brand_site_name
               ], function () {
-                return (fastn_utils.getter(__args__.brand_site_name) !== null);
+                return (fastn_utils.getStaticValue(__args__.brand_site_name) !== null);
               }, function (root) {
                 let rooti0 = fastn_community_github_io_header__fallback_title(root, inherited, {
                   site_name: __args__.brand_site_name
@@ -6752,7 +6752,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
         fastn_dom.conditionalDom(root, [
           __args__.search
         ], function () {
-          return fastn_utils.getter(__args__.search);
+          return fastn_utils.getStaticValue(__args__.search);
         }, function (root) {
           let rooti0 = fastn_community_github_io_header__search_button(root, inherited, {
             search_url: __args__.search_url
@@ -6777,7 +6777,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
           fastn_dom.conditionalDom(root, [
             __args__.current_section
           ], function () {
-            return (fastn_utils.getter(__args__.current_section) !== null);
+            return (fastn_utils.getStaticValue(__args__.current_section) !== null);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
             rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -6839,7 +6839,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
             fastn_dom.conditionalDom(root, [
               __args__.current_subsection
             ], function () {
-              return (fastn_utils.getter(__args__.current_subsection) !== null);
+              return (fastn_utils.getStaticValue(__args__.current_subsection) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -6854,7 +6854,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
               __args__.current_page,
               __args__.current_subsection
             ], function () {
-              return (fastn_utils.getter(__args__.current_subsection) == null && fastn_utils.getter(__args__.current_page) == null);
+              return (fastn_utils.getStaticValue(__args__.current_subsection) == null && fastn_utils.getStaticValue(__args__.current_page) == null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -6868,14 +6868,14 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
             fastn_dom.conditionalDom(root, [
               __args__.current_subsection
             ], function () {
-              return (fastn_utils.getter(__args__.current_subsection) !== null);
+              return (fastn_utils.getStaticValue(__args__.current_subsection) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
               rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
                 fastn_dom.conditionalDom(root, [
                   __args__.current_page
                 ], function () {
-                  return (fastn_utils.getter(__args__.current_page) !== null);
+                  return (fastn_utils.getStaticValue(__args__.current_page) !== null);
                 }, function (root) {
                   let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
                   rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
@@ -6897,7 +6897,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
             fastn_dom.conditionalDom(root, [
               __args__.current_page
             ], function () {
-              return (fastn_utils.getter(__args__.current_page) !== null);
+              return (fastn_utils.getStaticValue(__args__.current_page) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("label_small"), inherited);
@@ -6921,7 +6921,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
               fastn_dom.conditionalDom(root, [
                 __args__.show_section
               ], function () {
-                return (!fastn_utils.getter(__args__.show_section));
+                return (!fastn_utils.getStaticValue(__args__.show_section));
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
                 rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_community_github_io_header_assets__files.get("static").get("down_arrow_dark").get("svg"), inherited);
@@ -6934,7 +6934,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
               fastn_dom.conditionalDom(root, [
                 __args__.show_section
               ], function () {
-                return fastn_utils.getter(__args__.show_section);
+                return fastn_utils.getStaticValue(__args__.show_section);
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
                 rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_community_github_io_header_assets__files.get("static").get("up_arrow_dark").get("svg"), inherited);
@@ -6950,7 +6950,7 @@ let fastn_community_github_io_header__header_mobile = function (parent, inherite
           fastn_dom.conditionalDom(root, [
             __args__.show_section
           ], function () {
-            return fastn_utils.getter(__args__.show_section);
+            return fastn_utils.getStaticValue(__args__.show_section);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
             rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Parent, inherited);
@@ -7046,7 +7046,7 @@ let fastn_community_github_io_header__header = function (parent, inherited, args
       fastn_dom.conditionalDom(root, [
         __args__.sidebar_open
       ], function () {
-        return fastn_utils.getter(__args__.sidebar_open);
+        return fastn_utils.getStaticValue(__args__.sidebar_open);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -7057,7 +7057,7 @@ let fastn_community_github_io_header__header = function (parent, inherited, args
           fastn_dom.conditionalDom(root, [
             __args__.sidebar_open
           ], function () {
-            return fastn_utils.getter(__args__.sidebar_open);
+            return fastn_utils.getStaticValue(__args__.sidebar_open);
           }, function (root) {
             let rooti0 = fastn_community_github_io_header__mobile_sidebar(root, inherited, {
               sidebar_open: fastn.wrapMutable(__args__.sidebar_open)
@@ -7073,7 +7073,7 @@ let fastn_community_github_io_header__header = function (parent, inherited, args
       fastn_dom.conditionalDom(root, [
         __args__.sidebar_open
       ], function () {
-        return fastn_utils.getter(__args__.sidebar_open);
+        return fastn_utils.getStaticValue(__args__.sidebar_open);
       }, function (root) {
         let rooti0 = fastn_community_github_io_header__menu_mobile(root, inherited, {
           products: __args__.products,
@@ -7211,7 +7211,7 @@ let fastn_community_github_io_doc_site__child_of_childrens = function (parent, i
       rooti0.setProperty(fastn_dom.PropertyKind.BorderRadius, fastn_dom.Length.Px(4), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.hover], function () {
         if (function () {
-          return fastn_utils.getter(__args__.hover);
+          return fastn_utils.getStaticValue(__args__.hover);
         }()) {
           return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("background").get("step_2"));
         }
@@ -7221,7 +7221,7 @@ let fastn_community_github_io_doc_site__child_of_childrens = function (parent, i
         fastn_dom.conditionalDom(root, [
           __args__.toc.get("font_icon")
         ], function () {
-          return (fastn_utils.getter(__args__.toc.get("font_icon")) !== null);
+          return (fastn_utils.getStaticValue(__args__.toc.get("font_icon")) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
           rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.toc.get("font_icon"), inherited);
@@ -7250,7 +7250,7 @@ let fastn_community_github_io_doc_site__child_of_childrens = function (parent, i
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.toc.get("is_active")], function () {
           if (function () {
-            return fastn_utils.getter(__args__.toc.get("is_active"));
+            return fastn_utils.getStaticValue(__args__.toc.get("is_active"));
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -7310,7 +7310,7 @@ let fastn_community_github_io_doc_site__childrens = function (parent, inherited,
       rooti0.setProperty(fastn_dom.PropertyKind.BorderRadius, fastn_dom.Length.Px(4), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.hover], function () {
         if (function () {
-          return fastn_utils.getter(__args__.hover);
+          return fastn_utils.getStaticValue(__args__.hover);
         }()) {
           return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("background").get("step_2"));
         }
@@ -7321,7 +7321,7 @@ let fastn_community_github_io_doc_site__childrens = function (parent, inherited,
         fastn_dom.conditionalDom(root, [
           __args__.toc.get("font_icon")
         ], function () {
-          return (fastn_utils.getter(__args__.toc.get("font_icon")) !== null);
+          return (fastn_utils.getStaticValue(__args__.toc.get("font_icon")) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
           rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.toc.get("font_icon"), inherited);
@@ -7350,7 +7350,7 @@ let fastn_community_github_io_doc_site__childrens = function (parent, inherited,
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.toc.get("is_active")], function () {
           if (function () {
-            return fastn_utils.getter(__args__.toc.get("is_active"));
+            return fastn_utils.getStaticValue(__args__.toc.get("is_active"));
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -7361,7 +7361,7 @@ let fastn_community_github_io_doc_site__childrens = function (parent, inherited,
         rooti0.setProperty(fastn_dom.PropertyKind.Link, fastn.formula([__args__.toc.get("url"),
         __args__.toc.get("url")], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.toc.get("url")) !== null);
+            return (fastn_utils.getStaticValue(__args__.toc.get("url")) !== null);
           }()) {
             return __args__.toc.get("url");
           }
@@ -7419,7 +7419,7 @@ let fastn_community_github_io_doc_site__toc_instance = function (parent, inherit
       rooti0.setProperty(fastn_dom.PropertyKind.BorderRadius, fastn_dom.Length.Px(4), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.Background, fastn.formula([__args__.hover], function () {
         if (function () {
-          return fastn_utils.getter(__args__.hover);
+          return fastn_utils.getStaticValue(__args__.hover);
         }()) {
           return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("background").get("step_2"));
         }
@@ -7430,7 +7430,7 @@ let fastn_community_github_io_doc_site__toc_instance = function (parent, inherit
         fastn_dom.conditionalDom(root, [
           __args__.toc.get("font_icon")
         ], function () {
-          return (fastn_utils.getter(__args__.toc.get("font_icon")) !== null);
+          return (fastn_utils.getStaticValue(__args__.toc.get("font_icon")) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
           rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.toc.get("font_icon"), inherited);
@@ -7460,7 +7460,7 @@ let fastn_community_github_io_doc_site__toc_instance = function (parent, inherit
         inherited.get("colors").get("cta_primary").get("base"),
         __args__.toc.get("is_active")], function () {
           if (function () {
-            return fastn_utils.getter(__args__.toc.get("is_active"));
+            return fastn_utils.getStaticValue(__args__.toc.get("is_active"));
           }()) {
             return inherited.get("colors").get("cta_primary").get("base");
           } else {
@@ -7471,7 +7471,7 @@ let fastn_community_github_io_doc_site__toc_instance = function (parent, inherit
         rooti0.setProperty(fastn_dom.PropertyKind.Link, fastn.formula([__args__.toc.get("url"),
         __args__.toc.get("url")], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.toc.get("url")) !== null);
+            return (fastn_utils.getStaticValue(__args__.toc.get("url")) !== null);
           }()) {
             return __args__.toc.get("url");
           }
@@ -7553,7 +7553,7 @@ let fastn_community_github_io_doc_site__wall_box = function (parent, inherited, 
     let parenti0 = fastn_dom.createKernel(parent, fastn_dom.ElementKind.Column);
     parenti0.setProperty(fastn_dom.PropertyKind.Width, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "mobile");
+        return (fastn_utils.getStaticValue(ftd.device) == "mobile");
       }()) {
         return fastn_dom.Resizing.FillContainer;
       } else {
@@ -7946,7 +7946,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn.formula([__args__.full_width], function () {
             if (function () {
-              return fastn_utils.getter(__args__.full_width);
+              return fastn_utils.getStaticValue(__args__.full_width);
             }()) {
               return fastn_dom.Resizing.FillContainer;
             } else {
@@ -7957,11 +7957,11 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
           rooti0.setProperty(fastn_dom.PropertyKind.PaddingVertical, fastn.formula([__args__.full_width,
           __args__.full_width], function () {
             if (function () {
-              return (!fastn_utils.getter(__args__.full_width));
+              return (!fastn_utils.getStaticValue(__args__.full_width));
             }()) {
               return fastn_dom.Length.Px(24);
             } else if (function () {
-              return fastn_utils.getter(__args__.full_width);
+              return fastn_utils.getStaticValue(__args__.full_width);
             }()) {
               return fastn_dom.Length.Px(24);
             }
@@ -7970,11 +7970,11 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
           rooti0.setProperty(fastn_dom.PropertyKind.PaddingLeft, fastn.formula([__args__.full_width,
           __args__.full_width], function () {
             if (function () {
-              return (!fastn_utils.getter(__args__.full_width));
+              return (!fastn_utils.getStaticValue(__args__.full_width));
             }()) {
               return fastn_dom.Length.Px(48);
             } else if (function () {
-              return fastn_utils.getter(__args__.full_width);
+              return fastn_utils.getStaticValue(__args__.full_width);
             }()) {
               return fastn_dom.Length.Px(24);
             }
@@ -7982,7 +7982,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
           ), inherited);
           rooti0.setProperty(fastn_dom.PropertyKind.PaddingRight, fastn.formula([__args__.full_width], function () {
             if (function () {
-              return (!fastn_utils.getter(__args__.full_width));
+              return (!fastn_utils.getStaticValue(__args__.full_width));
             }()) {
               return fastn_dom.Length.Px(24);
             }
@@ -8006,15 +8006,15 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
           __args__.full_width,
           __args__.right_sidebar], function () {
             if (function () {
-              return (ftd.is_empty(__args__.toc) && !fastn_utils.getter(__args__.full_width));
+              return (ftd.is_empty(__args__.toc) && !fastn_utils.getStaticValue(__args__.full_width));
             }()) {
               return fastn_dom.Resizing.Fixed(fastn_dom.Length.Px(800));
             } else if (function () {
-              return fastn_utils.getter(__args__.full_width);
+              return fastn_utils.getStaticValue(__args__.full_width);
             }()) {
               return fastn_dom.Resizing.FillContainer;
             } else if (function () {
-              return (!fastn_utils.getter(__args__.right_sidebar));
+              return (!fastn_utils.getStaticValue(__args__.right_sidebar));
             }()) {
               return fastn_dom.Resizing.Fixed(fastn_dom.Length.Percent(70));
             }
@@ -8025,7 +8025,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
             fastn_dom.conditionalDom(root, [
               __args__.title
             ], function () {
-              return (fastn_utils.getter(__args__.title) !== null);
+              return (fastn_utils.getStaticValue(__args__.title) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_hero"), inherited);
@@ -8039,7 +8039,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
             fastn_dom.conditionalDom(root, [
               global.fastn_community_github_io_doc_site_common__is_reader
             ], function () {
-              return fastn_utils.getter(global.fastn_community_github_io_doc_site_common__is_reader);
+              return fastn_utils.getStaticValue(global.fastn_community_github_io_doc_site_common__is_reader);
             }, function (root) {
               let rooti0 = fastn_community_github_io_doc_site__wall_box(root, inherited);
               return rooti0;
@@ -8049,7 +8049,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
             fastn_dom.conditionalDom(root, [
               global.fastn_community_github_io_doc_site_common__is_reader
             ], function () {
-              return (!fastn_utils.getter(global.fastn_community_github_io_doc_site_common__is_reader));
+              return (!fastn_utils.getStaticValue(global.fastn_community_github_io_doc_site_common__is_reader));
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
               rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -8058,7 +8058,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
                 fastn_dom.conditionalDom(root, [
                   __args__.body
                 ], function () {
-                  return (fastn_utils.getter(__args__.body) !== null);
+                  return (fastn_utils.getStaticValue(__args__.body) !== null);
                 }, function (root) {
                   let rooti0 = fastn_community_github_io_typography__markdown(root, inherited, {
                     body: __args__.body
@@ -8082,7 +8082,7 @@ let fastn_community_github_io_doc_site__doc_page_desktop = function (parent, inh
           fastn_dom.conditionalDom(root, [
             __args__.right_sidebar
           ], function () {
-            return fastn_utils.getter(__args__.right_sidebar);
+            return fastn_utils.getStaticValue(__args__.right_sidebar);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
             rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.Fixed(fastn_dom.Length.Percent(20)), inherited);
@@ -8173,7 +8173,7 @@ let fastn_community_github_io_typography__h0 = function (parent, inherited, args
     parenti0.setProperty(fastn_dom.PropertyKind.Id, fastn.formula([__args__.id,
     __args__.id], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.id) !== null);
+        return (fastn_utils.getStaticValue(__args__.id) !== null);
       }()) {
         return __args__.id;
       }
@@ -8195,7 +8195,7 @@ let fastn_community_github_io_typography__h0 = function (parent, inherited, args
       fastn_dom.conditionalDom(root, [
         __args__.body
       ], function () {
-        return (fastn_utils.getter(__args__.body) !== null);
+        return (fastn_utils.getStaticValue(__args__.body) !== null);
       }, function (root) {
         let rooti0 = fastn_community_github_io_typography__markdown(root, inherited, {
           body: __args__.body
@@ -8308,7 +8308,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
             fastn_dom.conditionalDom(root, [
               __args__.title
             ], function () {
-              return (fastn_utils.getter(__args__.title) !== null);
+              return (fastn_utils.getStaticValue(__args__.title) !== null);
             }, function (root) {
               let rooti0 = fastn_community_github_io_typography__h0(root, inherited, {
                 title: __args__.title
@@ -8320,7 +8320,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
             fastn_dom.conditionalDom(root, [
               __args__.right_sidebar
             ], function () {
-              return fastn_utils.getter(__args__.right_sidebar);
+              return fastn_utils.getStaticValue(__args__.right_sidebar);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
               rooti0.setProperty(fastn_dom.PropertyKind.PaddingTop, fastn_dom.Length.Px(8), inherited);
@@ -8345,7 +8345,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
           fastn_dom.conditionalDom(root, [
             global.fastn_community_github_io_doc_site_common__is_reader
           ], function () {
-            return fastn_utils.getter(global.fastn_community_github_io_doc_site_common__is_reader);
+            return fastn_utils.getStaticValue(global.fastn_community_github_io_doc_site_common__is_reader);
           }, function (root) {
             let rooti0 = fastn_community_github_io_doc_site__wall_box(root, inherited);
             return rooti0;
@@ -8357,7 +8357,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
         fastn_dom.conditionalDom(root, [
           global.fastn_community_github_io_doc_site_common__is_reader
         ], function () {
-          return (!fastn_utils.getter(global.fastn_community_github_io_doc_site_common__is_reader));
+          return (!fastn_utils.getStaticValue(global.fastn_community_github_io_doc_site_common__is_reader));
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -8365,7 +8365,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
             fastn_dom.conditionalDom(root, [
               __args__.body
             ], function () {
-              return (fastn_utils.getter(__args__.body) !== null);
+              return (fastn_utils.getStaticValue(__args__.body) !== null);
             }, function (root) {
               let rooti0 = fastn_community_github_io_typography__markdown(root, inherited, {
                 body: __args__.body
@@ -8387,7 +8387,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
         fastn_dom.conditionalDom(root, [
           __args__.open_right_sidebar_info
         ], function () {
-          return fastn_utils.getter(__args__.open_right_sidebar_info);
+          return fastn_utils.getStaticValue(__args__.open_right_sidebar_info);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.addEventHandler(fastn_dom.Event.Click, function () {
@@ -8426,7 +8426,7 @@ let fastn_community_github_io_doc_site__doc_page_mobile = function (parent, inhe
         fastn_dom.conditionalDom(root, [
           __args__.open_right_sidebar_info
         ], function () {
-          return fastn_utils.getter(__args__.open_right_sidebar_info);
+          return fastn_utils.getStaticValue(__args__.open_right_sidebar_info);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Parent, inherited);
@@ -8507,7 +8507,7 @@ let fastn_community_github_io_dark_mode_switcher__dark_mode_switcher_float = fun
     parenti0.setProperty(fastn_dom.PropertyKind.BorderColor, inherited.get("colors").get("border"), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.Bottom, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "mobile");
+        return (fastn_utils.getStaticValue(ftd.device) == "mobile");
       }()) {
         return fastn_dom.Length.Px(25);
       } else {
@@ -8517,7 +8517,7 @@ let fastn_community_github_io_dark_mode_switcher__dark_mode_switcher_float = fun
     ), inherited);
     parenti0.setProperty(fastn_dom.PropertyKind.Right, fastn.formula([ftd.device], function () {
       if (function () {
-        return (fastn_utils.getter(ftd.device) == "mobile");
+        return (fastn_utils.getStaticValue(ftd.device) == "mobile");
       }()) {
         return fastn_dom.Length.Px(25);
       } else {
@@ -8531,7 +8531,7 @@ let fastn_community_github_io_dark_mode_switcher__dark_mode_switcher_float = fun
       fastn_dom.conditionalDom(root, [
         ftd.follow_system_dark_mode
       ], function () {
-        return fastn_utils.getter(ftd.follow_system_dark_mode);
+        return fastn_utils.getStaticValue(ftd.follow_system_dark_mode);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.addEventHandler(fastn_dom.Event.Click, function () {
@@ -8554,7 +8554,7 @@ let fastn_community_github_io_dark_mode_switcher__dark_mode_switcher_float = fun
         ftd.dark_mode,
         ftd.follow_system_dark_mode
       ], function () {
-        return (!fastn_utils.getter(ftd.dark_mode) && !fastn_utils.getter(ftd.follow_system_dark_mode));
+        return (!fastn_utils.getStaticValue(ftd.dark_mode) && !fastn_utils.getStaticValue(ftd.follow_system_dark_mode));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.addEventHandler(fastn_dom.Event.Click, function () {
@@ -8577,7 +8577,7 @@ let fastn_community_github_io_dark_mode_switcher__dark_mode_switcher_float = fun
         ftd.dark_mode,
         ftd.follow_system_dark_mode
       ], function () {
-        return (fastn_utils.getter(ftd.dark_mode) && !fastn_utils.getter(ftd.follow_system_dark_mode));
+        return (fastn_utils.getStaticValue(ftd.dark_mode) && !fastn_utils.getStaticValue(ftd.follow_system_dark_mode));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.addEventHandler(fastn_dom.Event.Click, function () {
@@ -9309,7 +9309,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
         fastn_dom.conditionalDom(root, [
           __args__.show_banner
         ], function () {
-          return fastn_utils.getter(__args__.show_banner);
+          return fastn_utils.getStaticValue(__args__.show_banner);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -9324,7 +9324,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
           fastn_dom.conditionalDom(root, [
             global.fastn_community_github_io_doc_site_common__show_floater
           ], function () {
-            return fastn_utils.getter(global.fastn_community_github_io_doc_site_common__show_floater);
+            return fastn_utils.getStaticValue(global.fastn_community_github_io_doc_site_common__show_floater);
           }, function (root) {
             let rooti0 = fastn_community_github_io_doc_site__floater(root, inherited, {
               side_logo: __args__.side_logo,
@@ -9439,7 +9439,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
         fastn_dom.conditionalDom(root, [
           __args__.show_footer
         ], function () {
-          return fastn_utils.getter(__args__.show_footer);
+          return fastn_utils.getStaticValue(__args__.show_footer);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
           rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -9456,7 +9456,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
     __args__.document_title,
     __args__.title], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.document_title) !== null);
+        return (fastn_utils.getStaticValue(__args__.document_title) !== null);
       }()) {
         return __args__.document_title;
       } else {
@@ -9468,7 +9468,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
     __args__.document_title,
     __args__.title], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.document_title) !== null);
+        return (fastn_utils.getStaticValue(__args__.document_title) !== null);
       }()) {
         return __args__.document_title;
       } else {
@@ -9480,7 +9480,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
     __args__.document_title,
     __args__.title], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.document_title) !== null);
+        return (fastn_utils.getStaticValue(__args__.document_title) !== null);
       }()) {
         return __args__.document_title;
       } else {
@@ -9492,7 +9492,7 @@ let fastn_community_github_io_doc_site__page = function (parent, inherited, args
     parenti0.setProperty(fastn_dom.PropertyKind.DocumentProperties.MetaOGImage, fastn.formula([__args__.document_image,
     __args__.document_image], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.document_image) !== null);
+        return (fastn_utils.getStaticValue(__args__.document_image) !== null);
       }()) {
         return __args__.document_image;
       }
@@ -10710,7 +10710,7 @@ let fastn_com_content_library__fallback_title = function (parent, inherited, arg
       fastn_dom.conditionalDom(root, [
         __args__.site_name
       ], function () {
-        return (fastn_utils.getter(__args__.site_name) == null);
+        return (fastn_utils.getStaticValue(__args__.site_name) == null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_large"), inherited);
@@ -10743,7 +10743,7 @@ let fastn_com_content_library__footer_list_child = function (parent, inherited, 
       fastn_dom.conditionalDom(root, [
         __args__.url
       ], function () {
-        return (fastn_utils.getter(__args__.url) !== null);
+        return (fastn_utils.getStaticValue(__args__.url) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -10767,11 +10767,11 @@ let fastn_com_content_library__footer_list_child = function (parent, inherited, 
         __args__.is_active,
         inherited.get("colors").get("text")], function () {
           if (function () {
-            return fastn_utils.getter(__args__.mouse_in);
+            return fastn_utils.getStaticValue(__args__.mouse_in);
           }()) {
             return inherited.get("colors").get("accent").get("primary");
           } else if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("accent").get("primary");
           } else {
@@ -10808,7 +10808,7 @@ let fastn_com_content_library__footer_list = function (parent, inherited, args)
       fastn_dom.conditionalDom(root, [
         __args__.url
       ], function () {
-        return (fastn_utils.getter(__args__.url) !== "/search/");
+        return (fastn_utils.getStaticValue(__args__.url) !== "/search/");
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_large"), inherited);
@@ -10832,11 +10832,11 @@ let fastn_com_content_library__footer_list = function (parent, inherited, args)
         inherited.get("colors").get("accent").get("primary"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.mouse_in);
+            return fastn_utils.getStaticValue(__args__.mouse_in);
           }()) {
             return inherited.get("colors").get("accent").get("primary");
           } else if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("accent").get("primary");
           } else {
@@ -10901,7 +10901,7 @@ let fastn_com_content_library__footer_desktop = function (parent, inherited, arg
       rooti0.setProperty(fastn_dom.PropertyKind.MaxWidth, fastn.formula([__args__.max_width,
       __args__.full_width], function () {
         if (function () {
-          return (!fastn_utils.getter(__args__.full_width));
+          return (!fastn_utils.getStaticValue(__args__.full_width));
         }()) {
           return __args__.max_width;
         }
@@ -10921,7 +10921,7 @@ let fastn_com_content_library__footer_desktop = function (parent, inherited, arg
             fastn_dom.conditionalDom(root, [
               __args__.site_logo
             ], function () {
-              return (fastn_utils.getter(__args__.site_logo) !== null);
+              return (fastn_utils.getStaticValue(__args__.site_logo) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
               rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.site_logo, inherited);
@@ -10934,7 +10934,7 @@ let fastn_com_content_library__footer_desktop = function (parent, inherited, arg
             fastn_dom.conditionalDom(root, [
               __args__.site_name
             ], function () {
-              return (fastn_utils.getter(__args__.site_name) !== null);
+              return (fastn_utils.getStaticValue(__args__.site_name) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
@@ -10942,7 +10942,7 @@ let fastn_com_content_library__footer_desktop = function (parent, inherited, arg
               rooti0.setProperty(fastn_dom.PropertyKind.AlignSelf, fastn_dom.AlignSelf.Center, inherited);
               rooti0.setProperty(fastn_dom.PropertyKind.MarginLeft, fastn.formula([__args__.site_logo], function () {
                 if (function () {
-                  return (fastn_utils.getter(__args__.site_logo) !== null);
+                  return (fastn_utils.getStaticValue(__args__.site_logo) !== null);
                 }()) {
                   return fastn_dom.Length.Px(16);
                 }
@@ -10957,7 +10957,7 @@ let fastn_com_content_library__footer_desktop = function (parent, inherited, arg
             fastn_dom.conditionalDom(root, [
               __args__.site_logo
             ], function () {
-              return (fastn_utils.getter(__args__.site_logo) == null);
+              return (fastn_utils.getStaticValue(__args__.site_logo) == null);
             }, function (root) {
               let rooti0 = fastn_com_content_library__fallback_title(root, inherited, {
                 site_name: __args__.site_name
@@ -11056,7 +11056,7 @@ let fastn_com_content_library__footer_list_toc = function (parent, inherited, ar
         __args__.show_subsections,
         __args__.title
       ], function () {
-        return (fastn_utils.getter(__args__.show_subsections) && fastn_utils.getter(__args__.title) !== null);
+        return (fastn_utils.getStaticValue(__args__.show_subsections) && fastn_utils.getStaticValue(__args__.title) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -11064,7 +11064,7 @@ let fastn_com_content_library__footer_list_toc = function (parent, inherited, ar
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.MarginBottom, fastn.formula([ftd.device], function () {
           if (function () {
-            return (fastn_utils.getter(ftd.device) !== "mobile");
+            return (fastn_utils.getStaticValue(ftd.device) !== "mobile");
           }()) {
             return fastn_dom.Length.Px(12);
           }
@@ -11074,7 +11074,7 @@ let fastn_com_content_library__footer_list_toc = function (parent, inherited, ar
         inherited.get("colors").get("accent").get("primary"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("accent").get("primary");
           } else {
@@ -11092,7 +11092,7 @@ let fastn_com_content_library__footer_list_toc = function (parent, inherited, ar
         __args__.show_subsections,
         __args__.title
       ], function () {
-        return (!fastn_utils.getter(__args__.show_subsections) && fastn_utils.getter(__args__.title) !== null);
+        return (!fastn_utils.getStaticValue(__args__.show_subsections) && fastn_utils.getStaticValue(__args__.title) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -11100,7 +11100,7 @@ let fastn_com_content_library__footer_list_toc = function (parent, inherited, ar
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.MarginBottom, fastn.formula([ftd.device], function () {
           if (function () {
-            return (fastn_utils.getter(ftd.device) !== "mobile");
+            return (fastn_utils.getStaticValue(ftd.device) !== "mobile");
           }()) {
             return fastn_dom.Length.Px(12);
           }
@@ -11110,7 +11110,7 @@ let fastn_com_content_library__footer_list_toc = function (parent, inherited, ar
         inherited.get("colors").get("accent").get("primary"),
         __args__.is_active], function () {
           if (function () {
-            return fastn_utils.getter(__args__.is_active);
+            return fastn_utils.getStaticValue(__args__.is_active);
           }()) {
             return inherited.get("colors").get("accent").get("primary");
           } else {
@@ -11145,7 +11145,7 @@ let fastn_com_content_library__footer_mobile_list = function (parent, inherited,
     return fastn_dom.conditionalDom(parent, [
       __args__.url
     ], function () {
-      return (fastn_utils.getter(__args__.url) !== "/search/");
+      return (fastn_utils.getStaticValue(__args__.url) !== "/search/");
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
       rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -11169,7 +11169,7 @@ let fastn_com_content_library__footer_mobile_list = function (parent, inherited,
             inherited.get("colors").get("accent").get("primary"),
             __args__.is_active], function () {
               if (function () {
-                return fastn_utils.getter(__args__.is_active);
+                return fastn_utils.getStaticValue(__args__.is_active);
               }()) {
                 return inherited.get("colors").get("accent").get("primary");
               } else {
@@ -11185,7 +11185,7 @@ let fastn_com_content_library__footer_mobile_list = function (parent, inherited,
               __args__.shows_data,
               __args__.title
             ], function () {
-              return (fastn_utils.getter(__args__.shows_data) && fastn_utils.getter(__args__.title) !== "Blog" || fastn_utils.getter(__args__.is_active));
+              return (fastn_utils.getStaticValue(__args__.shows_data) && fastn_utils.getStaticValue(__args__.title) !== "Blog" || fastn_utils.getStaticValue(__args__.is_active));
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
               rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_com_assets__files.get("images").get("landing").get("toggle_up").get("svg"), inherited);
@@ -11205,7 +11205,7 @@ let fastn_com_content_library__footer_mobile_list = function (parent, inherited,
               __args__.shows_data,
               __args__.title
             ], function () {
-              return (!fastn_utils.getter(__args__.shows_data) && fastn_utils.getter(__args__.title) !== "Blog" && !fastn_utils.getter(__args__.is_active));
+              return (!fastn_utils.getStaticValue(__args__.shows_data) && fastn_utils.getStaticValue(__args__.title) !== "Blog" && !fastn_utils.getStaticValue(__args__.is_active));
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
               rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_com_assets__files.get("images").get("landing").get("toggle_down").get("svg"), inherited);
@@ -11226,7 +11226,7 @@ let fastn_com_content_library__footer_mobile_list = function (parent, inherited,
             __args__.is_active,
             __args__.shows_data
           ], function () {
-            return (fastn_utils.getter(__args__.shows_data) || fastn_utils.getter(__args__.is_active));
+            return (fastn_utils.getStaticValue(__args__.shows_data) || fastn_utils.getStaticValue(__args__.is_active));
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
             rooti0.setProperty(fastn_dom.PropertyKind.MarginTop, fastn_dom.Length.Px(12), inherited);
@@ -11297,7 +11297,7 @@ let fastn_com_content_library__footer_mobile = function (parent, inherited, args
         fastn_dom.conditionalDom(root, [
           __args__.site_logo
         ], function () {
-          return (fastn_utils.getter(__args__.site_logo) !== null);
+          return (fastn_utils.getStaticValue(__args__.site_logo) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
           rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.site_logo, inherited);
@@ -11311,7 +11311,7 @@ let fastn_com_content_library__footer_mobile = function (parent, inherited, args
         fastn_dom.conditionalDom(root, [
           __args__.site_name
         ], function () {
-          return (fastn_utils.getter(__args__.site_name) !== null);
+          return (fastn_utils.getStaticValue(__args__.site_name) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
           rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_medium"), inherited);
@@ -11326,7 +11326,7 @@ let fastn_com_content_library__footer_mobile = function (parent, inherited, args
         fastn_dom.conditionalDom(root, [
           __args__.site_logo
         ], function () {
-          return (fastn_utils.getter(__args__.site_logo) == null);
+          return (fastn_utils.getStaticValue(__args__.site_logo) == null);
         }, function (root) {
           let rooti0 = fastn_com_content_library__fallback_title(root, inherited, {
             site_name: __args__.site_name
@@ -15235,7 +15235,7 @@ let fastn_community_github_io_banner__cta_banner_desktop = function (parent, inh
     return fastn_dom.conditionalDom(parent, [
       __args__.hide
     ], function () {
-      return (!fastn_utils.getter(__args__.hide));
+      return (!fastn_utils.getStaticValue(__args__.hide));
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
       rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -15254,7 +15254,7 @@ let fastn_community_github_io_banner__cta_banner_desktop = function (parent, inh
             fastn_dom.conditionalDom(root, [
               __args__.body
             ], function () {
-              return (fastn_utils.getter(__args__.body) !== null);
+              return (fastn_utils.getStaticValue(__args__.body) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("button_medium"), inherited);
@@ -15292,7 +15292,7 @@ let fastn_community_github_io_banner__cta_banner_desktop = function (parent, inh
             rooti0.setProperty(fastn_dom.PropertyKind.BorderColor, fastn.formula([inherited.get("colors").get("custom").get("three"),
             __args__.mousein], function () {
               if (function () {
-                return fastn_utils.getter(__args__.mousein);
+                return fastn_utils.getStaticValue(__args__.mousein);
               }()) {
                 return inherited.get("colors").get("custom").get("three");
               }
@@ -15300,7 +15300,7 @@ let fastn_community_github_io_banner__cta_banner_desktop = function (parent, inh
             ), inherited);
             rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.formula([__args__.mousein], function () {
               if (function () {
-                return fastn_utils.getter(__args__.mousein);
+                return fastn_utils.getStaticValue(__args__.mousein);
               }()) {
                 return function () {
                   let record = fastn.recordInstance({
@@ -15378,7 +15378,7 @@ let fastn_community_github_io_banner__cta_banner_mobile = function (parent, inhe
     return fastn_dom.conditionalDom(parent, [
       __args__.hide
     ], function () {
-      return (!fastn_utils.getter(__args__.hide));
+      return (!fastn_utils.getStaticValue(__args__.hide));
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
       rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
@@ -15398,7 +15398,7 @@ let fastn_community_github_io_banner__cta_banner_mobile = function (parent, inhe
             fastn_dom.conditionalDom(root, [
               __args__.body
             ], function () {
-              return (fastn_utils.getter(__args__.body) !== null);
+              return (fastn_utils.getStaticValue(__args__.body) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("button_small"), inherited);
@@ -15436,7 +15436,7 @@ let fastn_community_github_io_banner__cta_banner_mobile = function (parent, inhe
             rooti0.setProperty(fastn_dom.PropertyKind.BorderColor, fastn.formula([inherited.get("colors").get("custom").get("three"),
             __args__.mousein], function () {
               if (function () {
-                return fastn_utils.getter(__args__.mousein);
+                return fastn_utils.getStaticValue(__args__.mousein);
               }()) {
                 return inherited.get("colors").get("custom").get("three");
               }
@@ -15444,7 +15444,7 @@ let fastn_community_github_io_banner__cta_banner_mobile = function (parent, inhe
             ), inherited);
             rooti0.setProperty(fastn_dom.PropertyKind.Color, fastn.formula([__args__.mousein], function () {
               if (function () {
-                return fastn_utils.getter(__args__.mousein);
+                return fastn_utils.getStaticValue(__args__.mousein);
               }()) {
                 return function () {
                   let record = fastn.recordInstance({
@@ -15606,7 +15606,7 @@ let fastn_com_utils__compact_text = function (parent, inherited, args)
         fastn_dom.conditionalDom(root, [
           __args__.body
         ], function () {
-          return (fastn_utils.getter(__args__.body) !== null);
+          return (fastn_utils.getStaticValue(__args__.body) !== null);
         }, function (root) {
           let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
           rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("fine_print"), inherited);
@@ -15752,7 +15752,7 @@ let fastn_com_notification__display_notification = function (parent, inherited, 
       fastn_dom.conditionalDom(root, [
         __args__.notification.get("link")
       ], function () {
-        return (fastn_utils.getter(__args__.notification.get("link")) !== null);
+        return (fastn_utils.getStaticValue(__args__.notification.get("link")) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
@@ -15767,7 +15767,7 @@ let fastn_com_notification__display_notification = function (parent, inherited, 
       fastn_dom.conditionalDom(root, [
         __args__.notification.get("link")
       ], function () {
-        return (fastn_utils.getter(__args__.notification.get("link")) == null);
+        return (fastn_utils.getStaticValue(__args__.notification.get("link")) == null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
@@ -15791,7 +15791,7 @@ let fastn_com_notification__display_notification = function (parent, inherited, 
       fastn_dom.conditionalDom(root, [
         __args__.notification.get("image")
       ], function () {
-        return (fastn_utils.getter(__args__.notification.get("image")) !== null);
+        return (fastn_utils.getStaticValue(__args__.notification.get("image")) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
         rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, __args__.notification.get("image"), inherited);
@@ -15804,7 +15804,7 @@ let fastn_com_notification__display_notification = function (parent, inherited, 
       fastn_dom.conditionalDom(root, [
         __args__.notification.get("description")
       ], function () {
-        return (fastn_utils.getter(__args__.notification.get("description")) !== null);
+        return (fastn_utils.getStaticValue(__args__.notification.get("description")) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -15912,7 +15912,7 @@ let fastn_com_notification__display_notifications = function (parent, inherited,
     return fastn_dom.conditionalDom(parent, [
       __args__.length
     ], function () {
-      return (fastn_utils.getter(__args__.length) !== 0);
+      return (fastn_utils.getStaticValue(__args__.length) !== 0);
     }, function (root) {
       let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.ContainerElement);
       rooti0.setProperty(fastn_dom.PropertyKind.Children, fastn.mutableList([function (root, inherited) {
@@ -15943,7 +15943,7 @@ let fastn_com_notification__display_notifications = function (parent, inherited,
         fastn_dom.conditionalDom(root, [
           __args__.show
         ], function () {
-          return fastn_utils.getter(__args__.show);
+          return fastn_utils.getStaticValue(__args__.show);
         }, function (root) {
           let rooti0 = fastn_com_FASTN_ds__overlay(root, inherited, {
             uis: fastn.mutableList([function (root, inherited) {
@@ -16112,7 +16112,7 @@ let fastn_com_FASTN_ds__page = function (parent, inherited, args)
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.MarginTop, fastn.formula([ftd.device], function () {
           if (function () {
-            return (fastn_utils.getter(ftd.device) == "mobile");
+            return (fastn_utils.getStaticValue(ftd.device) == "mobile");
           }()) {
             return fastn_dom.Length.Em(0.5);
           }
@@ -16156,7 +16156,7 @@ let fastn_com_f___number_plus_one = function (args)
   try {
     let __args__ = fastn_utils.getArgs({
     }, args);
-    return (fastn_utils.getter(__args__.a) + 1);
+    return (fastn_utils.getStaticValue(__args__.a) + 1);
   } finally {
     __fastn_package_name__ = __fastn_super_package_name__;
   }
@@ -16169,7 +16169,7 @@ let fastn_com_f___toggle_option = function (args)
   try {
     let __args__ = fastn_utils.getArgs({
     }, args);
-    let fastn_utils_val___args___a = fastn_utils.clone(!fastn_utils.getter(__args__.a));
+    let fastn_utils_val___args___a = fastn_utils.clone(!fastn_utils.getStaticValue(__args__.a));
     if (fastn_utils_val___args___a instanceof fastn.mutableClass) {
       fastn_utils_val___args___a = fastn_utils_val___args___a.get();
     }
@@ -16236,11 +16236,11 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
     __args__.is_submitted,
     inherited.get("colors").get("text")], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.is_answer) !== 1 && fastn_utils.getter(__args__.is_submitted));
+        return (fastn_utils.getStaticValue(__args__.is_answer) !== 1 && fastn_utils.getStaticValue(__args__.is_submitted));
       }()) {
         return inherited.get("colors").get("warning").get("text");
       } else if (function () {
-        return (fastn_utils.getter(__args__.is_answer) == 1 && fastn_utils.getter(__args__.is_submitted));
+        return (fastn_utils.getStaticValue(__args__.is_answer) == 1 && fastn_utils.getStaticValue(__args__.is_submitted));
       }()) {
         return inherited.get("colors").get("success").get("text");
       } else {
@@ -16254,15 +16254,15 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
     __args__.is_submitted,
     __args__.number], function () {
       if (function () {
-        return (fastn_utils.getter(__args__.is_answer) !== 1 && fastn_utils.getter(__args__.is_submitted));
+        return (fastn_utils.getStaticValue(__args__.is_answer) !== 1 && fastn_utils.getStaticValue(__args__.is_submitted));
       }()) {
         return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("warning").get("base"));
       } else if (function () {
-        return (fastn_utils.getter(__args__.is_answer) == 1 && fastn_utils.getter(__args__.is_submitted));
+        return (fastn_utils.getStaticValue(__args__.is_answer) == 1 && fastn_utils.getStaticValue(__args__.is_submitted));
       }()) {
         return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("success").get("base"));
       } else if (function () {
-        return (fastn_utils.getter(__args__.number) % 2 == 0);
+        return (fastn_utils.getStaticValue(__args__.number) % 2 == 0);
       }()) {
         return fastn_dom.BackgroundStyle.Solid(inherited.get("colors").get("background").get("step_1"));
       } else {
@@ -16284,7 +16284,7 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
       rooti0.setProperty(fastn_dom.PropertyKind.Checked, __args__.is_checked, inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.Enabled, fastn.formula([__args__.is_submitted], function () {
         if (function () {
-          return fastn_utils.getter(__args__.is_submitted);
+          return fastn_utils.getStaticValue(__args__.is_submitted);
         }()) {
           return false;
         } else {
@@ -16314,7 +16314,7 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
       fastn_dom.conditionalDom(root, [
         __args__.value
       ], function () {
-        return (fastn_utils.getter(__args__.value) !== null);
+        return (fastn_utils.getStaticValue(__args__.value) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.value, inherited);
@@ -16332,7 +16332,7 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
         __args__.is_checked,
         __args__.is_submitted
       ], function () {
-        return (fastn_utils.getter(__args__.is_submitted) && fastn_utils.getter(__args__.is_answer) == 1 && fastn_utils.getter(__args__.is_checked));
+        return (fastn_utils.getStaticValue(__args__.is_submitted) && fastn_utils.getStaticValue(__args__.is_answer) == 1 && fastn_utils.getStaticValue(__args__.is_checked));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
         rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_com_assets__files.get("images").get("correct").get("svg"), inherited);
@@ -16346,7 +16346,7 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
         __args__.is_checked,
         __args__.is_submitted
       ], function () {
-        return (fastn_utils.getter(__args__.is_submitted) && fastn_utils.getter(__args__.is_answer) !== 1 && fastn_utils.getter(__args__.is_checked));
+        return (fastn_utils.getStaticValue(__args__.is_submitted) && fastn_utils.getStaticValue(__args__.is_answer) !== 1 && fastn_utils.getStaticValue(__args__.is_checked));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
         rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_com_assets__files.get("images").get("cross").get("svg"), inherited);
@@ -16360,7 +16360,7 @@ let fastn_com_f___options_ui = function (parent, inherited, args)
         __args__.is_checked,
         __args__.is_submitted
       ], function () {
-        return (fastn_utils.getter(__args__.is_submitted) && fastn_utils.getter(__args__.is_answer) == 1 && !fastn_utils.getter(__args__.is_checked));
+        return (fastn_utils.getStaticValue(__args__.is_submitted) && fastn_utils.getStaticValue(__args__.is_answer) == 1 && !fastn_utils.getStaticValue(__args__.is_checked));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
         rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_com_assets__files.get("images").get("missed").get("svg"), inherited);
@@ -16432,7 +16432,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
       rooti0.setProperty(fastn_dom.PropertyKind.MarginBottom, fastn_dom.Length.Rem(0.5), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.BorderBottomWidth, fastn.formula([__args__.more_detail], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.more_detail) == null);
+          return (fastn_utils.getStaticValue(__args__.more_detail) == null);
         }()) {
           return fastn_dom.Length.Px(1);
         }
@@ -16441,7 +16441,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
       rooti0.setProperty(fastn_dom.PropertyKind.BorderColor, fastn.formula([inherited.get("colors").get("border"),
       __args__.more_detail], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.more_detail) == null);
+          return (fastn_utils.getStaticValue(__args__.more_detail) == null);
         }()) {
           return inherited.get("colors").get("border");
         }
@@ -16477,7 +16477,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
       fastn_dom.conditionalDom(root, [
         __args__.more_detail
       ], function () {
-        return (fastn_utils.getter(__args__.more_detail) !== null);
+        return (fastn_utils.getStaticValue(__args__.more_detail) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.StringValue, __args__.more_detail, inherited);
@@ -16504,7 +16504,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
       fastn_dom.conditionalDom(root, [
         __args__.is_submitted
       ], function () {
-        return (!fastn_utils.getter(__args__.is_submitted));
+        return (!fastn_utils.getStaticValue(__args__.is_submitted));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.StringValue, "Submit", inherited);
@@ -16537,7 +16537,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
         __args__.is_submitted,
         __args__.number_correct
       ], function () {
-        return (fastn_utils.getter(__args__.is_submitted) && len(__args__.answers) == fastn_utils.getter(__args__.number_correct));
+        return (fastn_utils.getStaticValue(__args__.is_submitted) && len(__args__.answers) == fastn_utils.getStaticValue(__args__.number_correct));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
@@ -16553,7 +16553,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
         __args__.is_submitted,
         __args__.number_correct
       ], function () {
-        return (fastn_utils.getter(__args__.is_submitted) && len(__args__.answers) !== fastn_utils.getter(__args__.number_correct));
+        return (fastn_utils.getStaticValue(__args__.is_submitted) && len(__args__.answers) !== fastn_utils.getStaticValue(__args__.number_correct));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
         rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("heading_small"), inherited);
@@ -16567,7 +16567,7 @@ let fastn_com_f___question_ui = function (parent, inherited, args)
       fastn_dom.conditionalDom(root, [
         __args__.is_submitted
       ], function () {
-        return fastn_utils.getter(__args__.is_submitted);
+        return fastn_utils.getStaticValue(__args__.is_submitted);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.MarginTop, fastn_dom.Length.Px(10), inherited);
@@ -16795,13 +16795,13 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
         __args__.copy,
         __args__.download
       ], function () {
-        return (fastn_utils.getter(__args__.caption) !== null || fastn_utils.getter(__args__.download) !== null || fastn_utils.getter(__args__.copy));
+        return (fastn_utils.getStaticValue(__args__.caption) !== null || fastn_utils.getStaticValue(__args__.download) !== null || fastn_utils.getStaticValue(__args__.copy));
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
         rooti0.setProperty(fastn_dom.PropertyKind.Width, fastn_dom.Resizing.FillContainer, inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingLeft, fastn.formula([__args__.caption], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.caption) !== null);
+            return (fastn_utils.getStaticValue(__args__.caption) !== null);
           }()) {
             return fastn_dom.Length.Px(20);
           }
@@ -16809,7 +16809,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
         ), inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingRight, fastn.formula([__args__.caption], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.caption) !== null);
+            return (fastn_utils.getStaticValue(__args__.caption) !== null);
           }()) {
             return fastn_dom.Length.Px(20);
           }
@@ -16817,7 +16817,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
         ), inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingTop, fastn.formula([__args__.caption], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.caption) !== null);
+            return (fastn_utils.getStaticValue(__args__.caption) !== null);
           }()) {
             return fastn_dom.Length.Px(10);
           }
@@ -16825,7 +16825,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
         ), inherited);
         rooti0.setProperty(fastn_dom.PropertyKind.PaddingBottom, fastn.formula([__args__.caption], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.caption) !== null);
+            return (fastn_utils.getStaticValue(__args__.caption) !== null);
           }()) {
             return fastn_dom.Length.Px(10);
           }
@@ -16837,7 +16837,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
         rooti0.setProperty(fastn_dom.PropertyKind.MaxWidth, fastn.formula([__args__.max_width,
         __args__.max_width], function () {
           if (function () {
-            return (fastn_utils.getter(__args__.max_width) !== null);
+            return (fastn_utils.getStaticValue(__args__.max_width) !== null);
           }()) {
             return __args__.max_width;
           }
@@ -16847,7 +16847,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
           fastn_dom.conditionalDom(root, [
             __args__.caption
           ], function () {
-            return (fastn_utils.getter(__args__.caption) !== null);
+            return (fastn_utils.getStaticValue(__args__.caption) !== null);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
             rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -16862,7 +16862,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
           fastn_dom.conditionalDom(root, [
             __args__.copy
           ], function () {
-            return fastn_utils.getter(__args__.copy);
+            return fastn_utils.getStaticValue(__args__.copy);
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Row);
             rooti0.addEventHandler(fastn_dom.Event.MouseLeave, function () {
@@ -16876,7 +16876,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
             rooti0.setProperty(fastn_dom.PropertyKind.Top, fastn_dom.Length.Px(12), inherited);
             rooti0.setProperty(fastn_dom.PropertyKind.Right, fastn.formula([__args__.download], function () {
               if (function () {
-                return (fastn_utils.getter(__args__.download) !== null);
+                return (fastn_utils.getStaticValue(__args__.download) !== null);
               }()) {
                 return fastn_dom.Length.Px(56);
               } else {
@@ -16891,14 +16891,14 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
                 __args__.copy_text,
                 __args__.mouse_in
               ], function () {
-                return (fastn_utils.getter(__args__.copy_text) == "null" && fastn_utils.getter(__args__.mouse_in));
+                return (fastn_utils.getStaticValue(__args__.copy_text) == "null" && fastn_utils.getStaticValue(__args__.mouse_in));
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
                 rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, fastn.formula([global.fastn_community_github_io_code_block_assets__files.get("static").get("copy").get("svg"),
                 global.fastn_community_github_io_code_block_assets__files.get("static").get("copy_hover").get("svg"),
                 __args__.copy_mouse_in], function () {
                   if (function () {
-                    return fastn_utils.getter(__args__.copy_mouse_in);
+                    return fastn_utils.getStaticValue(__args__.copy_mouse_in);
                   }()) {
                     return global.fastn_community_github_io_code_block_assets__files.get("static").get("copy_hover").get("svg");
                   } else {
@@ -16937,7 +16937,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
               fastn_dom.conditionalDom(root, [
                 __args__.copy_text
               ], function () {
-                return (fastn_utils.getter(__args__.copy_text) !== "null");
+                return (fastn_utils.getStaticValue(__args__.copy_text) !== "null");
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
                 rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, global.fastn_community_github_io_code_block_assets__files.get("static").get("tick").get("svg"), inherited);
@@ -16949,7 +16949,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
               fastn_dom.conditionalDom(root, [
                 __args__.copy_text
               ], function () {
-                return (fastn_utils.getter(__args__.copy_text) !== "null");
+                return (fastn_utils.getStaticValue(__args__.copy_text) !== "null");
               }, function (root) {
                 let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
                 rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("copy_regular"), inherited);
@@ -16967,14 +16967,14 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
             __args__.download,
             __args__.mouse_in
           ], function () {
-            return (fastn_utils.getter(__args__.download) !== null && fastn_utils.getter(__args__.mouse_in));
+            return (fastn_utils.getStaticValue(__args__.download) !== null && fastn_utils.getStaticValue(__args__.mouse_in));
           }, function (root) {
             let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Image);
             rooti0.setProperty(fastn_dom.PropertyKind.ImageSrc, fastn.formula([global.fastn_community_github_io_code_block_assets__files.get("static").get("download").get("svg"),
             global.fastn_community_github_io_code_block_assets__files.get("static").get("download_hover").get("svg"),
             __args__.download_mouse_in], function () {
               if (function () {
-                return fastn_utils.getter(__args__.download_mouse_in);
+                return fastn_utils.getStaticValue(__args__.download_mouse_in);
               }()) {
                 return global.fastn_community_github_io_code_block_assets__files.get("static").get("download_hover").get("svg");
               } else {
@@ -17019,7 +17019,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       rooti0.setProperty(fastn_dom.PropertyKind.CodeLanguage, __args__.lang, inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.CodeTheme, fastn.formula([ftd.dark_mode], function () {
         if (function () {
-          return fastn_utils.getter(ftd.dark_mode);
+          return fastn_utils.getStaticValue(ftd.dark_mode);
         }()) {
           return "fastn-theme.dark";
         } else {
@@ -17029,7 +17029,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       ), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.CodeShowLineNumber, fastn.formula([__args__.line_numbers], function () {
         if (function () {
-          return fastn_utils.getter(__args__.line_numbers);
+          return fastn_utils.getStaticValue(__args__.line_numbers);
         }()) {
           return true;
         }
@@ -17039,7 +17039,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       rooti0.setProperty(fastn_dom.PropertyKind.PaddingBottom, fastn_dom.Length.Px(24), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.BorderTopLeftRadius, fastn.formula([__args__.caption], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.caption) == null);
+          return (fastn_utils.getStaticValue(__args__.caption) == null);
         }()) {
           return fastn_dom.Length.Px(4);
         }
@@ -17047,7 +17047,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       ), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.BorderTopRightRadius, fastn.formula([__args__.caption], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.caption) == null);
+          return (fastn_utils.getStaticValue(__args__.caption) == null);
         }()) {
           return fastn_dom.Length.Px(4);
         }
@@ -17055,7 +17055,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       ), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.BorderBottomLeftRadius, fastn.formula([__args__.caption], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.caption) == null);
+          return (fastn_utils.getStaticValue(__args__.caption) == null);
         }()) {
           return fastn_dom.Length.Px(4);
         }
@@ -17063,7 +17063,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       ), inherited);
       rooti0.setProperty(fastn_dom.PropertyKind.BorderBottomRightRadius, fastn.formula([__args__.caption], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.caption) == null);
+          return (fastn_utils.getStaticValue(__args__.caption) == null);
         }()) {
           return fastn_dom.Length.Px(4);
         }
@@ -17076,7 +17076,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       rooti0.setProperty(fastn_dom.PropertyKind.MaxHeight, fastn.formula([__args__.max_height,
       __args__.max_height], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.max_height) !== null);
+          return (fastn_utils.getStaticValue(__args__.max_height) !== null);
         }()) {
           return __args__.max_height;
         }
@@ -17085,7 +17085,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       rooti0.setProperty(fastn_dom.PropertyKind.MaxWidth, fastn.formula([__args__.max_width,
       __args__.max_width], function () {
         if (function () {
-          return (fastn_utils.getter(__args__.max_width) !== null);
+          return (fastn_utils.getStaticValue(__args__.max_width) !== null);
         }()) {
           return __args__.max_width;
         }
@@ -17097,7 +17097,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
       fastn_dom.conditionalDom(root, [
         __args__.lang
       ], function () {
-        return (fastn_utils.getter(__args__.lang) !== null);
+        return (fastn_utils.getStaticValue(__args__.lang) !== null);
       }, function (root) {
         let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Column);
         rooti0.setProperty(fastn_dom.PropertyKind.Anchor, fastn_dom.Anchor.Parent, inherited);
@@ -17113,7 +17113,7 @@ let fastn_community_github_io_code_block__code = function (parent, inherited, ar
             fastn_dom.conditionalDom(root, [
               __args__.download
             ], function () {
-              return (fastn_utils.getter(__args__.download) !== null);
+              return (fastn_utils.getStaticValue(__args__.download) !== null);
             }, function (root) {
               let rooti0 = fastn_dom.createKernel(root, fastn_dom.ElementKind.Text);
               rooti0.setProperty(fastn_dom.PropertyKind.Role, inherited.get("types").get("fine_print"), inherited);
