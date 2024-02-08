@@ -7,8 +7,8 @@
     },
     "FASTN.ftd": {
       "name": "FASTN.ftd",
-      "checksum": "C1C05747309780DD0D27048DB1AC880D39B381A5BBAA01D606BF146463BAF32C",
-      "size": 41559
+      "checksum": "CD7608602835E9799F00759EB8965E1FB7EBB6C209189C06C85DB3F19683680E",
+      "size": 41658
     },
     "FASTN/ds.ftd": {
       "name": "FASTN/ds.ftd",
@@ -575,6 +575,11 @@
       "checksum": "76FE1A0CC514D42E4FD22474BD6DA57E1C7032E8E6A0753ED563654F916556C6",
       "size": 3998
     },
+    "blog/design-system.ftd": {
+      "name": "blog/design-system.ftd",
+      "checksum": "BDD680E058D3377398EAEE7E0A0642B60CDFC19C62FC46FC1095FE78235DBD35",
+      "size": 13546
+    },
     "blog/domain-components.ftd": {
       "name": "blog/domain-components.ftd",
       "checksum": "AC5C9339AB6D49FB3A81BB504F1F164869F9216D2340A8242BE61A160DF775F9",
@@ -587,8 +592,8 @@
     },
     "blog/index.ftd": {
       "name": "blog/index.ftd",
-      "checksum": "49770BC610E7A8847BACEFB79FA66A6A66838DB701EF12734E8FE8CF8A80A98A",
-      "size": 1651
+      "checksum": "D715479FE0E2E6EAB010FB232907E6FB34D582D8CF4ACDA00B2BC86C304E0886",
+      "size": 1757
     },
     "blog/lib.ftd": {
       "name": "blog/lib.ftd",
@@ -3154,6 +3159,46 @@
       "name": "images/blog/harish.png",
       "checksum": "1E0F34D04905424E101A3C832EB7CAF57159CA720DE51FEE36F9145CCF4B7C49",
       "size": 126112
+    },
+    "images/blog/header-drawing.png": {
+      "name": "images/blog/header-drawing.png",
+      "checksum": "A21CE50B6006DDD82CD71E6119FCE2B1BBD479C58D066B9005684D845CD6A638",
+      "size": 39745
+    },
+    "images/blog/header-tn-dark.png": {
+      "name": "images/blog/header-tn-dark.png",
+      "checksum": "140E546EDFA8B349D74805FB8E4680C84AD135336CD53AA646A5DC2E7FEE664B",
+      "size": 17472
+    },
+    "images/blog/header-tn.png": {
+      "name": "images/blog/header-tn.png",
+      "checksum": "7DBF84733D7612EF1520CB6F90AEF7FFBC15C3EBE7A45662A370A4602FADFA07",
+      "size": 18087
+    },
+    "images/blog/heading-tn-dark.png": {
+      "name": "images/blog/heading-tn-dark.png",
+      "checksum": "C4756C039CAD045268062C2157950938A6BCD6974873923B8B06E239EE76216A",
+      "size": 10981
+    },
+    "images/blog/heading-tn.png": {
+      "name": "images/blog/heading-tn.png",
+      "checksum": "D3A67797EDFA7DFE53AF92ECACD4C6F496FD931028AF3F96F06C82FCC9611A5C",
+      "size": 10445
+    },
+    "images/blog/hero-drawing.png": {
+      "name": "images/blog/hero-drawing.png",
+      "checksum": "0661A6B93606253E794905F1A8A7541EE7AC9825F9C3164C78FB94E63B1A1E42",
+      "size": 61606
+    },
+    "images/blog/hero-tn-dark.png": {
+      "name": "images/blog/hero-tn-dark.png",
+      "checksum": "391CC1E6325A17ACB881E9EA0BFDAFC18312D05237CAEADA940D72602F0C62D7",
+      "size": 103898
+    },
+    "images/blog/hero-tn.png": {
+      "name": "images/blog/hero-tn.png",
+      "checksum": "1292F3454DCFB7A48F4E40DC4AB79E187D5E7854E46A3C7E68D2F66EFC55CE5B",
+      "size": 103894
     },
     "images/blog/image-enlarge.png": {
       "name": "images/blog/image-enlarge.png",
@@ -7457,5 +7502,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "32A4F7E6F28733C27802987DFBD5ECAF8F43AE2BE4125C44C4E495AE788CF80F"
+  "checksum": "FD41CE7AE3F0C55ADFFEEBCA8F0360AF127CC07B571B41FBDD103C3F22041D82"
 }
