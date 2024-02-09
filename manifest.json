@@ -7,8 +7,8 @@
     },
     "FASTN.ftd": {
       "name": "FASTN.ftd",
-      "checksum": "CD7608602835E9799F00759EB8965E1FB7EBB6C209189C06C85DB3F19683680E",
-      "size": 41658
+      "checksum": "0629F3B69ACC9A5F6CED7DC1E865DEB86B5A7F2BD9CF56F86F9FA4545E1671C7",
+      "size": 41943
     },
     "FASTN/ds.ftd": {
       "name": "FASTN/ds.ftd",
@@ -592,8 +592,8 @@
     },
     "blog/index.ftd": {
       "name": "blog/index.ftd",
-      "checksum": "D715479FE0E2E6EAB010FB232907E6FB34D582D8CF4ACDA00B2BC86C304E0886",
-      "size": 1757
+      "checksum": "ADC72978E1EB84DD85138EE8BEF1CEFBD25DE3DC21ACA7EB4A823C6296163048",
+      "size": 2660
     },
     "blog/lib.ftd": {
       "name": "blog/lib.ftd",
@@ -7502,5 +7502,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "FD41CE7AE3F0C55ADFFEEBCA8F0360AF127CC07B571B41FBDD103C3F22041D82"
+  "checksum": "0B182011582DBB43247541AE780CB21EBEEB7897DB8656FC6D2B377EFA7ECF6C"
 }
