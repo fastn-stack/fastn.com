@@ -2,6 +2,7 @@
 
 -- fastn.package: fastn.com
 favicon: /-/fastn.com/images/favicon.svg
+zip: https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main
 
 -- fastn.dependency: fastn-community.github.io/bling
 -- fastn.dependency: fastn-community.github.io/dark-flame-cs
@@ -22,7 +23,7 @@ favicon: /-/fastn.com/images/favicon.svg
 -- fastn.dependency: fastn-stack.github.io/media
 -- fastn.dependency: fastn-stack.github.io/fastn-js
 -- fastn.dependency: fastn-stack.github.io/ftd-web-component-example
--- fastn.dependency: gargajit.github.io/expander
+-- fastn.dependency: fastn-community.github.io/expander
 -- fastn.dependency: fastn-stack.github.io/certificates
 
 -- fastn.auto-import: fastn.com/FASTN/ds
@@ -918,6 +919,14 @@ skip: true
 
 # Blog: /blog/
 
+- Building Your Personal Website with fastn: /blog/personal-website-1/
+  document: blog/personal-website-1.ftd
+- Content Library: /blog/content-library/
+  document: blog/content-library.ftd
+- Memory, Mutability and Reactivity: /blog/strongly-typed/
+  document: blog/strongly-typed.ftd
+- Design System Package Tutorial (Part 1): /blog/design-system/
+  document: blog/design-system.ftd
 - Domain Components: /blog/domain-components/
   document: blog/domain-components.ftd
 - Search Feature in fastn.com: /blog/search/
@@ -1027,7 +1036,7 @@ skip: true
 - Rive Video: /planning/rive/
 - Developer Course: /planning/developer-course/
 
--- fastn.redirects:
+-- fastn.url-mappings:
 
 /ftd/kernel/ -> /kernel/
 /ftd/list/ -> /list/
