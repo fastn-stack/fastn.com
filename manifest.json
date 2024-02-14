@@ -7,8 +7,8 @@
     },
     "FASTN.ftd": {
       "name": "FASTN.ftd",
-      "checksum": "0629F3B69ACC9A5F6CED7DC1E865DEB86B5A7F2BD9CF56F86F9FA4545E1671C7",
-      "size": 41943
+      "checksum": "90FAEF00DC9A49701D620160247D8315E29262551EBE232A12A1915AAA7D2FA5",
+      "size": 42056
     },
     "FASTN/ds.ftd": {
       "name": "FASTN/ds.ftd",
@@ -575,9 +575,14 @@
       "checksum": "76FE1A0CC514D42E4FD22474BD6DA57E1C7032E8E6A0753ED563654F916556C6",
       "size": 3998
     },
+    "blog/design-system-part-2.ftd": {
+      "name": "blog/design-system-part-2.ftd",
+      "checksum": "625CC0DF08C6AE85168D89080437D4EECC80BF9962CEDCE89A35FC7FAC4C050C",
+      "size": 14878
+    },
     "blog/design-system.ftd": {
       "name": "blog/design-system.ftd",
-      "checksum": "BDD680E058D3377398EAEE7E0A0642B60CDFC19C62FC46FC1095FE78235DBD35",
+      "checksum": "9B0985548DDEB3C900F2BC737C0854EA448E2D3C45EF3A2ECB3AC92629178E6F",
       "size": 13546
     },
     "blog/domain-components.ftd": {
@@ -592,8 +597,8 @@
     },
     "blog/index.ftd": {
       "name": "blog/index.ftd",
-      "checksum": "ADC72978E1EB84DD85138EE8BEF1CEFBD25DE3DC21ACA7EB4A823C6296163048",
-      "size": 2660
+      "checksum": "B8FA6D30E9C9AD9FC3312F7298F5E37E49A5B218588690E12D692C82C25898EC",
+      "size": 2021
     },
     "blog/lib.ftd": {
       "name": "blog/lib.ftd",
@@ -3135,6 +3140,91 @@
       "checksum": "6875F22AE0EDF83BE8392EF271F3E838907B9A24FED8FF3F468A1BFDFF2BE2FC",
       "size": 52715
     },
+    "images/blog/figure-1.png": {
+      "name": "images/blog/figure-1.png",
+      "checksum": "9BAD97FB70CB7A20C554D92796E4B658AA5DD60D3E942B8BF09047123FB6ED84",
+      "size": 25460
+    },
+    "images/blog/figure-10.png": {
+      "name": "images/blog/figure-10.png",
+      "checksum": "A2815EA379AA2F6BE8BA317FC8E2C6EA4547FA9575CE1E3DBE57D959A753AB30",
+      "size": 275526
+    },
+    "images/blog/figure-11.png": {
+      "name": "images/blog/figure-11.png",
+      "checksum": "3E1C807859D9EB8886D0C0111A3D5AD2D84221705FC6F7ED5EEE9021F23E89AB",
+      "size": 232205
+    },
+    "images/blog/figure-12.png": {
+      "name": "images/blog/figure-12.png",
+      "checksum": "41A66930D863B948BC85C92C02CE7270EB1DAAE2F3F6BF9D01F87FF09BE16E34",
+      "size": 156475
+    },
+    "images/blog/figure-13.png": {
+      "name": "images/blog/figure-13.png",
+      "checksum": "DDA1D56ED899252AAD03081E303404C7205A219550F90CDF93773D8FC3199756",
+      "size": 90168
+    },
+    "images/blog/figure-14.png": {
+      "name": "images/blog/figure-14.png",
+      "checksum": "3DC53A054E052F89C49AD6DCE3A04E4436437BCA8CDC72E50C089D49FC9C86E9",
+      "size": 357658
+    },
+    "images/blog/figure-15.png": {
+      "name": "images/blog/figure-15.png",
+      "checksum": "FFE8A8601A58336B10CA12084D1C575104DB4C15080578B00DBB72D493A310F2",
+      "size": 367328
+    },
+    "images/blog/figure-16.png": {
+      "name": "images/blog/figure-16.png",
+      "checksum": "EF39A2568341F3C173569F0A2AF62F7C83F1A05E5526DB4EF4F5346BC5E6A0C7",
+      "size": 105307
+    },
+    "images/blog/figure-17.png": {
+      "name": "images/blog/figure-17.png",
+      "checksum": "9F0340BBFEFF74C3655F944D6EA28DB66564F54F12148A8E27B1283BE7B54EBB",
+      "size": 160772
+    },
+    "images/blog/figure-2.png": {
+      "name": "images/blog/figure-2.png",
+      "checksum": "E3957985EDE86DC1941E7C21303FC4724A61A6FF4303AB50C57A502D79329FB6",
+      "size": 383199
+    },
+    "images/blog/figure-3.png": {
+      "name": "images/blog/figure-3.png",
+      "checksum": "E65379BA90FEB7994974BE3839BA5864EB16BFC91F9C7C99A408580100304E56",
+      "size": 81004
+    },
+    "images/blog/figure-4.png": {
+      "name": "images/blog/figure-4.png",
+      "checksum": "41C3BE34252DA2596477E96A2EC5C3C5ADAC9AD8E55B339D98086DCAC3E78226",
+      "size": 836891
+    },
+    "images/blog/figure-5.png": {
+      "name": "images/blog/figure-5.png",
+      "checksum": "795FF9CDB9B6940A83314DF821E5B4DC8921AE78934875E805B4EF7688ABF912",
+      "size": 592019
+    },
+    "images/blog/figure-6.png": {
+      "name": "images/blog/figure-6.png",
+      "checksum": "929B64D31BCA845AF2F97DFE13CB252278AB713F7E1018F4810A77B161640409",
+      "size": 866434
+    },
+    "images/blog/figure-7.png": {
+      "name": "images/blog/figure-7.png",
+      "checksum": "7496B185B02D4BD844452048E97FB7B3FD93AB0226EA843CC8EB15E954CE3867",
+      "size": 573789
+    },
+    "images/blog/figure-8.png": {
+      "name": "images/blog/figure-8.png",
+      "checksum": "862A4A731B6BF96B521CC1AC3AAF582F283CAB7DD3633D1C03183F5A000CB94A",
+      "size": 835065
+    },
+    "images/blog/figure-9.png": {
+      "name": "images/blog/figure-9.png",
+      "checksum": "666A6AED6A94018B8F88D494DA413A48840DAE7189B09346B16CDFD7447F4F9C",
+      "size": 222370
+    },
     "images/blog/ganeshs.jpg": {
       "name": "images/blog/ganeshs.jpg",
       "checksum": "8965B656BFAB50F7493EC6BDFDEC94C71AFDBC63910FA71A8ABE5FD5883FCF45",
@@ -3164,6 +3254,26 @@
       "name": "images/blog/header-drawing.png",
       "checksum": "A21CE50B6006DDD82CD71E6119FCE2B1BBD479C58D066B9005684D845CD6A638",
       "size": 39745
+    },
+    "images/blog/header-mobile-dark.png": {
+      "name": "images/blog/header-mobile-dark.png",
+      "checksum": "6B38AAD86634222C591285CF336E2A1BE0BC11EEDF7E013CA581A9554246332B",
+      "size": 38271
+    },
+    "images/blog/header-mobile-open-dark.png": {
+      "name": "images/blog/header-mobile-open-dark.png",
+      "checksum": "BF93FF266FFE74C7F88D7665A0912F34FDAB6BAB2183E31BEB08F45E38106A46",
+      "size": 42035
+    },
+    "images/blog/header-mobile-open.png": {
+      "name": "images/blog/header-mobile-open.png",
+      "checksum": "688063EC9AA69D9A635779ECA43B61E26483B8858C386DE4278B3164CE27258B",
+      "size": 41891
+    },
+    "images/blog/header-mobile.png": {
+      "name": "images/blog/header-mobile.png",
+      "checksum": "CF18C055A4E77364A44CC6B5759BA7C224A3C538C26E81B57D7285BCBABB9377",
+      "size": 38197
     },
     "images/blog/header-tn-dark.png": {
       "name": "images/blog/header-tn-dark.png",
@@ -3419,6 +3529,36 @@
       "name": "images/blog/testimonial-3.jpeg",
       "checksum": "94379F924FB24C651A78E2EDCA91FE8C8DC84148A498A4253106B19CEAFFE100",
       "size": 5257
+    },
+    "images/blog/tn-arrow-dark.png": {
+      "name": "images/blog/tn-arrow-dark.png",
+      "checksum": "B198F9A62045D43CFBC82E113B64936B7413535DF69182F3AB347C2D4AECF9C1",
+      "size": 6645
+    },
+    "images/blog/tn-arrow-mobile-dark.png": {
+      "name": "images/blog/tn-arrow-mobile-dark.png",
+      "checksum": "13C51219DE556BB8194FCD66CCE9E953E8F01616DB43863FCDA8762C488E9561",
+      "size": 44796
+    },
+    "images/blog/tn-arrow-mobile.png": {
+      "name": "images/blog/tn-arrow-mobile.png",
+      "checksum": "3B738799CB5E625722823777911ACE3B08826FC270728FC2C56779DF9FF5C849",
+      "size": 42027
+    },
+    "images/blog/tn-arrow.png": {
+      "name": "images/blog/tn-arrow.png",
+      "checksum": "09FE779FFECCBB95C6258DF3EAF2F00B0AF21533246707D68AAA0B7241E2E034",
+      "size": 6201
+    },
+    "images/blog/tn-testimonial-dark.png": {
+      "name": "images/blog/tn-testimonial-dark.png",
+      "checksum": "E913E3DA2DD690CF67F239850E033BA2C34941FEDCE77FAD2DD5EE3C5CC97CBD",
+      "size": 118863
+    },
+    "images/blog/tn-testimonial.png": {
+      "name": "images/blog/tn-testimonial.png",
+      "checksum": "347A95FB9DB34F712E81777745BB03C8065688DFF732CA4A176E1AB6E05D30A2",
+      "size": 121245
     },
     "images/blog/uparrow-dark.png": {
       "name": "images/blog/uparrow-dark.png",
@@ -7502,5 +7642,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "0B182011582DBB43247541AE780CB21EBEEB7897DB8656FC6D2B377EFA7ECF6C"
+  "checksum": "11C24CBDEFB362B1059C29BEE28CF1E538345BE4C9DF787D2F012CEE432C695C"
 }
