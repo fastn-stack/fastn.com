@@ -1040,6 +1040,11 @@
       "checksum": "F1FE166B54FFFD4029B590D81E1A527745397B57A16D4DD8CA7B6B948F09B0BD",
       "size": 681117
     },
+    "compare/discord-3k.png": {
+      "name": "compare/discord-3k.png",
+      "checksum": "89ED9DEACBFA211C8C7A719C06B7E53F26274EC4F9216A47B42C1BB9CF62B568",
+      "size": 90411
+    },
     "compare/discord.png": {
       "name": "compare/discord.png",
       "checksum": "3656B46C2C2F261A72893CC65D82F8FA2773ED30019CFFE4CF5F39B3711E0E1B",
@@ -1052,8 +1057,8 @@
     },
     "compare/react.ftd": {
       "name": "compare/react.ftd",
-      "checksum": "0E8849A7DBFB1C683CF1E4B81262A51BDB82866213E85B3F49047F39FF1F4623",
-      "size": 494
+      "checksum": "792036F4C6EFC52EE80392CFEE1048FCAB1994A374B0C285FB1DFF8776B0D407",
+      "size": 826
     },
     "compare/reviewer.png": {
       "name": "compare/reviewer.png",
@@ -1077,13 +1082,13 @@
     },
     "compare/webflow.ftd": {
       "name": "compare/webflow.ftd",
-      "checksum": "F725EC80AD78643DF9C36D9A7FA260B28B20543889EE2F6EC0618A901BC75DDB",
-      "size": 651
+      "checksum": "352CC95181D9E453FA5E0DA203EC721914211C76B2CE1BBDD76CA50ADEDEB373",
+      "size": 972
     },
     "content-library/compare.ftd": {
       "name": "content-library/compare.ftd",
-      "checksum": "F3AFC77F1AEA6D8DAAAF930C12004C1C9EB03C9C6D57939D22E8542C51446B6E",
-      "size": 18468
+      "checksum": "74E6DCFF456B91B997FD83809CA2298AF24EC29B9D9E6405056A2034BF279BFE",
+      "size": 19030
     },
     "content-library/index.ftd": {
       "name": "content-library/index.ftd",
@@ -7732,5 +7737,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "AEDBF27F261286EA8BC6DE50BA6DFF2724105BD11CB0EE763E8FA60DFCB29B5E"
+  "checksum": "6C5736468E5216877F57788EE6653D0867D491B84A07CC7E2CDBDA75664B58CB"
 }
