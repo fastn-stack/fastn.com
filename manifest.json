@@ -592,8 +592,8 @@
     },
     "blog/domain-components.ftd": {
       "name": "blog/domain-components.ftd",
-      "checksum": "AC5C9339AB6D49FB3A81BB504F1F164869F9216D2340A8242BE61A160DF775F9",
-      "size": 6705
+      "checksum": "26339B2FE8DAF603D6B89986630768AB060DA7FDF950C8FC94FCADAE7BD01DBE",
+      "size": 6636
     },
     "blog/figma.ftd": {
       "name": "blog/figma.ftd",
@@ -6095,6 +6095,11 @@
       "checksum": "6BE9B3D8DF8EB07A6A8A6B936218C083509331330AF6745E5B93FFBCE42BF4DD",
       "size": 59715
     },
+    "images/landing/discord-3k.png": {
+      "name": "images/landing/discord-3k.png",
+      "checksum": "7673C6A363275E164162D803FA7F3A53C4AF6BFEBD2E13D1CE1634487581B785",
+      "size": 90382
+    },
     "images/landing/discord-community.svg": {
       "name": "images/landing/discord-community.svg",
       "checksum": "BD8349697EB4AEDD8281167EFC1426DAF0E50BEB01BF36C07827A057D31753EE",
@@ -7142,8 +7147,8 @@
     },
     "index.ftd": {
       "name": "index.ftd",
-      "checksum": "E1F2FD518173726033EE3C6B04C86190D94213938F6D601DCF8541FE3C050A78",
-      "size": 12385
+      "checksum": "9CCD8274A887BEA750589E4E85C6D707E706195FD8CC43CF0B3D8713F45FE6E2",
+      "size": 12378
     },
     "install.sh": {
       "name": "install.sh",
@@ -7727,5 +7732,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "91D8D3A4F2F86DEE07476023556F869B984BA100ABEB687BF596EA80009AFF8D"
+  "checksum": "AEDBF27F261286EA8BC6DE50BA6DFF2724105BD11CB0EE763E8FA60DFCB29B5E"
 }
