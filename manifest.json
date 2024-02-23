@@ -12,13 +12,13 @@
     },
     "FASTN/ds.ftd": {
       "name": "FASTN/ds.ftd",
-      "checksum": "ED6A701A3EF093A36BB4BD492D4CDE64BEE8AB761F8BDE823A8C9AD8AD315EC0",
-      "size": 8620
+      "checksum": "E56C42015C7D7D27153D18DFBB04F84115E0917D863D022D3FEB42A79A388C59",
+      "size": 8623
     },
     "FASTN/featured-ds.ftd": {
       "name": "FASTN/featured-ds.ftd",
-      "checksum": "DEBFC75E8A4E590FDFEF793918B8B8DD3BF073766FA28897D5941ACF64A278A9",
-      "size": 3725
+      "checksum": "8A3202C4385200D8FEC08D8083E37C2C7B16DC95D601C74D49AF9E3DBFDFEE2B",
+      "size": 3707
     },
     "Procfile": {
       "name": "Procfile",
@@ -617,8 +617,8 @@
     },
     "blog/personal-website-1.ftd": {
       "name": "blog/personal-website-1.ftd",
-      "checksum": "54E1484195E3A4B5E0C5DE6EE6EB32CA3FE1CD0C37C8E78E6FDDE1F990FD84B1",
-      "size": 10141
+      "checksum": "CD38ABD217A1949ED9FC57C8CA7485EB5D17148AA9245E771859836884827111",
+      "size": 10105
     },
     "blog/philippines.ftd": {
       "name": "blog/philippines.ftd",
@@ -1397,8 +1397,8 @@
     },
     "examples/index.ftd": {
       "name": "examples/index.ftd",
-      "checksum": "FB72170300FEC62408EF094C8F0AEE2BAF1A87B1F8CDA88C39AB1B5E426F9035",
-      "size": 10601
+      "checksum": "C635E60F03D35CDCEA7892AE607AF66A9108D4754E5C73A388B717684CBA8649",
+      "size": 10583
     },
     "expander/basic-ui.ftd": {
       "name": "expander/basic-ui.ftd",
@@ -1717,8 +1717,8 @@
     },
     "featured/components/code-block.ftd": {
       "name": "featured/components/code-block.ftd",
-      "checksum": "81780D56DD570440EB1F3BD12B43D9269EEEF657CBEEB4E9D603205C702D656A",
-      "size": 2280
+      "checksum": "E1D7877A7B72BFD67772A5F1E5925EF85EB88F9602E1CDC770390CD5428342F1",
+      "size": 2271
     },
     "featured/components/footers/footer-3.ftd": {
       "name": "featured/components/footers/footer-3.ftd",
@@ -1752,8 +1752,8 @@
     },
     "featured/components/language-switcher.ftd": {
       "name": "featured/components/language-switcher.ftd",
-      "checksum": "861FDCE555BD81E67B7A48C49715C5E65E9D23D7F57D8CC554B80A45BCF7A6D3",
-      "size": 2154
+      "checksum": "1F2DF90ABFD256FC7E843F93BFAF4AD96885F704B6706B68E6D7770CB81A1D78",
+      "size": 2145
     },
     "featured/components/modals/index.ftd": {
       "name": "featured/components/modals/index.ftd",
@@ -1862,73 +1862,73 @@
     },
     "featured/components/subscription-form.ftd": {
       "name": "featured/components/subscription-form.ftd",
-      "checksum": "4871B38ACF54130C1EBDABD19BBF1BBE794415E3BB79F1FFCA2210256E20DED3",
-      "size": 2203
+      "checksum": "7E0D9163190B27D9214A71BE23D8D88F0BABC2DB49EAB266222617CA6959E469",
+      "size": 2194
     },
     "featured/contributors/designers/govindaraman-s/index.ftd": {
       "name": "featured/contributors/designers/govindaraman-s/index.ftd",
-      "checksum": "FB327E2D18EC32E5F27B6437C01129E4D908791CB3B8BD191953EEB1375C4785",
-      "size": 2967
+      "checksum": "C6DA44BB1FB0D78B397D7AC21E2BAB57FE4EC312043F4054234857081E194358",
+      "size": 2958
     },
     "featured/contributors/designers/index.ftd": {
       "name": "featured/contributors/designers/index.ftd",
-      "checksum": "708D0E1587A9F41EF29CFAD02CCCB0CD458E78C70BB5A64DA8FF11E969A8F91D",
-      "size": 1609
+      "checksum": "8F93FFDC0259366BDF548EC5AF2702B3DBF1CE7BF3C44A435EE1FA32F5373C49",
+      "size": 1600
     },
     "featured/contributors/designers/jay-kumar/index.ftd": {
       "name": "featured/contributors/designers/jay-kumar/index.ftd",
-      "checksum": "F851B46F2CD02B83D93864281B5EABF81F0C6CA530DA76A934261D1DAE66F3D6",
-      "size": 1996
+      "checksum": "CFCA63821C3B52C524FAE37D171E97AD1E04C08245C86407E7272865C695D6CF",
+      "size": 1987
     },
     "featured/contributors/designers/muskan-verma/index.ftd": {
       "name": "featured/contributors/designers/muskan-verma/index.ftd",
-      "checksum": "8694381EA76B751C623D708A238FC0DC21A493CB59DEC1D31D6DBD2E4A680F9C",
-      "size": 4327
+      "checksum": "78E7C9F52E6E518A64383FF0F6C66275E9EC82CD902276F211FAB1E268332193",
+      "size": 4318
     },
     "featured/contributors/designers/yashveer-mehra/index.ftd": {
       "name": "featured/contributors/designers/yashveer-mehra/index.ftd",
-      "checksum": "30A20CB192F69930BAC6A37974374DCB3A03345C8424C8AFAE4A3B8DB6A07A32",
-      "size": 2659
+      "checksum": "9E2948CDE2FD2F9558165F66F4EDF9145E9F825A138C7FE902CDEA5D5EF203C3",
+      "size": 2650
     },
     "featured/contributors/developers/arpita-jaiswal/index.ftd": {
       "name": "featured/contributors/developers/arpita-jaiswal/index.ftd",
-      "checksum": "0C94CBDDCF2A1D7A2ACC58319A5F752744289CB1548B94C61721DC942BCFC0EA",
-      "size": 3062
+      "checksum": "A8EE5C2742546C31F4BD28C8163201C6422C6FD652D9E0621BF6610657778BFF",
+      "size": 3053
     },
     "featured/contributors/developers/ganesh-salunke/index.ftd": {
       "name": "featured/contributors/developers/ganesh-salunke/index.ftd",
-      "checksum": "5EF1F18943E9636C36EEABEFE77A3118EB70040F56E1561625724A285D35AC1C",
-      "size": 3235
+      "checksum": "0E5A55F06EB70C211959381FBB3A14B6302E62DC4F8CCF49DB59CD661822881B",
+      "size": 3226
     },
     "featured/contributors/developers/index.ftd": {
       "name": "featured/contributors/developers/index.ftd",
-      "checksum": "F54C03ABEBC3E5FE2A4CF06B5E6A8074526EE2C2A8306FAF68A773798350B366",
-      "size": 2055
+      "checksum": "286A0EB3EF59BBF92468FABC11C682435A19B5FFE6D6C078D39A924571349C60",
+      "size": 2046
     },
     "featured/contributors/developers/meenu-kumari/index.ftd": {
       "name": "featured/contributors/developers/meenu-kumari/index.ftd",
-      "checksum": "C611016B4FCBEC662F9DCA830C8565C39A8CAB11309DAF73739D1099B072AA34",
-      "size": 2876
+      "checksum": "1440D9E52FC410A948553A74F25F4338722AB9B335C9B8C3E659D5CA91EA303D",
+      "size": 2867
     },
     "featured/contributors/developers/priyanka-yadav/index.ftd": {
       "name": "featured/contributors/developers/priyanka-yadav/index.ftd",
-      "checksum": "61F4D766D8DB0F10EAE0E8A182C91028239A81A94488CC129DE6022E59686986",
-      "size": 2891
+      "checksum": "36BE53AD38B9A1FDA91E88B447043A90715F733E31EB703B2249F3049240E9A3",
+      "size": 2882
     },
     "featured/contributors/developers/saurabh-garg/index.ftd": {
       "name": "featured/contributors/developers/saurabh-garg/index.ftd",
-      "checksum": "464803B1581D971DCF9164C5B1EE34D5C66F8F38AC2458FD804CCD0370126BF7",
-      "size": 2544
+      "checksum": "646F700330E74228D1931DA37D26DC6FA75D882F0B690F7706C1D7D11386A3C3",
+      "size": 2535
     },
     "featured/contributors/developers/saurabh-lohiya/index.ftd": {
       "name": "featured/contributors/developers/saurabh-lohiya/index.ftd",
-      "checksum": "0E9D14BBCA0274715BCD64D920FB5C6CAFB008DCC4CEF7DF474771D524072A6E",
-      "size": 2893
+      "checksum": "4D2B4720837B79C2428BE58DAE95F0C99D0F742171AFE24AA0500FA974C4EC63",
+      "size": 2884
     },
     "featured/contributors/developers/shaheen-senpai/index.ftd": {
       "name": "featured/contributors/developers/shaheen-senpai/index.ftd",
-      "checksum": "0D5479E043DE5997CAA65C0AED68FAAF1333C4F3291007584BC342E8435484BE",
-      "size": 2850
+      "checksum": "69FA46A5FD50FB35F5C92FAC5B46001EAC479045A80E0D30193063305301D535",
+      "size": 2841
     },
     "featured/cs/blog-template-1-cs.ftd": {
       "name": "featured/cs/blog-template-1-cs.ftd",
@@ -2032,8 +2032,8 @@
     },
     "featured/cs/yellow-lily-cs.ftd": {
       "name": "featured/cs/yellow-lily-cs.ftd",
-      "checksum": "0552BE1B57C8DDB6C8FA6FCECFEB9512BAEAB33ACC456D9CBF4ACF16DABA4C46",
-      "size": 3122
+      "checksum": "B061DB81597B22922DA0688B8B4CA049B3CE5D0EFEB6B7A82459518EB8699168",
+      "size": 3113
     },
     "featured/design.ftd": {
       "name": "featured/design.ftd",
@@ -2417,8 +2417,8 @@
     },
     "featured/workshops/event-1.ftd": {
       "name": "featured/workshops/event-1.ftd",
-      "checksum": "9D3C8CAB2ABB8F200B4DEB8BBC7019BEA6C8FA8BF793A4B88C3EEBB1111A7193",
-      "size": 2241
+      "checksum": "E16137B898FBFFBA6C939F5718208C95A23D886D8021DB3112939308D1F6275E",
+      "size": 2232
     },
     "featured/workshops/index.ftd": {
       "name": "featured/workshops/index.ftd",
@@ -2427,8 +2427,8 @@
     },
     "featured/workshops/workshop-1.ftd": {
       "name": "featured/workshops/workshop-1.ftd",
-      "checksum": "65BC07E6DEEE0C2C2CF6775D83F5846304AE98DBAB66C3976D66C259F4D2D6EB",
-      "size": 2304
+      "checksum": "E229900DC20FDD5293A512AE43335D77CA0474661C504E7FDFCA849A8A236068",
+      "size": 2295
     },
     "features/community.ftd": {
       "name": "features/community.ftd",
@@ -7407,23 +7407,23 @@
     },
     "student-programs/ambassadors/ajit-garg.ftd": {
       "name": "student-programs/ambassadors/ajit-garg.ftd",
-      "checksum": "3FC9E24BA12329D741FD84C5BABE755C538091CE49C602002F8E4E80F84F0291",
-      "size": 1775
+      "checksum": "9F82EB5C822C9C3D7080841187D5F63A7A4020852CBEB7E9A079EE28C96C6446",
+      "size": 1766
     },
     "student-programs/ambassadors/all-ambassadors.ftd": {
       "name": "student-programs/ambassadors/all-ambassadors.ftd",
-      "checksum": "F4BF603E0280A5769A7CABFB1092BB0729DB00C85B8899A3B4B002A62223B518",
-      "size": 1740
+      "checksum": "74D614497C6C575CD20B2B6E172E83CB6EC822924124C92A83C681AEFBDAADEF",
+      "size": 1731
     },
     "student-programs/ambassadors/ayush-soni.ftd": {
       "name": "student-programs/ambassadors/ayush-soni.ftd",
-      "checksum": "0D1CB7204BA557245D2F2FE61E5A92C48FB5E5680A1D88D933F9D26B4CB48D49",
-      "size": 1790
+      "checksum": "61A6C2EBC89BDAB2E37EF763E6C10E6F85002EEEFD0AEBA156DB085A9522C00E",
+      "size": 1781
     },
     "student-programs/ambassadors/govindaraman.ftd": {
       "name": "student-programs/ambassadors/govindaraman.ftd",
-      "checksum": "84161C82A66F712A7F1658BA562B921D23D772136D944D3E85D6C41C126BFFDA",
-      "size": 1789
+      "checksum": "0F50DF29DD29FCDA410F207A39CACFBE1335C2BD0F250AC37A1ECA0F7B3F97B6",
+      "size": 1780
     },
     "student-programs/champion.ftd": {
       "name": "student-programs/champion.ftd",
@@ -7432,63 +7432,63 @@
     },
     "student-programs/champions/ajit-garg.ftd": {
       "name": "student-programs/champions/ajit-garg.ftd",
-      "checksum": "83C8166632FA4536F2E42BED25965456FA171F9295FA7D181BE4E378B5E192CE",
-      "size": 1773
+      "checksum": "E122AD35D56A2B9EF11EA16666427A316AA7977DC918E6A4B175B5E7A584B7F2",
+      "size": 1764
     },
     "student-programs/champions/all-champions.ftd": {
       "name": "student-programs/champions/all-champions.ftd",
-      "checksum": "4F70353CA523D1715803816EA01C6C6227801704111CB1AC76AD911FC174AB6B",
-      "size": 3549
+      "checksum": "AB534E1477B020C005C6C4417D62023152A7A3F15EBC792E64753CC5D9E1140B",
+      "size": 3540
     },
     "student-programs/champions/arpita-jaiswal.ftd": {
       "name": "student-programs/champions/arpita-jaiswal.ftd",
-      "checksum": "7E44753EB732871AE25970A23C8CDD27FEAF907EEB1DBB736DA8712343D7308D",
-      "size": 1637
+      "checksum": "EB3C791F19D27155FF9C6E8E0144CD7CE37D8DF177C17183DA60B32D8D60F912",
+      "size": 1628
     },
     "student-programs/champions/ayush-soni.ftd": {
       "name": "student-programs/champions/ayush-soni.ftd",
-      "checksum": "A86F3492610103472439CCD06FA14042FDDB8AB58BFAD30B1A2A7C1958A573E4",
-      "size": 1788
+      "checksum": "58B9249023D36981398138C8B558513B0A00544432981A687A6963B05D32D03A",
+      "size": 1779
     },
     "student-programs/champions/ganesh-salunke.ftd": {
       "name": "student-programs/champions/ganesh-salunke.ftd",
-      "checksum": "43C55E9A868539004BC3503168D816A6C96180D3BEC446A33958A8C4628BAE4E",
-      "size": 1796
+      "checksum": "4CCC85B2B6637743314226A411FC54A2C0C77144C100D90D01CB6F54CCB76161",
+      "size": 1787
     },
     "student-programs/champions/govindaraman.ftd": {
       "name": "student-programs/champions/govindaraman.ftd",
-      "checksum": "5266357CCA18033899F76CC55D8EF114615B6E1DE1D754C12EA6BD5622CAD572",
-      "size": 1787
+      "checksum": "8EB94E8D73379117009BBC0237052599F9B13D084D84002FBDC500FC99A444C5",
+      "size": 1778
     },
     "student-programs/champions/harsh-singh.ftd": {
       "name": "student-programs/champions/harsh-singh.ftd",
-      "checksum": "C9F67AC6F5E0782EB5399C93C96E0BA9441207F86828E6CF92CA80C420979515",
-      "size": 1772
+      "checksum": "EFEC9A3BC4E8EF3E68856B856C88044AB9EF246B5B661537D2443EAAA6CCC43E",
+      "size": 1763
     },
     "student-programs/champions/jahanvi-raycha.ftd": {
       "name": "student-programs/champions/jahanvi-raycha.ftd",
-      "checksum": "FD33051255966BAA7F78C7E1934242CBF18C55234722C9159C127671A1D298B5",
-      "size": 1626
+      "checksum": "0062E5F49D1E0D2FE3110018FD013E32D8FCC3B63762DC809BB197AF3D3111E4",
+      "size": 1617
     },
     "student-programs/champions/meenu-kumari.ftd": {
       "name": "student-programs/champions/meenu-kumari.ftd",
-      "checksum": "FA965E6FA963C0717CE5005533E269933A1196D7CF77ECB2CCBC86AB24817398",
-      "size": 1624
+      "checksum": "DA6E3AAF87C9FDEEEE557D71AFAF0A25A87BCF86C1C126137A6482E884A4943E",
+      "size": 1615
     },
     "student-programs/champions/priyanka-yadav.ftd": {
       "name": "student-programs/champions/priyanka-yadav.ftd",
-      "checksum": "BAC7894E3C8E22695E11A4CB79F643CDC4992F4938360E401C708C08A83FAAEA",
-      "size": 1623
+      "checksum": "9078253C4F53C2C0BC68799F6E1A98BF5C0C1F86AAE45E77406400FD7F90148C",
+      "size": 1614
     },
     "student-programs/champions/rithik-seth.ftd": {
       "name": "student-programs/champions/rithik-seth.ftd",
-      "checksum": "DB6C4BE36316612674645B885A0E4011BC0FE4D7FFBA694069D9673263AD72C9",
-      "size": 1772
+      "checksum": "6D8651989C563BEB9354660CCB10612EAE7B1214188BFA2A88917EA25B8B71A1",
+      "size": 1763
     },
     "student-programs/champions/saurabh-lohiya.ftd": {
       "name": "student-programs/champions/saurabh-lohiya.ftd",
-      "checksum": "7A6923DE4811BA06B314139A39C4895B59CD40B0A23AEA891E286CE83E4C44BE",
-      "size": 1644
+      "checksum": "F872F73FECE178EACBA3B285C206A9409EFC871FEAAB09D0F717BE8FA3903AB5",
+      "size": 1635
     },
     "student-programs/introductory-event.ftd": {
       "name": "student-programs/introductory-event.ftd",
@@ -7737,5 +7737,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "6C5736468E5216877F57788EE6653D0867D491B84A07CC7E2CDBDA75664B58CB"
+  "checksum": "8081CA73F8B042E7FADC72C02D5C930352FEDA9DF7FE529932182C78BACFDBC4"
 }
