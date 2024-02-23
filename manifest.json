@@ -7152,8 +7152,8 @@
     },
     "index.ftd": {
       "name": "index.ftd",
-      "checksum": "9CCD8274A887BEA750589E4E85C6D707E706195FD8CC43CF0B3D8713F45FE6E2",
-      "size": 12378
+      "checksum": "948F88B1186565F3A3DA92385157B0ACAE714236CDDE324333894B951EFD7DFE",
+      "size": 12379
     },
     "install.sh": {
       "name": "install.sh",
@@ -7737,5 +7737,5 @@
     }
   },
   "zip_url": "https://codeload.github.com/fastn-stack/fastn/zip/refs/heads/main",
-  "checksum": "8081CA73F8B042E7FADC72C02D5C930352FEDA9DF7FE529932182C78BACFDBC4"
+  "checksum": "D9C716AB0C3021C5B6F23D10E31742F34567036DFCDED016D731784ADEFC025C"
 }
