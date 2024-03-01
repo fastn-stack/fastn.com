@@ -20,7 +20,102 @@ $processor$: pr.full-sitemap
 -- integer max-width: 1120
 
 
+-- component: create-site-using-fastn-template
 
+-- ds.markdown:
+
+Let’s understand fastn project creation in just 5 minutes by playing!
+
+With this we are also going to create our new FTD website by following the very 
+short embedded tutorial.
+
+Do you have a GitHub account?
+
+Log-in with [GitHub.com](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsign-in) into your GitHub account.
+
+Or
+
+Create your GitHub account by following simple steps by the 
+[GitHub sign-up process](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
+
+Now as you signed into your GitHub account, lets start creating our first fastn 
+website project on GitHub.
+
+To start with it, create a repository using fastn-template - [Click here](https://github.com/ftd-lang/fastn-template/generate)
+
+
+-- ds.image: Figure 3: How to create new repository using fastn-template
+src: $fastn-assets.files.images.blog.figure-3.png
+width: fill-container
+
+
+-- ds.markdown:
+
+Click on Public to make your FTD website visible to public. You can click on 
+Private in-case you want to keep it private. We recommend keeping the Public 
+selected.
+
+You can also add a description of your FTD website(optional).
+
+
+Once you click on Create repository from template your first ever FTD web 
+repository is ready.
+
+
+-- ds.image: Figure 4: Creating GitHub repository using fastn-template
+src: $fastn-assets.files.images.blog.figure-4.png
+width: fill-container
+
+
+-- ds.markdown:
+
+Edit your repository README.md file and remove default content from it. 
+
+Follow below steps to make your first `FTD` web-site live.
+
+- Click on `Actions` tab and check for green tick, if 
+{$ds.greenmarker: Update README.md} workflow ran successfully.
+
+
+-- ds.image: Figure 5: Creating GitHub repository using fastn-template
+src: $fastn-assets.files.images.blog.figure-5.png
+width: fill-container
+
+
+-- ds.markdown:
+
+- Click on `Settings` tab and follow `Step-1` to `Step-5` shown in below image:
+
+
+-- ds.image: Figure 6: On ⚙️ `Settings` tab follow Step-1 to Step-5 
+src: $fastn-assets.files.images.blog.figure-6.png
+width: fill-container
+
+
+-- ds.markdown:
+
+- Click on `Actions` tab and check for green tick, if `pages build and 
+deployment` workflow ran successfully.
+
+
+
+-- ds.image: Figure 7: {$ds.greenmarker: pages build and deployment} workflow should run successfully
+src: $fastn-assets.files.images.blog.figure-7.png
+width: fill-container
+
+
+-- ds.markdown:
+
+Once {$ds.greenmarker: pages build and deployment} ran successfully. Your first 
+`FTD` website is live.
+
+To see your live website click on `Settings` tab and follow below steps:
+
+-- ds.image: Figure 8: On  ⚙️ {$ds.greenmarker:Settings} → {$ds.greenmarker:Pages} → click on {$ds.greenmarker: Visit site} button
+src: $fastn-assets.files.images.blog.figure-8.png
+width: fill-container
+
+-- end: create-site-using-fastn-template
 
 
 -- component display-testimonial-card:

@@ -718,6 +718,8 @@ skip: true
 - Dynamic Hosting:
   - Heroku: /heroku/
     document: deploy/heroku.ftd
+- Set up your domain:
+  document: workshop/domain-setup.ftd
 
 ## Design: /figma/
   document: cs/ftd-to-figma.ftd
