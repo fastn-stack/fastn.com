@@ -1,0 +1,218 @@
+-- import: fastn.com/rfcs/lib
+-- import: fastn-community.github.io/bling/note
+
+-- lib.rfc: RFC: Unified Configuration
+id: unified-config
+status: proposal
+
+A configuration system streamlining complex settings for processors, fastn
+packages. It introduces:
+
+- Access to environment variables in `FASTN.ftd`
+- A virtual module for configuration access in userland.
+- Package level configuration.
+
+-- lib.motivation:
+
+Currently, `fastn` supports configuration through [environment
+variables](/env/), cli arguments, and in some way, through the `FASTN.ftd`
+file. Environment variables are good to change the behaviour of the cli or to
+pass secret information but it's not ideal for defining complex configuration
+for a framework like `fastn` which provides various configurable features like
+[processors](/processor/-/backend/), oauth authentication and, apps.
+
+This RFC proposes a way of dealing with configuration that is centralized and
+leverages the existing ability of the `fastn` cli to read environment
+variables.
+
+-- end: lib.motivation
+
+-- lib.detailed-design:
+
+-- ds.h2: Access to environment variables
+
+The `fastn` namespace will have a function, `fastn.env()` to access environment
+variables.
+
+-- ds.code: A variable that reads environment variable using `fastn.env()`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: my-package
+
+\-- string my-db-url: $fastn.env(name = DB_URL)
+
+-- note.note: `fastn.env()`
+
+It is a foreign function. A default value can be provided in case `DB_URL` doesn't exist: `fastn.env(name = DB_URL, default = postgres://0:5432/maindb)`.
+
+-- ds.markdown:
+
+- Some special variable names may be defined in `FASTN.ftd` file that are
+  required by the framework. Example: The implementation of [`pg`
+  processor](/sql/) may require the user of this processor to define a variable
+  name `db` in their package's `FASTN.ftd` file.
+
+The virtual module (`<pkg-name>/-/config`) will handle access of variables
+defined in `FASTN.ftd`.
+
+-- ds.h2: `<pkg-name>/-/config` - A virtual module to assist configuration access.
+
+Add a virtual module (`<pkg-name>/-/config`) similar to existing
+[assets](https://fastn.com/assets) module. 
+
+This module will allow access to variables defined in `FASTN.ftd` file.
+
+-- ds.code: Example
+lang: ftd
+
+\-- import: my-package/-/config \;; This is new!
+
+\-- import: fastn/processors as pr
+
+\-- person list people:
+$processor$: pr.pg
+use: $config.my-db-url \;; defined in my-package's FASTN.ftd
+
+SELECT * FROM users;
+
+-- ds.h2: Configuring dependencies and apps
+
+`FASTN.ftd` file will be central to the whole configuration system. Users can
+modify the behaviour of a dependency by passing variables when they're added.
+Example:
+
+-- ds.code: `FASTN.ftd` of test-todos
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: test-todos
+
+\;; fastn.app works in similar way
+\-- fastn.dependency: amitu.com/todos
+max-todo-per-page: 30
+
+-- end: ds.code
+
+-- ds.markdown:
+
+The above snippet is configuring `amitu.com/todos` by modifying variables that
+are in its `FASTN.ftd` file.
+
+The `FASTN.ftd` of `amitu.com/todos` will look like this:
+
+-- ds.code: FASTN.ftd of amitu.com/todos
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: amitu.com/todos
+
+\-- integer max-todo-per-page: 10 \;; becomes 30 when used by test-todos
+
+\-- string sample-title: TODO App \;; this was not modified by test-todos so this stays intact
+
+-- end: ds.code
+
+-- ds.markdown:
+
+- While adding dependency, users can modify any variable defined in the
+  `FASTN.ftd` file of the said dependency.
+
+- Any extra header value passed to `fastn.dependency` will result in an error.
+
+-- ds.h2: Optional vs. Required dependency configuration
+
+A package can create variables in `FASTN.ftd` in different ways which will
+dictate if they're required or optional. See the example below:
+
+-- ds.code: `FASTN.ftd` of `amitu.com/todos`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: amitu.com/todos
+db: $my-db-for-dev \;; this value for db is available only when it's not used as a dependency
+
+\-- string db:  \;; this has no value so this will be required
+
+\-- integer max-todos: 30 \;; this has a default value so this is optional
+
+-- ds.markdown:
+
+- `db` must be defined when the package is being used, and fastn.package is one
+  such usage! This allows for easy testing, say if I am building
+  amitu.com/todos, I do not have to create a test app, and I can work directly
+  in amitu.com/todos package, and my test values would be passed there.
+
+- `max-todos` is defined with a value so this doesn't have to be passed as a
+  header when using `amitu.com/todos` as a dependency.
+
+-- ds.code: Example use of `amitu.com/todos` in `my-website`
+lang: ftd
+
+\-- import: fastn
+
+\-- fastn.package: my-website
+
+\-- fastn.dependency: amitu.com/todos
+db: $my-db \;; this is required otherwise an error will be thrown
+\;; max-todos is optional so we ignore this
+
+-- end: lib.detailed-design
+
+
+-- lib.alternatives:
+
+Another way is to stick with how fastn currently reads environment variables.
+It's good because it keeps secret info safe in source files. But there are some
+downsides:
+
+- We still need a way to share settings between packages (like dependencies and
+  apps).
+
+- People don't have a straightforward system to make their packages adjustable
+  by the outside world.
+
+-- end: lib.alternatives
+
+
+-- lib.teaching-notes:
+
+- At a minimum, framework features might require users to define a variable
+  in their FASTN.ftd file, and this process is quite straightforward to
+  explain.
+
+- Likewise, when incorporating dependencies into FASTN.ftd, it's preferable for
+  the documentation of the dependency to document all potential configurations.
+
+- Power users and library authors can choose to dive deep in the docs and
+  explore how they can use the `<pkg-name>/-/config` virtual module to access
+  variables defined in their package's `FASTN.ftd`.
+
+-- end: lib.teaching-notes
+
+-- lib.unresolved-questions:
+
+This RFC doesn't address the security concerns around this feature. Some points to consider here:
+
+- Environment variables accessed using `fastn.env()` could be leaked in client code. Example:
+
+-- ds.code: Client can print environment variables
+lang: ftd
+
+\-- import: fastn
+
+\-- ftd.text: $fastn.env(name = DB_PASSWORD) ;; this is bad
+
+-- ds.markdown:
+
+- We need some way to limit access of environment variables.
+
+
+-- end: lib.unresolved-questions
+
+-- end: lib.rfc
+
